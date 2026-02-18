@@ -314,17 +314,17 @@ body {
 .post-content p {
     margin-bottom: 2em;
     text-align: justify;
-    animation: text-jerk 25s infinite;
+    animation: text-jerk 67s infinite;
 }
 
 .post-content p:nth-child(2n) {
-    animation-duration: 37s;
-    animation-delay: 5s;
+    animation-duration: 91s;
+    animation-delay: 13s;
 }
 
 .post-content p:nth-child(3n) {
-    animation-duration: 43s;
-    animation-delay: 11s;
+    animation-duration: 113s;
+    animation-delay: 29s;
 }
 
 .post-content em {
