@@ -1,0 +1,19 @@
+---
+layout: default
+title: トップページ
+---
+
+<div class="post-list-container">
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li class="post-item">
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <p class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</p>
+            <div class="post-excerpt">
+                {{ post.excerpt }}
+            </div>
+            <a href="{{ post.url | relative_url }}" class="read-more">続きを読む →</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
