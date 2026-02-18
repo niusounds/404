@@ -6,7 +6,6 @@ baseurl: ""
 
 # Build settings
 markdown: kramdown
-permalink: /:year/:month/:day/:title/
 
 # Collections
 collections:
