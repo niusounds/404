@@ -1,0 +1,33 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#333" />
+  
+  <!-- Concrete Texture -->
+  <filter id="noise">
+    <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" result="noise" />
+    <feDiffuseLighting in="noise" lighting-color="#555" surfaceScale="2">
+      <feDistantLight azimuth="45" elevation="45" />
+    </feDiffuseLighting>
+  </filter>
+  <rect width="400" height="300" filter="url(#noise)" opacity="0.3" />
+  
+  <!-- Cracks and Faces -->
+  <path d="M50 50 L70 80 L60 120 L80 150" stroke="#111" stroke-width="2" fill="none" />
+  <path d="M300 100 Q320 120 310 150 T330 200" stroke="#111" stroke-width="2" fill="none" />
+  
+  <!-- Face-like crack -->
+  <g transform="translate(180, 100)" opacity="0.7">
+    <path d="M0 0 Q10 -10 20 0 Q30 10 20 20 Q10 30 0 20 Z" fill="#222" />
+    <circle cx="5" cy="5" r="2" fill="#000" />
+    <circle cx="15" cy="5" r="2" fill="#000" />
+    <path d="M5 15 Q10 18 15 15" stroke="#000" fill="none" />
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite" />
+  </g>
+  
+  <g transform="translate(250, 220) scale(0.8)" opacity="0.5">
+    <path d="M0 0 Q15 -5 30 0 L25 25 Q15 30 5 25 Z" fill="#222" />
+    <animate attributeName="transform" type="translate" values="0 0; 2 2; 0 0" dur="4s" repeatCount="indefinite" />
+  </g>
+  
+  <!-- Embedded button -->
+  <circle cx="100" cy="200" r="5" fill="#555" stroke="#222" />
+</svg>

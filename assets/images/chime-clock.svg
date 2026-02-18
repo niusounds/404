@@ -1,0 +1,30 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#1a1a1a" />
+  
+  <!-- Wall Texture -->
+  <rect width="400" height="300" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="10 5" opacity="0.5" />
+  
+  <!-- Clock Body -->
+  <circle cx="200" cy="150" r="100" fill="#fff" stroke="#333" stroke-width="8" />
+  <circle cx="200" cy="150" r="95" fill="none" stroke="#eee" stroke-width="2" />
+  
+  <!-- Clock Numbers (Dots) -->
+  <g fill="#333">
+    <circle cx="200" cy="65" r="4" />
+    <circle cx="285" cy="150" r="4" />
+    <circle cx="200" cy="235" r="4" />
+    <circle cx="115" cy="150" r="4" />
+  </g>
+  
+  <!-- Hands at 4:44 -->
+  <!-- Hour hand (roughly 4) -->
+  <line x1="200" y1="150" x2="250" y2="200" stroke="#000" stroke-width="6" stroke-linecap="round" />
+  <!-- Minute hand (44 min) -->
+  <line x1="200" y1="150" x2="130" y2="210" stroke="#000" stroke-width="4" stroke-linecap="round" />
+  <!-- Second hand (stuck) -->
+  <line x1="200" y1="150" x2="160" y2="60" stroke="#f00" stroke-width="2">
+    <animateTransform attributeName="transform" type="rotate" from="-2 -200 150" to="2 -200 150" dur="0.1s" repeatCount="indefinite" />
+  </line>
+  
+  <circle cx="200" cy="150" r="6" fill="#000" />
+</svg>

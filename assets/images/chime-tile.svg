@@ -1,0 +1,31 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#2c2c2c" />
+  
+  <!-- Concrete Texture -->
+  <rect width="400" height="300" fill="none" stroke="#333" stroke-width="4" stroke-dasharray="2 10" />
+  
+  <!-- The Tile -->
+  <rect x="150" y="100" width="100" height="100" rx="4" fill="#607d8b" stroke="#1a1a1a" stroke-width="2" />
+  <!-- Pattern on tile (mimicking a pencil case) -->
+  <rect x="155" y="105" width="90" height="20" fill="#ff5722" rx="2" opacity="0.8" />
+  <rect x="155" y="130" width="90" height="20" fill="#4caf50" rx="2" opacity="0.8" />
+  <rect x="155" y="155" width="90" height="35" fill="#2196f3" rx="2" opacity="0.8" />
+  
+  <!-- Handprint Indentation -->
+  <g fill="#000" opacity="0.3">
+    <!-- Palm -->
+    <ellipse cx="200" cy="160" rx="15" ry="20" transform="rotate(-10 200 160)" />
+    <!-- Fingers -->
+    <ellipse cx="185" cy="130" rx="4" ry="12" transform="rotate(-15 185 130)" />
+    <ellipse cx="198" cy="125" rx="4" ry="14" />
+    <ellipse cx="212" cy="128" rx="4" ry="13" transform="rotate(10 212 128)" />
+    <ellipse cx="225" cy="135" rx="3" ry="10" transform="rotate(20 225 135)" />
+    <!-- Thumb -->
+    <ellipse cx="178" cy="165" rx="10" ry="5" transform="rotate(30 178 165)" />
+  </g>
+  
+  <!-- Sunset Gleam -->
+  <rect width="400" height="300" fill="none" stroke="orange" stroke-width="1" opacity="0.2">
+    <animate attributeName="opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite" />
+  </rect>
+</svg>
