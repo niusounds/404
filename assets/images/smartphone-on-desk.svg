@@ -1,0 +1,18 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#34495e" />
+  <!-- Desk surface -->
+  <rect y="220" width="400" height="80" fill="#2c3e50" />
+  <!-- Smartphone standing on desk or lying -->
+  <rect x="160" y="100" width="80" height="150" rx="8" ry="8" fill="#1a1a1a" />
+  <rect x="165" y="105" width="70" height="140" rx="4" ry="4" fill="#000" />
+  <!-- Faint reflection/face inside -->
+  <circle cx="200" cy="150" r="20" fill="#fff" opacity="0.05" />
+  <path d="M190 170 Q200 180 210 170" stroke="#fff" stroke-width="1" fill="none" opacity="0.1" />
+  <!-- Tapping lines -->
+  <line x1="160" y1="130" x2="150" y2="120" stroke="#fff" stroke-width="1" opacity="0.3">
+    <animate attributeName="opacity" values="0;0.5;0" dur="1s" repeatCount="indefinite" />
+  </line>
+  <line x1="240" y1="170" x2="250" y2="180" stroke="#fff" stroke-width="1" opacity="0.3">
+    <animate attributeName="opacity" values="0;0.5;0" dur="1s" repeatCount="indefinite" begin="0.5s" />
+  </line>
+</svg>

@@ -1,0 +1,16 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#2c3e50" />
+  <!-- Smartphone on ground -->
+  <g transform="translate(150, 200) rotate(20)">
+    <rect x="0" y="0" width="120" height="60" rx="5" ry="5" fill="#34495e" />
+    <rect x="5" y="5" width="110" height="50" rx="3" ry="3" fill="#000" />
+    <!-- Cracks -->
+    <path d="M10 10 L40 30 L10 50 M40 30 L80 10 M40 30 L100 40" stroke="#fff" stroke-width="1" opacity="0.7" />
+    <!-- Hand emerging -->
+    <path d="M50 30 C40 10 30 0 20 -10 M50 30 C50 10 50 0 50 -15 M50 30 C60 10 70 0 80 -10 M50 30 C70 20 90 20 100 10" stroke="#ecf0f1" stroke-width="6" stroke-linecap="round" fill="none" />
+    <path d="M20 -10 Q15 -15 10 -10 M50 -15 Q50 -20 55 -15 M80 -10 Q85 -15 90 -10" stroke="#bdc3c7" stroke-width="2" fill="none" />
+  </g>
+  <!-- Floor texture -->
+  <line x1="0" y1="260" x2="400" y2="260" stroke="#1a1a1a" stroke-width="2" />
+  <line x1="0" y1="280" x2="400" y2="280" stroke="#1a1a1a" stroke-width="1" />
+</svg>
