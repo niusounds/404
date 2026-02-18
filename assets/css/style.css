@@ -116,6 +116,38 @@ body {
     }
 }
 
+@keyframes text-jerk {
+
+    0%,
+    94%,
+    96%,
+    100% {
+        transform: translate(0, 0) skew(0);
+        filter: blur(0);
+    }
+
+    95% {
+        transform: translate(-1.5px, 0.5px) skew(0.5deg);
+        filter: blur(0.2px);
+    }
+
+    97% {
+        transform: translate(1.5px, -1px) skew(-0.2deg);
+    }
+}
+
+@keyframes spooky-fade {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -282,6 +314,17 @@ body {
 .post-content p {
     margin-bottom: 2em;
     text-align: justify;
+    animation: text-jerk 25s infinite;
+}
+
+.post-content p:nth-child(2n) {
+    animation-duration: 37s;
+    animation-delay: 5s;
+}
+
+.post-content p:nth-child(3n) {
+    animation-duration: 43s;
+    animation-delay: 11s;
 }
 
 .post-content em {
@@ -291,6 +334,7 @@ body {
     color: #666;
     margin-top: -1em;
     margin-bottom: 2em;
+    animation: spooky-fade 8s infinite ease-in-out;
 }
 
 .post-content h3 {
