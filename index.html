@@ -3,17 +3,38 @@ layout: default
 title: トップページ
 ---
 
-<div class="post-list-container">
-    <ul class="post-list">
-        {% for post in site.posts %}
-        <li class="post-item">
-            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-            <p class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</p>
-            <div class="post-excerpt">
-                {{ post.excerpt }}
-            </div>
-            <a href="{{ post.url | relative_url }}" class="read-more">続きを読む →</a>
-        </li>
-        {% endfor %}
-    </ul>
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h2 class="hero-subtitle">閲覧注意</h2>
+        <h1 class="hero-title" data-text="忌まわしき記憶の集積所">忌まわしき記憶の集積所</h1>
+        <p class="hero-description">
+            ここには、誰にも語られることのなかった「本物の」怪異だけがアーカイブされています。<br>
+            一度足を踏み入れたら、もう戻ることはできません。
+        </p>
+    </div>
+</section>
+
+<div class="content-wrapper">
+    <h3 class="section-title">最近の報告件数</h3>
+    <div class="post-list-container">
+        <ul class="post-list">
+            {% for post in site.posts %}
+            <li class="post-item">
+                <div class="post-card">
+                    <div class="post-header-mini">
+                        <span class="post-date-tag">{{ post.date | date: "%Y.%m.%d" }}</span>
+                        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                    </div>
+                    <div class="post-body">
+                        <div class="post-excerpt">
+                            {{ post.excerpt }}
+                        </div>
+                        <a href="{{ post.url | relative_url }}" class="read-more">詳細を確認する</a>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>

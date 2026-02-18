@@ -148,6 +148,67 @@ body {
     }
 }
 
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes glitch-skew {
+    0% {
+        transform: skew(0deg);
+    }
+
+    20% {
+        transform: skew(3deg);
+    }
+
+    24% {
+        transform: skew(-5deg);
+    }
+
+    28% {
+        transform: skew(0deg);
+    }
+
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+@keyframes pulse-red {
+
+    0%,
+    100% {
+        opacity: 0.05;
+    }
+
+    50% {
+        opacity: 0.15;
+    }
+}
+
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -156,10 +217,10 @@ body {
 
 /* Header styles */
 .site-header {
-    padding: 60px 0 40px;
+    padding: 40px 0;
     text-align: center;
-    border-bottom: 1px solid #333;
-    background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
+    border-bottom: 1px solid #111;
+    background: #050505;
 }
 
 .site-title {
@@ -220,64 +281,235 @@ body {
 /* Main content */
 .site-content {
     min-height: 60vh;
-    padding: 60px 0;
+    padding: 0 0 60px;
 }
 
-/* Post list */
+.content-wrapper {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 10px;
+    letter-spacing: 0.3em;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: #000;
+    margin-top: -20px;
+    /* Offset to connect with header if needed */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.9) 80%),
+        linear-gradient(rgba(136, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+    z-index: 1;
+}
+
+.hero-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #900;
+    opacity: 0.05;
+    animation: pulse-red 8s infinite ease-in-out;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    animation: hero-fade-in 2s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 0.9rem;
+    color: #900;
+    letter-spacing: 0.5em;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.hero-title {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 30px;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 0, 0, 0.2);
+    position: relative;
+    animation: hero-fade-in 2s ease-out, glitch-skew 4s infinite linear alternate-reverse;
+}
+
+.hero-title::before,
+.hero-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.hero-title::before {
+    color: #f00;
+    z-index: -1;
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    display: none;
+}
+
+.hero-title:hover::before {
+    display: block;
+}
+
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 2;
+    font-style: italic;
+}
+
+@keyframes hero-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Post list and cards */
 .post-list {
     list-style: none;
+    display: grid;
+    gap: 40px;
 }
 
-.post-item {
-    margin-bottom: 50px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #222;
+.post-card {
+    background:
+        linear-gradient(rgba(10, 10, 10, 0.8), rgba(5, 5, 5, 0.9)),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    border: 1px solid #1a1a1a;
+    padding: 40px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
 }
 
-.post-item:last-child {
-    border-bottom: none;
+
+.post-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: #600;
+    transition: height 0.5s ease;
 }
 
-.post-item h2 {
-    font-family: 'Yuji Syuku', serif;
-    font-size: 2.2rem;
+.post-card:hover {
+    background: rgba(25, 25, 25, 0.8);
+    border-color: #333;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.post-card:hover::before {
+    height: 100%;
+}
+
+.post-header-mini {
+    margin-bottom: 20px;
+}
+
+.post-date-tag {
+    font-size: 0.8rem;
+    color: #444;
+    letter-spacing: 0.2em;
+    display: block;
     margin-bottom: 10px;
 }
 
-.post-item h2 a {
-    color: #e0e0e0;
+.post-card h2 {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.post-card h2 a {
+    color: #bbb;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.post-item h2 a:hover {
+.post-card h2 a:hover {
     color: #fff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgba(136, 0, 0, 0.5);
 }
 
-.post-meta {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 15px;
+.post-body {
+    margin-top: 15px;
 }
 
 .post-excerpt {
-    color: #999;
+    color: #888;
     line-height: 1.8;
+    margin-bottom: 20px;
 }
 
 .read-more {
     display: inline-block;
-    margin-top: 15px;
-    color: #bbb;
+    color: #600;
     text-decoration: none;
-    border-bottom: 1px solid #555;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    padding: 5px 0;
+    border-bottom: 1px solid transparent;
     transition: all 0.3s ease;
 }
 
 .read-more:hover {
-    color: #fff;
-    border-bottom-color: #fff;
+    color: #f00;
+    border-bottom-color: #f00;
+    padding-left: 10px;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
 }
 
 /* Individual post */

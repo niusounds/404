@@ -1,0 +1,42 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="bloodGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="300" fill="#111" />
+  
+  <!-- Regular '?' Buttons -->
+  <g transform="translate(50, 50)">
+    <rect width="60" height="40" rx="3" fill="#eee" stroke="#ccc" />
+    <text x="30" y="28" font-family="serif" font-size="24" fill="#000" text-anchor="middle">?</text>
+  </g>
+  <g transform="translate(130, 50)">
+    <rect width="60" height="40" rx="3" fill="#eee" stroke="#ccc" />
+    <text x="30" y="28" font-family="serif" font-size="24" fill="#000" text-anchor="middle">?</text>
+  </g>
+  <g transform="translate(210, 50)">
+    <rect width="60" height="40" rx="3" fill="#eee" stroke="#ccc" />
+    <text x="30" y="28" font-family="serif" font-size="24" fill="#000" text-anchor="middle">?</text>
+  </g>
+  <g transform="translate(290, 50)">
+    <rect width="60" height="40" rx="3" fill="#eee" stroke="#ccc" />
+    <text x="30" y="28" font-family="serif" font-size="24" fill="#000" text-anchor="middle">?</text>
+  </g>
+  
+  <!-- 'Omakase' Button -->
+  <g transform="translate(100, 150)">
+    <rect width="200" height="80" rx="5" fill="#200" stroke="#600" stroke-width="2" />
+    <text x="100" y="55" font-family="serif" font-size="32" fill="#a00" text-anchor="middle" font-weight="bold" filter="url(#bloodGlow)">おまかせ</text>
+    
+    <!-- Scratch marks -->
+    <path d="M 20 10 L 40 30" stroke="#400" stroke-width="1" />
+    <path d="M 180 60 L 160 75" stroke="#400" stroke-width="1" />
+    <path d="M 50 70 L 70 65" stroke="#400" stroke-width="1" />
+  </g>
+</svg>

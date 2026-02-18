@@ -1,0 +1,28 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#050505" />
+  
+  <!-- The Button Frame -->
+  <rect x="50" y="50" width="300" height="300" rx="10" fill="#eee" stroke="#333" stroke-width="5" />
+  
+  <!-- The Face (Ghostly/Abstract) -->
+  <circle cx="200" cy="180" r="80" fill="#ddd" /> <!-- Head -->
+  <ellipse cx="170" cy="170" rx="10" ry="15" fill="#333" /> <!-- Eye L -->
+  <ellipse cx="230" cy="170" rx="10" ry="15" fill="#333" /> <!-- Eye R -->
+  <path d="M 170 230 Q 200 250 230 230" stroke="#333" stroke-width="3" fill="none" /> <!-- Mouth -->
+  
+  <!-- Noise/Static over the face -->
+  <filter id="static">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" />
+    <feColorMatrix type="saturate" values="0" />
+  </filter>
+  <rect x="100" y="100" width="200" height="160" fill="transparent" filter="url(#static)" opacity="0.3" />
+  
+  <!-- Text Label -->
+  <rect x="50" y="280" width="300" height="70" fill="#fdd" opacity="0.8" />
+  <text x="200" y="310" font-family="serif" font-size="16" fill="#900" text-anchor="middle" font-weight="bold">中学二年生・私</text>
+  <text x="200" y="335" font-family="serif" font-size="14" fill="#900" text-anchor="middle">終わらない渇きと喪失</text>
+  
+  <!-- Red Splatter Effect -->
+  <path d="M 50 50 L 80 70 L 60 90 Z" fill="#700" opacity="0.5" />
+  <path d="M 350 350 L 320 330 L 340 310 Z" fill="#700" opacity="0.5" />
+</svg>
