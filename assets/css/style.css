@@ -491,6 +491,7 @@ body {
   color: #888;
   line-height: 1.8;
   margin-bottom: 20px;
+  text-indent: 1em;
 }
 
 .read-more {
@@ -546,6 +547,7 @@ body {
   margin-bottom: 2em;
   text-align: justify;
   animation: text-jerk 67s infinite;
+  text-indent: 1em;
 }
 
 .post-content p:nth-child(2n) {
