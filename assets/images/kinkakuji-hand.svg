@@ -1,0 +1,38 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky -->
+  <rect width="800" height="600" fill="#a0c4ff" />
+  
+  <!-- Ground/Water -->
+  <rect y="450" width="800" height="150" fill="#2c5d63" />
+  
+  <!-- Kinkakuji (Simplified) -->
+  <rect x="250" y="200" width="300" height="100" fill="#ffd700" stroke="#000" stroke-width="2" />
+  <rect x="220" y="300" width="360" height="120" fill="#ffd700" stroke="#000" stroke-width="2" />
+  <rect x="200" y="420" width="400" height="30" fill="#4a3728" />
+  <path d="M250 200 L400 150 L550 200 Z" fill="#ffd700" stroke="#000" stroke-width="2" />
+  
+  <!-- Students (Silhouettes) -->
+  <circle cx="350" cy="500" r="20" fill="#333" />
+  <rect x="335" y="520" width="30" height="50" fill="#333" />
+  <circle cx="400" cy="505" r="20" fill="#333" />
+  <rect x="385" y="525" width="30" height="50" fill="#333" />
+  <circle cx="450" cy="500" r="20" fill="#333" />
+  <rect x="435" y="520" width="30" height="50" fill="#333" />
+  
+  <!-- The Hand (Superimposed) -->
+  <g transform="translate(465, 480) scale(0.5) rotate(-10)">
+    <path d="M0 0 C-10 20 -20 40 -20 60 C-20 80 -10 100 0 120" fill="none" stroke="#e0e0e0" stroke-width="8" stroke-linecap="round" />
+    <path d="M0 120 L-10 150 M0 120 L0 160 M0 120 L10 150 M0 120 L20 140" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" />
+    <path d="M-20 60 Q-40 60 -40 40 T-20 20" fill="none" stroke="#e0e0e0" stroke-width="4" />
+    <rect x="-5" y="155" width="4" height="6" fill="#000" />
+  </g>
+  
+  <!-- Vignette -->
+  <rect width="800" height="600" fill="url(#vignette)" opacity="0.4" />
+  <defs>
+    <radialGradient id="vignette">
+      <stop offset="70%" stop-color="transparent" />
+      <stop offset="100%" stop-color="#000" />
+    </radialGradient>
+  </defs>
+</svg>

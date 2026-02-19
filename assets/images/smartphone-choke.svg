@@ -1,0 +1,37 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dim Background -->
+  <rect width="800" height="600" fill="#111" />
+  
+  <!-- Smartphone Body -->
+  <rect x="250" y="50" width="300" height="500" rx="20" fill="#000" stroke="#333" stroke-width="4" />
+  
+  <!-- Smartphone Screen -->
+  <rect x="265" y="70" width="270" height="460" fill="#050505" />
+  
+  <!-- Glitched Photo on Screen -->
+  <g clip-path="url(#screen-clip)">
+    <!-- Distorted Face -->
+    <path d="M350 250 Q400 200 450 250 T400 350 Z" fill="#222" opacity="0.5" />
+    <circle cx="380" cy="240" r="5" fill="#f00" />
+    <circle cx="420" cy="240" r="5" fill="#f00" />
+    
+    <!-- Choking Hand -->
+    <path d="M300 300 Q350 320 400 300" fill="none" stroke="#e0e0e0" stroke-width="15" stroke-linecap="round" />
+    <path d="M400 300 L410 280 L420 300 L410 320 Z" fill="#e0e0e0" transform="rotate(10, 400, 300)" />
+    <path d="M400 300 L430 290 L440 310 L410 320 Z" fill="#e0e0e0" transform="rotate(-15, 400, 300)" />
+    
+    <!-- Glitch Lines -->
+    <rect x="265" y="200" width="270" height="2" fill="#0ff" opacity="0.5" />
+    <rect x="265" y="350" width="270" height="1" fill="#f0f" opacity="0.5" />
+    <rect x="300" y="100" width="50" height="10" fill="#0f0" opacity="0.3" transform="skewX(20)" />
+  </g>
+  
+  <defs>
+    <clipPath id="screen-clip">
+      <rect x="265" y="70" width="270" height="460" />
+    </clipPath>
+  </defs>
+  
+  <!-- Reflection on screen -->
+  <path d="M265 70 L535 70 L265 400 Z" fill="#fff" opacity="0.05" />
+</svg>
