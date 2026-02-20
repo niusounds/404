@@ -1,0 +1,21 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#34495e" />
+  <!-- Road -->
+  <rect x="0" y="200" width="400" height="100" fill="#2c3e50" />
+  <!-- Crosswalk lines -->
+  <rect x="20" y="210" width="30" height="80" fill="#ecf0f1" />
+  <rect x="70" y="210" width="30" height="80" fill="#ecf0f1" />
+  <rect x="120" y="210" width="30" height="80" fill="#ecf0f1" />
+  <rect x="170" y="210" width="30" height="80" fill="#ecf0f1" />
+  <rect x="220" y="210" width="30" height="80" fill="#ecf0f1" />
+  <rect x="270" y="210" width="30" height="80" fill="#ecf0f1" />
+  <rect x="320" y="210" width="30" height="80" fill="#ecf0f1" />
+  <rect x="370" y="210" width="30" height="80" fill="#ecf0f1" />
+  <!-- Figure on the other side -->
+  <ellipse cx="320" cy="170" rx="12" ry="15" fill="#1a1a2e" />
+  <rect x="314" y="185" width="12" height="30" fill="#1a1a2e" />
+  <!-- Shadow/reflection effect -->
+  <ellipse cx="320" cy="180" rx="30" ry="5" fill="#000" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2s" repeatCount="indefinite" />
+  </ellipse>
+</svg>
