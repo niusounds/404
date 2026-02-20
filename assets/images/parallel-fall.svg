@@ -1,0 +1,38 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#0a0a0a" />
+  <!-- Multiple spiraling figures -->
+  <g opacity="0.3">
+    <ellipse cx="150" cy="80" rx="8" ry="10" fill="#3498db" />
+    <rect x="146" y="90" width="8" height="20" fill="#3498db" />
+  </g>
+  <g opacity="0.4">
+    <ellipse cx="250" cy="120" rx="8" ry="10" fill="#e74c3c" />
+    <rect x="246" y="130" width="8" height="20" fill="#e74c3c" />
+  </g>
+  <g opacity="0.5">
+    <ellipse cx="100" cy="160" rx="8" ry="10" fill="#f39c12" />
+    <rect x="96" y="170" width="8" height="20" fill="#f39c12" />
+  </g>
+  <g opacity="0.6">
+    <ellipse cx="300" cy="200" rx="8" ry="10" fill="#2ecc71" />
+    <rect x="296" y="210" width="8" height="20" fill="#2ecc71" />
+  </g>
+  <g opacity="0.7">
+    <ellipse cx="200" cy="240" rx="10" ry="12" fill="#ecf0f1" />
+    <rect x="195" y="252" width="10" height="25" fill="#ecf0f1" />
+  </g>
+  <!-- Spiral lines -->
+  <path d="M200 0 Q150 50 200 100 T200 200 T200 300" stroke="#fff" stroke-width="1" fill="none" opacity="0.2" />
+  <path d="M100 0 Q50 75 100 150 T100 300" stroke="#fff" stroke-width="1" fill="none" opacity="0.15" />
+  <path d="M300 0 Q350 75 300 150 T300 300" stroke="#fff" stroke-width="1" fill="none" opacity="0.15" />
+  <!-- Glowing vortex -->
+  <circle cx="200" cy="150" r="80" fill="url(#vortexGlow)">
+    <animate attributeName="r" values="60;90;60" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <defs>
+    <radialGradient id="vortexGlow">
+      <stop offset="0%" stop-color="#9b59b6" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#9b59b6" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+</svg>

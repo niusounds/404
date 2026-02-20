@@ -1,0 +1,25 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#2c3e50" />
+  <!-- Multiple reality layers -->
+  <path d="M50 150 Q100 100 150 150 T250 150 T350 150" stroke="#3498db" stroke-width="2" fill="none" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" />
+  </path>
+  <path d="M30 180 Q80 130 130 180 T230 180 T330 180" stroke="#e74c3c" stroke-width="2" fill="none" opacity="0.5">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.5s" repeatCount="indefinite" begin="0.5s" />
+  </path>
+  <path d="M70 120 Q120 70 170 120 T270 120 T370 120" stroke="#f39c12" stroke-width="2" fill="none" opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3.5s" repeatCount="indefinite" begin="1s" />
+  </path>
+  <!-- Cracks -->
+  <path d="M200 0 L190 100 L210 150 L195 250 L200 300" stroke="#ecf0f1" stroke-width="3" fill="none" opacity="0.8" />
+  <path d="M100 50 L150 150 L120 250" stroke="#ecf0f1" stroke-width="2" fill="none" opacity="0.6" />
+  <path d="M300 80 L250 180 L280 280" stroke="#ecf0f1" stroke-width="2" fill="none" opacity="0.6" />
+  <!-- Glowing center -->
+  <circle cx="200" cy="150" r="40" fill="url(#crackGlow)" />
+  <defs>
+    <radialGradient id="crackGlow">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+</svg>

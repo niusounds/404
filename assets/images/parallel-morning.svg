@@ -1,0 +1,16 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#1a1a2e" />
+  <!-- Window with morning light -->
+  <rect x="280" y="40" width="80" height="120" fill="#2c3e50" />
+  <rect x="285" y="45" width="70" height="110" fill="#f39c12" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="4s" repeatCount="indefinite" />
+  </rect>
+  <!-- Bed -->
+  <rect x="50" y="180" width="200" height="100" fill="#34495e" />
+  <ellipse cx="150" cy="180" rx="80" ry="30" fill="#2c3e50" />
+  <!-- Pillow -->
+  <ellipse cx="80" cy="170" rx="40" ry="20" fill="#95a5a6" />
+  <!-- Clock -->
+  <circle cx="340" cy="200" r="15" fill="#e74c3c" opacity="0.8" />
+  <text x="340" y="205" font-family="monospace" font-size="8" fill="#fff" text-anchor="middle">7:00</text>
+</svg>
