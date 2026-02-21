@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/desktop.css' | relative_url }}">
+</head>
+
+<body>
+    <div id="crt-overlay"></div>
+    <div id="vignette"></div>
+    <div id="bg-face"></div>
+    <canvas id="noise-canvas"></canvas>
+
+    <div id="bsod">
+        <div class="bsod-title">Windows</div>
+        <div class="bsod-text">
+            A problem has been detected and Windows has been shut down to prevent damage to your computer.
+        </div>
+    </div>
+
+    {{ content }}
+
+    <div id="start-menu">
+        <div class="start-menu-sidebar">
+            <span>Windows 95</span>
+        </div>
+        <div class="start-menu-items">
+            <div class="start-menu-item" onclick="openIcon('diary-folder')">Programs</div>
+            <div class="start-menu-item" id="menu-documents">Documents</div>
+            <div class="start-menu-item" onclick="openSettings()">Settings</div>
+            <div class="start-menu-item" onclick="openIcon('memo')">Find</div>
+            <div class="start-menu-item" onclick="openHelp()">Help</div>
+            <div class="menu-separator"></div>
+            <div class="start-menu-item" id="menu-run">Run...</div>
+            <div class="menu-separator"></div>
+            <div class="start-menu-item" id="menu-shutdown">Shut Down...</div>
+        </div>
+    </div>
+
+    <div id="taskbar">
+        <div id="start-btn" onclick="toggleStartMenu()">
+            <div style="width: 14px; height: 14px; background: grey; border: 1px solid white;"></div>
+            START
+        </div>
+        <div id="taskbar-eye">
+            <div id="eye-pupil"></div>
+        </div>
+        <div id="clock">00:00</div>
+    </div>
+
+    <script src="{{ '/assets/js/desktop.js' | relative_url }}"></script>
+</body>
+
+</html>
