@@ -209,6 +209,84 @@ html {
   display: flex;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
+}
+
+#start-btn:active {
+  border-color: var(--win-dark) var(--win-white) var(--win-white) var(--win-dark);
+}
+
+/* Start Menu */
+#start-menu {
+  position: fixed;
+  bottom: 30px;
+  left: 2px;
+  width: 180px;
+  background: var(--win-grey);
+  border: 2px solid;
+  border-color: var(--win-white) var(--win-dark) var(--win-dark) var(--win-white);
+  box-shadow: 1px 1px 0 0 var(--win-black);
+  display: none;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.start-menu-sidebar {
+  width: 25px;
+  background: linear-gradient(to top, #808080, #c0c0c0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 5px;
+}
+
+.start-menu-sidebar span {
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.start-menu-items {
+  margin-left: 25px;
+  padding: 2px;
+}
+
+.start-menu-item {
+  padding: 8px 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.start-menu-item:hover {
+  background: var(--win-blue);
+  color: #fff;
+}
+
+.start-menu-item.disabled {
+  color: #808080;
+  cursor: not-allowed;
+}
+
+.start-menu-item.disabled:hover {
+  background: transparent;
+  color: #808080;
+}
+
+.menu-separator {
+  height: 1px;
+  background: var(--win-dark);
+  border-bottom: 1px solid var(--win-white);
+  margin: 2px 0;
 }
 
 #clock {

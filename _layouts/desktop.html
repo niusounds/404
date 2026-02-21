@@ -23,8 +23,24 @@
 
     {{ content }}
 
+    <div id="start-menu">
+        <div class="start-menu-sidebar">
+            <span>Windows 95</span>
+        </div>
+        <div class="start-menu-items">
+            <div class="start-menu-item" onclick="openIcon('diary-folder')">Programs</div>
+            <div class="start-menu-item" onclick="openIcon('system-folder')">Documents</div>
+            <div class="start-menu-item" onclick="alert('設定は変更できません。')">Settings</div>
+            <div class="start-menu-item" onclick="openIcon('memo')">Find</div>
+            <div class="menu-separator"></div>
+            <div class="start-menu-item" id="menu-run">Run...</div>
+            <div class="menu-separator"></div>
+            <div class="start-menu-item" id="menu-shutdown">Shut Down...</div>
+        </div>
+    </div>
+
     <div id="taskbar">
-        <div id="start-btn">
+        <div id="start-btn" onclick="toggleStartMenu()">
             <div style="width: 14px; height: 14px; background: grey; border: 1px solid white;"></div>
             START
         </div>

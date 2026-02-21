@@ -40,7 +40,53 @@ document.addEventListener('DOMContentLoaded', () => {
   setupIcons();
   setupNoise();
   setupTabTampering();
+  setupStartMenu();
 });
+
+function toggleStartMenu() {
+  const menu = document.getElementById('start-menu');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+}
+
+function setupStartMenu() {
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const menu = document.getElementById('start-menu');
+    const startBtn = document.getElementById('start-btn');
+    if (!menu.contains(e.target) && !startBtn.contains(e.target)) {
+      menu.style.display = 'none';
+    }
+  });
+
+  const runBtn = document.getElementById('menu-run');
+  runBtn.addEventListener('click', () => {
+    toggleStartMenu();
+    const content = `
+      <div style="background:#000; color:#0f0; font-family:monospace; padding:10px; height:100px; overflow-y:auto;" id="run-terminal">
+        > C:\\WINDOWS\\SYSTEM32\\RUN.EXE<br>
+        > INITIALIZING...<br>
+        > ERROR: ACCESS_DENIED<br>
+        > UNKNOWN_PROCESS_DETECTED: "OBSERVER.SYS"<br>
+        > <span style="color:red;">WARNING: THEY ARE HERE.</span>
+      </div>
+    `;
+    createWindow('Run', content, { width: '250px' });
+  });
+
+  const shutdownBtn = document.getElementById('menu-shutdown');
+  shutdownBtn.addEventListener('click', () => {
+    toggleStartMenu();
+    if (corruptionLevel < 5) {
+      alert("システムの終了を妨害されました。");
+    } else {
+      playWhisper("どこへいくの？");
+      document.body.classList.add('melt-down');
+      setTimeout(() => {
+        document.body.innerHTML = '<div style="background:#000; color:red; width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-size:40px; font-family:serif;">もう、おそい</div>';
+      }, 5000);
+    }
+  });
+}
 
 function updateClock() {
   const now = new Date();
