@@ -26,3 +26,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+
+# Plugins
+plugins:
+  - jekyll-minifier
+
+# Sass settings
+sass:
+  style: compressed
