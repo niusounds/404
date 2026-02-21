@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/desktop.css' | relative_url }}">
+</head>
+
+<body>
+    <div id="crt-overlay"></div>
+    <div id="vignette"></div>
+    <canvas id="noise-canvas"></canvas>
+
+    {{ content }}
+
+    <div id="taskbar">
+        <div id="start-btn">
+            <div style="width: 14px; height: 14px; background: grey; border: 1px solid white;"></div>
+            START
+        </div>
+        <div id="clock">00:00</div>
+    </div>
+
+    <script src="{{ '/assets/js/desktop.js' | relative_url }}"></script>
+</body>
+
+</html>

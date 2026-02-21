@@ -1,0 +1,292 @@
+const STORY = {
+  'diary': [
+    {
+      title: '日記_1.txt',
+      content: '2026年2月22日\n中古のパソコンを手に入れた。Windows 98を彷彿とさせる懐かしいデザインだが、妙に動作が軽い。\n前の持ち主のデータが少し残っているようだが、整理して使おうと思う。'
+    },
+    {
+      title: '日記_2.txt',
+      content: '2026年2月23日\n夜中に勝手に電源が入ることがある。ファンが異常な音を立てて回っている。\n「システム管理」というフォルダに、覚えのないログファイルが増えている。'
+    },
+    {
+      title: '日記_3.txt',
+      content: '2026年2月24日\n画面にノイズが走る。一瞬、誰かの顔が映ったような気がした。気のせいだと思いたいが、このパソコン、どこかおかしい。\n捨てるべきかもしれないが、手が離せない。'
+    }
+  ],
+  'system': [
+    {
+      title: 'error.log',
+      content: 'KERNEL_ERROR: MEMORY_CORRUPTION_DETECTED\nLOCATION: SECTOR_404\nSTATUS: ACTIVE\nREASON: THEY_ARE_WATCHING'
+    },
+    {
+      title: '0000.txt',
+      content: 'たすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけてたすけて'
+    },
+    {
+      title: '???',
+      content: 'お前も、ここに来るのか？\n後ろを見てはいけない。\nクリックしてはいけない。\n閉じてはいけない。'
+    }
+  ]
+};
+
+let corruptionLevel = 0;
+let openWindows = 0;
+let tabHidingCount = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  setupIcons();
+  setupNoise();
+  setupTabTampering();
+});
+
+function updateClock() {
+  const now = new Date();
+  const timeStr = now.getHours().toString().padStart(2, '0') + ':' +
+    now.getMinutes().toString().padStart(2, '0');
+  const clockEl = document.getElementById('clock');
+  if (corruptionLevel > 8 && Math.random() > 0.8) {
+    clockEl.innerText = '死:死';
+  } else {
+    clockEl.innerText = timeStr;
+  }
+}
+
+function setupIcons() {
+  const icons = document.querySelectorAll('.icon');
+  icons.forEach(icon => {
+    icon.addEventListener('dblclick', () => {
+      openIcon(icon.dataset.id);
+    });
+    icon.addEventListener('click', (e) => {
+      if (window.innerWidth < 768) openIcon(icon.dataset.id);
+    });
+  });
+}
+
+function openIcon(id) {
+  if (id === 'diary-folder') {
+    createWindow('日記', renderFolder('diary'));
+  } else if (id === 'system-folder') {
+    createWindow('システム管理', renderFolder('system'));
+    if (corruptionLevel > 2) spawnObserver();
+  } else if (id === 'readme') {
+    createWindow('README.txt', 'このパソコンの持ち主へ：\n\n決して「システム管理」フォルダの中身は見ないでください。\nもし見てしまったら、すぐに電源を切ってください。\n\nそれすら、もう遅いかもしれませんが。');
+    checkCorruption();
+  } else if (id === 'unknown') {
+    startEntityChat();
+  }
+}
+
+function renderFolder(key) {
+  const files = STORY[key];
+  let html = '<div style="display: flex; gap: 10px; flex-wrap: wrap; padding: 10px;">';
+  files.forEach((file, index) => {
+    html += `
+      <div class="icon icon-file" onclick="openFile('${key}', ${index})" style="width: 60px;">
+        <div class="icon-img"></div>
+        <div class="icon-label" style="color: black; text-shadow: none;">${file.title}</div>
+      </div>
+    `;
+  });
+  html += '</div>';
+  return html;
+}
+
+window.openFile = (key, index) => {
+  const file = STORY[key][index];
+  createWindow(file.title, file.content);
+  checkCorruption();
+};
+
+function createWindow(title, content, options = {}) {
+  const win = document.createElement('div');
+  win.className = 'window';
+  if (corruptionLevel > 2) win.classList.add('shake');
+  if (options.className) win.classList.add(options.className);
+
+  win.style.left = options.left || (50 + (openWindows * 30)) + 'px';
+  win.style.top = options.top || (50 + (openWindows * 30)) + 'px';
+  if (options.width) win.style.width = options.width;
+
+  win.innerHTML = `
+    <div class="window-title-bar">
+      <div class="window-title">${title}</div>
+      <div class="window-controls">
+        <div class="win-btn" onclick="this.closest('.window').remove()">X</div>
+      </div>
+    </div>
+    <div class="window-content">${content}</div>
+  `;
+
+  document.body.appendChild(win);
+  openWindows++;
+
+  let isDragging = false;
+  win.querySelector('.window-title-bar').onmousedown = (e) => {
+    isDragging = true;
+    win.style.zIndex = ++openWindows + 100;
+    let offset = [win.offsetLeft - e.clientX, win.offsetTop - e.clientY];
+    document.onmousemove = (ev) => {
+      if (isDragging) {
+        win.style.left = (ev.clientX + offset[0]) + 'px';
+        win.style.top = (ev.clientY + offset[1]) + 'px';
+      }
+    };
+    document.onmouseup = () => isDragging = false;
+  };
+  return win;
+}
+
+function checkCorruption() {
+  corruptionLevel++;
+  const overlay = document.getElementById('crt-overlay');
+  const noise = document.getElementById('noise-canvas');
+
+  if (corruptionLevel === 3) {
+    overlay.style.opacity = '0.5';
+    document.body.style.backgroundColor = '#004040';
+    playWhisper("みてるよ");
+  } else if (corruptionLevel === 6) {
+    overlay.style.opacity = '0.7';
+    noise.style.opacity = '0.1';
+    document.body.style.filter = 'contrast(1.5) brightness(0.8)';
+    startEntityChat();
+  } else if (corruptionLevel > 10) {
+    document.body.classList.add('glitch-text');
+    noise.style.opacity = '0.3';
+    if (Math.random() > 0.6) triggerJumpScare();
+    if (Math.random() > 0.8) triggerSpam();
+  }
+}
+
+function spawnObserver() {
+  const content = `
+    <div class="webcam-container">
+      <div class="webcam-noise"></div>
+      <div class="silhouette" id="observer-silhouette"></div>
+      <div style="position:absolute; top:5px; left:5px; color:red; font-size:10px; font-family:monospace;">● REC LIVE</div>
+    </div>
+    <div style="padding:5px; font-size:11px; color:#666;">Unknown Hardware: VirtualCam_01</div>
+  `;
+  const win = createWindow('Live Monitor', content, { width: '240px' });
+
+  setTimeout(() => {
+    const s = win.querySelector('#observer-silhouette');
+    if (s) s.style.bottom = '0px';
+  }, 3000);
+}
+
+function startEntityChat() {
+  const win = createWindow('Network Chat', '<div id="chat-box" style="height:150px; overflow-y:auto; border:1px inset #888; padding:5px;"></div>', { width: '200px' });
+  const box = win.querySelector('#chat-box');
+
+  const messages = [
+    { type: 'system', text: 'User "???" joined the room.' },
+    { type: 'them', text: 'こんばんは' },
+    { type: 'them', text: 'まだ起きてるんだね' },
+    { type: 'them', text: 'その部屋、寒くない？' },
+    { type: 'them', text: '後ろのクローゼット、開いてるよ' }
+  ];
+
+  let i = 0;
+  function nextMsg() {
+    if (i >= messages.length || !document.body.contains(win)) return;
+    const m = messages[i++];
+    const div = document.createElement('div');
+    div.className = `chat-msg msg-${m.type}`;
+    div.innerText = m.text;
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+
+    if (m.type === 'them') playWhisper(m.text);
+    setTimeout(nextMsg, 3000 + Math.random() * 4000);
+  }
+  setTimeout(nextMsg, 1000);
+}
+
+function triggerSpam() {
+  for (let i = 0; i < 5; i++) {
+    setTimeout(() => {
+      createWindow('警告', '不審なアクセスを検知しました。', {
+        left: Math.random() * (window.innerWidth - 200) + 'px',
+        top: Math.random() * (window.innerHeight - 100) + 'px'
+      });
+    }, i * 200);
+  }
+}
+
+function triggerJumpScare() {
+  const js = document.createElement('div');
+  js.style.position = 'fixed';
+  js.style.top = '0';
+  js.style.left = '0';
+  js.style.width = '100%';
+  js.style.height = '100%';
+  js.style.backgroundColor = 'black';
+  js.style.zIndex = '20000';
+  js.style.display = 'flex';
+  js.style.flexDirection = 'column';
+  js.style.alignItems = 'center';
+  js.style.justifyContent = 'center';
+  js.style.color = 'red';
+
+  const text = ['たすけて', 'そこにいるの', 'みつけた', 'あけて'][Math.floor(Math.random() * 4)];
+  js.innerHTML = `<div style="font-size:100px;">${text}</div>`;
+
+  document.body.appendChild(js);
+  setTimeout(() => js.remove(), 150);
+}
+
+function setupTabTampering() {
+  const originalTitle = document.title;
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      tabHidingCount++;
+      if (tabHidingCount > 2) {
+        document.title = "どこにいくの？";
+      } else {
+        document.title = "逃げられない";
+      }
+    } else {
+      document.title = originalTitle;
+      if (tabHidingCount > 3) {
+        checkCorruption();
+        checkCorruption();
+      }
+    }
+  });
+}
+
+function playWhisper(text) {
+  if (!('speechSynthesis' in window)) return;
+  const utance = new SpeechSynthesisUtterance(text);
+  utance.lang = 'ja-JP';
+  utance.pitch = 0.1;
+  utance.rate = 0.8;
+  utance.volume = 0.5;
+  window.speechSynthesis.speak(utance);
+}
+
+function setupNoise() {
+  const canvas = document.getElementById('noise-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  function noise() {
+    const idata = ctx.createImageData(canvas.width, canvas.height);
+    const buffer32 = new Uint32Array(idata.data.buffer);
+    for (let i = 0; i < buffer32.length; i++) {
+      const val = Math.random();
+      if (val < 0.01) buffer32[i] = 0xff0000ff;
+      else if (val < 0.1) buffer32[i] = 0xff000000;
+      else buffer32[i] = (Math.random() * 255) << 24;
+    }
+    ctx.putImageData(idata, 0, 0);
+    requestAnimationFrame(noise);
+  }
+  noise();
+}
