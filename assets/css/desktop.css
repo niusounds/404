@@ -493,6 +493,94 @@ html {
   animation: melt-down 20s forwards ease-in;
 }
 
+/* Window Drag Trails */
+.drag-trail {
+  position: absolute;
+  background: var(--win-blue);
+  height: 20px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 50;
+  border: 1px solid var(--win-white);
+  animation: fade-out 0.5s forwards;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+/* Blood Seepage */
+.blood-border {
+  box-shadow: 0 0 10px #f00, inset 0 0 15px #600 !important;
+  border-color: #800 !important;
+}
+
+.blood-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(136, 0, 0, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Reflections */
+.window-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='40' r='20' fill='black' opacity='0.03'/%3E%3Cpath d='M30,80 Q50,60 70,80' stroke='black' stroke-width='5' opacity='0.03'/%3E%3C/svg%3E");
+  background-size: 150px;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 5s;
+}
+
+.corruption-high .window-content::before {
+  opacity: 1;
+}
+
+/* Watching Eye */
+#taskbar-eye {
+  width: 24px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 5px;
+  border: 1px solid #000;
+  display: none;
+}
+
+#eye-pupil {
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 8px;
+}
+
+.icon-selected {
+  background-color: var(--win-blue) !important;
+  color: white !important;
+}
+
+.body-shake {
+  animation: shake 0.1s infinite !important;
+}
+
 @keyframes melt-down {
   0% {
     transform: scaleY(1);

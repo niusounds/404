@@ -41,7 +41,56 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNoise();
   setupTabTampering();
   setupStartMenu();
+  setupEye();
+  setupInteractionShake();
 });
+
+let audioCtx = null;
+function playGlitchNoise() {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const oscillator = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+
+  oscillator.type = 'sawtooth';
+  oscillator.frequency.setValueAtTime(Math.random() * 100 + 50, audioCtx.currentTime);
+
+  gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+  gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
+
+  oscillator.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+
+  oscillator.start();
+  oscillator.stop(audioCtx.currentTime + 0.2);
+}
+
+function setupInteractionShake() {
+  document.addEventListener('mousedown', () => {
+    if (corruptionLevel > 5) {
+      document.body.classList.add('body-shake');
+      setTimeout(() => document.body.classList.remove('body-shake'), 100);
+      if (Math.random() > 0.8) playGlitchNoise();
+    }
+  });
+}
+
+function setupEye() {
+  const eye = document.getElementById('taskbar-eye');
+  const pupil = document.getElementById('eye-pupil');
+  if (!eye || !pupil) return;
+
+  document.addEventListener('mousemove', (e) => {
+    if (eye.style.display === 'none') return;
+    const rect = eye.getBoundingClientRect();
+    const eyeX = rect.left + rect.width / 2;
+    const eyeY = rect.top + rect.height / 2;
+    const angle = Math.atan2(e.clientY - eyeY, e.clientX - eyeX);
+    const distance = Math.min(rect.width / 4, Math.hypot(e.clientX - eyeX, e.clientY - eyeY) / 10);
+
+    pupil.style.left = (rect.width / 2 - 4 + Math.cos(angle) * distance) + 'px';
+    pupil.style.top = (rect.height / 2 - 4 + Math.sin(angle) * distance) + 'px';
+  });
+}
 
 function toggleStartMenu() {
   const menu = document.getElementById('start-menu');
@@ -86,6 +135,7 @@ function setupStartMenu() {
     subMenu.innerHTML = `
       <div class="start-menu-item" onclick="openFile('diary', 0)">日記_1.txt</div>
       <div class="start-menu-item" onclick="openFile('diary', 1)">日記_2.txt</div>
+      <div class="start-menu-item" onclick="createWindow('history.log', '<ul style=\'font-size:11px; color:#333;\'><li>how to stop noise.html</li><li>can they see me.exe</li><li>suicide methods (DELETED)</li><li>your room live stream</li></ul>')">History.log</div>
       <div class="start-menu-item" onclick="createWindow('room.mp4', '<div style=\'background:#000; height:150px; display:flex; align-items:center; justify-content:center; color:#555;\'>[画像データが破損しています]</div>')">room.mp4</div>
       <div class="start-menu-item" onclick="createWindow('遺影.jpg', '<div style=\'background:#000; height:150px; display:flex; align-items:center; justify-content:center; color:red;\'>見ちゃだめ</div>')">遺影.jpg</div>
     `;
@@ -198,7 +248,11 @@ function updateClock() {
   const timeStr = now.getHours().toString().padStart(2, '0') + ':' +
     now.getMinutes().toString().padStart(2, '0');
   const clockEl = document.getElementById('clock');
-  if (corruptionLevel > 8 && Math.random() > 0.8) {
+  if (corruptionLevel > 12) {
+    const count = 100 - (Math.floor(Date.now() / 1000) % 100);
+    clockEl.innerText = "00:" + count.toString().padStart(2, '0');
+    if (count === 0) triggerJumpScare();
+  } else if (corruptionLevel > 8 && Math.random() > 0.8) {
     clockEl.innerText = '死:死';
   } else {
     clockEl.innerText = timeStr;
@@ -282,10 +336,22 @@ function createWindow(title, content, options = {}) {
     isDragging = true;
     win.style.zIndex = ++openWindows + 100;
     let offset = [win.offsetLeft - e.clientX, win.offsetTop - e.clientY];
+
     document.onmousemove = (ev) => {
       if (isDragging) {
         win.style.left = (ev.clientX + offset[0]) + 'px';
         win.style.top = (ev.clientY + offset[1]) + 'px';
+
+        // Window Drag Trails
+        if (corruptionLevel > 4 && Math.random() > 0.7) {
+          const trail = document.createElement('div');
+          trail.className = 'drag-trail';
+          trail.style.left = win.style.left;
+          trail.style.top = win.style.top;
+          trail.style.width = win.style.width || '200px';
+          document.body.appendChild(trail);
+          setTimeout(() => trail.remove(), 500);
+        }
       }
     };
     document.onmouseup = () => isDragging = false;
@@ -340,17 +406,26 @@ function checkCorruption() {
     noise.style.opacity = '0.1';
     document.body.style.filter = 'contrast(1.5) brightness(0.8)';
     document.body.classList.add('warp-active');
+    document.body.classList.add('corruption-high');
+    const eye = document.getElementById('taskbar-eye');
+    if (eye) eye.style.display = 'block';
+
     if (bgFace) {
       bgFace.style.opacity = '0.15';
       bgFace.style.filter = 'blur(10px) grayscale(50%)';
     }
     startEntityChat();
     triggerFakePermission();
+    startPhantomSelection();
+    startStartButtonPossession();
   } else if (corruptionLevel === 10) {
     showBSOD();
   } else if (corruptionLevel > 10) {
     document.body.classList.add('glitch-text');
     noise.style.opacity = '0.3';
+
+    // Blood seepage on all windows
+    document.querySelectorAll('.window').forEach(w => w.classList.add('blood-border'));
 
     if (Math.random() > 0.8) {
       document.body.classList.add('screen-flip');
@@ -365,6 +440,30 @@ function checkCorruption() {
     if (Math.random() > 0.6) triggerJumpScare();
     if (Math.random() > 0.8) triggerSpam();
   }
+}
+
+function startPhantomSelection() {
+  setInterval(() => {
+    if (corruptionLevel < 6) return;
+    const icons = document.querySelectorAll('.icon');
+    icons.forEach(i => i.classList.remove('icon-selected'));
+    if (Math.random() > 0.5) {
+      const target = icons[Math.floor(Math.random() * icons.length)];
+      target.classList.add('icon-selected');
+    }
+  }, 2000);
+}
+
+function startStartButtonPossession() {
+  const btn = document.getElementById('start-btn');
+  const original = btn.innerHTML;
+  const texts = ["STAY", "SCARE", "HELP", "SAVE ME", "死"];
+  setInterval(() => {
+    if (corruptionLevel < 6 || Math.random() > 0.3) return;
+    const label = btn.childNodes[2]; // Target the text node
+    if (label) label.textContent = texts[Math.floor(Math.random() * texts.length)];
+    setTimeout(() => { if (label) label.textContent = "START"; }, 500);
+  }, 3000);
 }
 
 function triggerFakePermission() {
