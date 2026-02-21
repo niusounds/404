@@ -77,6 +77,8 @@ function openIcon(id) {
     checkCorruption();
   } else if (id === 'unknown') {
     startEntityChat();
+  } else if (id === 'memo') {
+    openNotepad();
   }
 }
 
@@ -140,11 +142,42 @@ function createWindow(title, content, options = {}) {
   return win;
 }
 
+function openNotepad() {
+  const content = `<textarea class="notepad-area" id="notepad-text" placeholder="メモを入力..."></textarea>`;
+  const win = createWindow('メモ帳', content, { width: '300px' });
+  const area = win.querySelector('#notepad-text');
+
+  area.addEventListener('keydown', (e) => {
+    if (corruptionLevel > 5) {
+      e.preventDefault();
+      const scaryMessages = [
+        "やめて", "たすけて", "うしろにだれかいる", "しんでる",
+        "HE IS WATCHING", "IT HURTS", "OPEN THE DOOR", "LOOK BEHIND YOU"
+      ];
+      const msg = scaryMessages[Math.floor(corruptionLevel % scaryMessages.length)];
+      area.value += msg.charAt(area.value.length % msg.length);
+
+      if (Math.random() > 0.9) playWhisper(msg);
+    }
+  });
+}
+
 function checkCorruption() {
   corruptionLevel++;
   const overlay = document.getElementById('crt-overlay');
   const noise = document.getElementById('noise-canvas');
   const bgFace = document.getElementById('bg-face');
+
+  // Icon Label Corruption
+  if (corruptionLevel > 4) {
+    const labels = document.querySelectorAll('.icon-label');
+    labels.forEach(label => {
+      if (Math.random() > 0.7) {
+        const texts = ["しね", "たすけて", "404", "???", "VOID", "ERROR", "遺体"];
+        label.innerText = texts[Math.floor(Math.random() * texts.length)];
+      }
+    });
+  }
 
   if (corruptionLevel === 3) {
     overlay.style.opacity = '0.5';
@@ -155,6 +188,7 @@ function checkCorruption() {
     overlay.style.opacity = '0.7';
     noise.style.opacity = '0.1';
     document.body.style.filter = 'contrast(1.5) brightness(0.8)';
+    document.body.classList.add('warp-active');
     if (bgFace) {
       bgFace.style.opacity = '0.15';
       bgFace.style.filter = 'blur(10px) grayscale(50%)';
@@ -166,6 +200,12 @@ function checkCorruption() {
   } else if (corruptionLevel > 10) {
     document.body.classList.add('glitch-text');
     noise.style.opacity = '0.3';
+
+    if (Math.random() > 0.8) {
+      document.body.classList.add('screen-flip');
+      setTimeout(() => document.body.classList.remove('screen-flip'), 300);
+    }
+
     if (bgFace) {
       bgFace.style.opacity = '0.3';
       bgFace.style.filter = 'blur(2px) grayscale(0%) invert(100%)';
