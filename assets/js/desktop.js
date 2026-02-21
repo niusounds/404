@@ -144,22 +144,110 @@ function checkCorruption() {
   corruptionLevel++;
   const overlay = document.getElementById('crt-overlay');
   const noise = document.getElementById('noise-canvas');
+  const bgFace = document.getElementById('bg-face');
 
   if (corruptionLevel === 3) {
     overlay.style.opacity = '0.5';
     document.body.style.backgroundColor = '#004040';
+    if (bgFace) bgFace.style.opacity = '0.05';
     playWhisper("みてるよ");
   } else if (corruptionLevel === 6) {
     overlay.style.opacity = '0.7';
     noise.style.opacity = '0.1';
     document.body.style.filter = 'contrast(1.5) brightness(0.8)';
+    if (bgFace) {
+      bgFace.style.opacity = '0.15';
+      bgFace.style.filter = 'blur(10px) grayscale(50%)';
+    }
     startEntityChat();
+    triggerFakePermission();
+  } else if (corruptionLevel === 10) {
+    showBSOD();
   } else if (corruptionLevel > 10) {
     document.body.classList.add('glitch-text');
     noise.style.opacity = '0.3';
+    if (bgFace) {
+      bgFace.style.opacity = '0.3';
+      bgFace.style.filter = 'blur(2px) grayscale(0%) invert(100%)';
+    }
+    setupMouseHijack();
     if (Math.random() > 0.6) triggerJumpScare();
     if (Math.random() > 0.8) triggerSpam();
   }
+}
+
+function triggerFakePermission() {
+  const win = createWindow('システム警告', `
+    <div style="text-align:center;">
+      <p>アプリケーション "SYSTEM_OBSERVER" が<br>あなたのカメラとマイクへのアクセスを求めています。</p>
+      <div style="margin-top:20px; display:flex; gap:10px; justify-content:center;">
+        <button class="win-btn" style="width:100px; height:25px;" onclick="closeAndMultiply(this)">許可する</button>
+        <button class="win-btn" style="width:100px; height:25px;" onclick="closeAndMultiply(this)">許可しない</button>
+      </div>
+    </div>
+  `, { width: '300px', top: '20%', left: '30%' });
+}
+
+window.closeAndMultiply = (btn) => {
+  const win = btn.closest('.window');
+  win.remove();
+  playWhisper("だめだよ");
+  for (let i = 0; i < 2; i++) {
+    createWindow('警告', 'アクセスが拒否されました。強制再起動中...', {
+      left: (Math.random() * 80) + '%',
+      top: (Math.random() * 80) + '%'
+    });
+  }
+};
+
+function setupMouseHijack() {
+  if (window.mouseHijackActive) return;
+  window.mouseHijackActive = true;
+  document.body.classList.add('cursed-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    if (corruptionLevel < 11) return;
+    // Random drift
+    if (Math.random() > 0.95) {
+      const win = document.querySelector('.window');
+      if (win) {
+        win.style.left = (parseInt(win.style.left) + (Math.random() * 10 - 5)) + 'px';
+      }
+    }
+  });
+}
+
+function showBSOD() {
+  const bsod = document.getElementById('bsod');
+  if (!bsod) return;
+  bsod.style.display = 'block';
+
+  const text = document.querySelector('.bsod-text');
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress += Math.floor(Math.random() * 5);
+    if (progress > 100) {
+      progress = 100;
+      clearInterval(interval);
+      setTimeout(() => {
+        bsod.style.display = 'none';
+        corruptionLevel++;
+        checkCorruption(); // Continue after BSOD
+      }, 3000);
+    }
+    text.innerHTML = `
+      A problem has been detected and Windows has been shut down to prevent damage 
+      to your mind.<br><br>
+      ERROR_CODE: 0x00000404 (ENTITY_NOT_FOUND)<br>
+      LOCATION: BEHIND_YOU<br><br>
+      Collecting data for error reporting...<br>
+      Total progress: ${progress}% complete.<br><br>
+      If this is the first time you've seen this Stop error screen,<br>
+      it is already too late.
+    `;
+  }, 300);
+
+  playWhisper("もうおわりだよ");
 }
 
 function spawnObserver() {
