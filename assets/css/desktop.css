@@ -468,17 +468,6 @@ html {
 }
 
 @keyframes screen-warp {
-  0% {
-    filter: perspective(1000px) rotateX(0deg) rotateY(0deg);
-  }
-
-  25% {
-    filter: perspective(1000px) rotateX(2deg) rotateY(-1deg) hue-rotate(10deg);
-  }
-
-  50% {
-    filter: perspective(1000px) rotateX(-1deg) rotateY(2deg) contrast(150%);
-  }
 
   75% {
     filter: perspective(1000px) rotateX(1deg) rotateY(-2deg) saturate(200%);
@@ -516,6 +505,7 @@ html {
 .blood-border {
   box-shadow: 0 0 10px #f00, inset 0 0 15px #600 !important;
   border-color: #800 !important;
+  transition: box-shadow 5s ease-in-out, border-color 5s ease-in-out;
 }
 
 .blood-border::after {
@@ -525,7 +515,41 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(136, 0, 0, 0.2) 0%, transparent 50%);
+  background: linear-gradient(to bottom, rgba(136, 0, 0, 0.4) 0%, transparent 80%);
+  pointer-events: none;
+  opacity: 0;
+  animation: blood-drip 10s forwards ease-in-out;
+}
+
+@keyframes blood-drip {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+/* Gravity Glitch */
+.gravity-fall {
+  transition: top 2s cubic-bezier(0.17, 0.67, 0.83, 0.67), left 2s ease-in-out;
+  pointer-events: none;
+}
+
+.rare-face {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
 }
 

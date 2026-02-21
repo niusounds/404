@@ -43,7 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
   setupStartMenu();
   setupEye();
   setupInteractionShake();
+  setupIdleDetection();
 });
+
+let lastInteraction = Date.now();
+function setupIdleDetection() {
+  const events = ['mousemove', 'mousedown', 'keydown', 'scroll', 'touchstart'];
+  events.forEach(e => document.addEventListener(e, () => lastInteraction = Date.now()));
+
+  setInterval(() => {
+    if (Date.now() - lastInteraction > 30000 && Math.random() > 0.7) {
+      playWhisper("なぜ、そこにいるの？");
+      lastInteraction = Date.now(); // Don't spam
+    }
+  }, 10000);
+}
 
 let audioCtx = null;
 function playGlitchNoise() {
@@ -136,6 +150,7 @@ function setupStartMenu() {
       <div class="start-menu-item" onclick="openFile('diary', 0)">日記_1.txt</div>
       <div class="start-menu-item" onclick="openFile('diary', 1)">日記_2.txt</div>
       <div class="start-menu-item" onclick="createWindow('history.log', '<ul style=\'font-size:11px; color:#333;\'><li>how to stop noise.html</li><li>can they see me.exe</li><li>suicide methods (DELETED)</li><li>your room live stream</li></ul>')">History.log</div>
+      <div class="start-menu-item" onclick="handleProgramsClick()">Programs</div>
       <div class="start-menu-item" onclick="createWindow('room.mp4', '<div style=\'background:#000; height:150px; display:flex; align-items:center; justify-content:center; color:#555;\'>[画像データが破損しています]</div>')">room.mp4</div>
       <div class="start-menu-item" onclick="createWindow('遺影.jpg', '<div style=\'background:#000; height:150px; display:flex; align-items:center; justify-content:center; color:red;\'>見ちゃだめ</div>')">遺影.jpg</div>
     `;
@@ -186,6 +201,22 @@ window.handleRunSubmit = () => {
   `;
   createWindow('Terminal', termContent, { width: '250px' });
   checkCorruption();
+};
+
+window.handleProgramsClick = () => {
+  // Rare Hijack: 5% chance to spam windows
+  if (Math.random() < 0.05) {
+    for (let i = 0; i < 20; i++) {
+      setTimeout(() => {
+        createWindow('ERROR', '<div style="color:red; font-weight:bold;">YOU SHOULD NOT BE HERE</div>', {
+          left: (Math.random() * 70) + '%',
+          top: (Math.random() * 70) + '%'
+        });
+      }, i * 50);
+    }
+  } else {
+    openIcon('diary-folder');
+  }
 };
 
 function openSettings() {
@@ -381,6 +412,13 @@ function openNotepad() {
 
 function checkCorruption() {
   corruptionLevel++;
+
+  // Rare: Fleeting Apparition (0.5%)
+  if (Math.random() < 0.005) triggerFleetingFace();
+
+  // Rare: Gravity Glitch (0.2%)
+  if (Math.random() < 0.002) triggerGravityGlitch();
+
   const overlay = document.getElementById('crt-overlay');
   const noise = document.getElementById('noise-canvas');
   const bgFace = document.getElementById('bg-face');
@@ -616,6 +654,31 @@ function triggerJumpScare() {
 
   document.body.appendChild(js);
   setTimeout(() => js.remove(), 150);
+}
+
+function triggerFleetingFace() {
+  const face = document.createElement('div');
+  face.className = 'rare-face';
+  face.innerHTML = `<div style="font-size:150px; color:#111; filter:blur(2px);">💀</div>`;
+  document.body.appendChild(face);
+  setTimeout(() => face.remove(), 50);
+}
+
+function triggerGravityGlitch() {
+  const icons = document.querySelectorAll('.icon');
+  icons.forEach(icon => {
+    icon.classList.add('gravity-fall');
+    icon.style.top = (window.innerHeight - 80) + 'px';
+    icon.style.left = (Math.random() * (window.innerWidth - 60)) + 'px';
+  });
+  playWhisper("おちる");
+  setTimeout(() => {
+    icons.forEach(icon => {
+      icon.classList.remove('gravity-fall');
+      icon.style.top = "";
+      icon.style.left = "";
+    });
+  }, 5000);
 }
 
 function setupTabTampering() {
