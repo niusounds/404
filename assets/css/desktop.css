@@ -272,6 +272,51 @@ html {
   color: #fff;
 }
 
+.start-menu-item i {
+  width: 16px;
+  text-align: center;
+}
+
+.sub-menu {
+  position: absolute;
+  left: 178px;
+  bottom: 0px;
+  width: 180px;
+  background: var(--win-grey);
+  border: 2px solid;
+  border-color: var(--win-white) var(--win-dark) var(--win-dark) var(--win-white);
+  box-shadow: 1px 1px 0 0 var(--win-black);
+  display: none;
+  flex-direction: column;
+}
+
+.start-menu-item:hover .sub-menu {
+  display: flex !important;
+}
+
+/* Control Panel Icons */
+.cpanel-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.cpanel-icon:hover {
+  background: #eee;
+  outline: 1px dotted #000;
+}
+
+.cpanel-img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 5px;
+  background: #ccc;
+  border: 1px solid #000;
+}
+
 .start-menu-item.disabled {
   color: #808080;
   cursor: not-allowed;

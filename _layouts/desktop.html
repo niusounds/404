@@ -29,9 +29,10 @@
         </div>
         <div class="start-menu-items">
             <div class="start-menu-item" onclick="openIcon('diary-folder')">Programs</div>
-            <div class="start-menu-item" onclick="openIcon('system-folder')">Documents</div>
-            <div class="start-menu-item" onclick="alert('設定は変更できません。')">Settings</div>
+            <div class="start-menu-item" id="menu-documents">Documents</div>
+            <div class="start-menu-item" onclick="openSettings()">Settings</div>
             <div class="start-menu-item" onclick="openIcon('memo')">Find</div>
+            <div class="start-menu-item" onclick="openHelp()">Help</div>
             <div class="menu-separator"></div>
             <div class="start-menu-item" id="menu-run">Run...</div>
             <div class="menu-separator"></div>

@@ -53,7 +53,7 @@ function setupStartMenu() {
   document.addEventListener('click', (e) => {
     const menu = document.getElementById('start-menu');
     const startBtn = document.getElementById('start-btn');
-    if (!menu.contains(e.target) && !startBtn.contains(e.target)) {
+    if (menu && !menu.contains(e.target) && startBtn && !startBtn.contains(e.target)) {
       menu.style.display = 'none';
     }
   });
@@ -61,16 +61,7 @@ function setupStartMenu() {
   const runBtn = document.getElementById('menu-run');
   runBtn.addEventListener('click', () => {
     toggleStartMenu();
-    const content = `
-      <div style="background:#000; color:#0f0; font-family:monospace; padding:10px; height:100px; overflow-y:auto;" id="run-terminal">
-        > C:\\WINDOWS\\SYSTEM32\\RUN.EXE<br>
-        > INITIALIZING...<br>
-        > ERROR: ACCESS_DENIED<br>
-        > UNKNOWN_PROCESS_DETECTED: "OBSERVER.SYS"<br>
-        > <span style="color:red;">WARNING: THEY ARE HERE.</span>
-      </div>
-    `;
-    createWindow('Run', content, { width: '250px' });
+    openRunDialog();
   });
 
   const shutdownBtn = document.getElementById('menu-shutdown');
@@ -86,6 +77,120 @@ function setupStartMenu() {
       }, 5000);
     }
   });
+
+  // Setup Documents sub-menu content (optional JS injection if not in HTML)
+  const docBtn = document.getElementById('menu-documents');
+  if (docBtn) {
+    const subMenu = document.createElement('div');
+    subMenu.className = 'sub-menu';
+    subMenu.innerHTML = `
+      <div class="start-menu-item" onclick="openFile('diary', 0)">日記_1.txt</div>
+      <div class="start-menu-item" onclick="openFile('diary', 1)">日記_2.txt</div>
+      <div class="start-menu-item" onclick="createWindow('room.mp4', '<div style=\'background:#000; height:150px; display:flex; align-items:center; justify-content:center; color:#555;\'>[画像データが破損しています]</div>')">room.mp4</div>
+      <div class="start-menu-item" onclick="createWindow('遺影.jpg', '<div style=\'background:#000; height:150px; display:flex; align-items:center; justify-content:center; color:red;\'>見ちゃだめ</div>')">遺影.jpg</div>
+    `;
+    docBtn.appendChild(subMenu);
+  }
+}
+
+function openRunDialog() {
+  const content = `
+    <div style="padding:10px;">
+      <p style="font-size:12px; margin-bottom:5px;">プログラム名を入力してください：</p>
+      <input type="text" id="run-input" style="width:100%; margin-bottom:10px; border:1px solid #808080;" autofocus>
+      <div style="display:flex; justify-content:flex-end; gap:5px;">
+        <button class="win-btn" style="width:60px;" onclick="handleRunSubmit()">OK</button>
+        <button class="win-btn" style="width:60px;" onclick="this.closest('.window').remove()">Cancel</button>
+      </div>
+    </div>
+  `;
+  const win = createWindow('Run', content, { width: '250px' });
+  const input = win.querySelector('#run-input');
+  input.onkeydown = (e) => { if (e.key === 'Enter') handleRunSubmit(); };
+  window.lastRunWin = win;
+}
+
+window.handleRunSubmit = () => {
+  const input = document.getElementById('run-input');
+  const cmd = input.value.trim().toLowerCase();
+  window.lastRunWin.remove();
+
+  let response = "";
+  if (cmd === "who are you" || cmd === "だれ？") {
+    response = "あなたのすぐ後ろにいる者です。";
+    playWhisper(response);
+  } else if (cmd === "help" || cmd === "たすけて") {
+    response = "助けは来ません。手遅れです。";
+    playWhisper(response);
+  } else {
+    response = `コマンド "${cmd}" を実行中に致命的なエラーが発生しました。`;
+  }
+
+  const termContent = `
+    <div style="background:#000; color:#0f0; font-family:monospace; padding:10px; height:120px; overflow-y:auto;">
+      > ${cmd.toUpperCase()}<br>
+      > PROCESSING...<br>
+      > <span style="color:red;">${response}</span><br>
+      > SYSTEM_HALTED.
+    </div>
+  `;
+  createWindow('Terminal', termContent, { width: '250px' });
+  checkCorruption();
+};
+
+function openSettings() {
+  toggleStartMenu();
+  const content = `
+    <div style="display:flex; flex-wrap:wrap; gap:10px; padding:10px;">
+      <div class="cpanel-icon" onclick="openUserAccounts()">
+        <div class="cpanel-img" style="background: radial-gradient(circle, #833, #000);"></div>
+        <div style="font-size:10px; text-align:center;">Users</div>
+      </div>
+      <div class="cpanel-icon" onclick="createWindow('Display', '<p>モニター同期エラー。感度が強すぎます。</p>')">
+        <div class="cpanel-img"></div>
+        <div style="font-size:10px; text-align:center;">Display</div>
+      </div>
+    </div>
+  `;
+  createWindow('Control Panel', content, { width: '200px' });
+}
+
+window.openUserAccounts = () => {
+  const content = `
+    <div style="padding:10px;">
+      <p style="font-size:12px; font-weight:bold;">現在ログイン中のユーザー：</p>
+      <ul style="font-size:12px; margin-top:5px; list-style:none;">
+        <li>👤 Administrator (Online)</li>
+        <li style="color:red; animation: spooky-fade 2s infinite;">👤 The Observer (Watching...)</li>
+      </ul>
+      <p style="font-size:10px; color:#888; margin-top:10px;">警告: 未承認のアクセスを検知しました。</p>
+    </div>
+  `;
+  createWindow('User Accounts', content, { width: '220px' });
+  checkCorruption();
+};
+
+function openHelp() {
+  toggleStartMenu();
+  const win = createWindow('Windows Help', '<div class="notepad-area" id="help-text"></div>', { width: '250px' });
+  const area = win.querySelector('#help-text');
+
+  const msg = "だ れ も あ な た を た す け ら れ な い . . . ";
+  let i = 0;
+  function typeHelp() {
+    if (i < msg.length && document.body.contains(win)) {
+      area.innerHTML += msg.charAt(i++);
+      setTimeout(typeHelp, 150);
+    } else {
+      setTimeout(() => {
+        if (document.body.contains(win)) {
+          win.classList.add('melt');
+          setTimeout(() => win.remove(), 5000);
+        }
+      }, 2000);
+    }
+  }
+  typeHelp();
 }
 
 function updateClock() {
