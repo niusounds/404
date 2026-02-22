@@ -1,0 +1,16 @@
+{
+  "name": "404：存在しないはずの記憶",
+  "short_name": "404",
+  "description": "誰にも語られることのなかった「本物の」怪異",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

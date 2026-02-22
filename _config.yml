@@ -30,6 +30,8 @@ exclude:
 # Plugins
 plugins:
   - jekyll-minifier
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Sass settings
 sass:
