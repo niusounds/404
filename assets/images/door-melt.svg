@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#000000"/>
+  <defs>
+    <linearGradient id="door-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#111"/>
+      <stop offset="50%" stop-color="#222"/>
+      <stop offset="100%" stop-color="#111"/>
+    </linearGradient>
+  </defs>
+  <!-- Door frame -->
+  <rect x="250" y="50" width="300" height="550" fill="none" stroke="#333" stroke-width="10"/>
+  <!-- Door -->
+  <rect x="260" y="60" width="280" height="540" fill="url(#door-grad)"/>
+  <!-- Melting handle replacing by fingers -->
+  <path d="M 500,350 C 480,350 450,370 450,400 C 460,420 480,410 500,400 Z" fill="#555"/>
+  <path d="M 450,400 C 430,410 410,380 400,420 C 390,440 430,450 450,430 Z" fill="#444">
+    <animate attributeName="d" values="M 450,400 C 430,410 410,380 400,420 C 390,440 430,450 450,430 Z; M 450,400 C 410,430 380,400 370,450 C 350,490 440,460 450,430 Z; M 450,400 C 430,410 410,380 400,420 C 390,440 430,450 450,430 Z" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 460,410 C 440,430 430,420 420,460 C 410,490 450,480 460,450 Z" fill="#333">
+    <animate attributeName="d" values="M 460,410 C 440,430 430,420 420,460 C 410,490 450,480 460,450 Z; M 460,410 C 430,450 410,440 390,500 C 370,540 460,500 460,450 Z; M 460,410 C 440,430 430,420 420,460 C 410,490 450,480 460,450 Z" dur="6s" repeatCount="indefinite"/>
+  </path>
+  <!-- Blood / Dark fluid -->
+  <path d="M 260,550 C 300,530 400,580 540,550 L 540,600 L 260,600 Z" fill="#100">
+    <animate attributeName="fill" values="#100;#300;#100" dur="4s" repeatCount="indefinite"/>
+  </path>
+</svg>
