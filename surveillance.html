@@ -6,136 +6,136 @@ title: 監視カメラ・アーカイブ
 <link rel="stylesheet" href="{{ '/assets/css/surveillance.css' | relative_url }}">
 
 <div class="surveillance-container-wrapper"
-    style="background: #000; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
+  style="background: #000; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
 
-    <div style="margin-bottom: 20px; text-align: center;">
-        <h1 style="color: #600; font-family: 'serif'; letter-spacing: 0.2em; margin-bottom: 10px;">ARCHIVE: CASE-404
-        </h1>
-        <p style="color: #444; font-size: 0.8rem;">※接続中... 信号が不安定です。長時間視聴はお控えください。</p>
+  <div style="margin-bottom: 20px; text-align: center;">
+    <h1 style="color: #600; font-family: 'serif'; letter-spacing: 0.2em; margin-bottom: 10px;">ARCHIVE: CASE-404
+    </h1>
+    <p style="color: #444; font-size: 0.8rem;">※接続中... 信号が不安定です。長時間視聴はお控えください。</p>
+  </div>
+
+  <div class="cctv-container">
+    <div id="audio-overlay"
+      style="position: absolute; top:0; left:0; width: 100%; height: 100%; z-index: 100; background: rgba(0,0,0,0.9); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #0a0; font-family: monospace; cursor: pointer; border: 1px solid #030;">
+      <div style="font-size: 2rem; margin-bottom: 20px; letter-spacing: 0.5em;">[ SYSTEM READY ]</div>
+      <div style="font-size: 1rem; animation: blink 1s infinite;">▶ CLICK TO ESTABLISH LINK</div>
+      <div style="margin-top: 50px; color: #444; font-size: 0.7rem;">DECRYPTION KEY: 0x884F2A... OK</div>
     </div>
 
-    <div class="cctv-container">
-        <div id="audio-overlay"
-            style="position: absolute; top:0; left:0; width: 100%; height: 100%; z-index: 100; background: rgba(0,0,0,0.9); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #0a0; font-family: monospace; cursor: pointer; border: 1px solid #030;">
-            <div style="font-size: 2rem; margin-bottom: 20px; letter-spacing: 0.5em;">[ SYSTEM READY ]</div>
-            <div style="font-size: 1rem; animation: blink 1s infinite;">▶ CLICK TO ESTABLISH LINK</div>
-            <div style="margin-top: 50px; color: #444; font-size: 0.7rem;">DECRYPTION KEY: 0x884F2A... OK</div>
+    <div class="monitor-screen" id="monitor-screen" data-cam="1">
+      <div class="hallway-base"></div>
+
+      <!-- Camera 1: Corridor -->
+      <div class="corridor cam-view" id="cam-1">
+        <div class="wall-left"></div>
+        <div class="wall-right"></div>
+        <div class="floor"></div>
+        <div class="ceiling"></div>
+        <div class="industrial-pipe pipe-left"></div>
+        <div class="industrial-pipe pipe-right"></div>
+        <div class="door-end" id="door"></div>
+        <div class="shadow-figure" id="shadow-figure"></div>
+        <div class="shadow-crawling" id="shadow-crawling"></div>
+        <div class="ceiling-entity" id="ceiling-entity"></div>
+        <div class="blood-text" id="blood-text" style="top: 30%; left: 40%;">HELP</div>
+      </div>
+
+      <!-- Camera 2: Storage -->
+      <div class="storage-view cam-view" id="cam-2" style="display:none;">
+        <div class="storage-crate" style="width: 180px; height: 140px; left: 10%; bottom: 0;"></div>
+        <div class="storage-crate" style="width: 150px; height: 120px; left: 5%; bottom: 138px;"></div>
+        <div class="storage-crate" style="width: 200px; height: 180px; right: 8%; bottom: 0;"></div>
+        <div class="storage-shelf" style="width: 300px; height: 10px; left: 5%; bottom: 135px;"></div>
+        <div id="storage-scare"
+          style="position:absolute; width: 60px; height: 120px; background: #000; left: 50%; bottom: 140px; filter: blur(20px); opacity: 0; transition: all 0.2s;">
+        </div>
+      </div>
+
+      <!-- Camera 3: Stairwell -->
+      <div class="stairwell-view cam-view" id="cam-3" style="display:none;">
+        <div class="stair-step" style="top: 10%;"></div>
+        <div class="stair-step" style="top: 25%;"></div>
+        <div class="stair-step" style="top: 40%;"></div>
+        <div class="stair-step" style="top: 55%;"></div>
+        <div class="stair-step" style="top: 70%;"></div>
+        <div class="stair-rail"></div>
+        <div id="stair-scare"
+          style="position: absolute; width: 60px; height: 60px; left: 45%; top: 65%; filter: blur(4px); opacity: 0; pointer-events:none;">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="35" cy="40" r="4" fill="#fff" />
+            <circle cx="65" cy="40" r="4" fill="#fff" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="flicker-light"></div>
+      <div class="dirt-texture"></div>
+      <div class="stalker-overlay" id="stalker-overlay"></div>
+      <div class="interference" id="interference"></div>
+      <div class="overlay-noise"></div>
+      <div class="overlay-scanlines"></div>
+      <div class="overlay-humbar"></div>
+      <div class="overlay-vignette"></div>
+
+      <div class="cctv-ui">
+        <div class="ui-left-panel">
+          <button class="cam-btn active" data-cam="1">CAM-01: HALLWAY</button>
+          <button class="cam-btn" data-cam="2">CAM-02: STORAGE</button>
+          <button class="cam-btn" data-cam="3">CAM-03: STAIRS</button>
         </div>
 
-        <div class="monitor-screen" id="monitor-screen" data-cam="1">
-            <div class="hallway-base"></div>
-
-            <!-- Camera 1: Corridor -->
-            <div class="corridor cam-view" id="cam-1">
-                <div class="wall-left"></div>
-                <div class="wall-right"></div>
-                <div class="floor"></div>
-                <div class="ceiling"></div>
-                <div class="industrial-pipe pipe-left"></div>
-                <div class="industrial-pipe pipe-right"></div>
-                <div class="door-end" id="door"></div>
-                <div class="shadow-figure" id="shadow-figure"></div>
-                <div class="shadow-crawling" id="shadow-crawling"></div>
-                <div class="ceiling-entity" id="ceiling-entity"></div>
-                <div class="blood-text" id="blood-text" style="top: 30%; left: 40%;">HELP</div>
-            </div>
-
-            <!-- Camera 2: Storage -->
-            <div class="storage-view cam-view" id="cam-2" style="display:none;">
-                <div class="storage-crate" style="width: 180px; height: 140px; left: 10%; bottom: 0;"></div>
-                <div class="storage-crate" style="width: 150px; height: 120px; left: 5%; bottom: 138px;"></div>
-                <div class="storage-crate" style="width: 200px; height: 180px; right: 8%; bottom: 0;"></div>
-                <div class="storage-shelf" style="width: 300px; height: 10px; left: 5%; bottom: 135px;"></div>
-                <div id="storage-scare"
-                    style="position:absolute; width: 60px; height: 120px; background: #000; left: 50%; bottom: 140px; filter: blur(20px); opacity: 0; transition: all 0.2s;">
-                </div>
-            </div>
-
-            <!-- Camera 3: Stairwell -->
-            <div class="stairwell-view cam-view" id="cam-3" style="display:none;">
-                <div class="stair-step" style="top: 10%;"></div>
-                <div class="stair-step" style="top: 25%;"></div>
-                <div class="stair-step" style="top: 40%;"></div>
-                <div class="stair-step" style="top: 55%;"></div>
-                <div class="stair-step" style="top: 70%;"></div>
-                <div class="stair-rail"></div>
-                <div id="stair-scare"
-                    style="position: absolute; width: 60px; height: 60px; left: 45%; top: 65%; filter: blur(4px); opacity: 0; pointer-events:none;">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="35" cy="40" r="4" fill="#fff" />
-                        <circle cx="65" cy="40" r="4" fill="#fff" />
-                    </svg>
-                </div>
-            </div>
-
-            <div class="flicker-light"></div>
-            <div class="dirt-texture"></div>
-            <div class="stalker-overlay" id="stalker-overlay"></div>
-            <div class="interference" id="interference"></div>
-            <div class="overlay-noise"></div>
-            <div class="overlay-scanlines"></div>
-            <div class="overlay-humbar"></div>
-            <div class="overlay-vignette"></div>
-
-            <div class="cctv-ui">
-                <div class="ui-left-panel">
-                    <button class="cam-btn active" data-cam="1">CAM-01: HALLWAY</button>
-                    <button class="cam-btn" data-cam="2">CAM-02: STORAGE</button>
-                    <button class="cam-btn" data-cam="3">CAM-03: STAIRS</button>
-                </div>
-
-                <div class="ui-top">
-                    <div class="rec-indicator">
-                        <div class="rec-dot"></div>
-                        <span id="status-text">REC ● LIVE</span>
-                    </div>
-                    <div class="cam-info" id="cam-info">
-                        CAM-01: NORTH CORRIDOR B2
-                    </div>
-                </div>
-
-                <div class="ui-log-panel" id="ui-log">
-                    <div class="log-entry">> SYSTEM INITIALIZED</div>
-                </div>
-
-                <div class="ui-right-panel">
-                    <div class="status-item">
-                        <span style="font-size: 0.7rem; color: #444;">SIGNAL</span>
-                        <div class="signal-bar">
-                            <div id="signal-fill" style="width: 80%; height: 100%; background: var(--cctv-green);">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="status-item">
-                        <span style="font-size: 0.7rem; color: #444;">BATTERY</span>
-                        <div class="battery-icon">
-                            <div id="battery-fill" style="width: 95%; height: 100%; background: var(--cctv-green);">
-                            </div>
-                            <div class="battery-tip"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="ui-bottom">
-                    <div class="cam-name">
-                        BTM_FACILITY_SEC
-                    </div>
-                    <div class="timestamp" id="timestamp">
-                        2026/02/22 03:00:00:00
-                    </div>
-                </div>
-            </div>
+        <div class="ui-top">
+          <div class="rec-indicator">
+            <div class="rec-dot"></div>
+            <span id="status-text">REC ● LIVE</span>
+          </div>
+          <div class="cam-info" id="cam-info">
+            CAM-01: NORTH CORRIDOR B2
+          </div>
         </div>
-    </div>
 
-    <div style="margin-top: 30px; max-width: 600px; color: #666; font-size: 0.9rem; line-height: 1.6;">
-        <p>このアーカイブは某都北部の廃病院地下、管理区域にて回収されたものです。カメラは24時間稼働していますが、数分おきに発生する「光学的ノイズ」と「物理的変化」の相関関係は現在も調査中です。</p>
-        <p style="margin-top: 10px; color: #333; font-style: italic;">注意：画面の奥を注視し続けないでください。何かが見えた際、それはあなたを見ている可能性があります。
-        </p>
-    </div>
+        <div class="ui-log-panel" id="ui-log">
+          <div class="log-entry">> SYSTEM INITIALIZED</div>
+        </div>
 
-    <a href="{{ '/' | relative_url }}"
-        style="margin-top: 40px; color: #800; text-decoration: none; border-bottom: 1px solid #800; padding-bottom: 2px;">トップへ戻る</a>
+        <div class="ui-right-panel">
+          <div class="status-item">
+            <span style="font-size: 0.7rem; color: #444;">SIGNAL</span>
+            <div class="signal-bar">
+              <div id="signal-fill" style="width: 80%; height: 100%; background: var(--cctv-green);">
+              </div>
+            </div>
+          </div>
+          <div class="status-item">
+            <span style="font-size: 0.7rem; color: #444;">BATTERY</span>
+            <div class="battery-icon">
+              <div id="battery-fill" style="width: 95%; height: 100%; background: var(--cctv-green);">
+              </div>
+              <div class="battery-tip"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-bottom">
+          <div class="cam-name">
+            BTM_FACILITY_SEC
+          </div>
+          <div class="timestamp" id="timestamp">
+            2026/02/22 03:00:00:00
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 30px; max-width: 600px; color: #666; font-size: 0.9rem; line-height: 1.6;">
+    <p>このアーカイブは某都北部の廃病院地下、管理区域にて回収されたものです。カメラは24時間稼働していますが、数分おきに発生する「光学的ノイズ」と「物理的変化」の相関関係は現在も調査中です。</p>
+    <p style="margin-top: 10px; color: #333; font-style: italic;">注意：画面の奥を注視し続けないでください。何かが見えた際、それはあなたを見ている可能性があります。
+    </p>
+  </div>
+
+  <a href="{{ '/' | relative_url }}"
+    style="margin-top: 40px; color: #800; text-decoration: none; border-bottom: 1px solid #800; padding-bottom: 2px;">トップへ戻る</a>
 </div>
 
 <script src="{{ '/assets/js/surveillance.js' | relative_url }}"></script>
