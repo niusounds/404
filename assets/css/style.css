@@ -638,4 +638,74 @@ body {
   .post-item h2 {
     font-size: 1.5rem;
   }
+
+  .container,
+  .content-wrapper {
+    max-width: 100%;
+    padding: 0 8px;
+    margin: 0 auto;
+  }
+
+  .site-header {
+    padding: 20px 0;
+  }
+
+  .site-description {
+    font-size: 1rem;
+    margin-top: 2px;
+  }
+
+  .hero {
+    min-height: 300px;
+    height: 40vh;
+    margin-top: 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .post-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .post-card {
+    padding: 18px;
+  }
+
+  .post-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .post-excerpt {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .post-content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .post-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1em auto;
+  }
+
+  .site-footer {
+    padding: 20px 0;
+    font-size: 0.8rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+  }
 }
