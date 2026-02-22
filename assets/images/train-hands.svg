@@ -1,0 +1,29 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#000" />
+  <!-- fog/darkness -->
+  <rect width="400" height="300" fill="#111" opacity="0.8" />
+  <!-- glowing hands reaching out -->
+  <g fill="#ecf0f1" opacity="0.6">
+    <!-- hand 1 -->
+    <path d="M 150 200 Q 180 150 200 120 Q 210 100 220 120 Q 210 160 180 220 Z">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -10,10; 0,0" dur="4s" repeatCount="indefinite" />
+    </path>
+    <path d="M 160 210 Q 190 160 215 130 Q 225 110 235 130 Q 220 170 190 230 Z">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -5,15; 0,0" dur="3.5s" repeatCount="indefinite" />
+    </path>
+    <!-- hand 2 -->
+    <path d="M 280 250 Q 250 180 220 150 Q 200 130 190 160 Q 220 190 240 270 Z">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 10,5; 0,0" dur="5s" repeatCount="indefinite" />
+    </path>
+    <!-- hand 3 -->
+    <path d="M 80 280 Q 120 220 150 190 Q 170 170 160 150 Q 130 180 90 250 Z">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 5,-10; 0,0" dur="4.5s" repeatCount="indefinite" />
+    </path>
+  </g>
+  <!-- vignette -->
+  <radialGradient id="gradh" cx="50%" cy="50%" r="50%">
+    <stop offset="50%" stop-color="#000" stop-opacity="0" />
+    <stop offset="100%" stop-color="#000" stop-opacity="1" />
+  </radialGradient>
+  <rect width="400" height="300" fill="url(#gradh)" />
+</svg>

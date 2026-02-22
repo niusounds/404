@@ -1,0 +1,18 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#050510" />
+  <!-- train doors opening -->
+  <rect x="0" y="0" width="100" height="300" fill="#222" />
+  <rect x="300" y="0" width="100" height="300" fill="#222" />
+  <!-- platform -->
+  <rect x="100" y="250" width="200" height="50" fill="#111" />
+  <!-- corrupted sign -->
+  <rect x="150" y="100" width="100" height="40" fill="#e74c3c" opacity="0.6" />
+  <!-- Distorted text/shapes -->
+  <path d="M 160 110 L 170 130 L 165 120 L 180 115" stroke="#000" stroke-width="2" fill="none" />
+  <path d="M 190 125 L 205 105 L 215 130 L 200 110" stroke="#000" stroke-width="2" fill="none" />
+  <path d="M 225 115 L 240 120 L 230 110 L 235 130" stroke="#000" stroke-width="2" fill="none" />
+  <!-- shadow on platform -->
+  <path d="M 150 250 Q 200 200 250 250 Z" fill="#0d0d0d" opacity="0.8">
+    <animate attributeName="opacity" values="0.6;0.9;0.6" dur="5s" repeatCount="indefinite" />
+  </path>
+</svg>

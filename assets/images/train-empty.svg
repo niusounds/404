@@ -1,0 +1,14 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#111" />
+  <!-- Train interior -->
+  <rect x="20" y="20" width="360" height="260" fill="#222" rx="10" />
+  <rect x="40" y="40" width="120" height="80" fill="#000" rx="5" />
+  <rect x="240" y="40" width="120" height="80" fill="#000" rx="5" />
+  <!-- Light flicker -->
+  <rect x="180" y="20" width="40" height="10" fill="#fff" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.9;0.1;0.8" dur="3s" repeatCount="indefinite" />
+  </rect>
+  <!-- Silhouette of man -->
+  <path d="M 280 160 Q 300 130 320 160 L 330 220 L 270 220 Z" fill="#1a1a1a" />
+  <circle cx="300" cy="120" r="15" fill="#1a1a1a" />
+</svg>
