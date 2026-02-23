@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Dark room with single light source -->
+  <rect width="800" height="500" fill="#0a0a0a"/>
+  
+  <!-- Spotlight effect -->
+  <radialGradient id="spotlight" cx="50%" cy="40%">
+    <stop offset="0%" style="stop-color:#3a3a3a;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+  </radialGradient>
+  <rect width="800" height="500" fill="url(#spotlight)"/>
+  
+  <!-- Wife's face - centered, too perfect -->
+  <ellipse cx="400" cy="250" rx="80" ry="100" fill="#d4a574"/>
+  
+  <!-- Hair -->
+  <ellipse cx="400" cy="200" rx="85" ry="80" fill="#1a1a1a"/>
+  <path d="M 315 220 Q 320 280 340 320" fill="#1a1a1a"/>
+  <path d="M 485 220 Q 480 280 460 320" fill="#1a1a1a"/>
+  
+  <!-- Eyes - hollow, like a doll -->
+  <ellipse cx="365" cy="240" rx="12" ry="16" fill="#fff"/>
+  <ellipse cx="435" cy="240" rx="12" ry="16" fill="#fff"/>
+  <circle cx="365" cy="242" r="8" fill="#000">
+    <animate attributeName="r" values="8;6;8" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="435" cy="242" r="8" fill="#000">
+    <animate attributeName="r" values="8;6;8" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="365" cy="240" r="3" fill="#fff" opacity="0.6"/>
+  <circle cx="435" cy="240" r="3" fill="#fff" opacity="0.6"/>
+  
+  <!-- The smile - too wide, too perfect, slightly wrong -->
+  <path d="M 345 280 Q 400 310 455 280" stroke="#8b4545" stroke-width="4" fill="none"/>
+  <path d="M 345 280 Q 400 308 455 280" stroke="#000" stroke-width="2" fill="none"/>
+  
+  <!-- Subtle distortion lines around the face -->
+  <path d="M 310 250 L 300 250" stroke="#00ff88" stroke-width="1" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 490 250 L 500 250" stroke="#00ff88" stroke-width="1" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 400 150 L 400 140" stroke="#00ff88" stroke-width="1" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Body - simplified dark form -->
+  <rect x="330" y="340" width="140" height="160" fill="#2a2a3a"/>
+  
+  <!-- Text hint - barely visible -->
+  <text x="400" y="480" font-family="monospace" font-size="12" fill="#00ff88" opacity="0.15" text-anchor="middle">
+    SYSTEM_STATUS: OPTIMAL
+  </text>
+</svg>
