@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Dark meeting room -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+  
+  <!-- Table -->
+  <ellipse cx="400" cy="400" rx="350" ry="80" fill="#2d2d44"/>
+  
+  <!-- Three identical figures with identical smiles -->
+  <g id="person1">
+    <!-- Head -->
+    <ellipse cx="250" cy="280" rx="40" ry="50" fill="#d4a574"/>
+    <!-- Eyes - all exactly the same -->
+    <circle cx="235" cy="275" r="4" fill="#000"/>
+    <circle cx="265" cy="275" r="4" fill="#000"/>
+    <circle cx="235" cy="275" r="2" fill="#fff">
+      <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="265" cy="275" r="2" fill="#fff">
+      <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Smile - unnaturally identical -->
+    <path d="M 230 290 Q 250 302 270 290" stroke="#000" stroke-width="3" fill="none"/>
+    <!-- Suit -->
+    <rect x="210" y="320" width="80" height="100" fill="#1a1a1a"/>
+  </g>
+  
+  <g id="person2">
+    <ellipse cx="400" cy="270" rx="40" ry="50" fill="#d4a574"/>
+    <circle cx="385" cy="265" r="4" fill="#000"/>
+    <circle cx="415" cy="265" r="4" fill="#000"/>
+    <circle cx="385" cy="265" r="2" fill="#fff">
+      <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="415" cy="265" r="2" fill="#fff">
+      <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M 380 280 Q 400 292 420 280" stroke="#000" stroke-width="3" fill="none"/>
+    <rect x="360" y="310" width="80" height="100" fill="#1a1a1a"/>
+  </g>
+  
+  <g id="person3">
+    <ellipse cx="550" cy="280" rx="40" ry="50" fill="#d4a574"/>
+    <circle cx="535" cy="275" r="4" fill="#000"/>
+    <circle cx="565" cy="275" r="4" fill="#000"/>
+    <circle cx="535" cy="275" r="2" fill="#fff">
+      <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="565" cy="275" r="2" fill="#fff">
+      <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M 530 290 Q 550 302 570 290" stroke="#000" stroke-width="3" fill="none"/>
+    <rect x="510" y="320" width="80" height="100" fill="#1a1a1a"/>
+  </g>
+  
+  <!-- Fluorescent light above - too bright -->
+  <rect x="200" y="30" width="400" height="20" fill="#ffffff" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Subtle grid pattern suggesting artificial control -->
+  <line x1="0" y1="150" x2="800" y2="150" stroke="#00ff88" stroke-width="0.5" opacity="0.1"/>
+  <line x1="0" y1="250" x2="800" y2="250" stroke="#00ff88" stroke-width="0.5" opacity="0.1"/>
+  <line x1="200" y1="0" x2="200" y2="500" stroke="#00ff88" stroke-width="0.5" opacity="0.1"/>
+  <line x1="400" y1="0" x2="400" y2="500" stroke="#00ff88" stroke-width="0.5" opacity="0.1"/>
+  <line x1="600" y1="0" x2="600" y2="500" stroke="#00ff88" stroke-width="0.5" opacity="0.1"/>
+</svg>

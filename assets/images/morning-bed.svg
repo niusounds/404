@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Too-bright morning light -->
+  <defs>
+    <linearGradient id="morningLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffee;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fff5cc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="500" fill="url(#morningLight)"/>
+  
+  <!-- Overly bright window -->
+  <rect x="550" y="50" width="200" height="350" fill="#ffffff">
+    <animate attributeName="opacity" values="0.95;1;0.95" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Window frame -->
+  <rect x="550" y="50" width="200" height="350" fill="none" stroke="#8b7355" stroke-width="8"/>
+  <line x1="650" y1="50" x2="650" y2="400" stroke="#8b7355" stroke-width="6"/>
+  <line x1="550" y1="225" x2="750" y2="225" stroke="#8b7355" stroke-width="6"/>
+  
+  <!-- Bed -->
+  <rect x="100" y="300" width="350" height="150" fill="#e8d4b8"/>
+  <rect x="100" y="280" width="350" height="30" fill="#d4b894"/>
+  
+  <!-- Pillow -->
+  <ellipse cx="200" cy="310" rx="60" ry="25" fill="#fff" opacity="0.9"/>
+  
+  <!-- Person sleeping peacefully - too peacefully -->
+  <ellipse cx="200" cy="320" rx="35" ry="45" fill="#d4a574"/>
+  <path d="M 180 325 Q 200 315 220 325" stroke="#000" stroke-width="2" fill="none"/>
+  
+  <!-- Closed eyes -->
+  <line x1="185" y1="318" x2="195" y2="318" stroke="#000" stroke-width="2"/>
+  <line x1="205" y1="318" x2="215" y2="318" stroke="#000" stroke-width="2"/>
+  
+  <!-- Blanket -->
+  <path d="M 150 340 Q 200 360 450 340 L 450 450 L 100 450 Z" fill="#a8c8e0"/>
+  
+  <!-- Digital artifacts in the "perfect" scene -->
+  <rect x="100" y="100" width="80" height="2" fill="#00ff88" opacity="0.05">
+    <animate attributeName="opacity" values="0.05;0.15;0.05" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="300" y="150" width="100" height="2" fill="#00ff88" opacity="0.05">
+    <animate attributeName="opacity" values="0.05;0.15;0.05" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Clock showing time but slightly glitchy -->
+  <circle cx="150" cy="150" r="40" fill="#fff" stroke="#000" stroke-width="3"/>
+  <line x1="150" y1="150" x2="150" y2="120" stroke="#000" stroke-width="3"/>
+  <line x1="150" y1="150" x2="175" y2="150" stroke="#000" stroke-width="3"/>
+  <text x="150" y="200" font-family="sans-serif" font-size="16" fill="#000" text-anchor="middle">7:00</text>
+  
+  <!-- Subtle system text -->
+  <text x="400" y="480" font-family="monospace" font-size="10" fill="#00ff88" opacity="0.08" text-anchor="middle">
+    MEMORY_RESET: COMPLETE | STATUS: OPTIMAL
+  </text>
+</svg>
