@@ -6,7 +6,12 @@
   const CONFIG = {
     titleChangeInterval: 2000, // ms between title changes
     audioEnabled: true,
-    maxAwayCount: 5, // Maximum number of times user can leave
+  };
+  
+  // Audio constants
+  const AUDIO = {
+    BASE_WHISPER_FREQ: 80,
+    FREQ_RANGE: 40,
   };
 
   // State
@@ -210,7 +215,7 @@
     const now = audioContext.currentTime;
     
     // Base frequency for whisper (very low)
-    const baseFreq = 80 + Math.random() * 40;
+    const baseFreq = AUDIO.BASE_WHISPER_FREQ + Math.random() * AUDIO.FREQ_RANGE;
     
     // Create oscillator for the whisper
     const oscillator = audioContext.createOscillator();
