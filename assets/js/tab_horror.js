@@ -83,7 +83,6 @@
     isAway = true;
     awayCount++;
     startChangingTitle();
-    console.log('User left tab. Count:', awayCount);
   }
 
   // When user returns to tab
@@ -92,8 +91,6 @@
     
     isAway = false;
     stopChangingTitle();
-    
-    console.log('User returned to tab. Total leaves:', awayCount);
     
     // Restore original title briefly before showing effect
     document.title = originalTitle;
@@ -203,7 +200,7 @@
     try {
       audioContext = new (window.AudioContext || window.webkitAudioContext)();
     } catch (e) {
-      console.log('Web Audio API not supported');
+      // Web Audio API not supported, disable audio
       CONFIG.audioEnabled = false;
     }
   }
