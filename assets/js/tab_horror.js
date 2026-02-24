@@ -132,21 +132,21 @@
     // Level 1: First time (subtle)
     if (awayCount === 1) {
       flashBloodOverlay(1000);
-      playWhisper('おかえり');
+      playWhisper();
     }
     
     // Level 2: Second time (noticeable)
     else if (awayCount === 2) {
       flashBloodOverlay(2000);
       showShadowFigure(3000);
-      playWhisper('また行くの？');
+      playWhisper();
     }
     
     // Level 3: Third time (intense)
     else if (awayCount === 3) {
       flashBloodOverlay(3000);
       showShadowFigure(5000);
-      playWhisper('離れないで');
+      playWhisper();
       document.body.classList.add('returned');
       setTimeout(() => {
         document.body.classList.remove('returned');
@@ -158,7 +158,7 @@
       flashBloodOverlay(4000);
       showShadowFigure(7000);
       showEyes(5000);
-      playWhisper('もう逃がさない');
+      playWhisper();
       document.body.classList.add('returned');
       
       // Screen shake multiple times
@@ -208,7 +208,7 @@
     }
   }
 
-  function playWhisper(text) {
+  function playWhisper() {
     if (!CONFIG.audioEnabled || !audioContext) return;
     
     // Create a creepy whisper sound using oscillators
@@ -247,8 +247,6 @@
     // Play
     oscillator.start(now);
     oscillator.stop(now + 1.5);
-    
-    console.log('Playing whisper:', text);
   }
 
   // Cleanup on page unload
