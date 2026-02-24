@@ -198,6 +198,7 @@
     if (!CONFIG.audioEnabled) return;
     
     try {
+      // Use AudioContext (webkitAudioContext for older Safari support)
       audioContext = new (window.AudioContext || window.webkitAudioContext)();
     } catch (e) {
       // Web Audio API not supported, disable audio
@@ -211,17 +212,19 @@
     // Create a creepy whisper sound using oscillators
     const now = audioContext.currentTime;
     
-    // Base frequency for whisper (very low)
-    const baseFreq = AUDIO.BASE_WHISPER_FREQ + Math.random() * AUDIO.FREQ_RANGE;
+    // Base frequency for whisper (very low, ensure it's always positive)
+    const baseFreq = Math.max(AUDIO.BASE_WHISPER_FREQ + Math.random() * AUDIO.FREQ_RANGE, 50);
     
     // Create oscillator for the whisper
     const oscillator = audioContext.createOscillator();
     oscillator.type = 'sawtooth';
     oscillator.frequency.setValueAtTime(baseFreq, now);
     
-    // Add some frequency wobble for creepy effect
-    oscillator.frequency.exponentialRampToValueAtTime(baseFreq * 0.95, now + 0.5);
-    oscillator.frequency.exponentialRampToValueAtTime(baseFreq * 1.05, now + 1);
+    // Add some frequency wobble for creepy effect (ensure values stay positive)
+    const freq1 = Math.max(baseFreq * 0.95, 50);
+    const freq2 = Math.max(baseFreq * 1.05, 50);
+    oscillator.frequency.exponentialRampToValueAtTime(freq1, now + 0.5);
+    oscillator.frequency.exponentialRampToValueAtTime(freq2, now + 1);
     
     // Create gain for volume control
     const gainNode = audioContext.createGain();
