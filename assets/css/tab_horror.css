@@ -59,6 +59,7 @@ body {
 }
 
 /* Animation delays for each diary entry */
+/* content-screen children: h1(1), story-section(2), diary-entry(3-7), warning-text(8) */
 .content-screen > .diary-entry:nth-child(3) { animation-delay: 0.2s; }
 .content-screen > .diary-entry:nth-child(4) { animation-delay: 0.4s; }
 .content-screen > .diary-entry:nth-child(5) { animation-delay: 0.6s; }

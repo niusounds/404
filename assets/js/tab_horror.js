@@ -12,6 +12,7 @@
   const AUDIO = {
     BASE_WHISPER_FREQ: 80,
     FREQ_RANGE: 40,
+    MIN_SAFE_FREQ: 50, // Minimum frequency to avoid exponentialRampToValueAtTime errors
   };
 
   // State
@@ -213,7 +214,7 @@
     const now = audioContext.currentTime;
     
     // Base frequency for whisper (very low, ensure it's always positive)
-    const baseFreq = Math.max(AUDIO.BASE_WHISPER_FREQ + Math.random() * AUDIO.FREQ_RANGE, 50);
+    const baseFreq = Math.max(AUDIO.BASE_WHISPER_FREQ + Math.random() * AUDIO.FREQ_RANGE, AUDIO.MIN_SAFE_FREQ);
     
     // Create oscillator for the whisper
     const oscillator = audioContext.createOscillator();
@@ -221,8 +222,8 @@
     oscillator.frequency.setValueAtTime(baseFreq, now);
     
     // Add some frequency wobble for creepy effect (ensure values stay positive)
-    const freq1 = Math.max(baseFreq * 0.95, 50);
-    const freq2 = Math.max(baseFreq * 1.05, 50);
+    const freq1 = Math.max(baseFreq * 0.95, AUDIO.MIN_SAFE_FREQ);
+    const freq2 = Math.max(baseFreq * 1.05, AUDIO.MIN_SAFE_FREQ);
     oscillator.frequency.exponentialRampToValueAtTime(freq1, now + 0.5);
     oscillator.frequency.exponentialRampToValueAtTime(freq2, now + 1);
     
