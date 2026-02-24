@@ -58,11 +58,12 @@ body {
   animation: fade-in 0.8s ease-in forwards;
 }
 
-.diary-entry:nth-of-type(2) { animation-delay: 0.2s; }
-.diary-entry:nth-of-type(3) { animation-delay: 0.4s; }
-.diary-entry:nth-of-type(4) { animation-delay: 0.6s; }
-.diary-entry:nth-of-type(5) { animation-delay: 0.8s; }
-.diary-entry:nth-of-type(6) { animation-delay: 1.0s; }
+/* Animation delays for each diary entry */
+.content-screen > .diary-entry:nth-child(3) { animation-delay: 0.2s; }
+.content-screen > .diary-entry:nth-child(4) { animation-delay: 0.4s; }
+.content-screen > .diary-entry:nth-child(5) { animation-delay: 0.6s; }
+.content-screen > .diary-entry:nth-child(6) { animation-delay: 0.8s; }
+.content-screen > .diary-entry:nth-child(7) { animation-delay: 1.0s; }
 
 .entry-date {
   font-size: 0.9rem;
