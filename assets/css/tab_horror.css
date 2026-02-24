@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif;
+  background: #0a0a0a;
+  color: #d0d0d0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.tab-horror-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.content-screen {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #600;
+  margin-bottom: 40px;
+  letter-spacing: 0.3em;
+  text-shadow: 0 0 20px rgba(136, 0, 0, 0.5);
+  animation: text-flicker 3s infinite;
+}
+
+.story-section {
+  margin-bottom: 60px;
+  padding: 30px;
+  background: rgba(20, 0, 0, 0.3);
+  border: 1px solid #400;
+  border-radius: 4px;
+}
+
+.story-section p {
+  line-height: 1.8;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.diary-entry {
+  margin-bottom: 40px;
+  padding: 30px;
+  background: rgba(10, 10, 10, 0.8);
+  border-left: 3px solid #600;
+  opacity: 0;
+  animation: fade-in 0.8s ease-in forwards;
+}
+
+.diary-entry:nth-child(3) { animation-delay: 0.2s; }
+.diary-entry:nth-child(4) { animation-delay: 0.4s; }
+.diary-entry:nth-child(5) { animation-delay: 0.6s; }
+.diary-entry:nth-child(6) { animation-delay: 0.8s; }
+.diary-entry:nth-child(7) { animation-delay: 1.0s; }
+
+.entry-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  font-family: monospace;
+}
+
+.entry-text p {
+  line-height: 1.9;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.glitch-text {
+  color: #a00;
+  font-weight: bold;
+  animation: glitch 1s infinite;
+}
+
+.warning-text {
+  margin-top: 80px;
+  padding: 20px;
+  background: rgba(136, 0, 0, 0.1);
+  border: 1px dashed #600;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.warning-text p {
+  margin-bottom: 8px;
+}
+
+/* Blood overlay */
+.blood-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, 
+    rgba(136, 0, 0, 0) 0%,
+    rgba(136, 0, 0, 0) 40%,
+    rgba(136, 0, 0, 0.3) 70%,
+    rgba(136, 0, 0, 0.6) 100%);
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.blood-overlay.active {
+  opacity: 1;
+}
+
+/* Shadow figure */
+.shadow-figure {
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+  width: 200px;
+  height: 400px;
+  background: linear-gradient(to top, 
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0) 100%);
+  filter: blur(15px);
+  pointer-events: none;
+  z-index: 15;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.shadow-figure.active {
+  opacity: 1;
+  animation: shadow-move 3s ease-in-out infinite alternate;
+}
+
+/* Eyes overlay */
+.eyes-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.eyes-overlay.active {
+  opacity: 1;
+}
+
+.eye {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background: radial-gradient(circle at 50% 50%, 
+    #fff 0%, 
+    #fff 30%, 
+    #000 30%, 
+    #000 40%, 
+    transparent 40%);
+  border-radius: 50%;
+  animation: blink 4s infinite;
+}
+
+.left-eye {
+  top: 20%;
+  left: 40%;
+}
+
+.right-eye {
+  top: 20%;
+  left: 55%;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+  51% { opacity: 1; }
+  52% { opacity: 0.8; }
+  53% { opacity: 1; }
+}
+
+@keyframes glitch {
+  0%, 100% {
+    text-shadow: 
+      2px 0 #f00,
+      -2px 0 #0ff;
+    transform: translate(0);
+  }
+  20% {
+    text-shadow: 
+      -2px 0 #f00,
+      2px 0 #0ff;
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    text-shadow: 
+      2px 0 #0ff,
+      -2px 0 #f00;
+    transform: translate(2px, -2px);
+  }
+  60% {
+    text-shadow: 
+      -2px 0 #0ff,
+      2px 0 #f00;
+    transform: translate(-2px, 0);
+  }
+  80% {
+    text-shadow: 
+      2px 0 #f00,
+      -2px 0 #0ff;
+    transform: translate(2px, 2px);
+  }
+}
+
+@keyframes shadow-move {
+  from {
+    transform: translateX(0) scale(1);
+    filter: blur(15px);
+  }
+  to {
+    transform: translateX(-30px) scale(1.1);
+    filter: blur(10px);
+  }
+}
+
+@keyframes blink {
+  0%, 49%, 51%, 100% {
+    clip-path: ellipse(100% 100% at 50% 50%);
+  }
+  50% {
+    clip-path: ellipse(100% 0% at 50% 50%);
+  }
+}
+
+/* Returned state - more intense effects */
+body.returned {
+  animation: screen-shake 0.5s ease;
+}
+
+body.returned .content-screen {
+  filter: hue-rotate(20deg) brightness(0.7);
+}
+
+@keyframes screen-shake {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-2px, 2px); }
+  20% { transform: translate(2px, -2px); }
+  30% { transform: translate(-2px, -2px); }
+  40% { transform: translate(2px, 2px); }
+  50% { transform: translate(-2px, 2px); }
+  60% { transform: translate(2px, -2px); }
+  70% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+  90% { transform: translate(-2px, 2px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .diary-entry {
+    padding: 20px;
+  }
+  
+  .entry-text p {
+    font-size: 1rem;
+  }
+  
+  .eye {
+    width: 40px;
+    height: 30px;
+  }
+}
