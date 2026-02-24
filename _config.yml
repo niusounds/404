@@ -32,6 +32,11 @@ plugins:
   - jekyll-minifier
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
+
+# Feed settings
+feed:
+  path: feed.xml
 
 # Sass settings
 sass:
