@@ -300,8 +300,38 @@ function setupIcons() {
       if (window.innerWidth < 768) openIcon(icon.dataset.id);
     });
   });
+    // 恐怖ファイルアイコン追加
+    addScaryFileIcons();
 }
 
+  function addScaryFileIcons() {
+    // room.mp4 アイコン
+    if (!document.getElementById('icon-roommp4')) {
+      const icon = document.createElement('div');
+      icon.className = 'icon icon-file';
+      icon.id = 'icon-roommp4';
+      icon.dataset.id = 'roommp4';
+      icon.style.position = 'absolute';
+      icon.style.left = '120px';
+      icon.style.top = '80px';
+      icon.innerHTML = `<div class="icon-img"></div><div class="icon-label">room.mp4</div>`;
+      icon.addEventListener('dblclick', () => openIcon('roommp4'));
+      document.body.appendChild(icon);
+    }
+    // 遺影.jpg アイコン
+    if (!document.getElementById('icon-iiei')) {
+      const icon = document.createElement('div');
+      icon.className = 'icon icon-file';
+      icon.id = 'icon-iiei';
+      icon.dataset.id = 'iiei';
+      icon.style.position = 'absolute';
+      icon.style.left = '220px';
+      icon.style.top = '80px';
+      icon.innerHTML = `<div class="icon-img"></div><div class="icon-label">遺影.jpg</div>`;
+      icon.addEventListener('dblclick', () => openIcon('iiei'));
+      document.body.appendChild(icon);
+    }
+  }
 function openIcon(id) {
   if (id === 'diary-folder') {
     createWindow('日記', renderFolder('diary'));
@@ -315,6 +345,18 @@ function openIcon(id) {
     startEntityChat();
   } else if (id === 'memo') {
     openNotepad();
+  } else if (id === 'roommp4') {
+    // room.mp4恐怖演出
+    createWindow('room.mp4', `<div style='background:#000; height:150px; display:flex; align-items:center; justify-content:center; color:#555;'>[動画データが破損しています]</div><div style='color:red; text-align:center; margin-top:10px;'>再生できません。<br>あなたの部屋を監視しています。</div>`);
+    playGlitchNoise();
+    setTimeout(triggerJumpScare, 1200);
+    checkCorruption();
+  } else if (id === 'iiei') {
+    // 遺影.jpg恐怖演出
+    createWindow('遺影.jpg', `<div style='background:#000; height:150px; display:flex; align-items:center; justify-content:center; color:red;'>見ちゃだめ</div><div style='color:#fff; text-align:center; margin-top:10px;'>この画像は表示できません。<br>あなたの後ろに...</div>`);
+    playWhisper('見ちゃだめ');
+    setTimeout(triggerJumpScare, 800);
+    checkCorruption();
   }
 }
 
