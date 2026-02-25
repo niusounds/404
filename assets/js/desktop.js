@@ -44,7 +44,96 @@ document.addEventListener('DOMContentLoaded', () => {
   setupEye();
   setupInteractionShake();
   setupIdleDetection();
+  setupGhostCursor();
+  setupCursedContextMenu();
+  setupScreenTear();
+  setupBackgroundFaceUpdate();
 });
+
+function setupBackgroundFaceUpdate() {
+  const bgFace = document.getElementById('bg-face');
+  if (bgFace) {
+    bgFace.classList.add('face-blink');
+  }
+}
+
+function setupGhostCursor() {
+  const ghost = document.getElementById('ghost-cursor');
+  if (!ghost) return;
+
+  let mouseX = 0, mouseY = 0, ghostX = 0, ghostY = 0;
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function updateGhost() {
+    if (corruptionLevel > 4) {
+      ghostX += (mouseX - ghostX) * 0.05;
+      ghostY += (mouseY - ghostY) * 0.05;
+      ghost.style.left = (ghostX + 15) + 'px';
+      ghost.style.top = (ghostY + 15) + 'px';
+    }
+    requestAnimationFrame(updateGhost);
+  }
+  updateGhost();
+}
+
+function setupCursedContextMenu() {
+  const menu = document.createElement('div');
+  menu.id = 'cursed-menu';
+  document.body.appendChild(menu);
+
+  document.addEventListener('contextmenu', (e) => {
+    if (corruptionLevel < 5) return;
+    e.preventDefault();
+    menu.innerHTML = '';
+    const items = [
+      { text: 'うしろをみる', action: () => { playWhisper('だれもいないよ'); } },
+      { text: 'すべてをけす', action: () => { triggerSpam(); } },
+      { text: 'しね', action: () => { triggerJumpScare(); } },
+      { text: 'たすけて', action: () => { openHelp(); } },
+      { text: 'あけて', action: () => { playWhisper('とびらを、あけて'); } }
+    ];
+
+    items.forEach(item => {
+      const el = document.createElement('div');
+      el.className = 'cursed-menu-item';
+      el.innerText = item.text;
+      el.onclick = () => {
+        item.action();
+        menu.style.display = 'none';
+      };
+      menu.appendChild(el);
+    });
+
+    menu.style.left = e.clientX + 'px';
+    menu.style.top = e.clientY + 'px';
+    menu.style.display = 'flex';
+  });
+
+  document.addEventListener('click', () => {
+    menu.style.display = 'none';
+  });
+}
+
+function setupScreenTear() {
+  const tear = document.getElementById('screen-tear');
+  if (!tear) return;
+
+  setInterval(() => {
+    if (corruptionLevel > 7 && Math.random() > 0.8) {
+      const top = Math.random() * 100 + '%';
+      tear.style.top = top;
+      tear.style.opacity = '1';
+      document.body.style.transform = `translateY(${Math.random() < 0.5 ? '2px' : '-2px'})`;
+      setTimeout(() => {
+        tear.style.opacity = '0';
+        document.body.style.transform = '';
+      }, 50);
+    }
+  }, 3000);
+}
 
 let lastInteraction = Date.now();
 function setupIdleDetection() {
@@ -108,7 +197,24 @@ function setupEye() {
 
 function toggleStartMenu() {
   const menu = document.getElementById('start-menu');
-  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  const isOpening = menu.style.display !== 'flex';
+  menu.style.display = isOpening ? 'flex' : 'none';
+
+  if (isOpening && corruptionLevel > 6) {
+    const items = menu.querySelector('.start-menu-items');
+    if (Math.random() > 0.4) {
+      const scream = document.createElement('div');
+      scream.className = 'start-menu-item';
+      scream.style.color = 'red';
+      scream.innerHTML = 'たすけて';
+      scream.onclick = () => {
+        playWhisper("みつけて");
+        spawnObserver();
+      };
+      items.prepend(scream);
+      setTimeout(() => scream.remove(), 2000);
+    }
+  }
 }
 
 function setupStartMenu() {
@@ -290,6 +396,16 @@ function updateClock() {
   }
 }
 
+function setupWindowDrift(win) {
+  setInterval(() => {
+    if (!document.body.contains(win) || corruptionLevel < 8) return;
+    const currentLeft = parseInt(win.style.left);
+    const currentTop = parseInt(win.style.top);
+    win.style.left = (currentLeft + (Math.random() * 2 - 1)) + 'px';
+    win.style.top = (currentTop + (Math.random() * 2 - 1)) + 'px';
+  }, 100);
+}
+
 function setupIcons() {
   const icons = document.querySelectorAll('.icon');
   icons.forEach(icon => {
@@ -298,6 +414,25 @@ function setupIcons() {
     });
     icon.addEventListener('click', (e) => {
       if (window.innerWidth < 768) openIcon(icon.dataset.id);
+    });
+    icon.addEventListener('mouseenter', () => {
+      if (corruptionLevel > 5) {
+        const label = icon.querySelector('.icon-label');
+        if (label) {
+          label.classList.add('glitch-hover');
+          const original = label.innerText;
+          const words = ['しね', 'うらみ', 'くるな', 'たすけて', '404'];
+          label.dataset.original = original;
+          label.innerText = words[Math.floor(Math.random() * words.length)];
+        }
+      }
+    });
+    icon.addEventListener('mouseleave', () => {
+      const label = icon.querySelector('.icon-label');
+      if (label && label.dataset.original) {
+        label.classList.remove('glitch-hover');
+        label.innerText = label.dataset.original;
+      }
     });
   });
     // 恐怖ファイルアイコン追加
@@ -385,6 +520,7 @@ function createWindow(title, content, options = {}) {
   const win = document.createElement('div');
   win.className = 'window';
   if (corruptionLevel > 2) win.classList.add('shake');
+  if (corruptionLevel > 6) win.classList.add('breathe');
   if (options.className) win.classList.add(options.className);
 
   win.style.left = options.left || (50 + (openWindows * 30)) + 'px';
@@ -395,7 +531,7 @@ function createWindow(title, content, options = {}) {
     <div class="window-title-bar">
       <div class="window-title">${title}</div>
       <div class="window-controls">
-        <div class="win-btn" onclick="this.closest('.window').remove()">X</div>
+        <div class="win-btn close-btn">X</div>
       </div>
     </div>
     <div class="window-content">${content}</div>
@@ -403,6 +539,24 @@ function createWindow(title, content, options = {}) {
 
   document.body.appendChild(win);
   openWindows++;
+
+  win.querySelector('.close-btn').onclick = (e) => {
+    if (corruptionLevel > 8 && Math.random() < 0.2) {
+      playWhisper("逃がさない");
+      for (let i = 0; i < 2; i++) {
+        setTimeout(() => {
+          createWindow('ERROR', 'SYSTEM_MEMORY_LEAK_BY_THE_OBSERVER', {
+            left: (Math.random() * 80) + '%',
+            top: (Math.random() * 80) + '%'
+          });
+        }, i * 100);
+      }
+    } else {
+      win.remove();
+    }
+  };
+
+  setupWindowDrift(win);
 
   let isDragging = false;
   win.querySelector('.window-title-bar').onmousedown = (e) => {
@@ -464,6 +618,11 @@ function checkCorruption() {
   const overlay = document.getElementById('crt-overlay');
   const noise = document.getElementById('noise-canvas');
   const bgFace = document.getElementById('bg-face');
+
+  // Update existing windows
+  if (corruptionLevel > 6) {
+    document.querySelectorAll('.window').forEach(w => w.classList.add('breathe'));
+  }
 
   // Icon Label Corruption
   if (corruptionLevel > 4) {
