@@ -48,7 +48,114 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCursedContextMenu();
   setupScreenTear();
   setupBackgroundFaceUpdate();
+  setupAdvancedAPIHorror();
 });
+
+function setupAdvancedAPIHorror() {
+  setupBatteryHorror();
+  setupNetworkStalking();
+  setupSelectionWatcher();
+  setupGamepadHaptics();
+  setupPerformanceParasite();
+  setupScreenWakeLock();
+}
+
+async function setupScreenWakeLock() {
+  if (!('wakeLock' in navigator)) return;
+  let wakeLock = null;
+  const requestWakeLock = async () => {
+    try {
+      if (corruptionLevel > 10) {
+        wakeLock = await navigator.wakeLock.request('screen');
+        console.log("Wake Lock is active");
+      }
+    } catch (err) {}
+  };
+
+  setInterval(() => {
+    if (corruptionLevel > 10 && !wakeLock) requestWakeLock();
+  }, 10000);
+}
+
+function setupBatteryHorror() {
+  if (!navigator.getBattery) return;
+  navigator.getBattery().then(battery => {
+    const handleBatteryChange = () => {
+      if (corruptionLevel < 4) return;
+      if (battery.level < 0.2 && !battery.confirmLow) {
+        playWhisper("あなたの命も、残りわずか...");
+        battery.confirmLow = true;
+      }
+      if (battery.charging) {
+        playWhisper("電気を吸い取っているよ");
+      }
+    };
+    battery.addEventListener('levelchange', handleBatteryChange);
+    battery.addEventListener('chargingchange', handleBatteryChange);
+  });
+}
+
+function setupNetworkStalking() {
+  const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  if (!conn) return;
+
+  setInterval(() => {
+    if (corruptionLevel > 5 && Math.random() > 0.9) {
+      const type = conn.type || 'unknown';
+      const msg = `あなたの ${type} 回線、こちらから丸見えだよ。`;
+      playWhisper(msg);
+    }
+  }, 60000);
+}
+
+function setupSelectionWatcher() {
+  document.addEventListener('selectionchange', () => {
+    if (corruptionLevel < 6) return;
+    const selectedText = window.getSelection().toString();
+    // 選択テキストでの囁き確率を大幅に下げた (30% -> 5%)
+    if (selectedText.length > 2 && Math.random() > 0.95) {
+      playWhisper(`「${selectedText}」... それが気になるの？`);
+    }
+  });
+}
+
+function setupGamepadHaptics() {
+  window.addEventListener("gamepadconnected", (e) => {
+    playWhisper("コントローラー... 繋いでるんだね。");
+  });
+}
+
+function triggerGamepadVibrate(duration = 200, strong = 1.0) {
+  const gamepads = navigator.getGamepads();
+  for (const gp of gamepads) {
+    if (gp && gp.vibrationActuator) {
+      gp.vibrationActuator.playEffect("dual-rumble", {
+        startDelay: 0,
+        duration: duration,
+        weakMagnitude: strong,
+        strongMagnitude: strong,
+      });
+    }
+  }
+}
+
+function setupPerformanceParasite() {
+  setInterval(() => {
+    if (corruptionLevel > 8 && Math.random() > 0.95) {
+      const perf = performance.memory;
+      if (perf) {
+        const used = Math.round(perf.usedJSHeapSize / 1048576);
+        createWindow('System Monitor', `
+          <div style="font-family:monospace; font-size:11px;">
+            CPU PROCESS: <b>ENTITY.EXE</b> (98%)<br>
+            MEMORY USAGE: ${used}MB / SOUL_CAPACITY<br>
+            <span style="color:red;">WARNING: HIGH BRAINWAVE INTERFERENCE</span>
+          </div>
+        `, { width: '220px' });
+      }
+    }
+  }, 30000);
+}
 
 function setupBackgroundFaceUpdate() {
   const bgFace = document.getElementById('bg-face');
@@ -141,7 +248,8 @@ function setupIdleDetection() {
   events.forEach(e => document.addEventListener(e, () => lastInteraction = Date.now()));
 
   setInterval(() => {
-    if (Date.now() - lastInteraction > 30000 && Math.random() > 0.7) {
+    // 30秒放置かつ5%の低確率で囁く（以前は70%）
+    if (Date.now() - lastInteraction > 30000 && Math.random() > 0.95) {
       playWhisper("なぜ、そこにいるの？");
       lastInteraction = Date.now(); // Don't spam
     }
@@ -477,7 +585,11 @@ function openIcon(id) {
     createWindow('README.txt', 'このパソコンの持ち主へ：\n\n決して「システム管理」フォルダの中身は見ないでください。\nもし見てしまったら、すぐに電源を切ってください。\n\nそれすら、もう遅いかもしれませんが。');
     checkCorruption();
   } else if (id === 'unknown') {
-    startEntityChat();
+    if (corruptionLevel > 8 && window.EyeDropper) {
+      openEyeDropperHorror();
+    } else {
+      startEntityChat();
+    }
   } else if (id === 'memo') {
     openNotepad();
   } else if (id === 'roommp4') {
@@ -854,7 +966,28 @@ function triggerJumpScare() {
   js.innerHTML = `<div style="font-size:100px;">${text}</div>`;
 
   document.body.appendChild(js);
+
+  // Vibrate controllers if present
+  triggerGamepadVibrate(150, 1.0);
+
   setTimeout(() => js.remove(), 150);
+}
+
+function openEyeDropperHorror() {
+  if (!window.EyeDropper) return;
+  const eyeDropper = new EyeDropper();
+  playWhisper("あなたの魂の色、見せて。");
+  eyeDropper.open().then(result => {
+    const color = result.sRGBHex;
+    document.body.style.backgroundColor = color;
+    playWhisper(`${color}... 綺麗な色だね。`);
+    setTimeout(() => {
+      document.body.style.backgroundColor = '';
+      checkCorruption();
+    }, 3000);
+  }).catch(() => {
+    playWhisper("逃げたって無駄だよ");
+  });
 }
 
 function triggerFleetingFace() {
@@ -904,11 +1037,14 @@ function setupTabTampering() {
 
 function playWhisper(text) {
   if (!('speechSynthesis' in window)) return;
+  // すでに喋っている場合は重ならないようにスキップ
+  if (window.speechSynthesis.speaking) return;
+
   const utance = new SpeechSynthesisUtterance(text);
   utance.lang = 'ja-JP';
   utance.pitch = 0.1;
   utance.rate = 0.8;
-  utance.volume = 0.5;
+  utance.volume = 0.3; // 音量を下げた
   window.speechSynthesis.speak(utance);
 }
 
