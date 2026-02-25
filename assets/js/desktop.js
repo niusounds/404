@@ -44,7 +44,203 @@ document.addEventListener('DOMContentLoaded', () => {
   setupEye();
   setupInteractionShake();
   setupIdleDetection();
+  setupGhostCursor();
+  setupCursedContextMenu();
+  setupScreenTear();
+  setupBackgroundFaceUpdate();
+  setupAdvancedAPIHorror();
 });
+
+function setupAdvancedAPIHorror() {
+  setupBatteryHorror();
+  setupNetworkStalking();
+  setupSelectionWatcher();
+  setupGamepadHaptics();
+  setupPerformanceParasite();
+  setupScreenWakeLock();
+}
+
+async function setupScreenWakeLock() {
+  if (!('wakeLock' in navigator)) return;
+  let wakeLock = null;
+  const requestWakeLock = async () => {
+    try {
+      if (corruptionLevel > 10) {
+        wakeLock = await navigator.wakeLock.request('screen');
+        console.log("Wake Lock is active");
+      }
+    } catch (err) {}
+  };
+
+  setInterval(() => {
+    if (corruptionLevel > 10 && !wakeLock) requestWakeLock();
+  }, 10000);
+}
+
+function setupBatteryHorror() {
+  if (!navigator.getBattery) return;
+  navigator.getBattery().then(battery => {
+    const handleBatteryChange = () => {
+      if (corruptionLevel < 4) return;
+      if (battery.level < 0.2 && !battery.confirmLow) {
+        playWhisper("あなたの命も、残りわずか...");
+        battery.confirmLow = true;
+      }
+      if (battery.charging) {
+        playWhisper("電気を吸い取っているよ");
+      }
+    };
+    battery.addEventListener('levelchange', handleBatteryChange);
+    battery.addEventListener('chargingchange', handleBatteryChange);
+  });
+}
+
+function setupNetworkStalking() {
+  const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  if (!conn) return;
+
+  setInterval(() => {
+    if (corruptionLevel > 5 && Math.random() > 0.9) {
+      const type = conn.type || 'unknown';
+      const msg = `あなたの ${type} 回線、こちらから丸見えだよ。`;
+      playWhisper(msg);
+    }
+  }, 60000);
+}
+
+function setupSelectionWatcher() {
+  document.addEventListener('selectionchange', () => {
+    if (corruptionLevel < 6) return;
+    const selectedText = window.getSelection().toString();
+    // 選択テキストでの囁き確率を大幅に下げた (30% -> 5%)
+    if (selectedText.length > 2 && Math.random() > 0.95) {
+      playWhisper(`「${selectedText}」... それが気になるの？`);
+    }
+  });
+}
+
+function setupGamepadHaptics() {
+  window.addEventListener("gamepadconnected", (e) => {
+    playWhisper("コントローラー... 繋いでるんだね。");
+  });
+}
+
+function triggerGamepadVibrate(duration = 200, strong = 1.0) {
+  const gamepads = navigator.getGamepads();
+  for (const gp of gamepads) {
+    if (gp && gp.vibrationActuator) {
+      gp.vibrationActuator.playEffect("dual-rumble", {
+        startDelay: 0,
+        duration: duration,
+        weakMagnitude: strong,
+        strongMagnitude: strong,
+      });
+    }
+  }
+}
+
+function setupPerformanceParasite() {
+  setInterval(() => {
+    if (corruptionLevel > 8 && Math.random() > 0.95) {
+      const perf = performance.memory;
+      if (perf) {
+        const used = Math.round(perf.usedJSHeapSize / 1048576);
+        createWindow('System Monitor', `
+          <div style="font-family:monospace; font-size:11px;">
+            CPU PROCESS: <b>ENTITY.EXE</b> (98%)<br>
+            MEMORY USAGE: ${used}MB / SOUL_CAPACITY<br>
+            <span style="color:red;">WARNING: HIGH BRAINWAVE INTERFERENCE</span>
+          </div>
+        `, { width: '220px' });
+      }
+    }
+  }, 30000);
+}
+
+function setupBackgroundFaceUpdate() {
+  const bgFace = document.getElementById('bg-face');
+  if (bgFace) {
+    bgFace.classList.add('face-blink');
+  }
+}
+
+function setupGhostCursor() {
+  const ghost = document.getElementById('ghost-cursor');
+  if (!ghost) return;
+
+  let mouseX = 0, mouseY = 0, ghostX = 0, ghostY = 0;
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function updateGhost() {
+    if (corruptionLevel > 4) {
+      ghostX += (mouseX - ghostX) * 0.05;
+      ghostY += (mouseY - ghostY) * 0.05;
+      ghost.style.left = (ghostX + 15) + 'px';
+      ghost.style.top = (ghostY + 15) + 'px';
+    }
+    requestAnimationFrame(updateGhost);
+  }
+  updateGhost();
+}
+
+function setupCursedContextMenu() {
+  const menu = document.createElement('div');
+  menu.id = 'cursed-menu';
+  document.body.appendChild(menu);
+
+  document.addEventListener('contextmenu', (e) => {
+    if (corruptionLevel < 5) return;
+    e.preventDefault();
+    menu.innerHTML = '';
+    const items = [
+      { text: 'うしろをみる', action: () => { playWhisper('だれもいないよ'); } },
+      { text: 'すべてをけす', action: () => { triggerSpam(); } },
+      { text: 'しね', action: () => { triggerJumpScare(); } },
+      { text: 'たすけて', action: () => { openHelp(); } },
+      { text: 'あけて', action: () => { playWhisper('とびらを、あけて'); } }
+    ];
+
+    items.forEach(item => {
+      const el = document.createElement('div');
+      el.className = 'cursed-menu-item';
+      el.innerText = item.text;
+      el.onclick = () => {
+        item.action();
+        menu.style.display = 'none';
+      };
+      menu.appendChild(el);
+    });
+
+    menu.style.left = e.clientX + 'px';
+    menu.style.top = e.clientY + 'px';
+    menu.style.display = 'flex';
+  });
+
+  document.addEventListener('click', () => {
+    menu.style.display = 'none';
+  });
+}
+
+function setupScreenTear() {
+  const tear = document.getElementById('screen-tear');
+  if (!tear) return;
+
+  setInterval(() => {
+    if (corruptionLevel > 7 && Math.random() > 0.8) {
+      const top = Math.random() * 100 + '%';
+      tear.style.top = top;
+      tear.style.opacity = '1';
+      document.body.style.transform = `translateY(${Math.random() < 0.5 ? '2px' : '-2px'})`;
+      setTimeout(() => {
+        tear.style.opacity = '0';
+        document.body.style.transform = '';
+      }, 50);
+    }
+  }, 3000);
+}
 
 let lastInteraction = Date.now();
 function setupIdleDetection() {
@@ -52,7 +248,8 @@ function setupIdleDetection() {
   events.forEach(e => document.addEventListener(e, () => lastInteraction = Date.now()));
 
   setInterval(() => {
-    if (Date.now() - lastInteraction > 30000 && Math.random() > 0.7) {
+    // 30秒放置かつ5%の低確率で囁く（以前は70%）
+    if (Date.now() - lastInteraction > 30000 && Math.random() > 0.95) {
       playWhisper("なぜ、そこにいるの？");
       lastInteraction = Date.now(); // Don't spam
     }
@@ -108,7 +305,24 @@ function setupEye() {
 
 function toggleStartMenu() {
   const menu = document.getElementById('start-menu');
-  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  const isOpening = menu.style.display !== 'flex';
+  menu.style.display = isOpening ? 'flex' : 'none';
+
+  if (isOpening && corruptionLevel > 6) {
+    const items = menu.querySelector('.start-menu-items');
+    if (Math.random() > 0.4) {
+      const scream = document.createElement('div');
+      scream.className = 'start-menu-item';
+      scream.style.color = 'red';
+      scream.innerHTML = 'たすけて';
+      scream.onclick = () => {
+        playWhisper("みつけて");
+        spawnObserver();
+      };
+      items.prepend(scream);
+      setTimeout(() => scream.remove(), 2000);
+    }
+  }
 }
 
 function setupStartMenu() {
@@ -290,6 +504,16 @@ function updateClock() {
   }
 }
 
+function setupWindowDrift(win) {
+  setInterval(() => {
+    if (!document.body.contains(win) || corruptionLevel < 8) return;
+    const currentLeft = parseInt(win.style.left);
+    const currentTop = parseInt(win.style.top);
+    win.style.left = (currentLeft + (Math.random() * 2 - 1)) + 'px';
+    win.style.top = (currentTop + (Math.random() * 2 - 1)) + 'px';
+  }, 100);
+}
+
 function setupIcons() {
   const icons = document.querySelectorAll('.icon');
   icons.forEach(icon => {
@@ -299,9 +523,58 @@ function setupIcons() {
     icon.addEventListener('click', (e) => {
       if (window.innerWidth < 768) openIcon(icon.dataset.id);
     });
+    icon.addEventListener('mouseenter', () => {
+      if (corruptionLevel > 5) {
+        const label = icon.querySelector('.icon-label');
+        if (label) {
+          label.classList.add('glitch-hover');
+          const original = label.innerText;
+          const words = ['しね', 'うらみ', 'くるな', 'たすけて', '404'];
+          label.dataset.original = original;
+          label.innerText = words[Math.floor(Math.random() * words.length)];
+        }
+      }
+    });
+    icon.addEventListener('mouseleave', () => {
+      const label = icon.querySelector('.icon-label');
+      if (label && label.dataset.original) {
+        label.classList.remove('glitch-hover');
+        label.innerText = label.dataset.original;
+      }
+    });
   });
+    // 恐怖ファイルアイコン追加
+    addScaryFileIcons();
 }
 
+  function addScaryFileIcons() {
+    // room.mp4 アイコン
+    if (!document.getElementById('icon-roommp4')) {
+      const icon = document.createElement('div');
+      icon.className = 'icon icon-file';
+      icon.id = 'icon-roommp4';
+      icon.dataset.id = 'roommp4';
+      icon.style.position = 'absolute';
+      icon.style.left = '120px';
+      icon.style.top = '80px';
+      icon.innerHTML = `<div class="icon-img"></div><div class="icon-label">room.mp4</div>`;
+      icon.addEventListener('dblclick', () => openIcon('roommp4'));
+      document.body.appendChild(icon);
+    }
+    // 遺影.jpg アイコン
+    if (!document.getElementById('icon-iiei')) {
+      const icon = document.createElement('div');
+      icon.className = 'icon icon-file';
+      icon.id = 'icon-iiei';
+      icon.dataset.id = 'iiei';
+      icon.style.position = 'absolute';
+      icon.style.left = '220px';
+      icon.style.top = '80px';
+      icon.innerHTML = `<div class="icon-img"></div><div class="icon-label">遺影.jpg</div>`;
+      icon.addEventListener('dblclick', () => openIcon('iiei'));
+      document.body.appendChild(icon);
+    }
+  }
 function openIcon(id) {
   if (id === 'diary-folder') {
     createWindow('日記', renderFolder('diary'));
@@ -312,9 +585,25 @@ function openIcon(id) {
     createWindow('README.txt', 'このパソコンの持ち主へ：\n\n決して「システム管理」フォルダの中身は見ないでください。\nもし見てしまったら、すぐに電源を切ってください。\n\nそれすら、もう遅いかもしれませんが。');
     checkCorruption();
   } else if (id === 'unknown') {
-    startEntityChat();
+    if (corruptionLevel > 8 && window.EyeDropper) {
+      openEyeDropperHorror();
+    } else {
+      startEntityChat();
+    }
   } else if (id === 'memo') {
     openNotepad();
+  } else if (id === 'roommp4') {
+    // room.mp4恐怖演出
+    createWindow('room.mp4', `<div style='background:#000; height:150px; display:flex; align-items:center; justify-content:center; color:#555;'>[動画データが破損しています]</div><div style='color:red; text-align:center; margin-top:10px;'>再生できません。<br>あなたの部屋を監視しています。</div>`);
+    playGlitchNoise();
+    setTimeout(triggerJumpScare, 1200);
+    checkCorruption();
+  } else if (id === 'iiei') {
+    // 遺影.jpg恐怖演出
+    createWindow('遺影.jpg', `<div style='background:#000; height:150px; display:flex; align-items:center; justify-content:center; color:red;'>見ちゃだめ</div><div style='color:#fff; text-align:center; margin-top:10px;'>この画像は表示できません。<br>あなたの後ろに...</div>`);
+    playWhisper('見ちゃだめ');
+    setTimeout(triggerJumpScare, 800);
+    checkCorruption();
   }
 }
 
@@ -343,6 +632,7 @@ function createWindow(title, content, options = {}) {
   const win = document.createElement('div');
   win.className = 'window';
   if (corruptionLevel > 2) win.classList.add('shake');
+  if (corruptionLevel > 6) win.classList.add('breathe');
   if (options.className) win.classList.add(options.className);
 
   win.style.left = options.left || (50 + (openWindows * 30)) + 'px';
@@ -353,7 +643,7 @@ function createWindow(title, content, options = {}) {
     <div class="window-title-bar">
       <div class="window-title">${title}</div>
       <div class="window-controls">
-        <div class="win-btn" onclick="this.closest('.window').remove()">X</div>
+        <div class="win-btn close-btn">X</div>
       </div>
     </div>
     <div class="window-content">${content}</div>
@@ -361,6 +651,24 @@ function createWindow(title, content, options = {}) {
 
   document.body.appendChild(win);
   openWindows++;
+
+  win.querySelector('.close-btn').onclick = (e) => {
+    if (corruptionLevel > 8 && Math.random() < 0.2) {
+      playWhisper("逃がさない");
+      for (let i = 0; i < 2; i++) {
+        setTimeout(() => {
+          createWindow('ERROR', 'SYSTEM_MEMORY_LEAK_BY_THE_OBSERVER', {
+            left: (Math.random() * 80) + '%',
+            top: (Math.random() * 80) + '%'
+          });
+        }, i * 100);
+      }
+    } else {
+      win.remove();
+    }
+  };
+
+  setupWindowDrift(win);
 
   let isDragging = false;
   win.querySelector('.window-title-bar').onmousedown = (e) => {
@@ -422,6 +730,11 @@ function checkCorruption() {
   const overlay = document.getElementById('crt-overlay');
   const noise = document.getElementById('noise-canvas');
   const bgFace = document.getElementById('bg-face');
+
+  // Update existing windows
+  if (corruptionLevel > 6) {
+    document.querySelectorAll('.window').forEach(w => w.classList.add('breathe'));
+  }
 
   // Icon Label Corruption
   if (corruptionLevel > 4) {
@@ -653,7 +966,28 @@ function triggerJumpScare() {
   js.innerHTML = `<div style="font-size:100px;">${text}</div>`;
 
   document.body.appendChild(js);
+
+  // Vibrate controllers if present
+  triggerGamepadVibrate(150, 1.0);
+
   setTimeout(() => js.remove(), 150);
+}
+
+function openEyeDropperHorror() {
+  if (!window.EyeDropper) return;
+  const eyeDropper = new EyeDropper();
+  playWhisper("あなたの魂の色、見せて。");
+  eyeDropper.open().then(result => {
+    const color = result.sRGBHex;
+    document.body.style.backgroundColor = color;
+    playWhisper(`${color}... 綺麗な色だね。`);
+    setTimeout(() => {
+      document.body.style.backgroundColor = '';
+      checkCorruption();
+    }, 3000);
+  }).catch(() => {
+    playWhisper("逃げたって無駄だよ");
+  });
 }
 
 function triggerFleetingFace() {
@@ -703,11 +1037,14 @@ function setupTabTampering() {
 
 function playWhisper(text) {
   if (!('speechSynthesis' in window)) return;
+  // すでに喋っている場合は重ならないようにスキップ
+  if (window.speechSynthesis.speaking) return;
+
   const utance = new SpeechSynthesisUtterance(text);
   utance.lang = 'ja-JP';
   utance.pitch = 0.1;
   utance.rate = 0.8;
-  utance.volume = 0.5;
+  utance.volume = 0.3; // 音量を下げた
   window.speechSynthesis.speak(utance);
 }
 

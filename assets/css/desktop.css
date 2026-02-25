@@ -707,6 +707,119 @@ html {
   }
 }
 
+/* Ghost Cursor */
+#ghost-cursor {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background: black;
+  clip-path: polygon(0 0, 0 100%, 30% 70%, 100% 70%);
+  filter: blur(2px) invert(1) opacity(0);
+  pointer-events: none;
+  z-index: 99999;
+  transition: opacity 2s;
+}
+
+.corruption-high #ghost-cursor {
+  opacity: 0.3;
+}
+
+/* Screen Tear */
+#screen-tear {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: white;
+  z-index: 11000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Window Breathing */
+@keyframes window-breathe {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.01); }
+  100% { transform: scale(1); }
+}
+
+.breathe {
+  animation: window-breathe 4s infinite ease-in-out;
+}
+
+/* Taskbar Drip */
+#taskbar::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to bottom, #800, transparent);
+  transition: height 10s ease-in;
+  pointer-events: none;
+  z-index: 1001;
+}
+
+.corruption-high #taskbar::after {
+  height: 50px;
+}
+
+/* Context Menu */
+#cursed-menu {
+  position: fixed;
+  background: var(--win-grey);
+  border: 2px solid;
+  border-color: var(--win-white) var(--win-dark) var(--win-dark) var(--win-white);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  display: none;
+  flex-direction: column;
+  z-index: 20000;
+  min-width: 120px;
+}
+
+.cursed-menu-item {
+  padding: 5px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  color: black;
+}
+
+.cursed-menu-item:hover {
+  background: var(--win-blue);
+  color: white;
+}
+
+/* BG Face Blink */
+@keyframes face-blink {
+  0%, 95%, 100% { filter: grayscale(1) opacity(0.15); }
+  98% { filter: grayscale(0) invert(1) opacity(0.4); }
+}
+
+.face-blink {
+  animation: face-blink 15s infinite;
+}
+
+/* Tear Animation */
+@keyframes tear-flash {
+  0% { opacity: 0; height: 1px; }
+  10% { opacity: 0.8; height: 3px; }
+  20% { opacity: 0; height: 1px; }
+}
+
+/* Icon Label Glitch hover */
+.icon:hover .icon-label.glitch-hover {
+  animation: label-shudder 0.1s infinite;
+  color: red !important;
+}
+
+@keyframes label-shudder {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(1px, -1px); }
+  100% { transform: translate(-1px, 1px); }
+}
+
 #noise-canvas {
   position: fixed;
   top: 0;
