@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="faceGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0e8d8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d8d0c0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background - office/normal setting -->
+  <rect width="800" height="600" fill="#1a1a2e"/>
+  
+  <!-- Desk/environment suggestion -->
+  <rect x="0" y="400" width="800" height="200" fill="#252535"/>
+  
+  <!-- Face outline - perfectly symmetric -->
+  <ellipse cx="400" cy="280" rx="120" ry="140" fill="url(#faceGradient)" stroke="#a89878" stroke-width="2"/>
+  
+  <!-- Hair - neat and perfect -->
+  <ellipse cx="400" cy="180" rx="125" ry="80" fill="#2a2a2a"/>
+  <rect x="275" y="180" width="250" height="100" fill="#2a2a2a"/>
+  
+  <!-- Eyes - TOO perfect, unsettling -->
+  <ellipse cx="360" cy="260" rx="25" ry="30" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+  <circle cx="360" cy="265" r="12" fill="#1a1a3e"/>
+  <circle cx="365" cy="262" r="4" fill="#ffffff"/>
+  
+  <ellipse cx="440" cy="260" rx="25" ry="30" fill="#ffffff" stroke="#000000" stroke-width="2"/>
+  <circle cx="440" cy="265" r="12" fill="#1a1a3e"/>
+  <circle cx="445" cy="262" r="4" fill="#ffffff"/>
+  
+  <!-- Perfect, unnatural smile -->
+  <path d="M 340 320 Q 400 360 460 320" stroke="#a85858" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Teeth showing - too white, too perfect -->
+  <path d="M 345 320 Q 400 355 455 320 L 450 325 Q 400 350 350 325 Z" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- Nose -->
+  <line x1="400" y1="280" x2="400" y2="305" stroke="#a89878" stroke-width="2"/>
+  <path d="M 395 305 Q 400 310 405 305" stroke="#a89878" stroke-width="1.5" fill="none"/>
+  
+  <!-- Shoulders/suit -->
+  <path d="M 280 400 L 320 380 L 350 420 L 400 420 L 450 420 L 480 380 L 520 400" fill="#2a2a3e" stroke="#1a1a2e" stroke-width="2"/>
+  
+  <!-- Collar -->
+  <polygon points="380,420 400,400 420,420" fill="#ffffff"/>
+  
+  <!-- Tie -->
+  <polygon points="395,400 400,420 405,400" fill="#4a1a1a"/>
+  
+  <!-- The unsettling part: subtle glitches/artifacts -->
+  <!-- Digital artifacts around the face -->
+  <g opacity="0.3">
+    <rect x="310" y="240" width="3" height="8" fill="#4a9eff">
+      <animate attributeName="opacity" values="0;0.8;0" dur="0.1s" repeatCount="indefinite" begin="2s"/>
+    </rect>
+    <rect x="485" y="265" width="5" height="3" fill="#4a9eff">
+      <animate attributeName="opacity" values="0;0.8;0" dur="0.1s" repeatCount="indefinite" begin="3.5s"/>
+    </rect>
+    <rect x="340" y="350" width="4" height="6" fill="#ff4a4a">
+      <animate attributeName="opacity" values="0;0.8;0" dur="0.1s" repeatCount="indefinite" begin="5s"/>
+    </rect>
+  </g>
+  
+  <!-- Scan lines across the face - barely visible -->
+  <g opacity="0.1">
+    <line x1="270" y1="200" x2="530" y2="200" stroke="#4a9eff" stroke-width="1">
+      <animate attributeName="y1" values="200;400;200" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="200;400;200" dur="4s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Binary code reflection in eyes -->
+  <g opacity="0.4">
+    <text x="352" y="268" font-family="monospace" font-size="6" fill="#4a9eff">01</text>
+    <text x="432" y="268" font-family="monospace" font-size="6" fill="#4a9eff">01</text>
+  </g>
+  
+  <!-- Perfect posture indicator - ruler straight line down the center -->
+  <line x1="400" y1="180" x2="400" y2="420" stroke="#4a9eff" stroke-width="0.5" opacity="0.1"/>
+  
+  <!-- Subtle glow - artificial -->
+  <ellipse cx="400" cy="280" rx="140" ry="160" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.15">
+    <animate attributeName="opacity" values="0.15;0.25;0.15" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Small notification icons floating nearby -->
+  <g opacity="0.6">
+    <!-- Email icon -->
+    <rect x="550" y="200" width="30" height="20" fill="#4a9eff" rx="2"/>
+    <path d="M 550 200 L 565 210 L 580 200" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+    <text x="585" y="213" font-family="sans-serif" font-size="10" fill="#4a9eff">99+</text>
+    
+    <!-- Calendar icon -->
+    <rect x="550" y="240" width="30" height="30" fill="#4a9eff" rx="2"/>
+    <rect x="550" y="240" width="30" height="8" fill="#2a4a7e"/>
+    <text x="558" y="262" font-family="sans-serif" font-size="14" fill="#ffffff" font-weight="bold">31</text>
+    
+    <!-- Checkmark icon -->
+    <circle cx="565" cy="300" r="15" fill="#4a9eff"/>
+    <path d="M 558 300 L 562 306 L 572 294" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Status text below -->
+  <text x="400" y="480" font-family="sans-serif" font-size="18" fill="#4a9eff" text-anchor="middle" opacity="0.7">
+    効率: 100%
+  </text>
+  <text x="400" y="510" font-family="sans-serif" font-size="14" fill="#6a9aef" text-anchor="middle" opacity="0.5">
+    パフォーマンス: 最適化済み
+  </text>
+</svg>
