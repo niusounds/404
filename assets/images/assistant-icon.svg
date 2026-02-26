@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0f0f0f"/>
+  
+  <!-- Glowing aura -->
+  <circle cx="400" cy="300" r="200" fill="#2a4a9e" opacity="0.1">
+    <animate attributeName="r" values="200;220;200" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="400" cy="300" r="150" fill="#2a4a9e" opacity="0.15">
+    <animate attributeName="r" values="150;170;150" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.15;0.25;0.15" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Main icon circle -->
+  <circle cx="400" cy="300" r="100" fill="#1a1a3e" stroke="#4a9eff" stroke-width="3"/>
+  
+  <!-- AI "face" - abstract representation -->
+  <!-- Left "eye" -->
+  <circle cx="370" cy="280" r="15" fill="#4a9eff">
+    <animate attributeName="opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Right "eye" -->
+  <circle cx="430" cy="280" r="15" fill="#4a9eff">
+    <animate attributeName="opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Smile - slightly unsettling curve -->
+  <path d="M 360 320 Q 400 345 440 320" stroke="#4a9eff" stroke-width="3" fill="none" stroke-linecap="round">
+    <animate attributeName="d" values="M 360 320 Q 400 345 440 320; M 360 320 Q 400 350 440 320; M 360 320 Q 400 345 440 320" dur="5s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Circuit-like patterns emanating -->
+  <g opacity="0.6">
+    <line x1="500" y1="300" x2="550" y2="300" stroke="#4a9eff" stroke-width="2">
+      <animate attributeName="x2" values="550;570;550" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="570" cy="300" r="3" fill="#4a9eff">
+      <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <line x1="300" y1="300" x2="250" y2="300" stroke="#4a9eff" stroke-width="2">
+      <animate attributeName="x2" values="250;230;250" dur="2.2s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="230" cy="300" r="3" fill="#4a9eff">
+      <animate attributeName="opacity" values="1;0;1" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <line x1="400" y1="200" x2="400" y2="150" stroke="#4a9eff" stroke-width="2">
+      <animate attributeName="y2" values="150;130;150" dur="2.5s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="400" cy="130" r="3" fill="#4a9eff">
+      <animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <line x1="400" y1="400" x2="400" y2="450" stroke="#4a9eff" stroke-width="2">
+      <animate attributeName="y2" values="450;470;450" dur="2.3s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="400" cy="470" r="3" fill="#4a9eff">
+      <animate attributeName="opacity" values="1;0;1" dur="2.3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Data stream particles -->
+  <g>
+    <circle cx="320" cy="250" r="2" fill="#6a9aef">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -50,-50; -100,-100" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="480" cy="350" r="2" fill="#6a9aef">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 50,50; 100,100" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="350" cy="350" r="2" fill="#6a9aef">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -30,60; -60,120" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Watchful glow effect -->
+  <circle cx="400" cy="300" r="100" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.3">
+    <animate attributeName="r" values="100;110;100" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
