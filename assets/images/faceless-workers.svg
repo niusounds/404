@@ -1,0 +1,30 @@
+<svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+  <!-- 昼間のような明るいオフィス背景 -->
+  <rect width="320" height="180" fill="#f0f2f5" />
+  <rect x="0" y="0" width="320" height="40" fill="#e2e8f0" /> <!-- 天井 -->
+  
+  <!-- デスクの列 -->
+  <line x1="0" y1="120" x2="320" y2="120" stroke="#cbd5e0" stroke-width="2" />
+  
+  <!-- 顔のない人々 (繰り返し要素) -->
+  <!-- Person 1 -->
+  <g transform="translate(60, 100)">
+    <rect x="-15" y="0" width="30" height="50" fill="#4a5568" rx="5" /> <!-- 服 -->
+    <ellipse cx="0" cy="-25" rx="14" ry="18" fill="#fff" stroke="#cbd5e0" /> <!-- 顔: まっしろ -->
+  </g>
+  
+  <!-- Person 2 -->
+  <g transform="translate(160, 95)">
+    <rect x="-15" y="0" width="30" height="50" fill="#2d3748" rx="5" />
+    <ellipse cx="0" cy="-25" rx="14" ry="18" fill="#fff" stroke="#cbd5e0" />
+  </g>
+  
+  <!-- Person 3 -->
+  <g transform="translate(260, 100)">
+    <rect x="-15" y="0" width="30" height="50" fill="#4a5568" rx="5" />
+    <ellipse cx="0" cy="-25" rx="14" ry="18" fill="#fff" stroke="#cbd5e0" />
+  </g>
+  
+  <!-- 全体的に少しノイズをのせるようなフィルター効果の代わり -->
+  <rect width="320" height="180" fill="#fff" opacity="0.1" />
+</svg>

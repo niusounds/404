@@ -1,0 +1,23 @@
+<svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景: 深い闇 -->
+  <rect width="320" height="180" fill="#050510" />
+  
+  <!-- オフィスデスクのシルエット -->
+  <rect x="20" y="120" width="80" height="40" fill="#111" />
+  <rect x="120" y="120" width="80" height="40" fill="#111" />
+  <rect x="220" y="120" width="80" height="40" fill="#111" />
+  
+  <!-- 一つだけ点いているモニターの明かり -->
+  <rect x="135" y="90" width="50" height="30" fill="#4a9eff" opacity="0.4" rx="2" />
+  <rect x="140" y="95" width="40" height="20" fill="#fff" opacity="0.1" />
+  
+  <!-- モニターからの照り返し -->
+  <radialGradient id="monitorGlow" cx="160" cy="105" r="80" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#4a9eff" stop-opacity="0.2" />
+    <stop offset="1" stop-color="#4a9eff" stop-opacity="0" />
+  </radialGradient>
+  <circle cx="160" cy="105" r="80" fill="url(#monitorGlow)" />
+  
+  <!-- 暗く落ちる影 -->
+  <rect x="0" y="160" width="320" height="20" fill="#000" />
+</svg>
