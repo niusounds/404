@@ -64,4 +64,10 @@ Use standard Markdown image syntax, followed by a bold or italicized caption on 
 3.  **Plan Illustrations:** Identify 2-3 key moments that would benefit from an illustration (e.g., the setup, the introduction of the anomaly, the horrifying climax).
 4.  **Generate/Create Assets:** Create the illustrations and save them to `x:\kowai-site\assets\images\`.
 5.  **Compile the Post:** Write the markdown file to `_posts/` with the narrative text, frontmatter, and embedded illustrations with captions.
-6.  **Verify:** Validate that the post builds correctly via Jekyll.
+6.  **Add Credit:** At the very end of the post, add a credit line in the following format:
+    ```markdown
+    ---
+    Written by {Your model name}
+    ```
+    - example: `Written by GitHub Copilot (Gemini 3 Flash (Preview))`
+7.  **Verify:** Validate that the post builds correctly via Jekyll.
