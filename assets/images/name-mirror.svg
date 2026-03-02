@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <linearGradient id="mirrorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1f2a"/>
+      <stop offset="50%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#1a1f2a"/>
+    </linearGradient>
+    <filter id="flicker">
+      <feFlood flood-color="#ffffff" result="flood"/>
+      <feComposite in="flood" in2="SourceAlpha" operator="in"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+  </defs>
+  
+  <!-- Dark background -->
+  <rect width="400" height="300" fill="#050508"/>
+  
+  <!-- Mirror frame -->
+  <rect x="80" y="30" width="240" height="220" fill="#2a1a10" rx="5"/>
+  <rect x="90" y="40" width="220" height="200" fill="url(#mirrorGrad)" rx="3"/>
+  
+  <!-- Reflection silhouette - blurred, wrong -->
+  <ellipse cx="200" cy="120" rx="35" ry="45" fill="#1a1a2a" filter="url(#blur)"/>
+  <ellipse cx="200" cy="100" rx="30" ry="35" fill="#0a0a15"/>
+  
+  <!-- Eyes that don't match -->
+  <circle cx="188" cy="95" r="4" fill="#2a0000">
+    <animate attributeName="fill" values="#2a0000;#5a0000;#2a0000" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="212" cy="95" r="4" fill="#2a0000">
+    <animate attributeName="fill" values="#2a0000;#5a0000;#2a0000" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+  
+  <!-- Mouth that's wrong -->
+  <path d="M185 115 Q200 125 215 115" fill="none" stroke="#2a0505" stroke-width="2">
+    <animate attributeName="d" values="M185 115 Q200 125 215 115;M185 112 Q200 135 215 112;M185 115 Q200 125 215 115" dur="4s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Question mark over face - identity lost -->
+  <text x="200" y="150" text-anchor="middle" font-family="serif" font-size="40" fill="#3a0a0a" opacity="0.5">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+    ？
+  </text>
+  
+  <!-- Crack in mirror -->
+  <path d="M150 45 L165 80 L155 120 L170 160 L160 200 L175 235" 
+        fill="none" stroke="#3a3a4a" stroke-width="1" opacity="0.6"/>
+  <path d="M165 80 L200 95" fill="none" stroke="#3a3a4a" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Flicker effect on mirror surface -->
+  <rect x="90" y="40" width="220" height="200" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0.05;0;0;0.03;0" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Text below mirror -->
+  <text x="200" y="275" text-anchor="middle" font-family="serif" font-size="12" fill="#4a3a3a">
+    「誰だ、お前は」
+  </text>
+</svg>
