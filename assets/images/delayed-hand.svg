@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Dark background -->
+  <rect width="800" height="600" fill="#000000"/>
+  
+  <!-- Vignette effect -->
+  <rect width="800" height="600" fill="url(#vignette)" opacity="0.6"/>
+  
+  <!-- Two hands - one real (darker), one delayed (ghostly) -->
+  
+  <!-- "Real" hand position (left, darker) -->
+  <g id="realHand" opacity="0.7">
+    <!-- Palm -->
+    <ellipse cx="250" cy="350" rx="50" ry="70" fill="#0a0a0a" stroke="#1a1a2a" stroke-width="2"/>
+    
+    <!-- Thumb -->
+    <ellipse cx="210" cy="330" rx="18" ry="35" fill="#0a0a0a" stroke="#1a1a2a" stroke-width="2" transform="rotate(-30 210 330)"/>
+    
+    <!-- Fingers -->
+    <rect x="235" y="260" width="18" height="80" fill="#0a0a0a" stroke="#1a1a2a" stroke-width="2" rx="9"/>
+    <rect x="258" y="250" width="18" height="90" fill="#0a0a0a" stroke="#1a1a2a" stroke-width="2" rx="9"/>
+    <rect x="281" y="255" width="18" height="85" fill="#0a0a0a" stroke="#1a1a2a" stroke-width="2" rx="9"/>
+    <rect x="304" y="265" width="18" height="75" fill="#0a0a0a" stroke="#1a1a2a" stroke-width="2" rx="9"/>
+    
+    <!-- Fingertips -->
+    <circle cx="244" cy="260" r="9" fill="#0a0a0a" stroke="#1a1a2a" stroke-width="2"/>
+    <circle cx="267" cy="250" r="9" fill="#0a0a0a" stroke="#1a1a2a" stroke-width="2"/>
+    <circle cx="290" cy="255" r="9" fill="#0a0a0a" stroke="#1a1a2a" stroke-width="2"/>
+    <circle cx="313" cy="265" r="9" fill="#0a0a0a" stroke="#1a1a2a" stroke-width="2"/>
+  </g>
+  
+  <!-- "Delayed" hand (ghostly, slightly offset to the right) -->
+  <g id="delayedHand">
+    <!-- Palm -->
+    <ellipse cx="300" cy="350" rx="50" ry="70" fill="#1a1a2e" stroke="#3a3a5a" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; -50,0; -50,0; 0,0"
+        dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Thumb -->
+    <ellipse cx="260" cy="330" rx="18" ry="35" fill="#1a1a2e" stroke="#3a3a5a" stroke-width="2" transform="rotate(-30 260 330)" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; -50,0; -50,0; 0,0"
+        dur="4s" repeatCount="indefinite" additive="sum"/>
+    </ellipse>
+    
+    <!-- Fingers -->
+    <rect x="285" y="260" width="18" height="80" fill="#1a1a2e" stroke="#3a3a5a" stroke-width="2" rx="9" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; -50,0; -50,0; 0,0"
+        dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="308" y="250" width="18" height="90" fill="#1a1a2e" stroke="#3a3a5a" stroke-width="2" rx="9" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; -50,0; -50,0; 0,0"
+        dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="331" y="255" width="18" height="85" fill="#1a1a2e" stroke="#3a3a5a" stroke-width="2" rx="9" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; -50,0; -50,0; 0,0"
+        dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="354" y="265" width="18" height="75" fill="#1a1a2e" stroke="#3a3a5a" stroke-width="2" rx="9" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; -50,0; -50,0; 0,0"
+        dur="4s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Fingertips -->
+    <circle cx="294" cy="260" r="9" fill="#1a1a2e" stroke="#3a3a5a" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; -50,0; -50,0; 0,0"
+        dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="317" cy="250" r="9" fill="#1a1a2e" stroke="#3a3a5a" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; -50,0; -50,0; 0,0"
+        dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="255" r="9" fill="#1a1a2e" stroke="#3a3a5a" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; -50,0; -50,0; 0,0"
+        dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="363" cy="265" r="9" fill="#1a1a2e" stroke="#3a3a5a" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; -50,0; -50,0; 0,0"
+        dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Motion blur/trail effect suggesting delay -->
+  <g opacity="0.3">
+    <ellipse cx="275" cy="350" rx="50" ry="70" fill="#2a2a4a">
+      <animate attributeName="opacity" values="0;0.3;0" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Glitch effect lines -->
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#ff0044" stroke-width="2" opacity="0.2">
+    <animate attributeName="opacity" values="0;0.5;0" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="y1" values="300;305;300" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="300;305;300" dur="2s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Text overlay suggesting the delay -->
+  <text x="400" y="500" font-family="monospace" font-size="18" fill="#ff0044" text-anchor="middle" opacity="0.4">
+    DELAY: 0.5s
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.5s" repeatCount="indefinite"/>
+  </text>
+  
+  <defs>
+    <radialGradient id="vignette">
+      <stop offset="30%" style="stop-color:#000000;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1"/>
+    </radialGradient>
+  </defs>
+</svg>

@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Dark background -->
+  <rect width="800" height="600" fill="#0a0a0a"/>
+  
+  <!-- Mirror frame -->
+  <rect x="150" y="50" width="500" height="500" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="8"/>
+  
+  <!-- Mirror surface with subtle shimmer -->
+  <rect x="170" y="70" width="460" height="460" fill="#0d0d1a">
+    <animate attributeName="opacity" values="0.95;1;0.95" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Reflected figure - ghostly and slightly off -->
+  <!-- Head -->
+  <ellipse cx="390" cy="220" rx="60" ry="70" fill="#1a1a2e" stroke="#2a2a4a" stroke-width="2">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 2,0; 0,0; -2,0; 0,0" 
+      dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Eyes - unsettling stare -->
+  <ellipse cx="370" cy="210" rx="8" ry="12" fill="#ffffff" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.1;0.9" dur="5.5s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 2,0; 0,0; -2,0; 0,0" 
+      dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="410" cy="210" rx="8" ry="12" fill="#ffffff" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.1;0.9" dur="5.5s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 2,0; 0,0; -2,0; 0,0" 
+      dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Dark pupils -->
+  <circle cx="370" cy="210" r="4" fill="#000000">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 2,0; 0,0; -2,0; 0,0" 
+      dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="410" cy="210" r="4" fill="#000000">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 2,0; 0,0; -2,0; 0,0" 
+      dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Mouth - slightly open, unnatural -->
+  <ellipse cx="390" cy="250" rx="15" ry="8" fill="#000000" opacity="0.8">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 2,0; 0,0; -2,0; 0,0" 
+      dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Shoulders/body suggestion -->
+  <rect x="330" y="280" width="120" height="150" fill="#1a1a2e" rx="20">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 2,0; 0,0; -2,0; 0,0" 
+      dur="5s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Arms -->
+  <rect x="310" y="300" width="25" height="100" fill="#15152a" rx="12">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 2,0; 0,0; -2,0; 0,0" 
+      dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="465" y="300" width="25" height="100" fill="#15152a" rx="12">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 2,0; 0,0; -2,0; 0,0" 
+      dur="5s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Hand - one hand raised near face, delayed motion -->
+  <ellipse cx="470" cy="240" rx="18" ry="25" fill="#15152a">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 3,2; 0,0; -3,-2; 0,0" 
+      dur="5.5s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Fingers -->
+  <rect x="465" y="225" width="4" height="20" fill="#15152a" rx="2">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 3,2; 0,0; -3,-2; 0,0" 
+      dur="5.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="472" y="220" width="4" height="25" fill="#15152a" rx="2">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 3,2; 0,0; -3,-2; 0,0" 
+      dur="5.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="479" y="223" width="4" height="23" fill="#15152a" rx="2">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; 3,2; 0,0; -3,-2; 0,0" 
+      dur="5.5s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Glitch lines suggesting delay/distortion -->
+  <line x1="180" y1="150" x2="620" y2="150" stroke="#ff0033" stroke-width="1" opacity="0.3">
+    <animate attributeName="opacity" values="0;0.5;0" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="180" y1="350" x2="620" y2="350" stroke="#ff0033" stroke-width="1" opacity="0.3">
+    <animate attributeName="opacity" values="0;0.5;0" dur="2.3s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Digital artifact suggestion -->
+  <rect x="200" y="100" width="30" height="3" fill="#00ff88" opacity="0.2">
+    <animate attributeName="opacity" values="0;0.4;0" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="550" y="450" width="40" height="3" fill="#00ff88" opacity="0.2">
+    <animate attributeName="opacity" values="0;0.4;0" dur="2.7s" repeatCount="indefinite"/>
+  </rect>
+</svg>
