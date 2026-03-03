@@ -1,0 +1,50 @@
+---
+layout: mirror_maze
+title: 鏡の間
+---
+
+<div id="game-container">
+  <div id="start-screen">
+    <h1 class="game-title">鏡の間</h1>
+    <div class="game-description">
+      <p>目が覚めると、あなたは暗い廊下にいた。</p>
+      <p>壁には無数の鏡が並んでいる。</p>
+      <p>鏡に映る自分の姿を見ると、何かが違う。</p>
+      <p class="warning-text">【警告】このゲームには不快な画像表現が含まれます。</p>
+      <p class="controls-hint">
+        <strong>操作方法：</strong><br>
+        W/↑: 前進<br>
+        A/←: 左回転<br>
+        D/→: 右回転<br>
+        S/↓: 後退<br>
+        <br>
+        出口を探して脱出してください。<br>
+        鏡を見つめすぎないように...
+      </p>
+    </div>
+    <button id="start-button" class="game-button">ゲームを開始</button>
+  </div>
+
+  <div id="game-screen" style="display: none;">
+    <canvas id="game-canvas"></canvas>
+
+    <div id="hud">
+      <div id="sanity-bar-container">
+        <div class="hud-label">正気度</div>
+        <div id="sanity-bar">
+          <div id="sanity-fill"></div>
+        </div>
+      </div>
+      <div id="mirror-warning" style="display: none;">
+        鏡を見つめている...
+      </div>
+    </div>
+
+    <div id="game-over-screen" style="display: none;">
+      <h2 id="game-over-title"></h2>
+      <p id="game-over-message"></p>
+      <button id="restart-button" class="game-button">もう一度</button>
+      <a href="/" class="return-link">トップへ戻る</a>
+    </div>
+  </div>
+</div>
