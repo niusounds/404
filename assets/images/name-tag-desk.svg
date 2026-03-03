@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" in2="noise" mode="multiply"/>
+    </filter>
+    <linearGradient id="deskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a1810"/>
+      <stop offset="100%" stop-color="#1a0f0a"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0a0808"/>
+  
+  <!-- Desk surface -->
+  <rect x="0" y="180" width="400" height="120" fill="url(#deskGrad)"/>
+  
+  <!-- Name tag/plate -->
+  <rect x="130" y="200" width="140" height="50" fill="#f5f0e6" rx="3"/>
+  <rect x="130" y="200" width="140" height="50" fill="none" stroke="#8b7355" stroke-width="2" rx="3"/>
+  
+  <!-- Fading name text -->
+  <text x="200" y="232" text-anchor="middle" font-family="serif" font-size="18" fill="#1a1a1a">
+    <animate attributeName="opacity" values="1;0.7;0.3;0.1;0.05" dur="4s" repeatCount="indefinite"/>
+    田中
+  </text>
+  <text x="200" y="232" text-anchor="middle" font-family="serif" font-size="18" fill="#8a0000" opacity="0.3">
+    <animate attributeName="opacity" values="0;0.2;0.5;0.8;0.3;0" dur="4s" repeatCount="indefinite"/>
+    ？？？
+  </text>
+  
+  <!-- Scattered ink drops -->
+  <circle cx="280" cy="220" r="3" fill="#0a0505" opacity="0.6"/>
+  <circle cx="115" cy="235" r="2" fill="#0a0505" opacity="0.5"/>
+  <circle cx="285" cy="240" r="4" fill="#0a0505" opacity="0.7">
+    <animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Dim light from above -->
+  <ellipse cx="200" cy="150" rx="80" ry="60" fill="#3a2a1a" opacity="0.2"/>
+  
+  <!-- Creepy shadow hand reaching -->
+  <path d="M350 250 Q330 220 340 190 Q350 170 355 180 Q360 170 368 185 Q375 170 380 190 Q390 175 395 200 L400 250" 
+        fill="#0a0505" opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="5s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;-10,-5;0,0" dur="6s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Film grain overlay -->
+  <rect width="400" height="300" filter="url(#grain)" opacity="0.15"/>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <filter id="dissolve">
+      <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence">
+        <animate attributeName="baseFrequency" values="0.05;0.08;0.05" dur="4s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="5"/>
+    </filter>
+    <mask id="fadeMask">
+      <rect width="400" height="300" fill="white"/>
+      <rect x="100" y="80" width="200" height="100" fill="black" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.9;0.7" dur="3s" repeatCount="indefinite"/>
+      </rect>
+    </mask>
+  </defs>
+  
+  <!-- Dark void background -->
+  <rect width="400" height="300" fill="#020205"/>
+  
+  <!-- Central void/abyss -->
+  <ellipse cx="200" cy="150" rx="120" ry="80" fill="#000000"/>
+  <ellipse cx="200" cy="150" rx="100" ry="65" fill="#010103"/>
+  <ellipse cx="200" cy="150" rx="70" ry="45" fill="#020208">
+    <animate attributeName="rx" values="70;75;70" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="45;50;45" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Dissolving figure -->
+  <g filter="url(#dissolve)">
+    <!-- Body dissolving -->
+    <ellipse cx="200" cy="170" rx="30" ry="50" fill="#1a1a25" opacity="0.6"/>
+    <!-- Head -->
+    <circle cx="200" cy="110" r="25" fill="#1a1a25" opacity="0.5"/>
+  </g>
+  
+  <!-- Particles flying away - the name being erased -->
+  <g>
+    <text x="140" y="200" font-family="serif" font-size="14" fill="#3a3a4a" opacity="0.3">
+      <animate attributeName="x" values="140;80;20" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.1;0" dur="5s" repeatCount="indefinite"/>
+      田
+    </text>
+    <text x="170" y="180" font-family="serif" font-size="14" fill="#3a3a4a" opacity="0.3">
+      <animate attributeName="x" values="170;250;320" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.1;0" dur="6s" repeatCount="indefinite"/>
+      中
+    </text>
+    <text x="210" y="220" font-family="serif" font-size="14" fill="#3a3a4a" opacity="0.2">
+      <animate attributeName="y" values="220;280;340" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.05;0" dur="4s" repeatCount="indefinite"/>
+      健
+    </text>
+    <text x="240" y="160" font-family="serif" font-size="14" fill="#3a3a4a" opacity="0.25">
+      <animate attributeName="y" values="160;80;0" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.08;0" dur="5s" repeatCount="indefinite"/>
+      一
+    </text>
+  </g>
+  
+  <!-- Reaching hand from the void -->
+  <path d="M160 200 Q150 170 160 150 Q165 140 170 150 Q175 138 182 155 Q188 140 195 160" 
+        fill="#0a0a10" stroke="#1a1a25" stroke-width="1" opacity="0.7">
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;10,-10;0,0" dur="4s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Text at bottom -->
+  <text x="200" y="280" text-anchor="middle" font-family="serif" font-size="11" fill="#2a2a35">
+    名前が、溶けていく——
+  </text>
+</svg>
