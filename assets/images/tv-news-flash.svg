@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Dark room -->
+  <rect width="800" height="450" fill="#05050a"/>
+
+  <!-- TV outer chassis -->
+  <rect x="155" y="55" width="490" height="330" rx="18" fill="#181820"/>
+  <!-- TV inner bezel -->
+  <rect x="168" y="67" width="464" height="305" rx="12" fill="#0c0c14"/>
+
+  <!-- TV screen background -->
+  <radialGradient id="screenBg" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#1a2f5c" stop-opacity="1"/>
+    <stop offset="100%" stop-color="#080f1e" stop-opacity="1"/>
+  </radialGradient>
+  <rect x="173" y="72" width="454" height="293" rx="8" fill="url(#screenBg)"/>
+
+  <!-- News program background image (dark street scene) -->
+  <rect x="235" y="82" width="385" height="200" fill="#0d1520"/>
+  <path d="M235,230 L280,195 L340,210 L400,188 L470,205 L540,182 L620,195 L620,282 L235,282 Z" fill="#111825"/>
+  <rect x="235" y="245" width="385" height="37" fill="#080e18"/>
+
+  <!-- Street lamp dot in scene -->
+  <circle cx="490" cy="105" r="4" fill="#ffdd88" opacity="0.6"/>
+  <radialGradient id="sceneLamp" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#ffcc44" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#ffcc44" stop-opacity="0"/>
+  </radialGradient>
+  <ellipse cx="490" cy="105" rx="40" ry="35" fill="url(#sceneLamp)"/>
+
+  <!-- BREAKING NEWS red bar at bottom of screen -->
+  <rect x="173" y="305" width="454" height="52" fill="#bb0000"/>
+  <!-- Shimmer on red bar -->
+  <rect x="173" y="305" width="454" height="52" fill="url(#redShimmer)" opacity="0.3">
+    <linearGradient id="redShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff3333" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ff3333" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ff3333" stop-opacity="0"/>
+    </linearGradient>
+    <animate attributeName="x" values="173;627;173" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="192" y="340" font-family="'Hiragino Kaku Gothic Pro', 'Noto Sans JP', monospace" font-size="26" font-weight="bold" fill="white">【速報】交通事故　死亡</text>
+
+  <!-- "速報" badge top-left of screen -->
+  <rect x="173" y="72" width="92" height="34" fill="#bb0000" rx="0"/>
+  <text x="183" y="97" font-family="'Hiragino Kaku Gothic Pro', 'Noto Sans JP', monospace" font-size="20" font-weight="bold" fill="white">速　報</text>
+
+  <!-- Left sidebar info panel -->
+  <rect x="173" y="106" width="60" height="199" fill="#0a1222" opacity="0.85"/>
+
+  <!-- News text overlaid on scene -->
+  <text x="246" y="108" font-family="'Hiragino Kaku Gothic Pro', 'Noto Sans JP', monospace" font-size="15" fill="#ccccdd">場所：〇〇通り</text>
+  <text x="246" y="130" font-family="'Hiragino Kaku Gothic Pro', 'Noto Sans JP', monospace" font-size="15" fill="#ccccdd">時刻：23時10分頃</text>
+  <text x="246" y="158" font-family="'Hiragino Kaku Gothic Pro', 'Noto Sans JP', monospace" font-size="15" fill="#ffcc44">死亡者：田中　●●（3●歳）</text>
+
+  <!-- Screen flicker overlay -->
+  <rect x="173" y="72" width="454" height="293" rx="8" fill="white" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.04;0;0;0;0.02;0;0" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Screen ambient glow in room -->
+  <radialGradient id="roomGlow" cx="50%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#1a3360" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#1a3360" stop-opacity="0"/>
+  </radialGradient>
+  <ellipse cx="400" cy="420" rx="300" ry="70" fill="url(#roomGlow)"/>
+
+  <!-- TV stand -->
+  <rect x="362" y="385" width="76" height="14" rx="5" fill="#181820"/>
+  <rect x="348" y="397" width="104" height="9" rx="4" fill="#181820"/>
+
+  <!-- Silhouette of person watching (back of head) -->
+  <g opacity="0.9">
+    <circle cx="400" cy="428" r="20" fill="#0d0d12"/>
+    <rect x="375" y="430" width="50" height="20" rx="6" fill="#0d0d12"/>
+  </g>
+</svg>
