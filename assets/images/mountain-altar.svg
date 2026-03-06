@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+    <filter id="heavyBlur">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <radialGradient id="altarGlow" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#5a4020" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0806" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2e2820"/>
+      <stop offset="100%" stop-color="#1a1410"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.85"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Night forest background -->
+  <rect width="800" height="500" fill="#070605"/>
+  <rect width="800" height="500" fill="#0a0806"/>
+
+  <!-- Background trees (very dark, deep forest) -->
+  <g filter="url(#heavyBlur)" opacity="0.7">
+    <rect x="-20" y="80" width="60" height="420" fill="#060504"/>
+    <rect x="60" y="60" width="45" height="440" fill="#060504"/>
+    <rect x="130" y="90" width="38" height="410" fill="#060504"/>
+    <rect x="200" y="70" width="50" height="430" fill="#060504"/>
+    <rect x="270" y="85" width="35" height="415" fill="#060504"/>
+    <rect x="500" y="75" width="42" height="425" fill="#060504"/>
+    <rect x="565" y="60" width="50" height="440" fill="#060504"/>
+    <rect x="630" y="90" width="38" height="410" fill="#060504"/>
+    <rect x="700" y="70" width="55" height="430" fill="#060504"/>
+    <rect x="760" y="80" width="60" height="420" fill="#060504"/>
+  </g>
+
+  <!-- Mid-ground trees -->
+  <g filter="url(#softBlur)" opacity="0.85">
+    <rect x="20" y="130" width="55" height="370" fill="#080706"/>
+    <rect x="100" y="110" width="42" height="390" fill="#080706"/>
+    <rect x="180" y="140" width="36" height="360" fill="#080706"/>
+    <rect x="580" y="120" width="48" height="380" fill="#080706"/>
+    <rect x="660" y="135" width="40" height="365" fill="#080706"/>
+    <rect x="740" y="115" width="60" height="385" fill="#080706"/>
+    <!-- Roots/branches -->
+    <line x1="47" y1="160" x2="10" y2="145" stroke="#080706" stroke-width="10"/>
+    <line x1="47" y1="195" x2="80" y2="175" stroke="#080706" stroke-width="8"/>
+    <line x1="119" y1="140" x2="80" y2="125" stroke="#080706" stroke-width="9"/>
+    <line x1="604" y1="150" x2="560" y2="135" stroke="#080706" stroke-width="10"/>
+    <line x1="680" y1="165" x2="720" y2="148" stroke="#080706" stroke-width="8"/>
+  </g>
+
+  <!-- Forest floor -->
+  <path d="M0,420 Q200,400 400,410 Q600,420 800,405 L800,500 L0,500 Z" fill="#0d0b08"/>
+  <path d="M0,440 Q300,430 500,438 Q650,445 800,430 L800,500 L0,500 Z" fill="#100e0a"/>
+
+  <!-- Moss and ground details -->
+  <g opacity="0.3" filter="url(#softBlur)">
+    <ellipse cx="100" cy="455" rx="60" ry="15" fill="#1a2810"/>
+    <ellipse cx="320" cy="448" rx="50" ry="12" fill="#182510"/>
+    <ellipse cx="600" cy="460" rx="70" ry="16" fill="#1a2810"/>
+    <ellipse cx="720" cy="450" rx="40" ry="11" fill="#182510"/>
+  </g>
+
+  <!-- Ambient altar glow -->
+  <ellipse cx="400" cy="280" rx="220" ry="150" fill="url(#altarGlow)">
+    <animate attributeName="opacity" values="1;0.6;1" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- STONE ALTAR - stacked stones -->
+  <!-- Base stone (widest) -->
+  <g transform="translate(400, 380)">
+    <!-- Bottom foundation stones -->
+    <rect x="-110" y="-30" width="220" height="30" rx="4" fill="url(#stoneGrad)" stroke="#12100c" stroke-width="1"/>
+    <rect x="-100" y="-60" width="200" height="32" rx="3" fill="#28221c" stroke="#12100c" stroke-width="1"/>
+    <rect x="-90" y="-88" width="180" height="30" rx="3" fill="#2e2820" stroke="#12100c" stroke-width="1"/>
+    <rect x="-78" y="-114" width="156" height="28" rx="3" fill="#302a22" stroke="#14120e" stroke-width="1"/>
+    <rect x="-65" y="-138" width="130" height="26" rx="3" fill="#2e2820" stroke="#14120e" stroke-width="1"/>
+    <!-- Top altar stone (flat) -->
+    <rect x="-70" y="-162" width="140" height="26" rx="2" fill="#3a3028" stroke="#1a1612" stroke-width="1.5"/>
+
+    <!-- Stone surface cracks/texture -->
+    <g opacity="0.3">
+      <line x1="-100" y1="-48" x2="-60" y2="-50" stroke="#0d0b08" stroke-width="1.5"/>
+      <line x1="40" y1="-55" x2="90" y2="-52" stroke="#0d0b08" stroke-width="1.5"/>
+      <line x1="-80" y1="-78" x2="-30" y2="-80" stroke="#0d0b08" stroke-width="1.5"/>
+      <line x1="20" y1="-75" x2="70" y2="-78" stroke="#0d0b08" stroke-width="1.5"/>
+      <line x1="-55" y1="-130" x2="-20" y2="-126" stroke="#0d0b08" stroke-width="1.5"/>
+      <line x1="15" y1="-126" x2="50" y2="-130" stroke="#0d0b08" stroke-width="1.5"/>
+    </g>
+
+    <!-- Moss on stones -->
+    <g opacity="0.5" filter="url(#softBlur)">
+      <ellipse cx="-60" cy="-42" rx="18" ry="8" fill="#1e3010"/>
+      <ellipse cx="50" cy="-38" rx="22" ry="7" fill="#1a2c0c"/>
+      <ellipse cx="-40" cy="-68" rx="15" ry="6" fill="#1e3010"/>
+      <ellipse cx="30" cy="-72" rx="18" ry="7" fill="#1a2c0c"/>
+      <ellipse cx="-45" cy="-150" rx="16" ry="6" fill="#1e3010"/>
+      <ellipse cx="30" cy="-148" rx="14" ry="5" fill="#1a2c0c"/>
+    </g>
+
+    <!-- Stone inscription (worn, barely visible) -->
+    <g opacity="0.25">
+      <line x1="-45" y1="-152" x2="-20" y2="-152" stroke="#4a4038" stroke-width="2"/>
+      <line x1="-32" y1="-158" x2="-32" y2="-144" stroke="#4a4038" stroke-width="2"/>
+      <line x1="-10" y1="-158" x2="10" y2="-152" stroke="#4a4038" stroke-width="2"/>
+      <line x1="10" y1="-152" x2="-10" y2="-145" stroke="#4a4038" stroke-width="2"/>
+      <line x1="25" y1="-158" x2="25" y2="-144" stroke="#4a4038" stroke-width="2"/>
+      <line x1="18" y1="-152" x2="32" y2="-152" stroke="#4a4038" stroke-width="2"/>
+    </g>
+
+    <!-- Small offerings / objects on altar -->
+    <!-- Withered rope (shimenawa fragment) -->
+    <path d="M-50,-162 C-30,-170 0,-168 30,-162 C50,-158 60,-162 65,-162" 
+          fill="none" stroke="#5a4020" stroke-width="4" opacity="0.6"/>
+    <path d="M-50,-162 C-30,-170 0,-168 30,-162 C50,-158 60,-162 65,-162" 
+          fill="none" stroke="#7a5828" stroke-width="1.5" opacity="0.4"/>
+
+    <!-- Small ritual object (stone) -->
+    <ellipse cx="0" cy="-170" rx="14" ry="8" fill="#2a2218" opacity="0.7"/>
+    <ellipse cx="0" cy="-170" rx="10" ry="5" fill="#322a20" opacity="0.5"/>
+
+    <!-- Paper strips (shide) - tattered -->
+    <path d="M-20,-162 L-24,-140 L-18,-132 L-22,-122" stroke="#4a4234" stroke-width="3" fill="none" opacity="0.35">
+      <animateTransform attributeName="transform" type="rotate" values="-3,-20,-162;3,-20,-162;-3,-20,-162" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M10,-162 L14,-138 L8,-128 L13,-118" stroke="#4a4234" stroke-width="3" fill="none" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" values="3,10,-162;-2,10,-162;3,10,-162" dur="4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Faint figure sitting beside altar (shadowy, indistinct) -->
+  <g transform="translate(520, 360)" filter="url(#heavyBlur)" opacity="0.4">
+    <!-- Torso -->
+    <ellipse cx="0" cy="-50" rx="22" ry="32" fill="#0e0c0a"/>
+    <!-- Head -->
+    <ellipse cx="0" cy="-90" rx="16" ry="18" fill="#0e0c0a"/>
+    <!-- Legs (seated) -->
+    <path d="M-22,-22 L-45,0 L-38,8 L-10,-15" fill="#0e0c0a"/>
+    <path d="M22,-22 L45,0 L38,8 L10,-15" fill="#0e0c0a"/>
+    <animate attributeName="opacity" values="0.4;0.2;0.4" dur="7s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Atmospheric mist at base -->
+  <g filter="url(#heavyBlur)" opacity="0.15">
+    <rect x="0" y="390" width="800" height="110" fill="#c8c0a8"/>
+    <ellipse cx="400" cy="410" rx="300" ry="40" fill="#c8c0a8"/>
+  </g>
+
+  <!-- Canopy darkness at top -->
+  <rect x="0" y="0" width="800" height="160" fill="#060504"/>
+  <rect x="0" y="0" width="800" height="180" fill="#070605" opacity="0.7"/>
+
+  <!-- Foreground tree silhouettes -->
+  <rect x="-15" y="200" width="65" height="300" fill="#060504"/>
+  <rect x="735" y="210" width="80" height="290" fill="#060504"/>
+  <!-- Foreground branches -->
+  <path d="M25,230 L-30,195 M25,260 L80,240 M755,220 L810,200 M755,250 L700,235" 
+        stroke="#060504" stroke-width="14" fill="none"/>
+
+  <!-- Vignette overlay -->
+  <rect width="800" height="500" fill="url(#vignette)"/>
+
+  <!-- Very faint firefly-like lights -->
+  <g opacity="0.6">
+    <circle cx="220" cy="300" r="2" fill="#a09040">
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="580" cy="280" r="1.5" fill="#a09040">
+      <animate attributeName="opacity" values="0;0.6;0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="260" r="1.5" fill="#a09040">
+      <animate attributeName="opacity" values="0.3;0;0.3" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
