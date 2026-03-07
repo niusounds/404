@@ -1,0 +1,45 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">海辺の社と夜の階段</title>
+  <desc id="desc">波打ち際に続く石段と朽ちた社の前で人影が揺れる場面</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#05050a"/>
+      <stop offset="65%" stop-color="#0b0b13"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1220"/>
+      <stop offset="100%" stop-color="#06080f"/>
+    </linearGradient>
+    <filter id="mist" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#sky)"/>
+  <ellipse cx="920" cy="160" rx="65" ry="38" fill="#d4deef" opacity="0.12"/>
+
+  <rect x="0" y="420" width="1200" height="280" fill="url(#sea)"/>
+  <path d="M0 460 Q 220 430 420 458 T 820 455 T 1200 462" stroke="#1e3a5a" stroke-width="2" fill="none" opacity="0.5"/>
+
+  <g opacity="0.8">
+    <rect x="500" y="250" width="200" height="26" fill="#1f100e"/>
+    <rect x="520" y="250" width="20" height="140" fill="#1f100e"/>
+    <rect x="660" y="250" width="20" height="140" fill="#1f100e"/>
+    <rect x="540" y="300" width="120" height="90" fill="#111317" stroke="#2a2f3a"/>
+  </g>
+
+  <path d="M600 700 L540 420 L660 420 Z" fill="#141820" opacity="0.55"/>
+  <path d="M540 420 L600 460 L660 420" fill="none" stroke="#2a3447" stroke-width="2"/>
+
+  <g filter="url(#mist)">
+    <ellipse cx="600" cy="470" rx="95" ry="22" fill="#9aa7bb" opacity="0.12"/>
+    <ellipse cx="600" cy="515" rx="130" ry="30" fill="#9aa7bb" opacity="0.09"/>
+  </g>
+
+  <g transform="translate(585 365)">
+    <rect x="0" y="0" width="14" height="55" fill="#1b202b"/>
+    <circle cx="7" cy="-9" r="9" fill="#1b202b"/>
+    <animateTransform attributeName="transform" type="translate" values="585 365;588 365;585 365" dur="2.8s" repeatCount="indefinite"/>
+  </g>
+</svg>
