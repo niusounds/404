@@ -1,0 +1,346 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360" width="500" height="360">
+  <defs>
+    <radialGradient id="roomLight" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#1a1008" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <filter id="ambientBlur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Background - dark workshop -->
+  <rect width="500" height="360" fill="#040305"/>
+
+  <!-- Back wall -->
+  <rect x="0" y="0" width="500" height="300" fill="#060407"/>
+
+  <!-- Floor line suggestion -->
+  <rect x="0" y="295" width="500" height="65" fill="#080508"/>
+  <line x1="0" y1="295" x2="500" y2="295" stroke="#0e080f" stroke-width="1.5"/>
+
+  <!-- Ambient light from above (weak ceiling lamp) -->
+  <ellipse cx="250" cy="0" rx="180" ry="60" fill="#1a1208" opacity="0.25" filter="url(#ambientBlur)"/>
+
+  <!-- ── SHELF 1 (top, furthest back) ── -->
+  <rect x="30" y="80" width="440" height="8" fill="#120c0a"/>
+  <rect x="30" y="80" width="440" height="2" fill="#1e1410"/>
+
+  <!-- Bowl row 1 - 6 bowls -->
+  <!-- Bowl 1-1 -->
+  <ellipse cx="72" cy="72" rx="22" ry="8" fill="#130c0a"/>
+  <path d="M 50 72 Q 50 100 72 102 Q 94 100 94 72 Z" fill="#0e0907"/>
+  <ellipse cx="72" cy="72" rx="22" ry="8" fill="#1a1008"/>
+  <ellipse cx="72" cy="74" rx="18" ry="6" fill="#100a07"/>
+  <!-- Eye in bowl 1-1 -->
+  <ellipse cx="67" cy="73" rx="3.5" ry="2.5" fill="#0a0507">
+    <animate attributeName="opacity" values="0;0;0.8;0;0" dur="7.3s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="77" cy="73" rx="3.5" ry="2.5" fill="#0a0507">
+    <animate attributeName="opacity" values="0;0;0.8;0;0" dur="7.3s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="67" cy="73" rx="2" ry="1.5" fill="#b8903a" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0;0.5;0;0" dur="7.3s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="77" cy="73" rx="2" ry="1.5" fill="#b8903a" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0;0.5;0;0" dur="7.3s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bowl 1-2 -->
+  <ellipse cx="135" cy="70" rx="23" ry="8" fill="#130c0a"/>
+  <path d="M 112 70 Q 112 100 135 103 Q 158 100 158 70 Z" fill="#0f0908"/>
+  <ellipse cx="135" cy="70" rx="23" ry="8" fill="#1a1008"/>
+  <ellipse cx="135" cy="72" rx="19" ry="6.5" fill="#100a07"/>
+  <!-- Eye in bowl 1-2 -->
+  <ellipse cx="129" cy="71" rx="3.5" ry="2.5" fill="#0a0507">
+    <animate attributeName="opacity" values="0;0.7;0;0;0" dur="5.8s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="141" cy="71" rx="3.5" ry="2.5" fill="#0a0507">
+    <animate attributeName="opacity" values="0;0.7;0;0;0" dur="5.8s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="129" cy="71" rx="2" ry="1.5" fill="#b8903a" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0.45;0;0;0" dur="5.8s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="141" cy="71" rx="2" ry="1.5" fill="#b8903a" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0.45;0;0;0" dur="5.8s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bowl 1-3 -->
+  <ellipse cx="198" cy="73" rx="22" ry="8" fill="#130c0a"/>
+  <path d="M 176 73 Q 176 102 198 104 Q 220 102 220 73 Z" fill="#0e0907"/>
+  <ellipse cx="198" cy="73" rx="22" ry="8" fill="#1a1008"/>
+  <ellipse cx="198" cy="75" rx="18" ry="6" fill="#100a07"/>
+  <!-- Eye in bowl 1-3 (always faintly visible) -->
+  <ellipse cx="192" cy="74" rx="3.5" ry="2.5" fill="#200e08" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.3;0.6;0.9;0.6" dur="4.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="204" cy="74" rx="3.5" ry="2.5" fill="#200e08" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.9;0.6;0.3;0.6" dur="4.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="192" cy="74" rx="2" ry="1.5" fill="#c8a040" opacity="0.35" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.35;0.6;0.35;0.1;0.35" dur="4.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="204" cy="74" rx="2" ry="1.5" fill="#c8a040" opacity="0.35" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.35;0.1;0.35;0.6;0.35" dur="4.5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bowl 1-4 -->
+  <ellipse cx="262" cy="71" rx="23" ry="8" fill="#130c0a"/>
+  <path d="M 239 71 Q 239 101 262 103 Q 285 101 285 71 Z" fill="#0f0908"/>
+  <ellipse cx="262" cy="71" rx="23" ry="8" fill="#1a1008"/>
+  <ellipse cx="262" cy="73" rx="19" ry="6.5" fill="#100a07"/>
+  <!-- Eye in bowl 1-4 -->
+  <ellipse cx="256" cy="72" rx="3.5" ry="2.5" fill="#0a0507">
+    <animate attributeName="opacity" values="0;0;0;0.7;0" dur="8.1s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="268" cy="72" rx="3.5" ry="2.5" fill="#0a0507">
+    <animate attributeName="opacity" values="0;0;0;0.7;0" dur="8.1s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="256" cy="72" rx="2" ry="1.5" fill="#b8903a" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0;0;0.4;0" dur="8.1s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="268" cy="72" rx="2" ry="1.5" fill="#b8903a" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0;0;0.4;0" dur="8.1s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bowl 1-5 -->
+  <ellipse cx="325" cy="74" rx="22" ry="8" fill="#130c0a"/>
+  <path d="M 303 74 Q 303 103 325 105 Q 347 103 347 74 Z" fill="#0e0907"/>
+  <ellipse cx="325" cy="74" rx="22" ry="8" fill="#1a1008"/>
+  <ellipse cx="325" cy="76" rx="18" ry="6" fill="#100a07"/>
+  <!-- Eye in bowl 1-5 -->
+  <ellipse cx="319" cy="75" rx="3.5" ry="2.5" fill="#0a0507">
+    <animate attributeName="opacity" values="0.5;0;0;0;0.5" dur="6.6s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="331" cy="75" rx="3.5" ry="2.5" fill="#0a0507">
+    <animate attributeName="opacity" values="0.5;0;0;0;0.5" dur="6.6s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="319" cy="75" rx="2" ry="1.5" fill="#b8903a" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.3;0;0;0;0.3" dur="6.6s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="331" cy="75" rx="2" ry="1.5" fill="#b8903a" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.3;0;0;0;0.3" dur="6.6s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bowl 1-6 -->
+  <ellipse cx="427" cy="72" rx="22" ry="8" fill="#130c0a"/>
+  <path d="M 405 72 Q 405 101 427 103 Q 449 101 449 72 Z" fill="#0e0907"/>
+  <ellipse cx="427" cy="72" rx="22" ry="8" fill="#1a1008"/>
+  <ellipse cx="427" cy="74" rx="18" ry="6" fill="#100a07"/>
+  <!-- Eye in bowl 1-6 -->
+  <ellipse cx="421" cy="73" rx="3.5" ry="2.5" fill="#200e08" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.8;0.4;0;0.4" dur="9.2s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="433" cy="73" rx="3.5" ry="2.5" fill="#200e08" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0;0.4;0.8;0.4" dur="9.2s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="421" cy="73" rx="2" ry="1.5" fill="#c8a040" opacity="0.25" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.25;0.5;0.25;0;0.25" dur="9.2s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="433" cy="73" rx="2" ry="1.5" fill="#c8a040" opacity="0.25" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.25;0;0.25;0.5;0.25" dur="9.2s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- ── SHELF 2 (middle) ── -->
+  <rect x="30" y="165" width="440" height="8" fill="#120c0a"/>
+  <rect x="30" y="165" width="440" height="2" fill="#1e1410"/>
+
+  <!-- Bowl row 2 - 5 bowls -->
+  <!-- Bowl 2-1 -->
+  <ellipse cx="80" cy="153" rx="25" ry="9" fill="#150d0a"/>
+  <path d="M 55 153 Q 55 188 80 190 Q 105 188 105 153 Z" fill="#100908"/>
+  <ellipse cx="80" cy="153" rx="25" ry="9" fill="#1c1209"/>
+  <ellipse cx="80" cy="156" rx="20" ry="7" fill="#120a07"/>
+  <!-- Eye -->
+  <ellipse cx="73" cy="155" rx="4" ry="3" fill="#1a0c07">
+    <animate attributeName="opacity" values="0.7;0.3;0.7;1;0.7" dur="3.8s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="87" cy="155" rx="4" ry="3" fill="#1a0c07">
+    <animate attributeName="opacity" values="0.7;1;0.7;0.3;0.7" dur="3.8s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="73" cy="155" rx="2.2" ry="1.8" fill="#d4a840" opacity="0.4" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.4;0.15;0.4;0.65;0.4" dur="3.8s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="87" cy="155" rx="2.2" ry="1.8" fill="#d4a840" opacity="0.4" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.4;0.65;0.4;0.15;0.4" dur="3.8s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bowl 2-2 -->
+  <ellipse cx="163" cy="155" rx="24" ry="9" fill="#150d0a"/>
+  <path d="M 139 155 Q 139 188 163 190 Q 187 188 187 155 Z" fill="#100908"/>
+  <ellipse cx="163" cy="155" rx="24" ry="9" fill="#1c1209"/>
+  <ellipse cx="163" cy="157" rx="20" ry="7" fill="#120a07"/>
+  <!-- Eye - appears briefly -->
+  <ellipse cx="156" cy="156" rx="4" ry="3" fill="#1a0c07">
+    <animate attributeName="opacity" values="0;0;0.9;0;0" dur="11s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="170" cy="156" rx="4" ry="3" fill="#1a0c07">
+    <animate attributeName="opacity" values="0;0;0.9;0;0" dur="11s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="156" cy="156" rx="2.2" ry="1.8" fill="#d4a840" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0;0.55;0;0" dur="11s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="170" cy="156" rx="2.2" ry="1.8" fill="#d4a840" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0;0.55;0;0" dur="11s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bowl 2-3 (center, most prominent) -->
+  <ellipse cx="250" cy="150" rx="28" ry="10" fill="#180f0b"/>
+  <path d="M 222 150 Q 222 190 250 192 Q 278 190 278 150 Z" fill="#120a08"/>
+  <ellipse cx="250" cy="150" rx="28" ry="10" fill="#201408"/>
+  <ellipse cx="250" cy="153" rx="23" ry="8" fill="#150b08"/>
+  <!-- Eyes - consistently visible in center bowl -->
+  <ellipse cx="241" cy="152" rx="5" ry="4" fill="#220f08">
+    <animate attributeName="opacity" values="0.8;0.5;0.8;0.9;0.8" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="259" cy="152" rx="5" ry="4" fill="#220f08">
+    <animate attributeName="opacity" values="0.8;0.9;0.8;0.5;0.8" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="241" cy="152" rx="2.8" ry="2.2" fill="#e0b840" opacity="0.5" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.5;0.25;0.5;0.75;0.5" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="259" cy="152" rx="2.8" ry="2.2" fill="#e0b840" opacity="0.5" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.5;0.75;0.5;0.25;0.5" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Faint mouth in center bowl -->
+  <path d="M 242 162 Q 250 166 258 162" fill="none" stroke="#1e0e07" stroke-width="1.2" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.2;0.5;0.7;0.5" dur="5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Bowl 2-4 -->
+  <ellipse cx="337" cy="156" rx="24" ry="9" fill="#150d0a"/>
+  <path d="M 313 156 Q 313 188 337 190 Q 361 188 361 156 Z" fill="#100908"/>
+  <ellipse cx="337" cy="156" rx="24" ry="9" fill="#1c1209"/>
+  <ellipse cx="337" cy="158" rx="20" ry="7" fill="#120a07"/>
+  <!-- Eye -->
+  <ellipse cx="330" cy="157" rx="4" ry="3" fill="#1a0c07">
+    <animate attributeName="opacity" values="0;0.6;0;0.6;0" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="344" cy="157" rx="4" ry="3" fill="#1a0c07">
+    <animate attributeName="opacity" values="0;0.6;0;0.6;0" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="330" cy="157" rx="2.2" ry="1.8" fill="#d4a840" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0.38;0;0.38;0" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="344" cy="157" rx="2.2" ry="1.8" fill="#d4a840" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0.38;0;0.38;0" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bowl 2-5 -->
+  <ellipse cx="420" cy="154" rx="25" ry="9" fill="#150d0a"/>
+  <path d="M 395 154 Q 395 188 420 190 Q 445 188 445 154 Z" fill="#100908"/>
+  <ellipse cx="420" cy="154" rx="25" ry="9" fill="#1c1209"/>
+  <ellipse cx="420" cy="156" rx="20" ry="7" fill="#120a07"/>
+  <!-- Eye -->
+  <ellipse cx="413" cy="155" rx="4" ry="3" fill="#200e08" opacity="0.55">
+    <animate attributeName="opacity" values="0.55;0.8;0.55;0.2;0.55" dur="6.3s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="427" cy="155" rx="4" ry="3" fill="#200e08" opacity="0.55">
+    <animate attributeName="opacity" values="0.55;0.2;0.55;0.8;0.55" dur="6.3s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="413" cy="155" rx="2.2" ry="1.8" fill="#c8a040" opacity="0.35" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.35;0.6;0.35;0.1;0.35" dur="6.3s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="427" cy="155" rx="2.2" ry="1.8" fill="#c8a040" opacity="0.35" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.35;0.1;0.35;0.6;0.35" dur="6.3s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- ── SHELF 3 (lower) ── -->
+  <rect x="30" y="250" width="440" height="8" fill="#120c0a"/>
+  <rect x="30" y="250" width="440" height="2" fill="#1e1410"/>
+
+  <!-- Bowl row 3 - 4 larger bowls -->
+  <!-- Bowl 3-1 -->
+  <ellipse cx="90" cy="232" rx="28" ry="10" fill="#160d0a"/>
+  <path d="M 62 232 Q 62 272 90 275 Q 118 272 118 232 Z" fill="#110a08"/>
+  <ellipse cx="90" cy="232" rx="28" ry="10" fill="#1e1209"/>
+  <ellipse cx="90" cy="235" rx="23" ry="8" fill="#140b07"/>
+  <ellipse cx="83" cy="234" rx="4.5" ry="3.5" fill="#1e0e08">
+    <animate attributeName="opacity" values="0.6;0.3;0.6;0.9;0.6" dur="4.7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="97" cy="234" rx="4.5" ry="3.5" fill="#1e0e08">
+    <animate attributeName="opacity" values="0.6;0.9;0.6;0.3;0.6" dur="4.7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="83" cy="234" rx="2.5" ry="2" fill="#d0a035" opacity="0.4" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.4;0.1;0.4;0.7;0.4" dur="4.7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="97" cy="234" rx="2.5" ry="2" fill="#d0a035" opacity="0.4" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.4;0.7;0.4;0.1;0.4" dur="4.7s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bowl 3-2 -->
+  <ellipse cx="200" cy="235" rx="29" ry="10" fill="#160d0a"/>
+  <path d="M 171 235 Q 171 276 200 279 Q 229 276 229 235 Z" fill="#110a08"/>
+  <ellipse cx="200" cy="235" rx="29" ry="10" fill="#1e1209"/>
+  <ellipse cx="200" cy="238" rx="24" ry="8" fill="#140b07"/>
+  <ellipse cx="192" cy="237" rx="4.5" ry="3.5" fill="#200f08">
+    <animate attributeName="opacity" values="0;0;1;0;0" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="208" cy="237" rx="4.5" ry="3.5" fill="#200f08">
+    <animate attributeName="opacity" values="0;0;1;0;0" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="192" cy="237" rx="2.5" ry="2" fill="#d0a035" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0;0.6;0;0" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="208" cy="237" rx="2.5" ry="2" fill="#d0a035" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0;0.6;0;0" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bowl 3-3 -->
+  <ellipse cx="310" cy="233" rx="28" ry="10" fill="#160d0a"/>
+  <path d="M 282 233 Q 282 272 310 275 Q 338 272 338 233 Z" fill="#110a08"/>
+  <ellipse cx="310" cy="233" rx="28" ry="10" fill="#1e1209"/>
+  <ellipse cx="310" cy="236" rx="23" ry="8" fill="#140b07"/>
+  <ellipse cx="303" cy="235" rx="4.5" ry="3.5" fill="#1e0e08" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.4;0.7;0.9;0.7" dur="5.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="317" cy="235" rx="4.5" ry="3.5" fill="#1e0e08" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.9;0.7;0.4;0.7" dur="5.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="303" cy="235" rx="2.5" ry="2" fill="#d0a035" opacity="0.45" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.45;0.2;0.45;0.7;0.45" dur="5.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="317" cy="235" rx="2.5" ry="2" fill="#d0a035" opacity="0.45" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.45;0.7;0.45;0.2;0.45" dur="5.5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bowl 3-4 -->
+  <ellipse cx="420" cy="234" rx="27" ry="10" fill="#160d0a"/>
+  <path d="M 393 234 Q 393 272 420 275 Q 447 272 447 234 Z" fill="#110a08"/>
+  <ellipse cx="420" cy="234" rx="27" ry="10" fill="#1e1209"/>
+  <ellipse cx="420" cy="237" rx="22" ry="8" fill="#140b07"/>
+  <ellipse cx="413" cy="236" rx="4.5" ry="3.5" fill="#1e0e08">
+    <animate attributeName="opacity" values="0;0.8;0;0.8;0" dur="8.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="427" cy="236" rx="4.5" ry="3.5" fill="#1e0e08">
+    <animate attributeName="opacity" values="0;0.8;0;0.8;0" dur="8.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="413" cy="236" rx="2.5" ry="2" fill="#d0a035" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0.5;0;0.5;0" dur="8.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="427" cy="236" rx="2.5" ry="2" fill="#d0a035" opacity="0" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0;0.5;0;0.5;0" dur="8.5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Shelf support brackets -->
+  <rect x="35" y="80" width="6" height="215" fill="#0c0808"/>
+  <rect x="459" y="80" width="6" height="215" fill="#0c0808"/>
+  <rect x="245" y="80" width="5" height="215" fill="#0c0808"/>
+
+  <!-- Room ambient overlay -->
+  <rect width="500" height="360" fill="url(#roomLight)"/>
+
+  <!-- Vignette edges -->
+  <rect width="500" height="360" fill="none" stroke="#000" stroke-width="40" opacity="0.7"/>
+
+  <!-- Caption area - floor shadow -->
+  <rect x="0" y="295" width="500" height="65" fill="#060408" opacity="0.9"/>
+  <text x="250" y="325" text-anchor="middle" font-family="serif" font-size="11" fill="#2a1a10" opacity="0.6">棚の奥から、無数の目が見ていた</text>
+</svg>

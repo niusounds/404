@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320">
+  <defs>
+    <radialGradient id="bowlGrad" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#1a0a0a"/>
+      <stop offset="60%" stop-color="#0d0505"/>
+      <stop offset="100%" stop-color="#050202"/>
+    </radialGradient>
+    <radialGradient id="glowEye" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c8a060" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#c8a060" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <filter id="deepGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <clipPath id="bowlClip">
+      <ellipse cx="200" cy="185" rx="140" ry="95"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="320" fill="#05030a"/>
+
+  <!-- Work surface -->
+  <rect x="0" y="230" width="400" height="90" fill="#0e0a08"/>
+  <line x1="0" y1="230" x2="400" y2="230" stroke="#1a1210" stroke-width="1"/>
+
+  <!-- Bowl outer rim shadow -->
+  <ellipse cx="200" cy="175" rx="148" ry="30" fill="#000000" opacity="0.6" filter="url(#blur)"/>
+
+  <!-- Bowl outer body -->
+  <path d="M 60 175 Q 60 285 200 290 Q 340 285 340 175 Z" fill="#0d0705"/>
+  <path d="M 62 175 Q 62 283 200 288 Q 338 283 338 175 Z" fill="#110908"/>
+
+  <!-- Bowl rim ellipse top -->
+  <ellipse cx="200" cy="175" rx="140" ry="26" fill="#1a0f0a"/>
+  <ellipse cx="200" cy="175" rx="138" ry="24" fill="#0d0705"/>
+
+  <!-- Lacquer sheen on rim -->
+  <ellipse cx="200" cy="175" rx="138" ry="24" fill="none" stroke="#2a1a10" stroke-width="2"/>
+  <path d="M 80 168 Q 150 163 200 165 Q 250 163 320 168" fill="none" stroke="#3a2015" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Bowl interior -->
+  <ellipse cx="200" cy="185" rx="140" ry="95" fill="url(#bowlGrad)"/>
+
+  <!-- Lacquer depth layers (subtle concentric rings) -->
+  <ellipse cx="200" cy="185" rx="130" ry="85" fill="none" stroke="#150a08" stroke-width="0.8" opacity="0.6"/>
+  <ellipse cx="200" cy="185" rx="115" ry="72" fill="none" stroke="#120806" stroke-width="0.6" opacity="0.5"/>
+  <ellipse cx="200" cy="185" rx="98" ry="60" fill="none" stroke="#100705" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Face glow center -->
+  <ellipse cx="200" cy="188" rx="55" ry="40" fill="#100808" opacity="0.8"/>
+  <ellipse cx="200" cy="188" rx="40" ry="30" fill="#150a08" filter="url(#deepGlow)"/>
+
+  <!-- Face in lacquer - left eye socket -->
+  <ellipse cx="178" cy="180" rx="12" ry="9" fill="#0a0505" filter="url(#softBlur)"/>
+  <ellipse cx="178" cy="180" rx="8" ry="6" fill="#1c0d08"/>
+  <!-- Eye highlight/iris -->
+  <ellipse cx="178" cy="180" rx="5" ry="4" fill="#2a1208">
+    <animate attributeName="opacity" values="0.6;1;0.6;0.3;0.6" dur="4.2s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="178" cy="180" rx="2.5" ry="2" fill="#c8a060" opacity="0.3" filter="url(#blur)">
+    <animate attributeName="opacity" values="0.3;0.6;0.2;0.5;0.3" dur="4.2s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Face in lacquer - right eye socket -->
+  <ellipse cx="222" cy="180" rx="12" ry="9" fill="#0a0505" filter="url(#softBlur)"/>
+  <ellipse cx="222" cy="180" rx="8" ry="6" fill="#1c0d08"/>
+  <ellipse cx="222" cy="180" rx="5" ry="4" fill="#2a1208">
+    <animate attributeName="opacity" values="0.6;0.3;0.6;1;0.6" dur="4.2s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="222" cy="180" rx="2.5" ry="2" fill="#c8a060" opacity="0.3" filter="url(#blur)">
+    <animate attributeName="opacity" values="0.3;0.5;0.2;0.6;0.3" dur="4.2s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Face - nose suggestion -->
+  <path d="M 196 188 Q 200 195 204 188" fill="none" stroke="#1a0d08" stroke-width="1" opacity="0.5"/>
+
+  <!-- Face - mouth line (slightly open) -->
+  <path d="M 186 200 Q 200 205 214 200" fill="none" stroke="#1a0a06" stroke-width="1.5" opacity="0.7">
+    <animate attributeName="d" values="M 186 200 Q 200 205 214 200;M 186 201 Q 200 206 214 201;M 186 200 Q 200 205 214 200" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.4;0.7" dur="6s" repeatCount="indefinite"/>
+  </path>
+  <!-- Tiny gap in mouth suggesting it's open -->
+  <path d="M 193 201 Q 200 206 207 201" fill="#050202" opacity="0.6"/>
+
+  <!-- Subtle face outline suggestion -->
+  <ellipse cx="200" cy="188" rx="22" ry="28" fill="none" stroke="#1a0c08" stroke-width="0.8" opacity="0.3" filter="url(#softBlur)"/>
+
+  <!-- Lacquer surface sheen overlay -->
+  <ellipse cx="200" cy="185" rx="140" ry="95" fill="none" stroke="#2a1510" stroke-width="1" opacity="0.4"/>
+
+  <!-- Top rim highlight (lacquer glossy reflection) -->
+  <path d="M 100 170 Q 160 160 220 162 Q 260 161 300 170" fill="none" stroke="#3d2218" stroke-width="1" opacity="0.4"/>
+
+  <!-- Small reflection of light on interior -->
+  <ellipse cx="155" cy="162" rx="12" ry="5" fill="#2a1510" opacity="0.2" transform="rotate(-15, 155, 162)"/>
+
+  <!-- Shadow beneath bowl -->
+  <ellipse cx="200" cy="292" rx="120" ry="12" fill="#000" opacity="0.5" filter="url(#blur)"/>
+</svg>
