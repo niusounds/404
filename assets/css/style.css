@@ -579,6 +579,56 @@ body {
   animation: spooky-fade 8s infinite ease-in-out;
 }
 
+.post-content a {
+  color: #d27a7a;
+  text-decoration-color: rgba(210, 122, 122, 0.6);
+  text-underline-offset: 0.15em;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+}
+
+.post-content a:visited {
+  color: #c86a6a;
+  text-decoration-color: rgba(200, 106, 106, 0.55);
+}
+
+.post-content a:hover,
+.post-content a:focus-visible {
+  color: #ffd2d2;
+  text-decoration-color: rgba(255, 210, 210, 0.85);
+}
+
+.post-content pre {
+  margin: 2em 0;
+  padding: 1.1em 1.2em;
+  background: linear-gradient(180deg, rgba(22, 14, 14, 0.95), rgba(12, 9, 9, 0.95));
+  border: 1px solid #3a2424;
+  border-left: 3px solid #7a2b2b;
+  border-radius: 6px;
+  color: #e5dddd;
+  line-height: 1.75;
+  overflow-x: auto;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.post-content pre code {
+  display: block;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.88rem;
+  color: inherit;
+  background: transparent;
+  padding: 0;
+}
+
+.post-content :not(pre) > code {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.92em;
+  color: #f4d1d1;
+  background: rgba(112, 36, 36, 0.24);
+  border: 1px solid rgba(180, 70, 70, 0.35);
+  border-radius: 4px;
+  padding: 0.08em 0.4em;
+}
+
 .post-content h3 {
   font-family: 'Yuji Syuku', serif;
   color: #a00;
