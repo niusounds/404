@@ -9,7 +9,7 @@ import sys
 # 設定
 API_URL = "http://localhost:1234/api/v1/chat"
 MODEL = "google/gemma-3n-e4b"
-SYSTEM_PROMPT = "あなたはプロの怪談師です。学校の怪談をテーマに、怖い話を創作して語ってください。なるべく長く文章を書いてください。文章の冒頭に短いタイトルを一行書き、その後に本文を続けてください。"
+SYSTEM_PROMPT = "あなたはプロの怪談師です。様々なジャンルの怪談を考え、テーマを一つ決め、怖い話を創作して語ってください。なるべく長く文章を書いてください。文章の冒頭に短いタイトルを一行書き、その後に本文を続けてください。"
 INPUT_TEXT = "今日の話"
 
 def generate_story():
@@ -115,12 +115,26 @@ def parse_and_save(content):
     # クレジット
     credit = f"\n\n---\nWritten by {MODEL}"
     
+    # プロンプト情報の追記
+    prompt_info = f"""
+
+system prompt:
+```
+{SYSTEM_PROMPT}
+```
+
+user prompt:
+```
+{INPUT_TEXT}
+```
+"""
+
     # フロントマターと本文の組み立て
     post_data = f"""---
 title: {title}
 ---
 
-{body}{credit}
+{body}{credit}{prompt_info}
 """
     
     # _posts ディレクトリの確認
