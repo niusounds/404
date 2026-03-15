@@ -7,16 +7,34 @@ import os
 import sys
 
 # 設定
-API_URL = "http://localhost:1234/api/v1/chat"
-MODEL = "google/gemma-3n-e4b"
-SYSTEM_PROMPT = "あなたはプロの怪談師です。様々なジャンルの怪談を考え、テーマを一つ決め、怖い話を創作して語ってください。なるべく長く文章を書いてください。文章の冒頭に短いタイトルを一行書き、その後に本文を続けてください。"
+API_BASE_URL = "http://localhost:1234/v1"
+API_URL = f"{API_BASE_URL}/chat/completions"
+SYSTEM_PROMPT = "あなたはプロの怪談師です。様々なジャンルの怪談を考え、テーマを一つ決め、怖い話を創作して語ってください。なるべく長く文章を書いてください。"
 INPUT_TEXT = "今日の話"
 
+def get_current_model():
+    """現在ロードされているモデルを取得する"""
+    try:
+        req = urllib.request.Request(f"{API_BASE_URL}/models")
+        with urllib.request.urlopen(req) as response:
+            res_data = json.loads(response.read().decode("utf-8"))
+            if "data" in res_data and len(res_data["data"]) > 0:
+                # 最初のモデルを返す
+                return res_data["data"][0]["id"]
+    except Exception as e:
+        print(f"Error fetching models: {e}")
+    return "google/gemma-3n-e4b" # デフォルト
+
 def generate_story():
+    model = get_current_model()
+    print(f"Using model for story: {model}")
+    
     payload = {
-        "model": MODEL,
-        "system_prompt": SYSTEM_PROMPT,
-        "input": INPUT_TEXT
+        "model": model,
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": INPUT_TEXT}
+        ]
     }
     
     headers = {"Content-Type": "application/json"}
@@ -25,8 +43,6 @@ def generate_story():
     try:
         with urllib.request.urlopen(req) as response:
             res_data = json.loads(response.read().decode("utf-8"))
-            
-            # レスポンス形式の推測（JSONパース）
             if "choices" in res_data:
                 return res_data["choices"][0]["message"]["content"]
             elif "output" in res_data and isinstance(res_data["output"], list) and len(res_data["output"]) > 0:
@@ -41,7 +57,41 @@ def generate_story():
         print(f"Error connecting to API: {e}")
         sys.exit(1)
 
+def get_title_from_story(story_content):
+    """本文からタイトルを生成する"""
+    target_model = "google/gemma-3n-e4b"
+    print(f"Generating title using {target_model}...")
+    payload = {
+        "model": target_model,
+        "messages": [
+            {"role": "system", "content": "与えられた怪談の本文を読み、その話にふさわしい、読者の興味を引く短いタイトルを一つだけ考えて出力してください。余計な解説や装飾は不要です。"},
+            {"role": "user", "content": story_content}
+        ]
+    }
+    
+    headers = {"Content-Type": "application/json"}
+    req = urllib.request.Request(API_URL, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
+    
+    try:
+        with urllib.request.urlopen(req) as response:
+            res_data = json.loads(response.read().decode("utf-8"))
+            if "choices" in res_data:
+                title = res_data["choices"][0]["message"]["content"]
+            elif "content" in res_data:
+                title = res_data["content"]
+            else:
+                title = "無題の怪談"
+            
+            # クリーニング（改行や引用符の除去）
+            title = title.strip().replace("\n", "").replace('"', '').replace('「', '').replace('」', '')
+            return title
+    except:
+        return "無題の怪談"
+
 def clean_content(content):
+    # <think>...</think> タグとその内容を削除
+    content = re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL)
+    
     # 文頭の全角スペースを削除
     content = content.replace("　", "")
     
@@ -51,12 +101,15 @@ def clean_content(content):
     return content.strip()
 
 def get_slug(title):
-    # タイトルから英単語のスラッグを生成するために再度APIを呼び出す（オプション）
-    # 面倒な場合は単に timestamp を返しても良い
+    # タイトルから英単語のスラッグを生成するために再度APIを呼び出す
+    # スラッグ生成は精度の高い特定のモデルで実行する
+    target_model = "google/gemma-3n-e4b"
     payload = {
-        "model": MODEL,
-        "system_prompt": "与えられた日本語のタイトルを元に、Jekyllのファイル名に使用する英語のスラッグ（小文字、英単語をハイフンで繋いだもの）のみを出力してください。余計な解説は不要です。例：七分早い時計 -> seven-minute-watch",
-        "input": title
+        "model": target_model,
+        "messages": [
+            {"role": "system", "content": "与えられた日本語のタイトルを元に、Jekyllのファイル名に使用する英語のスラッグ（小文字、英単語をハイフンで繋いだもの）のみを出力してください。余計な解説は不要です。例：七分早い時計 -> seven-minute-watch"},
+            {"role": "user", "content": title}
+        ]
     }
     
     headers = {"Content-Type": "application/json"}
@@ -85,23 +138,11 @@ def get_slug(title):
         return "school-horror-" + datetime.now().strftime("%H%M%S")
 
 def parse_and_save(content):
-    lines = content.split("\n")
-    title = "無題の怪談"
-    body = content
+    # 本文からタイトルを生成する
+    title = get_title_from_story(content)
+    print(f"Generated title: {title}")
     
-    if lines:
-        # 最初の数行からタイトルを探す
-        for i in range(min(5, len(lines))):
-            line = lines[i].strip()
-            if not line: continue
-            
-            cleaned = re.sub(r'^[#*【(（\s]*|[#*】)）\s]*$', '', line)
-            cleaned = re.sub(r'^(タイトル|Title)[:：]\s*', '', cleaned)
-            
-            if 2 <= len(cleaned) < 40:
-                title = cleaned
-                body = "\n".join(lines[i+1:]).strip()
-                break
+    body = content.strip()
     
     # 今日の日付
     today = datetime.now().strftime("%Y-%m-%d")
@@ -113,7 +154,8 @@ def parse_and_save(content):
     filepath = os.path.join("_posts", filename)
     
     # クレジット
-    credit = f"\n\n---\nWritten by {MODEL}"
+    model = get_current_model()
+    credit = f"\n\n---\nWritten by {model}"
     
     # プロンプト情報の追記
     prompt_info = f"""
@@ -147,8 +189,11 @@ title: {title}
     return filepath
 
 if __name__ == "__main__":
-    print(f"Generating story using {MODEL}...")
+    print("Generating story...")
     raw_content = generate_story()
-    cleaned_content = clean_content(raw_content)
-    path = parse_and_save(cleaned_content)
+    
+    # 最初に <think> タグなどを除去してクリーンにする
+    cleaned = clean_content(raw_content)
+    
+    path = parse_and_save(cleaned)
     print(f"Success! Saved to {path}")
