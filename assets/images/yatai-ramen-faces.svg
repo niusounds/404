@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <radialGradient id="bowlGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#c88030" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="steamBlur">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+    <filter id="faceBlur">
+      <feGaussianBlur stdDeviation="1.8"/>
+    </filter>
+    <clipPath id="bowlClip">
+      <ellipse cx="300" cy="300" rx="160" ry="50"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="500" fill="#060408"/>
+
+  <!-- Table surface -->
+  <rect x="0" y="350" width="600" height="150" fill="#100d08"/>
+  <line x1="0" y1="350" x2="600" y2="350" stroke="#2a1e10" stroke-width="2"/>
+
+  <!-- Bowl shadow on table -->
+  <ellipse cx="300" cy="380" rx="175" ry="30" fill="#000" opacity="0.5"/>
+
+  <!-- Bowl outer rim -->
+  <ellipse cx="300" cy="320" rx="175" ry="55" fill="#1e1408" stroke="#3a2810" stroke-width="3"/>
+  <!-- Bowl body -->
+  <path d="M125 320 Q130 400 300 410 Q470 400 475 320 Z" fill="#14100a"/>
+  <!-- Bowl inner liquid surface -->
+  <ellipse cx="300" cy="310" rx="160" ry="48" fill="#1a0e06"/>
+  <!-- Broth surface shimmer -->
+  <ellipse cx="300" cy="310" rx="155" ry="44" fill="#2a1808" opacity="0.8"/>
+  <ellipse cx="300" cy="308" rx="140" ry="40" fill="url(#bowlGlow)" opacity="0.6"/>
+
+  <!-- Noodles -->
+  <g opacity="0.6" clip-path="url(#bowlClip)">
+    <path d="M200 315 Q240 305 280 318 Q320 330 360 318 Q400 306 440 315" stroke="#c8a860" stroke-width="3" fill="none"/>
+    <path d="M190 325 Q230 315 265 328 Q300 340 340 325 Q375 312 420 322" stroke="#c8a860" stroke-width="2.5" fill="none"/>
+    <path d="M210 335 Q250 322 285 338 Q320 352 355 336 Q395 320 430 330" stroke="#c8a860" stroke-width="2" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- Dark surface ripples -->
+  <ellipse cx="300" cy="308" rx="60" ry="18" fill="none" stroke="#3a2210" stroke-width="1" opacity="0.4"/>
+  <ellipse cx="300" cy="308" rx="100" ry="30" fill="none" stroke="#3a2210" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Steam columns rising -->
+  <g filter="url(#steamBlur)">
+    <!-- Steam 1 -->
+    <path d="M230 290 Q220 260 232 235 Q244 210 235 185 Q226 162 238 140" stroke="#b09070" stroke-width="8" fill="none" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.2;0.5;0.3;0.4" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="d" values="M230 290 Q220 260 232 235 Q244 210 235 185 Q226 162 238 140;M230 290 Q240 260 228 235 Q216 210 225 185 Q234 162 222 140;M230 290 Q220 260 232 235 Q244 210 235 185 Q226 162 238 140" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <!-- Steam 2 -->
+    <path d="M300 282 Q290 252 302 227 Q314 202 305 177 Q296 154 308 132" stroke="#b09070" stroke-width="10" fill="none" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.3;0.1;0.45;0.5" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="d" values="M300 282 Q290 252 302 227 Q314 202 305 177 Q296 154 308 132;M300 282 Q310 252 298 227 Q286 202 295 177 Q304 154 292 132;M300 282 Q290 252 302 227 Q314 202 305 177 Q296 154 308 132" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- Steam 3 -->
+    <path d="M370 290 Q380 258 368 233 Q356 208 365 183 Q374 160 362 138" stroke="#b09070" stroke-width="8" fill="none" opacity="0.35">
+      <animate attributeName="opacity" values="0.35;0.5;0.25;0.4;0.35" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Ghostly faces in the steam -->
+  <!-- Face 1 - faint, dissolved -->
+  <g filter="url(#faceBlur)" opacity="0.25">
+    <animate attributeName="opacity" values="0.25;0.1;0.3;0.15;0.25" dur="5s" repeatCount="indefinite"/>
+    <ellipse cx="235" cy="200" rx="22" ry="28" fill="#c0a880" opacity="0.4"/>
+    <!-- eyes -->
+    <ellipse cx="227" cy="196" rx="4" ry="5" fill="#1a1008" opacity="0.7"/>
+    <ellipse cx="243" cy="196" rx="4" ry="5" fill="#1a1008" opacity="0.7"/>
+    <!-- mouth - open -->
+    <path d="M228 210 Q235 216 242 210" stroke="#1a1008" stroke-width="2" fill="none" opacity="0.7"/>
+  </g>
+
+  <!-- Face 2 - clearer, haunting -->
+  <g filter="url(#faceBlur)" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.15;0.05;0.28;0.3" dur="4s" repeatCount="indefinite"/>
+    <ellipse cx="300" cy="175" rx="28" ry="34" fill="#c0a880" opacity="0.35"/>
+    <!-- eyes - hollow -->
+    <ellipse cx="290" cy="170" rx="5" ry="6" fill="#0a0806" opacity="0.9"/>
+    <ellipse cx="310" cy="170" rx="5" ry="6" fill="#0a0806" opacity="0.9"/>
+    <!-- pupils as dark voids -->
+    <ellipse cx="290" cy="170" rx="3" ry="4" fill="#000" opacity="0.8"/>
+    <ellipse cx="310" cy="170" rx="3" ry="4" fill="#000" opacity="0.8"/>
+    <!-- mouth open in silent scream -->
+    <ellipse cx="300" cy="188" rx="8" ry="10" fill="#0a0806" opacity="0.8"/>
+  </g>
+
+  <!-- Face 3 - barely visible, side profile -->
+  <g filter="url(#faceBlur)" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.35;0.1;0.22;0.2" dur="6s" repeatCount="indefinite"/>
+    <ellipse cx="368" cy="195" rx="20" ry="26" fill="#c0a880" opacity="0.3"/>
+    <ellipse cx="373" cy="190" rx="3" ry="4" fill="#0a0806" opacity="0.8"/>
+    <path d="M365 205 Q368 210 372 206" stroke="#0a0806" stroke-width="1.5" fill="none" opacity="0.7"/>
+  </g>
+
+  <!-- Chopsticks resting on bowl -->
+  <rect x="240" y="345" width="120" height="6" fill="#5a3818" rx="3" transform="rotate(-15, 300, 348)"/>
+  <rect x="250" y="340" width="120" height="5" fill="#6a4828" rx="2.5" transform="rotate(-12, 310, 342)"/>
+
+  <!-- Ambient glow from broth -->
+  <ellipse cx="300" cy="300" rx="200" ry="150" fill="#c87820" opacity="0.04" filter="url(#steamBlur)"/>
+</svg>
