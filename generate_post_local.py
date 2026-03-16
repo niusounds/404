@@ -44,15 +44,15 @@ def generate_story():
         with urllib.request.urlopen(req) as response:
             res_data = json.loads(response.read().decode("utf-8"))
             if "choices" in res_data:
-                return res_data["choices"][0]["message"]["content"]
+                return res_data["choices"][0]["message"]["content"], model
             elif "output" in res_data and isinstance(res_data["output"], list) and len(res_data["output"]) > 0:
-                return res_data["output"][0]["content"]
+                return res_data["output"][0]["content"], model
             elif "content" in res_data:
-                return res_data["content"]
+                return res_data["content"], model
             elif "response" in res_data:
-                return res_data["response"]
+                return res_data["response"], model
             else:
-                return str(res_data)
+                return str(res_data), model
     except urllib.error.URLError as e:
         print(f"Error connecting to API: {e}")
         sys.exit(1)
@@ -137,7 +137,7 @@ def get_slug(title):
     except:
         return "school-horror-" + datetime.now().strftime("%H%M%S")
 
-def parse_and_save(content):
+def parse_and_save(content, model):
     # 本文からタイトルを生成する
     title = get_title_from_story(content)
     print(f"Generated title: {title}")
@@ -154,7 +154,6 @@ def parse_and_save(content):
     filepath = os.path.join("_posts", filename)
     
     # クレジット
-    model = get_current_model()
     credit = f"\n\n---\nWritten by {model}"
     
     # プロンプト情報の追記
@@ -190,10 +189,10 @@ title: {title}
 
 if __name__ == "__main__":
     print("Generating story...")
-    raw_content = generate_story()
+    raw_content, story_model = generate_story()
     
     # 最初に <think> タグなどを除去してクリーンにする
     cleaned = clean_content(raw_content)
     
-    path = parse_and_save(cleaned)
+    path = parse_and_save(cleaned, story_model)
     print(f"Success! Saved to {path}")
