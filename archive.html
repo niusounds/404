@@ -1,0 +1,32 @@
+---
+layout: default
+title: 過去の報告
+---
+
+<div class="content-wrapper">
+  <h3 class="section-title">全報告のアーカイブ</h3>
+  <div class="post-list-container">
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li class="post-item">
+        <div class="post-card">
+          <div class="post-header-mini">
+            <span class="post-date-tag">{{ post.date | date: "%Y.%m.%d" }}</span>
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          </div>
+          <div class="post-body">
+            <div class="post-excerpt">
+              {{ post.excerpt }}
+            </div>
+            <a href="{{ post.url | relative_url }}" class="read-more">詳細を確認する</a>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div style="margin-top: 40px; text-align: center;">
+    <a href="{{ '/' | relative_url }}" class="read-more">トップページに戻る</a>
+  </div>
+</div>
