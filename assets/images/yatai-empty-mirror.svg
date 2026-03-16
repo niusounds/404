@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <radialGradient id="mirrorGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a3060" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#050408" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <clipPath id="mirrorClip">
+      <ellipse cx="300" cy="230" rx="120" ry="155"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background - dark bathroom -->
+  <rect width="600" height="500" fill="#06050c"/>
+
+  <!-- Bathroom tiles suggestion -->
+  <g opacity="0.08" stroke="#333355" stroke-width="0.5" fill="none">
+    <line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="400" x2="600" y2="400"/>
+    <line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="500" y1="0" x2="500" y2="500"/>
+  </g>
+
+  <!-- Mirror frame (oval) -->
+  <ellipse cx="300" cy="230" rx="130" ry="165" fill="#1a1828" stroke="#2a2640" stroke-width="3"/>
+  <ellipse cx="300" cy="230" rx="127" ry="162" fill="none" stroke="#3a3850" stroke-width="1.5"/>
+
+  <!-- Mirror surface - should show reflection, but it's empty -->
+  <ellipse cx="300" cy="230" rx="120" ry="155" fill="#0a0918" />
+  <!-- Empty mirror - no reflection, just darkness -->
+  <ellipse cx="300" cy="230" rx="120" ry="155" fill="url(#mirrorGlow)"/>
+
+  <!-- Mirror glass texture / subtle reflection of room only (no person) -->
+  <g clip-path="url(#mirrorClip)" opacity="0.15">
+    <!-- Reflected ceiling light without the person -->
+    <ellipse cx="300" cy="90" rx="40" ry="15" fill="#aaaa88" filter="url(#softBlur)"/>
+    <!-- Reflected tiles -->
+    <g stroke="#333355" stroke-width="0.3" fill="none" opacity="0.4">
+      <line x1="180" y1="150" x2="420" y2="150"/>
+      <line x1="180" y1="200" x2="420" y2="200"/>
+      <line x1="200" y1="100" x2="200" y2="380"/>
+      <line x1="300" y1="100" x2="300" y2="380"/>
+      <line x1="400" y1="100" x2="400" y2="380"/>
+    </g>
+  </g>
+
+  <!-- The standing person in FRONT of the mirror (in reality, not reflected) -->
+  <!-- Person's body - visible from behind -->
+  <g>
+    <!-- Head -->
+    <ellipse cx="300" cy="360" rx="22" ry="25" fill="#141018"/>
+    <!-- Body/torso -->
+    <rect x="278" y="383" width="44" height="65" fill="#141018" rx="4"/>
+    <!-- Arms -->
+    <line x1="278" y1="395" x2="255" y2="430" stroke="#141018" stroke-width="12" stroke-linecap="round"/>
+    <line x1="322" y1="395" x2="345" y2="430" stroke="#141018" stroke-width="12" stroke-linecap="round"/>
+    <!-- Hands pressed against mirror edge (reaching) -->
+    <ellipse cx="255" cy="434" rx="8" ry="6" fill="#141018"/>
+    <ellipse cx="345" cy="434" rx="8" ry="6" fill="#141018"/>
+  </g>
+
+  <!-- Mirror frame glow - unsettling cold blue -->
+  <ellipse cx="300" cy="230" rx="125" ry="160" fill="none" stroke="#1e2050" stroke-width="6" opacity="0.5" filter="url(#softBlur)">
+    <animate attributeName="opacity" values="0.5;0.2;0.6;0.3;0.5" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Empty space where reflection SHOULD be (highlighted absence) -->
+  <!-- Just a very faint outline of where a head would appear -->
+  <ellipse cx="300" cy="185" rx="20" ry="22" fill="none" stroke="#1a1840" stroke-width="1" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.0;0.3;0.0;0.4" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Floor -->
+  <rect x="0" y="450" width="600" height="50" fill="#080710"/>
+  <line x1="0" y1="450" x2="600" y2="450" stroke="#1a1828" stroke-width="1.5"/>
+
+  <!-- Mirror stand / base -->
+  <rect x="270" y="390" width="60" height="10" fill="#1a1828" rx="3"/>
+  <rect x="280" y="398" width="40" height="55" fill="#141220" rx="2"/>
+  <rect x="255" y="448" width="90" height="8" fill="#1a1828" rx="4"/>
+
+  <!-- Ambient dark light from mirror -->
+  <ellipse cx="300" cy="230" rx="180" ry="200" fill="#10102a" opacity="0.1" filter="url(#glow)"/>
+</svg>
