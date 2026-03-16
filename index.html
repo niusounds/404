@@ -23,6 +23,9 @@ layout: default
         <div class="post-card">
           <div class="post-header-mini">
             <span class="post-date-tag">{{ post.date | date: "%Y.%m.%d" }}</span>
+            {% if post.category %}
+            <span class="post-category-tag" style="background: #400; color: #fff; padding: 2px 8px; font-size: 0.8rem; margin-left: 10px; border-radius: 4px;">{{ post.category }}</span>
+            {% endif %}
             <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           </div>
           <div class="post-body">
