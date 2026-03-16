@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="light-end" cx="50%" cy="85%" r="20%">
+      <stop offset="0%" stop-color="#c0b0a8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="floor-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111010"/>
+      <stop offset="100%" stop-color="#050404"/>
+    </linearGradient>
+    <filter id="flicker">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="400" fill="#06060a"/>
+
+  <!-- hallway floor converging lines -->
+  <polygon points="0,400 400,400 300,280 100,280" fill="url(#floor-grad)"/>
+  <!-- floor center stripe -->
+  <line x1="200" y1="320" x2="200" y2="400" stroke="#1a1818" stroke-width="1" opacity="0.5"/>
+
+  <!-- left wall -->
+  <polygon points="0,0 0,400 100,280 100,0" fill="#0c0b0e"/>
+  <!-- right wall -->
+  <polygon points="400,0 400,400 300,280 300,0" fill="#0a0a0c"/>
+  <!-- ceiling -->
+  <polygon points="0,0 400,0 300,280 100,280" fill="#0e0d10"/>
+
+  <!-- ceiling light fixtures (left side) -->
+  <g opacity="0.4">
+    <rect x="95" y="15" width="8" height="4" fill="#888" rx="1"/>
+    <line x1="99" y1="19" x2="99" y2="45" stroke="#666" stroke-width="0.5"/>
+    <ellipse cx="99" cy="48" rx="6" ry="2" fill="#998" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.05;0.3;0.2;0.3" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  <!-- ceiling light fixtures (right side) -->
+  <g opacity="0.4">
+    <rect x="297" y="15" width="8" height="4" fill="#888" rx="1"/>
+    <line x1="301" y1="19" x2="301" y2="45" stroke="#666" stroke-width="0.5"/>
+    <ellipse cx="301" cy="48" rx="6" ry="2" fill="#998" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.3;0.05;0.3;0.18;0.3" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- wall panels (left) -->
+  <line x1="0" y1="80" x2="100" y2="130" stroke="#181618" stroke-width="1"/>
+  <line x1="0" y1="200" x2="100" y2="210" stroke="#181618" stroke-width="1"/>
+  <!-- wall panels (right) -->
+  <line x1="400" y1="80" x2="300" y2="130" stroke="#181618" stroke-width="1"/>
+  <line x1="400" y1="200" x2="300" y2="210" stroke="#181618" stroke-width="1"/>
+
+  <!-- deep end glow -->
+  <ellipse cx="200" cy="292" rx="35" ry="18" fill="url(#light-end)">
+    <animate attributeName="rx" values="35;30;35;38;35" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.7;1;0.85;1" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- silhouette of old woman at end of hallway -->
+  <g transform="translate(186, 262)">
+    <!-- hunched body -->
+    <ellipse cx="14" cy="12" rx="9" ry="12" fill="#080608"/>
+    <!-- head -->
+    <circle cx="14" cy="-3" r="6" fill="#080608"/>
+    <!-- hair bun on top -->
+    <ellipse cx="14" cy="-8" rx="4" ry="3" fill="#080608"/>
+    <!-- stooped posture emphasis -->
+    <path d="M5 8 Q14 4 23 8" fill="#080608"/>
+    <!-- cane/arm hint -->
+    <line x1="22" y1="15" x2="26" y2="26" stroke="#080608" stroke-width="2"/>
+  </g>
+
+  <!-- subtle fog/haze in middle distance -->
+  <rect x="80" y="260" width="240" height="40" fill="#1a1620" opacity="0.12" filter="url(#flicker)"/>
+
+  <!-- vignette -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="0%" stop-color="#06060a" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#06060a" stop-opacity="0.8"/>
+  </radialGradient>
+  <rect width="400" height="400" fill="url(#vignette)"/>
+</svg>

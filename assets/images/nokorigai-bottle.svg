@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#c8b8d8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur-soft">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur-heavy">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="400" fill="#0a0808"/>
+
+  <!-- glow beneath bottle -->
+  <ellipse cx="200" cy="310" rx="55" ry="12" fill="#c8b8d8" opacity="0.12" filter="url(#blur-heavy)"/>
+
+  <!-- mist / vapor trails -->
+  <g opacity="0.18" filter="url(#blur-soft)">
+    <path d="M195 170 Q188 140 197 115 Q205 92 193 70" stroke="#ddd0ee" stroke-width="3" fill="none" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.18;0.06;0.18" dur="3.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M205 165 Q215 138 207 112 Q200 88 212 62" stroke="#ddd0ee" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.1;0.22;0.1" dur="4.1s" repeatCount="indefinite"/>
+    </path>
+    <path d="M200 168 Q183 145 190 118 Q197 94 185 68" stroke="#c8b8d8" stroke-width="2" fill="none" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.14;0.04;0.14" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M203 172 Q218 148 210 124 Q203 100 218 76" stroke="#c8b8d8" stroke-width="2" fill="none" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.08;0.2;0.08" dur="3.8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- bottle body -->
+  <rect x="167" y="210" width="66" height="100" rx="8" fill="#1a1520" stroke="#7a6888" stroke-width="1.5"/>
+  <!-- bottle shoulder curve -->
+  <path d="M167 220 Q167 210 175 205 L185 195 L215 195 L225 205 Q233 210 233 220" fill="#1a1520" stroke="#7a6888" stroke-width="1.5"/>
+  <!-- bottle neck -->
+  <rect x="189" y="178" width="22" height="20" rx="3" fill="#1a1520" stroke="#7a6888" stroke-width="1.5"/>
+  <!-- bottle cap -->
+  <rect x="184" y="168" width="32" height="13" rx="4" fill="#2a1f30" stroke="#9a88a8" stroke-width="1.5"/>
+
+  <!-- liquid inside bottle (faint) -->
+  <rect x="170" y="248" width="60" height="59" rx="5" fill="#3a2040" opacity="0.5"/>
+
+  <!-- label on bottle -->
+  <rect x="172" y="225" width="56" height="35" rx="3" fill="#2a1a2e" stroke="#5a4868" stroke-width="0.8" opacity="0.7"/>
+  <line x1="178" y1="233" x2="222" y2="233" stroke="#7a6888" stroke-width="0.5" opacity="0.5"/>
+  <line x1="178" y1="239" x2="222" y2="239" stroke="#7a6888" stroke-width="0.5" opacity="0.5"/>
+  <line x1="178" y1="245" x2="218" y2="245" stroke="#7a6888" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- subtle highlight on bottle glass -->
+  <path d="M175 218 Q173 240 174 270" stroke="#ffffff" stroke-width="1" opacity="0.08" fill="none" stroke-linecap="round"/>
+
+  <!-- ambient glow -->
+  <ellipse cx="200" cy="250" rx="80" ry="90" fill="url(#glow)"/>
+</svg>
