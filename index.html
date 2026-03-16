@@ -15,14 +15,17 @@ layout: default
 </section>
 
 <div class="content-wrapper">
-  <h3 class="section-title">最近の報告件数</h3>
+  <h3 class="section-title">最近の報告</h3>
   <div class="post-list-container">
     <ul class="post-list">
-      {% for post in site.posts %}
+      {% for post in site.posts limit:5 %}
       <li class="post-item">
         <div class="post-card">
           <div class="post-header-mini">
             <span class="post-date-tag">{{ post.date | date: "%Y.%m.%d" }}</span>
+            {% if post.category %}
+            <span class="post-category-tag" style="background: #400; color: #fff; padding: 2px 8px; font-size: 0.8rem; margin-left: 10px; border-radius: 4px;">{{ post.category }}</span>
+            {% endif %}
             <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           </div>
           <div class="post-body">
@@ -35,6 +38,11 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+  </div>
+
+  <div style="margin-top: 20px; text-align: center;">
+    <p style="color: #666; font-size: 0.9rem;">これ以前の報告はアーカイブに保管されています</p>
+    <a href="{{ '/archive.html' | relative_url }}" class="read-more" style="display: inline-block; padding: 10px 30px; border: 1px solid #400;">全ての報告を表示する</a>
   </div>
 
   <div style="margin-top: 60px; text-align: center;">
