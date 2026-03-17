@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#040303"/>
+    </linearGradient>
+    <linearGradient id="shelfGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1a0a"/>
+      <stop offset="100%" stop-color="#150d05"/>
+    </linearGradient>
+    <filter id="candleGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="photoFilter">
+      <feColorMatrix type="saturate" values="0.3"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="0.7" intercept="0.1"/>
+        <feFuncG type="linear" slope="0.65" intercept="0.08"/>
+        <feFuncB type="linear" slope="0.55" intercept="0.05"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="oldPhoto">
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="0.6" intercept="0.15"/>
+        <feFuncG type="linear" slope="0.55" intercept="0.12"/>
+        <feFuncB type="linear" slope="0.45" intercept="0.08"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Shelf -->
+  <rect x="60" y="300" width="680" height="16" fill="url(#shelfGrad)" rx="2"/>
+  <rect x="60" y="314" width="680" height="6" fill="#0a0600" opacity="0.7"/>
+
+  <!-- Candle light glow on wall -->
+  <ellipse cx="400" cy="280" rx="300" ry="200" fill="#6b3a10" opacity="0.07" filter="url(#candleGlow)">
+    <animate attributeName="opacity" values="0.07;0.12;0.07" dur="2.3s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Photo frame 1 (leftmost, oldest - monochrome) -->
+  <g transform="translate(80, 190)">
+    <rect x="0" y="0" width="100" height="110" fill="#1a1208" stroke="#3a2808" stroke-width="3" rx="2"/>
+    <rect x="8" y="8" width="84" height="94" fill="#2a2015" filter="url(#oldPhoto)"/>
+    <!-- Silhouette of woman in old photo - facing away -->
+    <rect x="8" y="8" width="84" height="94" fill="#c8b89a" opacity="0.15"/>
+    <!-- Figure silhouette -->
+    <ellipse cx="50" cy="38" rx="9" ry="10" fill="#1a1208"/>
+    <path d="M 35,55 Q 50,48 65,55 L 68,95 L 32,95 Z" fill="#1a1208"/>
+    <path d="M 35,58 Q 28,70 25,90" stroke="#1a1208" stroke-width="6" fill="none"/>
+    <path d="M 65,58 Q 72,70 75,90" stroke="#1a1208" stroke-width="6" fill="none"/>
+    <!-- Age spots/scratches on photo -->
+    <line x1="10" y1="20" x2="25" y2="18" stroke="#1a1208" stroke-width="0.5" opacity="0.4"/>
+    <line x1="70" y1="85" x2="88" y2="90" stroke="#1a1208" stroke-width="0.5" opacity="0.4"/>
+    <!-- Year text -->
+    <text x="50" y="106" text-anchor="middle" fill="#8a7a60" font-family="serif" font-size="7" opacity="0.7">昭和38年</text>
+  </g>
+
+  <!-- Photo frame 2 (middle-left, semi-old) -->
+  <g transform="translate(220, 185)">
+    <rect x="0" y="0" width="110" height="115" fill="#1e1510" stroke="#3d2c15" stroke-width="3" rx="2"/>
+    <rect x="8" y="8" width="94" height="99" fill="#2d2418" filter="url(#oldPhoto)"/>
+    <rect x="8" y="8" width="94" height="99" fill="#d4c8a8" opacity="0.12"/>
+    <!-- Figure silhouette - same pose -->
+    <ellipse cx="55" cy="40" rx="10" ry="11" fill="#1e1510"/>
+    <path d="M 38,58 Q 55,50 72,58 L 76,100 L 34,100 Z" fill="#1e1510"/>
+    <path d="M 38,62 Q 30,75 27,96" stroke="#1e1510" stroke-width="7" fill="none"/>
+    <path d="M 72,62 Q 80,75 83,96" stroke="#1e1510" stroke-width="7" fill="none"/>
+    <text x="55" y="112" text-anchor="middle" fill="#9a8a6a" font-family="serif" font-size="7.5" opacity="0.7">昭和61年</text>
+  </g>
+
+  <!-- Photo frame 3 (center, color but faded) -->
+  <g transform="translate(370, 178)">
+    <rect x="0" y="0" width="120" height="122" fill="#221810" stroke="#4a3218" stroke-width="3" rx="2"/>
+    <rect x="8" y="8" width="104" height="106" fill="#352818" filter="url(#photoFilter)"/>
+    <rect x="8" y="8" width="104" height="106" fill="#ddd0a8" opacity="0.1"/>
+    <!-- Figure silhouette - same pose, slightly more detailed -->
+    <ellipse cx="60" cy="42" rx="11" ry="12" fill="#22180a"/>
+    <path d="M 42,62 Q 60,53 78,62 L 83,107 L 37,107 Z" fill="#221808"/>
+    <path d="M 42,67 Q 33,82 30,104" stroke="#221808" stroke-width="8" fill="none"/>
+    <path d="M 78,67 Q 87,82 90,104" stroke="#221808" stroke-width="8" fill="none"/>
+    <text x="60" y="118" text-anchor="middle" fill="#aa9870" font-family="serif" font-size="8" opacity="0.75">2003年11月</text>
+  </g>
+
+  <!-- Photo frame 4 (right, current era - slightly glowing) -->
+  <g transform="translate(528, 175)">
+    <rect x="0" y="0" width="115" height="125" fill="#281e14" stroke="#5a4020" stroke-width="3" rx="2">
+      <animate attributeName="stroke" values="#5a4020;#8a6030;#5a4020" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="8" y="8" width="99" height="109" fill="#3a2c18"/>
+    <!-- Figure silhouette - same pose, clearer -->
+    <ellipse cx="57" cy="44" rx="11" ry="12" fill="#1e1408"/>
+    <path d="M 40,64 Q 57,55 74,64 L 79,110 L 35,110 Z" fill="#1e1408"/>
+    <path d="M 40,69 Q 31,84 28,107" stroke="#1e1408" stroke-width="8" fill="none"/>
+    <path d="M 74,69 Q 83,84 86,107" stroke="#1e1408" stroke-width="8" fill="none"/>
+    <!-- Subtle red glow around this photo -->
+    <rect x="0" y="0" width="115" height="125" fill="none" stroke="#8b2020" stroke-width="1" opacity="0.4" rx="2">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="57" y="121" text-anchor="middle" fill="#c09050" font-family="serif" font-size="8.5" opacity="0.85">2026年——</text>
+  </g>
+
+  <!-- Empty frame (5th - blank, waiting) -->
+  <g transform="translate(662, 200)">
+    <rect x="0" y="0" width="90" height="100" fill="#0e0a06" stroke="#2a2010" stroke-width="2" rx="2" stroke-dasharray="4,3">
+      <animate attributeName="stroke-dashoffset" values="0;14" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Empty/question mark -->
+    <text x="45" y="58" text-anchor="middle" fill="#3a2c18" font-family="serif" font-size="32" opacity="0.4">？</text>
+  </g>
+
+  <!-- Incense smoke wisps -->
+  <path d="M 400,290 Q 405,270 398,250 Q 393,230 400,210" stroke="#887060" stroke-width="1.5" fill="none" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.2;0.3" dur="4s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;2,-5;-1,-10;0,-15" dur="4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 395,290 Q 390,265 396,245 Q 402,225 394,205" stroke="#887060" stroke-width="1" fill="none" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.5;0.15;0.2" dur="5s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;-2,-5;1,-10;0,-15" dur="5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Incense stick -->
+  <rect x="397" y="298" width="2" height="18" fill="#3a2a15" rx="1"/>
+  <circle cx="398" cy="296" r="2" fill="#ff6020" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.9;0.4;0.6" dur="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="2;2.5;1.8;2" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Floor shadow -->
+  <rect x="0" y="320" width="800" height="130" fill="#030202"/>
+  <ellipse cx="400" cy="325" rx="340" ry="10" fill="#000000" opacity="0.8"/>
+</svg>

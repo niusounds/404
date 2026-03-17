@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06050a"/>
+      <stop offset="100%" stop-color="#020208"/>
+    </linearGradient>
+    <linearGradient id="shojiPaper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e0c8"/>
+      <stop offset="100%" stop-color="#d4c8a8"/>
+    </linearGradient>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="shadowBlur">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="glowLight">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark room background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Shoji screen frame - left panel -->
+  <rect x="50" y="40" width="320" height="430" fill="#1e1408" rx="2"/>
+  <!-- Shoji paper left panel -->
+  <rect x="60" y="50" width="300" height="410" fill="url(#shojiPaper)" opacity="0.15"/>
+
+  <!-- Shoji grid lines - left panel -->
+  <!-- Vertical lines -->
+  <line x1="160" y1="50" x2="160" y2="460" stroke="#1e1408" stroke-width="3"/>
+  <line x1="260" y1="50" x2="260" y2="460" stroke="#1e1408" stroke-width="3"/>
+  <!-- Horizontal lines -->
+  <line x1="60" y1="130" x2="360" y2="130" stroke="#1e1408" stroke-width="2"/>
+  <line x1="60" y1="210" x2="360" y2="210" stroke="#1e1408" stroke-width="2"/>
+  <line x1="60" y1="290" x2="360" y2="290" stroke="#1e1408" stroke-width="2"/>
+  <line x1="60" y1="370" x2="360" y2="370" stroke="#1e1408" stroke-width="2"/>
+
+  <!-- Shoji screen frame - right panel -->
+  <rect x="430" y="40" width="320" height="430" fill="#1e1408" rx="2"/>
+  <!-- Shoji paper right panel -->
+  <rect x="440" y="50" width="300" height="410" fill="url(#shojiPaper)" opacity="0.15"/>
+
+  <!-- Shoji grid lines - right panel -->
+  <line x1="540" y1="50" x2="540" y2="460" stroke="#1e1408" stroke-width="3"/>
+  <line x1="640" y1="50" x2="640" y2="460" stroke="#1e1408" stroke-width="3"/>
+  <line x1="440" y1="130" x2="740" y2="130" stroke="#1e1408" stroke-width="2"/>
+  <line x1="440" y1="210" x2="740" y2="210" stroke="#1e1408" stroke-width="2"/>
+  <line x1="440" y1="290" x2="740" y2="290" stroke="#1e1408" stroke-width="2"/>
+  <line x1="440" y1="370" x2="740" y2="370" stroke="#1e1408" stroke-width="2"/>
+
+  <!-- Gap between panels -->
+  <rect x="370" y="40" width="60" height="430" fill="#0a0808"/>
+
+  <!-- Light from behind shoji (dim candle/lamp light) -->
+  <rect x="60" y="50" width="300" height="410" fill="#c8a870" opacity="0.03">
+    <animate attributeName="opacity" values="0.03;0.07;0.03" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="440" y="50" width="300" height="410" fill="#c8a870" opacity="0.03">
+    <animate attributeName="opacity" values="0.03;0.06;0.04;0.03" dur="3.1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- THE SHADOW - a tall elongated figure silhouette visible through the shoji -->
+  <!-- Shadow is cast on right panel, looming large -->
+  <g filter="url(#shadowBlur)">
+    <!-- Head -->
+    <ellipse cx="590" cy="100" rx="45" ry="52" fill="#0a0808" opacity="0.55">
+      <animate attributeName="opacity" values="0.55;0.75;0.55" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Neck -->
+    <rect x="575" y="148" width="30" height="30" fill="#0a0808" opacity="0.55">
+      <animate attributeName="opacity" values="0.55;0.75;0.55" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Body (unnaturally long) -->
+    <path d="M 530,175 Q 590,165 650,175 L 670,460 L 510,460 Z" fill="#0a0808" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.7;0.5" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <!-- Arms (very long, reaching down past the body) -->
+    <path d="M 538,185 Q 490,260 460,410" stroke="#0a0808" stroke-width="28" fill="none" opacity="0.45" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.45;0.65;0.45" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 642,185 Q 695,260 730,420" stroke="#0a0808" stroke-width="28" fill="none" opacity="0.45" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.45;0.65;0.45" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Shadow slowly grows / approaches (animateTransform) -->
+  <g opacity="0">
+    <animateTransform attributeName="transform" type="scale" values="1;1.04;1" dur="8s" repeatCount="indefinite" additive="sum"/>
+    <animate attributeName="opacity" values="0;0;0" dur="8s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Subtle creak effect: shadow shifts slightly side to side -->
+  <g transform="translate(0,0)">
+    <animateTransform attributeName="transform" type="translate" values="0,0;3,0;0,0;-3,0;0,0" dur="9s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- Floor -->
+  <rect x="0" y="465" width="800" height="35" fill="#050404"/>
+  <rect x="50" y="462" width="320" height="8" fill="#1e1408"/>
+  <rect x="430" y="462" width="320" height="8" fill="#1e1408"/>
+
+  <!-- Ambient darkness vignette -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.85"/>
+  </radialGradient>
+  <rect width="800" height="500" fill="url(#vignette)"/>
+</svg>
