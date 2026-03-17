@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <radialGradient id="sky" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#1a0f2e"/>
+      <stop offset="60%" stop-color="#0a0818"/>
+      <stop offset="100%" stop-color="#030208"/>
+    </radialGradient>
+    <linearGradient id="pathGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d2b1a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1a1008"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="treeglow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- Distant mountains -->
+  <polygon points="0,280 120,180 240,240 360,150 480,210 600,140 720,200 800,160 800,320 0,320" fill="#0e0820" opacity="0.9"/>
+  <polygon points="0,300 80,230 200,270 320,200 440,250 560,190 680,240 800,200 800,340 0,340" fill="#080514" opacity="0.95"/>
+
+  <!-- Path - winding into distance -->
+  <path d="M 340,500 Q 360,420 370,360 Q 385,300 390,260 Q 395,230 392,210 Q 390,195 388,185" 
+        fill="url(#pathGrad)" stroke="#2a1d0e" stroke-width="1" opacity="0.85"/>
+  <path d="M 460,500 Q 430,420 415,360 Q 400,300 395,260 Q 393,230 392,210 Q 391,195 389,185"
+        fill="url(#pathGrad)" stroke="#2a1d0e" stroke-width="1" opacity="0.85"/>
+  <path d="M 340,500 Q 360,420 370,360 Q 385,300 390,260 Q 395,230 392,210 Q 390,195 388,185 L 389,185 Q 391,195 393,210 Q 395,230 395,260 Q 400,300 415,360 Q 430,420 460,500 Z"
+        fill="url(#pathGrad)" opacity="0.7"/>
+
+  <!-- Ground -->
+  <rect x="0" y="360" width="800" height="140" fill="#050310"/>
+  <rect x="0" y="400" width="800" height="100" fill="#030208"/>
+
+  <!-- Tall dark trees left -->
+  <rect x="20" y="200" width="18" height="200" fill="#08050f"/>
+  <polygon points="29,130 5,220 53,220" fill="#0c0818"/>
+  <polygon points="29,160 0,240 58,240" fill="#0a0615"/>
+  <polygon points="29,190 -5,260 63,260" fill="#080513"/>
+
+  <rect x="90" y="220" width="14" height="180" fill="#08050f"/>
+  <polygon points="97,150 76,230 118,230" fill="#0c0818"/>
+  <polygon points="97,180 72,250 122,250" fill="#0a0615"/>
+
+  <rect x="150" y="240" width="12" height="160" fill="#08050f"/>
+  <polygon points="156,170 136,250 176,250" fill="#0c0818"/>
+
+  <rect x="200" y="250" width="10" height="150" fill="#08050f"/>
+  <polygon points="205,185 188,258 222,258" fill="#0c0818"/>
+
+  <!-- Tall dark trees right -->
+  <rect x="760" y="200" width="18" height="200" fill="#08050f"/>
+  <polygon points="769,130 745,220 793,220" fill="#0c0818"/>
+  <polygon points="769,160 742,240 796,240" fill="#0a0615"/>
+  <polygon points="769,190 737,260 801,260" fill="#080513"/>
+
+  <rect x="695" y="220" width="14" height="180" fill="#08050f"/>
+  <polygon points="702,150 681,230 723,230" fill="#0c0818"/>
+  <polygon points="702,180 677,250 727,250" fill="#0a0615"/>
+
+  <rect x="630" y="240" width="12" height="160" fill="#08050f"/>
+  <polygon points="636,170 616,250 656,250" fill="#0c0818"/>
+
+  <rect x="575" y="250" width="10" height="150" fill="#08050f"/>
+  <polygon points="580,185 563,258 597,258" fill="#0c0818"/>
+
+  <!-- Foreground trees -->
+  <rect x="-10" y="300" width="30" height="200" fill="#060410"/>
+  <polygon points="5,200 -25,320 35,320" fill="#0a0616"/>
+  <polygon points="5,240 -30,340 40,340" fill="#080514"/>
+
+  <rect x="780" y="300" width="30" height="200" fill="#060410"/>
+  <polygon points="795,200 765,320 825,320" fill="#0a0616"/>
+  <polygon points="795,240 760,340 830,340" fill="#080514"/>
+
+  <!-- Distant figure on path (very small, barely visible) -->
+  <g filter="url(#glow)" opacity="0.7">
+    <ellipse cx="391" cy="192" rx="3" ry="3" fill="#c8a882"/>
+    <rect x="388" y="195" width="6" height="10" fill="#3a2a1a"/>
+    <line x1="391" y1="205" x2="389" y2="212" stroke="#3a2a1a" stroke-width="1.5"/>
+    <line x1="391" y1="205" x2="393" y2="212" stroke="#3a2a1a" stroke-width="1.5"/>
+    <line x1="391" y1="198" x2="388" y2="203" stroke="#3a2a1a" stroke-width="1.5"/>
+    <line x1="391" y1="198" x2="394" y2="203" stroke="#3a2a1a" stroke-width="1.5"/>
+  </g>
+
+  <!-- Mist/fog along path -->
+  <ellipse cx="391" cy="250" rx="60" ry="12" fill="#9090c0" opacity="0.06">
+    <animate attributeName="opacity" values="0.06;0.12;0.06" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="60;75;60" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="400" cy="320" rx="100" ry="18" fill="#8080a8" opacity="0.08">
+    <animate attributeName="opacity" values="0.08;0.15;0.08" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="100;120;100" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Stars (dim) -->
+  <circle cx="150" cy="50" r="1" fill="#ffffff" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="320" cy="30" r="1" fill="#ffffff" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="550" cy="60" r="1.2" fill="#ffffff" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="40" r="0.8" fill="#ffffff" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3.7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="420" cy="70" r="1" fill="#ffffff" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="80" r="0.8" fill="#ffffff" opacity="0.25">
+    <animate attributeName="opacity" values="0.25;0.5;0.25" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+</svg>
