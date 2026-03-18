@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <radialGradient id="photo-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d8c0c0" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0d0a0a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="photo-blur">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <filter id="haze">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- wall background -->
+  <rect width="400" height="300" fill="#0d0a0a"/>
+  <!-- subtle wall texture lines -->
+  <line x1="0" y1="150" x2="400" y2="150" stroke="#111010" stroke-width="0.5"/>
+  <line x1="0" y1="75" x2="400" y2="75" stroke="#111010" stroke-width="0.5"/>
+  <line x1="0" y1="225" x2="400" y2="225" stroke="#111010" stroke-width="0.5"/>
+
+  <!-- Photo 1 (top-left) - normal family photo shape -->
+  <g transform="translate(30, 40)">
+    <rect width="80" height="65" fill="#1a1618" stroke="#3a3035" stroke-width="2" rx="2"/>
+    <!-- photo content: silhouette of two people -->
+    <rect x="0" y="0" width="80" height="65" fill="#151214" rx="2"/>
+    <ellipse cx="28" cy="25" rx="7" ry="7" fill="#0e0c0e"/>
+    <rect x="18" y="32" width="20" height="25" fill="#0e0c0e" rx="3"/>
+    <ellipse cx="52" cy="27" rx="6" ry="6" fill="#0e0c0e"/>
+    <rect x="43" y="33" width="18" height="22" fill="#0e0c0e" rx="3"/>
+  </g>
+
+  <!-- Photo 2 (top-center) - landscape/trip photo shape -->
+  <g transform="translate(155, 30)">
+    <rect width="90" height="60" fill="#1a1618" stroke="#3a3035" stroke-width="2" rx="2"/>
+    <rect x="0" y="0" width="90" height="60" fill="#121418" rx="2"/>
+    <!-- horizon line -->
+    <line x1="0" y1="38" x2="90" y2="38" stroke="#1e1c20" stroke-width="1"/>
+    <ellipse cx="45" cy="38" rx="55" ry="22" fill="#131215"/>
+  </g>
+
+  <!-- Photo 3 (top-right) - portrait shape -->
+  <g transform="translate(290, 35)">
+    <rect width="70" height="75" fill="#1a1618" stroke="#3a3035" stroke-width="2" rx="2"/>
+    <rect x="0" y="0" width="70" height="75" fill="#141214" rx="2"/>
+    <ellipse cx="35" cy="25" rx="12" ry="12" fill="#0f0d0f"/>
+    <rect x="18" y="37" width="34" height="35" fill="#0f0d0f" rx="4"/>
+  </g>
+
+  <!-- Photo 4 (bottom-left) - child photo -->
+  <g transform="translate(45, 160)">
+    <rect width="75" height="65" fill="#1a1618" stroke="#3a3035" stroke-width="2" rx="2"/>
+    <rect x="0" y="0" width="75" height="65" fill="#131113" rx="2"/>
+    <ellipse cx="38" cy="22" rx="10" ry="10" fill="#0d0b0d"/>
+    <rect x="24" y="32" width="28" height="28" fill="#0d0b0d" rx="4"/>
+  </g>
+
+  <!-- Photo 5 (bottom-center) - group photo -->
+  <g transform="translate(150, 155)">
+    <rect width="100" height="70" fill="#1a1618" stroke="#3a3035" stroke-width="2" rx="2"/>
+    <rect x="0" y="0" width="100" height="70" fill="#131215" rx="2"/>
+    <ellipse cx="22" cy="28" rx="7" ry="7" fill="#0e0c0e"/>
+    <rect x="13" y="35" width="18" height="28" fill="#0e0c0e" rx="2"/>
+    <ellipse cx="50" cy="26" rx="8" ry="8" fill="#0e0c0e"/>
+    <rect x="40" y="34" width="20" height="30" fill="#0e0c0e" rx="2"/>
+    <ellipse cx="78" cy="29" rx="7" ry="7" fill="#0e0c0e"/>
+    <rect x="69" y="36" width="18" height="27" fill="#0e0c0e" rx="2"/>
+  </g>
+
+  <!-- Photo 6 — THE LAST ONE (bottom-right) — glowing, disturbing -->
+  <g transform="translate(285, 150)">
+    <!-- eerie pale glow behind this frame -->
+    <ellipse cx="50" cy="45" rx="55" ry="50" fill="#d8c0c0" opacity="0.08" filter="url(#haze)">
+      <animate attributeName="opacity" values="0.08;0.02;0.08;0.05;0.08" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+    <rect width="90" height="85" fill="#1e181a" stroke="#8a6060" stroke-width="2" rx="2"/>
+    <!-- pale interior of the photo -->
+    <rect x="2" y="2" width="86" height="81" fill="#1a1416" rx="2"/>
+    <!-- gaunt woman figure - thin and tall -->
+    <!-- body: thin standing figure -->
+    <ellipse cx="45" cy="28" rx="8" ry="9" fill="#2a1e20"/>
+    <!-- sunken cheeks suggestion -->
+    <ellipse cx="43" cy="28" rx="5" ry="7" fill="#241a1c"/>
+    <!-- neck -->
+    <rect x="43" y="36" width="4" height="5" fill="#2a1e20"/>
+    <!-- thin body -->
+    <rect x="36" y="41" width="18" height="32" fill="#2a1e20" rx="2"/>
+    <!-- arms hanging -->
+    <line x1="36" y1="44" x2="30" y2="68" stroke="#2a1e20" stroke-width="3" stroke-linecap="round"/>
+    <line x1="54" y1="44" x2="60" y2="68" stroke="#2a1e20" stroke-width="3" stroke-linecap="round"/>
+    <!-- small bottle in right hand -->
+    <rect x="57" y="63" width="6" height="9" fill="#3a2830" rx="1" stroke="#5a3848" stroke-width="0.5"/>
+    <rect x="59" y="60" width="2" height="4" fill="#3a2830" rx="1"/>
+    <!-- legs -->
+    <line x1="40" y1="73" x2="38" y2="82" stroke="#2a1e20" stroke-width="4" stroke-linecap="round"/>
+    <line x1="50" y1="73" x2="52" y2="82" stroke="#2a1e20" stroke-width="4" stroke-linecap="round"/>
+    <!-- eyes: two faint white dots -->
+    <circle cx="42" cy="27" r="1.2" fill="#c8b8b8" opacity="0.6"/>
+    <circle cx="48" cy="27" r="1.2" fill="#c8b8b8" opacity="0.6"/>
+    <!-- subtle pulse on this photo -->
+    <rect x="2" y="2" width="86" height="81" fill="#c89090" opacity="0" rx="2">
+      <animate attributeName="opacity" values="0;0.04;0;0.02;0" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- faint overall glow on the last photo area -->
+  <ellipse cx="330" cy="192" rx="60" ry="55" fill="url(#photo-glow)">
+    <animate attributeName="opacity" values="1;0.5;1;0.7;1" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+</svg>
