@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="blur-fog">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="blur-soft">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <radialGradient id="sea-glow" cx="50%" cy="60%" r="55%">
+      <stop offset="0%" stop-color="#1a2a3a" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#050810" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sky-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#05080f"/>
+      <stop offset="60%" stop-color="#0d1520"/>
+      <stop offset="100%" stop-color="#1a2535"/>
+    </linearGradient>
+    <linearGradient id="fog-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8899aa" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#aabbcc" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#c5d5e0" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="450" fill="url(#sky-grad)"/>
+
+  <!-- Stars (faint) -->
+  <g opacity="0.4">
+    <circle cx="120" cy="40" r="0.8" fill="white"/><circle cx="200" cy="25" r="0.6" fill="white"/>
+    <circle cx="340" cy="55" r="0.7" fill="white"/><circle cx="450" cy="30" r="0.5" fill="white"/>
+    <circle cx="600" cy="18" r="0.8" fill="white"/><circle cx="720" cy="45" r="0.6" fill="white"/>
+    <circle cx="680" cy="70" r="0.4" fill="white"/>
+  </g>
+
+  <!-- Sea horizon glow -->
+  <ellipse cx="400" cy="270" rx="500" ry="60" fill="#1e3040" opacity="0.6"/>
+
+  <!-- Sea -->
+  <rect x="0" y="265" width="800" height="185" fill="#0d1a24"/>
+  <rect x="0" y="265" width="800" height="3" fill="#1e3a50" opacity="0.5"/>
+
+  <!-- Sea shimmer lines -->
+  <g opacity="0.15" filter="url(#blur-soft)">
+    <line x1="0" y1="285" x2="800" y2="285" stroke="#3a6080" stroke-width="1"/>
+    <line x1="0" y1="305" x2="800" y2="305" stroke="#2a5070" stroke-width="0.8"/>
+    <line x1="0" y1="330" x2="800" y2="330" stroke="#2a5070" stroke-width="0.8"/>
+  </g>
+
+  <!-- Fog layer over sea -->
+  <rect x="0" y="240" width="800" height="80" fill="url(#fog-grad)" filter="url(#blur-fog)"/>
+
+  <!-- Distant fog bank -->
+  <ellipse cx="400" cy="263" rx="450" ry="25" fill="#7a9ab0" opacity="0.12" filter="url(#blur-fog)"/>
+
+  <!-- Shore/beach -->
+  <path d="M0 390 Q200 370 400 375 Q600 380 800 365 L800 450 L0 450 Z" fill="#0e1a10"/>
+
+  <!-- Village silhouettes - small houses -->
+  <g fill="#060c10">
+    <rect x="80" y="330" width="30" height="45"/>
+    <polygon points="80,330 95,310 110,330"/>
+    <rect x="125" y="340" width="25" height="35"/>
+    <polygon points="125,340 137,322 150,340"/>
+    <rect x="165" y="325" width="35" height="50"/>
+    <polygon points="165,325 182,305 200,325"/>
+    <rect x="215" y="345" width="20" height="30"/>
+    <polygon points="215,345 225,330 235,345"/>
+  </g>
+
+  <!-- Boat silhouette in sea -->
+  <path d="M580 295 Q600 290 620 295 L615 305 L585 305 Z" fill="#080f15"/>
+  <line x1="600" y1="275" x2="600" y2="295" stroke="#080f15" stroke-width="1.5"/>
+
+  <!-- Figures on the shore - all staring at sea -->
+  <g fill="#050a0d">
+    <ellipse cx="300" cy="382" rx="5" ry="6"/>
+    <rect x="297" y="388" width="6" height="14"/>
+    <ellipse cx="325" cy="380" rx="5" ry="6"/>
+    <rect x="322" y="386" width="6" height="15"/>
+    <ellipse cx="350" cy="383" rx="5" ry="6"/>
+    <rect x="347" y="389" width="6" height="13"/>
+    <ellipse cx="375" cy="381" rx="5" ry="6"/>
+    <rect x="372" y="387" width="6" height="15"/>
+    <ellipse cx="400" cy="382" rx="5" ry="6"/>
+    <rect x="397" y="388" width="6" height="14"/>
+    <ellipse cx="425" cy="380" rx="5" ry="6"/>
+    <rect x="422" y="386" width="6" height="16"/>
+    <ellipse cx="450" cy="383" rx="5" ry="6"/>
+    <rect x="447" y="389" width="6" height="13"/>
+    <ellipse cx="475" cy="381" rx="5" ry="6"/>
+    <rect x="472" y="387" width="6" height="15"/>
+    <ellipse cx="500" cy="382" rx="5" ry="6"/>
+    <rect x="497" y="388" width="6" height="14"/>
+  </g>
+
+  <!-- Fog animation over figures -->
+  <ellipse cx="400" cy="380" rx="300" ry="20" fill="#8899aa" opacity="0.08" filter="url(#blur-fog)">
+    <animate attributeName="opacity" values="0.06;0.14;0.06" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Subtle light pulse from sea surface -->
+  <ellipse cx="400" cy="270" rx="200" ry="15" fill="#3a6080" opacity="0">
+    <animate attributeName="opacity" values="0;0.08;0" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+</svg>

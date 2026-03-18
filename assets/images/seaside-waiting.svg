@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="blur-fog">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="blur-glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="blur-soft">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <linearGradient id="sky-night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#02030a"/>
+      <stop offset="70%" stop-color="#080d18"/>
+      <stop offset="100%" stop-color="#0d1825"/>
+    </linearGradient>
+    <radialGradient id="sea-glow-center" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0d3040" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#050d18" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="horizon-light" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#1a4060" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#050d18" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="450" fill="url(#sky-night)"/>
+
+  <!-- Faint stars -->
+  <g fill="white" opacity="0.5">
+    <circle cx="60" cy="30" r="0.7"/><circle cx="150" cy="15" r="0.5"/>
+    <circle cx="280" cy="45" r="0.6"/><circle cx="420" cy="20" r="0.7"/>
+    <circle cx="550" cy="35" r="0.5"/><circle cx="680" cy="12" r="0.6"/>
+    <circle cx="740" cy="50" r="0.4"/><circle cx="100" cy="70" r="0.5"/>
+    <circle cx="500" cy="60" r="0.4"/><circle cx="630" cy="75" r="0.6"/>
+  </g>
+
+  <!-- Subtle horizon glow from sea lights below -->
+  <ellipse cx="400" cy="240" rx="500" ry="30" fill="url(#horizon-light)">
+    <animate attributeName="opacity" values="0.6;1.0;0.6" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Sea -->
+  <rect x="0" y="235" width="800" height="215" fill="url(#sea-glow-center)"/>
+
+  <!-- Sea surface shimmer -->
+  <g opacity="0.2" filter="url(#blur-soft)">
+    <path d="M0 255 Q100 248 200 258 Q300 268 400 255 Q500 242 600 258 Q700 272 800 255" fill="none" stroke="#3a7090" stroke-width="1.5"/>
+    <path d="M0 275 Q150 262 300 278 Q450 295 600 278 Q700 268 800 275" fill="none" stroke="#2a6080" stroke-width="1"/>
+  </g>
+
+  <!-- Underwater glow visible at surface -->
+  <ellipse cx="400" cy="245" rx="220" ry="20" fill="#00c890" opacity="0.08" filter="url(#blur-fog)">
+    <animate attributeName="opacity" values="0.05;0.15;0.05" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="220;280;220" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Shore (wet sand) -->
+  <path d="M0 380 Q200 365 400 372 Q600 380 800 362 L800 450 L0 450 Z" fill="#0a100e"/>
+  <path d="M0 375 Q200 362 400 368 Q600 375 800 358 L800 380 L0 380 Z" fill="#0c1512" opacity="0.7"/>
+
+  <!-- Wet sand reflection of sea glow -->
+  <ellipse cx="400" cy="375" rx="300" ry="15" fill="#00a870" opacity="0.05" filter="url(#blur-fog)">
+    <animate attributeName="opacity" values="0.03;0.08;0.03" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Row of figures at the water's edge - all facing sea -->
+  <!-- Each figure: slightly different height/size, all rigid -->
+  <g fill="#040809">
+    <!-- figure 1 -->
+    <ellipse cx="150" cy="362" rx="6" ry="7"/>
+    <rect x="146" y="369" width="8" height="18" rx="2"/>
+    <rect x="139" y="372" width="7" height="2" rx="1"/>
+    <rect x="154" y="372" width="7" height="2" rx="1"/>
+
+    <!-- figure 2 -->
+    <ellipse cx="200" cy="360" rx="6" ry="7"/>
+    <rect x="196" y="367" width="8" height="20" rx="2"/>
+    <rect x="189" y="370" width="7" height="2" rx="1"/>
+    <rect x="204" y="370" width="7" height="2" rx="1"/>
+
+    <!-- figure 3 -->
+    <ellipse cx="250" cy="363" rx="5" ry="6"/>
+    <rect x="246" y="369" width="8" height="17" rx="2"/>
+    <rect x="239" y="372" width="7" height="2" rx="1"/>
+    <rect x="254" y="372" width="7" height="2" rx="1"/>
+
+    <!-- figure 4 (taller) -->
+    <ellipse cx="300" cy="358" rx="6" ry="7"/>
+    <rect x="296" y="365" width="8" height="22" rx="2"/>
+    <rect x="288" y="368" width="8" height="2" rx="1"/>
+    <rect x="304" y="368" width="8" height="2" rx="1"/>
+
+    <!-- figure 5 -->
+    <ellipse cx="350" cy="361" rx="6" ry="7"/>
+    <rect x="346" y="368" width="8" height="19" rx="2"/>
+    <rect x="339" y="371" width="7" height="2" rx="1"/>
+    <rect x="354" y="371" width="7" height="2" rx="1"/>
+
+    <!-- figure 6 (shorter) -->
+    <ellipse cx="400" cy="364" rx="5" ry="6"/>
+    <rect x="396" y="370" width="8" height="15" rx="2"/>
+    <rect x="389" y="373" width="7" height="2" rx="1"/>
+    <rect x="404" y="373" width="7" height="2" rx="1"/>
+
+    <!-- figure 7 -->
+    <ellipse cx="450" cy="360" rx="6" ry="7"/>
+    <rect x="446" y="367" width="8" height="21" rx="2"/>
+    <rect x="438" y="370" width="8" height="2" rx="1"/>
+    <rect x="454" y="370" width="8" height="2" rx="1"/>
+
+    <!-- figure 8 -->
+    <ellipse cx="500" cy="362" rx="6" ry="7"/>
+    <rect x="496" y="369" width="8" height="18" rx="2"/>
+    <rect x="489" y="372" width="7" height="2" rx="1"/>
+    <rect x="504" y="372" width="7" height="2" rx="1"/>
+
+    <!-- figure 9 (taller) -->
+    <ellipse cx="550" cy="357" rx="7" ry="8"/>
+    <rect x="546" y="365" width="10" height="23" rx="2"/>
+    <rect x="537" y="368" width="9" height="2" rx="1"/>
+    <rect x="555" y="368" width="9" height="2" rx="1"/>
+
+    <!-- figure 10 -->
+    <ellipse cx="600" cy="362" rx="6" ry="7"/>
+    <rect x="596" y="369" width="8" height="18" rx="2"/>
+    <rect x="589" y="372" width="7" height="2" rx="1"/>
+    <rect x="604" y="372" width="7" height="2" rx="1"/>
+
+    <!-- figure 11 -->
+    <ellipse cx="650" cy="360" rx="6" ry="7"/>
+    <rect x="646" y="367" width="8" height="20" rx="2"/>
+    <rect x="638" y="370" width="8" height="2" rx="1"/>
+    <rect x="654" y="370" width="8" height="2" rx="1"/>
+  </g>
+
+  <!-- Fog / mist rolling in from sea, wrapping around figures -->
+  <ellipse cx="400" cy="368" rx="450" ry="18" fill="#7a99aa" opacity="0.07" filter="url(#blur-fog)">
+    <animate attributeName="opacity" values="0.05;0.12;0.05" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="450;520;450" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="300" cy="375" rx="200" ry="10" fill="#9ab5c0" opacity="0.06" filter="url(#blur-fog)">
+    <animate attributeName="opacity" values="0.04;0.1;0.04" dur="9s" repeatCount="indefinite" begin="2s"/>
+  </ellipse>
+
+  <!-- Horizon glow pulse -->
+  <rect x="0" y="235" width="800" height="8" fill="#2a6080" opacity="0.1">
+    <animate attributeName="opacity" values="0.06;0.18;0.06" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Moon (barely visible, obscured) -->
+  <circle cx="680" cy="85" r="22" fill="#1a2535" opacity="0.8"/>
+  <circle cx="680" cy="85" r="20" fill="#c8d0d8" opacity="0.12"/>
+  <circle cx="668" cy="80" r="18" fill="#0d1525" opacity="0.9"/>
+</svg>
