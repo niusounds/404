@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="deskGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#1a2a1a"/>
+      <stop offset="100%" stop-color="#050808"/>
+    </radialGradient>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#deskGlow)"/>
+
+  <!-- Ceiling lights -->
+  <rect x="80" y="10" width="180" height="8" fill="#cce8cc" opacity="0.5" filter="url(#blur2)"/>
+  <rect x="320" y="10" width="180" height="8" fill="#cce8cc" opacity="0.5" filter="url(#blur2)"/>
+  <rect x="560" y="10" width="180" height="8" fill="#cce8cc" opacity="0.5" filter="url(#blur2)"/>
+
+  <!-- Light cones -->
+  <polygon points="80,18 260,18 280,120 60,120" fill="#aaddaa" opacity="0.07"/>
+  <polygon points="320,18 500,18 520,120 300,120" fill="#aaddaa" opacity="0.07"/>
+  <polygon points="560,18 740,18 760,120 540,120" fill="#aaddaa" opacity="0.07"/>
+
+  <!-- Floor line -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a2a1a" stroke-width="1"/>
+
+  <!-- Desks row 1 -->
+  <!-- Desk 1 -->
+  <rect x="60" y="200" width="140" height="15" rx="2" fill="#1c2b1c"/>
+  <rect x="70" y="215" width="4" height="60" fill="#161e16"/>
+  <rect x="186" y="215" width="4" height="60" fill="#161e16"/>
+  <!-- Monitor 1 -->
+  <rect x="85" y="155" width="90" height="55" rx="2" fill="#0d1a0d"/>
+  <rect x="87" y="157" width="86" height="49" fill="#1a3a1a" opacity="0.9"/>
+  <rect x="88" y="158" width="84" height="47" fill="#0a1f0a"/>
+  <!-- Screen glow content — rows of text -->
+  <rect x="92" y="163" width="50" height="3" fill="#4a8a4a" opacity="0.8"/>
+  <rect x="92" y="169" width="70" height="3" fill="#4a8a4a" opacity="0.6"/>
+  <rect x="92" y="175" width="40" height="3" fill="#4a8a4a" opacity="0.7"/>
+  <rect x="92" y="181" width="60" height="3" fill="#4a8a4a" opacity="0.5"/>
+  <rect x="92" y="187" width="55" height="3" fill="#4a8a4a" opacity="0.6"/>
+  <rect x="92" y="193" width="45" height="3" fill="#4a8a4a" opacity="0.4"/>
+
+  <!-- Worker silhouette 1 -->
+  <ellipse cx="130" cy="148" rx="13" ry="13" fill="#0e1a0e"/>
+  <rect x="112" y="160" width="36" height="42" rx="3" fill="#0e1a0e"/>
+  <!-- Arms in typing position -->
+  <rect x="98" y="195" width="34" height="6" rx="3" fill="#0c170c"/>
+  <rect x="118" y="195" width="34" height="6" rx="3" fill="#0c170c"/>
+  <!-- Hands on keyboard (glow from screen) -->
+  <ellipse cx="115" cy="201" rx="8" ry="5" fill="#0d1a0d"/>
+  <ellipse cx="145" cy="201" rx="8" ry="5" fill="#0d1a0d"/>
+
+  <!-- Desk 2 (middle) -->
+  <rect x="330" y="200" width="140" height="15" rx="2" fill="#1c2b1c"/>
+  <rect x="340" y="215" width="4" height="60" fill="#161e16"/>
+  <rect x="456" y="215" width="4" height="60" fill="#161e16"/>
+  <!-- Monitor 2 -->
+  <rect x="355" y="155" width="90" height="55" rx="2" fill="#0d1a0d"/>
+  <rect x="357" y="157" width="86" height="49" fill="#1a3a1a" opacity="0.9"/>
+  <rect x="358" y="158" width="84" height="47" fill="#0a1f0a"/>
+  <rect x="362" y="163" width="50" height="3" fill="#4a8a4a" opacity="0.8"/>
+  <rect x="362" y="169" width="70" height="3" fill="#4a8a4a" opacity="0.6"/>
+  <rect x="362" y="175" width="40" height="3" fill="#4a8a4a" opacity="0.7"/>
+  <rect x="362" y="181" width="60" height="3" fill="#4a8a4a" opacity="0.5"/>
+  <rect x="362" y="187" width="55" height="3" fill="#4a8a4a" opacity="0.6"/>
+  <rect x="362" y="193" width="45" height="3" fill="#4a8a4a" opacity="0.4"/>
+  <!-- Worker silhouette 2 — identical posture -->
+  <ellipse cx="400" cy="148" rx="13" ry="13" fill="#0e1a0e"/>
+  <rect x="382" y="160" width="36" height="42" rx="3" fill="#0e1a0e"/>
+  <rect x="368" y="195" width="34" height="6" rx="3" fill="#0c170c"/>
+  <rect x="388" y="195" width="34" height="6" rx="3" fill="#0c170c"/>
+  <ellipse cx="385" cy="201" rx="8" ry="5" fill="#0d1a0d"/>
+  <ellipse cx="415" cy="201" rx="8" ry="5" fill="#0d1a0d"/>
+
+  <!-- Desk 3 (right) -->
+  <rect x="600" y="200" width="140" height="15" rx="2" fill="#1c2b1c"/>
+  <rect x="610" y="215" width="4" height="60" fill="#161e16"/>
+  <rect x="726" y="215" width="4" height="60" fill="#161e16"/>
+  <!-- Monitor 3 -->
+  <rect x="625" y="155" width="90" height="55" rx="2" fill="#0d1a0d"/>
+  <rect x="627" y="157" width="86" height="49" fill="#1a3a1a" opacity="0.9"/>
+  <rect x="628" y="158" width="84" height="47" fill="#0a1f0a"/>
+  <rect x="632" y="163" width="50" height="3" fill="#4a8a4a" opacity="0.8"/>
+  <rect x="632" y="169" width="70" height="3" fill="#4a8a4a" opacity="0.6"/>
+  <rect x="632" y="175" width="40" height="3" fill="#4a8a4a" opacity="0.7"/>
+  <rect x="632" y="181" width="60" height="3" fill="#4a8a4a" opacity="0.5"/>
+  <rect x="632" y="187" width="55" height="3" fill="#4a8a4a" opacity="0.6"/>
+  <rect x="632" y="193" width="45" height="3" fill="#4a8a4a" opacity="0.4"/>
+  <!-- Worker silhouette 3 — identical posture -->
+  <ellipse cx="670" cy="148" rx="13" ry="13" fill="#0e1a0e"/>
+  <rect x="652" y="160" width="36" height="42" rx="3" fill="#0e1a0e"/>
+  <rect x="638" y="195" width="34" height="6" rx="3" fill="#0c170c"/>
+  <rect x="658" y="195" width="34" height="6" rx="3" fill="#0c170c"/>
+  <ellipse cx="655" cy="201" rx="8" ry="5" fill="#0d1a0d"/>
+  <ellipse cx="685" cy="201" rx="8" ry="5" fill="#0d1a0d"/>
+
+  <!-- Subtle monitor flicker animation for center desk -->
+  <rect x="358" y="158" width="84" height="47" fill="#1a3a1a" opacity="0">
+    <animate attributeName="opacity" values="0;0.15;0;0.1;0" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Floor reflection hints -->
+  <rect x="0" y="380" width="800" height="70" fill="#050c05"/>
+  <ellipse cx="130" cy="390" rx="60" ry="8" fill="#0a1a0a" opacity="0.5"/>
+  <ellipse cx="400" cy="390" rx="60" ry="8" fill="#0a1a0a" opacity="0.5"/>
+  <ellipse cx="670" cy="390" rx="60" ry="8" fill="#0a1a0a" opacity="0.5"/>
+
+  <!-- Subtle text at bottom -->
+  <text x="400" y="435" font-family="monospace" font-size="10" fill="#2a4a2a" text-anchor="middle" opacity="0.6">同じ姿勢　同じ目線　同じ速度</text>
+</svg>
