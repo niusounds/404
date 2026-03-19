@@ -1,19 +1,36 @@
 ---
 name: Horror Short Story Writing
-description: Guidelines and tech patterns for generating Japanese horror short stories and their accompanying illustrations for the Kowai Site blog.
+description: Guidelines and tech patterns for generating Japanese scary short stories — horror, mystery, and hitokowa — and their accompanying illustrations for the Kowai Site blog.
 ---
 
 # Horror Short Story Writing Guide
 
-This skill defines the guidelines for writing Japanese horror short stories for the `kowai-site` blog, as well as how to generate and implement the corresponding illustrations.
+This skill defines the guidelines for writing Japanese scary short stories for the `kowai-site` blog, as well as how to generate and implement the corresponding illustrations.
+
+The blog covers a wide range of scary stories beyond just supernatural horror (怪異・お化け). Stories can also be **mysteries** (ミステリー — unsolvable puzzles, unexplained disappearances, revelations that are worse than the unknown) or **hitokowa** (ヒトコワ — human horror, where the source of dread is human malice, obsession, or madness rather than the supernatural).
 
 ## 1. Writing Style and Narrative Tone
 
 *   **Perspective:** Use a first-person narrative (mostly 「私」 or 「僕」) to increase immersion and make the terror feel personal to the reader.
-*   **Setting:** Start setting the scene in mundane, relatable, everyday Japanese situations (e.g., checking a smartphone on a bed, riding an empty late-night train, looking in a mirror before school). 
+*   **Setting:** Start setting the scene in mundane, relatable, everyday Japanese situations (e.g., checking a smartphone on a bed, riding an empty late-night train, looking in a mirror before school).
 *   **Pacing:** Start slow and ordinary. Introduce a slight, almost unnoticeable sense of wrongness (違和感). Gradually escalate the tension until the climax. Avoid relying entirely on jump scares; focus on psychological dread, surrealism, and the uncanny valley (気味の悪さ).
 *   **Formatting:** Use frequent paragraph breaks, especially one-sentence paragraphs, to control reading rhythm and build tension.
 *   **Endings:** Use open-ended, lingering, or chilling twists. Often, the protagonist is trapped, replaced, or left in a deeply unsettling permanent state. Do not resolve the horror happily.
+
+### Genre-Specific Tone Adjustments
+
+#### For Mystery Stories (ミステリー)
+*   Open with a clear, concrete mystery — a disappearance, an inexplicable death, a strange object left behind.
+*   Scatter clues and partial explanations throughout; let the reader try to piece things together alongside the narrator.
+*   The resolution should be either "no explanation is possible" (which is terrifying in itself) or "the explanation is even more horrifying than the mystery."
+*   An **unreliable narrator** — one whose perception or memory may be compromised — is a powerful technique. The reader should wonder: is the narrator telling the truth? Are they sane?
+
+#### For Hitokowa Stories (ヒトコワ — Human Horror)
+*   The source of fear must be entirely human: a stalker, a controlling partner, a neighbor with a secret, a cult, or a workplace that subtly destroys a person.
+*   Begin with a character who seems merely **odd** or **a little too friendly**. Slowly peel back the facade to reveal something deeply wrong.
+*   Crucially maintain realism — no supernatural elements. The horror lands hardest when readers think "this could actually happen."
+*   Portray the protagonist's **isolation**: people they turn to for help don't believe them, or are themselves complicit.
+*   The ending should leave the reader with a sense that there is no escape, no rescue, and no justice.
 
 ## 2. File Structure and Metadata
 
@@ -59,10 +76,14 @@ Use standard Markdown image syntax, followed by a bold or italicized caption on 
 
 ## 4. Typical Workflow for a New Post Request
 
-1.  **Understand the Prompt:** Identify the core horror theme requested by the user. If none is given, invent a compelling everyday scenario that turns horrifying.
-2.  **Draft the Narrative:** Write the story in Japanese following the tone guidelines.
-3.  **Plan Illustrations:** Identify 2-3 key moments that would benefit from an illustration (e.g., the setup, the introduction of the anomaly, the horrifying climax).
-4.  **Generate/Create Assets:** Create the illustrations and save them to `x:\kowai-site\assets\images\`.
+1.  **Understand the Prompt:** Identify the core scary theme requested by the user. Determine which broad category fits best:
+    *   **怪異・超常ホラー** — ghosts, curses, yokai, parallel dimensions, uncanny technology.
+    *   **ミステリー** — unexplained disappearances, strange objects, cryptic messages, revelations worse than the unknown.
+    *   **ヒトコワ** — stalkers, manipulative people, cults, workplace terror, human cruelty.
+    If no theme is given, invent a compelling everyday scenario and choose the category that would make it most unsettling.
+2.  **Draft the Narrative:** Write the story in Japanese following the tone guidelines. Apply the genre-specific adjustments from Section 1 as needed.
+3.  **Plan Illustrations:** Identify 2-3 key moments that would benefit from an illustration (e.g., the setup, the introduction of the anomaly, the horrifying climax). For hitokowa stories, illustrations should feel more grounded and photorealistic (or deliberately mundane-yet-wrong) rather than overtly supernatural.
+4.  **Generate/Create Assets:** Create the illustrations and save them to `assets/images/`. Use a descriptive kebab-case filename that matches or relates to the post slug (e.g., `stalker-window.svg` for a hitokowa post about being watched). Keep all images flat in `assets/images/`; do not create subdirectories.
 5.  **Compile the Post:** Write the markdown file to `_posts/` with the narrative text, frontmatter, and embedded illustrations with captions.
 6.  **Add Credit:** At the very end of the post, add a credit line in the following format:
     ```markdown
