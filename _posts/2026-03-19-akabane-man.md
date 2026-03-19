@@ -19,7 +19,6 @@ category: 実話怪談
 
 ![薄暗い駅構内の大柄な人影](/assets/images/akabane-station-encounter.svg)
 
-
 *声をかけてきた男性は、ずいぶんと大きく見えた*
 
 今考えると明らかに怪しかった。でも当時の私は断ることへの罪悪感が強く、思わず口を開いてしまった。
@@ -79,7 +78,6 @@ category: 実話怪談
 あの男性だった。
 
 ![駅員に連れられていく男の影](/assets/images/akabane-station-escort.svg)
-
 
 *男性の肩は、落ちていた*
 
