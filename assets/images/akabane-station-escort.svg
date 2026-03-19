@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <radialGradient id="floorGlow" cx="35%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#1a1530" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#030205" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <filter id="slightBlur">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#030205"/>
+
+  <!-- Floor tiles -->
+  <rect x="0" y="360" width="800" height="140" fill="#07060c"/>
+  <line x1="0" y1="375" x2="800" y2="375" stroke="#0e0c18" stroke-width="1"/>
+  <line x1="0" y1="410" x2="800" y2="410" stroke="#0b0a14" stroke-width="1"/>
+  <line x1="0" y1="450" x2="800" y2="450" stroke="#0b0a14" stroke-width="1"/>
+
+  <!-- Floor glow -->
+  <rect x="0" y="360" width="800" height="140" fill="url(#floorGlow)"/>
+
+  <!-- Distant corridor walls -->
+  <rect x="0" y="60" width="80" height="300" fill="#080710"/>
+  <rect x="720" y="60" width="80" height="300" fill="#080710"/>
+
+  <!-- Overhead strip lighting - faint, cold -->
+  <rect x="100" y="60" width="600" height="8" rx="2" fill="#181430" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.2;0.45;0.1;0.4" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Central group: man being escorted -->
+  <!-- Left station staff figure -->
+  <!-- Body -->
+  <ellipse cx="270" cy="260" rx="30" ry="110" fill="#0c0b18"/>
+  <!-- Head -->
+  <ellipse cx="270" cy="162" rx="22" ry="28" fill="#0f0e1c"/>
+  <!-- Cap brim -->
+  <rect x="248" y="148" width="44" height="8" rx="3" fill="#141220"/>
+  <!-- Arm reaching to center figure -->
+  <path d="M 295 220 Q 330 230 355 255" stroke="#0c0b18" stroke-width="18" fill="none" stroke-linecap="round"/>
+
+  <!-- Right station staff figure -->
+  <ellipse cx="530" cy="260" rx="30" ry="110" fill="#0c0b18"/>
+  <ellipse cx="530" cy="162" rx="22" ry="28" fill="#0f0e1c"/>
+  <rect x="508" y="148" width="44" height="8" rx="3" fill="#141220"/>
+  <!-- Arm reaching to center figure -->
+  <path d="M 505 220 Q 470 230 445 255" stroke="#0c0b18" stroke-width="18" fill="none" stroke-linecap="round"/>
+
+  <!-- Center figure: the man, slightly slumped -->
+  <!-- Body leaning -->
+  <ellipse cx="400" cy="280" rx="38" ry="100" fill="#0a0910" transform="rotate(-4, 400, 280)"/>
+  <!-- Head bowed forward -->
+  <ellipse cx="395" cy="180" rx="28" ry="33" fill="#0d0c14" transform="rotate(15, 395, 180)"/>
+  <!-- Shoulders drooped -->
+  <ellipse cx="400" cy="225" rx="50" ry="20" fill="#0a0910" transform="rotate(-4, 400, 225)"/>
+  <!-- Arms limp at sides -->
+  <rect x="355" y="230" width="16" height="90" rx="8" fill="#09080f" transform="rotate(-8, 355, 230)"/>
+  <rect x="429" y="230" width="16" height="85" rx="8" fill="#09080f" transform="rotate(5, 429, 230)"/>
+
+  <!-- Shadow beneath the group -->
+  <ellipse cx="400" cy="440" rx="160" ry="28" fill="#000000" opacity="0.7"/>
+
+  <!-- Faint light on the man — as if caught by station light -->
+  <ellipse cx="400" cy="230" rx="45" ry="100" fill="#1a1530" opacity="0.15" filter="url(#softBlur)"/>
+
+  <!-- Very faint figure far in background — watching? -->
+  <ellipse cx="700" cy="330" rx="12" ry="40" fill="#0a0912" opacity="0.5" filter="url(#softBlur)">
+    <animate attributeName="opacity" values="0.5;0.3;0.5" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Atmospheric overlay -->
+  <rect x="0" y="0" width="800" height="500" fill="#040309" opacity="0.3"/>
+</svg>
