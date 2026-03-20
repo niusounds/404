@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#070708"/>
+
+  <!-- Ambient dark glow -->
+  <ellipse cx="400" cy="225" rx="220" ry="160" fill="#0d0d1a" opacity="0.9"/>
+
+  <!-- Phone body -->
+  <rect x="290" y="50" width="220" height="360" rx="22" ry="22" fill="#111118" stroke="#222233" stroke-width="2"/>
+  <!-- Phone screen -->
+  <rect x="300" y="70" width="200" height="320" rx="8" ry="8" fill="#0a0a12"/>
+
+  <!-- Screen top bar -->
+  <rect x="300" y="70" width="200" height="28" rx="8" ry="8" fill="#12121e"/>
+  <circle cx="400" cy="84" r="5" fill="#1a1a2a"/>
+
+  <!-- Notification banner -->
+  <rect x="308" y="115" width="184" height="80" rx="10" ry="10" fill="#1c1c2e" stroke="#2a2a40" stroke-width="1">
+    <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- App icon (generic circle) -->
+  <circle cx="335" cy="145" r="16" fill="#1e1e3a"/>
+  <!-- Person silhouette icon -->
+  <circle cx="335" cy="139" r="5" fill="#4a4a7a"/>
+  <path d="M326,155 Q335,149 344,155" fill="#4a4a7a"/>
+
+  <!-- Notification text lines -->
+  <rect x="360" y="132" width="100" height="8" rx="4" fill="#555577" opacity="0.7"/>
+  <rect x="360" y="147" width="120" height="6" rx="3" fill="#333355" opacity="0.6"/>
+  <rect x="360" y="160" width="80" height="6" rx="3" fill="#333355" opacity="0.5"/>
+
+  <!-- Red notification dot -->
+  <circle cx="484" cy="118" r="8" fill="#cc2233" filter="url(#glow)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="8;9;8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="484" y="122" text-anchor="middle" font-size="9" fill="#ffffff" font-family="monospace">1</text>
+
+  <!-- Screen content below (fake timeline) -->
+  <rect x="308" y="210" width="80" height="8" rx="4" fill="#1e1e2e" opacity="0.5"/>
+  <rect x="308" y="225" width="120" height="6" rx="3" fill="#1a1a28" opacity="0.4"/>
+  <rect x="308" y="238" width="90" height="6" rx="3" fill="#1a1a28" opacity="0.4"/>
+  <rect x="308" y="260" width="140" height="40" rx="6" fill="#161622" opacity="0.5"/>
+  <rect x="308" y="310" width="100" height="8" rx="4" fill="#1e1e2e" opacity="0.3"/>
+
+  <!-- Username label under notification - unknown/question marks -->
+  <text x="360" y="143" font-size="10" fill="#7070a0" font-family="monospace" opacity="0.9">フォローリクエスト</text>
+  <text x="360" y="156" font-size="9" fill="#505070" font-family="monospace">@unknown_user_&#x25CF;&#x25CF;&#x25CF;</text>
+
+  <!-- Eerie side light effect -->
+  <rect x="290" y="120" width="3" height="60" rx="2" fill="#3333cc" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.7;0.1;0.5;0.3" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Floating question marks in background -->
+  <text x="130" y="180" font-size="40" fill="#1a1a2a" font-family="serif" opacity="0.4">？</text>
+  <text x="610" y="250" font-size="30" fill="#1a1a2a" font-family="serif" opacity="0.3">？</text>
+  <text x="90" y="320" font-size="20" fill="#1a1a2a" font-family="serif" opacity="0.25">？</text>
+  <text x="660" y="150" font-size="25" fill="#1a1a2a" font-family="serif" opacity="0.2">？</text>
+</svg>
