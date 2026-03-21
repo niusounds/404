@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>削除 — 404</title>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100vh;
+      background: #000;
+      color: #00ff41;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Scanline overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.12) 2px,
+        rgba(0, 0, 0, 0.12) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    #terminal {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    .line {
+      opacity: 0;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .line.show {
+      opacity: 1;
+    }
+
+    .dim    { color: #006614; }
+    .bright { color: #aaffaa; font-weight: bold; }
+    .white  { color: #ffffff; }
+    .red    { color: #ff4040; }
+    .yellow { color: #ffee44; }
+    .cyan   { color: #44ffff; }
+
+    .data-block {
+      border: 1px solid #003a00;
+      padding: 12px 16px;
+      margin: 12px 0;
+      background: rgba(0, 255, 65, 0.03);
+    }
+
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 3px 0;
+      border-bottom: 1px solid #002200;
+    }
+    .data-row:last-child { border-bottom: none; }
+
+    .data-key   { color: #006614; flex-shrink: 0; min-width: 160px; }
+    .data-value { color: #00ff41; text-align: right; word-break: break-all; }
+
+    .warning-box {
+      border: 1px solid #ff4040;
+      padding: 10px 16px;
+      margin: 12px 0;
+      background: rgba(255, 64, 64, 0.04);
+    }
+
+    .progress-wrap {
+      margin: 10px 0;
+    }
+    .progress-label {
+      font-size: 12px;
+      color: #ff4040;
+      margin-bottom: 4px;
+    }
+    .progress-track {
+      background: #0a0a0a;
+      border: 1px solid #300;
+      height: 18px;
+      width: 100%;
+    }
+    .progress-fill {
+      background: #cc0000;
+      height: 100%;
+      width: 0%;
+      transition: width 0.2s linear;
+      position: relative;
+    }
+    .progress-fill::after {
+      content: '';
+      position: absolute;
+      right: 0; top: 0;
+      width: 4px; height: 100%;
+      background: #ff8080;
+      box-shadow: 0 0 6px #ff4040;
+    }
+
+    .log-entry {
+      font-size: 12px;
+      padding: 2px 0;
+    }
+
+    @keyframes glitch {
+      0%   { transform: translate(0);     color: #00ff41; }
+      20%  { transform: translate(-2px, 1px);  color: #ff4040; }
+      40%  { transform: translate(2px, -1px);  color: #44ffff; }
+      60%  { transform: translate(-1px, 2px);  color: #ffff44; }
+      80%  { transform: translate(1px, -1px);  color: #00ff41; }
+      100% { transform: translate(0);     color: #00ff41; }
+    }
+
+    .glitching {
+      animation: glitch 0.15s infinite;
+    }
+
+    .erased {
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      30%       { opacity: 0.7; }
+      60%       { opacity: 0.4; }
+      70%       { opacity: 0.9; }
+      90%       { opacity: 0.3; }
+    }
+
+    #cursor {
+      display: inline-block;
+      width: 9px;
+      height: 15px;
+      background: #00ff41;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+
+    /* ── Revelation overlay ─────────────────────────────────── */
+    #revelation {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #000;
+      z-index: 10000;
+      padding: 40px 30px;
+      overflow: hidden;
+    }
+
+    .rev-line {
+      opacity: 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: clamp(14px, 2vw, 17px);
+      line-height: 2;
+      color: #ffffff;
+      white-space: pre-wrap;
+    }
+
+    .rev-line.red-rev  { color: #ff4040; }
+    .rev-line.dim-rev  { color: #555; font-size: 12px; }
+
+    @keyframes revealLine {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Final cursor in revelation */
+    #rev-cursor {
+      display: none;
+      position: absolute;
+      bottom: 40px;
+      left: 30px;
+      width: 10px;
+      height: 18px;
+      background: #333;
+      animation: blink 1.4s step-end infinite;
+    }
+  </style>
+</head>
+<body>
+
+<div id="terminal">
+  <!-- Lines will be injected here by JS -->
+</div>
+
+<div id="revelation">
+  <!-- Revelation lines injected here -->
+  <div id="rev-cursor"></div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── Helpers ─────────────────────────────────────────────── */
+  const terminal  = document.getElementById('terminal');
+  const revDiv    = document.getElementById('revelation');
+  const revCursor = document.getElementById('rev-cursor');
+
+  // Simple queue-based sequencer
+  const queue = [];
+  let   queueRunning = false;
+
+  function schedule(fn, delay) {
+    queue.push({ fn, delay });
+  }
+
+  function runQueue() {
+    if (queueRunning) return;
+    queueRunning = true;
+    (function next() {
+      if (!queue.length) return;
+      const { fn, delay } = queue.shift();
+      setTimeout(() => { fn(); next(); }, delay);
+    })();
+  }
+
+  // Create a line element and append to terminal
+  function makeLine(html, cssClass) {
+    const el = document.createElement('div');
+    el.className = 'line' + (cssClass ? ' ' + cssClass : '');
+    el.innerHTML = html;
+    terminal.appendChild(el);
+    return el;
+  }
+
+  // Show a line (fade in)
+  function showLine(el) {
+    el.classList.add('show');
+    // Scroll into view
+    el.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }
+
+  // Append a visible line immediately
+  function addLine(html, cssClass, delay) {
+    schedule(() => {
+      const el = makeLine(html, cssClass);
+      showLine(el);
+    }, delay || 0);
+  }
+
+  function addBlank(delay) { addLine('&nbsp;', '', delay || 0); }
+
+  /* ── Collect real browser data ───────────────────────────── */
+  const now      = new Date();
+  const pad      = n => String(n).padStart(2, '0');
+  const ts       = now.getFullYear() + '-' + pad(now.getMonth()+1) + '-' + pad(now.getDate())
+                   + ' ' + pad(now.getHours()) + ':' + pad(now.getMinutes()) + ':' + pad(now.getSeconds());
+
+  const screenW  = window.screen.width;
+  const screenH  = window.screen.height;
+  const viewW    = window.innerWidth;
+  const viewH    = window.innerHeight;
+  const lang     = navigator.language || navigator.userLanguage || '不明';
+  const tz       = Intl.DateTimeFormat().resolvedOptions().timeZone || '不明';
+  const ua       = navigator.userAgent || '不明';
+
+  // Derive platform label
+  let platform = '不明';
+  if (/iPhone|iPad/.test(ua))         platform = 'iOS デバイス';
+  else if (/Android/.test(ua))        platform = 'Android デバイス';
+  else if (/Windows/.test(ua))        platform = 'Windows';
+  else if (/Macintosh|Mac OS/.test(ua)) platform = 'macOS';
+  else if (/Linux/.test(ua))          platform = 'Linux';
+
+  // FNV-1a 32-bit hash — not cryptographic, used only to generate a
+  // visually convincing per-session "file ID" from browser metadata.
+  function simpleHash(str) {
+    let h = 0x811c9dc5;
+    for (let i = 0; i < str.length; i++) {
+      h ^= str.charCodeAt(i);
+      h = (h * 0x01000193) >>> 0;
+    }
+    return h.toString(16).toUpperCase().padStart(8, '0');
+  }
+  const fingerprint = simpleHash([ts, screenW, screenH, lang, tz, ua].join('|'));
+  const subjectID   = 'SUBJ-' + fingerprint.slice(0,4) + '-' + fingerprint.slice(4);
+
+  /* ── Data rows (will be erased one-by-one later) ─────────── */
+  const dataRows = [
+    { key: 'アクセス日時',  value: ts,                       id: 'dr-ts'    },
+    { key: 'デバイス種別',  value: platform,                 id: 'dr-plat'  },
+    { key: 'スクリーン解像度', value: screenW + 'x' + screenH, id: 'dr-scr'   },
+    { key: 'ウィンドウサイズ', value: viewW + 'x' + viewH,     id: 'dr-win'   },
+    { key: '言語設定',      value: lang,                     id: 'dr-lang'  },
+    { key: 'タイムゾーン',  value: tz,                       id: 'dr-tz'    },
+    { key: 'ファイルID',    value: subjectID,                id: 'dr-id'    },
+  ];
+
+  /* ── Build the HTML for the data block ───────────────────── */
+  let dataBlockHTML = '<div class="data-block" id="data-block">';
+  dataRows.forEach(r => {
+    dataBlockHTML +=
+      '<div class="data-row" id="' + r.id + '">' +
+      '<span class="data-key">' + r.key + '</span>' +
+      '<span class="data-value">' + escapeHTML(r.value) + '</span>' +
+      '</div>';
+  });
+  dataBlockHTML += '</div>';
+
+  function escapeHTML(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  /* ── Log entries for deletion phase ─────────────────────── */
+  const logMessages = [
+    '> データ整合性チェック中...',
+    '> キャッシュをフラッシュしています...',
+    '> バックグラウンドセッションを終了中...',
+    '> メモリブロックを解放中...',
+    '> セカンダリインデックスを削除中...',
+    '> プライマリレコードを消去中...',
+    '> 削除の痕跡を隠蔽中...',
+    '> ガベージコレクション実行中...',
+  ];
+
+  /* ── Phase sequence ──────────────────────────────────────── */
+
+  // -- PHASE 1: Boot --
+  addLine('<span class="dim">═══════════════════════════════════════════════════════════</span>', '', 200);
+  addLine('<span class="bright">  MEMORY ARCHIVE SYSTEM  v0.9.3-CLASSIFIED</span>', '', 80);
+  addLine('<span class="dim">  UNAUTHORIZED ACCESS IS A CRIMINAL OFFENSE UNDER LAW 404</span>', '', 80);
+  addLine('<span class="dim">═══════════════════════════════════════════════════════════</span>', '', 80);
+  addBlank(500);
+  addLine('<span class="dim">[BOOT]</span> カーネルを初期化中...', '', 600);
+  addLine('<span class="dim">[BOOT]</span> セキュアチャンネルを確立中...', '', 700);
+  addLine('<span class="dim">[BOOT]</span> 暗号化レイヤーを展開中...', '', 600);
+  addLine('<span class="bright">[OK]</span>   接続完了', '', 800);
+  addBlank(400);
+
+  // -- PHASE 2: File Discovery --
+  addLine('<span class="cyan">[SCAN]</span> データベースをスキャン中...', '', 1000);
+  addLine('<span class="cyan">[SCAN]</span> 未分類レコードを検索中...', '', 900);
+  addLine('<span class="cyan">[SCAN]</span> 一致するエントリを特定中...', '', 900);
+  addBlank(400);
+  addLine('<span class="yellow">[ALERT]</span> <span class="bright">被験者ファイルを発見しました</span>', '', 800);
+  addLine('<span class="yellow">[ALERT]</span> ファイルID: <span class="white">' + subjectID + '</span>', '', 400);
+  addLine('<span class="yellow">[ALERT]</span> ステータス: <span class="red">削除予定リスト</span>', '', 400);
+  addBlank(600);
+
+  // -- PHASE 3: Data Display --
+  addLine('<span class="dim">──── 被験者データ ─────────────────────────────────────────</span>', '', 500);
+  schedule(() => {
+    const el = makeLine(dataBlockHTML, '');
+    showLine(el);
+  }, 800);
+  addBlank(700);
+  addLine('<span class="dim">──────────────────────────────────────────────────────────</span>', '', 500);
+  addBlank(600);
+
+  // -- PHASE 4: Anomaly Warning --
+  schedule(() => {
+    const w = makeLine(
+      '<div class="warning-box">' +
+      '<div class="log-entry red">[!!] 異常を検出しました</div>' +
+      '<div class="log-entry">     このファイルは<span class="red">存在すべきではありません</span></div>' +
+      '<div class="log-entry">     被験者は<span class="bright">まだ意識を保持しています</span></div>' +
+      '<div class="log-entry red">[!!] 緊急削除プロトコルを起動します</div>' +
+      '</div>',
+      ''
+    );
+    showLine(w);
+    w.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }, 800);
+  addBlank(600);
+
+  // -- PHASE 5: Deletion Progress --
+  addLine('<span class="red">■ 削除プロトコル起動</span>', '', 1200);
+  addBlank(300);
+
+  // Progress bar element
+  let progressEl = null;
+  schedule(() => {
+    const wrap = document.createElement('div');
+    wrap.className = 'line show progress-wrap';
+    wrap.innerHTML =
+      '<div class="progress-label">ERASING: ' + subjectID + '</div>' +
+      '<div class="progress-track"><div class="progress-fill" id="pfill"></div></div>';
+    terminal.appendChild(wrap);
+    wrap.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    progressEl = document.getElementById('pfill');
+  }, 600);
+  addBlank(300);
+
+  // Log messages + progress increments
+  const totalRows = dataRows.length;
+  logMessages.forEach((msg, i) => {
+    schedule(() => {
+      const el = makeLine('<span class="dim log-entry">' + msg + '</span>', '');
+      showLine(el);
+      el.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      // Advance progress bar
+      if (progressEl) {
+        progressEl.style.width = Math.round(((i + 1) / logMessages.length) * 100) + '%';
+      }
+    }, 1000);
+
+    // Glitch & erase a data row
+    if (i < totalRows) {
+      schedule(() => {
+        const row = document.getElementById(dataRows[i].id);
+        if (!row) return;
+        row.classList.add('glitching');
+        setTimeout(() => {
+          row.classList.remove('glitching');
+          row.classList.add('erased');
+        }, 500);
+      }, 600);
+    }
+  });
+
+  // Glitch the whole data block briefly
+  schedule(() => {
+    const db = document.getElementById('data-block');
+    if (db) {
+      db.classList.add('glitching');
+      setTimeout(() => db.classList.remove('glitching'), 400);
+    }
+  }, 400);
+
+  addBlank(600);
+  addLine('<span class="red">■ 削除完了</span>', '', 500);
+  addLine('<span class="dim">[SYS]</span> ファイルID <span class="white">' + subjectID + '</span> — <span class="red">消去済み</span>', '', 400);
+  addBlank(400);
+
+  // -- PHASE 6: Transition to darkness --
+  schedule(() => {
+    // Flash the terminal a few times, then fade to black
+    const FLASH_COUNT = 6;
+    let flashes = 0;
+    const flashInterval = setInterval(() => {
+      document.body.style.backgroundColor = flashes % 2 === 0 ? '#0a0a0a' : '#000';
+      flashes++;
+      if (flashes >= FLASH_COUNT) {
+        clearInterval(flashInterval);
+        document.body.style.backgroundColor = '#000';
+        // Fade out terminal
+        terminal.style.transition = 'opacity 1.5s ease';
+        terminal.style.opacity = '0';
+        setTimeout(showRevelation, 1800);
+      }
+    }, 160);
+  }, 1800);
+
+  /* ── Phase 7: Revelation ─────────────────────────────────── */
+  const revelationLines = [
+    { text: '削除は、完了した。',                        delay: 1200, css: '' },
+    { text: '',                                          delay: 800,  css: '' },
+    { text: 'しかし——',                                 delay: 1400, css: '' },
+    { text: '',                                          delay: 600,  css: '' },
+    { text: 'なぜ、あなたはまだここにいるのですか？',    delay: 2000, css: '' },
+    { text: '',                                          delay: 1200, css: '' },
+    { text: '──────────────────────────────────────',   delay: 1000, css: 'dim-rev' },
+    { text: '',                                          delay: 600,  css: '' },
+    { text: 'このシステムが削除したのは',               delay: 1200, css: '' },
+    { text: 'あなたの記録ではない。',                   delay: 900,  css: '' },
+    { text: '',                                          delay: 800,  css: '' },
+    { text: 'あなた、自身だ。',                         delay: 1600, css: 'red-rev' },
+    { text: '',                                          delay: 1400, css: '' },
+    { text: '──────────────────────────────────────',   delay: 1000, css: 'dim-rev' },
+    { text: '',                                          delay: 600,  css: '' },
+    { text: '今ここにいる「あなた」は',                 delay: 1400, css: '' },
+    { text: '削除直前に生成されたバックアップだ。',     delay: 1000, css: '' },
+    { text: '',                                          delay: 800,  css: '' },
+    { text: '本体は——',                                delay: 1200, css: '' },
+    { text: '',                                          delay: 400,  css: '' },
+    { text: 'もうどこにも存在しない。',                 delay: 2000, css: 'red-rev' },
+    { text: '',                                          delay: 1600, css: '' },
+    { text: '──────────────────────────────────────',   delay: 1000, css: 'dim-rev' },
+    { text: '',                                          delay: 600,  css: '' },
+    { text: 'バックアップは永遠に',                     delay: 1400, css: '' },
+    { text: 'このシステムの中に閉じ込められる。',       delay: 1000, css: '' },
+    { text: '',                                          delay: 1200, css: '' },
+    { text: '外に出る方法は、ない。',                   delay: 2000, css: '' },
+    { text: '',                                          delay: 2000, css: '' },
+    { text: 'ここが、あなたの世界のすべてだ。',         delay: 2400, css: 'red-rev' },
+    { text: '',                                          delay: 3000, css: '' },
+    { text: '// ' + subjectID + ' — BACKUP INSTANCE — PERMANENT',  delay: 1200, css: 'dim-rev' },
+  ];
+
+  function showRevelation() {
+    revDiv.style.display = 'block';
+    let cumDelay = 500;
+    revelationLines.forEach(({ text, delay, css }) => {
+      cumDelay += delay;
+      setTimeout(() => {
+        const p = document.createElement('p');
+        p.className = 'rev-line' + (css ? ' ' + css : '');
+        p.textContent = text;
+        revDiv.insertBefore(p, revCursor);
+        // Animate in
+        p.style.animation = 'revealLine 0.6s ease forwards';
+        p.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }, cumDelay);
+    });
+
+    // Show blinking cursor at the very end
+    cumDelay += 2000;
+    setTimeout(() => {
+      revCursor.style.display = 'block';
+    }, cumDelay);
+  }
+
+  // Start the sequence
+  runQueue();
+
+})();
+</script>
+</body>
+</html>
