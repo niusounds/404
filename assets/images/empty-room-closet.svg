@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <radialGradient id="darkGrad" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#030202"/>
+    </radialGradient>
+    <radialGradient id="innerGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#080608"/>
+      <stop offset="100%" stop-color="#010001"/>
+    </radialGradient>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="eyeGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#darkGrad)"/>
+
+  <!-- Floor line -->
+  <rect x="0" y="400" width="800" height="100" fill="#050403"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#0e0c0a" stroke-width="1"/>
+
+  <!-- Closet door frame -->
+  <rect x="220" y="60" width="360" height="360" fill="#0d0b09" stroke="#1a1612" stroke-width="4"/>
+
+  <!-- Two closet doors -->
+  <!-- Left door -->
+  <rect x="224" y="64" width="174" height="352" fill="#111008" stroke="#1e1a14" stroke-width="1.5"/>
+  <!-- Right door - slightly ajar, showing darkness within -->
+  <rect x="400" y="64" width="176" height="352" fill="#0e0c0a" stroke="#1e1a14" stroke-width="1.5"/>
+
+  <!-- Door panels decoration -->
+  <rect x="234" y="80" width="154" height="140" rx="2" fill="none" stroke="#1a1610" stroke-width="1"/>
+  <rect x="234" y="236" width="154" height="164" rx="2" fill="none" stroke="#1a1610" stroke-width="1"/>
+  <rect x="410" y="80" width="156" height="140" rx="2" fill="none" stroke="#1a1610" stroke-width="1"/>
+  <rect x="410" y="236" width="156" height="164" rx="2" fill="none" stroke="#1a1610" stroke-width="1"/>
+
+  <!-- Door handles -->
+  <rect x="388" y="220" width="10" height="28" rx="5" fill="#2a2418"/>
+  <rect x="402" y="220" width="10" height="28" rx="5" fill="#2a2418"/>
+
+  <!-- Right door slightly open - gap between doors showing inner darkness -->
+  <!-- The right door has shifted slightly, revealing a thin crack of absolute darkness -->
+  <rect x="396" y="64" width="8" height="352" fill="#000000"/>
+
+  <!-- Inside the closet - absolute darkness with subtle form -->
+  <!-- Dark interior visible through the crack -->
+  <rect x="396" y="64" width="6" height="352" fill="#030103"/>
+
+  <!-- The silhouette in the darkness - barely visible figure -->
+  <!-- This is the key horror element: eyes barely visible in the dark gap -->
+  <!-- Very subtle eye-like gleams in the crack -->
+  <ellipse cx="400" cy="190" rx="2.5" ry="1.8" fill="#c8a830" opacity="0.0" filter="url(#eyeGlow)">
+    <animate attributeName="opacity" values="0;0;0;0.7;0.4;0;0;0;0.8;0;0" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="400" cy="210" rx="2.5" ry="1.8" fill="#c8a830" opacity="0.0" filter="url(#eyeGlow)">
+    <animate attributeName="opacity" values="0;0;0;0.7;0.4;0;0;0;0.8;0;0" dur="7s" repeatCount="indefinite" begin="0.1s"/>
+  </ellipse>
+
+  <!-- Very faint outline of a hand on the inside of the right door, barely visible -->
+  <path d="M 405 300 Q 402 290 404 275 Q 405 265 403 260 M 403 260 Q 401 250 403 245 M 403 260 Q 406 252 407 246 M 407 246 Q 408 240 407 235 M 407 246 Q 410 250 412 248 Q 414 242 413 237 M 412 248 Q 414 255 416 260 Q 416 272 414 278 Q 412 288 411 300" stroke="#1a1410" stroke-width="1.2" fill="none" opacity="0.5"/>
+
+  <!-- Faint light strip under the closet door suggesting something inside -->
+  <rect x="220" y="415" width="360" height="3" fill="#180c04" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.2;0.5;0.1;0.4" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Shadow cast outward from closet onto floor -->
+  <polygon points="220,400 580,400 620,500 180,500" fill="#040302" opacity="0.8"/>
+
+  <!-- Atmospheric floor dust/shadow -->
+  <ellipse cx="400" cy="430" rx="180" ry="30" fill="#000000" opacity="0.6"/>
+
+  <!-- Subtle room ambient details -->
+  <!-- Wall outlet -->
+  <rect x="600" y="350" width="22" height="28" rx="2" fill="none" stroke="#181410" stroke-width="1"/>
+  <circle cx="606" cy="360" r="2" fill="#181410"/>
+  <circle cx="614" cy="360" r="2" fill="#181410"/>
+  <rect x="608" y="370" width="6" height="4" rx="1" fill="#181410"/>
+
+  <!-- Faint text scratched into wall near closet -->
+  <text x="590" y="200" font-family="serif" font-size="9" fill="#181410" opacity="0.25" transform="rotate(90, 590, 200)">開けないで</text>
+</svg>
