@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="hallGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#100d05"/>
+      <stop offset="100%" stop-color="#020202"/>
+    </radialGradient>
+    <radialGradient id="doorGlow" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#c8a030" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#c8a030" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowBlur">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Background hallway -->
+  <rect width="800" height="450" fill="url(#hallGrad)"/>
+
+  <!-- Corridor perspective lines -->
+  <polygon points="0,0 800,0 600,450 200,450" fill="#0a0805" opacity="0.5"/>
+  <line x1="200" y1="450" x2="0" y2="0" stroke="#151008" stroke-width="1.5"/>
+  <line x1="600" y1="450" x2="800" y2="0" stroke="#151008" stroke-width="1.5"/>
+
+  <!-- Hallway ceiling strip -->
+  <rect x="200" y="0" width="400" height="8" fill="#181408" opacity="0.7"/>
+
+  <!-- Wall panels (vertical lines) -->
+  <line x1="250" y1="0" x2="250" y2="450" stroke="#120e07" stroke-width="1"/>
+  <line x1="350" y1="0" x2="350" y2="450" stroke="#120e07" stroke-width="1"/>
+  <line x1="450" y1="0" x2="450" y2="450" stroke="#120e07" stroke-width="1"/>
+  <line x1="550" y1="0" x2="550" y2="450" stroke="#120e07" stroke-width="1"/>
+
+  <!-- Meeting room door — center -->
+  <rect x="330" y="100" width="140" height="280" rx="3" fill="#18120a"/>
+  <rect x="332" y="102" width="136" height="276" rx="2" fill="#1c1608"/>
+  <!-- Door frame -->
+  <rect x="327" y="97" width="146" height="286" rx="4" fill="none" stroke="#2a2010" stroke-width="4"/>
+
+  <!-- Door panels (decorative) -->
+  <rect x="340" y="115" width="50" height="70" rx="2" fill="#221a0c" opacity="0.7"/>
+  <rect x="410" y="115" width="50" height="70" rx="2" fill="#221a0c" opacity="0.7"/>
+  <rect x="340" y="200" width="50" height="70" rx="2" fill="#221a0c" opacity="0.7"/>
+  <rect x="410" y="200" width="50" height="70" rx="2" fill="#221a0c" opacity="0.7"/>
+  <rect x="340" y="285" width="120" height="70" rx="2" fill="#221a0c" opacity="0.7"/>
+
+  <!-- Door knob -->
+  <circle cx="463" cy="250" r="7" fill="#3a2e18"/>
+  <circle cx="463" cy="250" r="5" fill="#4a3a20"/>
+  <circle cx="461" cy="248" r="2" fill="#6a5a30" opacity="0.6"/>
+
+  <!-- Door sign: 会議室 -->
+  <rect x="350" y="78" width="100" height="18" rx="2" fill="#1a1408"/>
+  <text x="400" y="92" font-family="monospace" font-size="11" fill="#6a5020" text-anchor="middle" opacity="0.85">会議室</text>
+
+  <!-- Light gap under the door — warm golden glow leaking out -->
+  <rect x="330" y="376" width="140" height="6" rx="1" fill="#c8a030" opacity="0.0">
+    <animate attributeName="opacity" values="0.6;0.9;0.5;0.85;0.6" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Glow spread on floor -->
+  <rect x="290" y="378" width="220" height="30" fill="url(#doorGlow)" filter="url(#softBlur)">
+    <animate attributeName="opacity" values="0.7;1.0;0.6;0.95;0.7" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Shadow of person — listener's silhouette from inside, visible through frosted panel -->
+  <!-- Subtle dark shape shifting slowly on lower door panel -->
+  <rect x="340" y="285" width="120" height="70" rx="2" fill="#0d0a05" opacity="0.0">
+    <animate attributeName="opacity" values="0;0.4;0.6;0.3;0.5;0.2;0" dur="9s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Head shape appearing -->
+  <ellipse cx="380" cy="310" rx="18" ry="20" fill="#0d0a04" opacity="0.0">
+    <animate attributeName="opacity" values="0;0;0.5;0.7;0.4;0.6;0.2;0" dur="9s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Observer's shadow (the protagonist) — bottom right -->
+  <ellipse cx="680" cy="400" rx="50" ry="10" fill="#080604" opacity="0.8"/>
+  <rect x="658" y="290" width="44" height="115" rx="5" fill="#0a0806" opacity="0.7"/>
+  <ellipse cx="680" cy="285" rx="18" ry="20" fill="#0a0806" opacity="0.7"/>
+
+  <!-- Faint voices as text ripple — barely visible -->
+  <text x="400" y="440" font-family="monospace" font-size="9" fill="#3a2808" text-anchor="middle" opacity="0.0">
+    ……外のつながりが残っていると……
+    <animate attributeName="opacity" values="0;0;0.5;0.7;0.5;0;0" dur="12s" repeatCount="indefinite"/>
+  </text>
+  <text x="400" y="452" font-family="monospace" font-size="9" fill="#3a2808" text-anchor="middle" opacity="0.0">
+    ……断るだけでいいんです……
+    <animate attributeName="opacity" values="0;0;0;0.4;0.6;0.4;0" dur="12s" begin="2s" repeatCount="indefinite"/>
+  </text>
+</svg>
