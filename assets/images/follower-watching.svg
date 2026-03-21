@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="blur-sm">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <filter id="blur-md">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="glow-red">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="nightGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020408"/>
+      <stop offset="100%" stop-color="#05030a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark room background -->
+  <rect width="800" height="450" fill="url(#nightGrad)"/>
+
+  <!-- Room wall texture (very dark) -->
+  <rect x="0" y="0" width="800" height="450" fill="#04040a" opacity="0.5"/>
+
+  <!-- Window frame outer -->
+  <rect x="180" y="60" width="440" height="330" rx="2" fill="#0f0e0f" stroke="#1a1816" stroke-width="8"/>
+
+  <!-- Window glass (night outside - nearly black but slightly lighter) -->
+  <rect x="196" y="76" width="408" height="298" fill="#07080c"/>
+
+  <!-- Night sky gradient outside -->
+  <rect x="196" y="76" width="408" height="298" fill="#040508" opacity="0.9"/>
+
+  <!-- Faint distant city glow at bottom of window -->
+  <ellipse cx="400" cy="374" rx="160" ry="20" fill="#0d1020" opacity="0.5" filter="url(#blur-md)"/>
+
+  <!-- Window crossbar (horizontal) -->
+  <rect x="196" y="218" width="408" height="8" fill="#131213"/>
+  <!-- Window crossbar (vertical) -->
+  <rect x="396" y="76" width="8" height="298" fill="#131213"/>
+
+  <!-- Figure silhouette in upper-left pane — dark shape, barely visible -->
+  <g opacity="0.85">
+    <!-- Head -->
+    <ellipse cx="300" cy="136" rx="18" ry="20" fill="#060608" filter="url(#blur-sm)"/>
+    <!-- Shoulders/body -->
+    <path d="M268,160 Q300,148 332,160 L338,210 L262,210 Z" fill="#060608" filter="url(#blur-sm)"/>
+    <!-- Slight lighter outline to make it barely perceptible -->
+    <ellipse cx="300" cy="136" rx="17" ry="19" fill="none" stroke="#100f12" stroke-width="1.5" opacity="0.6"/>
+    <path d="M270,161 Q300,150 330,161 L336,209 L264,209 Z" fill="none" stroke="#100f12" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- Two small glints where eyes would be — the most unsettling part -->
+  <ellipse cx="293" cy="132" rx="2" ry="2.5" fill="#1a1020" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.2;0.8;0.1;0.7" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="307" cy="132" rx="2" ry="2.5" fill="#1a1020" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.1;0.9;0.2;0.7" dur="7s" begin="0.5s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Window glass reflection / glare (makes the outside harder to see) -->
+  <rect x="196" y="76" width="408" height="298" fill="none" stroke="#18181e" stroke-width="1" opacity="0.4"/>
+
+  <!-- Condensation effect (subtle lines on glass) -->
+  <line x1="220" y1="100" x2="218" y2="140" stroke="#0d0d12" stroke-width="1" opacity="0.4"/>
+  <line x1="350" y1="82" x2="347" y2="110" stroke="#0d0d12" stroke-width="1" opacity="0.3"/>
+  <line x1="560" y1="95" x2="558" y2="130" stroke="#0d0d12" stroke-width="1" opacity="0.3"/>
+
+  <!-- Interior room edge shadows -->
+  <rect x="0" y="0" width="180" height="450" fill="#020203"/>
+  <rect x="620" y="0" width="180" height="450" fill="#020203"/>
+  <rect x="0" y="0" width="800" height="60" fill="#020203"/>
+  <rect x="0" y="390" width="800" height="60" fill="#020203"/>
+
+  <!-- Curtain left (slightly open) -->
+  <path d="M180,60 Q200,150 190,390 L180,390 Z" fill="#0c0c0e" opacity="0.95"/>
+  <!-- Curtain right (slightly open) -->
+  <path d="M620,60 Q600,150 610,390 L620,390 Z" fill="#0c0c0e" opacity="0.95"/>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="glow-warm">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow-blur">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <linearGradient id="hallGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#020202"/>
+      <stop offset="50%" stop-color="#060505"/>
+      <stop offset="100%" stop-color="#020202"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#080606"/>
+      <stop offset="100%" stop-color="#030303"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark hallway background -->
+  <rect width="800" height="450" fill="#030203"/>
+
+  <!-- Hallway perspective lines -->
+  <!-- Left wall -->
+  <polygon points="0,0 240,80 240,370 0,450" fill="url(#hallGrad)"/>
+  <!-- Right wall -->
+  <polygon points="800,0 560,80 560,370 800,450" fill="url(#hallGrad)"/>
+  <!-- Ceiling -->
+  <polygon points="0,0 240,80 560,80 800,0" fill="#040304"/>
+  <!-- Floor -->
+  <polygon points="0,450 240,370 560,370 800,450" fill="url(#floorGrad)"/>
+  <!-- Back wall -->
+  <rect x="240" y="80" width="320" height="290" fill="#050404"/>
+
+  <!-- Door frame -->
+  <rect x="310" y="100" width="180" height="260" rx="3" fill="#0a0808" stroke="#151010" stroke-width="4"/>
+  <!-- Door surface -->
+  <rect x="316" y="106" width="168" height="248" rx="2" fill="#0d0b0b"/>
+
+  <!-- Door panels (decorative rectangles on door) -->
+  <rect x="326" y="120" width="60" height="80" rx="2" fill="none" stroke="#161212" stroke-width="1.5" opacity="0.6"/>
+  <rect x="314" y="120" width="60" height="80" rx="2" fill="none" stroke="#161212" stroke-width="1.5" opacity="0.6"/>
+  <rect x="326" y="215" width="60" height="80" rx="2" fill="none" stroke="#161212" stroke-width="1.5" opacity="0.6"/>
+  <rect x="314" y="215" width="60" height="80" rx="2" fill="none" stroke="#161212" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Doorknob -->
+  <circle cx="468" cy="235" r="6" fill="#1a1515" stroke="#221a1a" stroke-width="1"/>
+
+  <!-- THE KEY ELEMENT: Light seeping under the door -->
+  <rect x="316" y="350" width="168" height="4" rx="1" fill="#c8a050" opacity="0.9" filter="url(#glow-warm)">
+    <animate attributeName="opacity" values="0.9;0.4;0.8;0.6;0.9" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Soft glow pool on floor from door light -->
+  <ellipse cx="400" cy="358" rx="90" ry="8" fill="#c8a050" opacity="0.15" filter="url(#shadow-blur)">
+    <animate attributeName="opacity" values="0.15;0.06;0.12;0.08;0.15" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Shadow under door — something moving -->
+  <!-- Shadow blob that shifts, suggesting someone standing/moving on other side -->
+  <ellipse cx="380" cy="352" rx="22" ry="2" fill="#050303" opacity="0.95">
+    <animate attributeName="cx" values="380;395;375;400;380" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="22;18;25;15;22" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="430" cy="352" rx="14" ry="2" fill="#050303" opacity="0.9">
+    <animate attributeName="cx" values="430;420;435;415;430" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="14;18;11;16;14" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Faint hallway ceiling light (flickering, far away) -->
+  <ellipse cx="400" cy="85" rx="30" ry="5" fill="#1a1510" opacity="0.4" filter="url(#glow-warm)">
+    <animate attributeName="opacity" values="0.4;0.1;0.35;0.05;0.4" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Deep shadow in corners of hallway -->
+  <radialGradient id="cornerDark" cx="0" cy="0" r="1">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0.8"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+  <ellipse cx="0" cy="0" rx="200" ry="200" fill="url(#cornerDark)"/>
+  <ellipse cx="800" cy="0" rx="200" ry="200" fill="url(#cornerDark)"/>
+  <ellipse cx="0" cy="450" rx="200" ry="200" fill="url(#cornerDark)"/>
+  <ellipse cx="800" cy="450" rx="200" ry="200" fill="url(#cornerDark)"/>
+</svg>
