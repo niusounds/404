@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="doorlight" cx="92%" cy="50%" r="30%">
+      <stop offset="0%" stop-color="#18180a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dark room background -->
+  <rect width="800" height="500" fill="#040408"/>
+
+  <!-- Floor -->
+  <rect x="0" y="410" width="800" height="90" fill="#06060e"/>
+  <line x1="0" y1="410" x2="800" y2="410" stroke="#10101a" stroke-width="1"/>
+
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="800" height="70" fill="#06060e"/>
+  <line x1="0" y1="70" x2="800" y2="70" stroke="#10101a" stroke-width="1"/>
+
+  <!-- Back wall -->
+  <rect x="0" y="70" width="640" height="340" fill="#070710"/>
+
+  <!-- Bed frame -->
+  <rect x="60" y="270" width="560" height="170" fill="#0e0e1a" rx="4"/>
+  <!-- Headboard -->
+  <rect x="60" y="240" width="80" height="45" fill="#121220" rx="3"/>
+  <!-- Pillow -->
+  <ellipse cx="195" cy="268" rx="85" ry="22" fill="#161624"/>
+  <!-- Blanket -->
+  <rect x="90" y="285" width="510" height="148" fill="#0c0c18" rx="4"/>
+
+  <!-- Person silhouette - head raised, looking at door -->
+  <ellipse cx="195" cy="270" rx="32" ry="26" fill="#090910"/>
+  <!-- Eyes faintly visible, directed toward door -->
+  <ellipse cx="207" cy="267" rx="4" ry="3" fill="#141412" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.3;0.8;0.5;0.8" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Body bump under blanket -->
+  <ellipse cx="380" cy="330" rx="160" ry="38" fill="#0f0f1c" opacity="0.6"/>
+
+  <!-- Nightstand -->
+  <rect x="620" y="310" width="90" height="130" fill="#0a0a14"/>
+  <rect x="618" y="305" width="94" height="12" fill="#0d0d18" rx="2"/>
+  <!-- Dim lamp -->
+  <ellipse cx="665" cy="300" rx="22" ry="10" fill="#141408" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.3;0.6;0.2;0.5" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Door (right side, slightly ajar) -->
+  <rect x="700" y="80" width="90" height="330" fill="#090912" stroke="#181828" stroke-width="2"/>
+  <!-- Door gap - thin strip of corridor light -->
+  <rect x="698" y="80" width="7" height="330" fill="#201e0a" opacity="0.5"/>
+
+  <!-- Light from door gap falling on floor -->
+  <polygon points="698,390 705,390 730,420 698,420" fill="#141208" opacity="0.25"/>
+
+  <!-- Ambient light from door -->
+  <ellipse cx="720" cy="250" rx="80" ry="200" fill="url(#doorlight)"/>
+
+  <!-- Shadow figure at door - partially visible -->
+  <!-- Head silhouette in door gap -->
+  <ellipse cx="703" cy="155" rx="20" ry="25" fill="#050508" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.6;1;0.7;0.9" dur="9s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Body shape -->
+  <rect x="692" y="178" width="22" height="160" fill="#050508" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.6;1;0.7;0.9" dur="9s" repeatCount="indefinite"/>
+  </rect>
+</svg>

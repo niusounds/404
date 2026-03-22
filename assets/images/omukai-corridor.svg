@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="centerlight" cx="50%" cy="55%" r="40%">
+      <stop offset="0%" stop-color="#1e1e10" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#04040a"/>
+
+  <!-- Ceiling -->
+  <polygon points="0,0 800,0 800,90 0,90" fill="#070710"/>
+  <line x1="0" y1="90" x2="800" y2="90" stroke="#131320" stroke-width="1"/>
+
+  <!-- Floor -->
+  <polygon points="0,420 800,420 800,500 0,500" fill="#060610"/>
+  <line x1="0" y1="420" x2="800" y2="420" stroke="#131320" stroke-width="1"/>
+
+  <!-- Left wall -->
+  <rect x="0" y="90" width="140" height="330" fill="#080814"/>
+  <!-- Right wall -->
+  <rect x="660" y="90" width="140" height="330" fill="#080814"/>
+
+  <!-- Vanishing point perspective lines -->
+  <line x1="0" y1="90" x2="400" y2="230" stroke="#10101c" stroke-width="1"/>
+  <line x1="800" y1="90" x2="400" y2="230" stroke="#10101c" stroke-width="1"/>
+  <line x1="0" y1="420" x2="400" y2="280" stroke="#10101c" stroke-width="1"/>
+  <line x1="800" y1="420" x2="400" y2="280" stroke="#10101c" stroke-width="1"/>
+
+  <!-- Left door -->
+  <rect x="25" y="160" width="75" height="190" fill="#0b0b16" stroke="#1a1a28" stroke-width="1"/>
+  <circle cx="90" cy="255" r="4" fill="#1e1e2c"/>
+  <rect x="38" y="165" width="22" height="12" fill="#12121e" rx="1"/>
+
+  <!-- Right door -->
+  <rect x="700" y="160" width="75" height="190" fill="#0b0b16" stroke="#1a1a28" stroke-width="1"/>
+  <circle cx="710" cy="255" r="4" fill="#1e1e2c"/>
+  <rect x="740" y="165" width="22" height="12" fill="#12121e" rx="1"/>
+
+  <!-- Emergency ceiling light left -->
+  <rect x="15" y="92" width="28" height="9" fill="#181808" rx="2"/>
+  <rect x="15" y="92" width="28" height="9" fill="#2a2a10" rx="2">
+    <animate attributeName="opacity" values="0.6;0.2;0.7;0.1;0.6" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Emergency ceiling light right -->
+  <rect x="757" y="92" width="28" height="9" fill="#181808" rx="2"/>
+  <rect x="757" y="92" width="28" height="9" fill="#2a2a10" rx="2">
+    <animate attributeName="opacity" values="0.4;0.7;0.2;0.6;0.4" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Ambient light glow center -->
+  <ellipse cx="400" cy="260" rx="150" ry="80" fill="url(#centerlight)"/>
+
+  <!-- Shadow figure at end of corridor -->
+  <g opacity="0.85">
+    <!-- Head -->
+    <ellipse cx="400" cy="222" rx="14" ry="17" fill="#06060c"/>
+    <!-- Body -->
+    <rect x="387" y="238" width="26" height="52" fill="#06060c" rx="4"/>
+    <!-- Arms -->
+    <rect x="375" y="242" width="13" height="38" fill="#06060c" rx="3"/>
+    <rect x="412" y="242" width="13" height="38" fill="#06060c" rx="3"/>
+    <!-- Legs -->
+    <rect x="388" y="288" width="10" height="22" fill="#06060c" rx="2"/>
+    <rect x="402" y="288" width="10" height="22" fill="#06060c" rx="2"/>
+    <animate attributeName="opacity" values="0.85;0.5;0.9;0.4;0.85" dur="8s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Faint floor reflection of figure -->
+  <ellipse cx="400" cy="315" rx="18" ry="6" fill="#050509" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.2;0.5;0.3;0.5" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+</svg>
