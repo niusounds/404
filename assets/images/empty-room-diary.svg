@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <radialGradient id="pageLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5f0e0"/>
+      <stop offset="100%" stop-color="#c8c0a0"/>
+    </radialGradient>
+    <radialGradient id="bgGrad" cx="40%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#110e0a"/>
+      <stop offset="100%" stop-color="#050404"/>
+    </radialGradient>
+    <filter id="pageGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="smudge">
+      <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Glow behind diary -->
+  <ellipse cx="400" cy="260" rx="230" ry="180" fill="#f0e8c8" opacity="0.06" filter="url(#pageGlow)"/>
+
+  <!-- Diary/notebook - open spread -->
+  <!-- Left page -->
+  <rect x="160" y="100" width="210" height="300" rx="2" fill="#f2edd8" filter="url(#smudge)"/>
+  <!-- Right page -->
+  <rect x="370" y="100" width="210" height="300" rx="2" fill="#f5f0e2"/>
+  <!-- Spine shadow -->
+  <rect x="366" y="100" width="8" height="300" fill="#8a7a60" opacity="0.5"/>
+  <line x1="370" y1="100" x2="370" y2="400" stroke="#a09070" stroke-width="1"/>
+
+  <!-- Left page content - older entries, regular handwriting lines -->
+  <line x1="180" y1="135" x2="355" y2="135" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="180" y1="155" x2="355" y2="155" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="180" y1="175" x2="355" y2="175" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="180" y1="195" x2="355" y2="195" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="180" y1="215" x2="355" y2="215" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="180" y1="235" x2="355" y2="235" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="180" y1="255" x2="355" y2="255" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="180" y1="275" x2="355" y2="275" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="180" y1="295" x2="355" y2="295" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="180" y1="315" x2="355" y2="315" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="180" y1="335" x2="355" y2="335" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="180" y1="355" x2="355" y2="355" stroke="#c8c0a0" stroke-width="0.8"/>
+
+  <!-- Left page handwriting text (simulated) -->
+  <text x="182" y="130" font-family="serif" font-size="9" fill="#4a3a28" opacity="0.9">二月十四日</text>
+  <text x="182" y="150" font-family="serif" font-size="8" fill="#3a2a1a" opacity="0.85">また同じ夢を見た。廊下に誰かが</text>
+  <text x="182" y="170" font-family="serif" font-size="8" fill="#3a2a1a" opacity="0.85">立っている。顔は見えない。でも</text>
+  <text x="182" y="190" font-family="serif" font-size="8" fill="#3a2a1a" opacity="0.85">こちらを向いているのは分かる。</text>
+  <text x="182" y="230" font-family="serif" font-size="9" fill="#4a3a28" opacity="0.9">二月二十日</text>
+  <text x="182" y="250" font-family="serif" font-size="8" fill="#3a2a1a" opacity="0.85">鍵を確認した。全部閉まっていた。</text>
+  <text x="182" y="270" font-family="serif" font-size="8" fill="#3a2a1a" opacity="0.85">それなのになぜ、朝になると</text>
+  <text x="182" y="290" font-family="serif" font-size="8" fill="#3a2a1a" opacity="0.85">玄関のチェーンが外れているのか。</text>
+  <text x="182" y="350" font-family="serif" font-size="8" fill="#5a3a28" opacity="0.6">もうここには——</text>
+
+  <!-- Right page - the final, disturbing entry. Slightly messier writing -->
+  <line x1="388" y1="135" x2="563" y2="135" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="388" y1="155" x2="563" y2="155" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="388" y1="175" x2="563" y2="175" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="388" y1="195" x2="563" y2="195" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="388" y1="215" x2="563" y2="215" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="388" y1="235" x2="563" y2="235" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="388" y1="255" x2="563" y2="255" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="388" y1="275" x2="563" y2="275" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="388" y1="295" x2="563" y2="295" stroke="#c8c0a0" stroke-width="0.8"/>
+  <line x1="388" y1="315" x2="563" y2="315" stroke="#c8c0a0" stroke-width="0.8"/>
+
+  <!-- Right page text - final entry, frantic, disturbing -->
+  <text x="390" y="130" font-family="serif" font-size="9" fill="#5a1a10" opacity="0.95">三月二十一日　最後の記録</text>
+  <text x="390" y="152" font-family="serif" font-size="7.5" fill="#2a1a10" opacity="0.9">今日、誰かがこの部屋に来る。</text>
+  <text x="390" y="170" font-family="serif" font-size="7.5" fill="#2a1a10" opacity="0.9">私の荷物を片付けるために。</text>
+  <text x="390" y="190" font-family="serif" font-size="7.5" fill="#2a1a10" opacity="0.9">背が高い人だ。黒っぽい服を着ている。</text>
+  <text x="390" y="210" font-family="serif" font-size="7.5" fill="#2a1a10" opacity="0.9">今、この日記を読んでいる。</text>
+  <text x="390" y="232" font-family="serif" font-size="7.5" fill="#3a1008" opacity="0.95">あなたのことは、ずっと前から</text>
+  <text x="390" y="250" font-family="serif" font-size="7.5" fill="#3a1008" opacity="0.95">知っていた。</text>
+  <!-- Bigger, urgent final lines -->
+  <text x="390" y="275" font-family="serif" font-size="9" fill="#6a1a08" opacity="1" filter="url(#smudge)">逃げて。</text>
+  <text x="390" y="295" font-family="serif" font-size="8.5" fill="#6a1a08" opacity="1">今すぐここから出て。</text>
+  <text x="390" y="315" font-family="serif" font-size="8" fill="#8a0a0a" opacity="0.9">もうそこに——</text>
+
+  <!-- Ink smear/scratch at end of right page -->
+  <line x1="390" y1="330" x2="480" y2="335" stroke="#3a1a08" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="390" y1="336" x2="420" y2="342" stroke="#3a1a08" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Page curl bottom right -->
+  <path d="M 555 370 Q 570 400 545 400 Q 520 395 530 375 Z" fill="#e0d8b8" opacity="0.7"/>
+  <path d="M 555 370 Q 560 385 548 390" stroke="#c8c0a0" stroke-width="0.8" fill="none"/>
+
+  <!-- Faint finger shadow on right page -->
+  <ellipse cx="460" cy="380" rx="80" ry="20" fill="#5a4a30" opacity="0.1"/>
+
+  <!-- Blinking cursor/highlight on the "今" on right page -->
+  <rect x="388" y="200" width="6" height="11" fill="#c8a060" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0;0.3" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+</svg>
