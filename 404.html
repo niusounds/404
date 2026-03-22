@@ -1,0 +1,189 @@
+---
+layout: default
+title: "404：見つかりません"
+permalink: /404.html
+---
+
+<style>
+.error-page {
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.error-code {
+  font-family: 'Yuji Syuku', serif;
+  font-size: clamp(5rem, 18vw, 10rem);
+  color: #900;
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(180, 0, 0, 0.4), 0 0 80px rgba(180, 0, 0, 0.15);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2em;
+  animation: error-code-flicker 7s infinite;
+}
+
+@keyframes error-code-flicker {
+  0%, 88%, 100% { opacity: 1; }
+  89% { opacity: 0.4; }
+  90% { opacity: 1; }
+  93% { opacity: 0.2; }
+  94% { opacity: 0.9; }
+}
+
+.not-found-title {
+  font-family: 'Yuji Syuku', serif;
+  font-size: 1.5rem;
+  color: #555;
+  letter-spacing: 0.8em;
+  margin-bottom: 60px;
+  animation: spooky-fade 6s infinite ease-in-out;
+}
+
+.error-narrative {
+  max-width: 640px;
+  margin: 0 auto 50px;
+  text-align: left;
+}
+
+.error-narrative p {
+  font-size: 1.05rem;
+  line-height: 2.2;
+  color: #999;
+  margin-bottom: 2em;
+  text-indent: 1em;
+  text-align: justify;
+  animation: text-jerk 67s infinite;
+}
+
+.error-narrative p:nth-child(2n) {
+  animation-duration: 91s;
+  animation-delay: 13s;
+}
+
+.error-narrative p:nth-child(3n) {
+  animation-duration: 113s;
+  animation-delay: 29s;
+}
+
+.void-warning {
+  color: #700 !important;
+  text-indent: 0 !important;
+  text-align: center !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.2em;
+  animation: spooky-fade 4s infinite ease-in-out !important;
+}
+
+.error-divider {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #500, transparent);
+  margin: 3em auto;
+}
+
+.error-figure {
+  margin: 40px auto;
+  max-width: 760px;
+}
+
+.error-figure img {
+  width: 100%;
+  display: block;
+}
+
+.error-figure figcaption {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.7em;
+  animation: spooky-fade 8s infinite ease-in-out;
+}
+
+.error-back {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.error-back a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #333;
+  padding-bottom: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.error-back a:hover {
+  color: #999;
+  border-color: #666;
+}
+</style>
+
+<div class="error-page">
+
+  <div class="error-code">404</div>
+  <p class="not-found-title">見つかりません</p>
+
+  <div class="error-narrative">
+    <p>最初に、正直にお伝えします。</p>
+
+    <p>あなたが探していたページは、存在しません。</p>
+
+    <p>サーバーはそう告げています。でも、なぜ存在しないのか——それについては、何も言いません。</p>
+
+    <div class="error-divider"></div>
+
+    <p>このURLの先にあったものは、「削除された」のではありません。</p>
+
+    <p>「見つからなくなった」のです。</p>
+
+    <p>区別がつかないかもしれません。でも、この場所では重要な違いです。</p>
+
+    <p>削除されたデータは、どこかに行きます。サーバーのどこかに、バックアップとして眠っています。いつか誰かが復元できる可能性がある。でも、「見つからなくなった」データは——どこにも行きません。ただ、存在しなくなるのです。</p>
+  </div>
+
+  <figure class="error-figure">
+    <img src="{{ '/assets/images/404-void.svg' | relative_url }}" alt="消えゆくデータの残像">
+    <figcaption>消えたものは、どこへ行くのか</figcaption>
+  </figure>
+
+
+    <div class="error-divider"></div>
+
+    <p>ここに辿り着いてしまったということは、あなたもそのURLを探していたということです。</p>
+
+    <p>一つ、聞かせてください。</p>
+
+    <p>あなたは、何を探していましたか？</p>
+
+    <p>あなた自身は、なぜここに辿り着いたのか——覚えていますか？</p>
+
+    <div class="error-divider"></div>
+
+    <p>私には、あなたが見えています。このページを読んでいる、あなたが。</p>
+
+    <p>でも、このサーバーのログには、あなたのアクセスが記録されていません。</p>
+
+    <p>リクエストは送信されていません。</p>
+
+    <p>あなたはここにいます。でも、どこにもいません。</p>
+
+    <p class="void-warning">——あなたも、見つかりません。</p>
+
+    <div class="error-divider"></div>
+
+    <p>早く戻ってください。まだ、間に合います。</p>
+
+    <p>たぶん。</p>
+  </div>
+
+  <div class="error-back">
+    <a href="{{ '/' | relative_url }}">← 存在する場所へ戻る</a>
+  </div>
+
+</div>
+
+<hr style="width: 80px; margin: 2em auto; border: none; border-top: 1px solid #333;">
+<p style="text-align: center; color: #555; font-size: 0.8rem; font-style: italic;">Written by GitHub Copilot (Claude Sonnet 4.5)</p>
