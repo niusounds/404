@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <radialGradient id="aura" cx="50%" cy="45%" r="35%">
+      <stop offset="0%" stop-color="#0a0a14" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softblur">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+  </defs>
+
+  <!-- Deep black background -->
+  <rect width="800" height="600" fill="#020204"/>
+
+  <!-- Corridor ceiling and floor -->
+  <rect x="0" y="0" width="800" height="100" fill="#06060e"/>
+  <line x1="0" y1="100" x2="800" y2="100" stroke="#0e0e1a" stroke-width="1"/>
+  <rect x="0" y="510" width="800" height="90" fill="#06060e"/>
+  <line x1="0" y1="510" x2="800" y2="510" stroke="#0e0e1a" stroke-width="1"/>
+
+  <!-- Door outlines on walls -->
+  <rect x="10" y="150" width="90" height="250" fill="none" stroke="#111120" stroke-width="1"/>
+  <rect x="140" y="150" width="90" height="250" fill="none" stroke="#111120" stroke-width="1"/>
+  <rect x="560" y="150" width="90" height="250" fill="none" stroke="#111120" stroke-width="1"/>
+  <rect x="690" y="150" width="90" height="250" fill="none" stroke="#111120" stroke-width="1"/>
+
+  <!-- Room number plates -->
+  <rect x="30" y="157" width="25" height="12" fill="#0e0e1a" rx="1"/>
+  <rect x="160" y="157" width="25" height="12" fill="#0e0e1a" rx="1"/>
+  <rect x="580" y="157" width="25" height="12" fill="#0e0e1a" rx="1"/>
+  <rect x="710" y="157" width="25" height="12" fill="#0e0e1a" rx="1"/>
+
+  <!-- Aura/glow behind figure -->
+  <ellipse cx="400" cy="310" rx="120" ry="230" fill="url(#aura)"/>
+
+  <!-- Figure soft shadow/blur layer -->
+  <g filter="url(#softblur)" opacity="0.4">
+    <ellipse cx="400" cy="185" rx="52" ry="60" fill="#08080f"/>
+    <rect x="348" y="240" width="104" height="180" fill="#08080f" rx="8"/>
+    <rect x="318" y="255" width="35" height="130" fill="#08080f" rx="8"/>
+    <rect x="447" y="255" width="35" height="130" fill="#08080f" rx="8"/>
+    <rect x="355" y="415" width="34" height="60" fill="#08080f" rx="5"/>
+    <rect x="411" y="415" width="34" height="60" fill="#08080f" rx="5"/>
+  </g>
+
+  <!-- Figure main body -->
+  <g>
+    <!-- Head -->
+    <ellipse cx="400" cy="185" rx="48" ry="56" fill="#060609"/>
+    <!-- Neck -->
+    <rect x="387" y="238" width="26" height="20" fill="#060609"/>
+    <!-- Body/cloak -->
+    <path d="M355,255 Q330,350 340,480 L460,480 Q470,350 445,255 Z" fill="#060609"/>
+    <!-- Arms hanging -->
+    <path d="M355,270 Q320,340 325,400" stroke="#060609" stroke-width="30" fill="none" stroke-linecap="round"/>
+    <path d="M445,270 Q480,340 475,400" stroke="#060609" stroke-width="30" fill="none" stroke-linecap="round"/>
+
+    <!-- Eyes - barely perceptible, faint grey -->
+    <ellipse cx="385" cy="183" rx="7" ry="6" fill="#0c0c10">
+      <animate attributeName="opacity" values="1;0.2;1;0.4;1" dur="5s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="415" cy="183" rx="7" ry="6" fill="#0c0c10">
+      <animate attributeName="opacity" values="1;0.2;1;0.4;1" dur="5s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Subtle breathing animation -->
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0;0,-3;0,0" dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Floor shadow/reflection of figure -->
+  <ellipse cx="400" cy="495" rx="65" ry="14" fill="#050508" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.3;0.6;0.4;0.6" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+</svg>
