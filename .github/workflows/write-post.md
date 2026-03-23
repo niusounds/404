@@ -18,6 +18,7 @@ tools:
     toolsets: [default]
 safe-outputs:
   create-pull-request:
+    auto-merge: true
 ---
 
 # write-post
