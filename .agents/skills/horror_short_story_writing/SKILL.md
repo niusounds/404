@@ -1,5 +1,5 @@
 ---
-name: Horror Short Story Writing
+name: horror_short_story_writing
 description: Guidelines and tech patterns for generating Japanese scary short stories — horror, mystery, and hitokowa — and their accompanying illustrations for the Kowai Site blog.
 ---
 
