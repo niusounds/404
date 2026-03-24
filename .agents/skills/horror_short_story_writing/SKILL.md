@@ -17,6 +17,24 @@ The blog covers a wide range of scary stories beyond just supernatural horror (�
 *   **Formatting:** Use frequent paragraph breaks, especially one-sentence paragraphs, to control reading rhythm and build tension.
 *   **Endings:** Use open-ended, lingering, or chilling twists. Often, the protagonist is trapped, replaced, or left in a deeply unsettling permanent state. Do not resolve the horror happily.
 
+### Diversity Guardrails (Strong Mode)
+
+Before drafting, check the latest three posts in `_posts/` and avoid repeating the same combination of:
+*   **Genre core:** supernatural / mystery / hitokowa.
+*   **Structure:** linear timeline, reverse timeline, testimony transcript, investigation log, fragmented chapters.
+*   **Narrator mode:** standard first-person, unreliable narrator, multi-witness first-person, third-party records.
+
+If the genre overlaps with recent posts, force at least two changes from this list:
+*   Change the narrative structure.
+*   Change the narrator mode.
+*   Change the horror engine (what is terrifying: motive, mechanism, consequence).
+
+Avoid these repetition patterns in consecutive posts:
+*   Same opening beat (e.g., "late-night commute and a sudden anomaly").
+*   Same ending class (replacement reveal, endless loop reveal, narrator disappearance reveal).
+
+Prioritize underused themes listed in AGENTS.md, with extra preference for mystery-forward stories.
+
 ### Genre-Specific Tone Adjustments
 
 #### For Mystery Stories (ミステリー)
@@ -24,6 +42,12 @@ The blog covers a wide range of scary stories beyond just supernatural horror (�
 *   Scatter clues and partial explanations throughout; let the reader try to piece things together alongside the narrator.
 *   The resolution should be either "no explanation is possible" (which is terrifying in itself) or "the explanation is even more horrifying than the mystery."
 *   An **unreliable narrator** — one whose perception or memory may be compromised — is a powerful technique. The reader should wonder: is the narrator telling the truth? Are they sane?
+
+##### Mystery Composition Templates
+Use one of these templates and rotate them across posts:
+1.  **Early question template:** Mystery in paragraph 1-2, clue layering in middle, reveal that deepens uncertainty.
+2.  **Reverse-fragment template:** Start from aftermath, then reconstruct events via logs/records.
+3.  **Dual-testimony template:** Two first-person accounts that contradict each other; terror comes from the gap.
 
 #### For Hitokowa Stories (ヒトコワ — Human Horror)
 *   The source of fear must be entirely human: a stalker, a controlling partner, a neighbor with a secret, a cult, or a workplace that subtly destroys a person.
@@ -81,14 +105,20 @@ Use standard Markdown image syntax, followed by a bold or italicized caption on 
     *   **ミステリー** — unexplained disappearances, strange objects, cryptic messages, revelations worse than the unknown.
     *   **ヒトコワ** — stalkers, manipulative people, cults, workplace terror, human cruelty.
     If no theme is given, invent a compelling everyday scenario and choose the category that would make it most unsettling.
-2.  **Draft the Narrative:** Write the story in Japanese following the tone guidelines. Apply the genre-specific adjustments from Section 1 as needed.
-3.  **Plan Illustrations:** Identify 2-3 key moments that would benefit from an illustration (e.g., the setup, the introduction of the anomaly, the horrifying climax). For hitokowa stories, illustrations should feel more grounded and photorealistic (or deliberately mundane-yet-wrong) rather than overtly supernatural.
-4.  **Generate/Create Assets:** Create the illustrations and save them to `assets/images/`. Use a descriptive kebab-case filename that matches or relates to the post slug (e.g., `stalker-window.svg` for a hitokowa post about being watched). Keep all images flat in `assets/images/`; do not create subdirectories.
-5.  **Compile the Post:** Write the markdown file to `_posts/` with the narrative text, frontmatter, and embedded illustrations with captions.
-6.  **Add Credit:** At the very end of the post, add a credit line in the following format:
+2.  **Run Diversity Preflight:** Check the last three posts and decide genre, structure, and narrator mode that do not repeat recent combinations. Record a short rationale before writing.
+3.  **Draft the Narrative:** Write the story in Japanese following the tone guidelines. Apply the genre-specific adjustments from Section 1 as needed.
+4.  **Plan Illustrations:** Identify 2-3 key moments that would benefit from an illustration (e.g., the setup, the introduction of the anomaly, the horrifying climax). For hitokowa stories, illustrations should feel more grounded and photorealistic (or deliberately mundane-yet-wrong) rather than overtly supernatural.
+5.  **Generate/Create Assets:** Create the illustrations and save them to `assets/images/`. Use a descriptive kebab-case filename that matches or relates to the post slug (e.g., `stalker-window.svg` for a hitokowa post about being watched). Keep all images flat in `assets/images/`; do not create subdirectories.
+6.  **Compile the Post:** Write the markdown file to `_posts/` with the narrative text, frontmatter, and embedded illustrations with captions.
+7.  **Add Credit:** At the very end of the post, add a credit line in the following format:
     ```markdown
     ---
     Written by {Your model name}
     ```
     - example: `Written by GitHub Copilot (Gemini 3 Flash (Preview))`
-7.  **Verify:** Validate that the post builds correctly via Jekyll.
+8.  **Self-Audit Before Finish:** Confirm all checks below are satisfied:
+    *   Genre/structure/narrator combination is not a recent duplicate.
+    *   The opening beat differs from recent posts.
+    *   The ending class differs from recent posts.
+    *   Mystery stories present a clear question early and escalate with clues.
+9.  **Verify:** Validate that the post builds correctly via Jekyll.
