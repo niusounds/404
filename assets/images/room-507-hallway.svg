@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380">
+  <defs>
+    <radialGradient id="lampGlow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#fffbe8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e12"/>
+      <stop offset="100%" stop-color="#050709"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="380" fill="#050709"/>
+
+  <!-- Corridor floor perspective -->
+  <polygon points="200,380 400,380 480,240 120,240" fill="url(#floorGrad)"/>
+  <!-- Floor tiles faint lines -->
+  <line x1="300" y1="380" x2="300" y2="240" stroke="#0d1218" stroke-width="0.8"/>
+  <line x1="200" y1="380" x2="480" y2="240" stroke="#0d1218" stroke-width="0.5"/>
+  <line x1="400" y1="380" x2="120" y2="240" stroke="#0d1218" stroke-width="0.5"/>
+  <line x1="150" y1="340" x2="450" y2="340" stroke="#0d1218" stroke-width="0.5"/>
+  <line x1="130" y1="300" x2="470" y2="300" stroke="#0d1218" stroke-width="0.5"/>
+  <line x1="175" y1="265" x2="425" y2="265" stroke="#0d1218" stroke-width="0.5"/>
+
+  <!-- Left wall -->
+  <polygon points="0,0 200,380 0,380" fill="#080c10"/>
+  <polygon points="0,0 120,240 200,380 0,380" fill="#0a0e13"/>
+  <!-- Right wall -->
+  <polygon points="600,0 400,380 600,380" fill="#080c10"/>
+  <polygon points="600,0 480,240 400,380 600,380" fill="#0a0e13"/>
+
+  <!-- Ceiling -->
+  <polygon points="0,0 600,0 480,240 120,240" fill="#060a0d"/>
+
+  <!-- Wall at end -->
+  <rect x="120" y="240" width="360" height="4" fill="#0e1520"/>
+
+  <!-- Overhead lights (dim, flickering) -->
+  <!-- Light 1 (closer) -->
+  <ellipse cx="300" cy="248" rx="15" ry="4" fill="#fffbe8" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.08;0.25;0.35;0.1;0.3" dur="3.7s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="300" cy="248" rx="30" ry="20" fill="url(#lampGlow)">
+    <animate attributeName="opacity" values="1;0.3;0.8;1;0.4;1" dur="3.7s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Light 2 (further) -->
+  <ellipse cx="300" cy="244" rx="8" ry="2" fill="#fffbe8" opacity="0.15">
+    <animate attributeName="opacity" values="0.15;0.3;0.05;0.2;0.15" dur="5.1s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Old man silhouette at the end of the corridor -->
+  <!-- Body -->
+  <g opacity="0.85">
+    <!-- Legs -->
+    <rect x="285" y="322" width="8" height="28" fill="#0d1520" rx="2"/>
+    <rect x="307" y="322" width="8" height="28" fill="#0d1520" rx="2"/>
+    <!-- Torso -->
+    <rect x="280" y="285" width="40" height="40" fill="#0d1520" rx="3"/>
+    <!-- Head -->
+    <ellipse cx="300" cy="275" rx="14" ry="17" fill="#0d1520"/>
+    <!-- Arms raised, both hands on wall -->
+    <line x1="282" y1="300" x2="258" y2="268" stroke="#0d1520" stroke-width="7" stroke-linecap="round"/>
+    <line x1="318" y1="300" x2="342" y2="268" stroke="#0d1520" stroke-width="7" stroke-linecap="round"/>
+    <!-- Hands on wall -->
+    <ellipse cx="257" cy="264" rx="7" ry="6" fill="#0d1520"/>
+    <ellipse cx="343" cy="264" rx="7" ry="6" fill="#0d1520"/>
+    <!-- Slight lean forward (cane) -->
+    <line x1="280" y1="322" x2="260" y2="355" stroke="#0d1520" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Faint aura around the man -->
+  <ellipse cx="300" cy="300" rx="45" ry="70" fill="#8b2222" opacity="0.04">
+    <animate attributeName="opacity" values="0.04;0.09;0.03;0.07;0.04" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Wall ahead glowing faintly -->
+  <rect x="140" y="242" width="320" height="100" fill="#8b2222" opacity="0.03">
+    <animate attributeName="opacity" values="0.03;0.07;0.02;0.05;0.03" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Room numbers on wall doors (left side) -->
+  <rect x="5" y="120" width="55" height="90" fill="none" stroke="#131a22" stroke-width="1"/>
+  <text x="32" y="170" fill="#1a2530" font-size="13" font-family="monospace" text-anchor="middle">503</text>
+  <rect x="5" y="230" width="55" height="90" fill="none" stroke="#131a22" stroke-width="1"/>
+  <text x="32" y="280" fill="#1a2530" font-size="13" font-family="monospace" text-anchor="middle">505</text>
+
+  <!-- Room numbers on right side -->
+  <rect x="540" y="120" width="55" height="90" fill="none" stroke="#131a22" stroke-width="1"/>
+  <text x="567" y="170" fill="#1a2530" font-size="13" font-family="monospace" text-anchor="middle">504</text>
+</svg>
