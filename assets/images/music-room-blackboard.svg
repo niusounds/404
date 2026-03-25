@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <radialGradient id="boardLight" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0e1a16"/>
+      <stop offset="100%" stop-color="#060b08"/>
+    </radialGradient>
+    <filter id="chalkGlow">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="faintChalk">
+      <feGaussianBlur stdDeviation="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#040606"/>
+
+  <!-- Blackboard -->
+  <rect x="60" y="40" width="680" height="320" fill="url(#boardLight)" stroke="#0d1a14" stroke-width="4"/>
+  <!-- Board inner shadow -->
+  <rect x="64" y="44" width="672" height="312" fill="none" stroke="#0a1410" stroke-width="2" opacity="0.5"/>
+
+  <!-- Old faded chalk marks (barely visible) -->
+  <text x="90" y="100" font-family="serif" font-size="14" fill="#1e2e28" opacity="0.4" filter="url(#faintChalk)">授業記録　一九九七年度　第四学年</text>
+  <line x1="90" y1="110" x2="710" y2="110" stroke="#182820" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- The names list - clear chalk, haunting -->
+  <!-- Title line -->
+  <text x="90" y="145" font-family="serif" font-size="13" fill="#3a5045" filter="url(#faintChalk)">在籍不明児童　氏名</text>
+  <line x1="90" y1="152" x2="340" y2="152" stroke="#2a4038" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Eight names - white chalk, slightly different brightness each -->
+  <text x="105" y="178" font-family="serif" font-size="15" fill="#c8d8c8" opacity="0.75" filter="url(#chalkGlow)">松田　恵（まつだ　めぐみ）</text>
+  <text x="105" y="202" font-family="serif" font-size="15" fill="#b8ccc0" opacity="0.7" filter="url(#chalkGlow)">野上　浩二（のがみ　こうじ）</text>
+  <text x="105" y="226" font-family="serif" font-size="15" fill="#c0d0c4" opacity="0.72" filter="url(#chalkGlow)">田村　さくら（たむら　さくら）</text>
+  <text x="105" y="250" font-family="serif" font-size="15" fill="#b4c8bc" opacity="0.68" filter="url(#chalkGlow)">川本　達也（かわもと　たつや）</text>
+  <text x="105" y="274" font-family="serif" font-size="15" fill="#b8ccbe" opacity="0.65" filter="url(#chalkGlow)">横井　美穂（よこい　みほ）</text>
+  <text x="105" y="298" font-family="serif" font-size="15" fill="#b0c4b8" opacity="0.63" filter="url(#chalkGlow)">小林　誠（こばやし　まこと）</text>
+  <text x="105" y="322" font-family="serif" font-size="15" fill="#a8bcb2" opacity="0.60" filter="url(#chalkGlow)">宮崎　都（みやざき　みやこ）</text>
+  <text x="105" y="346" font-family="serif" font-size="15" fill="#a0b8ac" opacity="0.58" filter="url(#chalkGlow)">橋本　一郎（はしもと　いちろう）</text>
+
+  <!-- Dividing line -->
+  <line x1="90" y1="358" x2="500" y2="358" stroke="#4a6858" stroke-width="1" opacity="0.7"/>
+
+  <!-- The ninth name - much brighter, newer chalk, slightly larger -->
+  <text x="105" y="385" font-family="serif" font-size="19" fill="#e8f0e4" opacity="0.92" filter="url(#chalkGlow)" letter-spacing="2">田中　広（たなか　ひろし）</text>
+
+  <!-- Subtle glow pulse on 9th name -->
+  <text x="105" y="385" font-family="serif" font-size="19" fill="#ffffff" opacity="0" letter-spacing="2">田中　広（たなか　ひろし）</text>
+  <animate xlink:href="[last]" attributeName="opacity" values="0;0.08;0" dur="5s" repeatCount="indefinite"/>
+
+  <!-- Chalk dust streaks -->
+  <line x1="90" y1="178" x2="88" y2="178" stroke="#c8d8c8" stroke-width="2" opacity="0.2"/>
+  <line x1="90" y1="202" x2="87" y2="204" stroke="#b8ccc0" stroke-width="1.5" opacity="0.15"/>
+
+  <!-- Corner shadows -->
+  <polygon points="60,40 130,40 60,120" fill="#000000" opacity="0.3"/>
+  <polygon points="740,40 680,40 740,120" fill="#000000" opacity="0.3"/>
+  <polygon points="60,360 130,360 60,280" fill="#000000" opacity="0.2"/>
+  <polygon points="740,360 680,360 740,280" fill="#000000" opacity="0.2"/>
+
+  <!-- Vignette -->
+  <radialGradient id="boardVignette" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.8"/>
+  </radialGradient>
+  <rect width="800" height="400" fill="url(#boardVignette)"/>
+</svg>
