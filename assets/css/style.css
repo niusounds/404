@@ -286,17 +286,17 @@ body {
 }
 
 .site-nav a {
-  color: #444;
+  color: #888;
   text-decoration: none;
   font-size: 1rem;
   letter-spacing: 0.15em;
   padding: 5px 10px;
   position: relative;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .site-nav a:hover, .site-nav a.active {
-  color: #900;
+  color: #ff2222;
 }
 
 .site-nav a::after {
@@ -536,20 +536,20 @@ body {
 
 .read-more {
   display: inline-block;
-  color: #600;
+  color: #a00;
   text-decoration: none;
   font-size: 0.9rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   padding: 5px 0;
   border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
 }
 
 .read-more:hover {
-  color: #f00;
-  border-bottom-color: #f00;
+  color: #ff2222;
+  border-bottom-color: #ff2222;
   padding-left: 10px;
-  text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
 }
 
 /* Individual post */
@@ -619,22 +619,34 @@ body {
   animation: spooky-fade 8s infinite ease-in-out;
 }
 
+.site-content a {
+  color: #ff6e6e;
+  text-decoration-color: rgba(255, 110, 110, 0.5);
+  transition: all 0.25s ease;
+}
+
+.site-content a:hover {
+  color: #ffbaba;
+  text-decoration-color: rgba(255, 186, 186, 0.8);
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
 .post-content a {
-  color: #d27a7a;
-  text-decoration-color: rgba(210, 122, 122, 0.6);
+  color: #ff6e6e;
+  text-decoration-color: rgba(255, 110, 110, 0.5);
   text-underline-offset: 0.15em;
-  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .post-content a:visited {
-  color: #c86a6a;
-  text-decoration-color: rgba(200, 106, 106, 0.55);
+  color: #cc5454;
 }
 
 .post-content a:hover,
 .post-content a:focus-visible {
-  color: #ffd2d2;
-  text-decoration-color: rgba(255, 210, 210, 0.85);
+  color: #ffbaba;
+  text-decoration-color: rgba(255, 186, 186, 0.85);
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
 .post-content pre {
