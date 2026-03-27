@@ -278,6 +278,46 @@ body {
   opacity: 0.7;
 }
 
+.site-nav {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.site-nav a {
+  color: #444;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  padding: 5px 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover, .site-nav a.active {
+  color: #900;
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #900;
+  transition: width 0.3s ease;
+}
+
+.site-nav a:hover::after, .site-nav a.active::after {
+  width: 100%;
+}
+
+.site-nav a.active {
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
 /* Main content */
 .site-content {
   min-height: 60vh;

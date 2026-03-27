@@ -20,6 +20,11 @@
       {% else %}
       <p class="site-description-mini">{{ site.description }}</p>
       {% endif %}
+
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>報告書一覧</a>
+        <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>サイトについて</a>
+      </nav>
     </div>
   </header>
 
