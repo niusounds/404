@@ -1,6 +1,7 @@
 # Site settings
 title: "404：存在しないはずの記憶"
 description: 誰にも語られることのなかった「本物の」怪異
+image: "/assets/images/og_image.png"
 url: ""
 baseurl: ""
 
