@@ -56,7 +56,31 @@ Use one of these templates and rotate them across posts:
 *   Portray the protagonist's **isolation**: people they turn to for help don't believe them, or are themselves complicit.
 *   The ending should leave the reader with a sense that there is no escape, no rescue, and no justice.
 
-## 2. File Structure and Metadata
+## 2. Advanced Horror Techniques (恐怖を深める高度なテクニック)
+
+To write "scarier" stories, move beyond simple "monsters" and focus on psychological and physiological triggers.
+
+### 1. Sensory Infiltration (五感への侵食)
+Don't just describe what the character *sees*. Focus on:
+- **Smell**: The sweet, metallic scent of iron (blood), the smell of wet earth in high summer, or the faint, cloying odor of old cigarettes where no one has smoked.
+- **Sound**: High-pitched ringing, the "wet" sound of something moving in the dark, or a voice that sounds slightly synthesized or distorted.
+- **Touch**: The feeling of a spiderweb on the face, the sensation of hot breath on the neck, or skin that feels unnaturally cold or parchment-dry.
+
+### 2. The Abnormality of the Mundane (日常の不気味なズレ)
+- **Lack of Response**: A character who fails to react to an obvious stimulus (e.g., a car horn, a loud bang) creates a deep sense of wrongness.
+- **Repetitive Behavior**: A person performing a trivial task (e.g., folding a towel) with mechanical, unceasing precision.
+- **Unnatural Stillness**: A figure seen in the distance who remains perfectly still for hours, even as the environment around them changes.
+
+### 3. Cognitive Distortion and Void (認知の歪みと空白)
+- **The "Unseen" Rule**: The horror of discovering that a rule has always existed, and that the protagonist has been unknowingly breaking it.
+- **Missing Information**: A photograph where one person's face is consistently blurred, or a diary with pages torn out at exactly the same date every year.
+- **Logical Failures**: Using "dream logic" where the geometry of a room changes subtly, or a conversation loops in a way that feels intentional but inexplicable.
+
+### 4. Meta-Terror: Leaking Reality (メタ的な侵食)
+- **Direct Address**: A hint that the story the reader is currently reading is itself a trigger or a vessel for the curse.
+- **Residual Effects**: Ending with a physical sensation that the reader might currently be feeling (e.g., "Why is it so cold in the room you're in?").
+
+## 3. File Structure and Metadata
 
 *   Files should be placed in the `_posts/` directory.
 *   The filename format must be: `YYYY-MM-DD-kebab-case-title.md`.
