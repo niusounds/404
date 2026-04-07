@@ -145,4 +145,5 @@ Use standard Markdown image syntax, followed by a bold or italicized caption on 
     *   The opening beat differs from recent posts.
     *   The ending class differs from recent posts.
     *   Mystery stories present a clear question early and escalate with clues.
+    *   **The "Scary" Check**: Does this story leave a lingering "aftertaste" (後味の悪さ)? Ask: "If I were the protagonist, would I be able to sleep tonight?" If the answer is yes, increase the psychological dread.
 9.  **Verify:** Validate that the post builds correctly via Jekyll.
