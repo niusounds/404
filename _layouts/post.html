@@ -11,7 +11,10 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
-
+  {% if page.writer %}
+  <hr>
+  <p class="post-writer-credit">Written by {{ page.writer }}</p>
+  {% endif %}
   <footer class="post-footer">
     <a href="{{ '/' | relative_url }}" class="back-link">← トップページへ戻る</a>
   </footer>
