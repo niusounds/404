@@ -3,8 +3,16 @@ import subprocess
 from datetime import datetime
 import requests
 import json
+import sys
 
 # --- Configuration ---
+sys.path.append(os.path.join(os.path.dirname(__file__), 'engines'))
+try:
+    from post_generator import PostGeneratorEngine
+except ImportError:
+    print("Error: Could not import PostGeneratorEngine. Ensure engines/post_generator.py exists.")
+    sys.exit(1)
+
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL_NAME = "gemma4"
 POSTS_DIR = "_posts"
@@ -15,6 +23,7 @@ class AHEOrchestrator:
         self.model_name = MODEL_NAME
         self.ollama_url = OLLAMA_URL
         self.posts_dir = POSTS_DIR
+        self.generator = PostGeneratorEngine(self.model_name, self.ollama_url)
 
     def log(self, message: str):
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -44,7 +53,7 @@ class AHEOrchestrator:
 
     def ask_ollama_for_next_task(self, context: str) -> str:
         """Asks the local LLM to decide what the next task should be."""
-        self.log("Asking Ollima to decide the next task...")
+        self.log("Asking Ollama to decide the next task...")
 
         prompt = f"""
         You are the brain of the Autonomous Horror Engine (AHE).
@@ -78,10 +87,9 @@ class AHEOrchestrator:
     def run_task_post_generation(self, theme: str):
         self.log(f"Executing task: Generate post about '{theme}'")
         try:
-            # Call the actual engine
             content = self.generator.generate_story(theme)
             if "Error:" in content:
-                self.log(f"Generation failed: {content}")
+                self.log(f"Hyper-parameter configuration failed: {content}")
                 return
 
             output_path = self.generator.save_post(content, self.posts_dir)
@@ -93,7 +101,6 @@ class AHEOrchestrator:
             self.log(f"Error during task execution: {e}")
 
     def commit_changes(self, message: str):
-        """Commits changes to the local git repository."""
         self.log(f"Committing changes: {message}")
         try:
             subprocess.run(["git", "add", "."], check=True)
@@ -101,24 +108,15 @@ class AHEOrchestrator:
             self.log("Changes committed successfully.")
         except subprocess.CalledProcessError as e:
             self.log(f"Git error: {e}")
+        except Exception as e:
+            self.log(f"Error during commit: {e}")
 
     def run(self):
-        """Main loop of the orchestrator."""
         self.log("Starting Autonomous Horror Engine...")
-
-        # 1. Gather context
         context = self.get_existing_posts_context()
-
-        # 2. Decide task
         next_theme = self.ask_ollama_for_next_task(context)
         self.log(f"Decided next theme: {next_theme}")
-
-        # 3. Execute task (We will implement the actual generator integration next)
         self.run_task_post_generation(next_theme)
-
-        # 4. Commit (In prototype, we just log it)
-        # self.commit_changes(f"AHE: Automated horror post generation - {next_theme}")
-
         self.log("Cycle completed.")
 
 if __name__ == "__main__":
