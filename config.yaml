@@ -1,0 +1,181 @@
+# Maintenance Daemon Configuration for Horror Blog
+
+# Schedule: Define when each task should run (cron format)
+# Format: minute hour day_of_month month day_of_week [seconds (optional)]
+schedule:
+  post_generation:
+    enabled: true
+    # Run at 7:00 AM, 12:00 PM (noon), and 7:00 PM daily
+    cron: "0 7 0 * * *"
+    description: "Generate new horror story"
+
+  article_maintenance:
+    enabled: true
+    # Run every Monday at 2:00 AM
+    cron: "0 2 0 * * 1"
+    description: "Maintain and update existing articles"
+
+  build_and_deploy:
+    enabled: true
+    # Run after post generation (8:00 AM, 1:00 PM, 8:00 PM)
+    cron: "30 7 0 * * *"
+    description: "Build Jekyll site and deploy"
+
+  site_health_check:
+    enabled: true
+    # Run daily at 10:00 PM
+    cron: "0 22 0 * * *"
+    description: "Check site health and integrity"
+
+  llm_health_check:
+    enabled: true
+    # Run before each post generation task (6:50 AM, 11:50 AM, 6:50 PM)
+    cron: "50 6 0 * * *"
+    description: "Verify LLM (Ollama/LM Studio) availability"
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_dir: "logs"
+  retention_days: 30  # Keep logs for 30 days
+
+# Blog Configuration
+blog:
+  posts_dir: "_posts"
+  assets_dir: "assets"
+  images_dir: "assets/images"
+  jekyll_source: "."
+  jekyll_output: "_site"
+
+# Git Configuration
+git:
+  auto_commit: true
+  repo_dir: "."
+  commit_prefix: "📝"  # Prefix for auto-generated commits
+
+# LLM Configuration
+llm:
+  # Ollama settings
+  ollama:
+    enabled: true
+    url: "http://localhost:11434"
+    model: "gemma4"
+    timeout: 300  # seconds
+    
+  # LM Studio settings (alternative)
+  lm_studio:
+    enabled: false
+    url: "http://localhost:1234"
+    model: "gemma-3n-e4b"
+    timeout: 300
+
+  # Fallback behavior
+  max_retries: 3
+  retry_delay: 10  # seconds
+
+# Post Generation Settings
+post_generation:
+  # Diversity enforcement per AGENTS.md guidelines
+  check_diversity: true
+  # Check last N posts to avoid repeating themes
+  recent_posts_to_check: 3
+  
+  # Generation parameters
+  temperature: 0.8
+  max_attempts: 3
+  
+  # Source: 'ollama', 'lm_studio', or 'auto' (try ollama first)
+  source: 'auto'
+
+# Build Configuration
+build:
+  # Format: 'bundle exec jekyll build' or custom command
+  command: "bundle exec jekyll build"
+  timeout: 600  # seconds
+  
+  # Auto-deploy after successful build
+  auto_deploy: true
+  
+  # Deployment target (local path, rsync, s3, etc.)
+  deploy_type: "local"  # Options: local, rsync, github_pages, s3
+  deploy_target: "."    # For local: repo root; for rsync: user@host:/path
+  
+  # GitHub Pages auto-push
+  github_pages:
+    enabled: false
+    auto_push: true
+    branch: "main"
+
+# Site Health Check Configuration
+health_check:
+  # Check these aspects
+  check_links: true
+  check_images: true
+  check_rss: true
+  check_sitemap: true
+  
+  # Create GitHub issue if critical problems found
+  create_issue_on_error: true
+  issue_labels:
+    - "maintenance"
+    - "automated"
+
+# Notification Configuration
+notifications:
+  # Supported channels: github_issues, email, slack, local_log
+  enabled_channels:
+    - "local_log"
+    - "github_issues"
+  
+  # GitHub Issues
+  github:
+    enabled: true
+    # Auto-create issues for errors
+    auto_issue: true
+    issue_type: "bug"  # bug, improvement, documentation
+    issue_assignee: null  # Leave null for no auto-assignment
+    
+  # Email notifications
+  email:
+    enabled: false
+    smtp_server: "smtp.example.com"
+    smtp_port: 587
+    sender_email: "daemon@example.com"
+    recipients:
+      - "admin@example.com"
+    send_daily_digest: true
+    digest_time: "06:00"  # HH:MM format
+    
+  # Slack Webhook
+  slack:
+    enabled: false
+    webhook_url: "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+    channel: "#blog-maintenance"
+    notify_on_success: false  # Set to true if you want all notifications
+    notify_on_error: true
+
+# Error Handling
+error_handling:
+  # Retry policy
+  max_retries: 3
+  initial_retry_delay: 10  # seconds
+  backoff_multiplier: 2.0  # Exponential backoff
+  max_retry_delay: 300  # seconds
+  
+  # What to do on critical errors
+  halt_on_build_failure: true
+  halt_on_llm_failure: false
+  
+  # Auto-rollback on error
+  auto_rollback: true
+  
+  # Preserve error context
+  dump_error_context: true
+  error_log_dir: "logs/errors"
+
+# Feature Flags
+features:
+  ai_article_review: false  # AI reviews articles for improvements (not yet implemented)
+  narrative_mutations: false  # Narrative engine site mutations (experimental)
+  image_generation: false    # Generate SVG images with AI (not yet implemented)
+  seo_optimization: false    # Auto-optimize SEO metadata (not yet implemented)

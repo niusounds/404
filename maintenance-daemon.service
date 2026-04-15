@@ -1,0 +1,38 @@
+[Unit]
+Description=Horror Blog Maintenance Daemon - Autonomous post generation and site maintenance
+Documentation=https://github.com/niusounds/404
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+WorkingDirectory=/home/niusounds/404
+ExecStart=/usr/local/bin/horror-blog-daemon --config /home/niusounds/404/config.yaml
+
+# Restart policy
+Restart=on-failure
+RestartSec=10
+
+# Timeout settings
+TimeoutStartSec=30
+TimeoutStopSec=30
+
+# Security and sandboxing
+PrivateTmp=yes
+NoNewPrivileges=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=horror-blog-daemon
+
+# Resource limits
+LimitNOFILE=65535
+MemoryLimit=512M
+
+# Auto-restart on system boot
+KillMode=mixed
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target
