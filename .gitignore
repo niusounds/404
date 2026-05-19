@@ -10,3 +10,5 @@ logs/
 coverage.out
 coverage.html
 *.test
+__pycache__/
+.gemini/
