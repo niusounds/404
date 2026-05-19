@@ -1,0 +1,187 @@
+---
+layout: default
+title: 恐怖の階級図
+---
+
+<div class="content-wrapper">
+  <h2 class="section-title">恐怖指数ランキング</h2>
+  <p style="text-align: center; color: #666; font-size: 0.9rem; margin-bottom: 40px; font-style: italic;">
+    ※当サイトの独自基準により算出された、各カテゴリの最恐報告書です。
+  </p>
+
+  {% assign scored_posts = site.posts | filter: "horror_scores" %}
+
+  <div class="ranking-container">
+    
+    <!-- 総合評価ランキング -->
+    <section class="ranking-section">
+      <h3 class="ranking-category-title">🏆 総合最恐報告（OVERALL）</h3>
+      {% assign sorted_posts = scored_posts | sort: "horror_scores.average" | reverse %}
+      <div class="ranking-list">
+        {% for post in sorted_posts limit:5 %}
+        <div class="ranking-item">
+          <span class="rank-number">#{{ forloop.index }}</span>
+          <div class="rank-content">
+            <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+            <div class="rank-score">総合評価: {{ post.horror_scores.average }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;">
+      <!-- 恐怖度ランキング -->
+      <section class="ranking-section">
+        <h3 class="ranking-category-title">😱 恐怖度（FEAR）</h3>
+        {% assign sorted_posts = scored_posts | sort: "horror_scores.fear" | reverse %}
+        <div class="ranking-list">
+          {% for post in sorted_posts limit:5 %}
+          <div class="ranking-item mini">
+            <span class="rank-number">#{{ forloop.index }}</span>
+            <div class="rank-content">
+              <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+              <div class="rank-score">{{ post.horror_scores.fear }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <!-- 新鮮さランキング -->
+      <section class="ranking-section">
+        <h3 class="ranking-category-title">✨ 新鮮さ（NOVELTY）</h3>
+        {% assign sorted_posts = scored_posts | sort: "horror_scores.novelty" | reverse %}
+        <div class="ranking-list">
+          {% for post in sorted_posts limit:5 %}
+          <div class="ranking-item mini">
+            <span class="rank-number">#{{ forloop.index }}</span>
+            <div class="rank-content">
+              <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+              <div class="rank-score">{{ post.horror_scores.novelty }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <!-- 没入感ランキング -->
+      <section class="ranking-section">
+        <h3 class="ranking-category-title">👁️ 没入感（IMMERSION）</h3>
+        {% assign sorted_posts = scored_posts | sort: "horror_scores.immersion" | reverse %}
+        <div class="ranking-list">
+          {% for post in sorted_posts limit:5 %}
+          <div class="ranking-item mini">
+            <span class="rank-number">#{{ forloop.index }}</span>
+            <div class="rank-content">
+              <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+              <div class="rank-score">{{ post.horror_scores.immersion }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <!-- 残響力ランキング -->
+      <section class="ranking-section">
+        <h3 class="ranking-category-title">🔕 残響力（AFTERTASTE）</h3>
+        {% assign sorted_posts = scored_posts | sort: "horror_scores.aftertaste" | reverse %}
+        <div class="ranking-list">
+          {% for post in sorted_posts limit:5 %}
+          <div class="ranking-item mini">
+            <span class="rank-number">#{{ forloop.index }}</span>
+            <div class="rank-content">
+              <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+              <div class="rank-score">{{ post.horror_scores.aftertaste }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 60px; text-align: center;">
+    <a href="{{ '/' | relative_url }}" class="back-link">← トップページへ戻る</a>
+  </div>
+</div>
+
+<style>
+.ranking-category-title {
+  font-family: 'Yuji Syuku', serif;
+  color: #900;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #300;
+  padding-bottom: 10px;
+}
+
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  background: rgba(20, 0, 0, 0.2);
+  border: 1px solid #200;
+  padding: 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.ranking-item:hover {
+  background: rgba(40, 0, 0, 0.3);
+  border-color: #500;
+  transform: translateX(5px);
+}
+
+.ranking-item.mini {
+  padding: 10px;
+}
+
+.rank-number {
+  font-family: 'Yuji Syuku', serif;
+  font-size: 1.5rem;
+  color: #600;
+  margin-right: 20px;
+  min-width: 40px;
+  font-style: italic;
+}
+
+.mini .rank-number {
+  font-size: 1.1rem;
+  margin-right: 15px;
+  min-width: 30px;
+}
+
+.rank-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.mini h4 {
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.rank-content h4 a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.rank-score {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #900;
+}
+
+@media (max-width: 768px) {
+  .ranking-container > div {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
