@@ -1,5 +1,11 @@
 ---
 title: 空き部屋の日記
+horror_scores:
+  fear: 9
+  novelty: 8
+  immersion: 8
+  aftertaste: 9
+  average: 8.5
 ---
 
 不動産会社でのアルバイトを始めて、三ヶ月が経った頃の話だ。

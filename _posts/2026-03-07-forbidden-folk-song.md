@@ -1,5 +1,11 @@
 ---
 title: 潮騒に混ざる歌
+horror_scores:
+  fear: 8
+  novelty: 7
+  immersion: 8
+  aftertaste: 8
+  average: 7.8
 ---
 
 録音の仕事をしている。

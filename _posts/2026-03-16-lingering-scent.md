@@ -1,5 +1,11 @@
 ---
 title: 残り香
+horror_scores:
+  fear: 8
+  novelty: 8
+  immersion: 9
+  aftertaste: 9
+  average: 8.5
 ---
 
 母が死んで、三ヶ月が経った。

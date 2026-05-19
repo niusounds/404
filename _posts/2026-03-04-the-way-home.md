@@ -1,5 +1,11 @@
 ---
 title: 帰り道
+horror_scores:
+  fear: 7
+  novelty: 4
+  immersion: 7
+  aftertaste: 6
+  average: 6.0
 ---
 
 終電を逃した。

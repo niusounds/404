@@ -1,5 +1,11 @@
 ---
 title: 山の呼び声
+horror_scores:
+  fear: 8
+  novelty: 7
+  immersion: 9
+  aftertaste: 8
+  average: 8.0
 ---
 
 山道は、見慣れているはずだった。

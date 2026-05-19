@@ -1,5 +1,11 @@
 ---
 title: すでに記載済み
+horror_scores:
+  fear: 7
+  novelty: 7
+  immersion: 7
+  aftertaste: 7
+  average: 7.0
 ---
 
 （BGM：低いベースの嗡えと、ゆっくりと刻む時計の音。画面は暗めのトーンで、中央に「怪談チャンネル」というロゴが浮かび上がる）

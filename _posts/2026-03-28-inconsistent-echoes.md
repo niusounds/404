@@ -1,5 +1,11 @@
 ---
 title: 不適合な残響 ―高円寺、路地裏の古着店―
+horror_scores:
+  fear: 7
+  novelty: 9
+  immersion: 8
+  aftertaste: 8
+  average: 8.0
 ---
 
 高円寺の夜は、時に迷路のようにその姿を変える。

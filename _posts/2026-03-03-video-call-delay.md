@@ -1,5 +1,11 @@
 ---
 title: 0.5秒の遅延
+horror_scores:
+  fear: 8
+  novelty: 8
+  immersion: 8
+  aftertaste: 8
+  average: 8.0
 ---
 
 在宅勤務が続いて、もう半年になる。

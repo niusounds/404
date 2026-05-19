@@ -1,5 +1,11 @@
 ---
 title: 赤羽の男
+horror_scores:
+  fear: 6
+  novelty: 7
+  immersion: 9
+  aftertaste: 6
+  average: 7.0
 category: 実話怪談
 ---
 

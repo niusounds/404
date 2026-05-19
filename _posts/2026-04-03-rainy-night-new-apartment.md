@@ -1,5 +1,11 @@
 ---
 title: 雨夜の新築アパート
+horror_scores:
+  fear: 5
+  novelty: 4
+  immersion: 6
+  aftertaste: 5
+  average: 5.0
 ---
 
 こんにちは！怪談系YouTuberの「かげろふ」です。このたびは、視聴者の方から投稿されたあるある怪談をご紹介します。ぜひ音量を大きくして、真っ暗な部屋で聞いてくださいね～。  

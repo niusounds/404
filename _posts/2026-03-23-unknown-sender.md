@@ -1,5 +1,11 @@
 ---
 title: 差出人不明
+horror_scores:
+  fear: 9
+  novelty: 7
+  immersion: 9
+  aftertaste: 9
+  average: 8.5
 ---
 
 最初の封筒は、三月十五日に届いた。

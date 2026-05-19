@@ -1,5 +1,11 @@
 ---
 title: 七十二層の肖像
+horror_scores:
+  fear: 8
+  novelty: 9
+  immersion: 9
+  aftertaste: 9
+  average: 8.8
 ---
 
 私が師匠の工房に入ったのは、二十七歳の秋のことだった。

@@ -1,5 +1,11 @@
 ---
 title: 帰省
+horror_scores:
+  fear: 8
+  novelty: 8
+  immersion: 9
+  aftertaste: 9
+  average: 8.5
 ---
 
 祖母の訃報を受けたのは、十月の終わりだった。

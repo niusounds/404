@@ -1,5 +1,11 @@
 ---
 title: 幸福の調律
+horror_scores:
+  fear: 8
+  novelty: 8
+  immersion: 9
+  aftertaste: 9
+  average: 8.5
 ---
 
 **4月1日：勤務初日**

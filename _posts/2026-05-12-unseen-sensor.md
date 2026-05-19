@@ -1,5 +1,11 @@
 ---
 title: センサーの、不在
+horror_scores:
+  fear: 7
+  novelty: 7
+  immersion: 8
+  aftertaste: 7
+  average: 7.3
 ---
 深夜のコンビニ、その自動ドアは、不自然なほど静かに、しかし確実な意思を持って開く。
 

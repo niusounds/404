@@ -1,5 +1,11 @@
 ---
 title: 漬け床が覚える名前
+horror_scores:
+  fear: 8
+  novelty: 8
+  immersion: 8
+  aftertaste: 9
+  average: 8.3
 ---
 
 商店街の端に、百年続く漬物屋がある。

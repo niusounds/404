@@ -1,5 +1,11 @@
 ---
 title: 「対価はおまかせ」— 記憶を食らう自動販売機
+horror_scores:
+  fear: 7
+  novelty: 8
+  immersion: 9
+  aftertaste: 9
+  average: 8.3
 ---
 
 アスファルトが昼間の酷熱を吐き出し、湿った夜気が肌にまとわりつく熱帯夜。

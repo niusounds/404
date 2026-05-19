@@ -1,5 +1,11 @@
 ---
 title: 遺影修復師の沈黙
+horror_scores:
+  fear: 8
+  novelty: 7
+  immersion: 8
+  aftertaste: 8
+  average: 7.8
 ---
 
 私の仕事は、死者の顔を「作り直す」ことだ。

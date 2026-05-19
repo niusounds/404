@@ -1,5 +1,11 @@
 ---
 title: ハッピーエンド
+horror_scores:
+  fear: 7
+  novelty: 8
+  immersion: 9
+  aftertaste: 9
+  average: 8.3
 ---
 
 それは、誰もが望む「幸せな結末」だった。

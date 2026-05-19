@@ -1,5 +1,11 @@
 ---
 title: 待つ浜辺
+horror_scores:
+  fear: 8
+  novelty: 9
+  immersion: 9
+  aftertaste: 9
+  average: 8.8
 ---
 
 仕事が落ち着いたので、一人で海に行くことにした。

@@ -1,5 +1,11 @@
 ---
 title: 診察記録の次のページ
+horror_scores:
+  fear: 7
+  novelty: 7
+  immersion: 7
+  aftertaste: 8
+  average: 7.3
 ---
 
 （静かなBGMがフェードイン。マイク前の声が、やや低く、しかし明確に響く）

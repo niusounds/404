@@ -1,5 +1,11 @@
 ---
 title: 終電の存在しない駅
+horror_scores:
+  fear: 8
+  novelty: 6
+  immersion: 8
+  aftertaste: 9
+  average: 7.8
 ---
 
 残業で疲れ果て、私はいつもよりずっと遅い時間の電車に乗った。時計の針は午前一時を指している。終電から三十分も遅れた、存在しないはずの「幽霊列車」だ。

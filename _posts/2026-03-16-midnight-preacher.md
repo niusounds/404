@@ -1,6 +1,12 @@
 ---
 layout: post
 title: 深夜の埼京線、静寂を裂く福音
+horror_scores:
+  fear: 7
+  novelty: 7
+  immersion: 9
+  aftertaste: 7
+  average: 7.5
 category: 実話怪談
 ---
 

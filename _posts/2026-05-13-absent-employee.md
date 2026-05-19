@@ -1,5 +1,11 @@
 ---
 title: 消えた社員のメールログ
+horror_scores:
+  fear: 8
+  novelty: 8
+  immersion: 9
+  aftertaste: 9
+  average: 8.5
 ---
 
 【社内メール抜粋：2026年4月】

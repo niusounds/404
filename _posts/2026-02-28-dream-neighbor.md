@@ -1,5 +1,11 @@
 ---
 title: 夢の中の隣人
+horror_scores:
+  fear: 6
+  novelty: 6
+  immersion: 7
+  aftertaste: 7
+  average: 6.5
 ---
 
 夜中、ふと目が覚めた。

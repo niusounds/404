@@ -1,5 +1,11 @@
 ---
 title: 消えたアカウント追跡記
+horror_scores:
+  fear: 6
+  novelty: 8
+  immersion: 9
+  aftertaste: 7
+  average: 7.5
 ---
 
 2026年3月30日、フォロワー約2.4万人の地域情報アカウント「@district_trace_37」が、予告なく消えた。

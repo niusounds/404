@@ -1,5 +1,11 @@
 ---
 title: 「こっちにおいで」— 余白に棲む落書き
+horror_scores:
+  fear: 7
+  novelty: 7
+  immersion: 8
+  aftertaste: 8
+  average: 7.5
 ---
 
 午後の五限目。古びた扇風機がぬるい空気をかき回す教室で、私は猛烈な眠気と戦っていた。

@@ -1,5 +1,11 @@
 ---
 title: 「集合写真」— 逃げ場のない高精細な呪い
+horror_scores:
+  fear: 8
+  novelty: 5
+  immersion: 7
+  aftertaste: 7
+  average: 6.8
 ---
 
 修学旅行から帰った後の教室は、浮ついた空気で満ちていた。

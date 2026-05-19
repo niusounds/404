@@ -1,5 +1,11 @@
 ---
 title: 月読の鏡
+horror_scores:
+  fear: 7
+  novelty: 6
+  immersion: 7
+  aftertaste: 8
+  average: 7.0
 ---
 
 **今日の話**

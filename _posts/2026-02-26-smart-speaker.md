@@ -1,5 +1,11 @@
 ---
 title: 登録されていない同居人
+horror_scores:
+  fear: 8
+  novelty: 8
+  immersion: 9
+  aftertaste: 8
+  average: 8.3
 ---
 
 一人暮らしを始めて、最初に買ったのがスマートスピーカーだった。

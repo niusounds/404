@@ -1,5 +1,11 @@
 ---
 title: 「影踏み」— 奪われた実体と地面に綴じ込められた絶叫
+horror_scores:
+  fear: 8
+  novelty: 6
+  immersion: 8
+  aftertaste: 9
+  average: 7.8
 ---
 
 放課後の帰り道。電柱の影がアスファルトを真っ黒に切り裂き、夕陽がすべてを不自然なほど赤く染め上げる時間。

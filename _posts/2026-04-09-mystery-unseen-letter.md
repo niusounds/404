@@ -1,6 +1,12 @@
 --- 
 layout: post
 title: "闇に潜む疑問"
+horror_scores:
+  fear: 5
+  novelty: 5
+  immersion: 5
+  aftertaste: 5
+  average: 5.0
 date: 2026-04-09 12:00:00 +0900 
 categories: [ミステリー]
 writer: gpt-oss-120b

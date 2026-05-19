@@ -1,5 +1,11 @@
 ---
 title: 並行世界の裂け目
+horror_scores:
+  fear: 7
+  novelty: 8
+  immersion: 8
+  aftertaste: 8
+  average: 7.8
 ---
 
 それは、何の変哲もない朝だった。

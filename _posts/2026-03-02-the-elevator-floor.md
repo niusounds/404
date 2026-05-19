@@ -1,5 +1,11 @@
 ---
 title: 存在しない13階
+horror_scores:
+  fear: 7
+  novelty: 5
+  immersion: 6
+  aftertaste: 6
+  average: 6.0
 ---
 
 仕事が終わらず、深夜のオフィスで一人。
