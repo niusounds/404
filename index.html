@@ -27,6 +27,11 @@ layout: default
             <span class="post-category-tag" style="background: #400; color: #fff; padding: 2px 8px; font-size: 0.8rem; margin-left: 10px; border-radius: 4px;">{{ post.category }}</span>
             {% endif %}
             <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            {% if post.horror_scores %}
+            <div class="post-horror-score" style="margin-top: 5px; font-family: 'Yuji Syuku', serif; color: #900; font-size: 0.9rem;">
+              👻 恐怖指数: {{ post.horror_scores.average }}
+            </div>
+            {% endif %}
           </div>
           <div class="post-body">
             <div class="post-excerpt">

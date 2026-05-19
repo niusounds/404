@@ -577,6 +577,114 @@ body {
   color: #666;
 }
 
+.horror-evaluation {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(20, 0, 0, 0.2);
+  border: 1px solid #300;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.horror-evaluation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, transparent 0, rgba(255, 0, 0, 0.03) 1px, transparent 2px);
+  pointer-events: none;
+}
+
+.horror-evaluation h3 {
+  font-family: 'Yuji Syuku', serif;
+  font-size: 1.2rem;
+  color: #900;
+  margin-bottom: 20px;
+  border: none;
+  padding: 0;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 30px;
+  margin-bottom: 20px;
+}
+
+.score-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.score-label {
+  font-size: 0.85rem;
+  color: #666;
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.score-bar {
+  flex-grow: 1;
+  height: 6px;
+  background: #111;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.score-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #600, #b00);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  position: relative;
+}
+
+.score-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: scan-highlight 2s infinite;
+}
+
+@keyframes scan-highlight {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+.score-value {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #a00;
+  width: 30px;
+  text-align: right;
+}
+
+.score-avg {
+  border-top: 1px solid #300;
+  padding-top: 15px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.score-value-large {
+  font-family: 'Yuji Syuku', serif;
+  font-size: 2.2rem;
+  color: #f00;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  line-height: 1;
+}
+
 .post-content {
   font-size: 1.1rem;
   line-height: 2;

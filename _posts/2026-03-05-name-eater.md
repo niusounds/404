@@ -1,5 +1,11 @@
 ---
 title: 名前を喰らうもの
+horror_scores:
+  fear: 8
+  novelty: 8
+  immersion: 8
+  aftertaste: 9
+  average: 8.3
 ---
 
 最初に異変に気づいたのは、会社の席札だった。

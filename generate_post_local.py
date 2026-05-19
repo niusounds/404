@@ -452,7 +452,7 @@ def get_slug(title):
     except:
         return "school-horror-" + datetime.now().strftime("%H%M%S")
 
-def parse_and_save(content, model):
+def parse_and_save(content, model, analysis=None):
     # 本文からタイトルを生成する
     title = get_title_from_story(content)
     print(f"Generated title: {title}")
@@ -471,6 +471,16 @@ def parse_and_save(content, model):
     # クレジット
     credit = f"\n\n---\nWritten by {model}"
 
+    # 評価情報（フロントマター用）
+    horror_scores_fm = ""
+    if analysis:
+        horror_scores_fm = f"""horror_scores:
+  fear: {analysis.get('fear_score', 0)}
+  novelty: {analysis.get('novelty_score', 0)}
+  immersion: {analysis.get('immersion_score', 0)}
+  aftertaste: {analysis.get('aftertaste_score', 0)}
+  average: {analysis.get('avg_score', 0)}"""
+
     # プロンプト情報の追記
     prompt_info = f"""
 
@@ -488,6 +498,7 @@ user prompt:
     # フロントマターと本文の組み立て
     post_data = f"""---
 title: {title}
+{horror_scores_fm}
 ---
 
 {body}{credit}{prompt_info}
@@ -520,6 +531,6 @@ if __name__ == "__main__":
     else:
         print("Analysis failed, skipping improvement.")
 
-    path = parse_and_save(cleaned, story_model)
+    path = parse_and_save(cleaned, story_model, analysis)
     print(f"Success! Saved to {path}")
 

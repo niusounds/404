@@ -1,5 +1,11 @@
 ---
 title: 七分早い時計
+horror_scores:
+  fear: 6
+  novelty: 8
+  immersion: 9
+  aftertaste: 7
+  average: 7.5
 ---
 
 父が逝って半年後、押し入れの段ボールを整理していたら、古い腕時計が出てきた。

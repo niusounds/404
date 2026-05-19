@@ -1,5 +1,11 @@
 ---
 title: 階の隙間
+horror_scores:
+  fear: 8
+  novelty: 7
+  immersion: 9
+  aftertaste: 9
+  average: 8.3
 ---
 
 【ビル管理システム：アクセスログ】

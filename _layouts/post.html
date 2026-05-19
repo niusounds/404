@@ -6,6 +6,38 @@ layout: default
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-date">{{ page.date | date: "%Y年%m月%d日" }}</p>
+
+    {% if page.horror_scores %}
+    <div class="horror-evaluation">
+      <h3>👻 恐怖指数評価</h3>
+      <div class="score-grid">
+        <div class="score-item">
+          <span class="score-label">恐怖度</span>
+          <div class="score-bar"><div class="score-fill" style="width: {{ page.horror_scores.fear | times: 10 }}%"></div></div>
+          <span class="score-value">{{ page.horror_scores.fear }}</span>
+        </div>
+        <div class="score-item">
+          <span class="score-label">新鮮さ</span>
+          <div class="score-bar"><div class="score-fill" style="width: {{ page.horror_scores.novelty | times: 10 }}%"></div></div>
+          <span class="score-value">{{ page.horror_scores.novelty }}</span>
+        </div>
+        <div class="score-item">
+          <span class="score-label">没入感</span>
+          <div class="score-bar"><div class="score-fill" style="width: {{ page.horror_scores.immersion | times: 10 }}%"></div></div>
+          <span class="score-value">{{ page.horror_scores.immersion }}</span>
+        </div>
+        <div class="score-item">
+          <span class="score-label">残響力</span>
+          <div class="score-bar"><div class="score-fill" style="width: {{ page.horror_scores.aftertaste | times: 10 }}%"></div></div>
+          <span class="score-value">{{ page.horror_scores.aftertaste }}</span>
+        </div>
+      </div>
+      <div class="score-avg">
+        <span class="score-label">総合評価</span>
+        <span class="score-value-large">{{ page.horror_scores.average }}</span>
+      </div>
+    </div>
+    {% endif %}
   </header>
 
   <div class="post-content">

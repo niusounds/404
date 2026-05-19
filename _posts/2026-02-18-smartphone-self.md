@@ -1,5 +1,11 @@
 ---
 title: スマホの中の自分
+horror_scores:
+  fear: 9
+  novelty: 7
+  immersion: 8
+  aftertaste: 9
+  average: 8.3
 ---
 
 それは、退屈な放課後の、どこにでもある静かなひとときのはずだった。

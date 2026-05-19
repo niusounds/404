@@ -1,5 +1,11 @@
 ---
 title: 出汁の味
+horror_scores:
+  fear: 7
+  novelty: 6
+  immersion: 8
+  aftertaste: 8
+  average: 7.3
 ---
 
 夜の十一時を過ぎてから会社を出た。
