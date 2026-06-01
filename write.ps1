@@ -109,21 +109,12 @@ title: $title
 ---
 "@
 
-$signature = @'
+$signature = @"
 
 ---
 Written by $Model
 
-system prompt:
-```
-$SystemPrompt
-```
-
-user prompt:
-```
-$UserPrompt
-```
-'@
+"@
 
 $fullContent = "$frontMatter`n$story`n$signature"
 
