@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200">
+  <defs>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+    <linearGradient id="fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff3333" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ff0000" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffaaaa" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="600" height="200" fill="#05040a" />
+
+  <!-- Hallway perspective lines in muted green (night vision feel) -->
+  <path d="M100,0 L175,200 M325,0 L275,200 M450,0 L390,200 
+          M430,80 L330,130" fill="none" stroke="#2a6553" stroke-width="0.5"/>
+  
+  <!-- Three figures standing at doorways -->
+  <circle cx="470" cy="60" r="9" fill="#ff0000">
+    <animate attributeName="fill" values="#ff0000;#aa0000;#ffcc55;#ff0000" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Floor dragging shadow (thin elongated blob) -->
+  <ellipse cx="495" cy="178" rx="38" ry="6.5" fill="#ff38008" filter="url(#blur)">
+    <animate attributeName="ry" values="6.5;7.5;6.5" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Handprint on wall (six-finger distortion) -->
+  <g transform="translate(190, 85)">
+    <rect width="45" height="75" rx="3" fill="#ff6b00" opacity="0.25"/>
+    <circle cx="8" cy="5" r="2.5" rx="2.5" fill="#e901a0"/>
+    <circle cx="14" cy="3" r="2.5" fill="#ee3b3b"/>
+    <ellipse cx="21" cy="6" rx="6.8" ry="2.5" fill="#ff8500"/>
+    <text x="28" y="-2" font-size="6" font-family="sans-serif">index</text>
+  </g>
+
+  <!-- Text label -->
+  <rect width="170" height="24" rx="3" fill="#101020" />
+  <text x="5" y="18" font-size="13" font-family="'Courier New'" color="#ff9900">REC ● 02:47AM</rect>
+
+</svg>
