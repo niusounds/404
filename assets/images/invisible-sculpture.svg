@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+    </filter>
+    <linearGradient id="boneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4c8b0;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#a89878;stop-opacity:0.7"/>
+    </linearGradient>
+    <radialGradient id="shadowGrad" cx="50%" cy="45%" r="30%">
+      <stop offset="0%" style="stop-color:#2a1a1a;stop-opacity:0.9"/>
+      <stop offset="60%" style="stop-color:#1a0a0a;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#0a0808;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="800" height="500" fill="#0d0b0b"/>
+  
+  <!-- Ribcage X-ray appearance -->
+  <g opacity="0.6">
+    <!-- Spine -->
+    <line x1="400" y1="30" x2="400" y2="480" stroke="#d4c8b0" stroke-width="3" stroke-dasharray="8,5"/>
+    
+    <!-- Ribs - left side -->
+    <path d="M 395,80 Q 320,70 270,130 Q 260,150 310,160" fill="none" stroke="#d4c8b0" stroke-width="2.5"/>
+    <path d="M 393,130 Q 310,125 250,180 Q 240,200 300,210" fill="none" stroke="#d4c8b0" stroke-width="2.5"/>
+    <path d="M 392,185 Q 305,180 240,240 Q 230,260 295,270" fill="none" stroke="#d4c8b0" stroke-width="2.5"/>
+    <path d="M 393,240 Q 310,240 250,300 Q 245,320 300,325" fill="none" stroke="#d4c8b0" stroke-width="2.5"/>
+    <path d="M 396,295 Q 320,295 275,350 Q 270,365 315,370" fill="none" stroke="#d4c8b0" stroke-width="2"/>
+    <path d="M 398,345 Q 335,345 305,390 Q 300,400 335,405" fill="none" stroke="#d4c8b0" stroke-width="1.8"/>
+    <path d="M 399,390 Q 350,392 330,430 Q 330,437 360,440" fill="none" stroke="#d4c8b0" stroke-width="1.5"/>
+    <path d="M 400,430 Q 365,432 350,460 Q 352,464 370,466" fill="none" stroke="#d4c8b0" stroke-width="1.2"/>
+    
+    <!-- Ribs - right side -->
+    <path d="M 405,80 Q 480,70 530,130 Q 540,150 490,160" fill="none" stroke="#d4c8b0" stroke-width="2.5"/>
+    <path d="M 407,130 Q 490,125 550,180 Q 560,200 500,210" fill="none" stroke="#d4c8b0" stroke-width="2.5"/>
+    <path d="M 408,185 Q 495,180 560,240 Q 570,260 505,270" fill="none" stroke="#d4c8b0" stroke-width="2.5"/>
+    <path d="M 407,240 Q 490,240 550,300 Q 555,320 500,325" fill="none" stroke="#d4c8b0" stroke-width="2.5"/>
+    <path d="M 404,295 Q 480,295 525,350 Q 530,365 485,370" fill="none" stroke="#d4c8b0" stroke-width="2"/>
+    <path d="M 402,345 Q 465,345 505,390 Q 510,400 475,405" fill="none" stroke="#d4c8b0" stroke-width="1.8"/>
+    <path d="M 401,390 Q 450,392 470,430 Q 470,437 440,440" fill="none" stroke="#d4c8b0" stroke-width="1.5"/>
+    <path d="M 400,430 Q 435,432 450,460 Q 448,464 430,466" fill="none" stroke="#d4c8b0" stroke-width="1.2"/>
+    
+    <!-- Sternum -->
+    <rect x="397" y="80" width="6" height="380" rx="3" fill="url(#boneGrad)" opacity="0.8"/>
+  </g>
+  
+  <!-- Shadow mass inside chest cavity (the "sculpture") -->
+  <ellipse cx="435" cy="220" rx="65" ry="95" fill="url(#shadowGrad)"/>
+  
+  <!-- Stone-like hand reaching out from between ribs on the right side -->
+  <g filter="url(#glow)">
+    <path d="M 475,180 C 495,165 520,150 540,135" fill="none" stroke="#c8b090" stroke-width="2.5" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="542" cy="132" r="3" fill="#c8b090" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <path d="M 465,185 C 490,178 510,168 530,160" fill="none" stroke="#c8b090" stroke-width="2" stroke-opacity="0.7">
+      <animate attributeName="stroke-opacity" values="0.7;0.2;0.7" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="532" cy="158" r="2.5" fill="#c8b090" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.15;0.6" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <path d="M 472,188 C 498,188 520,182 542,180" fill="none" stroke="#c8b090" stroke-width="2.2" stroke-opacity="0.9">
+      <animate attributeName="stroke-opacity" values="0.9;0.3;0.9" dur="2.5s" begin="1s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="544" cy="178" r="3" fill="#c8b090" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2.5s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Knobs at finger tips -->
+    <path d="M 460,192 C 482,193 505,192 525,195" fill="none" stroke="#c8b090" stroke-width="1.5" stroke-opacity="0.5"/>
+    <circle cx="527" cy="194" r="2" fill="#c8b090" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3.5s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Small scattered particles/bones falling -->
+  <g opacity="0.4">
+    <rect x="342" y="420" width="8" height="3" rx="1.5" fill="#c8b090" transform="rotate(30,346,421)">
+      <animate attributeName="y" values="420;440;420" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="458" cy="455" r="2.5" fill="#a89878">
+      <animate attributeName="cy" values="455;470;455" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <ellipse cx="320" cy="460" rx="4" ry="2" fill="#c8b090" opacity="0.3">
+      <animate attributeName="cy" values="460;475;460" dur="5s" begin="1s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Vignette effect -->
+  <rect width="800" height="500" fill="url(#shadowGrad)" opacity="0.5" style="mix-blend-mode: multiply;"/>
+</svg>
