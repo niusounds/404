@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- Night sky -->
+  <rect width="800" height="300" fill="#06040a"/>
+  <!-- Road silhouette at bottom -->
+  <rect y="270" width="800" height="30" fill="#1a1820"/>
+  <!-- Street lamp -->
+  <line x1="650" y1="50" x2="650" y2="140" stroke="#2a252e" stroke-width="2"/>
+  <circle cx="650" cy="48" r="8" fill="#3b2f3f"/>
+  <ellipse cx="650" cy="58" rx="50" ry="18" fill="#ffcc44" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.15;0.3" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Hotel building silhouette -->
+  <rect x="80" y="80" width="200" height="190" fill="#0e0c14"/>
+  <rect x="60" y="75" width="240" height="15" rx="3" fill="#14111b"/>
+  <!-- Lit windows -->
+  <g>
+    <rect x="120" y="120" width="40" height="50" fill="#ffcc44" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.6;0.7" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="230" y="120" width="40" height="50" fill="#0a080e" stroke="#2a252e" stroke-width="1"/>
+  </g>
+  <g>
+    <rect x="120" y="200" width="40" height="40" fill="#0a080e" stroke="#2a252e" stroke-width="1"/>
+    <rect x="230" y="200" width="40" height="40" fill="#ffcc44" opacity="0.15">
+      <animate attributeName="opacity" values="0.15;0.25;0.15" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <!-- Neon sign -->
+  <text x="95" y="72" fill="#ff4488" font-size="12" font-family="sans-serif" filter="url(#glow)">MOTEL</text>
+  <text x="155" y="72" fill="#44ccff" font-size="10" font-family="sans-serif">6</text>
+  <!-- Room numbers on building -->
+  <text x="95" y="110" fill="#3b2f3f" font-size="8">#6</text>
+  <text x="65" y="145" fill="#3b2f3f" font-size="6">06</text>
+  
+  <!-- Person sitting in window #6 -->
+  <ellipse cx="140" cy="160" rx="5" ry="8" fill="#ffccdd" opacity="0.5"/>
+  <rect x="138" y="168" width="4" height="8" fill="#c7b2e8" opacity="0.6"/>
+  
+  <!-- Fog at bottom -->
+  <ellipse cx="400" cy="280" rx="500" ry="25" fill="#1a1522" opacity="0.4"/>
+</svg>

@@ -1,0 +1,14 @@
+<!-- dark opening into subsurface, arrow trail to right -->
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <radialGradient id="vig"><stop offset="70%" stop-color="#050510"/><stop offset="92%" stop-color="#181a28"/></radialGradient>
+  </defs>
+  
+  <!-- concrete floor grid -->
+  <g stroke="#483820" stroke-width="2" opacity=".9">
+    <line x1="80" y1="60" x2="520" y2="60"/>
+    <line x1="90" y1="78" x2="510" y2="78"/>
+  </g>
+
+  <!-- open manhole: thick concrete edge -->
+  <rect class="mh" x="180" y="56" width="243" height="90" rx="3.5"/></svg>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <rect width="500" height="400" fill="#05050a"/>
+
+  <!-- Perspective view of spiral/recursive desk layout -->
+  
+  <!-- Floor grid for depth -->
+  <line x1="50" y1="350" x2="450" y2="350" stroke="#151215" stroke-width="0.5"/>
+  <line x1="80" y1="370" x2="420" y2="390" stroke="#120f12" stroke-width="0.3"/>
+  
+  <!-- Recursive desk layers - inner is slightly larger (loop effect) -->
+  <g opacity="0.8">
+    <!-- Outer layer - closest to viewer -->
+    <rect x="150" y="300" width="240" height="8" rx="1" fill="#1a120c"/> <!-- desk top -->
+    
+    <!-- Desk 1: left side (newest, brighter) -->
+    <g transform="translate(180, 250)">
+      <rect x="0" y="0" width="45" height="50" fill="#0d0a0c"/>
+      <line x1="15" y1="30" x2="30" y2="30" stroke="#1e1816" stroke-width="1"/> <!-- screen lines -->
+      <rect x="-10" y="48" width="9" height="30" fill="#1a1512"/> <!-- leg -->
+      <rect x="47" y="48" width="9" height="30" fill="#1a1512"/> <!-- leg -->
+      <line x1="10" y1="60" x2="-10" y2="65" stroke="#1a1512" stroke-width="1.5"/> <!-- chair arm R-to-L -->
+      <circle cx="38" cy="74" r="30" opacity="0.04">
+        <animate attributeName="cx" values="38;50;38;25;38" dur="8s" repeatCount="indefinite"/>
+      </circle> <!-- subtle glow -->
+    </g>
+
+    <!-- Desk 2: center (middle layer) -->
+    <g transform="translate(270, 245)">
+      <rect x="0" y="0" width="45" height="50" fill="#0b0810"/>
+      <line x1="15" y1="30" x2="30" y2="30" stroke="#161218" stroke-width="1"/>
+      <rect x="-10" y="48" width="9" height="30" fill="#1a1512"/>
+      <rect x="47" y="48" width="9" height="30" fill="#1a1512"/>
+    </g>
+
+    <!-- Desk 3: right side (oldest, nearly identical) -->
+    <g transform="translate(365, 252)">
+      <rect x="0" y="0" width="45" height="50" fill="#0a0812"/>
+      <line x1="15" y1="30" x2="30" y2="30" stroke="#161218" stroke-width="1"/>
+      <rect x="-10" y="48" width="9" height="30" fill="#1a1512"/>
+      <rect x="47" y="48" width="9" height="30" fill="#1a1512"/>
+    </g>
+
+    <!-- Inner layer (repeating/deeper) -->
+    <g transform="translate(195, 195)" opacity="0.6">
+      <rect x="0" y="0" width="40" height="45" fill="#0b0810"/>
+      <line x1="13" y1="27" x2="27" y2="27" stroke="#121116" stroke-width="1"/>
+    </g>
+
+    <!-- Outermost (deepest layer - recursive loop) -->
+    <g transform="translate(185, 160)" opacity="0.35">
+      <rect x="0" y="0" width="42" height="46" fill="#090710"/>
+      <line x1="12" y1="28" x2="30" y2="28" stroke="#101015" stroke-width="1.2"/>
+    </g>
+
+    <!-- Farthest (almost invisible - where identity loss begins) -->
+    <g transform="translate(175, 140)" opacity="0.15">
+      <rect x="0" y="0" width="48" height="48" fill="#07050f"/>
+    </g>
+
+    <!-- One desk with slightly different layout - implying "the other person's seat" -->
+    <g transform="translate(320, 195)">
+      <rect x="0" y="0" width="40" height="45" fill="#1a0e0b"/> <!-- warm tint = old occupant -->
+      <line x1="13" y1="27" x2="27" y2="27" stroke="#1f1612" stroke-width="1.2"/>
+    </g>
+
+  </g>
+
+  <!-- Ceiling grid lines - vanishing point effect -->  
+  <path d="M80,50 L180,140 M190,50 L270,200 M300,50 L360,200" stroke="#1a161c" stroke-width="0.4" opacity="0.5"/>
+  <ellipse cx="90" cy="30" rx="70" ry="8" fill="none" stroke="#151216" stroke-width="0.3"/>
+
+  <!-- Overlapping text hints - showing the "counting/stacking" of chairs/desks -->
+  <text x="250" y="375" font-family="monospace" font-size="8" fill="#1a161c" opacity="0.5">
+    SEATS: N+∞
+  </text>
+
+  <!-- Red "wrongness" accent - the one slightly brighter desk -->
+  <line x1="203" y1="247" x2="229" y2="247" stroke="#2a0d0d" stroke-width="1.5">
+    <animate attributeName="opacity" values="0;0.8;0;0.6;0" dur="3s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Subtle floor reflection / shadow lines -->
+  <path d="M190,325 Q240,340 M290,320 Q350,345" stroke="#0d0b0a" stroke-width="0.7" opacity="0.4"/>
+
+</svg>

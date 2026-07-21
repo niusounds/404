@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+  <rect width="400" height="600" fill="#05050a"/>
+  
+  <!-- Building structure -->
+  <rect x="120" y="80" width="160" height="480" fill="#0d0b0b" stroke="#1a1515" stroke-width="1.5"/>
+  
+  <!-- Roof detail -->
+  <path d="M110,85 L200,30 L290,85 Z" fill="#0d0b0b" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Windows - all dark, flickering hint with opacity -->
+  <g opacity="0.6">
+    <rect x="145" y="120" width="35" height="45" fill="#1a1a2e" stroke="#0a0812" stroke-width="0.5"/>
+    <rect x="220" y="120" width="35" height="45" fill="#0d0b0f" stroke="#0a080c" stroke-width="0.5">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    
+    <rect x="145" y="200" width="35" height="45" fill="#0d0b0f" stroke="#0a080c" stroke-width="0.5">
+      <animate attributeName="opacity" values="0.4;0.7;0.4;0;0.4" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="220" y="200" width="35" height="45" fill="#1a1a2e" stroke="#0a0812" stroke-width="0.5"/>
+    
+    <rect x="145" y="280" width="35" height="45" fill="#0d0b0f" stroke="#0a080c" stroke-width="0.5">
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="220" y="280" width="35" height="45" fill="#1a1a2e" stroke="#0a0812" stroke-width="0.5"/>
+    
+    <rect x="145" y="360" width="35" height="45" fill="#1a1a2e" stroke="#0a0812" stroke-width="0.5"/>
+    <rect x="220" y="360" width="35" height="45" fill="#0d0b0f" stroke="#0a080c" stroke-width="0.5">
+      <animate attributeName="opacity" values="0.5;0;0.5;0;0.5" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Higher floors - increasingly dark -->
+    <rect x="145" y="440" width="35" height="45" fill="#0a0810" stroke="#070609" stroke-width="0.5"/>
+    <rect x="220" y="440" width="35" height="45" fill="#0a0810" stroke="#070609" stroke-width="0.5"/>
+
+    <rect x="145" y="520" width="35" height="45" fill="#060510" stroke="#030307" stroke-width="0.3"/>
+    <rect x="220" y="520" width="35" height="45" fill="#060510" stroke="#030307" stroke-width="0.3"/>
+  </g>
+
+  <!-- No entrance area - solid wall replacing door -->
+  <rect x="170" y="500" width="60" height="60" fill="#1a120c" stroke="#0d0b08" stroke-width="1"/>
+  <line x1="170" y1="530" x2="230" y2="530" stroke="#0d0b08" stroke-width="0.5"/>
+  <!-- Crack-like detail indicating sealed exit -->
+  <path d="M195,495 Q200,510 M200,505 Q206,520 M202,530 L204,558" stroke="#1a120c" 
+        stroke-width="0.7" fill="none" opacity="0.6"/>
+  
+  <!-- Ground line -->
+  <line x1="50" y1="560" x2="350" y2="560" stroke="#1a1515" stroke-width="0.8"/>
+
+  <!-- Fog/mist at base -->
+  <ellipse cx="200" cy="570" rx="80" ry="20" fill="#0d0b0f" opacity="0.4">
+    <animate attributeName="rx" values="60;90;70;85;60" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Subtle red text indicating no exit -->
+  <text x="195" y="475" fill="#2a1313" font-family="monospace" font-size="8" opacity="0.6">EXIT:UNDEF</text>
+  
+  <!-- Small starlight dots for atmosphere, one flickering -->
+  <circle cx="70" cy="60" r="0.5" fill="#ffffff" opacity="0.3"/>
+  <circle cx="320" cy="90" r="0.4" fill="#ffffff" opacity="0.2"/>
+  <circle cx="180" cy="30" r="0.6" fill="#ffffff" opacity="0.25">
+    <animate attributeName="opacity" values="0.1;0.35;0.1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>

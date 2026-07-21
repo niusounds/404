@@ -1,0 +1,65 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#0a0808"/>
+  
+  <!-- Background grid distortion effect -->
+  <defs>
+    <pattern id="gridPattern1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 0,20 L 40,20 M 20,0 L 20,40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    
+    <!-- Distortion effect -->
+    <filter id="warpFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" seed="2"/>
+      <feDisplacementMap in="SourceGraphic" scale="15" />
+    </filter>
+  </defs>
+  
+  <!-- Grid background with distortion -->
+  <rect width="300" height="200" fill="url(#gridPattern1)" filter="url(#warpFilter)"/>
+  
+  <!-- Central portal/vortex -->
+  <g transform="translate(150,100)">
+    <ellipse cx="0" cy="-60" rx="40" ry="80" fill="none" stroke="#3a2d2f" stroke-width="1.5" opacity="0.7"/>
+    
+    <!-- Distorted text fragments floating around -->
+    <g transform="translate(-80, -90)" filter="url(#warpFilter)">
+      <text x="-20" y="0" fill="#c4aeb0" font-family="Arial" font-size="14">壁</text>  <!-- wall -->
+      <rect x="0" y="-8" width="16" height="16" fill="#c4aeb0" opacity="0.4"/>       <!-- small box -->
+    </g>
+    
+    <g transform="translate(-75, -30)" filter="url(#warpFilter)">
+      <text x="-20" y="0" fill="#8b9fa8" font-family="Arial" font-size="14">窓</text>  <!-- window -->
+      <circle cx="0" cy="-4" r="6" fill="#8b9fa8" opacity="0.3"/>                       <!-- small circle -->
+    </g>
+    
+    <g transform="translate(45, -20)">
+      <line x1="-5" y1="0" x2="25" y2="0" stroke="#ffb6c1" stroke-width="0.8"/>  <!-- distorted line -->
+      <circle cx="20" cy="-4" r="3" fill="#fcb4ab" opacity="0.5"/>                     <!-- small point -->
+    </g>
+    
+    <text x="-32" y="-66" font-family="Arial" font-size="11">壁</text>  <!-- wall text fragment -->
+    <rect x="6" y="-73" width="9" height="10" fill="#ff5462" opacity="0.8"/>  <!-- small box -->
+    
+    <text x="5" y="-58" font-family="Arial" font-size="11">窓</text>     <!-- window text fragment -->
+    <circle cx="13" cy="-70" r="4" fill="#ff5462" opacity="0.6"/>        <!-- small circle -->
+    
+    <!-- Subtle distortion effect on portal itself -->
+    <ellipse cx="0" cy="-60" rx="55" ry="95" fill="none" stroke="#ffffff" stroke-width="0.7" opacity="0.4" stroke-dasharray="8 4"/>
+    
+    <!-- Light rays emanating from center -->
+    <g transform="translate(150, 100)">
+      <line x1="36" y1="-95" x2="52" y2="-65" stroke="#bcb8c7" stroke-width="0.8" opacity="0.4"/>
+      <line x1="-36" y1="-125" x2="-52" y2="-95" stroke="#bcb8c7" stroke-width="0.8" opacity="0.5"/>
+      <line x1="82" y1="-45" x2="72" y2="-60" stroke="#ffcccb" stroke-width="0.7" opacity="0.3"/>
+    </g>
+  </g>
+  
+  <!-- Floor with spatial distortion -->
+  <rect width="300" height="40" fill="#d97f85" opacity="0.2"/>  <!-- floor base -->
+  
+  <!-- Subtle grid lines on floor -->
+  <path d="M10,160 L120,165 M 50,180 L 140,185" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+</svg>EOF
+
+echo "SVG image created successfully in _posts/images/spatial-dilation.svg"
+
