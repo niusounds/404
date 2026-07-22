@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60">
+  <rect width="180" height="60" fill="#0a0505"/>
+  <circle cx="90" cy="30" r="14" fill="#1f1111" stroke="#3a2020" stroke-width="0.5">
+    <animate attributeName="r" values="14;16;14" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M90 44 C78 52, 102 52, 90 44Z" fill="#3b1a1a">
+    <animate attributeName="d" values="M90 44 C78 52,102 52,90 44Z;M90 46 C74 54,106 54,90 46Z;M90 44 C78 52,102 52,90 44Z" dur="3s" repeatCount="indefinite"/>
+  </path>
+</svg>
