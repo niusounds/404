@@ -1,0 +1,34 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
+  <rect fill="#0a0a0f" width="600" height="200"/>
+  
+  <!-- Subtle static noise particles -->
+  <g opacity="0.15">
+    <circle cx="45" cy="30" r="1" fill="#4048ff"/>
+    <circle cx="120" cy="85" r="0.7" fill="#6010f0"/>
+    <circle cx="190" cy="42" r="1.2" fill="#3a3aff"/>
+    <circle cx="250" cy="110" r="0.8" fill="#5020ee"/>
+    <circle cx="330" cy="75" r="1.1" fill="#4515ff"/>
+    <circle cx="395" cy="130" r="0.6" fill="#3a08cc"/>
+    <circle cx="450" cy="55" r="0.9" fill="#2b05ee"/>
+    <circle cx="520" cy="160" r="0.5" fill="#5530ff"/>
+  </g>
+  
+  <!-- Main waveform line -->
+  <line x1="40" y1="100" x2="180" y2="100" stroke="#2a60ff" stroke-width="1.5" opacity="0.3"/>
+  
+  <!-- Pulse wave — the key visual element -->
+  <path d="M 180,100 L 210,100 L 230,60 L 260,140 L 290,90 L 310,105 L 330,70 M 345,100 L 560,100" 
+        fill="none" stroke="#3a80ff" stroke-width="2.5"
+        opacity="0.9">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Distant secondary pulse (the mystery element — faint, ambiguous) -->
+  <path d="M 268,100 L 315,100 C 340,95 370,150 400,90 S 460,105 490,100" 
+        fill="none" stroke="#8020e0" stroke-width="1.2"
+        opacity="0.5">
+    <animate attributeName="opacity" values="0.2;0.7;0.3;0.6;0.2" dur="4s" repeatCount="indefinite"/>
+  </path>
+
+</svg>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" width="100%" height="auto">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#151320"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- sky -->
+  <rect width="640" height="200" fill="url(#sky)"/>
+  
+  <!-- stars faint -->
+  <circle cx="80" cy="40" r="0.5" fill="#a09090" opacity="0.3">
+    <animate attributeName="opacity" values="0.1;0.5;0.1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="70" r="0.4" fill="#a09090" opacity="0.2">
+    <animate attributeName="opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="480" cy="30" r="0.5" fill="#a09090" opacity="0.2">
+    <animate attributeName="opacity" values="0.1;0.6;0.1" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- building silhouette -->
+  <rect x="280" y="60" width="80" height="90" fill="#1a1518"/>
+  <polygon points="270,60 320,45 370,60" fill="#1e191c"/>
+  
+  <!-- single window lit -->
+  <rect x="308" y="75" width="8" height="10" fill="#ff3300" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.4;0.9;0.2;0.9" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- smaller annex -->
+  <rect x="357" y="85" width="50" height="65" fill="#161214"/>
+  <rect x="375" y="100" width="6" height="8" fill="#ff2200" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- coastline / seawall -->
+  <line x1="0" y1="150" x2="640" y2="150" stroke="#3a2525" stroke-width="1"/>
+  
+  <!-- water - dark with slight movement lines -->
+  <path d="M0,155 Q80,150 160,155 T320,155 T480,155 T640,155 L640,200 L0,200 Z" 
+        fill="#0a0f15"/>
+  <path d="M0,160 Q80,156 160,160 T320,160 T480,160 T640,160" 
+        stroke="#1a2030" stroke-width="0.5" fill="none">
+    <animate attributeName="d" 
+             values="M0,160 Q80,156 160,160 T320,160 T480,160 T640,160;M0,160 Q80,164 160,160 T320,160 T480,160 T640,160;M0,160 Q80,156 160,160 T320,160 T480,160 T640,160" 
+             dur="5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- text overlay -->
+  <text x="320" y="92" font-family="sans-serif" font-size="14" fill="#ff3333" opacity="0.7" 
+        filter="url(#glow)" text-anchor="middle">NO-9</text>
+        
+  <!-- warning stripe at base of building -->
+  <rect x="280" y="150" width="80" height="3" fill="#2a1a1a"/>
+  
+</svg>

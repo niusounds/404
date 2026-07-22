@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" width="100%" height="auto">
+  <defs>
+    <filter id="redGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  
+  <!-- dark background -->
+  <rect width="560" height="220" fill="#080810"/>
+  <!-- grid lines -->
+  <g stroke="#1a1a2e" stroke-width="0.5">
+    <line x1="40" y1="30" x2="520" y2="30"/><line x1="40" y1="70" x2="520" y2="70"/>
+    <line x1="40" y1="110" x2="520" y2="110"/><line x1="40" y1="150" x2="520" y2="150"/>
+    <line x1="40" y1="190" x2="520" y2="190"/>
+  </g>
+
+  <!-- Y axis -->
+  <line x1="38" y1="18" x2="38" y2="200" stroke="#4a3030" stroke-width="0.75"/>
+  
+  <!-- reference flat line (real sea level) -->
+  <line x1="40" y1="90" x2="520" y2="90" stroke="#606080" stroke-width="0.75" stroke-dasharray="3,2">
+    <text x="530" y="85" font-family="monospace" font-size="10" fill="#606080">海面 (正常)</text>
+  </line>
+
+  <!-- actual anomalous wave pattern -->
+  <path d="M40,90 Q80,40 120,70 T200,55 T280,65 T360,80 T440,60 T520,75" 
+        fill="none" stroke="#ff2222" stroke-width="1.5" filter="url(#redGlow)"/>
+  
+  <!-- label -->
+  <text x="60" y="48" font-family="monospace" font-size="9" fill="#ff3333">異常波形</text>
+
+  <!-- anomaly zone shading -->
+  <path d="M160,90 Q220,75 280,70 T400,65 L400,85 Q340,90 280,85 T200,90 Z" 
+        fill="#ff000010"/>
+</svg>
