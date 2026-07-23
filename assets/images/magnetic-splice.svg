@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="colored"/>
+      <feMerge>
+        <feMergeNode in="colored"/>
+<feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="300" fill="#050305"/>
+
+  <!-- Three reels aligned on wall -->
+  <circle cx="180" cy="120" r="70" stroke="#ffffff40" stroke-width="1.5" fill="none"/>
+  <circle cx="180" cy="120" r="35" stroke="#ffffff30" stroke-width="0.5" fill="none"/>
+  <line x1="180" y1="49" x2="180" y2="70" stroke="#ffffff30" stroke-width="0.8"/>
+  <line x1="180" y1="165" x2="180" y2="195" stroke="#ffffff30" stroke-width="0.8"/>
+
+  <!-- The distorted reel (center) - slightly off balance -->
+  <circle cx="300" cy="148" r="70" stroke="#d4a033" stroke-width="1.2" fill="none" opacity="0.9">
+    <animateTransform attributeName="transform" type="rotate" values="0 300 120;60 300 120;0 300 120" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="153" r="35" stroke="#ffffff30" stroke-width="0.5" fill="none"/>
+
+  <!-- Third reel -->
+  <circle cx="420" cy="120" r="70" stroke="#ffffff40" stroke-width="1.5" fill="none"/>
+  <circle cx="420" cy="120" r="35" stroke="#ffffff30" stroke-width="0.5" fill="none"/>
+
+  <!-- Wiring going to the right terminal block -->
+  <line x1="250" y1="80" x2="600" y2="40" stroke="#ffffff20" stroke-width="0.8" fill="none"/>
+  <line x1="370" y1="95" x2="600" y2="50" stroke="#d4a03325" stroke-width="0.8" fill="none"/>
+  <line x1="370" y1="148" x2="600" y2="65" stroke="#ffffff20" stroke-width="0.8" fill="none"/>
+
+  <!-- Terminal block on right wall -->
+  <rect x="560" y="30" width="40" height="70" stroke="#ffffff30" stroke-width="0.8" fill="#1a1218"/>
+  <circle cx="578" cy="48" r="3" fill="#d4a033">
+    <animate attributeName="opacity" values="0.3;1;1;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="578" cy="62" r="3" fill="#ffffff40"/>
+  <circle cx="578" cy="76" r="3" fill="#d4a033">
+    <animate attributeName="opacity" values="0.1;0.8;0.9;0.1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Subtle glitch on the distorted reel -->
+  <path d="M275,88 Q260,72 265,60" stroke="#ffffff10" fill="none" stroke-width="0.4">
+    <animate attributeName="d" values="M275,88 Q260,72 265,60;M278,90 Q263,75 268,62;M275,88 Q260,72 265,60" dur="5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Dust particles -->
+  <circle cx="195" cy="55" r="0.8" fill="#ffffff30">
+    <animate attributeName="opacity" values="0;0.7;0" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="405" cy="62" r="0.6" fill="#d4a03320">
+    <animate attributeName="opacity" values="0;0.4;0" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Label text "1978" faint on center reel -->
+  <text x="300" y="245" fill="#ffffff20" font-size="11" font-family="monospace" text-anchor="middle">— 1978-04 —</text>
+</svg>

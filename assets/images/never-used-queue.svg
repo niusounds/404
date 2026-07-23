@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<!-- "Never Used Queue" — a dark server room with flickering lights and subtle fog -->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" width="512" height="256">
+    <!-- Background: deep warm black -->
+    <rect x="0" y="0" width="512" height="256" fill="#0a0804"/>
+
+    <!-- Ambient fog in the back -->
+    <ellipse cx="256" cy="128" rx="180" ry="140" fill="#ffd17f" opacity="0.03"/>
+    <ellipse cx="400" cy="90"  rx="70"  ry="60"  fill="#ffdaaa" opacity="0.025"/>
+
+    <!-- Far back wall of corridor / server aisle -->
+    <rect x= "876" y= "612" width= "348" height="230" fill="#1a0e00">
+        <!-- Back row of servers (slightly smaller, in shadow) -->
+        <!-- Server 1: amber light flickering -->
+        <circle class="flicker" cx= "1735" cy="640" r="2"/>
+
+</svg>
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <!-- dark stage floor -->
+  <rect width="600" height="280" fill="#050514"/>
+  
+  <!-- curtains - deep crimson -->
+  <path d="M 50,20 Q 30,140 200,195 L 200,280 L 60,280 Z" fill="#6b1010"/>
+  <path d="M 550,20 Q 570,140 400,195 L 400,280 L 540 Z" fill="#6b1010"/>
+  
+  <!-- torn script page mid-stage -->
+  <g filter="url(#glow)">
+    <path d="M 305,175 C 340,140 460,130 480,145 L 490,275 C 465,250 380,255 310,265 Z" fill="#e8dcc8"/>
+    <!-- torn edge -->
+    <polyline points="335,170 360,139 388,147 420,129 460,137 485,138" fill="none" stroke="#6b1010" stroke-width="2"/>
+  </g>
+  
+  <!-- text lines on torn page fading out -->
+  <line x1="330" y1="185" x2="470" y2="190" stroke="#bbb" stroke-width="1.2" opacity=".6">
+    <animate attributeName="opacity" values=".65;.15;.4;.75" dur="4s" repeatCount="indefinite"/>
+  </line>
+  <line x1="335" y1="205" x2="475" y2="209" stroke="#bbb" stroke-width="1" opacity=".6">
+    <animate attributeName="opacity" values=".3;.8; .5;.2" dur="5.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="345" y1="225" x2="470" y2="229" stroke="#bbb" stroke-width="1" opacity=".6">
+    <animate attributeName="opacity" values=".5;.15;.7;.3" dur="3.8s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- spotlight shaft -->
+  <polygon points="290,275 300,10 460,10 450,275" fill="rgba(255,240,180,.02)" opacity=".4"/>
+  
+  <!-- dim second spotlight -->
+  <polygon points="140,280 130,90 260,90 270,280" fill="rgba(255,240,180,.01)" opacity=".3"/>
+
+  <!-- subtle text fragment visible on floor - the "truth" hiding beneath -->
+  <text x="340" y="268" font-family="serif" font-size="7" fill="#5510a0" opacity=".4">
+    <animate attributeName="opacity" values=";0.4;" dur="6s" repeatCount="indefinite"/>
+  </text>
+
+</svg>
