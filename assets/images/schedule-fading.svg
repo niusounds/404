@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350">
+  <defs>
+    <filter id="fadeFilter">
+      <feFlood flood-color="#0a0808"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="350" fill="#110e0d"/>
+  
+  <!-- Schedule board frame with subtle red glow at top-left corner, suggesting urgency or alarm -->
+  <rect x="25" y="25" width="550" height="300" rx="4" stroke="#8b2500" stroke-width="1.5" fill="none">
+    <!-- Subtle pulse animation on red border -->
+    <animate attributeName="stroke-opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Title at top center -->
+  <text x="300" y="58" font-family="'Noto Serif JP', serif" text-anchor="middle" fill="#c7bcb4" font-size="16">夜勤シフト表</text>
+  
+  <!-- Column headers for a shift schedule (date, name, time) -->
+  <line x1="25" y1="80" x2="575" y2="80" stroke="#3b3530" stroke-width="1"/>
+  <text x="60" y="98" fill="#6a625d" font-family="'Noto Sans JP', monospace" font-size="12">日付</text>
+  <text x="230" y="98" fill="#6a625d" font-family="'Noto Sans JP', monospace" font-size="12">氏名</text>
+  <text x="420" y="98" fill="#6a625d" font-family="'Noto Sans JP', monospace" font-size="12">時間</text>
+
+  <!-- Multiple rows that fade into darkness going down (representing the past) -->
+  
+  <!-- Top rows clear and distinct -->
+  <line x1="575" y1="80" x2="575" y2="325" stroke="#3b3530" stroke-width="1"/>
+  <line x1="395" y1="80" x2="395" y2="325" stroke="#3b3530" stroke-width="1"/>
+  
+  <!-- Row 1 -->
+  <text x="60" y="123" fill="#a89f97" font-family="'Noto Sans JP', monospace" font-size="13">2046/04</text>
+  <text x="230" y="123" fill="#cfc9c2" font-family="'Noto Serif JP', serif" font-size="13">佐伯美穂</text>
+  <text x="428" y="123" fill="#a89f97" font-family="'Noto Sans JP', monospace" font-size="13">19:00-7:00</text>
+
+  <!-- Row 2 -->
+  <text x="60" y="148" fill="#9d958e" font-family="'Noto Sans JP', monospace" font-size="13">2046/05</text>
+  <text x="230" y="148" fill="#bfbab3" font-family="'Noto Serif JP', serif" font-size="13">佐伯美穂</text>
+  <text x="428" y="148" fill="#9d958e" font-family="'Noto Sans JP', monospace" font-size="13">19:00-7:00</text>
+
+  <!-- Row 3 -->
+  <text x="60" y="173" fill="#8f8882" font-family="'Noto Sans JP', monospace" font-size="13">2046/06</text>
+  <text x="230" y="173" fill="#afaab3" font-family="'Noto Serif JP', serif" font-size="13">佐伯美穂 (?)</text>
+  <text x="428" y="173" fill="#8f8882" font-family="'Noto Sans JP', monospace" font-size="13">19:00-7:00</text>
+
+  <!-- Row 4 -->
+  <text x="60" y="198" fill="#7c7570" font-family="'Noto Sans JP', monospace" font-size="12">2046/07</text>
+  <text x="230" y="198" fill="#8e8882" font-family="'Noto Serif JP', serif" font-size="12">？</text>
+  <text x="428" y="198" fill="#7c7570" font-family="'Noto Sans JP', monospace" font-size="12">19:00-7:00</text>
+
+  <!-- Row 5 - fading more heavily, name unreadable -->
+  <g opacity="0.6">
+    <text x="60" y="223" fill="#6a645f" font-family="'Noto Sans JP', monospace" font-size="12">2046/07</text>
+    <text x="230" y="223" fill="#5c5856" font-family="'Noto Serif JP', serif" font-size="12">？</text>
+    <text x="428" y="223" fill="#6a645f" font-family="'Noto Sans JP', monospace" font-size="12">19:00-7:00</text>
+  </g>
+
+  <!-- Subsequent rows fade rapidly into darkness representing the past disappearing -->
+  <g opacity="0.35">
+    <text x="60" y="248" fill="#4e4b49" font-family="'Noto Sans JP', monospace" font-size="11">？/？</text>
+    <text x="428" y="248" fill="#4e4b49" font-family="'Noto Sans JP', monospace" font-size="11">-:-</text>
+  </g>
+  
+  <g opacity="0.2">
+    <line x1="57" y1="263" x2="571" y2="263" stroke="#2a2825" stroke-width="1"/>
+    <text x="60" y="282" fill="#3d3e40" font-family="'Noto Sans JP', monospace" font-size="10">？？？/月日</text>
+    <text x="230" y="282" fill="#3d3e40" font-family="'Noto Serif JP', serif" font-size="10">（白紙）</text>
+    <text x="428" y="282" fill="#3d3e40" font-family="'Noto Sans JP', monospace" font-size="10">-----</text>
+  </g>
+
+  <!-- Bottom: void area representing complete disappearance/annihilation of the past -->
+  <line x1="57" y1="298" x2="571" y2="298" stroke="#2a2825" stroke-width="1"/>
+  
+  <!-- Tiny text at bottom - very faint, suggesting a message in darkness -->
+  <text x="305" y="340" fill="#1a1617" font-family="'Noto Serif JP', serif" font-size="10">明日の朝から出勤は不要</text>
+  
+  <!-- A subtle dark void at bottom - a circle representing being consumed by darkness/emptiness -->
+  <circle cx="305" cy="328" r="40" fill="#0a0909" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+</svg>

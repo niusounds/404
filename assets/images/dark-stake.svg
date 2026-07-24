@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <!-- faint radial glow for "異様な光を放っていた" -->
+    <radialGradient id="glow" cx="50%" cy="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.20"/>
+      <stop offset="40%" stop-color="#fff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background: near-black sky gradient -->
+  <rect width="600" height="300" fill="#05050a" rx="2"/>
+
+  <!-- pale sickly moon top-left -->
+  <circle cx="78" cy="48" r="16" fill="#eaeaf0" opacity="0.95"/>
+  <circle cx="132" cy="38" r="160" fill="url(#glow)" pointer-events="none"/>
+
+  <!-- sea surface -->
+  <rect x="0" y="220" width="600" height="80" fill="#0a1a2a">
+    <animate attributeName="opacity" values="1;0.95;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- wet sand -->
+  <ellipse cx="300" cy="268" rx="290" ry="75" fill="#1a1c20"/>
+
+  <!-- the stone: dark grey, slightly weathered texture via low-opacity striations -->
+  <g>
+    <!-- base -->
+    <path d="M310,240 Q318,160 316,95 L320,80 Q335,78 336,95 
+             C336,162 342,238 330,240z"
+          fill="#1f2025"/>
+
+    <!-- weathering lines -->
+    <line x1="320" y1="130" x2="332" y2="128" stroke="#383a40" stroke-width="0.5" opacity="0.45"/>
+    <line x1="327" y1="160" x2="319" y2="162" stroke="#383a40" stroke-width="0.4" opacity="0.40"/>
+
+    <!-- white text on column: timestamp hint -->
+    <text x="318" y="185" font-family="'Courier New', monospace" font-size="6px" fill="#f7f7ff"
+          opacity="0.27">
+      <tspan x="318" dy="9">04/01</tspan>
+      <tspan x="318" dy="9">17:40</tspan>
+    </text>
+
+    <!-- tiny flicker effect on text (unsettling) -->
+    <rect x="318" y="172" width="14" height="15" fill="#fff">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- base: a thin dark halo for contrast against wet sand -->
+    <ellipse cx="324" cy="241" rx="8" ry="3" fill="#05050a" filter="url(#blur-h)"/>
+  </g>
+
+  <filter id="blur-h">
+    <feGaussianBlur stdDeviation="2.5"/>
+  </filter>
+
+  <!-- faint tide line -->
+  <path d="M0,218 C60,213 140,222 210,217 S350,214 420,218 S560,220 600,215"
+        fill="none" stroke="#d5eaf0" stroke-width="0.4" opacity="0.3"/>
+
+  <!-- wet sand reflections -->
+  <ellipse cx="260" cy="267" rx="0.86" ry="0.29" transform="rotate(-10 260 267)" fill="#d5eaf0">
+    <animate attributeName="opacity" values="0.08;0.45;0.08" dur="5.3s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- tiny distant wave line -->
+  <path d="M0,216 C35,219 70,214 105,217 S176,222 210,218" fill="none" stroke="#cfe8f0"
+        opacity="0.05"/>
+</svg>
