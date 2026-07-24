@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="1.5"/></filter>
+    <clipPath id="screen"><rect x="28" y="18" width="344" height="200" rx="4"/></clipPath>
+  </defs>
+  <rect width="400" height="260" rx="8" fill="#0a0808"/>
+  <g clip-path="url(#screen)">
+    <rect x="28" y="18" width="344" height="200" fill="#05050a"/>
+    <!-- status bar -->
+    <text x="36" y="40" font-family="monospace" font-size="9" fill="#4a6a5a">PATIENT DISCHARGE LOG — SERVER-7</text>
+    <line x1="28" y1="46" x2="372" y2="46" stroke="#1e2d24" stroke-width="0.8"/>
+    <!-- date header -->
+    <text x="36" y="64" font-family="monospace" font-size="9" fill="#5a7a6a">2026/07/27 (未来日付 ※エラー)</text>
+    <!-- patient rows - normal first batch -->
+    <text x="36" y="82" font-family="monospace" font-size="9" fill="#4a7a5a">No.1042 山田太郎 — 7/25 退院済み [OK]</text>
+    <text x="36" y="98" font-family="monospace" font-size="9" fill="#4a7a5a">No.1039 佐藤花子 — 7/26 退院済</text>
+    <!-- anomalous row blinking -->
+    <g opacity="1">
+      <animate attributeName="opacity" values="1;0.15;1" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+      <text x="36" y="119" font-family="monospace" font-size="10" fill="#e8aa3a">No.1055 不明氏 — ★未確認★</text>
+    </g>
+    <!-- red alert row -->
+    <g opacity="1">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.6s" begin="0s" repeatCount="indefinite"/>
+      <text x="34" y="155" font-family="monospace" font-size="9" fill="#ff4a2a">!!! 対象者の病室は既に空室です。但し —</text>
+    </g>
+    <text x="48" y="170" font-family="monospace" font-size="8" fill="#6a3a3a">   「部屋番号 No.1055」という病室は存在しない。</text>
+    <!-- bottom status -->
+    <line x1="28" y2="210" x2="372" y2="210" stroke="#1e2d24"/>
+    <text x="36" y="225" font-family="monospace" font-size="8" fill="#3a4a3e">System: 次回更新不可 (管理者権限なし)</text>
+  </g>
+  <!-- border glow line -->
+  <rect x="28" y="18" width="344" height="200" rx="4" fill="none" stroke="#1a3a2a" stroke-width="0.8"/>
+</svg>
