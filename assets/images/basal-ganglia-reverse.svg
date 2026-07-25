@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-35 -25 70 90" width="400" height="360">
+  <defs>
+    <radialGradient id="coreGlow" cx="0" cy="-7" r="14">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="55%" stop-color="#181620"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <filter id="innerBlur">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect x="-35" y="-25" width="70" height="90" fill="#0a0808"/>
+
+  <!-- brain stem (thin dark line at bottom) -->
+  <ellipse cx="0" cy="42" rx="6.5" ry="12" fill="#11131a">
+    <animate attributeName="rx" values="6.5;7.2;6.5" dur="3.8s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- outer tissue ring (faint) -->
+  <path d="M-8 0 C-12 -4,-18 6,-14 20 C-12 30,-7 38,0 41 C7 38,12 30,14 20 C18 6,12 -4,8 0 Z"
+        fill="#1a1e28" opacity="0.5"/>
+
+  <!-- first ring — reversed: dark core surrounded by bright -->
+  <circle cx="0" cy="-7" r="24" fill="#0a0808"/>
+  <circle cx="0" cy="-7" r="21" fill="#b89ec8" opacity="0.93">
+    <animate attributeName="opacity" values="0.93;0.55;0.93" dur="4.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- second ring — bright then dark -->
+  <circle cx="0" cy="-7" r="19" fill="#06050a"/>
+  <circle cx="0" cy="-7" r="14" fill="#d2c4e3" opacity="0.72">
+    <animate attributeName="opacity" values="0.72;0.38;0.72" dur="5.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- third ring — dark then bright -->
+  <circle cx="0" cy="-7" r="12.5" fill="#b89ec8">
+    <animate attributeName="opacity" values="1;0.45;1" dur="3.9s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- inner core — pure darkness (the pupil) -->
+  <circle cx="0" cy="-7" r="8" fill="#0a0808">
+    <animate attributeName="r" values="8;9.5;8" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- the "eye" at center — bright dot in dark -->
+  <circle cx="1.2" cy="-8.4" r="3.2" fill="#fffef7">
+    <animate attributeName="opacity" values="0.95;0.4;0.95" dur="3s" repeatCount="indefinite"/>
+    <filter id="innerBlur"/></circle>
+
+  <!-- smaller highlight in pupil -->
+  <circle cx="2.3" cy="-7.8" r="1.4" fill="#c8aee6">
+    <animate attributeName="opacity" values="0.85;0.35;0.85" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- faint lateral structures: caudate head outlines (lighter) -->
+  <path d="M-16 -2 C-19 4,-17 15,-10 24" stroke="#a08cbf" fill="none" opacity="0.22">
+    <animate attributeName="opacity" values="0.22;0.08;0.22" dur="6s" repeatCount="indefinite"/>
+  </path>
+  <path d="M16 -2 C19 4,17 15,10 24" stroke="#a08cbf" fill="none" opacity="0.22">
+    <animate attributeName="opacity" values="0.22;0.08;0.22" dur="6s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- subtle scan-line texture (horizontal) -->
+  <line x1="-34" y1="5" x2="34" y2="5" stroke="#ffffff" opacity="0.02">
+    <animate attributeName="opacity" values="0;0.04;0" dur="7s" repeatCount="indefinite"/>
+  </line>
+  <line x1="-24" y1="22" x2="24" y2="22" stroke="#ffffff" opacity="0.015">
+    <animate attributeName="opacity" values="0;0.03;0" dur="8s" repeatCount="indefinite"/>
+  </line>
+
+</svg>
