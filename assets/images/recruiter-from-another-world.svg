@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0a0510"/>
+  
+  <!-- Desk silhouette -->
+  <rect x="80" y="180" width="240" height="10" fill="#150a20"/>
+  
+  <!-- Chair outlines -->
+  <path d="M 160 200 L 160 240 M 190 200 L 190 240" stroke="#200a30" stroke-width="2"/>
+  <rect x="155" y="185" width="40" height="15" fill="#1a0a25" stroke="#200a30" stroke-width="1"/>
+  
+  <!-- Document on desk -->
+  <rect x="120" y="170" width="60" height="80" fill="#200d40" stroke="#ff4d7a" stroke-width="1.5">
+    <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Text lines on document -->
+  <line x1="130" y1="185" x2="170" y2="185" stroke="#40ff9a" stroke-width="1">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="130" y1="200" x2="175" y2="200" stroke="#40ff9a" stroke-width="1">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Glowing window in dark void -->
+  <rect x="200" y="40" width="120" height="70" fill="#ff6b35" opacity="0.1">
+    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Strange symbol floating -->
+  <g transform="translate(260, 95)" opacity="0">
+    <circle cx="0" cy="0" r="3" fill="#00ff8f">
+      <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="-2;2;-2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g transform="translate(320, 80)" opacity="0">
+    <polygon points="5,0 10,8 0,8" fill="#ff90ff">
+      <animate attributeName="opacity" values="0;0.7;0" dur="3.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 4 6" to="360 4 6" dur="10s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+  <!-- Faint text overlay -->
+  <text x="50" y="280" font-family="monospace" font-size="9" fill="#3a3a4a" opacity="0.6">RECRUITMENT PROTOCOL</text>
+  <text x="280" y="280" font-family="monospace" font-size="9" fill="#ff4d7a" opacity="0.5">SELECTED</text>
+  
+  <!-- Dark vignette at edges -->
+  <rect width="400" height="300" fill="url(#vignette)" pointer-events="none"/>
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="#0a0510" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000508" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>

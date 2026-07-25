@@ -1,6 +1,6 @@
 ---
 title: 使用済み部屋の電圧
-date: 2026-07-26 01:30:00 +0900
+date: 2026-07-25 23:05:00 +0900
 layout: post
 category: mystery
 tags: [ミステリー, IoT, スマートホーム, 音声]
