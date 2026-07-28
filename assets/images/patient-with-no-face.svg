@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+  <rect width="400" height="180" fill="#08060a"/>
+  
+  <!-- Desk line -->
+  <line x1="20" y1="90" x2="380" y2="90" stroke="#2a1520" stroke-width="0.5"/>
+  
+  <!-- Paper/record sheet -->
+  <rect x="60" y="40" width="280" height="100" rx="2" fill="#f0ede8" opacity="0.9"/>
+  
+  <!-- Name fields - some filled, one blank -->
+  <text x="75" y="58" font-family="monospace" font-size="11" fill="#3a3040">氏名：山本太郎</text>
+  <line x1="280" y1="56" x2="300" y2="56" stroke="#d0c0b0"/>
+  <text x="305" y="58" font-family="monospace" font-size="11" fill="#a09080">42歳</text>
+  
+  <text x="75" y="76" font-family="monospace" font-size="11" fill="#3a3040">住所：東京都墨田区...</text>
+  <line x1="232" y1="74" x2="300" y2="74" stroke="#d0c0b0"/>
+  <text x="305" y="76" font-family="monospace" font-size="11" fill="#a09080">A型</text>
+  
+  <text x="75" y="94" font-family="monospace" font-size="11" fill="#3a3040">担当医：佐藤健一</text>
+  <line x1="216" y1="92" x2="300" y2="92" stroke="#d0c0b0"/>
+  
+  <!-- The blank/erased name field -->
+  <rect x="75" y="90" width="28" height="4" rx="1" fill="#ffeee8" opacity="0.6">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Ghost name - barely visible -->
+  <text x="75" y="112" font-family="monospace" font-size="11" fill="#8a6060" opacity="0.3">氏名：[消去]</text>
+
+  <!-- Red X marking ghost patients -->
+  <g transform="translate(332, 44)">
+    <line x1="0" y1="0" x2="18" y2="18" stroke="#a03030" stroke-width="1.5"/>
+    <line x1="18" y1="0" x2="0" y2="18" stroke="#a03030" stroke-width="1.5"/>
+  </g>
+  
+  <!-- More X marks for ghost patients -->
+  <g transform="translate(332, 64)">
+    <line x1="0" y1="0" x2="18" y2="18" stroke="#a03030" stroke-width="1.5"/>
+    <line x1="18" y1="0" x2="0" y2="18" stroke="#a03030" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Erased name - barely legible -->
+  <text x="75" y="132" font-family="monospace" font-size="11" fill="#ffeee8" opacity="0.05">...</text>
+
+  <!-- Faint red stamp/circle around ghost section -->
+  <ellipse cx="94" cy="114" rx="6" ry="12" fill="none" stroke="#d05050" stroke-width="0.8" opacity="0.2">
+    <animate attributeName="opacity" values="0.1;0.35;0.1" dur="2.5s" repeatCount="indefinite"/>
+  </ellipse>
+
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 140">
+
+  <!-- Dark hallway background -->
+  <rect width="560" height="140" fill="#07071a"/>
+
+  <!-- Ceiling fluorescent light - soft glow with flicker animation -->
+  <g>
+    <rect x="240" y="10" width="80" height="6" rx="3" fill="#5a6aa0">
+      <animate attributeName="opacity" values="0.7;1;0.6;0.9;1" dur="2.8s"/>
+    </rect>
+
+    <!-- Warm-ish light spreading downward
+  -->
+</svg>

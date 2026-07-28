@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180">
+  <defs>
+    <filter id="blur-lit">
+      <feGaussianBlur stdDeviation="0.6"/>
+    </filter>
+  </defs>
+  <rect width="400" height="180" fill="#05050a"/>
+  
+  <!-- Ceiling fluorescent -->
+  <rect x="30" y="28" width="340" height="6" rx="1" fill="#c8eaff" opacity="0.3">
+    <animate attributeName="opacity" values="0.25;0.4;0.25" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Shadow on floor -->
+  <ellipse cx="180" cy="96" rx="70" ry="35" fill="#15101a"/>
+  
+  <!-- Corridor walls perspective -->
+  <line x1="40" y1="34" x2="80" y2="170" stroke="#0d0b15" stroke-width="0.6"/>
+  <line x1="360" y1="34" x2="310" y2="170" stroke="#0d0b15" stroke-width="0.6"/>
+  
+  <!-- Patient name plate on wall -->
+  <rect x="84" y="140" width="50" height="8" rx="1" fill="#f4f0e8"/>
+  <text x="92" y="147" font-family="monospace" font-size="6" fill="#a03030">退院済</text>
+  
+  <!-- Empty bench/bed shape -->
+  <rect x="220" y="145" width="70" height="4" rx="1" fill="#181520"/>
+  <line x1="230" y1="149" x2="230" y2="165" stroke="#1a151f" stroke-width="0.5"/>
+  <line x1="280" y1="149" x2="280" y2="165" stroke="#1a151f" stroke-width="0.5"/>
+
+</svg>

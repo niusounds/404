@@ -1,0 +1,70 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="blur-soft">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5"/>
+    </filter>
+    <linearGradient id="fade-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="60%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#050510"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Deep dark background -->
+  <rect width="800" height="400" fill="#07060a"/>
+  
+  <!-- Ceiling LED strips -->
+  <g stroke-width="2">
+    <line x1="56" y1="8" x2="56" y2="392" stroke="#b8d8ff" opacity="0.85"/>
+    <animate attributeName="opacity" values="0.85;0.45;0.85" dur="5s" repeatCount="indefinite" begin="1.7s"/>
+  </g>
+  <g stroke-width="2">
+    <line x1="97" y1="31" x2="97" y2="369" stroke="#b8d8ff" opacity="0.65"/>
+    <animate attributeName="opacity" values="0.65;0.3;0.65" dur="5s" repeatCount="indefinite" begin="1.2s"/>
+  </g>
+  
+  <!-- Dark server racks in rows -->
+  <rect x="185" y="47" width="44" height="335" rx="2" fill="#0c0b14" stroke="#1a1930" stroke-width="0.6"/>
+  <rect x="231" y="65" width="44" height="317" rx="2" fill="#0c0b14" stroke="#1a1930" stroke-width="0.6"/>
+  <rect x="277" y="80" width="44" height="302" rx="2" fill="#0c0b14" stroke="#1a1930" stroke-width="0.6"/>
+  
+  <!-- Rack indicator lights -->
+  <circle cx="207" cy="55" r="2" fill="#0df8c9" opacity="0.6"><animate attributeName="opacity" values="0.6;0.1;0.6;0;" dur="3s"/></circle>
+  <circle cx="214" cy="72" r="1.5" fill="#ffba49" opacity="0.4"><animate attributeName="opacity" values="0.4;0;0.4" dur="4s" repeatCount="indefinite"/></circle>
+  <circle cx="207" cy="93" r="2" fill="#0bf8d7" opacity="0.5"/><circle cx="214" cy="108" r="1.5" fill="#46e1ff" opacity="0.3"/>
+  <circle cx="254" cy="73" r="1.8" fill="#0ef9d1" opacity="0.4"><animate attributeName="opacity" values="0.4;0.05;0.4" dur="6s" repeatCount="indefinite"/></circle>
+  
+  <!-- Vanishing corridor gap between racks -->
+  <rect x="362" y="108" width="2" height="275" fill="#090920"/>
+  
+  <!-- Distant rack group fading into darkness -->
+  <rect x="400" y="128" width="38" height="255" rx="1.5" fill="#0a0018" stroke="#161428" stroke-width="0.4"/>
+  <rect x="442" y="147" width="36" height="236" rx="1.5" fill="#0b0022" stroke="#181634" stroke-width="0.3"/>
+  <rect x="482" y="164" width="33" height="219" rx="1.2" fill="#0c002c" stroke="#1b183e" stroke-width="0.3"/>
+  
+  <!-- Tiny dim lights further back -->
+  <circle cx="420" cy="155" r="1.2" fill="#0df8d6" opacity="0.2"><animate attributeName="opacity" values="0.2;0;0.2" dur="7s"/></circle>
+  <circle cx="490" cy="180" r="1" fill="#b3e5ff" opacity="0.1"/>
+  
+  <!-- Dark figure silhouette in distance -->
+  <ellipse cx="480" cy="250" rx="7" ry="24" fill="#040310" opacity="0.4"/>
+  <circle cx="480" cy="230" r="6" fill="#040310" opacity="0.4"/>
+  <filter id="haze">
+    <feGaussianBlur stdDeviation="3" />
+  </filter>
+  
+  <!-- Floor - glossy dark surface with faint reflection -->
+  <rect x="0" y="380" width="800" height="20" fill="#100f24"/>
+  <path d="M56,392 L800,392" stroke="none" opacity="0.08">
+    <animate attributeName="opacity" values="0.08;0.04;0.08" dur="5s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Perspective lines - floor reflection -->
+  <line x1="56" y1="392" x2="270" y2="400" stroke="#b8d8ff" stroke-width="0.4" opacity="0.1"/>
+  <line x1="97" y1="390" x2="350" y2="400" stroke="#46e1ff" stroke-width="0.3" opacity="0.06"/>
+  
+  <!-- Subtle noise overlay simulation -->
+  <text x="40" y="280" font-family="monospace" font-size="9" fill="#5b8fff" opacity="0.1">REC</text>
+  <rect x="70" y="335" width="65" height="6" rx="2" opacity="0.1">
+    <animate attributeName="opacity" values="0.1;0.4;0.1" dur="6s"/>
+  </rect>
+</svg>

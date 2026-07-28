@@ -1,0 +1,66 @@
+<!-- Fading name plates in hospital corridor -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 24">
+  <defs>
+    <filter id="blur1"><feGaussianBlur stdDeviation=".5"/></filter>
+    <filter id="fade1"><feColorMatrix type="matrix" values="0 0 0 0 .9  0 0 0 0 .9  0 0 0 0 .8  0 0 0 0 1"/></filter>
+    <filter id="fade2"><feColorMatrix type="matrix" values="0 0 0 0 .5  0 0 0 0 .4  0 0 0 0 .3  0 0 0 1"/></filter>
+    <filter id="faint"><feGaussianBlur stdDeviation="2"/><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+
+  <!-- Corridor wall line at top -->
+  <rect width="60" height="24" fill="#100d15"/>
+  <line x1="4" y1="6.5" x2="56" y2="6.5" stroke="#2a2830" stroke-width=".5"/>
+
+  <!-- Row of six patient name tags, each progressively more "erased" -->
+  <!-- Tag 1 — fully present, vivid ink -->
+  <g transform="translate(7, 8)">
+    <!-- pin at top center -->
+    <circle cx="6.6" cy="-3" r="5" fill="#d0c4b0"/>
+    <line x1="6.6" y1="2" x2="6.6" y2="7" stroke="#3a2818" stroke-width=".4"/>
+    <!-- shadow cast to the right -->
+    <rect x="5.8" y="-4" width="10" height="120" fill="#100f15" opacity=".55"/>
+
+<text transform="matrix(5 .9)  translate(-1, 0)" font-family="'Noto Serif JP','Hiragino Shin Gothic'">中原</text>
+    <text x="-3.4" y="8.5" font-size="2.6" fill="#2e1c1c">退院済</text>
+<!-- small red cross indicating ghost/discharge status -->
+<circle cx="-3.9" cy="11.5" r=".7" fill="#cf0a0a"/>
+    <text transform="matrix(5 -.6)  translate(-4, 0)" font-family="'Noto Serif JP','Hiragino Mincho'">佐藤</text>
+
+<line x1="-2" y1="2.5" x2="-1" y2="3.5" stroke="#8b3030"
+stroke-width=".4"><animate attributeName="opacity" values=".6;1;.5" dur="3s"/></linear">
+  </g>
+
+<!-- Tag 2: second name plate (less vibrant), slight shadow overlap -->
+  <g transform="translate(17, 8)">
+    <circle cx="6.6" cy="-3" r="5" fill="#d0c4b0"/>
+    <rect x="5.8" y="-4" width="10" height="120" fill="#100f15" opacity=".45"/>
+<!-- text partially overwritten by the previous plate's ghost shadow effect (blur) -->
+<text transform="matrix(5 .9)  translate(-1, 0)">中原正樹</text>
+
+    <!-- red cross mark with faint animation indicating "ghost" status -->
+<circle cx="-3.9" cy="12.5">
+      <animate attributeName="r" values=".6;1;.6"/>
+      <animate attributeName="opacity" values=".7;1;.6"/>
+</g>
+
+<!-- Tag 3: third name plate, slightly shifted and shadow overlapping from left (partial erase) -->
+<g transform="translate(29, 8)">
+    <!-- pin but it's been smeared by something -- looks dirty / faded -->
+<circle cx="7" cy="-1.5" r=".4" fill="#a09e85"/>
+
+<!-- name text partially wiped out (shadow overlap) with "ghost" red line running through -->
+</text>
+
+
+  </g>
+
+<!-- Tag 4 (further erased): only red ink remains, faint ghost of the original printed info below -->
+<g transform="translate(39.7, 9)">
+    <circle cx="6" cy="0" r=".5" fill="#d8cbb5"/><line x1="
+<text font-family="'Courier','Monospace'">山本</text>
+
+
+<!-- Tag 5: barely visible - ghost plate still on file -->
+<g transform="translate(49, 9)">
+
+  </g></svg>
