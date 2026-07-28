@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg1.1.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -30 80 95" width="36%" height="480" role="img" aria-label="Fluorescent lamp above a melting figure, dark background, body horror">
+    <title>蛍光灯の変態 — Flurescent Light Metamorphosis</title>
+    
+    <!-- Dark office ceiling -->
+    <rect x="-35" y="-25" width="70" height="95" fill="#0b0a0d"/>
+    
+    <!-- Fluorescent light tubes - dimming in unsettling pattern -->
+    <g opacity="0.9">
+        <line x1="-28" y1="-22" x2="-28" y2="34" stroke="#fffef5" 
+              stroke-width="2" stroke-opacity="0.7"/>
+        <circle cx="-28" cy="-22" r="1.6" fill="#ffe8c9">/an:animate attributeName="stroke-opacity" values "0.7;.3;0.7""dur="4s"/"></circ>
+    </g>/rect><line  x=  "-22"y=   "0",strok="#fffed2',' stroke-width="1.6"" opacity=.9"/>
+<path d="-36,-25' width'68'"fill='no''stroke="#060a"/>'> </path><text x=-34'" y=' 37'font-family 'Monospace,'mono'" fill='#ffffff' font-size="1.2">FLUORESCENT METAMORPHOSIS</text>/g></svg
