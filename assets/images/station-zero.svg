@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="seaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1520"/>
+      <stop offset="100%" stop-color="#0f2030"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Dark background -->
+  <rect width="600" height="350" fill="#050810"/>
+  <text x="300" y="40" text-anchor="middle" fill="rgba(50,70,90,0.15)" font-family="monospace" font-size="9" letter-spacing="2">STATION ZERO</text>
+
+  <!-- Tower structure -->
+  <g stroke="#c7a84f" stroke-width="1.2" fill="none" filter="url(#glow)">
+    <!-- Base legs -->
+    <line x1="305" y1="260" x2="275" y2="310"/>
+    <line x1="295" y1="260" x2="325" y2="310"/>
+
+    <!-- Platform -->
+    <rect x="280" y="244" width="40" height="3" fill="#c7a84f">
+      <animate attributeName="opacity" values="0.95;0.6;0.95" dur="3s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Tower body -->
+    <line x1="283" y1="72" x2="283" y2="244"/>
+    <line x1="317" y1="72" x2="317" y2="244"/>
+    
+    <!-- Cross bars -->
+    <polyline points="280,90 275,110 303,110"/>
+    <polyline points="318,90 321,110 284,110"/>
+    <polyline points="280,135 276,155 300,155"/>
+    <polyline points="315,135 319,155 290,155"/>
+    
+    <!-- Roof -->
+    <polygon points="284,90 276,75 320,75" fill="#0a0e15" stroke="#c7a84f" stroke-width="1">
+      <animate attributeName="opacity" values="1;0.5;1" dur="4s" repeatCount="indefinite"/>
+    </polygon>
+
+    <!-- Antenna -->
+    <line x1="297" y1="95" x2="303" y2="68">
+      <animate attributeName="opacity" values="1;0.4;1;0.3;1" dur="5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Ocean waves (faint, broken horizon line) -->
+  <path d="M60,290 Q120,283 180,288 T300,290 T420,287" stroke="#0d2540" stroke-width="0.8" fill="none">
+    <animate attributeName="d"
+             values="M60,290 Q120,283 180,288 T300,290 T420,287;
+                     M60,290 Q120,295 180,289 T300,286 T420,291;
+                     M60,290 Q120,283 180,288 T300,290 T420,287" dur="6s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Fog/mist on edges -->
+  <rect x="-5" y="270" width="130" height="80" fill="#2e8a9d" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.35;0.2" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+</svg>
