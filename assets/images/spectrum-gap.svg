@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 260" width="500" height="260">
+  <defs>
+    <radialGradient id="scanFade" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#101820"/>
+      <stop offset="100%" stop-color="#030508"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="260" fill="url(#scanFade)"/>
+
+  <!-- Subtle scanlines -->
+  <g opacity="0.1">
+    <line x1="0" y1="15" x2="500" y2="15" stroke="#b8f0c8" stroke-width="0.3"/>
+    <line x1="0" y1="45" x2="500" y2="45" stroke="#b8f0f0" stroke-width="0.3"/>
+  </g>
+
+  <!-- Grid lines -->
+  <line x1="89" y1="10" x2="89" y2="210" stroke="#1a3050" stroke-width="0.4" stroke-dasharray="2,6"/>
+  <line x1="176" y1="10" x2="176" y2="210" stroke="#1a3050" stroke-width="0.4" stroke-dasharray="2,6"/>
+
+  <!-- Normal voice band -->
+  <rect x="89" y="50" width="87" height="148" fill="#236bca" opacity="0.2">
+    <animate attributeName="opacity" values="0.18;0.3;0.12;0.18" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="132" y="256" fill="#4a9aea" font-family="'Courier New', monospace, sans-serif" font-size="8.5" text-anchor="middle">可聴域</text>
+
+  <!-- Low frequency anomaly zone -->
+  <rect x="264" y="0" width="120" height="75" fill="#3a0a28" opacity="0.15">
+    <animate attributeName="opacity" values="0.1;0.2;0.08;0.1" dur="4.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Erratic low-freq waveform -->
+  <path d="M290,74 L293,60 L296,42 L299,80 L302,35 L305,72 
+           L308,48 L311,30 L314,68 L317,42 L320,70"
+        fill="none" stroke="#d02a40" stroke-width="1.3">
+    <animate attributeName="d" dur="5s" repeatCount="indefinite" values="M290,74 L293,60 L296,42 L299,80 L302,35 L305,72 L308,48 L311,30 L314,68 L317,42 L320,70;
+            M290,70 L293,55 L296,48 L299,15 L302,78 L305,50 L308,35 L311,55 L314,80 L317,38 L320,72;
+            M290,74 L293,60 L296,42 L299,80 L302,35 L305,72 L308,48 L311,30 L314,68 L317,42 L320,70"/>
+  </path>
+
+  <text x="268" y="14" fill="#d4404a" font-family="'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="7.5">↓ 検出不可域</text>
+
+  <!-- High frequency anomaly zone -->
+  <rect x="264" y="190" width="120" height="38" fill="#3a0a28" opacity="0.15"/>
+
+  <!-- Erratic high-freq waveform -->
+  <path d="M295,190 L297,215 L299,185 L301,210 L303,195 
+           L305,218 L307,188 L309,216"
+        fill="none" stroke="#a81e2c" stroke-width="0.9">
+    <animate attributeName="d" dur="3.2s" repeatCount="indefinite" values="M295,190 L297,215 L299,185 L301,210 L303,195 L305,218 L307,188 L309,216;
+            M295,192 L297,212 L299,188 L301,208 L303,196 L305,220 L307,184 L309,220;
+            M295,190 L297,215 L299,185 L301,210 L303,195 L305,218 L307,188 L309,216"/>
+  </path>
+
+  <!-- The "空白" gap indicator -->
+  <text x="220" y="240" fill="#c89e3f" font-family="'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="7.5" text-anchor="middle">[空白]</text>
+
+  <!-- Title -->
+  <text x="12" y="6" fill="#3a9060" font-family="'Courier New', monospace, sans-serif" 
+        font-size="8">周波数分析スキャン</text>
+
+  <!-- Status readout -->
+  <text x="375" y="240" fill="#3a6e8a" font-family="'Courier New', monospace, sans-serif" 
+        font-size="8">REC │ 48.7Hz / 18900Hz+</text>
+
+  <!-- Rec LED -->
+  <circle cx="475" cy="12" r="3" fill="#d02a40">
+    <animate attributeName="fill" dur="2.4s" repeatCount="indefinite" values="#d02a40;#ff3a50;#8a0515;#d02a40"/>
+  </circle>
+</svg>
