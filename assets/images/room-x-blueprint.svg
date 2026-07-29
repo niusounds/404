@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <style>
+    @keyframes flicker { from { opacity: 0.3; } to { opacity: 1; } }
+    .glow { animation: flicker 7s ease-in-out infinite alternate-reverse; filter: blur(2px); }
+  </style>
+
+  <!-- dark background -->
+  <rect width="600" height="450" fill="#090810"/>
+
+  <!-- blueprint grid dots -->
+  <g stroke="#141224" stroke-width="0.4">
+    
+  </g>
+
+  <!-- architectural rectangles (walls) -->
+  <g stroke="#357ac766" stroke-width="1.8" fill="none">
+    <rect x="70" y="90" width="250" height="180"/>
+
