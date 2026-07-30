@@ -80,7 +80,7 @@ horror_scores:
 
 ---
 
-![階の隙間](/assets/images/floor-between.svg)
+![階の隙間](/assets/images/404-void.svg)
 
 *エレベーターの表示盤に映らない階*
 

@@ -31,7 +31,7 @@ description: デッドデバイスから届く音声メッセージとスマー�
 → 担当営業所に問合せ中
 
 
-![使用中の部屋の電圧](/assets/images/voltage-of-unused-room.svg)
+![使用中の部屋の電圧](/assets/images/404-void.svg)
 
 「電気代、前月比 -0%。請求停止されています。」
 

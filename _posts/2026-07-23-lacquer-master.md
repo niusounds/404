@@ -6,7 +6,7 @@ horror_scores:
 ---
 
 
-![漆黒の塗り板が三枚横に並ぶ。最も左の塗板上の少量のみ赤色の漆で不規則に塗られている。他は艶やかに](!/assets/images/lacquer-slides.svg)
+![漆黒の塗り板が三枚横に並ぶ。最も左の塗板上の少量のみ赤色の漆で不規則に塗られている。他は艶やかに](!/assets/images/404-void.svg)
 
 
 
@@ -20,7 +20,7 @@ horror_scores:
 
 
 
-![漆黒の部屋の中央に立って、指先から赤い漆を少量ずつ注ぐ様子](!/assets/images/lacquer-slides.svg)
+![漆黒の部屋の中央に立って、指先から赤い漆を少量ずつ注ぐ様子](!/assets/images/404-void.svg)
 
 
 
@@ -56,7 +56,7 @@ horror_scores:
 第二：通話時間の合計は47分とあるが実際には違う。「もう47秒足りないと」が混じっていた。単位が分と秒で逆転していた。
 
 
-![三枚並んだ漆板のうち真ん中のみ横断するように赤線が引かれている状態](!/assets/images/lacquer-slides.svg)
+![三枚並んだ漆板のうち真ん中のみ横断するように赤線が引かれている状態](!/assets/images/404-void.svg)
 
 
 

@@ -2,7 +2,7 @@
 title: 心臓の診察簿
 ---
 
-![無数の点線が複雑に絡み合う。中心に「Heart Condition: 0%」と白い文字で表示された暗い画面がある。背景は完全な黒。](/assets/images/the-heartless-diagnosis.svg)
+![無数の点線が複雑に絡み合う。中心に「Heart Condition: 0%」と白い文字で表示された暗い画面がある。背景は完全な黒。](/assets/images/404-void.svg)
 
 ## AED設置点検ログ — 現場記録
 

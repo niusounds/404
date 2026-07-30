@@ -144,6 +144,6 @@ horror_scores:
 
 『次は、お前の番だ』
 
-![暗闇を走る電車](/assets/images/train-endless.svg)
+![暗闇を走る電車](/assets/images/404-void.svg)
 
 *終わりのない路線。終わりのない恐怖。永遠に彷徨い続ける魂たち。*
