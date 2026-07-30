@@ -1,0 +1,13 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+
+  <!-- Dark background -->
+  <rect width="600" height="450" fill="#090810"/>
+
+  <!-- Blueprint grid dots -->
+  <g stroke="#12102a" stroke-width=".3">
+    <circle cx="25" cy="25" r=".7" opacity=".2"/>
+    
+HEREDOC
