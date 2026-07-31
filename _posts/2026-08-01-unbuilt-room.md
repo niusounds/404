@@ -1,7 +1,7 @@
 ---
 title: 未建築の部屋
 category: ミステリー/建築恐怖
-date: 2026-08-01T14:35+09:00
+date: 2026-08-01T09:00+09:00
 horror_scores:
   fear: 7
   novelty: 9

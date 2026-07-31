@@ -1,0 +1,237 @@
+[2026-04-16 02:18:08] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:18:08] [MaintenanceDaemon] INFO - 🚀 HORROR BLOG MAINTENANCE DAEMON
+[2026-04-16 02:18:08] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:18:08] [MaintenanceDaemon] INFO - Running in TEST mode...
+[2026-04-16 02:18:08] [Daemon] INFO - Running all tasks in TEST mode...
+[2026-04-16 02:18:08] [Daemon] INFO - Registering tasks...
+[2026-04-16 02:18:22] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:18:22] [MaintenanceDaemon] INFO - 🚀 HORROR BLOG MAINTENANCE DAEMON
+[2026-04-16 02:18:22] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:18:22] [MaintenanceDaemon] INFO - Running in TEST mode...
+[2026-04-16 02:18:22] [Daemon] INFO - Running all tasks in TEST mode...
+[2026-04-16 02:18:22] [Daemon] INFO - Registering tasks...
+[2026-04-16 02:18:22] [Daemon] ERROR - Failed to register post_generation: expected exactly 5 fields, found 6: [0 7 0 * * *]
+[2026-04-16 02:18:22] [Daemon] ERROR - Failed to register article_maintenance: expected exactly 5 fields, found 6: [0 2 0 * * 1]
+[2026-04-16 02:18:22] [Daemon] ERROR - Failed to register build_and_deploy: expected exactly 5 fields, found 6: [30 7 0 * * *]
+[2026-04-16 02:18:22] [Daemon] ERROR - Failed to register site_health_check: expected exactly 5 fields, found 6: [0 22 0 * * *]
+[2026-04-16 02:18:22] [Daemon] ERROR - Failed to register llm_health_check: expected exactly 5 fields, found 6: [50 6 0 * * *]
+[2026-04-16 02:18:22] [Daemon] INFO - Testing: article_maintenance
+[2026-04-16 02:18:22] [Daemon] INFO - ========== EXECUTING: article_maintenance ==========
+[2026-04-16 02:18:22] [article_maintenance] INFO - Starting article maintenance...
+[2026-04-16 02:18:22] [Daemon] INFO - ✓ article_maintenance completed successfully: Article maintenance task placeholder - not yet implemented
+[2026-04-16 02:18:22] [Notifications] INFO - ✅ article_maintenance: Article maintenance task placeholder - not yet implemented
+[2026-04-16 02:18:22] [Daemon] INFO - ==========================================
+[2026-04-16 02:18:23] [Daemon] INFO - Testing: build_and_deploy
+[2026-04-16 02:18:23] [Daemon] INFO - ========== EXECUTING: build_and_deploy ==========
+[2026-04-16 02:18:23] [build_and_deploy] INFO - Starting build and deploy...
+[2026-04-16 02:18:23] [Daemon] INFO - ✓ build_and_deploy completed successfully: Build and deploy task placeholder - not yet implemented
+[2026-04-16 02:18:23] [Notifications] INFO - ✅ build_and_deploy: Build and deploy task placeholder - not yet implemented
+[2026-04-16 02:18:23] [Daemon] INFO - ==========================================
+[2026-04-16 02:18:24] [Daemon] INFO - Testing: site_health_check
+[2026-04-16 02:18:24] [Daemon] INFO - ========== EXECUTING: site_health_check ==========
+[2026-04-16 02:18:24] [site_health_check] INFO - Starting site health check...
+[2026-04-16 02:18:24] [Daemon] INFO - ✓ site_health_check completed successfully: Site health check task placeholder - not yet implemented
+[2026-04-16 02:18:24] [Notifications] INFO - ✅ site_health_check: Site health check task placeholder - not yet implemented
+[2026-04-16 02:18:24] [Daemon] INFO - ==========================================
+[2026-04-16 02:18:25] [Daemon] INFO - Testing: llm_health_check
+[2026-04-16 02:18:25] [Daemon] INFO - ========== EXECUTING: llm_health_check ==========
+[2026-04-16 02:18:25] [llm_health_check] INFO - Starting LLM health check...
+[2026-04-16 02:18:25] [llm_health_check] INFO - Checking Ollama...
+[2026-04-16 02:18:25] [llm_health_check] INFO - Ollama available with 8 models
+[2026-04-16 02:18:25] [llm_health_check] INFO - At least one LLM service is available
+[2026-04-16 02:18:25] [Daemon] INFO - ✓ llm_health_check completed successfully: LLM health check completed: at least one service available
+[2026-04-16 02:18:25] [Notifications] INFO - ✅ llm_health_check: LLM health check completed: at least one service available
+[2026-04-16 02:18:25] [Daemon] INFO - ==========================================
+[2026-04-16 02:18:26] [Daemon] INFO - Testing: post_generation
+[2026-04-16 02:18:26] [Daemon] INFO - ========== EXECUTING: post_generation ==========
+[2026-04-16 02:18:26] [post_generation] INFO - Starting post generation...
+[2026-04-16 02:18:26] [Daemon] INFO - ✓ post_generation completed successfully: Post generation task placeholder - not yet implemented
+[2026-04-16 02:18:26] [Notifications] INFO - ✅ post_generation: Post generation task placeholder - not yet implemented
+[2026-04-16 02:18:26] [Daemon] INFO - ==========================================
+[2026-04-16 02:18:27] [Daemon] INFO - Test mode completed.
+[2026-04-16 02:18:52] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:18:52] [MaintenanceDaemon] INFO - 🚀 HORROR BLOG MAINTENANCE DAEMON
+[2026-04-16 02:18:52] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:18:52] [MaintenanceDaemon] INFO - Running in TEST mode...
+[2026-04-16 02:18:52] [Daemon] INFO - Running all tasks in TEST mode...
+[2026-04-16 02:18:52] [Daemon] INFO - Registering tasks...
+[2026-04-16 02:18:52] [Daemon] ERROR - Failed to register post_generation: expected exactly 5 fields, found 6: [0 7 0 * * *]
+[2026-04-16 02:18:52] [Daemon] INFO - ✓ Registered post_generation: 0 7 0 * * *
+[2026-04-16 02:18:52] [Daemon] INFO - ✓ Registered build_and_deploy: 30 7 0 * * *
+[2026-04-16 02:18:52] [Daemon] INFO - ✓ Registered site_health_check: 0 22 0 * * *
+[2026-04-16 02:18:52] [Daemon] INFO - ✓ Registered llm_health_check: 50 6 0 * * *
+[2026-04-16 02:18:52] [Daemon] INFO - Testing: llm_health_check
+[2026-04-16 02:18:52] [Daemon] INFO - ========== EXECUTING: llm_health_check ==========
+[2026-04-16 02:18:52] [llm_health_check] INFO - Starting LLM health check...
+[2026-04-16 02:18:52] [llm_health_check] INFO - Checking Ollama...
+[2026-04-16 02:18:52] [llm_health_check] INFO - Ollama available with 8 models
+[2026-04-16 02:18:52] [llm_health_check] INFO - At least one LLM service is available
+[2026-04-16 02:18:52] [Daemon] INFO - ✓ llm_health_check completed successfully: LLM health check completed: at least one service available
+[2026-04-16 02:18:52] [Notifications] INFO - ✅ llm_health_check: LLM health check completed: at least one service available
+[2026-04-16 02:18:52] [Daemon] INFO - ==========================================
+[2026-04-16 02:18:53] [Daemon] INFO - Testing: post_generation
+[2026-04-16 02:18:53] [Daemon] INFO - ========== EXECUTING: post_generation ==========
+[2026-04-16 02:18:53] [post_generation] INFO - Starting post generation...
+[2026-04-16 02:18:53] [Daemon] INFO - ✓ post_generation completed successfully: Post generation task placeholder - not yet implemented
+[2026-04-16 02:18:53] [Notifications] INFO - ✅ post_generation: Post generation task placeholder - not yet implemented
+[2026-04-16 02:18:53] [Daemon] INFO - ==========================================
+[2026-04-16 02:18:54] [Daemon] INFO - Testing: article_maintenance
+[2026-04-16 02:18:54] [Daemon] INFO - ========== EXECUTING: article_maintenance ==========
+[2026-04-16 02:18:54] [article_maintenance] INFO - Starting article maintenance...
+[2026-04-16 02:18:54] [Daemon] INFO - ✓ article_maintenance completed successfully: Article maintenance task placeholder - not yet implemented
+[2026-04-16 02:18:54] [Notifications] INFO - ✅ article_maintenance: Article maintenance task placeholder - not yet implemented
+[2026-04-16 02:18:54] [Daemon] INFO - ==========================================
+[2026-04-16 02:18:55] [Daemon] INFO - Testing: build_and_deploy
+[2026-04-16 02:18:55] [Daemon] INFO - ========== EXECUTING: build_and_deploy ==========
+[2026-04-16 02:18:55] [build_and_deploy] INFO - Starting build and deploy...
+[2026-04-16 02:18:55] [Daemon] INFO - ✓ build_and_deploy completed successfully: Build and deploy task placeholder - not yet implemented
+[2026-04-16 02:18:55] [Notifications] INFO - ✅ build_and_deploy: Build and deploy task placeholder - not yet implemented
+[2026-04-16 02:18:55] [Daemon] INFO - ==========================================
+[2026-04-16 02:18:56] [Daemon] INFO - Testing: site_health_check
+[2026-04-16 02:18:56] [Daemon] INFO - ========== EXECUTING: site_health_check ==========
+[2026-04-16 02:18:56] [site_health_check] INFO - Starting site health check...
+[2026-04-16 02:18:56] [Daemon] INFO - ✓ site_health_check completed successfully: Site health check task placeholder - not yet implemented
+[2026-04-16 02:18:56] [Notifications] INFO - ✅ site_health_check: Site health check task placeholder - not yet implemented
+[2026-04-16 02:18:56] [Daemon] INFO - ==========================================
+[2026-04-16 02:18:57] [Daemon] INFO - Test mode completed.
+[2026-04-16 02:19:02] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:19:02] [MaintenanceDaemon] INFO - 🚀 HORROR BLOG MAINTENANCE DAEMON
+[2026-04-16 02:19:02] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:19:02] [MaintenanceDaemon] INFO - Running in DRY-RUN mode (showing schedule only)...
+[2026-04-16 02:19:02] [Daemon] INFO - DRY RUN: Showing schedule (no execution)...
+[2026-04-16 02:19:02] [Daemon] INFO - Registering tasks...
+[2026-04-16 02:19:02] [Daemon] ERROR - Failed to register post_generation: expected exactly 5 fields, found 6: [0 7 0 * * *]
+[2026-04-16 02:19:02] [Daemon] INFO - ✓ Registered post_generation: 0 7 0 * * *
+[2026-04-16 02:19:02] [Daemon] INFO - ✓ Registered build_and_deploy: 30 7 0 * * *
+[2026-04-16 02:19:02] [Daemon] INFO - ✓ Registered site_health_check: 0 22 0 * * *
+[2026-04-16 02:19:02] [Daemon] INFO - ✓ Registered llm_health_check: 50 6 0 * * *
+[2026-04-16 02:19:02] [Daemon] INFO - Scheduled jobs (4):
+[2026-04-16 02:19:02] [Daemon] INFO -   - Task: %!s(cron.EntryID=1) Schedule: &{1 4 1 9223372041149743102 9223372036854783998 2 Local}
+[2026-04-16 02:19:02] [Daemon] INFO -   - Task: %!s(cron.EntryID=2) Schedule: &{1073741824 128 1 9223372041149743102 9223372036854783998 9223372036854775935 Local}
+[2026-04-16 02:19:02] [Daemon] INFO -   - Task: %!s(cron.EntryID=3) Schedule: &{1 4194304 1 9223372041149743102 9223372036854783998 9223372036854775935 Local}
+[2026-04-16 02:19:02] [Daemon] INFO -   - Task: %!s(cron.EntryID=4) Schedule: &{1125899906842624 64 1 9223372041149743102 9223372036854783998 9223372036854775935 Local}
+[2026-04-16 02:19:02] [Daemon] INFO - Dry run completed.
+[2026-04-16 02:21:50] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:21:50] [MaintenanceDaemon] INFO - 🚀 HORROR BLOG MAINTENANCE DAEMON
+[2026-04-16 02:21:50] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:21:50] [MaintenanceDaemon] INFO - Running in TEST mode...
+[2026-04-16 02:21:50] [Daemon] INFO - Running all tasks in TEST mode...
+[2026-04-16 02:21:50] [Daemon] INFO - Registering tasks...
+[2026-04-16 02:21:50] [Daemon] ERROR - Failed to register post_generation: expected exactly 5 fields, found 6: [0 7 0 * * *]
+[2026-04-16 02:21:50] [Daemon] INFO - ✓ Registered post_generation: 0 7 0 * * *
+[2026-04-16 02:21:50] [Daemon] INFO - ✓ Registered build_and_deploy: 30 7 0 * * *
+[2026-04-16 02:21:50] [Daemon] INFO - ✓ Registered site_health_check: 0 22 0 * * *
+[2026-04-16 02:21:50] [Daemon] INFO - ✓ Registered llm_health_check: 50 6 0 * * *
+[2026-04-16 02:21:50] [Daemon] INFO - Testing: article_maintenance
+[2026-04-16 02:21:50] [Daemon] INFO - ========== EXECUTING: article_maintenance ==========
+[2026-04-16 02:21:50] [article_maintenance] INFO - Starting article maintenance...
+[2026-04-16 02:21:50] [Daemon] INFO - ✓ article_maintenance completed successfully: Article maintenance task placeholder - not yet implemented
+[2026-04-16 02:21:50] [Notifications] INFO - ✅ article_maintenance: Article maintenance task placeholder - not yet implemented
+[2026-04-16 02:21:50] [Daemon] INFO - ==========================================
+[2026-04-16 02:21:51] [Daemon] INFO - Testing: build_and_deploy
+[2026-04-16 02:21:51] [Daemon] INFO - ========== EXECUTING: build_and_deploy ==========
+[2026-04-16 02:21:51] [build_and_deploy] INFO - Starting build and deploy...
+[2026-04-16 02:21:51] [Daemon] INFO - ✓ build_and_deploy completed successfully: Build and deploy task placeholder - not yet implemented
+[2026-04-16 02:21:51] [Notifications] INFO - ✅ build_and_deploy: Build and deploy task placeholder - not yet implemented
+[2026-04-16 02:21:51] [Daemon] INFO - ==========================================
+[2026-04-16 02:21:52] [Daemon] INFO - Testing: site_health_check
+[2026-04-16 02:21:52] [Daemon] INFO - ========== EXECUTING: site_health_check ==========
+[2026-04-16 02:21:52] [site_health_check] INFO - Starting site health check...
+[2026-04-16 02:21:52] [Daemon] INFO - ✓ site_health_check completed successfully: Site health check task placeholder - not yet implemented
+[2026-04-16 02:21:52] [Notifications] INFO - ✅ site_health_check: Site health check task placeholder - not yet implemented
+[2026-04-16 02:21:52] [Daemon] INFO - ==========================================
+[2026-04-16 02:21:53] [Daemon] INFO - Testing: llm_health_check
+[2026-04-16 02:21:53] [Daemon] INFO - ========== EXECUTING: llm_health_check ==========
+[2026-04-16 02:21:53] [llm_health_check] INFO - Starting LLM health check...
+[2026-04-16 02:21:53] [llm_health_check] INFO - Checking Ollama...
+[2026-04-16 02:21:53] [llm_health_check] INFO - Ollama available with 8 models
+[2026-04-16 02:21:53] [llm_health_check] INFO - At least one LLM service is available
+[2026-04-16 02:21:53] [Daemon] INFO - ✓ llm_health_check completed successfully: LLM health check completed: at least one service available
+[2026-04-16 02:21:53] [Notifications] INFO - ✅ llm_health_check: LLM health check completed: at least one service available
+[2026-04-16 02:21:53] [Daemon] INFO - ==========================================
+[2026-04-16 02:21:54] [Daemon] INFO - Testing: post_generation
+[2026-04-16 02:21:54] [Daemon] INFO - ========== EXECUTING: post_generation ==========
+[2026-04-16 02:21:54] [post_generation] INFO - Starting post generation...
+[2026-04-16 02:21:54] [Daemon] INFO - ✓ post_generation completed successfully: Post generation task placeholder - not yet implemented
+[2026-04-16 02:21:54] [Notifications] INFO - ✅ post_generation: Post generation task placeholder - not yet implemented
+[2026-04-16 02:21:54] [Daemon] INFO - ==========================================
+[2026-04-16 02:21:55] [Daemon] INFO - Test mode completed.
+[2026-04-16 02:22:02] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:22:02] [MaintenanceDaemon] INFO - 🚀 HORROR BLOG MAINTENANCE DAEMON
+[2026-04-16 02:22:02] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:22:02] [Daemon] INFO - Starting daemon...
+[2026-04-16 02:22:02] [Daemon] INFO - Registering tasks...
+[2026-04-16 02:22:02] [Daemon] INFO - ✓ Registered build_and_deploy: 30 7 0 * * *
+[2026-04-16 02:22:02] [Daemon] INFO - ✓ Registered site_health_check: 0 22 0 * * *
+[2026-04-16 02:22:02] [Daemon] INFO - ✓ Registered llm_health_check: 50 6 0 * * *
+[2026-04-16 02:22:02] [Daemon] INFO - Waiting for scheduled tasks...
+[2026-04-16 02:22:02] [Daemon] INFO - Scheduler running with 5 jobs
+[2026-04-16 02:23:22] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:23:22] [MaintenanceDaemon] INFO - 🚀 HORROR BLOG MAINTENANCE DAEMON
+[2026-04-16 02:23:22] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:23:22] [Daemon] INFO - Starting daemon...
+[2026-04-16 02:23:22] [Daemon] INFO - Registering tasks...
+[2026-04-16 02:23:22] [Daemon] INFO - ✓ Registered build_and_deploy: 30 7 0 * * *
+[2026-04-16 02:23:22] [Daemon] INFO - ✓ Registered site_health_check: 0 22 0 * * *
+[2026-04-16 02:23:22] [Daemon] INFO - ✓ Registered llm_health_check: 50 6 0 * * *
+[2026-04-16 02:23:22] [Daemon] INFO - Waiting for scheduled tasks...
+[2026-04-16 02:23:22] [Daemon] INFO - Scheduler running with 5 jobs
+[2026-04-16 02:23:59] [Daemon] INFO - Received signal interrupt, shutting down gracefully...
+[2026-04-16 02:23:59] [Daemon] INFO - Daemon stopped.
+[2026-04-16 02:24:39] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:24:39] [MaintenanceDaemon] INFO - 🚀 HORROR BLOG MAINTENANCE DAEMON
+[2026-04-16 02:24:39] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:24:39] [Daemon] INFO - Starting daemon...
+[2026-04-16 02:24:39] [Daemon] INFO - Registering tasks...
+[2026-04-16 02:24:39] [Daemon] INFO - ✓ Registered build_and_deploy: 30 7 0 * * *
+[2026-04-16 02:24:39] [Daemon] INFO - ✓ Registered site_health_check: 0 22 0 * * *
+[2026-04-16 02:24:39] [Daemon] INFO - ✓ Registered llm_health_check: 50 6 0 * * *
+[2026-04-16 02:24:39] [Daemon] INFO - Waiting for scheduled tasks...
+[2026-04-16 02:24:39] [Daemon] INFO - Scheduler running with 5 jobs
+[2026-04-16 02:25:03] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:25:03] [MaintenanceDaemon] INFO - 🚀 HORROR BLOG MAINTENANCE DAEMON
+[2026-04-16 02:25:03] [MaintenanceDaemon] INFO - ================================
+[2026-04-16 02:25:03] [MaintenanceDaemon] INFO - Running in TEST mode...
+[2026-04-16 02:25:03] [Daemon] INFO - Running all tasks in TEST mode...
+[2026-04-16 02:25:03] [Daemon] INFO - Registering tasks...
+[2026-04-16 02:25:03] [Daemon] ERROR - Failed to register post_generation: expected exactly 5 fields, found 6: [0 7 0 * * *]
+[2026-04-16 02:25:03] [Daemon] INFO - ✓ Registered post_generation: 0 7 0 * * *
+[2026-04-16 02:25:03] [Daemon] INFO - ✓ Registered build_and_deploy: 30 7 0 * * *
+[2026-04-16 02:25:03] [Daemon] INFO - ✓ Registered site_health_check: 0 22 0 * * *
+[2026-04-16 02:25:03] [Daemon] INFO - ✓ Registered llm_health_check: 50 6 0 * * *
+[2026-04-16 02:25:03] [Daemon] INFO - Testing: post_generation
+[2026-04-16 02:25:03] [Daemon] INFO - ========== EXECUTING: post_generation ==========
+[2026-04-16 02:25:03] [post_generation] INFO - Starting post generation...
+[2026-04-16 02:25:03] [Daemon] INFO - ✓ post_generation completed successfully: Post generation task placeholder - not yet implemented
+[2026-04-16 02:25:03] [Notifications] INFO - ✅ post_generation: Post generation task placeholder - not yet implemented
+[2026-04-16 02:25:03] [Daemon] INFO - ==========================================
+[2026-04-16 02:25:04] [Daemon] INFO - Testing: article_maintenance
+[2026-04-16 02:25:04] [Daemon] INFO - ========== EXECUTING: article_maintenance ==========
+[2026-04-16 02:25:04] [article_maintenance] INFO - Starting article maintenance...
+[2026-04-16 02:25:04] [Daemon] INFO - ✓ article_maintenance completed successfully: Article maintenance task placeholder - not yet implemented
+[2026-04-16 02:25:04] [Notifications] INFO - ✅ article_maintenance: Article maintenance task placeholder - not yet implemented
+[2026-04-16 02:25:04] [Daemon] INFO - ==========================================
+[2026-04-16 02:25:05] [Daemon] INFO - Testing: build_and_deploy
+[2026-04-16 02:25:05] [Daemon] INFO - ========== EXECUTING: build_and_deploy ==========
+[2026-04-16 02:25:05] [build_and_deploy] INFO - Starting build and deploy...
+[2026-04-16 02:25:05] [Daemon] INFO - ✓ build_and_deploy completed successfully: Build and deploy task placeholder - not yet implemented
+[2026-04-16 02:25:05] [Notifications] INFO - ✅ build_and_deploy: Build and deploy task placeholder - not yet implemented
+[2026-04-16 02:25:05] [Daemon] INFO - ==========================================
+[2026-04-16 02:25:06] [Daemon] INFO - Testing: site_health_check
+[2026-04-16 02:25:06] [Daemon] INFO - ========== EXECUTING: site_health_check ==========
+[2026-04-16 02:25:06] [site_health_check] INFO - Starting site health check...
+[2026-04-16 02:25:06] [Daemon] INFO - ✓ site_health_check completed successfully: Site health check task placeholder - not yet implemented
+[2026-04-16 02:25:06] [Notifications] INFO - ✅ site_health_check: Site health check task placeholder - not yet implemented
+[2026-04-16 02:25:06] [Daemon] INFO - ==========================================
+[2026-04-16 02:25:07] [Daemon] INFO - Testing: llm_health_check
+[2026-04-16 02:25:07] [Daemon] INFO - ========== EXECUTING: llm_health_check ==========
+[2026-04-16 02:25:07] [llm_health_check] INFO - Starting LLM health check...
+[2026-04-16 02:25:07] [llm_health_check] INFO - Checking Ollama...
+[2026-04-16 02:25:07] [llm_health_check] INFO - Ollama available with 8 models
+[2026-04-16 02:25:07] [llm_health_check] INFO - At least one LLM service is available
+[2026-04-16 02:25:07] [Daemon] INFO - ✓ llm_health_check completed successfully: LLM health check completed: at least one service available
+[2026-04-16 02:25:07] [Notifications] INFO - ✅ llm_health_check: LLM health check completed: at least one service available
+[2026-04-16 02:25:07] [Daemon] INFO - ==========================================
+[2026-04-16 02:25:08] [Daemon] INFO - Test mode completed.
+[2026-04-16 02:25:22] [Daemon] INFO - Received signal interrupt, shutting down gracefully...
+[2026-04-16 02:25:22] [Daemon] INFO - Daemon stopped.
