@@ -52,5 +52,3 @@ tags: [ミステリー, データ復旧, 矛盾する記録]
 ---
 
 本資料はすべて公開済みである。しかし復旧業務を担当した担当者が「NASの電源を切っていない」という事実は、報告書に載っていない。
-
-Written by GitHub Copilot using Claude Opus 4 (Preview)

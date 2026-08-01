@@ -64,8 +64,3 @@ tags: [ミステリー, 施設, 記録形式, 夜勤]
 **記録簿最終ページ：確認不可（書かれた直後に tearing）**
 
 ![夜勤着替え室の壁一面に同じ言葉が繰り返されていた](/assets/images/bed-log.svg)
-
-
----
-
-Written by GitHub Copilot using Claude haiku (Preview)

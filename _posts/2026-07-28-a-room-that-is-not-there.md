@@ -99,8 +99,3 @@ _\
 *\
 
 _"あそこに立つもの"が、カメラの前に立つのはまだ先？ それとも——もう近づいてきている？*_
-
-
----
-
-Written by GitHub Copilot using Claude Haiku (Preview)
