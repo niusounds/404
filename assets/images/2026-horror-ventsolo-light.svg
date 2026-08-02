@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="720" cy="120" r="100" fx="720" fy="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff5e3c" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- dark background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- stormy sky gradient hint (diagonal strokes) -->
+  <line x1="100" y1="380" x2="600" y2="380" stroke="#2d1c15" stroke-width="1" opacity="0.6"/>
+  <line x1="90" y1="400" x2="700" y2="400" stroke="#2b1a14" stroke-width="1" opacity="0.8"/>
+
+  <!-- sea silhouette waves -->
+  <path d="M 0,390 Q50,370 100,390 T200,390 T300,385 T400,390 T500,388 T600,390 T700,385 L700,450 L0,450"
+        fill="#100a0f"/>
+
+  <!-- lighthouse base -->
+  <rect x="620" y="180" width="20" height="190" fill="#2b2523" stroke="#3d231d" stroke-width="1.5"/>
+  <!-- lantern room (top glow) -->
+  <ellipse cx="640" cy="175" rx="18" ry="10" fill="#ff9f43" opacity="0.9"/>
+  <rect x="626" y="160" width="10" height="16" fill="#5a4842"/>
+
+  <!-- large glow effect from lighthouse -->
+  <ellipse cx="700" cy="145" rx="60" ry="40" fill="url(#glow)"/>
+
+  <!-- church silhouette -- far side of island -->
+  <rect x="80" y="300" width="90" height="85" fill="#1a1414"/>
+  <polygon points="70,300 125,240 180,300" fill="#221a16"/>
+  <!-- bell tower -->
+  <rect x="95" y="220" width="12" height="65" fill="#1e1717";/>
+  <polygon points="91,220 101,195 111,220" fill="#26202a"></polygon>
+
+  <!-- three chains hanging from church basement window -->
+  <line x1="118" y1="340" x2="118" y2="370" stroke="#b05540" stroke-width="2.5"/>
+  <line x1="128" y1="335" x2="129" y2="368" stroke="#a74d3a" stroke-width="2.5"/>
+  <line x1="138" y1="340" x2="138" y2="372" stroke="#8f4b3b" stroke-width="2.5"/>
+
+  <!-- scratched graffiti on wall -->
+  <text x="95" y="360" font-size="12" fill="#ff4444" opacity="0.6" font-family="monospace">noi balleremo</text>
+
+  <!-- small dancing figure silhouettes near chains (bare hints) -->
+  <circle cx="130" cy="375" r="5" fill="#3d2530"/>
+  <path d="M120,385 Q130,395 140,385" stroke="#b3a0ab" stroke-width="2" fill="none" opacity="0.7"/>
+
+  <!-- title text -->
+  <text x="400" y="60" font-family="serif" font-size="40" fill="#c8e1ff" text-anchor="middle" letter-spacing="2">Le Ragazze che Ballano nel Buio</text>
+  <line x1="150" y1="70" x2="650" y2="70" stroke="#cc3a3a" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- ghost-like figures at the edges -->
+  <circle cx="340" cy="320" r="6" fill="#5b3f5e" opacity="0.15"/>
+  <path d="M 337,335 Q350,335 358,345" stroke="#c9a9cd" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Gothic border frame -->
+  <rect x="10" y="10" width="780" height="430" rx="8" fill="none" stroke="#2d0f26" stroke-width="3" />
+  <rect x="15" y="15" width="770" height="420" rx="6" fill="none" stroke="#1e0a1c" stroke-width="1"/>
+
+  <!-- corners glow -->
+  <circle cx="18" cy="18" r="3" fill="#ff4455" opacity="0.7"/>
+  <circle cx="782" cy="18" r="3" fill="#ff4455" opacity="0.7"/>
+  <circle cx="18" cy="432" r="3" fill="#ff4455" opacity="0.7"/>
+  <circle cx="782" cy="432" r="3" fill="#ff4455" opacity="0.7"/>
+
+</svg>

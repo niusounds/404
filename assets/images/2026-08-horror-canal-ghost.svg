@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0b0a0f"/>
+
+  <!-- Moon -->
+  <circle cx="680" cy="75" r="28" fill="#e6dacb" opacity=".9"/>
+  <ellipse cx="690" cy="68" rx="12" ry="24" fill="#0b0a0f" opacity=".85"/>
+
+  <!-- Water -->
+  <rect y="260" width="800" height="190" fill="#0c0610"/>
+  <path d="M0,300 Q100,290 200,305 T400,292 T600,308 T800,295 L800,450 L0,450Z" fill="#0f0a18"/>
+  <ellipse cx="670" cy="370" rx="15" ry="40" fill="#e6dacb" opacity=".09"/>
+
+  <!-- Buildings left side silhouette -->
+  <rect x="40" y="120" width="80" height="140" fill="#1a111e"/>
+  <rect x="130" y="95" width="60" height="165" fill="#1c1327"/>
+  <polygon points="130,95 160,70 190,95" fill="#0b0a0f"/>
+
+  <!-- Warm window lights -->
+  <rect x="55" y="145" width="12" height="18" fill="#c8a34e" opacity=".3"/>
+  <rect x="90" y="170" width="12" height="18" fill="#c8a34e" opacity=".28"/>
+
+  <!-- Right buildings -->
+  <rect x="500" y="110" width="85" height="150" fill="#160f20"/>
+  <polygon points="500,110 540,75 585,110" fill="#160f20"/>
+
+  <!-- Woman silhouette reaching from canal bank -->
+  <g transform="translate(370, 218)" opacity=".7">
+    <circle cx="4" cy="-28" r="9"/>
+    <path d="M5,-20 C-6,0 4,2 -4,-20Z"/>
+  </g>
+
+  <!-- Cobblestone canal edge -->
+  <path d="M155,294 C170,278 250,300 285,260" stroke="#2a1f2e" stroke-width="3.5" fill="none"/>
+
+  <!-- Gothic border -->
+  <rect x="18" y="18" width="764" height="414" rx="6" fill="none" stroke="#3d006b" stroke-width="2"/>
+  <path d="M45,5 L8 42 M755,5L792,42 M45,445L8,408 M755,445L792,408" stroke="#6b0a9e" stroke-width="1.5"/>
+  <text x="400" y="430" text-anchor="middle" font-family="'Courier New', monospace" fill="#6b7c94" font-size="22">Grachtengeest — The Canal Ghost</text>
+</svg>
