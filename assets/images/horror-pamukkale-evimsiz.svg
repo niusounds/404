@@ -1,0 +1,58 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#2a1810"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="#0a0808"/>
+  <ellipse cx="400" cy="220" rx="380" ry="160" fill="url(#glow)" opacity="0.7"/>
+
+  <!-- Limestone cliffs silhouette -->
+  <path d="M0,350 L90,180 L170,260 L260,140 L350,210 L430,120 
+           L520,220 L590,130 L680,240 L760,180 L800,200 
+           L800,450 L0,450Z" fill="#1a1412"/>
+
+  <!-- Cave mouths (glowing faintly) -->
+  <ellipse cx="130" cy="190" rx="10" ry="7" fill="#0d200d">
+    <animate attributeName="opacity" values="1;.4;1" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="360" cy="140" rx="9" ry="8">
+    <animate attributeName="opacity" values=".7;.2;.7" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="530" cy="200" rx="8" ry="6" fill="#1a0d00">
+    <animate attributeName="opacity" values=".9;0;.9" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Floating Evimsizler — bone-white translucent bodies -->
+  <g opacity=".28" fill="#ebe0c8" filter="url(#ghostBlur)">
+    <rect x="130" y="250" width="12" height="45" rx="5">
+      <animate attributeName="opacity" values="0.6;1;.6" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <ellipse cy="63" cx="138" ry="10" rx="9">
+      <animate attributeName="opacity" values="0.5;1;.5" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Ghost body in motion -->
+  <rect x="428" y="310" width="14" height="55" rx="7" fill="#f5ead0">
+    <animate attributeName="opacity" values=".15;.5;.15" dur="9s"/>
+  </rect>
+  <ellipse cx="432" cy="368" ry="11" />
+
+  <!-- Ash particles -->
+  <circle cx="200" cy="370" r="1.8" fill="#ff5c2a" opacity=".5">
+    <animate attributeName="cy" values="370;310;370" dur="4s"/>
+    <animate attributeName="opacity" values=".5;.8;.5" dur="4s"/>
+  </circle>
+
+  <!-- Gothic border -->
+  <rect x="15" y="15" width="770" height="420" rx="6" fill="none" stroke="#3d001a" stroke-width="2.2"/>
+  <rect x="22" y="22" width="756" height="406" rx="3" fill="none" stroke="#720028" stroke-width=".8" opacity=".45"/>
+
+  <!-- Title text -->
+  <text x="400" y="52" text-anchor="middle" fill="#ff1a2b" font-size="17" letter-spacing="4">EVİMSİZLER</text>
+
+  <!-- Subtitle in darker red -->
+  <text x="400" y="428" text-anchor="middle" fill="#5c0018" font-size="13" letter-spacing=".5">体を持たぬ者たちが骨を溶かす夜</text>
+</svg>

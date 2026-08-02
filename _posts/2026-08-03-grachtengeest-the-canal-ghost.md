@@ -1,6 +1,6 @@
 ---
 title: Grachtengeest — オランダの運河に眠る霊
-date: 2025-10-01 03:00 +08:00
+date: 2026-08-03T04:05:00+09:00
 categories: [horror, urban-legends]
 tags: [オランダ, 都市伝説, ホラー]
 type: article

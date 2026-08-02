@@ -1,0 +1,105 @@
+
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-gore">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="bg-fade" cx="50%" cy="60%" r="70%">
+      <stop offset="0%" stop-color="#1a0805"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <linearGradient id="moon-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffdd99" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-fade)"/>
+
+  <!-- Decorative border (gothic frame) -->
+  <rect x="12" y="12" width="776" height="426" rx="8" fill="none" stroke="#4a0015" stroke-width="3"/>
+  <rect x="18" y="18" width="764" height="414" rx="5" fill="none" stroke="#cc0033" stroke-width="1" opacity=".25"/>
+
+  <!-- Corner ornaments -->
+  <circle cx="22" cy="22" r="5" fill="#8b0037" filter="url(#glow-gore)"/>
+  <circle cx="778" cy="22" r="5" fill="#8b0037" filter="url(#glow-gore)"/>
+  <circle cx="22" cy="428" r="5" fill="#8b0037" filter="url(#glow-gore)"/>
+  <circle cx="778" cy="428" r="5" fill="#8b0037" filter="url(#glow-gore)"/>
+
+  <!-- Moon -->
+  <circle cx="640" cy="95" r="42" fill="#ffddaa" opacity=".12"/>
+  <circle cx="640" cy="95" r="38" fill="none" stroke="#ffe8c0" stroke-width="1.5" opacity=".25"/>
+
+  <!-- Moon light trail -->
+  <rect x="400" y="95" width="240" height="450" fill="url(#moon-glow)"/>
+
+  <!-- Silhouette: nipa hut / boodle trees (simple stylized) -->
+  <!-- Distant mountains / tree line -->
+  <path d="M0,380 Q100,290 200,350 Q300,280 400,360 Q500,300 600,370 Q700,310 800,380 L800,450 L0,450 Z" fill="#0f0a07"/>
+
+  <!-- Nipa palm silhouettes -->
+  <g transform="translate(60,320)" stroke="#141010" stroke-linecap="round">
+    <line x1="0" y1="0" x2="0" y2="-50" stroke-width="3"/>
+    <path d="M0,-50 Q-16,-70 0,-90 M0,-50 Q14,-72 -3,-95 M0,-50 Q18,-60 0,-80" fill="none" stroke-width="2"/>
+    <path d="M-04,-52 Q-20,-65 -10,-78 M-04,-52 Q14,-70 6,-82" fill="#1a1512" stroke-width="1.5"/>
+  </g>
+
+  <g transform="translate(730,315)" stroke="#141010" stroke-linecap="round">
+    <line x1="0" y1="0" x2="0" y2="-60" stroke-width="3"/>
+    <path d="M0,-60 Q-18,-82 0,-105 M0,-60 Q16,-84 -5,-108 M0,-60 Q20,-70 0,-92" fill="none" stroke-width="2"/>
+    <path d="M-05,-63 Q-22,-78 -12,-95 M-05,-63 Q16,-82 5,-100" fill="#1a1512" stroke-width="1.5"/>
+  </g>
+
+  <!-- Ground: rough texture dots -->
+  <ellipse cx="400" cy="410" rx="200" ry="40" fill="#120c0a"/>
+
+  <!-- THE ASWANG figure in mid-transformation -- partially torn, wings emerging from back -->
+  <!-- Dark silhouette body -->
+  <g opacity=".95">
+    <!-- Head (partially)  -->
+    <ellipse cx="380" cy="260" rx="14" ry="16" fill="#1a0f0c"/>
+    <!-- Body torso reaching/contorting upward -->
+    <path d="M360,275 Q350,310 380,350 L410,350 Q440,310 430,275 Z" fill="#1a0f0c"/>
+    <!-- Arms reaching out / starting to form wings -->
+    <path d="M360,280 Q310,260 240,290 Q220,300 235,270" fill="none" stroke="#c8a85e" stroke-width="1.8"/>
+    <path d="M430,280 Q480,260 560,290 Q585,300 570,268" fill="none" stroke="#c8a85e" stroke-width="1.8"/>
+    <!-- WINGS emerging (transformation detail) -->
+    <path d="M235,270 Q210,240 200,200 Q195,180 225,205 Z" fill="#2a1e16" opacity=".5"/>
+    <path d="M225,205 Q195,230 210,275 Z" fill="#3d2b20" opacity=".45"/>
+    <path d="M570,268 Q590,238 610,195 Q618,175 588,200 Z" fill="#2a1e16" opacity=".5"/>
+    <path d="M590,200 Q625,225 610,273 Z" fill="#3d2b20" opacity=".45"/>
+    <!-- Legs ending in dark feathers/hooves -->
+    <line x1="380" y1="350" x2="360" y2="410" stroke-width="5.5"/>
+    <line x1="410" y1="350" x2="438" y2="410" stroke-width="5.5"/>
+  </g>
+
+  <!-- Blood-like eye glow -->
+  <circle cx="376" cy="258" r="3" fill="#ff0800" filter="url(#glow-gore)" opacity=".9"/>
+  <circle cx="384" cy="258" r="2.5" fill="#cc0000" filter="url(#glow-gore)"/>
+
+  <!-- Droplet / blood stains on ground -->
+  <ellipse cx="370" cy="415" rx="2" ry="3" fill="#6a0008" opacity=".6"/>
+  <circle cx="390" cy="420" r="1.8" fill="#ff0800" opacity=".5"/>
+
+  <!-- Fog/mist overlay -->
+  <ellipse cx="650" cy="380" rx="160" ry="25" fill="#ffddaa" opacity=".04"/>
+  <ellipse cx="180" cy="375" rx="130" ry="22" fill="#c8b890" opacity=".035"/>
+
+  <!-- Title -->
+  <text x="400" y="435" text-anchor="middle" fill="#cc0a0a" font-family="Noto Serif JP, serif" font-size="16" filter="url(#glow-gore)">夜中に聞こえる翼の音が、アスワンの声</text>
+
+  <!-- Cross motifs -->
+  <g transform="translate(85,390)" stroke="#4a2a2e" stroke-width="1.2" opacity=".6">
+    <line x1="4" y1="-12" x2="4" y2="3" />
+    <line x1="0" y1="-6" x2="8" y2="-6"/>
+  </g>
+
+  <!-- Bottom decorative line -->
+  <line x1="50" y1="470" x2="750" y2="470" stroke="#3a0c16" stroke-width=".8" opacity=".35"/>
+</svg>
+
+]]>
+
