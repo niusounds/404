@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0a0808"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+    <radialGradient id="center-glow" cx="30%" cy="60%">
+      <stop offset="0%" stop-color="#1a0520"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Background gradient -->
+  <rect width="800" height="450" fill="url(#center-glow)"/>
+  
+  <!-- Dead tree at left side - twisted and bare -->
+  <g stroke="#2a1d3f" fill="none">
+    <path d="M40,430 L47,320 Q48,290 55,260 M50,270 Q80,240 100,220 M60,290 Q95,280 110,300" stroke-width="5"/>
+    <path d="M90,230 L85,200 M92,240 L95,210 M100,225 L110,195 M106,235 L125,220" stroke-width="2"/>
+  </g>
+  
+  <!-- Wailing woman silhouette at center-left -->
+  <g transform="translate(145, 20)" fill="#c7b8e8" opacity="0.9">
+    <!-- Head -->
+    <ellipse cx="30" cy="-30" rx="16" ry="18" />
+    
+    <!-- Hair flowing wildly - multiple strands of hair blowing back -->
+    <path d="M15,-20 L-10,-40 Q-5,-30 -20,-50 M20,-25 L0,-45 Q8,-35 0,-60" stroke="#e8cde8" fill="none"/>
+    
+    <!-- Body, the dress flowing -->
+    <path d="M16,-12 L80,130 Q90,95 75,50 Z" opacity="0.7"/>
+    
+    <!-- Arms raised in mourning - classic Doina pose -->
+    <path d="M16,-2 M-20,20" stroke="#e8e0f0" stroke-width="4" fill="none" opacity="0.9"/>
+    <path d="M35,-2 L85,-35" stroke="#e8e0f0" stroke-width="4" fill="none" opacity="0.9"/>
+    
+    <!-- Head tilted back face toward moon -->
+  </g>
+  
+  <!-- Ghostly moth shape - the Doina's true form - near top right -->
+  
+</svg>

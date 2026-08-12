@@ -1,0 +1,95 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <radialGradient id="moonGlow" cx="75%" cy="25%" r="30%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Stars -->
+  <circle cx="120" cy="60" r="1.2" fill="#ffccaa" opacity="0.9"/>
+  <circle cx="230" cy="90" r="0.8" fill="#ffffff" opacity="0.5"/>
+  <circle cx="450" cy="40" r="1" fill="#ffddbb" opacity="0.7"/>
+  <circle cx="680" cy="80" r="1.5" fill="#ffeecc" opacity="0.8"/>
+  <circle cx="80" cy="150" r="0.6" fill="#ffffff" opacity="0.3"/>
+  <circle cx="340" cy="70" r="0.9" fill="#ffcccc" opacity="0.6"/>
+  
+  <!-- Dead tree (left side) -->
+  <g transform="translate(80,120)">
+    <rect x="5" y="0" width="8" height="130" fill="#1a1020" rx="1"/>
+    <line x1="9" y1="40" x2="-10" y2="20" stroke="#1a1020" stroke-width="3" fill="none"/>
+    <line x1="-10" y1="20" x2="-5" y2="10" stroke="#1a1020" stroke-width="2" fill="none"/>
+    <line x1="9" y1="60" x2="30" y2="40" stroke="#1a1020" stroke-width="3" fill="none"/>
+    <line x1="30" y1="40" x2="35" y2="30" stroke="#1a1020" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Ground -->
+  <ellipse cx="400" cy="380" rx="500" ry="80" fill="#0d0608"/>
+  
+  <!-- Wretched figure (center-left) with bone whistle -->
+  <g transform="translate(280,170)">
+    <!-- Body/sketchy ghostly form -->
+    <path d="M30,20 Q20,40 15,80 L20,120 L35,120 L40,80 Q45,60 35,20 Z" fill="#0f0a14" stroke="#3d001a" stroke-width="1.5"/>
+    <!-- Head (skull) -->
+    <ellipse cx="27" cy="15" rx="18" ry="16" fill="#0a0a0a" stroke="#220011" stroke-width="1" opacity="0.9"/>
+    
+    <!-- Skull details -->
+    <!-- Eye sockets (glowing) -->
+    <ellipse cx="22" cy="14" rx="4" ry="3.5" fill="#aa0000" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.4;0.85" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="32" cy="14" rx="4" ry="3" fill="#aa0000" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.35;0.7" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Nose slit -->
+    <path d="M26,18 L27,21 L29,18" stroke="#440000" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- Bone whistle in hand (raised to mouth area) -->
+  <g transform="translate(330,210)">
+    <line x1="-5" y1="-5" x2="-45" y2="-30" stroke="#66ccaa" stroke-width="2.5" opacity="0.8"/>
+    <!-- whistle bones (rib-like texture) -->
+    <line x1="-25" y1="-26" x2="-22" y2="-15" stroke="#44aa88" stroke-width="1.5" fill="none" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="-35" y1="-24" x2="-32" y2="-13" stroke="#44aa88" stroke-width="1.5" fill="none" opacity="0.6">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Sound waves (concentric whistle rings) -->
+  <path d="M355,190 Q380,170 400,170 Q420,170 445,190" stroke="#ff66aa" stroke-width="1.8" fill="none" opacity="0.6">
+    <animate attributeName="opacity" values="0;0.7;0" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M352,185 Q390,155 420,155 Q460,155 495,185" stroke="#ff66aa" stroke-width="1.2" fill="none" opacity="0.5">
+    <animate attributeName="opacity" values="0;0.5;0" dur="3s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Road/ground lines (winding path) -->
+  <path d="M200,400 Q350,365 500,395 T800,410" stroke="#1a100c" stroke-width="2.5" fill="none"/>
+  
+  <!-- Mist/fog at bottom -->
+  <ellipse cx="300" cy="440" rx="250" ry="15" fill="#0d080e" opacity="0.7"/>
+  
+  <!-- Gothic frame border -->
+  <rect x="15" y="15" width="770" height="420" rx="6" fill="none" stroke="#3d001a" stroke-width="3"/>
+  <rect x="22" y="22" width="756" height="406" rx="4" fill="none" stroke="#8b0020" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Corner flourishes -->
+  <!-- Top-left -->
+  <path d="M20,35 L20,25 Q20,18 30,18 L35,18" fill="none" stroke="#6a0030" stroke-width="2.5"/>
+  <!-- Top-right -->
+  <path d="M780,35 L780,25 Q780,18 770,18 L765,18" fill="none" stroke="#6a0030" stroke-width="2.5"/>
+  <!-- Bottom-left -->
+  <path d="M20,415 L20,425 Q20,432 30,432 L35,432" fill="none" stroke="#6a0030" stroke-width="2.5"/>
+  <!-- Bottom-right -->
+  <path d="M780,415 L780,425 Q780,432 770,432 L765,432" fill="none" stroke="#6a0030" stroke-width="2.5"/>
+  
+  <!-- Title text: El Silbón -->
+  <text x="400" y="435" text-anchor="middle" fill="#8b1a3a" font-family="serif" font-size="16" opacity="0.7">El · Sil·bón</text>
+</svg>

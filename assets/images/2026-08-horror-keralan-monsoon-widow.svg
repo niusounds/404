@@ -1,0 +1,116 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:transparent"/>
+      <stop offset="60%" style="stop-color:#4a8fa8"/>
+      <stop offset="100%" style="stop-color:#375e6b"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base dark monsoon sky -->
+  <rect width="800" height="450" fill="#061216"/>
+  
+  <!-- Subtle rain gradient overlay -->
+  <rect width="800" height="450" fill="url(#rainGrad)" opacity="0.3"/>
+
+  <!-- Rain streaks - vertical lines at angles -->
+  <g stroke="#4a7a8a" stroke-width="1" opacity="0.25">
+    <line x1="60" y1="-20" x2="40" y2="460"/>
+    <line x1="140" y1="-20" x2="120" y2="460"/>
+    <line x1="220" y1="-30" x2="195" y2="460"/>
+    <line x1="300" y1="-10" x2="280" y2="460"/>
+    <line x1="380" y1="-25" x2="360" y2="460"/>
+    <line x1="460" y1="-15" x2="440" y2="460"/>
+    <line x1="540" y1="-30" x2="518" y2="460"/>
+    <line x1="620" y1="-20" x2="600" y2="460"/>
+    <line x1="700" y1="-35" x2="678" y2="460"/>
+    <line x1="780" y1="-10" x2="760" y2="460"/>
+    <line x1="100" y1="-20" x2="85" y2="300"/>
+    <line x1="180" y1="-20" x2="165" y2="280"/>
+    <line x1="260" y1="-30" x2="245" y2="350"/>
+    <line x1="340" y1="-10" x2="330" y2="320"/>
+    <line x1="420" y1="-25" x2="410" y2="380"/>
+    <line x1="500" y1="-15" x2="488" y2="310"/>
+    <line x1="580" y1="-30" x2="570" y2="360"/>
+    <line x1="660" y1="-20" x2="648" y2="340"/>
+  </g>
+
+  <!-- Distant village rooftops - dark silhouettes -->
+  <g fill="#0a1c22">
+    <path d="M0,370 L50,340 L100,355 L160,330 L210,350 L260,340 L320,358 L380,342 L440,360"/>
+  </g>
+
+  <!-- Faint warm light windows in village -->
+  <g fill="#c49a37" opacity="0.3">
+    <rect x="85" y="348" width="4" height="5" rx="1"/>
+    <rect x="215" y="340" width="3" height="6" rx="1"/>
+    <rect x="328" y="348" width="4" height="5" rx="1"/>
+  </g>
+
+  <!-- Left palm tree - bent wildly in monsoon wind -->
+  <g stroke="#0c2a1f" stroke-width="5" fill="none">
+    <path d="M-30,440 C-20,390 -10,340 -30,280 C-45,230 -60,200 -70,170"/>
+  </g>
+  <!-- Palm fronds left -->
+  <g fill="#0d2e22" stroke="none">
+    <path d="M-10,295 L30,280 L10,270 Z"/>
+    <path d="M-15,265 L40,240 L25,235 Z"/>
+    <path d="M-35,210 L5,-215 L0,-225 Z"/>
+    <path d="M-55,190 L-80,175 -65,172 Z"/>
+  </g>
+
+  <!-- Right palm tree -->
+  <g stroke="#0c2a1f" stroke-width="4" fill="none">
+    <path d="M830,440 C825,400 840,360 820,310 C805,270 790,250 775,225"/>
+  </g>
+  <g fill="#0d2e22" stroke="none">
+    <path d="M818,316 L780,300 L798,290 Z"/>
+    <path d="M815,282 L770,260 L785,252 Z"/>
+    <path d="M782,248 L740,235 L752,228 Z"/>
+  </g>
+
+  <!-- The Ghostly Woman - center frame, dark but with eerie glow -->
+  <g filter="url(#glow)">
+    <!-- Silhouette body -->
+    <path d="M395,160 C405,155 425,160 428,175 C432,190 428,200 426,210 
+             M426,210 C428,220 430,230 426,250 L425,320" 
+          stroke="#5a9ab0" stroke-width="3.5" fill="none"/>
+    <!-- Head -->
+    <ellipse cx="411" cy="172" rx="15" ry="18" fill="#c8e6f2" opacity="0.4"/>
+    <!-- Hair flowing wildly in rain -->
+    <path d="M397,167 C385,160 370,155 360,165" stroke="#c8e6f2" stroke-width="2" fill="none"/>
+    <path d="M401,163 L395,145 382,150" stroke="#a8dce6" stroke-width="1.5" fill="none"/>
+    <path d="M418,167 C428,155 440,152 450,162" stroke="#c8e6f2" stroke-width="2" fill="none"/>
+    <!-- Saree drape flowing -->
+    <path d="M428,230 C440,235 448,250 442,270 L435,310" stroke="#5a9ab0" stroke-width="2.5" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Ground/mist at base -->
+  <rect x="0" y="400" width="800" height="50" fill="#0b1e23" opacity="0.7"/>
+  
+  <!-- Water reflection hints near feet -->
+  <ellipse cx="411" cy="415" rx="60" ry="8" fill="#2a5c62" opacity="0.2"/>
+
+  <!-- Gothic border frame with glow -->
+  <rect x="12" y="12" width="776" height="426" rx="4" 
+        fill="none" stroke="#1a3a3f" stroke-width="1.5"/>
+  <rect x="18" y="18" width="764" height="414" rx="3"
+        fill="none" stroke="#0d2e35" stroke-width="1"/>
+
+  <!-- Corner ornaments - gothic -->
+  <g fill="none" stroke="#2a5c62">
+    <path d="M28,28 L18,18 M28,36 L18,20 M36,28 L20,18 
+             M772,28 L782,18 M772,36 L782,20 M764,28 L750,18" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Title text at bottom -->
+  <text x="400" y="430" text-anchor="middle" fill="#3a7f90" font-size="16" font-family="serif" opacity="0.8">ケーララ・モンスーン・ウィドウ</text>
+</svg>

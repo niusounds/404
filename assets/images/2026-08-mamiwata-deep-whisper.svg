@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: deep dark ocean -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Outer gothic frame border -->
+  <rect x="12" y="12" width="776" height="426" rx="8" fill="none" stroke="#3d001a" stroke-width="2.5"/>
+
+  <!-- Inner decorative border with glow effect via layered strokes -->
+  <rect x="18" y="18" width="764" height="414" rx="6" fill="none" stroke="#1a003020" stroke-width="1.5"/>
+
+  <!-- Deep ocean gradient background (radial glow) -->
+  <defs>
+    <radialGradient id="whisperGlow" cx="50%" cy="45%" r="35%">
+      <stop offset="90%" stop-color="#0d1a2e"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </radialGradient>
+    <filter id="seaGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep sea radial atmosphere -->
+  <rect x="30" y="80" width="740" height="390" rx="4" fill="url(#whisperGlow)"/>
+
+  <!-- Sea foam / waves - abstract layered curves at bottom -->
+  <path d="M30,370 Q120,350 250,380 T500,365 T740,385 L740,420 L30,420 Z" fill="#0a1525" opacity="0.8"/>
+  <path d="M30,390 Q150,375 300,400 T600,380 T740,410 L740,430 L30,430 Z" fill="#1a3050" opacity="0.6"/>
+  <path d="M200,400 Q350,390 520,410 T720,395" stroke="#3070b0" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- Upright female silhouette floating - ethereal form -->
+  <g filter="url(#seaGlow)" opacity="0.85">
+    <ellipse cx="440" cy="270" rx="28" ry="36" fill="#c8e0f0" opacity="0.18"/>
+    <!-- Long flowing black hair spreading into wave -->
+    <path d="M415,275 Q395,290 380,310 T340,340" stroke="#0d1a2e" stroke-width="3.5" fill="none"/>
+    <path d="M465,275 Q480,295 490,320 T510,350" stroke="#0d1a2e" stroke-width="3" fill="none"/>
+    <path d="M410,280 Q370,300 340,335 T310,360" stroke="#0d1a2e" stroke-width="2.5" fill="none" opacity="0.7"/>
+    <path d="M470,280 Q520,295 540,320 T560,350" stroke="#0d1a2e" stroke-width="2.5" fill="none" opacity="0.7"/>
+    <!-- Arms reaching out -->
+    <path d="M415,285 Q390,305 360,295 T320,285" stroke="#c8e0f0" stroke-width="2.2" fill="none" opacity="0.5"/>
+    <path d="M465,285 Q505,300 530,290" stroke="#c8e0f0" stroke-width="2.2" fill="none" opacity="0.5"/>
+
+    <!-- Head -->
+    <ellipse cx="440" cy="265" rx="12" ry="14" fill="#d0dce8" opacity="0.3"/>
+  </g>
+
+  <!-- Crimson eyes - the most iconic detail, glowing red -->
+  <circle cx="434" cy="263" r="4" fill="#ff0033" filter="url(#seaGlow)"/>
+  <circle cx="450" cy="263" r="4" fill="#ff0033" filter="url(#seaGlow)"/>
+
+  <!-- Sea snake / serpent motif rising from water (as per story) -->
+  <g opacity="0.6">
+    <path d="M80,410 Q60,395 75,380 T130,390 T190,382 T250,395" stroke="#60a04028" stroke-width="3.5" fill="none"/>
+    <path d="M400,405 Q440,390 475,410 T540,395 T590,415 T650,400" stroke="#80b020" stroke-width="2.8" fill="none"/>
+    <!-- Snake head at right -->
+    <ellipse cx="668" cy="397" rx="8" ry="4" fill="#1a4010"/>
+  </g>
+
+  <!-- Small coins/pearls scattered underwater hints -->
+  <circle cx="250" cy="405" r="3" fill="#e8c060" opacity="0.3"/>
+  <circle cx="380" cy="398" r="2.5" fill="#f0d090" opacity="0.25"/>
+
+  <!-- Japanese text: "海が囁く" in crimson -->
+  <text x="416" y="55" text-anchor="middle" fill="#ff0033" font-family="'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="28" filter="url(#seaGlow)">海が囁く</text>
+
+  <!-- Subtitle -->
+  <text x="416" y="78" text-anchor="middle" fill="#5090c0" font-family="'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif" font-size="12" opacity="0.7">マミワタ — 深淵の女性</text>
+
+</svg>

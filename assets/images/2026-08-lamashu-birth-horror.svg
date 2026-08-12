@@ -1,0 +1,54 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0608"/>
+  
+  <!-- Decorative border - gothic frame -->
+  <rect x="15" y="15" width="770" height="420" rx="8" fill="none" stroke="#5a0025" stroke-width="3"/>
+  <rect x="25" y="25" width="750" height="400" rx="4" fill="none" stroke="#3a0015" stroke-width="1"/>
+  
+  <!-- Corner ornaments -->
+  <path d="M 15 35 L 15 25 Q 15 15 25 15 L 50" fill="none" stroke="#9a0045" stroke-width="2"/>
+  <circle cx="25" cy="25" r="4" fill="#ff1070" opacity="0.8"/>
+  
+  <path d="M 765 35 L 785 25 Q 795 15 785 25 L 765 15" fill="none" stroke="#9a0045" stroke-width="2"/>
+  <circle cx="775" cy="25" r="4" fill="#ff1070" opacity="0.8"/>
+  
+  <!-- Central dark figure silhouette -->
+  <g opacity="0.9">
+    <!-- Female figure (matron/lamashtu form) - tall menacing silhouette -->
+    <ellipse cx="360" cy="200" rx="14" ry="18" fill="#c8a070"/>
+    <path d="M 350 215 L 340 320 Q 338 340 350 360 L 390 360 Q 400 340 395 320 L 370 218 Z" fill="#1a0a10"/>
+    <!-- Arms reaching forward -->
+    <path d="M 348 240 Q 280 260 240 280 L 230 275" stroke="#c8a070" stroke-width="3" fill="none"/>
+    <circle cx="230" cy="277" r="5" fill="#1a0a10"/>
+    <path d="M 372 240 Q 430 255 460 285 L 470 282" stroke="#c8a070" stroke-width="3" fill="none"/>
+    
+    <!-- Small figure (baby silhouette) on right arm/hand -->
+    <ellipse cx="465" cy="290" rx="10" ry="12" fill="#1a0a10"/>
+  </g>
+
+  <!-- Eye motif - the staring eyes of Lamashtu -->
+  <circle cx="348" cy="198" r="3" fill="#ff1070"/>
+  <circle cx="362" cy="198" r="3" fill="#ff1070"/>
+  
+  <!-- Floating cuneiform tablet -->
+  <g transform="translate(540, 80)">
+    <rect x="0" y="0" width="120" height="90" rx="4" fill="#d8c8a0" stroke="#8a7a60" stroke-width="1"/>
+    <!-- Cuneiform marks -->
+    <text x="15" y="30" font-size="14" fill="#4a3a20">∃ ∂ ⅱ</text>
+    <text x="18" y="60" font-size="12" fill="#4a3a20">⌘ ☰ ≋</text>
+    <text x="14" y="85" font-size="10" fill="#4a3a20">∧ ∏ □</text>
+  </g>
+  
+  <!-- Mysterious fog/atmosphere at top -->
+  <ellipse cx="700" cy="60" rx="100" ry="35" fill="none" stroke="#ff1070" stroke-width="0.8" opacity="0.4"/>
+  <text x="700" y="65" text-anchor="middle" fill="#ff1070" font-family="'Courier New', monospace" font-size="28" opacity="0.6">ラマシュ</text>
+  
+  <!-- Bottom warning area -->
+  <rect x="240" y="370" width="320" height="50" rx="5" fill="#1a0a10" stroke="#5a0025" stroke-width="1.5"/>
+  <text x="400" y="400" text-anchor="middle" fill="#ff2090" font-size="26" opacity="0.7">ラマシュトゥ・エメルティ</text>
+  
+  <!-- Decorative line at bottom -->
+  <line x1="300" y1="425" x2="500" y2="425" stroke="#ff1070" stroke-width="1" opacity="0.6"/>
+  <text x="400" y="440" text-anchor="middle" fill="#8a2050" font-family="'Courier New', monospace" font-size="9">紀元前4300年前の粘土板より</text>
+</svg>

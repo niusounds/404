@@ -1,0 +1,243 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Archive glow effect -->
+    <radialGradient id="vaultGlow" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="10%" stop-color="#180d2b"/>
+      <stop offset="90%" stop-color="#0a0808"/>
+    </radialGradient>
+    
+    <!-- Warm voice glow (amber = archived breath/voice) -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    
+    <!-- Seal texture pattern for cuneiform wedges -->
+    <pattern id="cuneiPattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect x="1" y="1" width="2.5" height="6" fill="#b8973a" opacity="0.4"/>
+      <rect x="4" y="1" width="2.5" height="3" fill="#c77b3a" opacity="0.4"/>
+    </pattern>
+    
+    <!-- Vignette -->
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="50%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050308" stop-opacity="1"/>
+    </radialGradient>
+    
+    <!-- Eye highlight -->
+    <filter id="eyeGlow">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+  </defs>
+
+  <!-- === BACKGROUND: Archive Vault === -->
+  <rect width="800" height="450" fill="url(#vaultGlow)"/>
+  
+  <!-- Perspective vault walls - converging toward a vanishing point at center-top of shelves -->
+  <!-- Back wall perspective lines (shelves narrowing in distance) -->
+  <g stroke="#2a1e50" stroke-width="1.5" opacity="0.6">
+    <!-- Top shelf frame perspective edge left-right -->
+    <line x1="80" y1="130" x2="720" y2="140"/>
+    <!-- Bottom shelf 1 mid-height -->
+    <line x1="150" y1="80" x2="650" y2="90"/>
+    
+    <!-- Side perspective lines - receding into distance -->
+    <line x1="360" y1="45" x2="90" y2="180"/>
+    <line x1="440" y1="45" x2="710" y2="190"/>
+    
+    <!-- Shelf grid lines (vertical) - more crowded toward back -->
+    <line x1="200" y1="48" x2="110" y2="200"/>
+    <line x1="300" y1="56" x2="210" y2="208"/>
+    <line x1="500" y1="56" x2="590" y2="208"/>
+    <line x1="620" y1="48" x2="700" y2="200"/>
+    <!-- Extra vertical columns to show dense rows -->
+    <line x1="260" y1="50" x2="160" y2="200"/>
+    <line x1="340" y1="52" x2="250" y2="208"/>
+    <line x1="460" y1="52" x2="550" y2="208"/>
+    <line x1="540" y1="50" x2="640" y2="200"/>
+
+  </g>
+  
+  <!-- Shelves (dark wood color) -->
+  <rect x="90" y="176" width="8" height="3" fill="#1c121a" transform="rotate(5, 94, 177)"/>
+  <rect x="700" y="186" width="6" height="3" fill="#1c121a"/>
+
+  <!-- === CAPTURED VOICES: Cylinder Seal "Shelves" of Archived Sounds === -->
+  <!-- These glows (amber/gold) = the sealed voice-archives -->
+  <g class="sealed-volumes">
+    <!-- Top shelf - voices packed tightly -->
+    <ellipse cx="125" cy="163" rx="5" ry="9" fill="#8b6400" opacity="0.7" stroke="#c4a132" stroke-width="0.6"/><line x1="123" y1="158" x2="127" y2="166" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="147" cy="162" rx="5" ry="9" fill="#8b6400" opacity="0.5" stroke="#c4a132" stroke-width="0.6"/><line x1="145" y1="157" x2="149" y2="165" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="167" cy="162" rx="6" ry="9" fill="#8b6400" opacity="0.7" stroke="#c4a132" stroke-width="0.6"/><line x1="165" y1="158" x2="169" y2="166" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="185" cy="164" rx="5" ry="8" fill="#6b4400" opacity="0.4"/><line x1="184" y1="159" x2="187" y2="165" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="210" cy="165" rx="5" ry="9" fill="#8b6400" opacity="0.65" stroke="#c4a132" stroke-width="0.5"/><line x1="209" y1="160" x2="212" y2="167" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="238" cy="164" rx="4" ry="8" fill="#8b6400" opacity="0.7"/><line x1="237" y1="160" x2="239" y2="167" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="264" cy="163" rx="5" ry="8" fill="#a37500" opacity="0.8"/><line x1="263" y1="159" x2="265" y2="166" stroke="#ffd700" opacity="0.4" stroke-width="1"/>
+    <ellipse cx="290" cy="162" rx="4" ry="8.5" fill="#6b4400" opacity="0.45"/><line x1="289" y1="158" x2="291" y2="166" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="318" cy="162" rx="4" ry="8" fill="#8b6400" opacity="0.55"/><line x1="317" y1="158" x2="319" y2="165" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="346" cy="163" rx="4" ry="7.5" fill="#a37500" opacity="0.8"/><line x1="345" y1="159" x2="347" y2="166" stroke="#ffd700" opacity="0.4" stroke-width="1"/>
+    <ellipse cx="374" cy="163" rx="3" ry="8" fill="#8b6400" opacity="0.5"/><line x1="373" y1="159" x2="375" y2="166" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="398" cy="164" rx="3" ry="7" fill="#c4a132" opacity="0.85"/><line x1="397" y1="160" x2="399" y2="166" stroke="#ffd700" opacity="0.5" stroke-width="1"/>
+    <ellipse cx="423" cy="166" rx="3" ry="6.5" fill="#a37500" opacity="0.7"/><line x1="422" y1="162" x2="424" y2="167" stroke="#ffd700" opacity="0.4" stroke-width="1"/>
+    <ellipse cx="448" cy="167" rx="3" ry="6.5" fill="#c4a132" opacity="0.85"/><line x1="446" y1="163" x2="449" y2="169" stroke="#ffd700" opacity="0.5" stroke-width="1"/>
+    <ellipse cx="472" cy="167" rx="3" ry="6" fill="#8b6400" opacity="0.55"/><line x1="471" y1="164" x2="473" y2="169" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <!-- Center: single large glowing voice -->
+    <ellipse cx="500" cy="168" rx="4.5" ry="9" fill="#c4a132" opacity="0.9" filter="url(#glow)"/><line x1="498" y1="162" x2="502" y2="174" stroke="#ffd700" opacity="0.6" stroke-width="1.5"/>
+    <ellipse cx="528" cy="173" rx="3" ry="6" fill="#c4a132" opacity="0.85"/><line x1="526" y1="169" x2="529" y2="176" stroke="#ffd700" opacity="0.5" stroke-width="1"/>
+    <ellipse cx="555" cy="177" rx="4" ry="6.5" fill="#c4a132" opacity="0.8" filter="url(#glow)"/><line x1="553" y1="173" x2="557" y2="181" stroke="#ffd700" opacity="0.45" stroke-width="1"/>
+    <ellipse cx="584" cy="182" rx="3.5" ry="6" fill="#a37500" opacity="0.6"/><line x1="582" y1="178" x2="585" y2="185" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="608" cy="184" rx="3.5" ry="6" fill="#c4a132" opacity="0.85"/><line x1="606" y1="181" x2="609" y2="187" stroke="#ffd700" opacity="0.45" stroke-width="1"/>
+    <ellipse cx="632" cy="186" rx="3.5" ry="5.5" fill="#c4a132" opacity="0.9" filter="url(#glow)"/><line x1="630" y1="183" x2="634" y2="189" stroke="#ffd700" opacity="0.5" stroke-width="1"/>
+    <ellipse cx="662" cy="186" rx="3.5" ry="5.5" fill="#a37500" opacity="0.6"/><line x1="660" y1="184" x2="663" y2="191" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    
+    <!-- Middle shelf (slightly further) -->
+    <ellipse cx="142" cy="189" rx="3" ry="6" fill="#6b4400" opacity="0.4"/><line x1="141" y1="185" x2="143" y2="192" stroke="#ffd700" opacity="0.25" stroke-width="1"/>
+    <ellipse cx="168" cy="189" rx="3.5" ry="6.5" fill="#a37500" opacity="0.5" filter="url(#glow)"/><line x1="167" y1="185" x2="169" y2="194" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="196" cy="190" rx="3.5" ry="6" fill="#c4a132" opacity="0.55"/><line x1="194" y1="187" x2="197" y2="194" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="225" cy="190" rx="3" ry="6" fill="#a37500" opacity="0.45"/><line x1="224" y1="187" x2="226" y2="193" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="256" cy="190" rx="3.5" ry="6" fill="#c4a132" opacity="0.45" filter="url(#glow)"/><line x1="254" y1="187" x2="257" y2="193" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="286" cy="190" rx="3.5" ry="6.5" fill="#c4a132" opacity="0.45"/><line x1="285" y1="187" x2="287" y2="195" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="316" cy="191" rx="3" ry="6" fill="#c4a132" opacity="0.4"/><line x1="315" y1="187" x2="317" y2="193" stroke="#ffd700" opacity="0.35" stroke-width="1"/>
+    <ellipse cx="348" cy="192" rx="3" ry="6" fill="#a37500" opacity="0.35"/><line x1="347" y1="188" x2="349" y2="195" stroke="#ffd700" opacity="0.25" stroke-width="1"/>
+    <ellipse cx="379" cy="193" rx="3" ry="6.5" fill="#c4a132" opacity="0.35" filter="url(#glow)"/><line x1="378" y1="189" x2="380" y2="196" stroke="#ffd700" opacity="0.3" stroke-width="1"/>
+    <ellipse cx="406" cy="195" rx="3" ry="6" fill="#a37500" opacity="0.3"/><line x1="405" y1="192" x2="407" y2="198" stroke="#ffd700" opacity="0.25" stroke-width="1"/>
+    <ellipse cx="436" cy="197" rx="3" ry="6" fill="#c4a132" opacity="0.4"/><line x1="435" y1="193" x2="437" y2="199" stroke="#ffd700" opacity="0.3" stroke-width="1"/>
+    <ellipse cx="468" cy="200" rx="3.5" ry="6" fill="#c4a132" opacity="0.4" filter="url(#glow)"/><line x1="467" y1="196" x2="469" y2="202" stroke="#ffd700" opacity="0.3" stroke-width="1"/>
+    <ellipse cx="498" cy="203" rx="3" ry="5.5" fill="#a37500" opacity="0.3"/><line x1="496" y1="200" x2="499" y2="207" stroke="#ffd700" opacity="0.3" stroke-width="1"/>
+    <ellipse cx="528" cy="205" rx="3" ry="5.5" fill="#c4a132" opacity="0.35"/><line x1="526" y1="202" x2="529" y2="208" stroke="#ffd700" opacity="0.3" stroke-width="1"/>
+    <ellipse cx="554" cy="208" rx="3.5" ry="6" fill="#a37500" opacity="0.25"/><line x1="552" y1="205" x2="555" y2="212" stroke="#ffd700" opacity="0.3" stroke-width="1"/>
+    <ellipse cx="584" cy="210" rx="3" ry="5.5" fill="#c4a132" opacity="0.35"/><line x1="582" y1="207" x2="585" y2="212" stroke="#ffd700" opacity="0.3" stroke-width="1"/>
+    <ellipse cx="616" cy="214" rx="3" ry="5" fill="#a37500" opacity="0.2"/><line x1="614" y1="211" x2="616" y2="215" stroke="#ffd700" opacity="0.2" stroke-width="1"/>
+    <ellipse cx="648" cy="216" rx="3.5" ry="5" fill="#c4a132" opacity="0.3"/><line x1="647" y1="213" x2="650" y2="219" stroke="#ffd700" opacity="0.3" stroke-width="1"/>
+    <ellipse cx="678" cy="218" rx="3" ry="5" fill="#a37500" opacity="0.2"/><line x1="676" y1="215" x2="679" y2="220" stroke="#ffd700" opacity="0.25" stroke-width="1"/>
+
+    <!-- Bottom shelf (further still - more faded) -->
+    <ellipse cx="163" cy="214" rx="2.5" ry="4.5" fill="#5c3a20"/><line x1="162" y1="211" x2="164" y2="217" stroke="#ffd700" opacity="0.15" stroke-width="1"/>
+    <ellipse cx="192" cy="216" rx="2.5" ry="4" fill="#a37500" opacity="0.3"/><line x1="190" y1="213" x2="193" y2="218" stroke="#ffd700" opacity="0.25" stroke-width="1"/>
+    <ellipse cx="226" cy="218" rx="2.5" ry="4" fill="#a37500" opacity="0.3"/><line x1="225" y1="215" x2="227" y2="220" stroke="#ffd700" opacity="0.25" stroke-width="1"/>
+    <ellipse cx="260" cy="220" rx="2.5" ry="4" fill="#c4a132" opacity="0.25"/><line x1="259" y1="217" x2="261" y2="222" stroke="#ffd700" opacity="0.2" stroke-width="1"/>
+    <ellipse cx="284" cy="221" rx="2.5" ry="4" fill="#a37500" opacity="0.2"/><line x1="283" y1="218" x2="285" y2="223" stroke="#ffd700" opacity="0.15" stroke-width="1"/>
+    <ellipse cx="314" cy="224" rx="2.5" ry="3.5" fill="#c4a132" opacity="0.3"/><line x1="312" y1="221" x2="315" y2="226" stroke="#ffd700" opacity="0.2" stroke-width="1"/>
+    <ellipse cx="345" cy="226" rx="2.5" ry="3.5" fill="#a37500" opacity="0.2"/><line x1="343" y1="222" x2="346" y2="228" stroke="#ffd700" opacity="0.15" stroke-width="1"/>
+    <ellipse cx="375" cy="229" rx="2.5" ry="3.5" fill="#c4a132" opacity="0.3"/><line x1="373" y1="226" x2="376" y2="231" stroke="#ffd700" opacity="0.2" stroke-width="1"/>
+    <ellipse cx="406" cy="232" rx="2.5" ry="3.5" fill="#a37500" opacity="0.15"/><line x1="405" y1="229" x2="407" y2="234" stroke="#ffd700" opacity="0.15" stroke-width="1"/>
+    <ellipse cx="438" cy="236" rx="2" ry="3.5" fill="#c4a132" opacity="0.25"/><line x1="437" y1="233" x2="439" y2="239" stroke="#ffd700" opacity="0.15" stroke-width="1"/>
+    <ellipse cx="468" cy="240" rx="2" ry="3" fill="#a37500" opacity="0.15"/><line x1="467" y1="237.5" x2="469" y2="241" stroke="#ffd700" opacity="0.15" stroke-width="1"/>
+    <ellipse cx="498" cy="243" rx="2" ry="3" fill="#c4a132" opacity="0.2"/><line x1="497" y1="240.5" x2="499" y2="244.5" stroke="#ffd700" opacity="0.15" stroke-width="1"/>
+    <ellipse cx="528" cy="246" rx="2" ry="3" fill="#a37500" opacity="0.1"/><line x1="527" y1="244.5" x2="529" y2="248" stroke="#ffd700" opacity="0.1" stroke-width="1"/>
+    <ellipse cx="560" cy="250" rx="2" ry="3" fill="#c4a132" opacity="0.3"/><line x1="558" y1="247.5" x2="561" y2="252" stroke="#ffd700" opacity="0.1" stroke-width="1"/>
+    <ellipse cx="594" cy="254" rx="2" ry="3" fill="#a37500" opacity="0.1"/><line x1="593" y1="251.5" x2="595" y2="256" stroke="#ffd700" opacity="0.1" stroke-width="1"/>
+    <ellipse cx="628" cy="260" rx="2" ry="3" fill="#c4a132" opacity="0.1"/><line x1="627" y1="257.5" x2="629" y2="262" stroke="#ffd700" opacity="0.08" stroke-width="1"/>
+    <ellipse cx="660" cy="266" rx="2" ry="3" fill="#a37500" opacity="0.1"/><line x1="659" y1="264" x2="661" y2="268" stroke="#ffd700" opacity="0.08" stroke-width="1"/>
+
+  </g>
+
+  <!-- === ARCHIVAL STRUCTURE: Cuneiform tablet rows on right shelf, fading into distance === -->
+  <!-- These are the actual archive tablets - slightly larger and more detailed than seals -->
+  <g class="archive-tablets">
+    <!-- Right side of shelves - tablets filed vertically/horizontally by the Lilim's system -->
+    <!-- Row 1: top right cluster (most prominent) -->
+    <rect x="652" y="88" width="40" height="55" rx="3" fill="#1c1e2a" stroke="#7b4a20" stroke-width="0.8"/>
+    <!-- Cuneiform wedge inscriptions on tablet 1 -->
+    <line x1="658" y1="94" x2="688" y2="94" stroke="#c4a132" width="0.8" opacity="0.4"/>
+    <!-- Wedge characters -->
+    <line x1="660" y1="100" x2="670" y2="108" stroke="#c4a132" stroke-width="0.5" opacity="0.3"/>
+    <line x1="672" y1="98" x2="685" y2="106" stroke="#d4b142" stroke-width="0.6" opacity="0.25"/>
+    <circle cx="690" cy="130" r="3" fill="#c77b3a" opacity="0.4"/><line x1="688" y1="128" x2="692" y2="132" stroke="#ffd700" opacity="0.25" stroke-width="0.5"/>
+    
+    <rect x="656" y="147" width="50" height="40" rx="3" fill="#1c1e2a" stroke="#7b4a20" stroke-width="0.8"/>
+    <!-- Cuneiform inscriptions - these are the "lilim 列名記号" -->
+    <line x1="662" y1="153" x2="690" y2="153" stroke="#c4a132" stroke-width="0.8" opacity="0.3"/>
+    <!-- The "三回分" - repeated three times (key plot detail) -->
+    <line x1="660" y1="160" x2="675" y2="168" stroke="#d4b142" stroke-width="1" opacity="0.35"/><line x1="664" y1="159" x2="673" y2="167" stroke="#ffd700" stroke-width="0.8" opacity="0.2"/>
+    <rect x="675" y="165" width="20" height="4" rx="1" fill="#c4a132" opacity="0.5" transform="rotate(12, 685, 167)"/>
+    <!-- Wedges forming "LILIM" cuneiform style -->
+    <line x1="678" y1="170" x2="694" y2="178" stroke="#c4a132" stroke-width="0.5" opacity="0.2"/>
+    
+    <rect x="638" y="190" width="55" height="42" rx="3" fill="#1c1e2a" stroke="#7b4a20" stroke-width="0.8"/>
+    <line x1="644" y1="195" x2="680" y2="195" stroke="#c4a132" stroke-width="0.8" opacity="0.35"/>
+    <!-- Multiple "voice seals" on this tablet -->
+    <circle cx="650" cy="208" r="4" fill="#7b4a20" opacity="0.5"/><text x="651" y="211" font-size="3.5" fill="#ffd700" opacity="0.6">ṢE</text>
+    <circle cx="662" cy="206" r="4" fill="#c4a132" opacity="0.3"/><line x1="661" y1="202" x2="665" y2="209" stroke="#ffd700" width="0.5" opacity="0.2"/>
+    <circle cx="673" cy="208" r="4" fill="#c4a132" opacity="0.2"/><line x1="672" y1="204" x2="676" y2="210" stroke="#ffd700" width="0.8" opacity="0.2"/>
+    
+    <!-- Row 2: further away (right) -->
+    <rect x="705" y="110" width="42" height="36" rx="3" fill="#1a1e28" stroke="#7b4a20" stroke-width="0.6"/>
+    <line x1="710" y1="115" x2="738" y2="115" stroke="#c4a132" width="0.6" opacity="0.25"/>
+    
+    <rect x="704" y="60" width="38" height="30" rx="3" fill="#20233e" stroke="#7b4a20" stroke-width="0.5"/>
+    <line x1="709" y1="66" x2="730" y2="66" stroke="#c4a132" width="0.6" opacity="0.2"/>
+
+    <!-- Left row of tablets (further left in depth) -->
+    <rect x="175" y="100" width="44" height="38" rx="2" fill="#1c1e2a" stroke="#7b4a20" stroke-width="0.6"/>
+    <line x1="180" y1="104" x2="212" y2="104" stroke="#c4a132" width="0.5" opacity="0.2"/>
+
+    <!-- Far background tablets (tiny and fading) -->
+    <rect x="698" y="150" width="8" height="7" rx="1" fill="#7b4a20" opacity="0.3"/>
+    <rect x="705" y="156" width="7" height="6" rx="1" fill="#a37500" opacity="0.25"/>
+
+  </g>
+
+  <!-- === FOCUS POINT: The sealed archive - central bright area showing "voices stored here" concept === -->
+  <rect x="395" y="80" width="65" height="40" rx="3" fill="#2c1d1e" stroke="#b73a20" stroke-width="1.5"/>
+  <!-- Glowing sealed "lilim" word inside -->
+  <line x1="405" y1="86" x2="448" y2="86" stroke="#ff4a1a" stroke-width="1.5" opacity="0.7"/>
+  <!-- Cuneiform "lilim" wedges - stylized -->
+  <line x1="408" y1="93" x2="418" y2="100" stroke="#ffd700" stroke-width="2" opacity="0.7"/>
+  <line x1="415" y1="92" x2="426" y2="99" stroke="#ff4a1a" stroke-width="1.5" opacity="0.6"/>
+  <!-- Repeating - key to story -->
+  <line x1="430" y1="87" x2="438" y2="94" stroke="#c77b3a" width="1" opacity="0.5"/><line x1="430" y1="93" x2="439" y2="100" stroke="#ffd700" width="0.8" opacity="0.4"/>
+  <rect x="426" y="100" width="16" height="3" rx="1" fill="#ff4a1a" transform="rotate(-8, 434, 101)"/>
+
+  <!-- === VOICES BEING ARCHIVED - A figure reaching toward the archive, silenced === -->
+  <g class="silenced-figure">
+    <!-- Standing figure (viewed from side/back) -->
+    <!-- Body/shoulders - small silhouette in foreground left -->
+    <ellipse cx="120" cy="395" rx="45" ry="8" fill="#0a070e"/>  <!-- ground plane shadow -->
+    
+    <!-- Left arm reaching up and forward (desperate attempt to speak) -->
+    <path d="M 110,336 C 95,325 65,305 80,275" stroke="#2a1535" fill="none" stroke-width="4"/><line x1="98" y1="328" x2="80" y2="276" stroke="#c8154a" opacity="0.25"/>
+    <!-- Hand with fingers open but silent -->
+    <path d="M 80,275 C 70,266 68,253 76,249" stroke="#1e101f" fill="none" stroke-width="3"/>
+    
+    <!-- Right arm reaching upward (reaching for the sealed archive) -->
+    <path d="M 130,355 C 180,345 280,339 375,349 390,351 410,365 420,380"
+          stroke="#e3d9c4" fill="none" stroke-width="4.5"/>
+    <!-- Reaching fingertips - open but empty -->
+    <line x1="432" y1="378" x2="436" y2="370" stroke="#1a1015" width="2" opacity="0.9"/><line x1="438" y1="368" x2="440" y2="360" stroke="#2e1b30" width="2.5" opacity="0.9"/>
+    <path d="M 420,380 C 426,372 434,358 433,349" stroke="#cfcbbf" fill="none" stroke-width="3"/><line x1="433" y1="358" x2="432" y2="343" stroke="#e3d0a0" width="2.5" opacity="0.9"/>
+    
+    <!-- Head - looking toward archive, mouth OPEN but sealed silent -->
+    <ellipse cx="170" cy="360" rx="18" ry="22" fill="#4d3b1e" stroke="#cfcbbf" stroke-width="1"/>
+    <!-- Hair texture / crown suggestion -->
+    <path d="M 155,355 C 155,332 190,330 190,357" fill="#2d1b0e"/>
+    <!-- Face expression lines showing distress/terror -->
+    <line x1="160" y1="353" x2="168" y2="356" stroke="#f0dcac" width="0.7" opacity="0.8"/> <!-- eye -->
+    <line x1="172" y1="349" x2="176" y2="360" stroke="#7a5538" width="0.6" opacity="0.5"/> <!-- tear track -->
+    
+    <!-- MOUTH - open but WITH NO SOUND waves coming out, ONLY a void/empty arc -->
+    <!-- The open mouth shape:
+         upper lip arch
+         lower jaw slightly dropped  
+         Empty throat/gullet showing the silence inside
+         Instead of sound waves coming out: emptyness = dark hole = archived voice already gone    
+    -->
+    <path d="M 170,348 A 6,5 0 0,0 168.2,346 C 167,345 164,349 155,355 Z" fill="#0a0106"/>
+    <!-- "No sound" symbol: a small void where voice would emerge -->
+    <rect x="148" y="352" width="7" height="7" rx="3.5" fill="#ff0c39" transform="rotate(2, 152, 356)" opacity="0.6"/> <!-- open mouth void -->
+    
+    <!-- THE KEY VISUAL: "No sound waves - only archived silence inside the void" -->
+    <ellipse cx="78" cy="272" rx="6" ry="5" fill="#1c040e"/>  <!-- tiny void where voice was swallowed -->
+    
+    <!-- === SOUNDLESS VOICES TRAILING OFF INTO THE VOID (silenced) === -->
+    <!-- Thin lines fading toward the sealed archive - represent the "lilim taking voices" -->    
+    <g opacity="0.35">
+      <path d="M 148,346 C 190,310 260,260 340,220" stroke="#ffd700" fill="none" stroke-width="1.5"/>
+      <ellipse cx="340" cy="218" rx="3" ry="2.5" fill="#cda930" opacity="0.6"/><line x1="340" y1="215" x2="342" y2="221" stroke="#ffd700" width="0.8" opacity="0.4"/>
+    </g>
+    
+  </g>
+
+  <!-- === ATMOSPHERIC ELEMENTS: Floating voice-archived "dust particles" scattered like archived words === -->
+  
+</svg>

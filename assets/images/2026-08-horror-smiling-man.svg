@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="75%" r="60%">
+      <stop offset="0%" stop-color="#1a1010"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <filter id="glow-blur">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+
+  <!-- Gothic border frame with corner brackets -->
+  <rect x="12" y="12" width="776" height="426" rx="3" fill="none" stroke="#2a0a18" stroke-width="1.5"/>
+  <rect x="22" y="22" width="756" height="406" rx="2" fill="none" stroke="#1f0712" stroke-width="0.8"/>
+
+  <!-- Corner brackets -->
+  <line x1="12" y1="30" x2="12" y2="12" stroke="#ff0033" stroke-width="3" opacity="0.6"/>
+  <line x1="12" y1="12" x2="30" y2="12" stroke="#ff0033" stroke-width="3" opacity="0.6"/>
+
+  <line x1="788" y1="30" x2="788" y2="12" stroke="#ff0033" stroke-width="3" opacity="0.6"/>
+  <line x1="788" y1="12" x2="770" y2="12" stroke="#ff0033" stroke-width="3" opacity="0.6"/>
+
+  <line x1="12" y1="435" x2="12" y2="428" stroke="#ff0033" stroke-width="3" opacity="0.6"/>
+  <line x1="12" y1="428" x2="30" y2="428" stroke="#ff0033" stroke-width="3" opacity="0.6"/>
+
+  <line x1="788" y1="435" x2="788" y2="428" stroke="#ff0033" stroke-width="3" opacity="0.6"/>
+  <line x1="788" y1="428" x2="770" y2="428" stroke="#ff0033" stroke-width="3" opacity="0.6"/>
+
+  <!-- Tokyo street buildings silhouettes on left -->
+  <rect x="40" y="150" width="80" height="280" fill="#0c0a0a" stroke="#19070d" stroke-width="0.5"/>
+  <rect x="56" y="175" width="14" height="18" fill="#1a1320" opacity="0.8"/>
+  <rect x="80" y="195" width="14" height="18" fill="#132430" opacity="0.6"/>
+  <rect x="56" y="235" width="14" height="18" fill="#1a1320" opacity="0.7"/>
+  <rect x="56" y="285" width="14" height="18" fill="#2a1530" opacity="0.5"/>
+  <rect x="80" y="270" width="14" height="18" fill="#192d40" opacity="0.4"/>
+  <rect x="80" y="320" width="14" height="18" fill="#1a1320" opacity="0.6"/>
+
+  <!-- Tokyo street buildings silhouettes on right -->
+  <rect x="540" y="170" width="90" height="260" fill="#0c0a0a" stroke="#19070d" stroke-width="0.5"/>
+  <rect x="558" y="195" width="16" height="14" fill="#132430" opacity="0.6"/>
+  <rect x="584" y="210" width="16" height="14" fill="#1a1320" opacity="0.7"/>
+  <rect x="610" y="190" width="16" height="14" fill="#1a1320" opacity="0.5"/>
+  <rect x="638" y="225" width="16" height="14" fill="#2a1530" opacity="0.4"/>
+  <rect x="558" y="270" width="16" height="14" fill="#192d40" opacity="0.5"/>
+  <rect x="584" y="290" width="16" height="14" fill="#1a1320" opacity="0.6"/>
+  <rect x="610" y="275" width="16" height="14" fill="#132430" opacity="0.4"/>
+
+  <!-- Vending machine (classic Tokyo nod) - glowing on street -->
+  <rect x="680" y="240" width="36" height="70" rx="2" fill="#1a2735" stroke="#19a0e0" stroke-width="0.6"/>
+  <line x1="698" y1="265" x2="708" y2="265" stroke="#ffcccc" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Street light cast on pavement - yellowish glow -->
+  <ellipse cx="400" cy="380" rx="120" ry="35" fill="#ffe8b0" opacity="0.03"/>
+
+  <!-- Ground reflection lines for street sheen -->
+  <line x1="200" y1="369" x2="450" y2="369" stroke="#ffcc7a" stroke-width="0.3" opacity="0.15"/>
+  <line x1="280" y1="378" x2="420" y2="378" stroke="#ffaa6a" stroke-width="0.2" opacity="0.1"/>
+
+  <!-- THE SMILING MAN figure silhouette -->
+  <!-- Body silhouette in dark streetwear -->
+  <rect x="375" y="230" width="55" height="60" rx="4" fill="#1a1215" opacity="0.95"/>
+
+  <!-- Head - white/pale face that stands out against darkness -->
+  <ellipse cx="402" cy="208" rx="18" ry="22" fill="#e8e0d0" opacity="0.92">
+    <filter id="head-glow">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+  </ellipse>
+
+  <!-- Hair - dark, straight, partially obscuring face -->
+  <path d="M386 195 Q390 170 420 172 Q430 175 435 190" fill="#0a0808" opacity="0.85"/>
+
+  <!-- Eyes - wide-open, staring directly at viewer -->
+  <circle cx="393" cy="206" r="6.5" fill="#f0ebe0"/>
+  <circle cx="411" cy="206" r="6.5" fill="#f0ebe0"/>
+  <!-- Pupils - small, dark centers creating stare -->
+  <circle cx="393" cy="207" r="2.8" fill="#0a0808"/>
+  <circle cx="411" cy="207" r="2.8" fill="#0a0808"/>
+
+  <!-- UNNATURAL SMILE - wide stretched grin -->
+  <path d="M390 222 Q402 238 415 222" stroke="#ff0033" stroke-width="2.2" fill="#a6031d"/>
+  <!-- Upper lip line - thin and rigid -->
+  <line x1="392" y1="220" x2="413" y2="220" stroke="#dd0044" stroke-width="1.5"/>
+
+  <!-- Subtle red glow around smile area to make it more uncanny -->
+  <ellipse cx="402" cy="228" rx="16" ry="12" fill="#ff0033" opacity="0.08">
+    <filter id="smile-glow">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </ellipse>
+
+  <!-- Faint floating particles / stars for atmosphere -->
+  <circle cx="290" cy="160" r="1.5" fill="#ffccaa" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="560" cy="140" r="2" fill="#ffddaa" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.05;0.2" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Subtle vignette darkening at top and bottom -->
+  <rect x="13" y="400" width="764" height="48" fill="#0a0808" opacity="0.5"/>
+
+  <!-- Title text - English title of urban legend, in eerie font -->
+  <text x="400" y="25" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="13" fill="#ff3355" opacity="0.8">— THE SMILING MAN —</text>
+
+</svg>

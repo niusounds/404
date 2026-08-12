@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Atmospheric fog/mist at bottom -->
+  <defs>
+    <linearGradient id="fogGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1018" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a1018" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Mist overlay -->
+  <rect x="0" y="300" width="800" height="150" fill="url(#fogGrad)"/>
+  
+  <!-- Moon - pale, menacing -->
+  <circle cx="620" cy="120" r="45" fill="#d4c9a0" opacity="0.15"/>
+  <circle cx="620" cy="120" r="40" fill="#f5ead0" opacity="0.9"/>
+  <ellipse cx="635" cy="110" rx="30" ry="38" fill="#b0a07a" opacity="0.2"/>
+  
+  <!-- Ground silhouette -->
+  <path d="M0,340 Q200,310 400,335 T800,320 L800,450 L0,450 Z" fill="#0d0a0a"/>
+  
+  <!-- Dead trees silhouettes -->
+  <g opacity="0.7">
+    <!-- Tree 1 (left) -->
+    <rect x="85" y="230" width="6" height="110" fill="#1a1414"/>
+    <line x1="91" y1="270" x2="60" y2="240" stroke="#1a1414" stroke-width="3"/>
+    <line x1="88" y1="255" x2="55" y2="225" stroke="#1a1414" stroke-width="2"/>
+    <line x1="91" y1="290" x2="130" y2="265" stroke="#1a1414" stroke-width="2.5"/>
+    <line x1="89" y1="245" x2="45" y2="210" stroke="#1a1414" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Wing-shaped scar marks (the signature of the Strigoi) -->
+  <g transform="translate(350, 280)" filter="url(#glow)">
+    <!-- Left wing shape - two sweeping curves -->
+    <path d="M40,-10 Q-10,-60 -55,-90 Q-70,-70 -60,-40 Q-50,-20 -35,5 Z" fill="#8b0000" opacity="0.8"/>
+    <path d="M40,-5 Q-5,-50 -45,-80 Q-60,-60 -50,-30 Q-40,-12 -30,8 Z" fill="#ff1a1a" opacity="0.9"/>
+    <!-- Right wing shape -->
+    <path d="M40,-10 Q90,-60 135,-90 Q150,-70 140,-40 Q125,-20 110,5 Z" fill="#8b0000" opacity="0.8"/>
+    <path d="M40,-5 Q85,-50 125,-80 Q135,-60 125,-30 Q115,-12 105,8 Z" fill="#ff1a1a" opacity="0.9"/>
+    <!-- Center wound -->
+    <ellipse cx="40" cy="-30" rx="8" ry="25" fill="#2d0000" stroke="#cc0022" stroke-width="1.5"/>
+  </g>
+
+  <!-- Small figure silhouette at bottom center (victim) -->
+  <g transform="translate(460, 340)" opacity="0.9">
+    <ellipse cx="-25" cy="5" rx="8" ry="3" fill="#1a1010"/>
+    <!-- Head -->
+    <circle cx="0" cy="-15" r="8" fill="#0d0a0a" stroke="#1a1414" stroke-width="0.5"/>
+    <!-- Body -->
+    <path d="M-6,-7 L2,25 M8,-7 L14,3" stroke="#0d0a0a" stroke-width="4" fill="none"/>
+    <rect x="-3" y="0" width="10" height="22" rx="2" fill="#0d0a0a"/>
+    <!-- Legs -->
+    <line x1="0" y1="22" x2="-5" y2="48" stroke="#0d0a0a" stroke-width="3.5"/>
+  </g>
+
+  <!-- Strigoi silhouette emerging from fog (right side) -->
+  <g transform="translate(680, 270)" opacity="0.85" filter="url(#glow)">
+    <!-- Hooded figure -->
+    <path d="M-10,-40 L0,-60 L10,-40 Z" fill="#0a0505"/>
+    <rect x="-7" y="-38" width="14" height="20" rx="3" fill="#0a0505"/>
+    <!-- Tattered cloak -->
+    <path d="M-7,-18 L-18,30 Q-15,22 -10,10 M7,-18 L18,30 Q15,22 10,10" stroke="#0a0505" stroke-width="4"/>
+    <!-- Faceless void where eyes should be -->
+    <circle cx="0" cy="-49" r="5" fill="#ff0033" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Blood-red wing marks scattered on ground -->
+  <path d="M70,350 Q80,340 90,355 Q100,345 110,360" stroke="#cc0022" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M750,360 Q760,350 770,365 Q780,355 790,370" stroke="#8b0000" stroke-width="1.5" fill="none" opacity="0.4"/>
+  
+  <!-- Decorative gothic border -->
+  <rect x="12" y="12" width="776" height="426" rx="8" fill="none" stroke="#3d0a1a" stroke-width="2"/>
+  <rect x="18" y="18" width="764" height="414" rx="5" fill="none" stroke="#5a0e28" stroke-width="0.8" opacity="0.6"/>
+  
+  <!-- Corner decorations -->
+  <circle cx="22" cy="22" r="3" fill="#cc0022" opacity="0.7"/>
+  <circle cx="778" cy="22" r="3" fill="#cc0022" opacity="0.7"/>
+  <circle cx="22" cy="428" r="3" fill="#cc0022" opacity="0.7"/>
+  <circle cx="778" cy="428" r="3" fill="#cc0022" opacity="0.7"/>
+
+  <!-- Title text -->
+  <text x="400" y="60" text-anchor="middle" fill="#1a0505" font-family="serif" font-size="32" font-weight="bold" letter-spacing="8">STRIGOI</text>
+  <text x="400" y="90" text-anchor="middle" fill="#cc0022" font-family="serif" font-size="16" opacity="0.7" letter-spacing="6">IMPLĂIAT 羽根の吸血鬼</text>
+
+  <!-- Subtle blood drips from top border -->
+  <line x1="350" y1="20" x2="350" y2="40" stroke="#8b0000" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="350" cy="41" r="1.5" fill="#8b0000" opacity="0.5"/>
+  <line x1="450" y1="20" x2="450" y2="35" stroke="#6b0000" stroke-width="1" opacity="0.4"/>
+</svg>

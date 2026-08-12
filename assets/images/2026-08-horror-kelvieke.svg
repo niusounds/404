@@ -1,0 +1,121 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Lake surface gradient -->
+    <linearGradient id="lakeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="60%" stop-color="#0d1530"/>
+      <stop offset="100%" stop-color="#0a0f1e" stop-opacity="0.2"/>
+    </linearGradient>
+    <!-- Moon glow -->
+    <radialGradient id="moonGlow">
+      <stop offset="0%" stop-color="#c4d8ff" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#7a99cc" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2a3f66" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Horse glow -->
+    <filter id="ghostGlow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#aaccff" flood-opacity="0.25" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feBlend in="SourceGraphic" in2="glow" mode="screen"/>
+    </filter>
+    <!-- Mist filter -->
+    <filter id="mistFilter">
+      <feGaussianBlur stdDeviation="8" />
+    </filter>
+  </defs>
+
+  <!-- Background sky -->
+  <rect width="800" height="450" fill="#060a12"/>
+  <rect y="0" height="250" width="800" fill="url(#skyGrad)" opacity="0.3"/>
+  
+  <!-- Mountains silhouette (Scottish Highlands) -->
+  <!-- Left peak -->
+  <polygon points="0,250 60,170 90,190 120,140 150,180 200,220 0,300" fill="#0c1a30" opacity="0.8"/>
+  <polygon points="50,250 70,210 90,240 130,160 160,190 200,240 100,280 50,250" fill="#0f2a48" opacity="0.5"/>
+  <!-- Right peaks -->
+  <polygon points="600,280 660,190 700,230 750,160 780,210 800,190 800,300" fill="#0c1a30" opacity="0.8"/>
+  
+  <!-- Moon glow -->
+  <circle cx="400" cy="80" r="60" fill="url(#moonGlow)"/>
+  <rect y="250" width="800" height="200" fill="#0a0f1e" opacity="0.5"/>
+
+  <!-- Moon -->
+  <circle cx="400" cy="80" r="22" fill="#d6deee" opacity="0.9"/>
+  <circle cx="393" cy="74" r="4" fill="#b0c0dd" opacity="0.3"/>
+  <circle cx="410" cy="85" r="3" fill="#a8c0dd" opacity="0.2"/>
+
+  <!-- Lake surface -->
+  <rect y="260" width="800" height="190" fill="url(#lakeGrad)"/>
+
+  <!-- Moon reflection on water (vertical column) -->
+  <ellipse cx="400" cy="360" rx="35" ry="100" fill="#c4d8ff" opacity="0.06" filter="url(#mistFilter)"/>
+  
+  <!-- Water ripples - horizontal lines -->
+  <line x1="180" y1="290" x2="620" y2="290" stroke="#4a6b99" stroke-width="0.5" opacity="0.3"/>
+  <line x1="120" y1="310" x2="680" y2="310" stroke="#4a6b99" stroke-width="0.5" opacity="0.25"/>
+  <line x1="200" y1="330" x2="600" y2="330" stroke="#4a6b99" stroke-width="0.5" opacity="0.2"/>
+  <line x1="240" y1="350" x2="560" y2="350" stroke="#4a6b99" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Dark water at bottom -->
+  <rect y="380" width="800" height="70" fill="#050a12" opacity="0.7"/>
+
+  <!-- Ghostly Kelpie (_water horse) silhouette emerging from the lake -->
+  <!-- Horse body - semi-transparent white -->
+  <g filter="url(#ghostGlow)" transform="translate(380, 245)">
+    <!-- Main body shape -->
+    <path d="M20,55 C10,45 5,35 8,25 C10,20 15,15 20,18 L40,15 
+             C50,5 60,-2 70,0 C65,8 57,14 52,18
+             L38,20 C42,28 50,40 48,55 
+             L18,55 C15,58 10,57 5,55 Z"
+          fill="#e8f0ff" opacity="0.2"/>
+    
+    <!-- Horse head - the distinctive part -->
+    <path d="M95,30 C100,25 108,22 112,27 
+             L108,40 C106,44 100,50 92,48 Z"
+          fill="#e8f0ff" opacity="0.2"/>
+    
+    <!-- Mane flowing -->
+    <path d="M70,-2 C65,5 58,10 55,20 C52,25 48,30 50,35
+             M60,-5 L55,5" 
+          stroke="#aabbff" stroke-width="1.2" opacity="0.4" fill="none"/>
+    <path d="M72,0 C68,8 62,15 59,23" 
+          stroke="#c0d8ff" stroke-width="0.8" opacity="0.25" fill="none"/>
+    
+    <!-- Legs - one front leg raised from water -->
+    <line x1="35" y1="55" x2="33" y2="75" stroke="#e8f0ff" stroke-width="1.5" opacity="0.15"/>
+    <line x1="45" y1="55" x2="49" y2="68" stroke="#e8f0ff" stroke-width="1.2" opacity="0.1"/>
+
+    <!-- Water splash around horse (subtle) -->
+    <ellipse cx="36" cy="75" rx="12" ry="4" fill="#aaccff" opacity="0.08"/>
+  </g>
+
+  <!-- Dark water mass under the horse -->
+  <path d="M340,295 C360,280 380,290 385,310 
+           C390,325 420,330 440,315 C455,300 470,290 500,360
+           L650,360 Z"
+        fill="#0a1530" opacity="0.9"/>
+
+  <!-- Fog/mist overlay at water surface -->
+  <ellipse cx="150" cy="345" rx="80" ry="20" fill="#204070" opacity="0.08" filter="url(#mistFilter)"/>
+  <ellipse cx="680" cy="340" rx="90" ry="15" fill="#204070" opacity="0.06" filter="url(#mistFilter)"/>
+
+  <!-- Title text -->
+  <text x="400" y="390" text-anchor="middle" font-family="'Georgia','Times New Roman',serif" 
+        fill="#5a8aaa" font-size="28" opacity="0.7">
+    KELPIE — WATER HORSE OF THE DEEP
+  </text>
+
+  <!-- Gothic border -->
+  <rect x="10" y="10" width="780" height="430" rx="4" fill="none" 
+        stroke="#1a2a55" stroke-width="2"/>
+  <rect x="16" y="16" width="768" height="418" rx="3" fill="none" 
+        stroke="#c0d8ff" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Corner ornaments (gothic style) -->
+  <circle cx="22" cy="22" r="6" fill="#1a2a55"/>
+  <circle cx="778" cy="22" r="6" fill="#1a2a55"/>
+  <circle cx="22" cy="428" r="6" fill="#1a2a55"/>
+  <circle cx="778" cy="428" r="6" fill="#1a2a55"/>
+
+</svg>

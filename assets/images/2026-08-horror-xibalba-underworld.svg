@@ -1,0 +1,123 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Jade glow from below -->
+    <filter id="jadeGlow">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Red accent glow (danger/ritual) -->
+    <filter id="redGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Cave wall texture gradient -->
+    <linearGradient id="caveWall" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d14"/>
+      <stop offset="50%" stop-color="#0a080f"/>
+      <stop offset="100%" stop-color="#111118"/>
+    </linearGradient>
+    <!-- Underground glow gradient -->
+    <radialGradient id="jadeDeep" cx="50%" cy="95%" r="40%">
+      <stop offset="0%" stop-color="#00e676" stop-opacity="0.18"/>
+      <stop offset="40%" stop-color="#00c853" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#0a0f0a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background = dark cave -->
+  <rect width="800" height="450" fill="#06060b"/>
+
+  <!-- Deep cyan jade pool glow from below -->
+  <ellipse cx="400" cy="430" rx="320" ry="130" fill="url(#jadeDeep)"/>
+
+  <!-- Stone ceiling of cave entrance (top arch) -->
+  <path d="M0,0 L800,0 L800,60 Q780,45 750,75 Q720,35 690,80 Q650,40 610,95 Q570,50 530,100 Q500,60 460,110 Q430,70 400,80 L400,0 Z" fill="#0b0c12"/>
+  <path d="M0,0 L800,0 L800,55 Q770,42 740,68 Q710,33 680,72 Q640,38 600,85 Q565,43 525,90 Q500,55 480,75 Q460,42 700,95 L610,70 Q575,100 540,120 Q510,90 495,135" fill="#0b0c12"/>
+  
+  <!-- Cave pillars left -->
+  <path d="M80,60 L120,60 L125,460 L80,460 Z" fill="url(#caveWall)"/>
+  <path d="M90,75 Q105,85 100,200 Q98,320 120,420" stroke="#2a2f30" fill="none" opacity="0.6"/>
+  
+  <!-- Cave pillars right -->
+  <path d="M680,70 L725,55 L725,460 L680,460 Z" fill="#0d0e15"/>
+  <path d="M700,80 Q710,90 705,250 Q703,370 718,430" stroke="#1f1f2a" fill="none" opacity="0.4"/>
+
+  <!-- Staircase descending into the void (9 visible steps implied) -->
+  <g>
+    <!-- Step platforms - each recedes slightly toward bottom center -->
+    <rect x="350" y="95" width="100" height="8" fill="#2d3b3d" rx="1"/>
+    <rect x="344" y="125" width="112" height="8" fill="#263335" rx="1"/>
+    <rect x="337" y="155" width="126" height="8" fill="#1f2c2d" rx="1"/>
+    <rect x="330" y="187" width="140" height="9" fill="#1b2629" rx="1"/>
+    <rect x="323" y="218" width="154" height="8" fill="#172123" rx="1.5"/>
+    <rect x="316" y="249" width="168" height="9" fill="#141d20" rx="1.5"/>
+    <!-- Step 8 - glowing edge -->    
+    <rect x="310" y="280" width="180" height="9" fill="none" stroke="#00e676" stroke-width="0.5" opacity="0.25" rx="1"/>
+    <!-- Bottom platform (the threshold) -->
+    <rect x="304" y="320" width="192" height="10" fill="#0a2b1e" rx="1"/>
+  </g>
+
+  <!-- Jade glow at step edges -->
+  <line x1="316" y1="318" x2="496" y2="318" stroke="#00c853" stroke-width="0.7" opacity="0.2" filter="url(#jadeGlow)"/>
+  
+  <!-- Jade pool at the bottom (the underworld floor) -->
+  <ellipse cx="400" cy="390" rx="260" ry="18" fill="#00e65c" opacity="0.07" filter="url(#jadeGlow)"/>
+  <ellipse cx="380" cy="395" rx="80" ry="8" fill="#00c853" opacity="0.12" filter="url(#jadeGlow)"/>
+
+  <!-- Silhouette of a lone man at the bottom (the protagonist) -->
+  <g transform="translate(375, 272)" fill="#0a0a0f">
+    <circle cx="25" cy="5" r="8"/>
+    <ellipse cx="26" cy="24" rx="10" ry="16"/>
+    <!-- legs -->
+    <path d="M22,39 L20,52 M30,39 L31,53" stroke="#0a0a0f" stroke-width="5"/>
+  </g>
+
+  <!-- Ethereal question marks / voice ripples radiating from below -->
+  <circle cx="400" cy="370" r="30" fill="none" stroke="#00c853" opacity="0.1" stroke-width="0.8"/>
+  <circle cx="400" cy="365" r="48" fill="none" stroke="#00c853" opacity="0.06" stroke-width="1"/>
+  <circle cx="399" cy="372" r="60" fill="none" stroke="#004d40" opacity="0.08" stroke-width="0.6"/>
+
+  <!-- Jade-colored Maya glyph (abstract - stylized XIBALBA mark on the back wall) -->
+  <g transform="translate(235, 110)" opacity="0.12">
+    <rect x="0" y="0" width="18" height="60" rx="9"/>
+    <rect x="0" y="15" width="60" height="18" fill="#c8ff4f"/>
+  </g>
+
+  <!-- Red glyph on right wall (danger of the underworld) -->  
+  <g transform="translate(570, 130)" opacity="0.1">
+    <circle cx="8" cy="8" r="6" fill="none" stroke="#ff4033"/>
+    <line x1="8" y1="8" x2="30" y2="30" stroke="#ff4033"/>
+  </g>
+
+  <!-- Scattered small cave stones along path -->
+  <circle cx="355" cy="97" r="2.5" fill="#fff" opacity="0.06"/>
+  <circle cx="370" cy="160" r="2" fill="#fff" opacity="0.04"/>
+  <circle cx="495" cy="310" r="1.8" fill="#fff" opacity="0.03"/>
+
+  <!-- Decorative Gothic frame -->
+  <rect x="8" y="8" width="784" height="434" rx="4" fill="none" stroke="#3b0f2a" stroke-width="1.5"/>
+  
+  <!-- Corner accents -->
+  <!-- Top-left -->
+  <line x1="70" y1="8" x2="100" y2="8" stroke="#ff0033" stroke-width="1.5"/>
+  <line x1="40" y1="60" x2="8" y2="60" stroke="#ff0033" stroke-width="1.5" opacity="0.75"/>
+  <!-- Top-right -->
+  <line x1="700" y1="8" x2="730" y2="8" stroke="#ff0033" stroke-width="1.5"/>
+  <line x1="792" y1="60" x2="800" y2="60" stroke="#ff0033" stroke-width="1.5" opacity="0.75"/>
+  <!-- Bottom-left -->
+  <line x1="70" y1="450" x2="100" y2="450" stroke="#ff0033" stroke-width="1.5" opacity="0.75"/>
+  <line x1="8" y1="394" x2="8" y2="430" stroke="#ff0033" stroke-width="1.5"/>
+  <!-- Bottom-right -->
+  <line x1="700" y1="450" x2="730" y2="450" stroke="#ff0033" stroke-width="1.5" opacity="0.75"/>
+  <line x1="800" y1="396" x2="800" y2="430" stroke="#ff0033" stroke-width="1.5"/>
+
+  <!-- Title text - bottom -->
+  <text x="400" y="425" text-anchor="middle" fill="#c8ffe9" font-family="'Georgia', serif" font-size="30" opacity="0.7" letter-spacing="3">Shubaru Ba</text>
+
+  <!-- Tiny nine dots representing the nine levels -->
+  <g>
+    <circle cx="400" cy="368" r="1.5" fill="#e53935"/>
+    <circle cx="412" cy="373" r="1.5" fill="#e53935"/>
+    <circle cx="416" cy="384" r="1.8" fill="#ff0033" filter="url(#redGlow)" opacity="0.8"/>
+  </g>
+</svg>

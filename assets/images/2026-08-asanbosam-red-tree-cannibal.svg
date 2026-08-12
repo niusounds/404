@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="eyeGlow">
+      <stop offset="0%" stop-color="#ff1a1a"/>
+      <stop offset="60%" stop-color="#990300"/>
+      <stop offset="100%" stop-color="#550000"/>
+    </radialGradient>
+  </defs>
+
+  <!-- dark sky -->
+  <rect width="800" height="450" fill="#0a0d0e"/>
+
+  <!-- mist layer -->
+  <ellipse cx="300" cy="420" rx="650" ry="130" fill="#1a0c18" opacity="0.7"/>
+
+  <!-- tall trees (Asanbosam's habitat) -->
+  <line x1="95" y1="420" x2="93" y2="200" stroke="#1e161c" stroke-width="5"/>
+  <line x1="89" y1="320" x2="40" y2="270" stroke="#1e161c" stroke-width="2.5"/>
+
+  <!-- red eyes glowing in canopy -->
+  <circle cx="180" cy="95" r="15" fill="url(#eyeGlow)"/>
+  <circle cx="220" cy="90" r="15" fill="url(#eyeGlow)"/>
+
+  <!-- tiny humanoid silhouette perched among branches -->
+  <ellipse cx="200" cy="85" rx="6" ry="4" fill="#d8e8f0" opacity="0.35"/>
+
+  <!-- title text -->
+  <text x="400" y="410" text-anchor="middle" font-family="serif" font-size="22px" fill="#ff2200">アサンボサム</text>
+  <text x="400" y="435" text-anchor="middle" font-family="sans-serif" font-size="14px" fill="#6a3535">The Red-Eyed Tree Dweller — Akan Folklore</text>
+</svg>

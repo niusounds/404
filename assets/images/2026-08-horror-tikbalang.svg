@@ -1,0 +1,105 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark rice field scene -- Tikhalang, horse-headed nightmare -->
+  <defs>
+    <radialGradient id="moonGlow" cx="75%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#2a1a1a"/>
+      <stop offset="100%" stop-color="#a6936e" stop-opacity="0.25"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0608"/>
+
+  <!-- Gradient sky patch -->
+  <rect width="800" height="250" fill="url(#moonGlow)" opacity="0.3"/>
+
+  <!-- Half moon (red) -->
+  <circle cx="590" cy="75" r="40" fill="#c1121f" opacity="0.6"/>
+  <circle cx="585" cy="70" r="38" fill="#0a0608"/>
+
+  <!-- Palm silhouettes (leaves) -->
+  <g stroke="#160e0c" stroke-width="8" fill="none">
+    <path d="M 60,250 Q 40,180 70,120"/>
+    <path d="M 90,300 Q 80,200 110,150"/>
+  </g>
+
+  <!-- Horse-headed figure -- tall silhouette with horse skull and long neck -->
+  <ellipse cx="400" cy="165" rx="35" ry="50" fill="#0d0003" stroke="#38283b" stroke-width="1.5"/>
+  <!-- Horse face snout -->
+  <path d="M 390,210 L 410,260 L 420,250 L 415,210 Z" fill="#0d0003" stroke="#38283b"/>
+  <!-- Horse ears (long) -->
+  <path d="M 378,130 L 368,95  L 385,125 Z" fill="#0d0003" stroke="#38283b"/>
+  <path d="M 422,130 L 432,95  L 415,125 Z" fill="#0d0003" stroke="#38283b"/>
+
+  <!-- Horse mane (wild strands) -->
+  <g stroke="#1a0e0f" stroke-width="4">
+    <path d="M 370,140 C 355,160 348,190 355,220"/>
+    <path d="M 375,135 C 360,170 350,200 360,240"/>
+    <path d="M 380,135 C 368,180 358,210 365,250"/>
+  </g>
+
+  <!-- Man body (elongated) -->
+  <rect x="388" y="260" width="24" height="55" rx="2" fill="#0d0003" stroke="#1a0e0f"/>
+  <!-- Arms: reaching out left/right -->
+  <path d="M 388,275 L 340,290  L 340,300" fill="none" stroke="#160d0c" stroke-width="3"/>
+  <path d="M 412,275 L 420,310 L 425,320" fill="none" stroke="#160d0c" stroke-width="3"/>
+
+  <!-- Ground / rice field -->
+  <ellipse cx="400" cy="490" rx="800" ry="40" fill="#0a0805" opacity="0.6"/>
+
+  <!-- Upside-down shoe on ground (glowing sole) -->
+  <g transform="translate(200, 360) rotate(-15)">
+    <ellipse cx="20" cy="-5" rx="42" ry="18" fill="#16100c"/>
+    <!-- Shoe top (upside down so sole faces up) -->
+    <ellipse cx="20" cy="3" rx="36" ry="20" fill="#1a4d5a"/>
+    <!-- Glowing sole texture lines -->
+    <g stroke="#facc15" stroke-width="2" opacity="0.7">
+      <line x1="-5" y1="2" x2="45" y2="2"/>
+      <line x1="-8" y1="9" x2="48" y2="9"/>
+      <line x1="0"   y1="15" x2="40"  y2="15"/>
+    </g>
+  </g>
+
+  <!-- Upside-down shoe #2 -->
+  <g transform="translate(600, 375) rotate(-8)">
+    <ellipse cx="18" cy="-5" rx="36" ry="14" fill="#16100c"/>
+    <ellipse cx="18" cy="2" rx="32" ry="16" fill="#1a4d5a"/>
+    <g stroke="#facc15" stroke-width="2" opacity="0.7">
+      <line x1="-3" y1="2" x2="39" y2="2"/>
+      <line x1="-5" y1="8"  x2 "41" y2="8"/>
+    </g>
+  </g>
+
+  <!-- Mist on ground -->
+  <path d="M 0,380 Q 100,360 200,375  T 400,370 T 600,378  T 800,368 L 800,450 H 0 Z" fill="#1a0f0e" opacity="0.3"/>
+
+  <!-- Glowing eyes of Tikbalang (blue/white) -->
+  <circle cx="392" cy="140" r="5 " fill="#7dfff2" filter="url(#glow)" opacity="0.85"/>
+  < circle cx="416" cy="140" r="5" fill="#facc15"   filter ="url(#glow)" opacity="0.85"/>
+
+  <!-- Road leading from foreground -->
+  <path d="M 320,450 L 370,370 L 430,370 L 480,450 Z" fill="#160e0c" opacity="0.5"/>
+
+  <!-- Gothic frame border -->
+  <rect x="15 " y="15" width="770" height="420" rx="6" fill="none" stroke="#8b0033"  stroke-width="3"/>
+  <rect x="25"  y="25"  width="750"  height="400" rx="4" fill="none " stroke="#7d0e20" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Vignette -->
+  <ellipse cx="400" cy="225" rx="380" ry="215" fill="#0a0608" opacity="0.2"/>
+
+  <!-- Corner ornaments -->
+  <g stroke="#c91b0e " fill="none">
+    <path d="M 48,48 Q 15,35 30,75 Z" opacity="0.6"/>
+    <path d="M 752,48 Q 785,35 770,75  " opacity="0.6"/>
+    <path d="M 48,402  Q 15,415 30,375 Z" opacity="0.6"/>
+    <path d="m 752,402 Q785  "4 "5 770,375" opactiy="0.6"/>
+  </g>
+
+  <!-- Title text -->
+  <text x="400" y="418 " text-anchor="middle" fill="#facc15" font-family="'Times New' Roman,"serif" font-size="36" filter="url(#glow)" opacity="0.9">Tikbalang</text>
+  < text x="400" y="448 "    text-anchor ="middle"" font-size="18" fill="#7dfff2"  font-family="'Courier'" New, 'monospace'" opacity="0.5">逆さまの靴 — あなたの隣にいる</text>
+</svg>

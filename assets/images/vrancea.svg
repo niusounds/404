@@ -1,0 +1,164 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="moonGlow" cx="70%" cy="22%" r="12%">
+      <stop offset="0%" stop-color="#fff8cc" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#ffddaa" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0a0505" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bloodGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0.8  0 0 0 0 0   0 0 0 0 0   0 0 0 2 0" in="blur" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="fogGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1520" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#1a1520" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0a0a10" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#060404"/>
+
+  <!-- Sky gradient: deep dark purple-to-black -->
+  <rect width="800" height="220" fill="url(#moonGlow)" opacity="0.3"/>
+
+  <!-- Mountains silhouette (distant Carpathians) -->
+  <path d="M0,140 L60,95 L130,120 L220,75 L320,110 L400,60 L480,95 L550,70 L630,112 L720,80 L780,130 L800,140 L800,220 L0,220 Z" fill="#0a080b"/>
+
+  <!-- Middle mountains -->
+  <path d="M0,160 L90,125 L170,150 L280,120 L370,145 L460,115 L540,140 L620,125 L700,150 L780,135 L800,145 L800,220 L0,220 Z" fill="#0d0a0f"/>
+
+  <!-- Crescent moon - half covered (ominous) -->
+  <circle cx="620" cy="75" r="30" fill="#fff8cc" filter="url(#bloodGlow)">
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="628" cy="70" r="27" fill="#060404">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Distant mist layer -->
+  <ellipse cx="300" cy="200" rx="400" ry="30" fill="#1a1520" opacity="0.3">
+    <animate attributeName="cx" values="320;280;320" dur="12s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Ground plane - foggy graveyard entrance -->
+  <path d="M0,210 Q400,250 800,248 L800,300 L0,300 Z" fill="#0a0606"/>
+  
+  <!-- Winding path leading to graveyard -->
+  <path d="M320,260 Q400,310 450,340 Q500,370 380,430 L420,430 Q530,370 470,340 Q420,310 460,260 Z" fill="#140c0c" stroke="#1f1010" stroke-width="0.8"/>
+
+  <!-- Graveyard entrance - stone wall pillars -->
+  <rect x="135" y="275" width="30" height="160" rx="4" fill="#0e0c0d" stroke="#1a1215" stroke-width="0.8"/>
+  <rect x="635" y="275" width="30" height="160" rx="4" fill="#0e0c0d" stroke="#1a1215" stroke-width="0.8"/>
+  
+  <!-- Overhead gate (broken, half open) -->
+  <line x1="148" y1="275" x2="195" y2="290" stroke="#1f1515" stroke-width="3"/>
+  <line x1="652" y1="275" x2="610" y2="300" stroke="#1f1515" stroke-width="3"/>
+
+  <!-- Gravestones (various, slightly leaning) -->
+  <rect x="185" y="48" width="8" height="22" rx="6" transform="rotate(-3, 189, 70)" fill="#1a1415"/>
+  <text x="189" y="65" font-size="6" text-anchor="middle" fill="#4a1025">R.I.P</text>
+  
+  <rect x="275" y="35" width="10" height="24" rx="2" transform="rotate(4, 280, 57)" fill="#181213"/>
+  
+  <rect x="530" y="40" width="9" height="21" rx="6" transform="rotate(-5, 534, 61)" fill="#1a1415"/>
+  <text x="534" y="53" font-size="5.5" text-anchor="middle" fill="#4a1025">S.</text>
+  
+  <rect x="700" y="45" width="7" height="19" rx="2" transform="rotate(6, 703, 65)" fill="#181213"/>
+
+  <!-- Extra gravestones further back (smaller, more distant) -->
+  <rect x="390" y="48" width="6" height="16" rx="4" transform="rotate(-7, 393, 66)" fill="#141012"/>
+  <rect x="587" y="50" width="5" height="14" rx="3" transform="rotate(3, 589, 67)" fill="#141012"/>
+
+  <!-- Tombstones cluster near foreground -->
+  <rect x="365" y="360" width="7" height="24" rx="4" transform="rotate(-4, 368, 390)" fill="#1a1415"/>
+  <ellipse cx="368" cy="380" rx="4" ry="5.5" fill="#1a1415"/>
+  
+  <!-- Coffin in open grave (center) -->
+  <rect x="295" y="90" width="60" height="16" rx="1" fill="#2a1818" stroke="#3d2525" stroke-width="0.6"/>
+  <!-- Opening gap - hand visible from within -->  
+  <path d="M347,92 L360,88 Q368,86 370,94 M347,106 L365,104" stroke="#d4a862" stroke-width="1.8">
+    <animate attributeName="stroke-opacity" values="0.6;1;0.7" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <!-- Fingers from the open edge of coffin -->
+  <line x1="355" y1="98" x2="362" y2="94" stroke="#d4a862" stroke-width="1.2">
+    <animate attributeName="stroke-opacity" values="0;0.7;0.3" dur="4s" repeatCount="indefinite"/>
+  </line>
+  <line x1="358" y1="96" x2="365" y2="90" stroke="#d4a862" stroke-width="1.2">
+    <animate attributeName="stroke-opacity" values="0.3;1;0.2" dur="4s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Open coffin lid (tilted) -->
+  <ellipse cx="369" cy="85" rx="38" ry="7" fill="#121a1a" stroke="#1f1510" 
+           transform="rotate(-25, 369, 85)">
+    <animate attributeName="fill" values="#121a1a;#1a1018;#121a1a" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Blood drip from coffin edge -->
+  <path d="M376,99 L375,110 M374.5,105 Q372,118 375.5,125" 
+        fill="none" stroke="#3a0005" stroke-width="0.7">
+    <animate attributeName="opacity" values="0.6;1;0.4" dur="3s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Ground fog layer with animated opacity -->
+  <rect x="0" y="250" width="800" height="200" fill="url(#fogGrad)"/>
+  <ellipse cx="400" cy="300" rx="500" ry="60" fill="#1a1520" opacity="0.2">
+    <animate attributeName="cx" values="420;380;420" dur="15s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Decorative Gothic border -->
+  <rect x="12" y="12" width="776" height="426" rx="6" fill="none" stroke="#3d001a" stroke-width="2.5">
+    <animate attributeName="stroke-opacity" values="0.8;1;0.8" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Corner iron brackets -->
+  <path d="M16,40 L40,40 L40,16 L20,16 Q16,16 16,20 Z" fill="#5a1030"/>
+  <rect x="768" y="16" width="12" height="20" rx="5" fill="#5a1030"/>
+  <path d="M360,410 L390,410 Q390,420 380,418 L375,415 Z" fill="#5a1030"/>
+
+  <!-- Corner dots (glowing) -->
+  <circle cx="60" cy="60" r="3.5" fill="#ff2210">
+    <animate attributeName="r" values="3;4;3" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="750" cy="60" r="3.5" fill="#ff2210">
+    <animate attributeName="r" values="3;4;3" dur="3.3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="60" cy="400" r="3.5" fill="#ff2210">
+    <animate attributeName="r" values="3;4;3" dur="3.6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="750" cy="400" r="3.5" fill="#ff2210">
+    <animate attributeName="r" values="3;4;3" dur="3.9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3.9s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Floating red particles (embers from grave) -->
+  <g transform="translate(410,165)">
+    <circle cx="0" cy="0" r="2.5" fill="#ff3300">
+      <animate attributeName="cy" values="0;-40;80" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0;0.9" dur="7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g transform="translate(395,180)">
+    <circle cx="0" cy="0" r="2" fill="#ff4400">
+      <animate attributeName="cy" values="0;-35;70" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Strigoi eye from the open edge of coffin -->
+  <ellipse cx="368" cy="91" rx="3" ry="2.5" fill="#ffcc00">
+    <animate attributeName="ry" values="0;2.5;2.5;0;0;" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;1;1;0;1" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Text banner at bottom -->
+  <rect x="230" y="415" width="347" height="28" rx="6" fill="#0a0505" opacity="0.9">
+    <animate attributeName="fill-opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="403.5" y="434" text-anchor="middle" fill="#c8a0ab" font-size="14" font-family="'Georgia', serif" letter-spacing="3">VRANCEHEA: STRIGOI</text>
+
+</svg>

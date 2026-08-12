@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0a0808"/>
+  <defs>
+    <radialGradient id="mist1" cx="50%" cy="70%">
+      <stop offset="0%" stop-color="#2d3436" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#mist1)"/>
+  <ellipse cx="400" cy="440" rx="420" ry="60" fill="#1a1515"/>
+  <rect x="0" y="320" width="800" height="130" fill="#0d1117" opacity="0.7"/>
+  <g stroke="#1a3a4a" stroke-width="1" fill="none" opacity="0.5">
+    <path d="M0,340 Q50,330 100,340 Q150,350 200,340 Q250,330 300,340 Q350,350 400,340 Q450,330 500,340 Q550,350 600,340 Q650,330 700,340 Q750,350 800,340"/>
+    <path d="M-20,370 Q30,360 80,370 Q130,380 180,370 Q230,360 280,370 Q330,380 380,370 Q430,360 480,370 Q530,380 580,370 Q630,360 680,370 Q730,380 780,370"/>
+    <path d="M20,400 Q70,390 120,400 Q170,410 220,400 Q270,390 320,400 Q370,410 420,400 Q470,390 520,400 Q570,410 620,400 Q670,390 720,400"/>
+  </g>
+  <path d="M0,280 Q100,220 200,250 Q350,210 450,230 Q600,200 700,240 L800,260" fill="none" stroke="#3a2a1a" stroke-width="3"/>
+  <line x1="0" y1="280" x2="50" y2="300" stroke="#3a2a1a" stroke-width="4"/>
+  <line x1="200" y1="250" x2="200" y2="310" stroke="#3a2a1a" stroke-width="4"/>
+  <line x1="450" y1="230" x2="450" y2="310" stroke="#3a2a1a" stroke-width="4"/>
+  <line x1="700" y1="240" x2="700" y2="310" stroke="#3a2a1a" stroke-width="4"/>
+  <circle cx="680" cy="80" r="25" fill="#ffe0b2" opacity="0.8"/>
+  <circle cx="692" cy="73" r="22" fill="#0a0808"/>
+  <ellipse cx="700" cy="350" rx="120" ry="40" fill="#ffe0b2" opacity="0.05"/>
+  <g transform="translate(580, 260)" filter="url(#glow)">
+    <ellipse cx="30" cy="-10" rx="18" ry="14" fill="#e8d5b7" opacity="0.9"/>
+    <path d="M12,-18 Q30,-35 48,-18" fill="#a07d6a" stroke="none"/>
+    <path d="M15,0 L-5,-80 Q25,-90 45,-80 L35,0 Z" fill="#e8dce0" opacity="0.7"/>
+    <line x1="8" y1="-60" x2="42" y2="-60" stroke="#c9a4b0" stroke-width="1" opacity="0.5"/>
+    <path d="M-5,-70 L-50,-85" stroke="#e8dce0" stroke-width="3" fill="none" opacity="0.6"/>
+    <line x1="18" y1="-2" x2="12" y2="45" stroke="#b0a095" stroke-width="3" opacity="0.4"/>
+    <circle cx="24" cy="-13" r="3" fill="#ff003f"/>
+    <circle cx="36" cy="-12" r="3" fill="#ff003d"/>
+  </g>
+  <text x="280" y="42" text-anchor="middle" font-family="serif" fill="#cc2a2e" font-size="15" font-weight="bold">LA COLADA MAMA</text>
+  <rect x="15" y="15" width="770" height="420" rx="6" fill="none" stroke="#3d001a" stroke-width="3"/>
+  <g transform="translate(15,15)"><circle r="10" fill="none" stroke="#ff2e2a" stroke-width="2"/><line x1="-8" y1="0" x2="0" y2="8" stroke="#ff2a2e"/></g>
+  <g transform="translate(785,15)"><circle r="10" fill="none" stroke="#ff2a2e" stroke-width="2"/><line x1="-8" y1="0" x2="0" y2="8" stroke="#ff2a2e"/></g>
+  <g transform="translate(15,435)"><circle r="10" fill="none" stroke="#ff2a2e" stroke-width="2"/><line x1="-8" y1="0" x2="0" y2="-8" stroke="#ff2a2e"/></g>
+  <g transform="translate(785,435)"><circle r="10" fill="none" stroke="#ff2a2e" stroke-width="2"/><line x1="-8" y1="0" x2="0" y2="-8" stroke="#ff2a2e"/></g>
+  <path d="M560,300 Q570,290 565,310" fill="none" stroke="#8ab4c8" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="200" cy="300" r="2" fill="#fff" opacity="0.2"/><circle cx="350" cy="280" r="1.5" fill="#fff" opacity="0.15"/><circle cx="450" cy="295" r="2.5" fill="#fff" opacity="0.25"/>
+</svg>

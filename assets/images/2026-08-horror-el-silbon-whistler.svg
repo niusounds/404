@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- El Silbón — The Whistling Ghost of the Venezuelan Plains -->
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#060408"/>
+      <stop offset="50%" style="stop-color:#1a0c10"/>
+      <stop offset="100%" style="stop-color:#2d1408"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" style="stop-color:#ff3a2a;stop-opacity:0.95"/>
+      <stop offset="65%" style="stop-color:#cc1810"/>
+      <stop offset="100%" style="stop-color:#770804"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="800" height="450" fill="url(#skyG)"/>
+
+  <!-- Stars (sparse, faint) -->
+  <circle cx="125" cy="35" r="1.3" fill="#fff" opacity="0.35"/>
+  <circle cx="280" cy="70" r="0.9" fill="#fff" opacity="0.25"/>
+  <circle cx="540" cy="42" r="1.5" fill="#fff" opacity="0.3"/>
+  <circle cx="695" cy="58" r="1.0" fill="#fff" opacity="0.2"/>
+  <circle cx="755" cy="115" r="0.8" fill="#fff" opacity="0.25"/>
+
+  <!-- Blood moon with eclipse -->
+  <circle cx="400" cy="136" r="60" fill="url(#moon)"/>
+  <ellipse cx="425" cy="136" rx="32" ry="78" transform="rotate(-8,425,136)" fill="#0a0610" opacity="0.65"/>
+
+  <!-- Dark earth horizon -->
+  <path d="M0,338 Q90,330 200,336 T400,334 T600,338 T800,332 L800,450 L0,450 Z" fill="#1a0e08"/>
+  <path d="M0,355 Q160,349 320,353 T640,351 T800,347" stroke="#2d1a10" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M0,368 Q200,363 400,366 T800,360" stroke="#2d1a10" stroke-width="1" fill="none" opacity="0.35"/>
+
+  <!-- Road (perspective) -->
+  <line x1="378" y1="352" x2="400" y2="337" stroke="#3a2015" stroke-width="2.2" opacity="0.6"/>
+  <line x1="422" y1="352" x2="400" y2="337" stroke="#3a2015" stroke-width="2.2" opacity="0.6"/>
+
+  <!-- Standing figure silhouette on horizon (whistling ghost) -->
+  <g transform="translate(400,248)">
+    <!-- Body -->
+    <rect x="-5.5" y="9" width="11" height="74" rx="3.5" fill="#0a0612"/>
+    <!-- Head (slightly tilted) -->
+    <circle cx="-1.5" cy="-1.5" r="9.5" fill="#0a0612" transform="rotate(8,-1.5,-1.5)"/>
+    <!-- Left arm extended forward (whistling hand at mouth) -->
+    <path d="M-5.5,23 Q-22,17 -32,6" stroke="#0a0612" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <!-- Right arm holding embroidered bag of bones -->
+    <path d="M5.5,30 L30,20" stroke="#0a0612" stroke-width="3.8" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Embroidered bone bag (slightly visible) -->
+  <ellipse cx="434" cy="272" rx="9" ry="12.5" fill="#2a0e06" opacity="0.9"/>
+  <path d="M427,284 Q434,295 441,284" stroke="#4a1030" stroke-width="1" fill="none" opacity="0.65"/>
+  <!-- Bones poking out -->
+  <line x1="430" y1="271" x2="433" y2="278" stroke="#e8dcc8" stroke-width="1.2" opacity="0.55"/>
+  <line x1="436" y1="271" x2="438" y2="281" stroke="#e8dcc8" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Whistling sound arcs — expanding from figure mouth area -->
+  <ellipse cx="-36" cy="258" rx="8" ry="8" fill="none" stroke="#ff5535" stroke-width="1.4" opacity="0.40"/>
+  <circle cx="-42" cy="272" r="24" fill="none" stroke="#ff5535" stroke-width="1.2" opacity="0.30"/>
+  <ellipse cx="-48" cy="296" rx="40" ry="24" fill="none" stroke="#ff5535" stroke-width="0.9" opacity="0.22"/>
+  <!-- Sound wave lines radiating outward (fade with distance) -->
+  <path d="M-28,276 Q10,262 50,244" fill="none" stroke="#ff6a50" stroke-width="0.9" opacity="0.20"/>
+  <path d="M20,236 Q70,218 130,208" fill="none" stroke="#ff6a50" stroke-width="0.7" opacity="0.14"/>
+
+  <!-- Ground mist/wisps -->
+  <ellipse cx="290" cy="346" rx="130" ry="7" fill="#1f100b" opacity="0.45"/>
+  <ellipse cx="580" cy="348" rx="95" ry="5.5" fill="#1f100b" opacity="0.40"/>
+
+  <!-- Gothic frame: outer -->
+  <rect x="20" y="20" width="760" height="410" rx="8" fill="none" stroke="#3d0c0c" stroke-width="2.5"/>
+  <!-- Gothic frame inner (thinner, translucent) -->
+  <rect x="30" y="30" width="740" height="390" rx="6" fill="none" stroke="#4a1825" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Ornamental Gothic corner brackets -->
+  <path d="M30,60 L30,30 L60,30" fill="none" stroke="#6a2035" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M770,60 L770,30 L740,30" fill="none" stroke="#6a2035" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M30,390 L30,420 L60,420" fill="none" stroke="#6a2035" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M770,390 L770,420 L740,420" fill="none" stroke="#6a2035" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- Decorative side lines along frame edges -->
+  <line x1="27" y1="108" x2="27" y2="150" stroke="#3d151a" stroke-width="0.9" opacity="0.55"/>
+  <line x1="27" y1="215" x2="27" y2="255" stroke="#3d151a" stroke-width="0.9" opacity="0.55"/>
+  <line x1="770" y1="108" x2="770" y2="150" stroke="#3d151a" stroke-width="0.9" opacity="0.55"/>
+  <line x1="770" y1="215" x2="770" y2="255" stroke="#3d151a" stroke-width="0.9" opacity="0.55"/>
+
+  <!-- Title (decorative, top-center) -->
+  <text x="400" y="26" text-anchor="middle" font-family="'Georgia',serif" font-size="12" fill="#3e2530" opacity="0.7">— El Silbón —</text>
+
+  <!-- Small decorative line pattern at bottom -->
+  <line x1="340" y1="422" x2="460" y2="422" stroke="#3d0c0c" stroke-width="1.5"/>
+  <circle cx="400" cy="422" r="2.2" fill="#ff3a2a" opacity="0.7"/>
+
+</svg>

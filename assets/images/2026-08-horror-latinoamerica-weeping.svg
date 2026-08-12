@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- dark background -->
+  <rect width="800" height="450" fill="#0a0818"/>
+
+  <!-- water section: lower two thirds in dark blue-black -->
+  <rect x="20" y="280" width="760" height="150" fill="#0c1424"/>
+  <!-- mist/fog bands in the middle area -->
+  <ellipse cx="300" cy="220" rx="180" ry="25" fill="#1a2438" opacity=".6"/>
+  <ellipse cx="550" cy="250" rx="220" ry="18" fill="#1e2c44" opacity=".5"/>
+
+  <!-- ghostly figure emerging from the fog: tall white silhouette of a woman in long dress -->
+  <path d="M395,165 Q390,200 385,260 M405,165 Q410,200 415,260" stroke="#e8e0d0" stroke-width="0.8" fill="none"/>
+  <rect x="370" y="180" width="60" height="80" rx="25" fill="#d8d0c0" opacity=".45"/>
+  <!-- elongated, spectral legs disappearing into water -->
+  <path d="M375,255 Q370,290 372,340 M410,255 Q415,285 400,330" stroke="#ccc4b0" stroke-width="3.5" fill="none" opacity=".5"/>
+
+  <!-- face area: only eyes visible as two luminous points -->
+  <circle cx="396" cy="140" r="3" fill="#ff6a7a"/>
+  <circle cx="406" cy="140" r="3" fill="#e08090"/>
+
+  <!-- tear-like streaks falling -->
+  <line x1="395" y1="155" x2="392" y2="195" stroke="#c8a0b0" stroke-width="1.5" opacity=".4"/>
+  <line x1="408" y1="155" x2="412" y2="185" stroke="#d08aa0" stroke-width="2" opacity=".35">
+
+    <!-- dark tree silhouettes in background fog -->
+    <g fill="#0e1a2e" stroke="none" opacity=".7">
+      <rect x="90" y="70" width="6" height="40"/>
+      <path d="M93,40 Q85,55 93,70 Q100,55 94.
+</svg>

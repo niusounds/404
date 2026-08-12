@@ -1,0 +1,68 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Road into darkness -->
+  <polygon points="0,350 350,450 450,450 800,350" fill="#0d0b0a" opacity="0.6"/>
+  <line x1="397" y1="200" x2="370" y2="450" stroke="#1a1510" stroke-width="1" opacity="0.4"/>
+  <line x1="403" y1="200" x2="430" y2="450" stroke="#1a1510" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Route 66 sign -->
+  <g transform="translate(580, 240)">
+    <path d="M0,-60 L7,-20 L70,-20 L77,0 L70,20 L7,20 Z" fill="#1a1a1a" stroke="#3d2b1f" stroke-width="1"/>
+    <text x="38" y="5" fill="#c4956a" font-family="'Courier New', monospace" font-size="12" text-anchor="middle">ROUTE 66</text>
+  </g>
+  
+  <!-- The Rake figure silhouette -->
+  <ellipse cx="400" cy="310" rx="8" ry="25" fill="#0a0808" stroke="#1a1515" stroke-width="0.5"/>
+  <!-- Head (bald, elongated) -->
+  <ellipse cx="400" cy="265" rx="18" ry="25" fill="#0d0d0c" stroke="#2a2020" stroke-width="0.5"/>
+  
+  <!-- Glowing eyes - the iconic element -->
+  <circle cx="393" cy="257" r="4" fill="#ff1a1a" opacity="0.9">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="407" cy="257" r="4" fill="#ff1a1a" opacity="0.9">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Eye glow halo -->
+  <circle cx="393" cy="257" r="8" fill="none" stroke="#ff1a1a" stroke-width="0.3" opacity="0.3">
+    <animate attributeName="opacity" values="0.1;0.4;0.1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="407" cy="257" r="8" fill="none" stroke="#ff1a1a" stroke-width="0.3" opacity="0.3">
+    <animate attributeName="opacity" values="0.1;0.4;0.1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Thin arms reaching -->
+  <line x1="400" y1="285" x2="350" y2="340" stroke="#0d0d0c" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="400" y1="285" x2="460" y2="335" stroke="#0d0d0c" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Claws -->
+  <circle cx="350" cy="340" r="1.5" fill="#ff0a0a" opacity="0.5"/>
+  <circle cx="348" cy="342" r="1.5" fill="#ff0a0a" opacity="0.5"/>
+  
+  <!-- Fog / mist at road -->
+  <rect x="0" y="380" width="800" height="70" rx="20" fill="#0a0808" opacity="0.7"/>
+  <circle cx="100" cy="400" r="35" fill="#12100f" opacity="0.4"/>
+  <circle cx="650" cy="410" r="50" fill="#12100f" opacity="0.4"/>
+  <circle cx="400" cy="395" r="60" fill="#12100f" opacity="0.3"/>
+  
+  <!-- Stars / distant noise -->
+  <circle cx="150" cy="80" r="0.7" fill="#ffffff" opacity="0.3"/>
+  <circle cx="300" cy="60" r="0.5" fill="#ffffff" opacity="0.2"/>
+  <circle cx="500" cy="90" r="0.8" fill="#ffffff" opacity="0.2"/>
+  <circle cx="650" cy="50" r="0.6" fill="#ffffff" opacity="0.15"/>
+  <circle cx="720" cy="130" r="0.7" fill="#ffffff" opacity="0.2"/>
+  
+  <!-- Gothic border -->
+  <rect x="8" y="8" width="784" height="434" rx="6" fill="none" stroke="#1a0505" stroke-width="1.5"/>
+  <rect x="16" y="16" width="768" height="418" rx="4" fill="none" stroke="#2d0010" stroke-width="0.8" opacity="0.5"/>
+  
+  <!-- Corner decorations -->
+  <path d="M20,30 Q30,20 40,25" fill="none" stroke="#3d001a" stroke-width="1.2"/>
+  <path d="M760,30 Q770,20 780,25" fill="none" stroke="#3d001a" stroke-width="1.2"/>
+  <path d="M20,430 Q30,440 40,435" fill="none" stroke="#3d001a" stroke-width="1.2"/>
+  <path d="M760,430 Q770,440 780,435" fill="none" stroke="#3d001a" stroke-width="1.2"/>
+  
+  <!-- Title text -->
+  <text x="400" y="430" text-anchor="middle" fill="#c4956a" font-family="'Courier New', monospace" font-size="14">THE RAKE — Route 66, New Mexico</text>
+</svg>

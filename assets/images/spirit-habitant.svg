@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Ghost story SVG 800x450 -->
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow"><stop offset="10%" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="70%" stop-color="#8b73600" stop-opacity="0.4"/></radialgradient>
+  </line>
+
+</svg>HEREDOC
+# Validate
+python3 -c "import xml.etree.ElementTree as ET; t = ET.parse('/home/niusounds/404/assets/images/spirit-habitant.svg'); print('VALID XML: ' + str(t))" || echo "PARSE FAILED"
+ls -la /home/niusounds/404/assets/images/spirit-habitant.svg

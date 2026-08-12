@@ -1,0 +1,168 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glow filter for the woman -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Darker glow for reflection -->
+    <filter id="darkglow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Water ripple pattern -->
+    <pattern id="waves" x="0" y="260" width="800" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 0 15 Q 37.5 -5 75 15 Q 112.5 35 150 15 L 150 45 Q 112.5 65 75 45 Q 37.5 25 0 45 Z" fill="none" stroke="#1a0a3e" stroke-width="0.8"/>
+      <path d="M 50 -10 Q 87.5 10 125 -10 Q 162.5 30 200 10 L 200 40" fill="none" stroke="#2e1059" stroke-width="0.5"/>
+    </pattern>
+    <!-- Vignette gradient -->
+    <radialGradient id="vignette" cx="0.5" cy="0.35">
+      <stop offset="40%" stop-color="transparent"/>
+      <stop offset="120%" stop-color="#a3056c"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Sky area with mist -->
+  <rect x="170" y="30" width="460" height="200" rx="10" fill="#180e3a"/>
+  <ellipse cx="400" cy="130" rx="280" ry="150" fill="#0f0825" opacity="0.9"/>
+
+  <!-- Full moon -->
+  <circle cx="380" cy="110" r="45" fill="#ffdcb0" opacity="0.9"/>
+  <circle cx="370" cy="105" r="32" fill="#2e1a6e" mask-url="" opacity="0.3" style="filter:none;mask: url(#moon-mask)" clip-path="url(#crescent-clip)"/>
+
+  <!-- Moon crescent effect - use a circular clip -->
+  <defs>
+    <clipPath id="moon-cutout">
+      <circle cx="410" cy="95" r="38"/>
+    </clipPath> 
+  </defs>
+  <ellipse cx="380" cy="112" rx="46" ry="46" fill="#ffdcb0" opacity="0.15"/>
+
+  <!-- Dock planks (leading away toward horizon) -->
+  <g clip-path="url(#dock-clip)">
+    <defs>
+      <clipPath id="dock-clip">
+        <rect x="250" y="260" width="300" height="190"/> 
+      </clipPath>
+    </defs>
+    <!-- Dock surface perspective -->
+    <polygon points="290,450 370,290 430,290 510,450" fill="#3a1a1a"/>
+
+    <!-- Plank lines -->
+    <line x1="375" y1="286" x2="300" y2="450" stroke="#4e2525" stroke-width="1.5"/>
+    <line x1="390" y1="290" x2="340" y2="450" stroke="#5a2c2c" stroke-width="1.2"/>
+    <line x1="410" y1="288" x2="400" y2="450" stroke="#4e2525" stroke-width="1.3"/>
+    <line x1="430" y1="290" x2="460" y2="450" stroke="#5a2c2c" stroke-width="1.1"/>
+    <line x1="450" y1="288" x2="520" y2="450" stroke="#4e2525" stroke-width="1.4"/>
+
+    <!-- Horizontal planks -->
+    <line x1="298" y1="300" x2="502" y2="300" stroke="#5a2c2c" stroke-width="1.2"/>
+    <line x1="296" y1="320" x2="504" y2="320" stroke="#4e2525" stroke-width="1.5"/>
+    <line x1="294" y1="340" x2="506" y2="340" stroke="#5a2c2c" stroke-width="1.3"/>
+    <line x1="293" y1="360" x2="507" y2="360" stroke="#4e2525" stroke-width="1.1"/>
+    <line x1="292" y1="380" x2="508" y2="380" stroke="#5a2c2c" stroke-width="1.4"/>
+    <line x1="291" y1="400" x2="509" y2="400" stroke="#4e2525" stroke-width="1.3"/>
+  </g>
+
+  <!-- Sea/water area (not where the dock is) -->
+  <rect x="170" y="260" width="80" height="200" fill="url(#waves)" opacity="0.5"/>
+  <rect x="550" y="260" width="80" height="200" fill="url(#waves)" opacity="0.4"/>
+
+  <!-- The woman - white raincoat figure (centered on dock) -->
+  <g filter="url(#glow)">
+    <!-- Body/white raincoat shape -->
+    <path d="M 383,245 L 386,190 Q 387,185 390,185 L 410,185 Q 413,185 414,190 L 417,245 Z" fill="#eceff1"/>
+    <!-- Raincoat collar/hood line -->
+    <path d="M 386,190 L 390,175 L 410,175 L 414,190" stroke="#d5dde0" stroke-width="0.8" fill="none"/>
+    <!-- Body center line of coat -->
+    <line x1="400" y1="245" x2="400" y2="175" stroke="#c9d1d4" stroke-width="0.6" opacity="0.7"/>
+
+    <!-- Hair flowing back (wet look) -->
+    <path d="M 388,172 L 370,185 Q 365,192 370,200" stroke="#4a2d20" stroke-width="2.5" fill="none"/>
+    <path d="M 412,172 L 430,180 Q 435,190 430,200" stroke="#4a2d20" stroke-width="2.5" fill="none"/>
+
+    <!-- Face outline (very pale) -->
+    <ellipse cx="400" cy="168" rx="7" ry="9" fill="#f0efea"/>
+  </g>
+
+  <!-- Open mouth whisper effect - mouth slightly visible --> 
+  <path d="M 396,172 Q 400,175 404,172" stroke="#c85a5a" stroke-width="0.7" fill="none"/>
+
+  <!-- Water ripples where she stands (but NOT wet) - paradox visual -->
+  <ellipse cx="390" cy="248" rx="35" ry="6" stroke="#2a1a14" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <ellipse cx="400" cy="248" rx="45" ry="7" stroke="#2a1a14" stroke-width="1" fill="none" opacity="0.3"/>
+
+  <!-- Under-water reflection showing something else (horror element) -->
+  <g transform="translate(400,290)" opacity="0.65">
+    <ellipse cx="0" cy="28" rx="12" ry="80" fill="#1a0832"/>
+    <!-- Face underwater - inverted and distorted -->
+    <ellipse cx="0" cy="-85" rx="9" ry="11" fill="#d4d0c8"/>
+    <!-- Open eyes in under-water reflection - white dots staring up -->
+    <circle cx="-3.5" cy="-91" r="2.5" fill="none" stroke="#e74c3c" stroke-width="0.8">
+      <! — red ring eyes staring up at viewer  --><!-- red iris dots -->
+      <circle cx="-3.5" cy="-91" r="1.2" fill="#ff0033"/>
+    </circle>
+    <circle cx="+3.5" cy="-91" r="2.5" stroke="#e74c3c" stroke-width="0.8">
+      <circle cx="+3.5" cy="-91" r="1.2" fill="#ff0033"/>
+    </circle>
+    <!-- Wet, disheveled hair around the reflection -->
+    <path d="M -7,-76 L -14,-100 Q -10,-105  -5,-98" stroke="#2e1416" stroke-width="1.5" fill="none"/>
+    <path d="M +7,-76 L +12,-100 Q +16,-105 +10,-102" stroke="#2e1416" stroke-width="1.5" fill="none"/>
+
+
+  <!-- Under-water reflection (distorted, staring upward) -->
+  <g transform="translate(398, 298)" opacity="0.6">
+    <!-- Inverted face silhouette -->
+    <ellipse cx="4" cy="-70" rx="11" ry="14" fill="#d8cfc4" opacity="0.5"/>
+    <!-- Drowned eyes staring upward - red rings to signal danger -->
+    <circle cx="4" cy="-65" r="3" stroke="#e74c3c" stroke-width="1.2" fill="#1a0008">
+      <! — glowing red iris dot --><circle cx="4" cy="-65" r="1.3" fill="#ff0033"/>
+    <circle cx="2" cy="-95" stroke="#e74c3c" stroke-width="1.2">
+      circle cx="2" cy="-95" r="1.3" fill="#ff0033"/>
+  
+  <!-- Whisper text wisps (as visual element) -->
+  <g opacity="0.5" transform="translate(430, 165)">
+    <path d="M -5,-8 Q 5,-12 10,-4 Q 15,2 10,8" stroke="#b8a9d0" fill="none" opacity="0.7">
+      circle cx="-3" cy="60" r="
+    
+  <!-- Goethic frame decorations -->
+  <rect x="16" y="16" width="768" height="418" rx="5" fill="none" stroke="#6b2a8e" stroke-width="2.5"/>
+  <!-- Corner ornaments -->
+  <circle cx="38" cy="38" r="4" fill="#ff003378">
+    circle cx="38" cy="38" rx="9" fill="#1a002e"/> 
+    </circle>
+  
+      <!-- Gothish corner ornaments -->
+  <rect x="16" y="16" width="768" height="418" rx="6" fill="none" stroke="#5c239b" stroke-width="2.5"/>
+
+  <!-- Vignette overlay for darker edges -->
+  <ellipse cx="400" cy="225" rx="350" ry="197" fill="url(#vignette)" opacity="0.6">
+    rect x="770"" y="10"/>
+
+
+<!-- Corner ornaments to frame the scene -->
+  <circle cx="48" cy="48" r="2.5" fill="#b2a6cc"></circle>
+  <circle cx="752" cy="48" r="2.5" fill="#b2a6cc"/>
+  <circle cx="48" cy="402" r="2.5" fill="#b2d4cc"/>
+  <circle cx="752" cy="402" r="2.5" fill="#b3a6cc"/>
+
+
+  
+<!-- Gothic border -->
+    rect x="16" y="16" width="768" height="418" rx="2" fill="none" stroke="#6c2d9f" stroke-width="2">
+
+
+  <!-- Title text at bottom of frame -->
+  <text x="400" y="435" font-family="Georgia, serif" font-size="13px" font-style="italic" text-anchor="middle" fill="#6b7bb89d">
+    Mamiwata - the woman who was never wet
+  
+</svg>

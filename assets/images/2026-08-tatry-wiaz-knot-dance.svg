@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0808;stop-opacity:1"/>
+      <stop offset="60%" style="stop-color:#130e0f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a1215;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#sky)"/>
+
+  <!-- Mountain silhouettes in background -->
+  <polygon points="50,200 120,100 190,200" fill="#0d0a0c"/>
+  <polygon points="160,180 230,70 300,190" fill="#140f12"/>
+  <polygon points="120,250 210,130 300,260" fill="#1a1416"/>
+  <polygon points="280,200 370,90 460,210" fill="#100b0e"/>
+  <polygon points="420,170 510,60 600,180" fill="#151213"/>
+  <polygon points="490,220 570,120 650,230" fill="#0e0a0c"/>
+  <polygon points="560,200 640,80 720,190" fill="#110d0e"/>
+
+  <!-- Mist/fog layer -->
+  <ellipse cx="200" cy="300" rx="250" ry="60" fill="#3a3238" opacity="0.07"/>
+  <ellipse cx="600" cy="320" rx="200" ry="50" fill="#3a3238" opacity="0.06"/>
+
+  <!-- Dark pine trees silhouettes on left and right -->
+  <g fill="#1a1416">
+    <polygon points="40,300 70,180 100,300"/>
+    <polygon points="75,290 95,210 115,290"/>
+    <polygon points="90,310 110,240 130,310"/>
+    <rect x="68" y="300" width="4" height="50"/>
+    
+    <polygon points="740,280 775,160 810,290"/>
+    <polygon points="770,270 795,180 820,270"/>
+    <polygon points="755,300 775,230 795,300"/>
+  </g>
+
+  <!-- The Wiąz knot creature - gnarled branches forming a menacing shape in center -->
+  <g stroke="#8d1b3a" fill="none" stroke-width="2.5" filter="url(#glow)">
+    <path d="M370,150 Q400,100 430,140" />
+    <path d="M400,140 Q440,90 460,120"/>
+    <path d="M400,150 L400,280"/>
+    <path d="M370,180 Q420,160 460,180" stroke-width="2"/>
+    
+    <!-- Branch-like protrusions -->
+    <path d="M395,190 Q360,170 330,180" />
+    <path d="M398,210 Q440,195 470,200" stroke-width="1.8"/>
+    <path d="M398,230 Q360,215 320,225" />
+    
+    <!-- The "knot" center - twisted dark circle -->
+    <circle cx="400" cy="200" r="18" stroke="#c1121f" stroke-width="2.2"/>
+    
+    <!-- Eyes glowing red within the knot -->
+    <ellipse cx="395" cy="197" rx="3.5" ry="4.5" fill="#ff0a1e"/>
+    <ellipse cx="408" cy="197" rx="3.5" ry="4.5" fill="#ff0a1e"/>
+    
+    <!-- Jagged "mouth" - splintered branch -->
+    <path d="M392,215 L396,225 L398,217 L403,227 L406,218" stroke-width="1.8"/>
+  </g>
+
+  <!-- Falling mist particles / stars -->
+  <circle cx="320" cy="80" r="1" fill="#c7a9b9" opacity="0.5"/>
+  <circle cx="480" cy="65" r="1.2" fill="#c7a9b9" opacity="0.4"/>
+  <circle cx="350" cy="55" r="0.8" fill="#c7a9b9" opacity="0.3"/><circle cx="450" cy="75" r="1" fill="#c7a9b9" opacity="0.35"/>
+  <circle cx="520" cy="90" r="0.9" fill="#c7a9b9" opacity="0.45"/>
+  
+  <!-- Ground/fog layer -->
+  <rect x="0" y="370" width="800" height="80" fill="#120e10" opacity="0.5"/>
+
+  <!-- Border frame -->
+  <rect x="15" y="15" width="770" height="420" rx="6" ry="6" 
+        fill="none" stroke="#3d001a" stroke-width="1.8" filter="url(#glow)"/>
+  
+  <!-- Inner subtle border -->
+  <rect x="22" y="22" width="756" height="406" rx="4" ry="4" 
+        fill="none" stroke="#8d1b3a" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- Corner decorations -->
+  <path d="M15,40 Q20,20 40,15" stroke="#c7a9b9" fill="none" stroke-width="1.5"/>
+  <path d="M785,40 Q780,20 760,15" stroke="#c7a9b9" fill="none" stroke-width="1.5"/>
+  <path d="M15,430 Q20,450 40,450" stroke="#c7a9b9" fill="none" stroke-width="1.5"/>
+  <path d="M785,430 Q780,450 760,450" stroke="#c7a9b9" fill="none" stroke-width="1.5"/>
+
+</svg>

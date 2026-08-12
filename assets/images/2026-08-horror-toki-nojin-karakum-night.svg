@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d0815"/>
+      <stop offset="100%" stop-color="#2a1b3e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Dark sky -->
+  <rect width="800" height="450" fill="url(#skyGrad)"/>
+  
+  <!-- Sand dunes -->
+  <path d="M0,400 Q200,360 400,390 T800,370 L800,450 L0,450Z" fill="#5a3d3b"/>
+  
+  <!-- Distant stars -->
+  <circle cx="180" cy="70" r="1.2" fill="#ffffffcc"/>
+  <circle cx="650" cy="40" r="0.8" fill="#eeddbb"/>
+  <circle cx="350" cy="90" r="0.6" fill="#fffbe6cc"/>
+  
+  <!-- Sandstorm silhouette -->
+  <ellipse cx="680" cy="290" rx="100" ry="80" fill="#b3a49177"/>
+  
+  <!-- Lone truck on dune -->
+  <g transform="translate(500,345)">
+    <rect x="-12" y="-6" width="28" height="10" rx="2.5" fill="#2a201d"/>
+    <path d="M-7,-6 L0,-14 L9,-6Z" fill="#2a201d"/>
+    <!-- Headlight beam -->
+    <line x1="-3" y1="-2" stroke-width="2" stroke="#ffddaa">
+      <animate attributeName="opacity" values="1;0.35;1" dur="3s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Dark silhouetted djinn figure emerging from dune -->
+  <g transform="translate(265,285)">
+    <path d="M-10,-35 L-7,85 Q0,90 7,85 C10,85 13,80 12,30Z" fill="#1a0f14"/>
+    <!-- Glowing eyes -->
+    <circle cx="-4" cy="-25" r="1.6" fill="#ffcc00">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="4" cy="-25" r="1.6" fill="#ffcc00">
+      <animate attributeName="opacity" values="0.3;1;0.7" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Head shape -->
+    <ellipse cx="0" cy="-42" rx="9.5" ry="11" fill="#1a0f14"/>
+  </g>
+  
+  <!-- Decorative border frame -->
+  <rect x="6" y="6" width="788" height="438" rx="8" fill="none" stroke="#cc6b2b66" stroke-width="2.5"/>
+  <rect x="10" y="10" width="780" height="430" rx="6" fill="none" stroke="#ffffff1a" stroke-width="0.7"/>
+  
+  <!-- Title text -->
+  <text x="20" y="75" font-family="'serif','Times New Roman'" font-size="30" 
+        fill="#ffbb66aa">Toki-no-Jin：夜のジン</text>
+  <text x="20" y="415" font-family="'serif'" font-size="9.5" fill="#ddccbbcc">～カラクム砂漠の伝説～</text>
+</svg>

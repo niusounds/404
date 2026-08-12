@@ -1,41 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
-
-  <!-- Dark background -->
-  <rect width="800" height="450" fill="#0e0b12"/>
-
-  <!-- Hospital corridor perspective walls -->
-  <polygon points="0,0 800,0 680,450 320,450" fill="#13111c" opacity="1.0"/>
-
-  <!-- Floor - tiles visible in dark -->
-  <line x1="320" y1="190" x2="680" y2="190" stroke="#1d1430" stroke-width="0.8" opacity="0.6"/>
-  <line x1="380" y1="135" x2="670" y2="135" stroke="#1b1635" stroke-width="0.7" opacity="0.4"/>
-  <line x1="440" y1="95" x2="560" y2="95" stroke="#2a2440" stroke-width="0.6" opacity="0.35"/>
-
-  <!-- Ceiling lights - 1 long rectangular fluorescent -->
-  <rect x="220" y="68" width="360" height="18" rx="1.5" fill="#dcb94b" opacity="0.25" filter="url(#lightBlur)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 500 800 450">
+  <!-- Dark night scene with hospital silhouette and moon -->
   
-  <!-- Corridor walls with subtle blue light reflection (hospital feel) -->
-  <path d="M80,190 L320,190 L320,450 L360,450 Z" fill="#1a1b27" opacity="0.9"/>  
-  <path d="M480,450 L480,190 L720,190 L720,450 Z" fill="#151623" opacity="0.9"/>
+  <rect width="800" height="450" fill="#1a0607"/>  <!-- Night sky background -->
 
-  <!-- Door number sign: "病室中" on left -->
-  <text x="86" y="95" font-family="sans-serif" font-size="15px" fill="#f4e88b" opacity="0.7">5</text>
+  <!-- Hospital building silhouette -->
+  <path d="M 320,70 L 450,70 L 450,320 L 355,320 L 380,240 L 400,240 L 400,360 L 340,380 Z" 
+         fill="#4a1e0b"/>
   
-  <!-- Elevator in center-left with glowing '3' indicator -->
-  <rect x="280" width="160" height="200" rx="6"/>
-  <ellipse cx="190" cy="74" width="14" ry="1.5" fill="#ffcc00" opacity="0.3">
+ <!-- Window details (empty floors) -->
+  <rect x="375" y="90" width="55" height="40" fill="#3c2529"/>   <!-- Empty window 1-->
 
-    <!-- Clock showing 3:00 -->
-  <circle r="30" cx="82" cy="168"/>
-  <line x1="79" y1="70" x2="85" y2="75"/>
+<line x1="610" y1="280" width="60" rx="2" stroke="#cfaa63ff"/>  <!-- Moon reflection -->
   
-  <!-- Elevator panel display: "3F" with red glow -->
-  <text id="floor">Floor</text>
+ <!-- Foreground: street or road hinting the scene is at night on a city street -->
+   <path d="M 0,358 Q 1678 40Q 335,420 L 500,440" 
+         fill="#6a552b"/>  <!-- Dark road surface  
+         
+ <!-- Moon/illuminated window area -->
+   <circle cx="720" cy="126" r="48" fill="#fffbe8"/>';  <!-- Full bright moon-->
 
-  <!-- Dark figure silhouette in the middle of corridor, back turned - ominous posture -->
-  <polygon fill="#161b35" opacity="0.85">
-
-    <!-- Hospital bed railings visible on one side, dimly by a bedside table -->
-    <line x1="490" y1="225" width="270" rx="7"/>
+<line x1="345" y1="392" width="318" rx="4" stroke="#8b7a2a"/>   <!-- Road line marker
 </svg>

@@ -1,0 +1,70 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow1"><feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="moon_glow">
+      <stop offset="0%" stop-color="#ffe8c8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ff6b1a" stop-opacity="0"/></radialGradient>
+  </defs>
+
+  <!-- Background: dark peat bog under moonlit sky -->
+  <rect width="800" height="450" fill="#060404"/>
+  
+  <!-- Moon with eerie red shadow -->
+  <circle cx="120" cy="90" r="36" fill="#f5ecde" opacity="0.2"/>
+  <circle cx="120" cy="90" r="90" fill="url(#moon_glow)"/>
+
+  <!-- Ground: dark undulating peat bog -->
+  <ellipse cx="400" cy="385" rx="460" ry="105" fill="#0c0a07"/>
+  <path d="M0,370 Q200,350 400,375 Q600,400 800,365 L800,450 L0,450Z" fill="#110e0a"/>
+
+  <!-- Thin bare trees (carrion-like) -->
+  <g stroke="#211b15" stroke-width="2.5" fill="none">
+    <line x1="630" y1="410" x2="638" y2="208"/>
+    <path d="M638,255 Q670,228 695,243 M638,235 Q695,205 728,213 M638,220 Q615,185 605,173"/>
+    <circle cx="605" cy="173" r="9.5" fill="none" stroke="#312b22" stroke-width="1"/>
+  </g>
+
+  <!-- DULLAHAN figure: headless rider silhouette -->
+  <!-- Dark horse body mass -->
+  <ellipse cx="468" cy="280" rx="75" ry="34" fill="#0c0a08"/>
+  <!-- Horse legs -->
+  <rect x="415" y="302" width="13" height="35.5" rx="2.2" fill="#0c0a08"/>
+  <rect x="473" y="306" width="13" height="30" rx="2.2" fill="#0c0a08"/>
+
+  <!-- Tail -->
+  <path d="M540,275 Q572,248 568,290 Q580,275 572,280" stroke="#150e0c" fill="none" stroke-width="2.2"/>
+
+  <!-- Rider cloak (dark mass with faint rim-light) -->
+  <path d="M463,275 L449,218 Q453,206 467,202 L482,205 Q487,212 483,227 L474,275"
+         fill="#090605" stroke="#2b2420" stroke-width="0.9"/>
+
+  <!-- THE HEAD held under arm area - glowing red eyes -->
+  <ellipse cx="500" cy="304" rx="18" ry="14" fill="#130d0a"/>
+  <circle cx="493.5" cy="299.6" r="2.8" fill="#ff3c22" filter="url(#glow1)"/>
+  <circle cx="507.3" cy="299.8" r="2.8" fill="#ff5035" filter="url(#glow1)"/>
+  <!-- Open mouth revealing black gullet -->
+  <path d="M494,310 Q500,316 506,308" stroke="#0a0303" fill="none" stroke-width="1.4"/>
+  <!-- Pale white hair strands spilling downward -->
+  <path d="M497,290 Q480,307 477,355" stroke="#bcaeb6" fill="none" stroke-width="1.1" opacity="0.7"/>
+  <path d="M502,292 Q488,318 484,366" stroke="#ddd5cf" fill="none" stroke-width="1.0" opacity="0.6"/>
+
+  <!-- Horsewhip (sileabhán) - human spine pattern -->
+  <path d="M478,250 Q510,227 550,213 Q595,195 631,186" stroke="#d0c4a5" fill="none" stroke-width="1.8" opacity="0.8"/>
+  <!-- Vertebrae dots along whip -->
+  <circle cx="512" cy="237" r="1.6" fill="#ccc0aa" opacity="0.6"/>
+  <circle cx="548" cy="219" r="1.4" fill="#ccc0aa" opacity="0.5"/>
+  <circle cx="585" cy="205" r="1.3" fill="#ccc0aa" opacity="0.4"/>
+
+  <!-- Ghostly carrack silhouetted behind rider -->
+  <path d="M567,239 L559,270 Q559,300 580,296 L610,315" fill="#0d0a08" stroke="#1c1412"
+        stroke-linejoin="round" stroke-width="0.8"/>
+
+  <!-- Corner/gothic ornamental frame -->
+  <rect x="13" y="13" width="773" height="426" rx="5.5" fill="none" stroke="#5b0e1f" stroke-width="2.6" opacity="0.8"/>
+  <rect x="23" y="23" width="753" height="406" rx="3.5" fill="none" stroke="#852035" stroke-width="0.9" opacity="0.5"/>
+
+  <!-- Corner blood-drop ornaments -->
+  <circle cx="29" cy="29" r="7.5" fill="#ff1c36" filter="url(#glow1)" opacity="0.85"/>
+  <circle cx="771" cy="29" r="7.5" fill="#ff1c36" filter="url(#glow1)" opacity="0.8"/>
+</svg>

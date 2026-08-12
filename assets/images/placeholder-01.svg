@@ -1,0 +1,21 @@
+<!-- Tikbalang — Horse-headed creature in rice fields under a half moon -->
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="moonGlow" cx="75%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#b33d3d"/>
+      <stop offset="100%" stop-color="#1a0a02" stop-opacity="0.4"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="450" fill="#070310"/>
+
+  <!-- Night sky gradient patch -->
+  <circle cx="680" cy="90" r="200" fill="url(#moonGlow)" opacity="0.5"/>
+
+  <!-- Pale crescent moon -->
+  <path d="M 640,72 A 36,36 0 1 , 610,108 Q 584,90 640,72 Z" fill="#b3c2a3" opacity="0.8"/>
+</svg>

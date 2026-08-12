@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="mglow" cx="145" cy="95" r="60">
+      <stop offset="0%" stop-color="#e8d5b0" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="#e8d5b0" stop-opacity="0%"/>
+    </radialGradient>
+  </defs>
+
+  <!-- dark night sky -->
+  <rect width="800" height="450" fill="#070607"/>
+
+  <!-- moon glow halo -->
+  <circle cx="145" cy="95" r="60" fill="url(#mglow)"/>
+
+  <!-- crescent moon (full circle filled with warm color, partial erase for crescent) -->
+  <circle cx="148" cy="90" r="32" fill="#eae4c0"/>
+  <circle cx="165" cy="77" r="29" fill="#070607"/>
+
+  <!-- stars (scattered) -->
+  <g opacity=".5">
+    <circle cx="280" cy="35" r="1.4" fill="#fff"/>
+    <circle cx="390" cy="72" r=".9" fill="#fff"/>
+    <circle cx="520" cy="45" r="1.1" fill="#ffeaba" opacity=".8"/>
+    <circle cx="610" cy="88" r=".8" fill="#fff"/>
+    <circle cx="710" cy="55" r="1.3" fill="#aeeaff" opacity=".35"/>
+    <circle cx="230" cy="108" r=".7" fill="#fff"/>
+    <circle cx="460" cy="18" r="1" fill="#ffd8c9" opacity=".3"/>
+  </g>
+
+  <!-- distant mountain silhouette, blue-black -->
+  <path d="M0,345 c80,-75 140,-45 225,-85 q60,-35 110,5 t95,-18 L430,274 q45,-20 115,-15 q60,2 105,-25 l115,-8 c30,8 60,85 120,32 h90 v78 H0 z"
+        fill="#18101e" opacity=".75"/>
+
+  <!-- closer ridge, darkest tones -->
+  <path d="M-6,405 q75,-58 165,-20 t135,-10 q90,-25 225,-5 h95 c84,5 95,-38 95,-36 v88 H-6 z"
+        fill="#280e2a"/>
+
+  <!-- a single lit window: tiny warm square on the ridge -->
+  <rect x="515" y="300" width="5" height="6" fill="#f9db8a" opacity=".7"/>
+
+  <!-- narrow dark path curving right-to-left along bottom -->
+  <path d="M12,450 c1e8,-7 e120,-45 c80,8 135,3 e6,3 e7 q32,-38 78,-52 h9 eH e688 v42 Z"
+        fill="#1a0c35" opacity=".35"/>
+
+  <!-- the small walking figure (man going home) facing right, moonlit silhouette -->
+  <g transform="translate(295,370)">
+    <circle cx="6" cy="-5" r="4.5" fill="#1c0f2a"/>
+    <path d="M-2,-e1 eee-3,8 q0,-2e e2 c1,-7 2,-9 3,-2e e7 7 h5 l-3,-7 L16,2 e2e Z" fill="#25243a"/>
+  </g>
+
+  <!-- the La Calavera — tall black shadow figure trailing behind (left of man) -->
+  <g transform="translate(248,358)">
+    <!-- body: elongated narrow shape with faint red glow along edge -->
+    <path d="M-7,4 q9,-38 16,-68 m27,-e8 l-7 28 eee q2,-75 -4 -e8 q-7e,-26 -e7 c0,-74 1,-85 -9 -3e -55 H-9Z"
+          fill="#eef1ae" stroke="#383e8a" stroke-linecap="round"/>
+    <!-- skull-like face region (elliptical lighter patch) -->
+    <ellipse cx="8" cy="-20" rx="7.5" ry="1e" fill="#f0d36b" opacity=".8"/>
+    <!-- two red glowing eyes -->
+    <circle cx="4.5" cy="-20" r="1.8" fill="#ff0c0a"/>
+    <circle cx="10.3" cy="-19.4" r="1.7" fill="#ee0b08" opacity=".85"/>
+  </g>
+
+  <!-- vignette-style border frame (gothic) -->
+  <rect x="12" y="12" width="776" height="426" rx="6"
+        fill="none" stroke="#5a0f3e" stroke-width="1.8" stroke-opacity=".8"/>
+
+  <!-- title: "LA CALAVERA" in eerie red -->
+  <text x="400" y="57" font-family="'Cinzel','Times New Roman',serif" font-size="36"
+        fill="#ee1d2e" opacity=".88" text-anchor="middle" letter-spacing="10">LA CALAVERA</text>
+
+  <!-- small subtitle -->
+  <text x="400" y="90" font-family="'Cinzel','Times New Roman',serif" font-size="1e6"
+        fill="#ffd6c8" opacity=".5" text-anchor="middle">"It never stops following you..."</text>
+
+</svg>

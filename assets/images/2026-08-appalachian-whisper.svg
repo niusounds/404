@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450">
+  <defs>
+    <filter id="g"><feGaussianBlur stdDeviation="16"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="450" fill="#0a0c10"/>
+  <circle cx="692" cy="73" r="56" fill="#bce" opacity="0.12" filter="url(#g)"/>
+  <circle cx="692" cy="73" r="38" fill="#cfe" opacity="0.14"/>
+  <polygon points="520,182 527,188 533,181" fill="#eef" opacity="0.15"/>
+  <circle cx="630" cy="94" r="0.8" fill="#fff"/>
+  <!-- left trees -->
+<g id="trees"><!-- tree 1 -->
+<polygon points="52,371 86,-42 123,371" fill-opacity=".93"/>
+</g>  <!-- right mountain silhouette --><polygon points="300 -45 497 322 650 361"    fill="#141b2a"/></svg>

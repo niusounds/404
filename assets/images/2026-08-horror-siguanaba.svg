@@ -1,0 +1,118 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="moonGlow" cx="76%" cy="19%" r="35%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#e8f4ff"/>
+      <stop offset="70%" stop-color="#4a3020" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hairShine" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#c8d8e0"/>
+      <stop offset="100%" stop-color="#6b7b8a"/>
+    </linearGradient>
+    <filter id="boneGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky gradient -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  <ellipse cx="610" cy="85" rx="280" ry="200" fill="url(#moonGlow)" opacity="0.9"/>
+
+  <!-- Road vanishing perspective -->
+  <path d="M370,450 L370,280 Q400,260 410,255 L430,255 Q480,260 500,280 L510,450 Z" fill="#1a120d" opacity="0"/>
+  <path d="M360,450 C470,410 200,370 400,395 S780,450 440,450 Z" fill="#1a120ddd"/>
+  <path d="M390,320 Q415,310 430,315" stroke="#5a4520" stroke-width="0.7" opacity="0.3" fill="none"/>
+
+  <!-- Moon -->
+  <circle cx="615" cy="90" r="28" fill="#f0ead6" opacity="0.95"/>
+  <circle cx="623" cy="84" r="22" fill="#e8f4ff" opacity="0.15"/>
+
+  <!-- Ground mist -->
+  <rect y="370" width="800" height="80" fill="#0a0808" opacity="0.9"/>
+
+  <!-- Female figure from the back - white dress/robe shape -->
+  <ellipse cx="420" cy="365" rx="18" ry="25" fill="#f5f0e1" opacity="0.12"/>
+  <path d="M403,370 L403,440 Q420,445 437,440 L437,370 Z" fill="#ffffff" opacity="0.95"/>
+
+  <!-- Hair cascading down - the key horror element -->
+  <path d="M380,325 C360,310 320,290 340,270 C350,260 380,268 390,278" 
+        stroke="url(#hairShine)" stroke-width="1.3" fill="none" opacity="0.85"/>
+  <path d="M435,325 C455,310 495,290 475,270 C465,260 435,268 425,278" 
+        stroke="url(#hairShine)" stroke-width="1.3" fill="none" opacity="0.85"/>
+  
+  <!-- Cascade left side of hair -->
+  <path d="M402,330 Q408,360 398,390" stroke="#ffffff" stroke-width="1.1" fill="none" opacity="0.7"/>
+  <path d="M408,335 Q416,365 412,395" stroke="#c8d8e0" stroke-width="0.9" fill="none" opacity="0.6"/>
+  <path d="M414,340 Q422,370 418,400" stroke="#a8b8c0" stroke-width="0.8" fill="none" opacity="0.55"/>
+  
+  <!-- Cascade right side of hair -->
+  <path d="M438,330 Q432,360 442,390" stroke="#ffffff" stroke-width="1.1" fill="none" opacity="0.7"/>
+  <path d="M434,335 Q428,365 430,395" stroke="#c8d8e0" stroke-width="0.9" fill="none" opacity="0.6"/>
+  <path d="M426,340 Q418,370 420,400" stroke="#a8b8c0" stroke-width="0.8" fill="none" opacity="0.55"/>
+
+  <!-- Hair strands extending toward viewer -->
+  <path d="M410,348 Q430,360 440,355" stroke="#ffffff" stroke-width="0.7" fill="none" opacity="0.45"/>
+  <path d="M420,352 Q445,362 455,368" stroke="#e0e8f0" stroke-width="0.6" fill="none" opacity="0.35"/>
+
+  <!-- SKULL FACE visible among the hair strands - center of horror -->
+  <g filter="url(#boneGlow)">
+    <!-- Cranium outline (partially obscured by hair) -->
+    <path d="M402,288 A18,20 0 0,1 438,288" stroke="#e8dab5" stroke-width="1.4" fill="none"/>
+    
+    <!-- Cranium top curve (hair-revealed) -->
+    <circle cx="420" cy="279" r="20" fill="#f5ecd1" opacity="0.85"/>
+    
+    <!-- Eyes - dark hollow sockets -->
+    <ellipse cx="406" cy="283" rx="7" ry="6" fill="#0a0808"/>
+    <ellipse cx="434" cy="283" rx="7" ry="6" fill="#0a0808"/>
+    
+    <!-- Eye inner red glow -->
+    <circle cx="406" cy="283" r="2.5" fill="#d01a1a" opacity="0.9"/>
+    <circle cx="434" cy="283" r="2.5" fill="#d01a1a" opacity="0.9"/>
+    
+    <!-- Nose bridge (skull shape) -->
+    <path d="M417,290 L420,296 L423,290" stroke="#c8b895" stroke-width="1.2" fill="none"/>
+    
+    <!-- Jaw line and nasal cavity -->
+    <path d="M404,294 Q420,287 436,294" stroke="#e8dab5" stroke-width="0.8" fill="none"/>
+    
+    <!-- Teeth row visible - slightly open mouth area -->
+    <g opacity="0.9">
+      <rect x="410" y="300" width="3" height="6" rx="0.5" fill="#fffaf0"/>
+      <rect x="416" y="301" width="2.5" height="7" rx="0.5" fill="#fffaf0"/>
+      <rect x="422" y="301" width="2.5" height="7" rx="0.5" fill="#fffaf0"/>
+      <rect x="428" y="300" width="3" height="6" rx="0.5" fill="#fffaf0"/>
+    </g>
+    
+    <!-- Nasal cavity dark gap -->
+    <path d="M416,297 Q418,301 422,297" stroke="#1a120d" stroke-width="1.5" fill="#0a0808"/>
+  </g>
+
+  <!-- Hair covering left portion of skull -->
+  <path d="M396,272 Q400,265 410,270" 
+        stroke="#ffffff" stroke-width="1.8" fill="none" opacity="0.9"/>
+  <path d="M398,280 Q401,274 412,276" 
+        stroke="#e0e8f0" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+  <!-- Small bone fragments falling -->
+  <circle cx="390" cy="350" r="2" fill="#e8dab5" opacity="0.35"/>
+  <circle cx="445" cy="365" r="1.5" fill="#e8dab5" opacity="0.25"/>
+
+  <!-- Gothic frame border -->
+  <rect x="12" y="12" width="776" height="426" rx="8" ry="8" 
+        stroke="#3d0a0a" stroke-width="3" fill="none"/>
+  <rect x="20" y="20" width="760" height="410" rx="5" ry="5" 
+        stroke="#5b1a1a" stroke-width="1.2" fill="none" opacity="0.6"/>
+  
+  <!-- Corner ornaments -->
+  <path d="M30,20 L30,40 M20,20 L40,20" stroke="#7d2a2a" stroke-width="1.5" fill="none"/>
+  <path d="M770,20 L770,40 M760,20 L780,20" stroke="#7d2a2a" stroke-width="1.5" fill="none"/>
+  <path d="M30,430 L30,410 M20,430 L40,430" stroke="#7d2a2a" stroke-width="1.5" fill="none"/>
+  <path d="M770,430 L770,410 M760,430 L780,430" stroke="#7d2a2a" stroke-width="1.5" fill="none"/>
+
+  <!-- Small title at bottom -->
+  <text x="400" y="435" text-anchor="middle" fill="#6b1a1a" font-family="serif" 
+        font-size="13" letter-spacing="2" opacity="0.7">LA SIGUANABA</text>
+</svg>

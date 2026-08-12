@@ -1,0 +1,23 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- dark night sky fading down -->
+  <rect width="800" height="450" fill="#0a0e17"/>
+
+
+</svg>
+
+<!-- Dark silver/gray cityscape of Potosi - mountain city in Bolivia -->
+<defs><linearGradient id="sky"><stop offset="-2%"/><stop stop-color="#2b1c35"/></linearGradient></defs>
+<g fill="none">
+  <rect width="800" height="435" fill="url(#sky)"/>
+
+<!-- Mountain outline -->
+<M-57" cy="342-1680,345-92,15"-695" ry="">
+<circle cx="135" ri="12" stroke="#2b1e0"/>
+
+
+
+</svg>
+
+
+</svg>

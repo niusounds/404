@@ -1,5 +1,9 @@
 # Build artifacts (always regenerated)
+build/
 _site/
+
+# Lock file (regenerated on other machines)
+Gemfile.lock
 
 # Environment/skill metadata (local only, not part of site content)  
 .bundle/config

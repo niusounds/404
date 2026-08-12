@@ -1,0 +1,83 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient: deep dark green-to-black -->
+  <defs>
+    <radialGradient id="fog" cx="50%" cy="60%">
+      <stop offset="0%" style="stop-color:#1a1208;stop-opacity:1"/>
+      <stop offset="70%" style="stop-color:#0a0808;stop-opacity:1"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="#0a0c06"/>
+  
+  <!-- Fog/forest mist -->
+  <ellipse cx="300" cy="200" rx="180" ry="40" opacity="0.07">
+    <animate attributeName="cy" values="200;220;195;200" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="600" cy="180" rx="140" ry="30" opacity="0.05">
+    <animate attributeName="cy" values="180;200;175;180" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Trees - jagged silhouettes -->
+  <polygon points="60,450 80,200 90,350 100,150 115,0 130,180 140,300 160,450" fill="#0d150a"/>
+  <polygon points="620,450 640,180 650,320 670,100 690,0 710,160 720,340 750,450" fill="#0d150a"/>
+  
+  <!-- Tree branches -->
+  <path d="M80,250 Q150,200 190,180 L195,200 Q150,230 85,270 Z" fill="#141e0f"/>
+  <path d="M90,150 Q170,110 200,90 L205,110 Q170,140 95,170 Z" fill="#141e0f"/>
+  
+  <!-- Ghost figure - silhouette of a woman in white dress -->
+  <g transform="translate(360, 80)">
+    <!-- Head (slightly larger than normal = death sign) -->
+    <ellipse cx="90" cy="75" rx="28" ry="34" fill="#c8c8c8" opacity="0.85"/>
+    <!-- Long flowing hair - wild and black -->
+    <path d="M 62,90 Q 20,120 10,180 Q 30,170 70,140 Z" fill="#0a0a0a"/>
+    <path d="M 65,85 Q 15,130 5,200 Q 25,180 68,155 Z" fill="#0f0f0f"/>
+    <path d="M 115,90 Q 160,120 170,180 Q 145,170 110,140 Z" fill="#0a0a0a"/>
+    <path d="M 118,85 Q 170,130 180,200 Q 155,180 112,155 Z" fill="#0f0f0f"/>
+    
+    <!-- Dress (white funeral dress flowing) -->
+    <path d="M90,110 L60,400 Q70,390 90,380 Q110,420 115,395 Z" fill="#e0ddd5" opacity="0.7"/>
+    <path d="M85,115 L50,250 Q65,380 90,380 Z" fill="#d4d0c8" opacity="0.5"/>
+    
+    <!-- Long needle-like finger extended toward viewer -->
+    <line x1="70" y1="200" x2="30" y2="360" stroke="#bfbf8f" stroke-width="2.5" opacity="0.9"/>
+    <line x1="110" y1="220" x2="140" y2="270" stroke="#fff" stroke-width="3" opacity="0.6">
+      <animate attributeName="x2" values="140;150;135;140" dur="3s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Glowing eyes (empty sockets with blood-red glow) -->
+    <circle cx="78" cy="72" r="6">
+      <animate attributeName="fill-opacity" values="1;0.5;0.9;1" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="78" cy="72" r="3" fill="#ff0022"/>
+    <circle cx="104" cy="72" r="6">
+      <animate attributeName="fill-opacity" values="1;0.5;0.9;1" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="104" cy="72" r="3" fill="#ff0022"/>
+
+    <!-- Nose bridge -->
+    <line x1="85" y1="95" x2="90" y2="78" stroke="#a0a0a0" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- Frangipani (plumeria) flowers scattered as offerings -->
+  <circle cx="200" cy="380" r="8" fill="#fff" opacity="0.4"/>
+  <circle cx="215" cy="390" r="7" fill="#ffe599" opacity="0.3"/>
+  <circle cx="650" cy="350" r="9" fill="#f8f5eb" opacity="0.35"/>
+  <circle cx="640" cy="340" r="6" fill="#ffe0d0" opacity="0.25"/>
+
+  <!-- Ground mist / blood drips -->
+  <rect x="0" y="430" width="800" height="20" fill="#1a0008" opacity="0.6"/>
+
+  <!-- Gothic border -->
+  <rect x="15" y="15" width="770" height="420" rx="6" ry="6" fill="none" stroke="#2d1a10" stroke-width="3"/>
+  <rect x="20" y="20" width="760" height="410" rx="4" ry="4" fill="none" stroke="#3d0816" stroke-width="1.5" opacity="0.7">
+    <animate attributeName="stroke-opacity" values="0.7;0.2;0.7" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Title text in Japanese -->
+  <text x="400" y="60" text-anchor="middle" fill="#a83838" font-family="'Georgia', 'serif'" font-size="28">ポニアナク</text>
+  <text x="400" y="95" text-anchor="middle" fill="#4a2a18" font-family="'Georgia', 'serif'" font-size="16">インドネシアの女幽霊伝説</text>
+
+  <!-- Vignette effect with circles -->
+  <rect x="0" y="0" width="40" height="450" fill="#080404" opacity="0.3"/>
+  <rect x="760" y="0" width="40" height="450" fill="#080404" opacity="0.3"/>
+</svg>
