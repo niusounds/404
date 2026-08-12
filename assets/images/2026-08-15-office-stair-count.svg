@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Subtle vignette -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#0a0808" stop-opacity="0.9"/>
+  </radialGradient>
+  <rect width="800" height="450" fill="url(#vignette)"/>
+  
+  <!-- Staircase perspective - view from below looking up -->
+  <!-- Left wall -->
+  <polygon points="120,450 200,50 200,0 120,0" fill="#0d0b0b" stroke="none"/>
+  <!-- Right wall -->
+  <polygon points="680,450 600,50 600,0 680,0" fill="#0d0b0b" stroke="none"/>
+  
+  <!-- Staircase treads - 12 normal steps + 1 eerie 13th step -->
+  <!-- Each step recedes upward, getting narrower -->
+  <defs>
+    <linearGradient id="stepGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1515"/>
+      <stop offset="100%" stop-color="#0f0c0c"/>
+    </linearGradient>
+    <linearGradient id="stepHighlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a2020" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Steps 1-12 (normal) - viewed from bottom, going up -->
+  <!-- Step 1 -->
+  <polygon points="140,400 660,400 620,370 180,370" fill="url(#stepGrad)" stroke="#1a1515" stroke-width="0.5"/>
+  <polygon points="180,370 620,370 615,368 185,368" fill="#1a1515" opacity="0.5"/>
+  
+  <!-- Step 2 -->
+  <polygon points="170,355 630,355 595,325 205,325" fill="url(#stepGrad)" stroke="#1a1515" stroke-width="0.5"/>
+  <polygon points="205,325 595,325 590,323 210,323" fill="#1a1515" opacity="0.5"/>
+  
+  <!-- Step 3 -->
+  <polygon points="200,310 600,310 570,280 230,280" fill="url(#stepGrad)" stroke="#1a1515" stroke-width="0.5"/>
+  <polygon points="230,280 570,280 565,278 235,278" fill="#1a1515" opacity="0.5"/>
+  
+  <!-- Step 4 -->
+  <polygon points="230,265 570,265 545,235 255,235" fill="url(#stepGrad)" stroke="#1a1515" stroke-width="0.5"/>
+  <polygon points="255,235 545,235 540,233 260,233" fill="#1a1515" opacity="0.5"/>
+  
+  <!-- Step 5 -->
+  <polygon points="255,220 545,220 520,190 280,190" fill="url(#stepGrad)" stroke="#1a1515" stroke-width="0.5"/>
+  <polygon points="280,190 520,190 515,188 285,188" fill="#1a1515" opacity="0.5"/>
+  
+  <!-- Step 6 (5th floor landing area) -->
+  <polygon points="280,175 520,175 500,145 300,145" fill="url(#stepGrad)" stroke="#1a1515" stroke-width="0.5"/>
+  <polygon points="300,145 500,145 495,143 305,143" fill="#1a1515" opacity="0.5"/>
+  
+  <!-- Step 7 -->
+  <polygon points="300,130 500,130 480,100 320,100" fill="url(#stepGrad)" stroke="#1a1515" stroke-width="0.5"/>
+  <polygon points="320,100 480,100 475,98 325,98" fill="#1a1515" opacity="0.5"/>
+  
+  <!-- Step 8 -->
+  <polygon points="320,85 480,85 460,55 340,55" fill="url(#stepGrad)" stroke="#1a1515" stroke-width="0.5"/>
+  
+  <!-- Step 9 -->
+  <polygon points="340,40 460,40 445,20 355,20" fill="url(#stepGrad)" stroke="#1a1515" stroke-width="0.5"/>
+  
+  <!-- Step 10 -->
+  <polygon points="355,10 445,10 435,0 365,0" fill="url(#stepGrad)" stroke="#1a1515" stroke-width="0.5"/>
+  
+  <!-- THE 13TH STEP - the eerie extra step - offset slightly, more prominent -->
+  <!-- This is the anomalous step -->
+  <polygon points="310,160 490,160 475,135 325,135" fill="#1f1515" stroke="#3a2020" stroke-width="1" opacity="0.9"/>
+  <polygon points="325,135 475,135 470,133 330,133" fill="#2a1a1a" opacity="0.7"/>
+  <!-- Subtle glow around the extra step -->
+  <ellipse cx="400" cy="148" rx="90" ry="15" fill="#3a1a1a" opacity="0.15"/>
+  
+  <!-- Handrails -->
+  <!-- Left handrail -->
+  <polyline points="130,420 170,360 200,300 230,240 255,180 280,120 300,60 320,10" 
+            fill="none" stroke="#2a2525" stroke-width="3" stroke-linecap="round"/>
+  <polyline points="132,420 172,360 202,300 232,240 257,180 282,120 302,60 322,10" 
+            fill="none" stroke="#3a3030" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  
+  <!-- Right handrail -->
+  <polyline points="670,420 630,360 600,300 570,240 545,180 520,120 500,60 480,10" 
+            fill="none" stroke="#2a2525" stroke-width="3" stroke-linecap="round"/>
+  <polyline points="668,420 628,360 598,300 568,240 543,180 518,120 498,60 478,10" 
+            fill="none" stroke="#3a3030" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  
+  <!-- Floor at top - 6th floor -->
+  <rect x="340" y="0" width="120" height="15" fill="#1a1515" rx="2"/>
+  <rect x="350" y="0" width="100" height="3" fill="#2a2020" opacity="0.5"/>
+  
+  <!-- Dim emergency light glow at top -->
+  <circle cx="400" cy="8" r="30" fill="#ff6600" opacity="0.03"/>
+  <circle cx="400" cy="8" r="15" fill="#ff8800" opacity="0.05"/>
+  
+  <!-- Subtle atmospheric dust particles -->
+  <circle cx="350" cy="200" r="1" fill="#4a3a3a" opacity="0.3"/>
+  <circle cx="450" cy="250" r="0.8" fill="#4a3a3a" opacity="0.25"/>
+  <circle cx="380" cy="300" r="1.2" fill="#4a3a3a" opacity="0.2"/>
+  <circle cx="420" cy="150" r="0.6" fill="#4a3a3a" opacity="0.35"/>
+  <circle cx="370" cy="350" r="0.9" fill="#4a3a3a" opacity="0.15"/>
+  
+  <!-- The eerie extra step - subtle shadow beneath -->
+  <ellipse cx="400" cy="162" rx="85" ry="8" fill="#0a0808" opacity="0.6"/>
+  
+  <!-- Minimal text hint - barely visible -->
+  <!-- None. The image speaks for itself. -->
+</svg>
