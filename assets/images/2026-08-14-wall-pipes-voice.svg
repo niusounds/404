@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="light" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1510"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="doorGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1412"/>
+      <stop offset="50%" stop-color="#2a2018"/>
+      <stop offset="100%" stop-color="#1a1412"/>
+    </linearGradient>
+    <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12100e"/>
+      <stop offset="100%" stop-color="#0e0c0a"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e0c0a"/>
+      <stop offset="100%" stop-color="#080706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#light)" opacity="0.6"/>
+
+  <!-- Corridor perspective - back wall -->
+  <rect x="280" y="60" width="240" height="280" fill="#0c0a08" stroke="#1a1510" stroke-width="0.5"/>
+
+  <!-- Left wall -->
+  <polygon points="0,0 280,60 280,340 0,450" fill="#0d0b09"/>
+  <!-- Right wall -->
+  <polygon points="800,0 520,60 520,340 800,450" fill="#0b0908"/>
+
+  <!-- Floor -->
+  <polygon points="0,450 280,340 520,340 800,450" fill="url(#floorGrad)"/>
+
+  <!-- Ceiling -->
+  <polygon points="0,0 280,60 520,60 800,0" fill="#0c0a08"/>
+
+  <!-- Floor tiles (perspective lines) -->
+  <line x1="60" y1="420" x2="320" y2="340" stroke="#151210" stroke-width="0.5"/>
+  <line x1="140" y1="435" x2="360" y2="340" stroke="#151210" stroke-width="0.5"/>
+  <line x1="640" y1="340" x2="440" y2="435" stroke="#151210" stroke-width="0.5"/>
+  <line x1="740" y1="420" x2="480" y2="340" stroke="#151210" stroke-width="0.5"/>
+
+  <!-- Back wall tiles -->
+  <rect x="300" y="80" width="55" height="70" fill="none" stroke="#151210" stroke-width="0.5"/>
+  <rect x="360" y="80" width="55" height="70" fill="none" stroke="#151210" stroke-width="0.5"/>
+  <rect x="420" y="80" width="55" height="70" fill="none" stroke="#151210" stroke-width="0.5"/>
+  <rect x="300" y="155" width="55" height="70" fill="none" stroke="#151210" stroke-width="0.5"/>
+  <rect x="360" y="155" width="55" height="70" fill="none" stroke="#151210" stroke-width="0.5"/>
+  <rect x="420" y="155" width="55" height="70" fill="none" stroke="#151210" stroke-width="0.5"/>
+  <rect x="300" y="230" width="55" height="70" fill="none" stroke="#151210" stroke-width="0.5"/>
+  <rect x="360" y="230" width="55" height="70" fill="none" stroke="#151210" stroke-width="0.5"/>
+  <rect x="420" y="230" width="55" height="70" fill="none" stroke="#151210" stroke-width="0.5"/>
+
+  <!-- Door 302 (center of back wall) -->
+  <rect x="350" y="100" width="100" height="240" fill="url(#doorGrad)" stroke="#2a2018" stroke-width="1"/>
+  <!-- Door panel details -->
+  <rect x="358" y="110" width="84" height="80" fill="#1e1814" stroke="#251e16" stroke-width="0.5"/>
+  <rect x="358" y="200" width="84" height="125" fill="#1e1814" stroke="#251e16" stroke-width="0.5"/>
+  <!-- Door number -->
+  <text x="400" y="155" text-anchor="middle" fill="#3a3025" font-size="18" font-family="sans-serif" font-weight="bold">302</text>
+  <!-- Door handle -->
+  <circle cx="438" cy="230" r="4" fill="#3a3025"/>
+  <circle cx="438" cy="230" r="2" fill="#2a2018"/>
+
+  <!-- Door crack - light leaking from behind -->
+  <line x1="450" y1="100" x2="450" y2="340" stroke="#2a2015" stroke-width="1.5" opacity="0.6"/>
+  <!-- Faint glow from the crack -->
+  <line x1="450" y1="100" x2="450" y2="340" stroke="#3a2a18" stroke-width="3" filter="url(#softGlow)" opacity="0.3"/>
+
+  <!-- Ghostly silhouette behind the door (barely visible through the crack) -->
+  <ellipse cx="452" cy="220" rx="8" ry="35" fill="#1a1210" opacity="0.4" filter="url(#softGlow)"/>
+  <!-- Faint face shape -->
+  <circle cx="452" cy="195" r="10" fill="#1a1210" opacity="0.3" filter="url(#softGlow)"/>
+  <!-- Two faint eyes -->
+  <circle cx="448" cy="193" r="1.5" fill="#2a1a10" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="456" cy="193" r="1.5" fill="#2a1a10" opacity="0.5" filter="url(#glow)"/>
+
+  <!-- Wall on left side - door 301 hint -->
+  <rect x="60" y="100" width="120" height="200" fill="#0f0d0b" stroke="#1a1510" stroke-width="0.5"/>
+  <text x="120" y="210" text-anchor="middle" fill="#1a1510" font-size="14" font-family="sans-serif">301</text>
+
+  <!-- Overhead corridor light -->
+  <rect x="370" y="55" width="60" height="8" fill="#1a1510" rx="2"/>
+  <ellipse cx="400" cy="65" rx="30" ry="5" fill="#2a2015" opacity="0.5" filter="url(#softGlow)"/>
+
+  <!-- Light cone from ceiling -->
+  <polygon points="385,63 415,63 460,200 340,200" fill="#1a1510" opacity="0.08"/>
+
+  <!-- Shadows on floor -->
+  <ellipse cx="400" cy="370" rx="80" ry="20" fill="#080706" opacity="0.5"/>
+
+  <!-- Subtle atmospheric particles/dust -->
+  <circle cx="320" cy="150" r="0.8" fill="#2a2015" opacity="0.3"/>
+  <circle cx="480" cy="180" r="0.6" fill="#2a2015" opacity="0.25"/>
+  <circle cx="350" cy="280" r="0.7" fill="#2a2015" opacity="0.2"/>
+  <circle cx="450" cy="300" r="0.9" fill="#2a2015" opacity="0.15"/>
+  <circle cx="380" cy="350" r="0.5" fill="#2a2015" opacity="0.2"/>
+  <circle cx="430" cy="120" r="0.6" fill="#2a2015" opacity="0.2"/>
+
+  <!-- Very subtle breathing lines near door crack (the "ヒュー" sound) -->
+  <path d="M 455 180 Q 460 175 458 170" stroke="#1a1210" stroke-width="0.5" fill="none" opacity="0.3"/>
+  <path d="M 453 200 Q 459 195 456 188" stroke="#1a1210" stroke-width="0.5" fill="none" opacity="0.25"/>
+  <path d="M 454 220 Q 461 215 457 208" stroke="#1a1210" stroke-width="0.5" fill="none" opacity="0.2"/>
+
+  <!-- Knock marks on the door (the "ドク ドク ドク") -->
+  <circle cx="380" cy="260" r="3" fill="none" stroke="#2a2018" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="380" cy="260" r="1.5" fill="#1a1210" opacity="0.2"/>
+  <circle cx="420" cy="280" r="3" fill="none" stroke="#2a2018" stroke-width="0.5" opacity="0.25"/>
+  <circle cx="420" cy="280" r="1.5" fill="#1a1210" opacity="0.15"/>
+
+  <!-- Bottom dark overlay for depth -->
+  <rect x="0" y="380" width="800" height="70" fill="#080706" opacity="0.8"/>
+
+  <!-- Very subtle red tint at the door crack (horror element) -->
+  <rect x="448" y="100" width="4" height="240" fill="#1a0808" opacity="0.15" filter="url(#softGlow)"/>
+</svg>
