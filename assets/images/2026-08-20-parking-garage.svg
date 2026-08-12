@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff3333" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff3333" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="floorGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#cc2222" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#cc2222" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a1515" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur6">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Dark corridor perspective - walls -->
+  <polygon points="250,50 550,50 600,200 550,220 250,220 200,200" fill="#0d0a0a" stroke="none"/>
+  <polygon points="200,200 250,220 250,450 200,450" fill="#080606"/>
+  <polygon points="600,200 550,220 550,450 600,450" fill="#080606"/>
+
+  <!-- Floor with water reflection -->
+  <polygon points="250,220 550,220 650,350 150,350" fill="#0c0a0a" stroke="none"/>
+  <polygon points="150,350 650,350 600,450 200,450" fill="url(#waterGrad)"/>
+
+  <!-- Water surface lines -->
+  <line x1="180" y1="370" x2="620" y2="370" stroke="#1a1515" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="390" x2="600" y2="390" stroke="#1a1515" stroke-width="0.5" opacity="0.2"/>
+  <line x1="220" y1="410" x2="580" y2="410" stroke="#1a1515" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Ceiling light fixtures (unlit) -->
+  <rect x="340" y="55" width="120" height="8" rx="2" fill="#1a1515"/>
+  <rect x="370" y="100" width="60" height="6" rx="2" fill="#151212"/>
+
+  <!-- Floor indicator panel on wall -->
+  <rect x="340" y="120" width="120" height="80" rx="4" fill="#110e0e" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Floor indicators (unlit) -->
+  <rect x="355" y="130" width="30" height="16" rx="2" fill="#1a1515"/>
+  <text x="370" y="142" text-anchor="middle" fill="#2a2020" font-family="monospace" font-size="11">B1</text>
+
+  <rect x="355" y="152" width="30" height="16" rx="2" fill="#1a1515"/>
+  <text x="370" y="164" text-anchor="middle" fill="#2a2020" font-family="monospace" font-size="11">B2</text>
+
+  <!-- B3 - GLOWING RED (the horror element) -->
+  <rect x="355" y="174" width="30" height="16" rx="2" fill="#cc2222" filter="url(#blur1)"/>
+  <rect x="355" y="174" width="30" height="16" rx="2" fill="#ff2222"/>
+  <text x="370" y="186" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="11" font-weight="bold">B3</text>
+
+  <!-- Red glow around B3 -->
+  <ellipse cx="370" cy="182" rx="45" ry="25" fill="url(#floorGlow)"/>
+
+  <!-- Silhouette of small feet in water at bottom of corridor -->
+  <!-- Left foot -->
+  <path d="M340,340 Q335,355 330,365 Q328,370 332,372 Q336,374 340,370 Q345,365 348,355 Q350,348 345,340 Z" fill="#0a0808" opacity="0.9"/>
+  <!-- Right foot -->
+  <path d="M360,340 Q355,355 350,365 Q348,370 352,372 Q356,374 360,370 Q365,365 368,355 Q370,348 365,340 Z" fill="#0a0808" opacity="0.9"/>
+
+  <!-- Water ripples around feet -->
+  <ellipse cx="335" cy="370" rx="15" ry="3" fill="none" stroke="#1a1515" stroke-width="0.5" opacity="0.3"/>
+  <ellipse cx="358" cy="370" rx="15" ry="3" fill="none" stroke="#1a1515" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Distant faint light at end of corridor (unsettling) -->
+  <ellipse cx="400" cy="210" rx="30" ry="8" fill="#1a1510" opacity="0.5"/>
+  <ellipse cx="400" cy="210" rx="15" ry="4" fill="#2a2015" opacity="0.3"/>
+
+  <!-- Subtle vignette overlay -->
+  <rect width="800" height="450" fill="url(#glow)" opacity="0.05"/>
+
+  <!-- Tiny floating dust particles for atmosphere -->
+  <circle cx="280" cy="180" r="0.8" fill="#1a1515" opacity="0.4"/>
+  <circle cx="520" cy="160" r="0.6" fill="#1a1515" opacity="0.3"/>
+  <circle cx="450" cy="200" r="1" fill="#1a1515" opacity="0.2"/>
+  <circle cx="310" cy="250" r="0.5" fill="#1a1515" opacity="0.3"/>
+  <circle cx="490" cy="240" r="0.7" fill="#1a1515" opacity="0.25"/>
+  <circle cx="380" cy="280" r="0.8" fill="#1a1515" opacity="0.2"/>
+</svg>
