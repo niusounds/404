@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background - dark station platform -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Platform floor -->
+  <rect x="0" y="280" width="800" height="170" fill="#111010"/>
+  
+  <!-- Platform edge (yellow line) -->
+  <rect x="0" y="278" width="800" height="3" fill="#3a3520" opacity="0.6"/>
+  
+  <!-- Platform tiles -->
+  <line x1="100" y1="280" x2="100" y2="450" stroke="#181616" stroke-width="1"/>
+  <line x1="200" y1="280" x2="200" y2="450" stroke="#181616" stroke-width="1"/>
+  <line x1="300" y1="280" x2="300" y2="450" stroke="#181616" stroke-width="1"/>
+  <line x1="400" y1="280" x2="400" y2="450" stroke="#181616" stroke-width="1"/>
+  <line x1="500" y1="280" x2="500" y2="450" stroke="#181616" stroke-width="1"/>
+  <line x1="600" y1="280" x2="600" y2="450" stroke="#181616" stroke-width="1"/>
+  <line x1="700" y1="280" x2="700" y2="450" stroke="#181616" stroke-width="1"/>
+  
+  <!-- Track area -->
+  <rect x="0" y="200" width="800" height="80" fill="#080707"/>
+  
+  <!-- Train tracks -->
+  <line x1="0" y1="230" x2="800" y2="230" stroke="#1a1818" stroke-width="3"/>
+  <line x1="0" y1="245" x2="800" y2="245" stroke="#1a1818" stroke-width="3"/>
+  
+  <!-- Track ties (cross beams) -->
+  <line x1="40" y1="228" x2="40" y2="248" stroke="#151313" stroke-width="2"/>
+  <line x1="120" y1="228" x2="120" y2="248" stroke="#151313" stroke-width="2"/>
+  <line x1="200" y1="228" x2="200" y2="248" stroke="#151313" stroke-width="2"/>
+  <line x1="280" y1="228" x2="280" y2="248" stroke="#151313" stroke-width="2"/>
+  <line x1="360" y1="228" x2="360" y2="248" stroke="#151313" stroke-width="2"/>
+  <line x1="440" y1="228" x2="440" y2="248" stroke="#151313" stroke-width="2"/>
+  <line x1="520" y1="228" x2="520" y2="248" stroke="#151313" stroke-width="2"/>
+  <line x1="600" y1="228" x2="600" y2="248" stroke="#151313" stroke-width="2"/>
+  <line x1="680" y1="228" x2="680" y2="248" stroke="#151313" stroke-width="2"/>
+  <line x1="760" y1="228" x2="760" y2="248" stroke="#151313" stroke-width="2"/>
+  
+  <!-- Station ceiling -->
+  <rect x="0" y="0" width="800" height="180" fill="#0d0b0b"/>
+  
+  <!-- Ceiling lights -->
+  <rect x="150" y="10" width="100" height="6" rx="3" fill="#2a2825" opacity="0.8"/>
+  <rect x="350" y="10" width="100" height="6" rx="3" fill="#2a2825" opacity="0.8"/>
+  <rect x="550" y="10" width="100" height="6" rx="3" fill="#2a2825" opacity="0.8"/>
+  
+  <!-- Light glow from ceiling -->
+  <ellipse cx="200" cy="16" rx="60" ry="40" fill="#1a1815" opacity="0.3"/>
+  <ellipse cx="400" cy="16" rx="60" ry="40" fill="#1a1815" opacity="0.3"/>
+  <ellipse cx="600" cy="16" rx="60" ry="40" fill="#1a1815" opacity="0.3"/>
+  
+  <!-- Light beams down -->
+  <polygon points="170,16 230,16 300,280 100,280" fill="#1a1815" opacity="0.06"/>
+  <polygon points="370,16 430,16 500,280 300,280" fill="#1a1815" opacity="0.06"/>
+  <polygon points="570,16 630,16 700,280 500,280" fill="#1a1815" opacity="0.06"/>
+  
+  <!-- Bench on platform -->
+  <rect x="340" y="250" width="120" height="8" rx="2" fill="#2a2525"/>
+  <rect x="350" y="258" width="4" height="22" fill="#252020"/>
+  <rect x="446" y="258" width="4" height="22" fill="#252020"/>
+  <rect x="345" y="245" width="110" height="5" rx="2" fill="#2a2525"/>
+  
+  <!-- Woman in black coat sitting on bench -->
+  <!-- Body silhouette - hunched slightly -->
+  <ellipse cx="400" cy="235" rx="22" ry="35" fill="#0a090a" opacity="0.95"/>
+  
+  <!-- Head -->
+  <ellipse cx="400" cy="195" rx="15" ry="18" fill="#0a090a" opacity="0.95"/>
+  
+  <!-- Long black hair flowing down -->
+  <path d="M 390 185 Q 385 210 388 240 Q 390 250 395 255" stroke="#0a090a" stroke-width="8" fill="none" opacity="0.9"/>
+  <path d="M 410 185 Q 415 210 412 240 Q 410 250 405 255" stroke="#0a090a" stroke-width="8" fill="none" opacity="0.9"/>
+  
+  <!-- Coat outline - flowing to knees -->
+  <path d="M 378 230 Q 370 260 368 280" stroke="#0a090a" stroke-width="10" fill="none" opacity="0.9"/>
+  <path d="M 422 230 Q 430 260 432 280" stroke="#0a090a" stroke-width="10" fill="none" opacity="0.9"/>
+  
+  <!-- Legs under coat -->
+  <line x1="390" y1="275" x2="388" y2="290" stroke="#0a090a" stroke-width="7" fill="none" opacity="0.8"/>
+  <line x1="410" y1="275" x2="412" y2="290" stroke="#0a090a" stroke-width="7" fill="none" opacity="0.8"/>
+  
+  <!-- Arms resting on legs -->
+  <path d="M 385 220 Q 375 240 378 265" stroke="#0a090a" stroke-width="6" fill="none" opacity="0.85"/>
+  <path d="M 415 220 Q 425 240 422 265" stroke="#0a090a" stroke-width="6" fill="none" opacity="0.85"/>
+  
+  <!-- Subtle shadow under bench -->
+  <ellipse cx="400" cy="290" rx="50" ry="8" fill="#0a090a" opacity="0.3"/>
+  
+  <!-- Empty bench on right side (slightly visible) -->
+  <rect x="540" y="250" width="100" height="8" rx="2" fill="#222020" opacity="0.5"/>
+  <rect x="545" y="258" width="3" height="22" fill="#1e1c1c" opacity="0.4"/>
+  <rect x="632" y="258" width="3" height="22" fill="#1e1c1c" opacity="0.4"/>
+  
+  <!-- Station pillar -->
+  <rect x="680" y="50" width="25" height="230" fill="#151313" opacity="0.7"/>
+  <rect x="675" y="45" width="35" height="8" rx="2" fill="#1a1818" opacity="0.6"/>
+  
+  <!-- Station sign (blurred, unreadable) -->
+  <rect x="685" y="55" width="15" height="20" rx="1" fill="#1a1818" opacity="0.5"/>
+  
+  <!-- Train arriving on tracks (faint, blurred motion) -->
+  <rect x="0" y="180" width="800" height="35" fill="#121010" opacity="0.4"/>
+  <rect x="0" y="185" width="800" height="5" fill="#1a1818" opacity="0.3"/>
+  <!-- Train windows (faint yellow glow) -->
+  <rect x="50" y="188" width="15" height="12" fill="#2a2520" opacity="0.2"/>
+  <rect x="80" y="188" width="15" height="12" fill="#2a2520" opacity="0.2"/>
+  <rect x="110" y="188" width="15" height="12" fill="#2a2520" opacity="0.2"/>
+  <rect x="650" y="188" width="15" height="12" fill="#2a2520" opacity="0.2"/>
+  <rect x="680" y="188" width="15" height="12" fill="#2a2520" opacity="0.2"/>
+  <rect x="710" y="188" width="15" height="12" fill="#2a2520" opacity="0.2"/>
+  
+  <!-- Train light glow -->
+  <ellipse cx="400" cy="185" rx="80" ry="15" fill="#2a2520" opacity="0.15"/>
+  
+  <!-- Vignette -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.7"/>
+  
+  <!-- Cold blue ambient light pooling around the woman -->
+  <ellipse cx="400" cy="275" rx="60" ry="15" fill="#0a1018" opacity="0.2"/>
+  
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="50%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
