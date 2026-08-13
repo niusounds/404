@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Subtle vignette gradient -->
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.8"/>
+    </radialGradient>
+    <linearGradient id="screenGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a1a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a1a0a" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur4">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+  
+  <!-- Floor line - subtle -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Door silhouette on the right side -->
+  <rect x="520" y="60" width="140" height="320" fill="#0d0a0a" stroke="#1a1515" stroke-width="1"/>
+  <rect x="525" y="65" width="130" height="310" fill="#080606"/>
+  
+  <!-- Door panel lines -->
+  <line x1="525" y1="180" x2="655" y2="180" stroke="#111010" stroke-width="1"/>
+  <line x1="525" y1="260" x2="655" y2="260" stroke="#111010" stroke-width="1"/>
+  
+  <!-- Door knob - subtle glow -->
+  <circle cx="630" cy="240" r="6" fill="#2a2520" stroke="#3a3530" stroke-width="0.5"/>
+  <circle cx="630" cy="240" r="3" fill="#3a3530"/>
+  
+  <!-- Faint handprint near knob - barely visible -->
+  <ellipse cx="610" cy="220" rx="12" ry="18" fill="#1a1510" opacity="0.3"/>
+  
+  <!-- Phone silhouette on left side -->
+  <rect x="120" y="140" width="100" height="190" rx="10" fill="#0d0a0a" stroke="#1a1a1a" stroke-width="1.5"/>
+  
+  <!-- Phone screen glow -->
+  <rect x="128" y="155" width="84" height="155" rx="4" fill="#0a1a0a" opacity="0.6"/>
+  
+  <!-- SMS notification on phone screen -->
+  <rect x="135" y="170" width="70" height="35" rx="3" fill="#1a2a1a" opacity="0.8"/>
+  <text x="142" y="185" fill="#3a5a3a" font-size="7" font-family="monospace">不在通知</text>
+  <text x="142" y="198" fill="#2a4a2a" font-size="6" font-family="monospace">23:00</text>
+  
+  <!-- Second SMS below -->
+  <rect x="135" y="215" width="70" height="35" rx="3" fill="#1a2a1a" opacity="0.5"/>
+  <text x="142" y="230" fill="#3a5a3a" font-size="7" font-family="monospace">お届け物</text>
+  <text x="142" y="243" fill="#2a4a2a" font-size="6" font-family="monospace">もうすぐ到着</text>
+  
+  <!-- Phone screen reflection/glow on floor -->
+  <ellipse cx="170" cy="385" rx="50" ry="8" fill="#0a1a0a" opacity="0.15" filter="url(#blur4)"/>
+  
+  <!-- Screen glow effect -->
+  <rect x="100" y="130" width="140" height="210" rx="15" fill="url(#screenGlow)"/>
+  
+  <!-- Time indicator "23:00" floating in dark -->
+  <text x="400" y="220" fill="#1a2a1a" font-size="72" font-family="monospace" opacity="0.15" text-anchor="middle">23:00</text>
+  
+  <!-- Faint shadow figure behind door - barely visible -->
+  <ellipse cx="590" cy="200" rx="25" ry="35" fill="#060404" opacity="0.4"/>
+  <ellipse cx="590" cy="170" rx="15" ry="18" fill="#060404" opacity="0.3"/>
+  
+  <!-- Two faint eyes in the darkness behind door -->
+  <circle cx="583" cy="165" r="2" fill="#1a1510" opacity="0.35"/>
+  <circle cx="597" cy="165" r="2" fill="#1a1510" opacity="0.35"/>
+  
+  <!-- Subtle chain on door -->
+  <line x1="540" y1="130" x2="560" y2="135" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="560" cy="135" r="3" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+  
+  <!-- Vignette overlay -->
+  <rect width="800" height="450" fill="url(#vignette)"/>
+  
+  <!-- Tiny detail: scratch marks near door knob -->
+  <line x1="640" y1="225" x2="645" y2="235" stroke="#151210" stroke-width="0.8"/>
+  <line x1="638" y1="230" x2="643" y2="240" stroke="#151210" stroke-width="0.8"/>
+  <line x1="636" y1="235" x2="641" y2="245" stroke="#151210" stroke-width="0.8"/>
+</svg>
