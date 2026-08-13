@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Street lights (dim, yellow) -->
+  <g opacity="0.3">
+    <ellipse cx="200" cy="380" rx="120" ry="40" fill="#1a1500"/>
+    <ellipse cx="600" cy="380" rx="120" ry="40" fill="#1a1500"/>
+  </g>
+  
+  <!-- Street light poles -->
+  <rect x="197" y="200" width="6" height="180" fill="#1a1a1a"/>
+  <rect x="597" y="200" width="6" height="180" fill="#1a1a1a"/>
+  
+  <!-- Street light glow -->
+  <circle cx="200" cy="195" r="15" fill="#2a2500" opacity="0.5"/>
+  <circle cx="200" cy="195" r="8" fill="#3a3000" opacity="0.4"/>
+  <circle cx="600" cy="195" r="15" fill="#2a2500" opacity="0.5"/>
+  <circle cx="600" cy="195" r="8" fill="#3a3000" opacity="0.4"/>
+  
+  <!-- Ground / asphalt -->
+  <rect x="0" y="350" width="800" height="100" fill="#0d0b0b"/>
+  
+  <!-- Parking lines -->
+  <line x1="100" y1="370" x2="100" y2="450" stroke="#1a1818" stroke-width="2" opacity="0.5"/>
+  <line x1="300" y1="370" x2="300" y2="450" stroke="#1a1818" stroke-width="2" opacity="0.5"/>
+  <line x1="500" y1="370" x2="500" y2="450" stroke="#1a1818" stroke-width="2" opacity="0.5"/>
+  <line x1="700" y1="370" x2="700" y2="450" stroke="#1a1818" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Car silhouette (from behind) -->
+  <g transform="translate(320, 280)">
+    <!-- Car body -->
+    <rect x="0" y="60" width="160" height="80" rx="10" fill="#111010"/>
+    <rect x="10" y="40" width="140" height="100" rx="12" fill="#0f0e0e" stroke="#1a1a1a" stroke-width="1"/>
+    
+    <!-- Rear window -->
+    <rect x="30" y="50" width="100" height="50" rx="5" fill="#080606"/>
+    
+    <!-- Rearview mirror (center of rear window) - the key element -->
+    <rect x="70" y="55" width="20" height="15" rx="3" fill="#151212" stroke="#2a2525" stroke-width="0.5"/>
+    <!-- Mirror glass reflection (subtle) -->
+    <rect x="72" y="57" width="16" height="11" rx="2" fill="#1a1818"/>
+    
+    <!-- Fog/condensation on mirror -->
+    <ellipse cx="80" cy="63" rx="8" ry="5" fill="#2a2525" opacity="0.6"/>
+    <ellipse cx="76" cy="61" rx="4" ry="3" fill="#353030" opacity="0.4"/>
+    <ellipse cx="84" cy="65" rx="5" ry="3" fill="#353030" opacity="0.3"/>
+    
+    <!-- Tail lights -->
+    <rect x="5" y="120" width="20" height="15" rx="3" fill="#2a0a0a" stroke="#3a1515" stroke-width="0.5"/>
+    <rect x="135" y="120" width="20" height="15" rx="3" fill="#2a0a0a" stroke="#3a1515" stroke-width="0.5"/>
+    
+    <!-- License plate area -->
+    <rect x="65" y="125" width="30" height="12" rx="1" fill="#1a1a1a"/>
+  </g>
+  
+  <!-- Footprints leading away from car -->
+  <g opacity="0.4">
+    <!-- Water droplet footprints -->
+    <ellipse cx="490" cy="365" rx="4" ry="3" fill="#1a1818"/>
+    <ellipse cx="510" cy="372" rx="4" ry="3" fill="#1a1818"/>
+    <ellipse cx="530" cy="379" rx="4" ry="3" fill="#1a1818"/>
+    <ellipse cx="550" cy="386" rx="4" ry="3" fill="#1a1818"/>
+    <ellipse cx="570" cy="393" rx="4" ry="3" fill="#1a1818"/>
+    <ellipse cx="590" cy="400" rx="4" ry="3" fill="#1a1818"/>
+    <ellipse cx="610" cy="407" rx="4" ry="3" fill="#1a1818"/>
+    <ellipse cx="630" cy="414" rx="4" ry="3" fill="#1a1818"/>
+    <ellipse cx="650" cy="421" rx="4" ry="3" fill="#1a1818"/>
+    <ellipse cx="670" cy="428" rx="4" ry="3" fill="#1a1818"/>
+    <ellipse cx="690" cy="435" rx="4" ry="3" fill="#1a1818"/>
+    <ellipse cx="710" cy="442" rx="4" ry="3" fill="#1a1818"/>
+  </g>
+  
+  <!-- Fence at the far end -->
+  <g opacity="0.3">
+    <line x1="720" y1="280" x2="720" y2="360" stroke="#2a2a2a" stroke-width="3"/>
+    <line x1="740" y1="280" x2="740" y2="360" stroke="#2a2a2a" stroke-width="3"/>
+    <line x1="760" y1="280" x2="760" y2="360" stroke="#2a2a2a" stroke-width="3"/>
+    <line x1="780" y1="280" x2="780" y2="360" stroke="#2a2a2a" stroke-width="3"/>
+    <line x1="710" y1="300" x2="790" y2="300" stroke="#2a2a2a" stroke-width="2"/>
+    <line x1="710" y1="340" x2="790" y2="340" stroke="#2a2a2a" stroke-width="2"/>
+  </g>
+  
+  <!-- Mist / atmosphere -->
+  <g opacity="0.08">
+    <ellipse cx="400" cy="340" rx="300" ry="30" fill="#3a3535"/>
+    <ellipse cx="300" cy="350" rx="200" ry="20" fill="#2a2828"/>
+  </g>
+  
+  <!-- Subtle dark vignette -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.3"/>
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="50%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+  </defs>
+</svg>
