@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </radialGradient>
+    <radialGradient id="horrorGlow" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#3a1a1a"/>
+      <stop offset="60%" stop-color="#1a0a0a"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Monitor frame -->
+  <rect x="100" y="30" width="600" height="390" rx="8" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+
+  <!-- 4x4 grid of monitor screens -->
+  <!-- Row 0 -->
+  <rect x="108" y="38" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="257" y="38" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="406" y="38" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="555" y="38" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <!-- Row 1 -->
+  <rect x="108" y="134" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="257" y="134" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="406" y="134" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="555" y="134" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <!-- Row 2 -->
+  <rect x="108" y="230" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="257" y="230" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="406" y="230" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="555" y="230" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <!-- Row 3 -->
+  <rect x="108" y="326" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="257" y="326" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="406" y="326" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+  <rect x="555" y="326" width="145" height="92" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+
+  <!-- Normal static noise on most screens -->
+  <g filter="url(#noise)" opacity="0.06">
+    <rect x="108" y="38" width="145" height="92"/>
+    <rect x="257" y="38" width="145" height="92"/>
+    <rect x="406" y="38" width="145" height="92"/>
+    <rect x="555" y="38" width="145" height="92"/>
+    <rect x="108" y="134" width="145" height="92"/>
+    <rect x="406" y="134" width="145" height="92"/>
+    <rect x="555" y="134" width="145" height="92"/>
+    <rect x="108" y="230" width="145" height="92"/>
+    <rect x="257" y="326" width="145" height="92"/>
+    <rect x="555" y="326" width="145" height="92"/>
+  </g>
+
+  <!-- ABNORMAL screen at position (2,1) = row1 col2 = x=406 y=134 -->
+  <rect x="406" y="134" width="145" height="92" fill="url(#horrorGlow)"/>
+
+  <!-- Silhouette figure in the abnormal screen -->
+  <g filter="url(#glow)" opacity="0.9">
+    <!-- Head -->
+    <ellipse cx="478" cy="162" rx="14" ry="17" fill="#2a1a1a"/>
+    <!-- Neck -->
+    <rect x="473" y="178" width="10" height="8" fill="#2a1a1a"/>
+    <!-- Body -->
+    <path d="M460,186 L460,210 Q460,215 465,215 L491,215 Q496,215 496,210 L496,186 Q496,182 491,182 L465,182 Q460,182 460,186Z" fill="#2a1a1a"/>
+    <!-- Arms slightly out -->
+    <rect x="448" y="188" width="12" height="6" rx="3" fill="#2a1a1a" transform="rotate(-15 454 191)"/>
+    <rect x="486" y="188" width="12" height="6" rx="3" fill="#2a1a1a" transform="rotate(15 492 191)"/>
+    <!-- Legs -->
+    <rect x="463" y="215" width="8" height="18" fill="#2a1a1a"/>
+    <rect x="476" y="215" width="8" height="18" fill="#2a1a1a"/>
+  </g>
+
+  <!-- Glowing eyes -->
+  <g filter="url(#glow)">
+    <ellipse cx="472" cy="159" rx="2.5" ry="1.8" fill="#ff3333" opacity="0.8"/>
+    <ellipse cx="484" cy="159" rx="2.5" ry="1.8" fill="#ff3333" opacity="0.8"/>
+  </g>
+
+  <!-- Slight red tint overlay on abnormal screen -->
+  <rect x="406" y="134" width="145" height="92" fill="#1a0505" opacity="0.3"/>
+
+  <!-- Scan lines effect on abnormal screen -->
+  <g opacity="0.15">
+    <line x1="406" y1="136" x2="551" y2="136" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="140" x2="551" y2="140" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="144" x2="551" y2="144" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="148" x2="551" y2="148" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="152" x2="551" y2="152" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="156" x2="551" y2="156" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="160" x2="551" y2="160" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="164" x2="551" y2="164" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="168" x2="551" y2="168" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="172" x2="551" y2="172" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="176" x2="551" y2="176" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="180" x2="551" y2="180" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="184" x2="551" y2="184" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="188" x2="551" y2="188" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="192" x2="551" y2="192" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="196" x2="551" y2="196" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="200" x2="551" y2="200" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="204" x2="551" y2="204" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="208" x2="551" y2="208" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="212" x2="551" y2="212" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="216" x2="551" y2="216" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="220" x2="551" y2="220" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="224" x2="551" y2="224" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="228" x2="551" y2="228" stroke="#333" stroke-width="0.5"/>
+    <line x1="406" y1="232" x2="551" y2="232" stroke="#333" stroke-width="0.5"/>
+  </g>
+
+  <!-- "REC" indicator on abnormal screen -->
+  <text x="414" y="150" font-family="monospace" font-size="9" fill="#ff2222" opacity="0.7">REC ●</text>
+  <text x="530" y="150" font-family="monospace" font-size="8" fill="#444" opacity="0.5">CAM-09</text>
+
+  <!-- Small red recording dot pulse -->
+  <circle cx="436" cy="146" r="3" fill="#ff2222" opacity="0.6"/>
+
+  <!-- Subtle ambient glow around abnormal screen -->
+  <rect x="404" y="132" width="149" height="96" fill="none" stroke="#2a0a0a" stroke-width="2" opacity="0.4" rx="2"/>
+
+  <!-- Dark vignette at edges -->
+  <rect width="800" height="450" fill="url(#screenGlow)" opacity="0.5"/>
+</svg>
