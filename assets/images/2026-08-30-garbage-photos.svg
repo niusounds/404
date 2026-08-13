@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Subtle ambient glow from above -->
+  <ellipse cx="400" cy="0" rx="500" ry="200" fill="#1a1210" opacity="0.3"/>
+  
+  <!-- Ground / concrete floor -->
+  <rect x="0" y="350" width="800" height="100" fill="#121010"/>
+  <line x1="0" y1="350" x2="800" y2="350" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Garbage shed structure -->
+  <!-- Back wall -->
+  <rect x="200" y="80" width="400" height="270" fill="#0e0c0c" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Roof -->
+  <polygon points="180,80 400,20 620,80" fill="#0d0b0b" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Shed opening (dark interior) -->
+  <rect x="280" y="120" width="240" height="230" fill="#050404"/>
+  
+  <!-- Left garbage bin -->
+  <rect x="300" y="240" width="55" height="110" rx="3" fill="#1a1a1a" stroke="#2a2520" stroke-width="1"/>
+  <rect x="305" y="245" width="45" height="8" fill="#252018"/>
+  <line x1="327" y1="253" x2="327" y2="348" stroke="#252018" stroke-width="0.5" opacity="0.5"/>
+  
+  <!-- Middle garbage bin -->
+  <rect x="370" y="235" width="60" height="115" rx="3" fill="#1e1c18" stroke="#2a2520" stroke-width="1"/>
+  <rect x="375" y="240" width="50" height="10" fill="#2a2520"/>
+  <line x1="400" y1="250" x2="400" y2="348" stroke="#2a2520" stroke-width="0.5" opacity="0.5"/>
+  
+  <!-- Right garbage bin -->
+  <rect x="440" y="245" width="55" height="105" rx="3" fill="#1a1818" stroke="#2a2520" stroke-width="1"/>
+  <rect x="445" y="250" width="45" height="8" fill="#252018"/>
+  <line x1="467" y1="258" x2="467" y2="348" stroke="#252018" stroke-width="0.5" opacity="0.5"/>
+  
+  <!-- Photo sticking out of middle bin gap -->
+  <g transform="translate(425, 260) rotate(-5)">
+    <rect x="-18" y="-24" width="36" height="48" fill="#e8e0d0" stroke="#d0c8b8" stroke-width="0.5"/>
+    <!-- Photo image content (simplified balcony scene) -->
+    <rect x="-14" y="-20" width="28" height="28" fill="#c8c0b0" opacity="0.6"/>
+    <!-- Balcony railing silhouette -->
+    <line x1="-14" y1="-8" x2="14" y2="-8" stroke="#a09888" stroke-width="1"/>
+    <line x1="-7" y1="-20" x2="-7" y2="-8" stroke="#a09888" stroke-width="0.5"/>
+    <line x1="0" y1="-20" x2="0" y2="-8" stroke="#a09888" stroke-width="0.5"/>
+    <line x1="7" y1="-20" x2="7" y2="-8" stroke="#a09888" stroke-width="0.5"/>
+    <!-- Tiny shirt shape -->
+    <rect x="-3" y="-18" width="6" height="10" fill="#4a6a8a" opacity="0.5"/>
+    <!-- Text on back of photo -->
+    <line x1="-10" y1="8" x2="10" y2="8" stroke="#6a6050" stroke-width="0.8"/>
+    <line x1="-8" y1="12" x2="8" y2="12" stroke="#6a6050" stroke-width="0.8"/>
+    <line x1="-6" y1="16" x2="4" y2="16" stroke="#6a6050" stroke-width="0.8"/>
+  </g>
+  
+  <!-- Dim light from inside shed -->
+  <ellipse cx="400" cy="300" rx="80" ry="30" fill="#1a1510" opacity="0.15"/>
+  
+  <!-- Shadowy figure silhouette in the dark interior -->
+  <!-- Very faint, barely visible -->
+  <g opacity="0.08">
+    <ellipse cx="400" cy="180" rx="15" ry="18" fill="#0a0a0a"/>
+    <rect x="387" y="195" width="26" height="50" rx="5" fill="#0a0a0a"/>
+    <rect x="382" y="240" width="12" height="40" rx="3" fill="#0a0a0a"/>
+    <rect x="406" y="240" width="12" height="40" rx="3" fill="#0a0a0a"/>
+  </g>
+  
+  <!-- Second photo half-visible in left bin -->
+  <g transform="translate(330, 270) rotate(8)">
+    <rect x="-12" y="-16" width="24" height="32" fill="#e0d8c8" stroke="#c8c0b0" stroke-width="0.5" opacity="0.7"/>
+    <rect x="-9" y="-13" width="18" height="18" fill="#b8b0a0" opacity="0.4"/>
+    <line x1="-7" y1="2" x2="7" y2="2" stroke="#6a6050" stroke-width="0.6" opacity="0.5"/>
+  </g>
+  
+  <!-- Third photo in right bin -->
+  <g transform="translate(465, 268) rotate(-3)">
+    <rect x="-14" y="-18" width="28" height="36" fill="#e4dcc8" stroke="#c8c0b0" stroke-width="0.5" opacity="0.6"/>
+    <rect x="-10" y="-15" width="20" height="20" fill="#b0a898" opacity="0.4"/>
+    <line x1="-8" y1="4" x2="8" y2="4" stroke="#6a6050" stroke-width="0.6" opacity="0.5"/>
+  </g>
+  
+  <!-- Vignette effect -->
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0.8"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#vignette)"/>
+  
+  <!-- Subtle film grain / noise dots -->
+  <g opacity="0.03" fill="#ffffff">
+    <circle cx="120" cy="80" r="0.5"/><circle cx="340" cy="150" r="0.5"/><circle cx="560" cy="90" r="0.5"/>
+    <circle cx="680" cy="200" r="0.5"/><circle cx="200" cy="300" r="0.5"/><circle cx="600" cy="280" r="0.5"/>
+    <circle cx="150" cy="400" r="0.5"/><circle cx="700" cy="380" r="0.5"/><circle cx="450" cy="350" r="0.5"/>
+    <circle cx="80" cy="250" r="0.5"/><circle cx="750" cy="120" r="0.5"/><circle cx="300" cy="50" r="0.5"/>
+  </g>
+</svg>
