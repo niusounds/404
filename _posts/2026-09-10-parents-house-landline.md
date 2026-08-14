@@ -3,6 +3,41 @@ title: "実家の固定電話が夜中3時に鳴り出して、出たら自分�
 date: 2026-09-10 12:00:00 +0900
 ---
 
+<div style="text-align:center;margin:2em 0;">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0a0808"/>
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.8"/>
+  </radialGradient>
+  <rect width="800" height="450" fill="url(#vignette)"/>
+  <line x1="100" y1="320" x2="700" y2="320" stroke="#1a1515" stroke-width="1"/>
+  <rect x="100" y="320" width="600" height="130" fill="#0d0a0a"/>
+  <rect x="340" y="260" width="120" height="60" rx="8" fill="#1a1414" stroke="#2a2020" stroke-width="1"/>
+  <rect x="355" y="275" width="90" height="35" rx="3" fill="#151010"/>
+  <circle cx="370" cy="283" r="2" fill="#2a2020"/>
+  <circle cx="390" cy="283" r="2" fill="#2a2020"/>
+  <circle cx="410" cy="283" r="2" fill="#2a2020"/>
+  <circle cx="370" cy="295" r="2" fill="#2a2020"/>
+  <circle cx="390" cy="295" r="2" fill="#2a2020"/>
+  <circle cx="410" cy="295" r="2" fill="#2a2020"/>
+  <rect x="345" y="240" width="110" height="28" rx="14" fill="#1e1818" stroke="#2a2020" stroke-width="1"/>
+  <ellipse cx="360" cy="254" rx="18" ry="10" fill="#1e1818" stroke="#2a2020" stroke-width="0.5"/>
+  <ellipse cx="440" cy="254" rx="18" ry="10" fill="#1e1818" stroke="#2a2020" stroke-width="0.5"/>
+  <path d="M440 254 Q470 280 450 300 Q430 320 460 340 Q490 360 470 380" fill="none" stroke="#2a2020" stroke-width="2" stroke-dasharray="4,3"/>
+  <ellipse cx="80" cy="100" rx="30" ry="30" fill="#1a1a2e" opacity="0.3"/>
+  <ellipse cx="80" cy="100" rx="15" ry="15" fill="#2a2a4e" opacity="0.2"/>
+  <polygon points="80,100 200,320 350,320" fill="#1a1a2e" opacity="0.03"/>
+  <ellipse cx="400" cy="340" rx="70" ry="10" fill="#000000" opacity="0.3"/>
+  <circle cx="435" cy="270" r="2" fill="#3a1010" opacity="0.6"/>
+  <circle cx="435" cy="270" r="4" fill="#3a1010" opacity="0.2"/>
+  <ellipse cx="400" cy="360" rx="50" ry="5" fill="#151010" opacity="0.3"/>
+  <line x1="600" y1="50" x2="600" y2="200" stroke="#1a1515" stroke-width="0.5" opacity="0.3"/>
+  <line x1="650" y1="80" x2="650" y2="180" stroke="#1a1515" stroke-width="0.5" opacity="0.2"/>
+  <line x1="700" y1="60" x2="700" y2="190" stroke="#1a1515" stroke-width="0.5" opacity="0.15"/>
+</svg>
+</div>
+
 実家の固定電話が、夜中3時に勝手に鳴り出した。
 
 実家というのは、地方の田舎にある二世帯住宅のことだ。私は都会で一人暮らしをしているが、先月末に祖母の葬儀があり、帰省していた。帰省最終日の夜、皆が寝静まった頃のことだった。
