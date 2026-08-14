@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Building silhouette -->
+  <rect x="250" y="50" width="300" height="400" fill="#111010"/>
+  <rect x="248" y="48" width="304" height="404" fill="none" stroke="#1a1818" stroke-width="1"/>
+  
+  <!-- Windows (dark with slight glow on some) -->
+  <rect x="280" y="80" width="40" height="50" fill="#1a1510" opacity="0.6"/>
+  <rect x="340" y="80" width="40" height="50" fill="#0a0a0a"/>
+  <rect x="400" y="80" width="40" height="50" fill="#1a1510" opacity="0.4"/>
+  <rect x="460" y="80" width="40" height="50" fill="#0a0a0a"/>
+  
+  <rect x="280" y="150" width="40" height="50" fill="#0a0a0a"/>
+  <rect x="340" y="150" width="40" height="50" fill="#1a1510" opacity="0.3"/>
+  <rect x="400" y="150" width="40" height="50" fill="#0a0a0a"/>
+  <rect x="460" y="150" width="40" height="50" fill="#1a1510" opacity="0.5"/>
+  
+  <rect x="280" y="220" width="40" height="50" fill="#1a1510" opacity="0.2"/>
+  <rect x="340" y="220" width="40" height="50" fill="#0a0a0a"/>
+  <rect x="400" y="220" width="40" height="50" fill="#1a1510" opacity="0.3"/>
+  <rect x="460" y="220" width="40" height="50" fill="#0a0a0a"/>
+  
+  <!-- Seventh floor (where sound stops) -->
+  <rect x="280" y="290" width="40" height="50" fill="#0a0a0a"/>
+  <rect x="340" y="290" width="40" height="50" fill="#0a0a0a"/>
+  <rect x="400" y="290" width="40" height="50" fill="#1a1510" opacity="0.15"/>
+  <rect x="460" y="290" width="40" height="50" fill="#0a0a0a"/>
+  
+  <!-- Fire escape staircase (left side) -->
+  <rect x="220" y="100" width="30" height="5" fill="#1a1a1a"/>
+  <rect x="220" y="170" width="30" height="5" fill="#1a1a1a"/>
+  <rect x="220" y="240" width="30" height="5" fill="#1a1a1a"/>
+  <rect x="220" y="310" width="30" height="5" fill="#1a1a1a"/>
+  <rect x="220" y="380" width="30" height="5" fill="#1a1a1a"/>
+  
+  <!-- Staircase railings -->
+  <line x1="220" y1="100" x2="220" y2="170" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="250" y1="100" x2="250" y2="170" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="220" y1="170" x2="220" y2="240" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="250" y1="170" x2="250" y2="240" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="220" y1="240" x2="220" y2="310" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="250" y1="240" x2="250" y2="310" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="220" y1="310" x2="220" y2="380" stroke="#1a1a1a" stroke-width="2"/>
+  <line x1="250" y1="310" x2="250" y2="380" stroke="#1a1a1a" stroke-width="2"/>
+  
+  <!-- Diagonal stairs -->
+  <line x1="220" y1="100" x2="250" y2="170" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="220" y1="170" x2="250" y2="240" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="220" y1="240" x2="250" y2="310" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="220" y1="310" x2="250" y2="380" stroke="#1a1a1a" stroke-width="1.5"/>
+  
+  <!-- Faint ghostly figure on 7th floor landing (barely visible) -->
+  <ellipse cx="430" cy="305" rx="8" ry="22" fill="#0d0d0d" opacity="0.7"/>
+  <circle cx="430" cy="278" r="7" fill="#0d0d0d" opacity="0.7"/>
+  <!-- Eyes - barely visible -->
+  <circle cx="427" cy="276" r="1" fill="#1a1510" opacity="0.5"/>
+  <circle cx="433" cy="276" r="1" fill="#1a1510" opacity="0.5"/>
+  
+  <!-- Water droplets falling from 7th floor door area -->
+  <ellipse cx="475" cy="340" rx="1.5" ry="3" fill="#1a1828" opacity="0.4"/>
+  <ellipse cx="476" cy="360" rx="1.5" ry="3" fill="#1a1828" opacity="0.3"/>
+  <ellipse cx="474" cy="380" rx="1.5" ry="3" fill="#1a1828" opacity="0.2"/>
+  <ellipse cx="475" cy="400" rx="1.5" ry="3" fill="#1a1828" opacity="0.1"/>
+  
+  <!-- Subtle light from emergency exit sign -->
+  <rect x="445" y="285" width="20" height="8" fill="#2a0a0a" opacity="0.6"/>
+  <text x="450" y="292" font-size="5" fill="#5a1a1a" font-family="sans-serif" opacity="0.8">非常口</text>
+  
+  <!-- Dark mist at bottom -->
+  <rect x="0" y="380" width="800" height="70" fill="#0a0808" opacity="0.8"/>
+  <ellipse cx="400" cy="420" rx="400" ry="30" fill="#0d0b0b" opacity="0.5"/>
+  
+  <!-- Subtle vignette -->
+  <rect x="0" y="0" width="800" height="450" fill="url(#vignette)" opacity="0.3"/>
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="60%" stop-color="#0a0808" stop-opacity="0" />
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1" />
+    </radialGradient>
+  </defs>
+</svg>
