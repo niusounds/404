@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Subtle wall texture lines -->
+  <line x1="0" y1="100" x2="800" y2="100" stroke="#0d0a0a" stroke-width="0.5"/>
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#0d0a0a" stroke-width="0.5"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#0d0a0a" stroke-width="0.5"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#0d0a0a" stroke-width="0.5"/>
+
+  <!-- Floor -->
+  <rect x="0" y="340" width="800" height="110" fill="#080608"/>
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#120e12" stroke-width="1"/>
+
+  <!-- Wall on left -->
+  <rect x="0" y="0" width="120" height="340" fill="#0c0a0c"/>
+  <line x1="120" y1="0" x2="120" y2="340" stroke="#141014" stroke-width="0.5"/>
+
+  <!-- Wall on right -->
+  <rect x="680" y="0" width="120" height="340" fill="#0c0a0c"/>
+  <line x1="680" y1="0" x2="680" y2="340" stroke="#141014" stroke-width="0.5"/>
+
+  <!-- Delivery locker on the wall -->
+  <!-- Locker body -->
+  <rect x="280" y="100" width="240" height="200" rx="4" fill="#1a1618" stroke="#2a2428" stroke-width="1"/>
+
+  <!-- Locker compartment doors (grid of small doors) -->
+  <!-- Row 1 -->
+  <rect x="290" y="110" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="350" y="110" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="410" y="110" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="470" y="110" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+
+  <!-- Row 2 -->
+  <rect x="290" y="160" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="350" y="160" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="410" y="160" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="470" y="160" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+
+  <!-- Row 3 -->
+  <rect x="290" y="210" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="350" y="210" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="410" y="210" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="470" y="210" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+
+  <!-- Row 4 - one open compartment with a faint glow -->
+  <rect x="290" y="260" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="350" y="260" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <!-- Open door - the creepy one -->
+  <rect x="410" y="260" width="55" height="45" rx="2" fill="#1a1520" stroke="#3a2a3a" stroke-width="0.5"/>
+  <!-- Faint eerie glow from inside -->
+  <rect x="410" y="260" width="55" height="45" rx="2" fill="#2a1a30" opacity="0.3" filter="url(#blur1)"/>
+  <rect x="410" y="260" width="55" height="45" rx="2" fill="#3a2040" opacity="0.15"/>
+  <!-- Small package silhouette inside -->
+  <rect x="420" y="275" width="35" height="20" rx="1" fill="#0e0a0e" opacity="0.8"/>
+
+  <!-- Locker on the right wall -->
+  <rect x="520" y="100" width="160" height="200" rx="4" fill="#1a1618" stroke="#2a2428" stroke-width="1"/>
+  <rect x="530" y="110" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="590" y="110" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="650" y="110" width="30" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="530" y="160" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="590" y="160" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="650" y="160" width="30" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="530" y="210" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="590" y="210" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="650" y="210" width="30" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="530" y="260" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="590" y="260" width="55" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+  <rect x="650" y="260" width="30" height="45" rx="2" fill="#121012" stroke="#2a2428" stroke-width="0.5"/>
+
+  <!-- Ceiling light - cold fluorescent -->
+  <rect x="370" y="0" width="60" height="8" rx="2" fill="#1a1820"/>
+  <rect x="375" y="8" width="50" height="3" fill="#2a2830"/>
+  <!-- Light cone -->
+  <polygon points="380,11 420,11 460,340 340,340" fill="#1a1525" opacity="0.15"/>
+
+  <!-- Shadowy figure silhouette at the end of the hallway -->
+  <g opacity="0.15" filter="url(#blur3)">
+    <!-- Head -->
+    <ellipse cx="400" cy="280" rx="12" ry="15" fill="#0a0808"/>
+    <!-- Body -->
+    <path d="M388,295 L385,340 L415,340 L412,295 Z" fill="#0a0808"/>
+    <!-- Arms -->
+    <path d="M388,300 L370,320 L375,325 L388,305" fill="#0a0808"/>
+    <path d="M412,300 L430,320 L425,325 L412,305" fill="#0a0808"/>
+  </g>
+
+  <!-- Subtle red glow in the open locker -->
+  <rect x="412" y="262" width="51" height="41" rx="2" fill="#3a1020" opacity="0.08"/>
+
+  <!-- Floor reflection under the glow -->
+  <ellipse cx="437" cy="345" rx="30" ry="5" fill="#2a1a30" opacity="0.1"/>
+
+  <!-- Small detail: a house number plate -->
+  <rect x="230" y="130" width="25" height="15" rx="1" fill="#1a1618" stroke="#2a2428" stroke-width="0.5"/>
+  <text x="233" y="141" font-family="sans-serif" font-size="8" fill="#3a3438">3F</text>
+
+  <!-- Tiny detail: a faint keyhole shape on the open locker door -->
+  <circle cx="437" cy="282" r="3" fill="#0e0a0e"/>
+  <rect x="435" y="285" width="4" height="5" rx="1" fill="#0e0a0e"/>
+
+  <!-- Vignette effect -->
+  <rect x="0" y="0" width="800" height="450" fill="url(#glow)" opacity="0.5" pointer-events="none"/>
+
+  <!-- Subtle dust particles -->
+  <circle cx="200" cy="150" r="0.5" fill="#2a2428" opacity="0.3"/>
+  <circle cx="600" cy="200" r="0.5" fill="#2a2428" opacity="0.2"/>
+  <circle cx="350" cy="280" r="0.5" fill="#2a2428" opacity="0.25"/>
+  <circle cx="500" cy="130" r="0.5" fill="#2a2428" opacity="0.2"/>
+  <circle cx="450" cy="300" r="0.5" fill="#2a2428" opacity="0.3"/>
+</svg>
