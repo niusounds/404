@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#1a1515" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Subtle ambient glow behind window -->
+  <rect width="800" height="450" fill="url(#glow)"/>
+
+  <!-- Floor line (subtle) -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#141010" stroke-width="1"/>
+
+  <!-- Washing machine silhouettes (left side) -->
+  <rect x="40" y="200" width="100" height="180" rx="6" fill="#100d0d" stroke="#1a1515" stroke-width="0.5"/>
+  <circle cx="90" cy="270" r="30" fill="#0d0a0a" stroke="#1a1515" stroke-width="0.5"/>
+  <circle cx="90" cy="270" r="20" fill="none" stroke="#1a1515" stroke-width="0.5"/>
+  <rect x="60" y="220" width="60" height="15" rx="3" fill="#1a1515" opacity="0.5"/>
+
+  <rect x="150" y="220" width="80" height="160" rx="6" fill="#0e0b0b" stroke="#1a1515" stroke-width="0.5"/>
+  <circle cx="190" cy="285" r="25" fill="#0c0909" stroke="#1a1515" stroke-width="0.5"/>
+
+  <!-- Window frame (center-right) -->
+  <rect x="280" y="60" width="440" height="300" rx="4" fill="#0e0b0b" stroke="#1a1515" stroke-width="2"/>
+
+  <!-- Window glass -->
+  <rect x="290" y="70" width="420" height="280" fill="#0c0a0a"/>
+
+  <!-- Night sky through window (very subtle) -->
+  <rect x="290" y="70" width="420" height="140" fill="#0e0c0c" opacity="0.6"/>
+
+  <!-- Distant city lights (tiny dots) -->
+  <circle cx="350" cy="120" r="1" fill="#2a2525" opacity="0.4"/>
+  <circle cx="420" cy="100" r="1" fill="#2a2525" opacity="0.3"/>
+  <circle cx="500" cy="130" r="1.5" fill="#2a2525" opacity="0.35"/>
+  <circle cx="580" cy="110" r="1" fill="#2a2525" opacity="0.25"/>
+  <circle cx="640" cy="140" r="1" fill="#2a2525" opacity="0.3"/>
+
+  <!-- Ghostly face reflection in window -->
+  <g filter="url(#blur1)" opacity="0.35">
+    <!-- Face shape -->
+    <ellipse cx="500" cy="190" rx="55" ry="70" fill="#1a1818"/>
+    <!-- Eyes (dark hollows) -->
+    <ellipse cx="480" cy="175" rx="12" ry="8" fill="#0a0808"/>
+    <ellipse cx="520" cy="175" rx="12" ry="8" fill="#0a0808"/>
+    <!-- Faint eye glow (creepy) -->
+    <ellipse cx="480" cy="175" rx="4" ry="3" fill="#3a3030" opacity="0.5"/>
+    <ellipse cx="520" cy="175" rx="4" ry="3" fill="#3a3030" opacity="0.5"/>
+    <!-- Mouth (slight smile) -->
+    <path d="M475,210 Q500,225 525,210" fill="none" stroke="#1a1515" stroke-width="2"/>
+    <!-- Hair/silhouette above -->
+    <path d="M445,160 Q450,120 500,115 Q550,120 555,160 L555,140 Q540,100 500,95 Q460,100 445,140 Z" fill="#141010" opacity="0.6"/>
+  </g>
+
+  <!-- Second face layer (more visible, closer) -->
+  <g filter="url(#blur2)" opacity="0.18">
+    <ellipse cx="500" cy="190" rx="55" ry="70" fill="#1a1818"/>
+    <ellipse cx="480" cy="175" rx="12" ry="8" fill="#0a0808"/>
+    <ellipse cx="520" cy="175" rx="12" ry="8" fill="#0a0808"/>
+    <ellipse cx="480" cy="175" rx="4" ry="3" fill="#4a3535" opacity="0.4"/>
+    <ellipse cx="520" cy="175" rx="4" ry="3" fill="#4a3535" opacity="0.4"/>
+    <path d="M475,210 Q500,225 525,210" fill="none" stroke="#2a2020" stroke-width="2"/>
+  </g>
+
+  <!-- Window reflection glare -->
+  <line x1="300" y1="70" x2="400" y2="350" stroke="#1a1515" stroke-width="0.5" opacity="0.3"/>
+  <line x1="320" y1="70" x2="420" y2="350" stroke="#1a1515" stroke-width="0.3" opacity="0.2"/>
+
+  <!-- Window divider bars -->
+  <line x1="500" y1="70" x2="500" y2="350" stroke="#1a1515" stroke-width="1.5"/>
+  <line x1="290" y1="210" x2="710" y2="210" stroke="#1a1515" stroke-width="1.5"/>
+
+  <!-- Detergent bottle on floor -->
+  <rect x="680" y="340" width="30" height="40" rx="4" fill="#121010" stroke="#1a1515" stroke-width="0.5"/>
+  <rect x="688" y="335" width="14" height="8" rx="2" fill="#1a1515" opacity="0.6"/>
+
+  <!-- Water drip on window (from story) -->
+  <ellipse cx="400" cy="310" rx="3" ry="15" fill="#1a1a2a" opacity="0.3"/>
+  <ellipse cx="400" cy="325" rx="2" ry="3" fill="#1a1a2a" opacity="0.2"/>
+
+  <!-- Vignette -->
+  <rect width="800" height="450" fill="none"/>
+  <rect x="0" y="0" width="800" height="450" fill="url(#glow)" opacity="0.5"/>
+
+  <!-- Subtle wet floor reflection -->
+  <ellipse cx="500" cy="400" rx="200" ry="20" fill="#0e0c0c" opacity="0.3"/>
+  <ellipse cx="500" cy="400" rx="100" ry="10" fill="#141010" opacity="0.4"/>
+</svg>
