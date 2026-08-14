@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1414"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#glow)"/>
+
+  <!-- Floor line (subtle) -->
+  <line x1="100" y1="400" x2="700" y2="400" stroke="#1a1414" stroke-width="1"/>
+
+  <!-- Figure silhouette - back view, standing in train -->
+  <!-- Head -->
+  <ellipse cx="400" cy="145" rx="32" ry="38" fill="#0d0b0b"/>
+  <!-- Neck -->
+  <rect x="390" y="180" width="20" height="20" fill="#0d0b0b"/>
+  <!-- Body / shoulders -->
+  <path d="M350,200 Q340,205 335,230 L340,340 Q345,360 350,370 L450,370 Q455,360 460,340 L465,230 Q460,205 450,200 Q430,190 400,188 Q370,190 350,200Z" fill="#0d0b0b"/>
+
+  <!-- Arms holding newspaper -->
+  <path d="M350,210 Q310,240 290,280 L295,310 Q300,300 310,270 Q330,240 355,220" fill="#0d0b0b"/>
+  <path d="M450,210 Q490,240 510,280 L505,310 Q500,300 490,270 Q470,240 445,220" fill="#0d0b0b"/>
+
+  <!-- Newspaper - the white blank front page -->
+  <rect x="270" y="260" width="260" height="180" rx="2" fill="#f0ece4"/>
+  <!-- Newspaper fold line -->
+  <line x1="400" y1="260" x2="400" y2="440" stroke="#d4cfc5" stroke-width="0.5"/>
+
+  <!-- Subtle text lines on right page (barely visible) -->
+  <line x1="410" y1="290" x2="510" y2="290" stroke="#d4cfc5" stroke-width="0.8"/>
+  <line x1="410" y1="305" x2="500" y2="305" stroke="#d4cfc5" stroke-width="0.8"/>
+  <line x1="410" y1="320" x2="515" y2="320" stroke="#d4cfc5" stroke-width="0.8"/>
+  <line x1="410" y1="335" x2="495" y2="335" stroke="#d4cfc5" stroke-width="0.8"/>
+  <line x1="410" y1="350" x2="505" y2="350" stroke="#d4cfc5" stroke-width="0.8"/>
+  <line x1="410" y1="365" x2="480" y2="365" stroke="#d4cfc5" stroke-width="0.8"/>
+  <line x1="410" y1="380" x2="510" y2="380" stroke="#d4cfc5" stroke-width="0.8"/>
+  <line x1="410" y1="395" x2="490" y2="395" stroke="#d4cfc5" stroke-width="0.8"/>
+
+  <!-- LEFT PAGE is BLANK - the horror element -->
+  <!-- Very subtle hint of something behind the blank page -->
+  <ellipse cx="350" cy="350" rx="40" ry="50" fill="#f0ece4" opacity="0.3"/>
+
+  <!-- Hands gripping the newspaper edges -->
+  <ellipse cx="275" cy="340" rx="10" ry="14" fill="#1a1414"/>
+  <ellipse cx="525" cy="340" rx="10" ry="14" fill="#1a1414"/>
+
+  <!-- Legs -->
+  <rect x="365" y="365" width="25" height="35" fill="#0d0b0b"/>
+  <rect x="410" y="365" width="25" height="35" fill="#0d0b0b"/>
+
+  <!-- Shoes -->
+  <ellipse cx="377" cy="400" rx="18" ry="6" fill="#0d0b0b"/>
+  <ellipse cx="422" cy="400" rx="18" ry="6" fill="#0d0b0b"/>
+
+  <!-- Eerie glow from the blank page - the unsettling light -->
+  <ellipse cx="400" cy="350" rx="160" ry="120" fill="#ffffff" opacity="0.03"/>
+
+  <!-- Faint reflection on the blank page - a face hint -->
+  <ellipse cx="350" cy="345" rx="18" ry="25" fill="#d4cfc5" opacity="0.06"/>
+  <ellipse cx="345" cy="340" rx="3" ry="2" fill="#a09888" opacity="0.08"/>
+  <ellipse cx="355" cy="340" rx="3" ry="2" fill="#a09888" opacity="0.08"/>
+
+  <!-- Train window hints in background -->
+  <rect x="50" y="100" width="120" height="200" rx="5" fill="#0d0b0b" opacity="0.5"/>
+  <rect x="630" y="100" width="120" height="200" rx="5" fill="#0d0b0b" opacity="0.5"/>
+
+  <!-- Window reflections - faint light streaks -->
+  <line x1="70" y1="140" x2="150" y2="260" stroke="#1a1414" stroke-width="0.5" opacity="0.3"/>
+  <line x1="650" y1="140" x2="730" y2="260" stroke="#1a1414" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Subtle grain texture overlay -->
+  <rect width="800" height="450" fill="none"/>
+</svg>
