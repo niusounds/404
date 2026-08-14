@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#2a6ecf" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff2020" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#cc0000" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1512"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Subtle wall texture -->
+  <rect x="0" y="0" width="800" height="300" fill="#0d0b0b" opacity="0.5"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#151210" stroke-width="1"/>
+
+  <!-- Floor -->
+  <rect x="0" y="300" width="800" height="150" fill="url(#floorGrad)"/>
+
+  <!-- Floor reflection from blue ring -->
+  <ellipse cx="400" cy="340" rx="120" ry="25" fill="#1a3a6a" opacity="0.15" filter="url(#blur2)"/>
+
+  <!-- Window silhouette on the left -->
+  <rect x="60" y="50" width="120" height="180" fill="#0e0c0c" stroke="#1a1818" stroke-width="1"/>
+  <line x1="120" y1="50" x2="120" y2="230" stroke="#1a1818" stroke-width="1"/>
+  <line x1="60" y1="140" x2="180" y2="140" stroke="#1a1818" stroke-width="1"/>
+  <!-- Moonlight through window -->
+  <rect x="62" y="52" width="56" height="86" fill="#1a2030" opacity="0.15"/>
+  <rect x="62" y="142" width="56" height="86" fill="#1a2030" opacity="0.08"/>
+
+  <!-- Moon -->
+  <circle cx="100" cy="90" r="15" fill="#2a3040" opacity="0.2"/>
+  <circle cx="105" cy="87" r="13" fill="#0e0c0c"/>
+
+  <!-- Furniture silhouette - sofa on the left -->
+  <path d="M250,260 L250,220 Q250,205 265,205 L370,205 Q385,205 385,220 L385,260 Z" fill="#121010" stroke="#1a1818" stroke-width="0.5"/>
+  <path d="M250,260 L250,240 Q250,230 260,230 L375,230 Q385,230 385,240 L385,260 Z" fill="#151313"/>
+
+  <!-- Coffee table -->
+  <rect x="420" y="270" width="100" height="5" fill="#1a1818" rx="1"/>
+  <rect x="435" y="275" width="3" height="25" fill="#1a1818"/>
+  <rect x="502" y="275" width="3" height="25" fill="#1a1818"/>
+
+  <!-- Smart speaker - center of the composition -->
+  <!-- Base shadow -->
+  <ellipse cx="620" cy="305" rx="35" ry="8" fill="#0a0808" opacity="0.8"/>
+
+  <!-- Speaker body -->
+  <rect x="595" y="220" width="50" height="80" rx="25" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <!-- Top cap -->
+  <ellipse cx="620" cy="220" rx="25" ry="8" fill="#222222"/>
+  <!-- Bottom cap -->
+  <ellipse cx="620" cy="300" rx="25" ry="6" fill="#1a1a1a"/>
+
+  <!-- Blue ring light (glowing) -->
+  <circle cx="620" cy="255" r="18" fill="none" stroke="#4a9eff" stroke-width="3" opacity="0.9" filter="url(#blur1)"/>
+  <circle cx="620" cy="255" r="12" fill="none" stroke="#6ab4ff" stroke-width="2" opacity="0.7"/>
+  <circle cx="620" cy="255" r="6" fill="none" stroke="#9ad0ff" stroke-width="1" opacity="0.5"/>
+
+  <!-- Blue glow around speaker -->
+  <circle cx="620" cy="255" r="60" fill="url(#blueGlow)" opacity="0.4"/>
+  <circle cx="620" cy="255" r="100" fill="url(#blueGlow)" opacity="0.15"/>
+
+  <!-- Red camera LED -->
+  <circle cx="620" cy="235" r="2.5" fill="#ff2020" opacity="0.9"/>
+  <circle cx="620" cy="235" r="8" fill="url(#redGlow)" opacity="0.5"/>
+  <circle cx="620" cy="235" r="3" fill="#ff4040" opacity="0.6"/>
+
+  <!-- Blue light rays casting on the floor and walls -->
+  <polygon points="595,270 560,340 600,340" fill="#2a5a9a" opacity="0.05" filter="url(#blur1)"/>
+  <polygon points="645,270 640,340 680,340" fill="#2a5a9a" opacity="0.05" filter="url(#blur1)"/>
+  <polygon points="610,220 580,180 620,180" fill="#2a5a9a" opacity="0.03" filter="url(#blur1)"/>
+
+  <!-- Dark atmosphere - vignette -->
+  <rect width="800" height="450" fill="url(#blueGlow)" opacity="0.05"/>
+
+  <!-- Subtle shadow/cone from speaker suggesting presence -->
+  <path d="M600,300 L540,420 L660,420 Z" fill="#0a0808" opacity="0.3"/>
+
+  <!-- Very subtle textural noise dots -->
+  <circle cx="300" cy="100" r="0.5" fill="#1a1818"/>
+  <circle cx="500" cy="80" r="0.5" fill="#1a1818"/>
+  <circle cx="700" cy="150" r="0.5" fill="#1a1818"/>
+  <circle cx="150" cy="250" r="0.5" fill="#1a1818"/>
+  <circle cx="750" cy="280" r="0.5" fill="#1a1818"/>
+  <circle cx="350" cy="350" r="0.5" fill="#1a1818"/>
+  <circle cx="650" cy="380" r="0.5" fill="#1a1818"/>
+
+  <!-- The horror element: a faint, barely-visible second ring of light behind the speaker -->
+  <circle cx="620" cy="255" r="22" fill="none" stroke="#3a6ecc" stroke-width="0.5" opacity="0.2" filter="url(#blur1)"/>
+</svg>
