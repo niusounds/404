@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background - dark ceiling/room -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Ceiling plane -->
+  <rect x="0" y="0" width="800" height="200" fill="#111010"/>
+  
+  <!-- Wall below -->
+  <rect x="0" y="200" width="800" height="250" fill="#0d0b0b"/>
+  
+  <!-- Ceiling texture lines -->
+  <line x1="0" y1="100" x2="800" y2="100" stroke="#1a1818" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="150" x2="800" y2="150" stroke="#1a1818" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Ventilation hatch frame -->
+  <rect x="320" y="30" width="160" height="120" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1.5"/>
+  
+  <!-- Vent slats (closed portion) -->
+  <line x1="330" y1="50" x2="470" y2="50" stroke="#222" stroke-width="2"/>
+  <line x1="330" y1="65" x2="470" y2="65" stroke="#222" stroke-width="2"/>
+  <line x1="330" y1="80" x2="470" y2="80" stroke="#222" stroke-width="2"/>
+  <line x1="330" y1="95" x2="470" y2="95" stroke="#222" stroke-width="2"/>
+  
+  <!-- The hatch is partially open - bottom edge lifted -->
+  <!-- Open gap -->
+  <rect x="320" y="145" width="160" height="8" fill="#0a0808"/>
+  
+  <!-- Dark cavity behind the open vent -->
+  <rect x="322" y="150" width="156" height="90" fill="#050404"/>
+  
+  <!-- Dust particles in the darkness -->
+  <circle cx="370" cy="170" r="1" fill="#3a3530" opacity="0.4"/>
+  <circle cx="420" cy="185" r="0.8" fill="#3a3530" opacity="0.3"/>
+  <circle cx="390" cy="200" r="1.2" fill="#3a3530" opacity="0.35"/>
+  <circle cx="440" cy="165" r="0.7" fill="#3a3530" opacity="0.25"/>
+  <circle cx="355" cy="190" r="0.9" fill="#3a3530" opacity="0.3"/>
+  <circle cx="405" cy="210" r="1" fill="#3a3530" opacity="0.2"/>
+  <circle cx="360" cy="220" r="0.6" fill="#3a3530" opacity="0.25"/>
+  <circle cx="450" cy="205" r="0.8" fill="#3a3530" opacity="0.2"/>
+  
+  <!-- Flashlight beam from below -->
+  <polygon points="400,450 350,160 450,160" fill="#f0e6c0" opacity="0.04"/>
+  <polygon points="400,450 370,160 430,160" fill="#f0e6c0" opacity="0.06"/>
+  <polygon points="400,450 385,160 415,160" fill="#f0e6c0" opacity="0.08"/>
+  
+  <!-- In the darkness of the cavity, a faint shoe sole impression -->
+  <!-- The tread pattern of a sneaker sole -->
+  <ellipse cx="400" cy="225" rx="35" ry="12" fill="#0f0e0e" stroke="#1a1818" stroke-width="0.5"/>
+  <path d="M375 225 Q385 218 400 218 Q415 218 425 225" stroke="#1a1818" stroke-width="0.8" fill="none"/>
+  <path d="M378 228 Q388 235 400 235 Q412 235 422 228" stroke="#1a1818" stroke-width="0.8" fill="none"/>
+  <path d="M382 231 Q391 237 400 237 Q409 237 418 231" stroke="#1a1818" stroke-width="0.6" fill="none"/>
+  
+  <!-- The tread marks glow faintly in the flashlight -->
+  <ellipse cx="400" cy="225" rx="35" ry="12" fill="none" stroke="#f0e6c0" stroke-width="0.3" opacity="0.15"/>
+  
+  <!-- Subtle shadow/figure suggestion in the far dark -->
+  <ellipse cx="440" cy="175" rx="8" ry="15" fill="#080707" opacity="0.6"/>
+  <circle cx="438" cy="163" r="5" fill="#080707" opacity="0.5"/>
+  
+  <!-- Tiny pair of eyes - barely visible, just two faint points -->
+  <circle cx="436" cy="162" r="0.8" fill="#2a2520" opacity="0.3"/>
+  <circle cx="442" cy="162" r="0.8" fill="#2a2520" opacity="0.3"/>
+  
+  <!-- Wall details - subtle cracks -->
+  <path d="M600 250 L620 260 L615 270" stroke="#1a1818" stroke-width="0.5" fill="none" opacity="0.3"/>
+  <path d="M150 300 L160 310 L155 320" stroke="#1a1818" stroke-width="0.5" fill="none" opacity="0.3"/>
+  
+  <!-- Floor line -->
+  <line x1="0" y1="420" x2="800" y2="420" stroke="#151313" stroke-width="1"/>
+  
+  <!-- Subtle vignette effect -->
+  <rect x="0" y="0" width="800" height="450" fill="url(#vignette)" opacity="0.4"/>
+  
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
