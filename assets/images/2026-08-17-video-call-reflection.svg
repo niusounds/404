@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <linearGradient id="screenGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d1a2a" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#152535" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0d1a2a" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#glow)" opacity="0.5"/>
+
+  <!-- Monitor screen area -->
+  <rect x="120" y="50" width="560" height="350" rx="8" fill="#050810" stroke="#1a2030" stroke-width="1.5"/>
+  <rect x="125" y="55" width="550" height="340" rx="4" fill="url(#screenGlow)"/>
+
+  <!-- Screen content: video call interface -->
+  <!-- Top bar -->
+  <rect x="125" y="55" width="550" height="30" fill="#0a1520" opacity="0.8"/>
+  <circle cx="145" cy="70" r="4" fill="#ff5f56"/>
+  <circle cx="160" cy="70" r="4" fill="#ffbd2e"/>
+  <circle cx="175" cy="70" r="4" fill="#27c93f"/>
+  <text x="400" y="74" text-anchor="middle" fill="#3a5a7a" font-size="10" font-family="sans-serif">ビデオ通話中...</text>
+
+  <!-- Main video area - left side (caller's view) -->
+  <rect x="140" y="95" width="250" height="280" rx="3" fill="#080c14" stroke="#1a2535" stroke-width="0.5"/>
+  <!-- Silhouette of person at desk -->
+  <ellipse cx="265" cy="240" rx="35" ry="45" fill="#151a25"/>
+  <circle cx="265" cy="210" r="20" fill="#151a25"/>
+  <!-- Desk -->
+  <rect x="210" y="270" width="110" height="3" fill="#1a2030"/>
+  <!-- Monitor glow on face -->
+  <rect x="240" y="200" width="50" height="25" rx="2" fill="#1a3050" opacity="0.3"/>
+
+  <!-- Right side - the window reflection (the horror element) -->
+  <!-- Window frame -->
+  <rect x="410" y="95" width="250" height="280" rx="3" fill="#060a12" stroke="#1a2535" stroke-width="0.5"/>
+
+  <!-- Window reflection - room interior -->
+  <rect x="415" y="100" width="240" height="270" fill="#080c16"/>
+
+  <!-- Window reflection: bookshelf -->
+  <rect x="430" y="110" width="60" height="120" fill="#0e1320" opacity="0.6"/>
+  <line x1="430" y1="140" x2="490" y2="140" stroke="#151d2a" stroke-width="0.5" opacity="0.5"/>
+  <line x1="430" y1="170" x2="490" y2="170" stroke="#151d2a" stroke-width="0.5" opacity="0.5"/>
+  <line x1="430" y1="200" x2="490" y2="200" stroke="#151d2a" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Window reflection: desk -->
+  <rect x="440" y="250" width="100" height="3" fill="#151d2a" opacity="0.4"/>
+  <!-- Coffee mug -->
+  <rect x="520" y="238" width="10" height="12" rx="1" fill="#1a2535" opacity="0.4"/>
+
+  <!-- Window reflection: CURTAIN on right edge -->
+  <path d="M640,100 Q645,180 638,270 L645,270 Q650,180 645,100 Z" fill="#0e1525" opacity="0.3"/>
+
+  <!-- Window reflection: THE DARK FIGURE sitting in the chair -->
+  <!-- Body -->
+  <ellipse cx="540" cy="245" rx="22" ry="35" fill="#050508"/>
+  <!-- Head -->
+  <circle cx="540" cy="210" r="16" fill="#050508"/>
+  <!-- Eyes - barely visible, faint reflection -->
+  <circle cx="534" cy="208" r="1.5" fill="#1a2a3a" opacity="0.6"/>
+  <circle cx="546" cy="208" r="1.5" fill="#1a2a3a" opacity="0.6"/>
+  <!-- Slight smile suggestion -->
+  <path d="M533,216 Q540,220 547,216" stroke="#0a0a10" stroke-width="0.5" fill="none" opacity="0.5"/>
+
+  <!-- Screen reflection/glint -->
+  <rect x="140" y="95" width="550" height="280" rx="3" fill="none" stroke="#1a3050" stroke-width="0.3" opacity="0.3"/>
+  <line x1="140" y1="95" x2="690" y2="375" stroke="#2a4060" stroke-width="0.3" opacity="0.15"/>
+
+  <!-- Bottom call controls -->
+  <rect x="125" y="380" width="550" height="25" fill="#080d18" opacity="0.6"/>
+  <circle cx="350" cy="392" r="8" fill="#c0392b" opacity="0.6"/>
+  <circle cx="400" cy="392" r="8" fill="#2c3e50" opacity="0.6"/>
+  <circle cx="450" cy="392" r="8" fill="#2c3e50" opacity="0.6"/>
+
+  <!-- Ambient dark light from screen -->
+  <rect x="125" y="95" width="550" height="280" rx="3" fill="#0a1a30" opacity="0.05"/>
+
+  <!-- Subtle window frame lines -->
+  <line x1="535" y1="95" x2="535" y2="375" stroke="#152030" stroke-width="1" opacity="0.4"/>
+  <line x1="410" y1="235" x2="660" y2="235" stroke="#152030" stroke-width="1" opacity="0.4"/>
+
+  <!-- Bottom ambient glow -->
+  <rect x="0" y="420" width="800" height="30" fill="#0a1018" opacity="0.3"/>
+</svg>
