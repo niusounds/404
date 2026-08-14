@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Subtle floor gradient -->
+  <rect y="350" width="800" height="100" fill="#0d0b0b"/>
+  <line x1="0" y1="350" x2="800" y2="350" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Locker rows - back wall -->
+  <rect x="50" y="40" width="700" height="310" fill="#0f0d0d" stroke="#1a1616" stroke-width="1"/>
+  
+  <!-- Locker columns -->
+  <!-- Column 1 -->
+  <rect x="60" y="50" width="120" height="130" fill="#141212" stroke="#1e1a1a" stroke-width="1"/>
+  <rect x="60" y="180" width="120" height="130" fill="#141212" stroke="#1e1a1a" stroke-width="1"/>
+  
+  <!-- Column 2 -->
+  <rect x="190" y="50" width="120" height="130" fill="#141212" stroke="#1e1a1a" stroke-width="1"/>
+  <rect x="190" y="180" width="120" height="130" fill="#141212" stroke="#1e1a1a" stroke-width="1"/>
+  
+  <!-- Column 3 - THE OPEN LOCKER -->
+  <rect x="320" y="50" width="160" height="130" fill="#141212" stroke="#1e1a1a" stroke-width="1"/>
+  
+  <!-- Locker door slightly ajar (perspective) -->
+  <rect x="480" y="50" width="15" height="130" fill="#1a1717" stroke="#2a2424" stroke-width="0.5" transform="rotate(-8, 480, 50)"/>
+  <rect x="480" y="50" width="15" height="130" fill="#0a0808" stroke="#2a2424" stroke-width="0.5" transform="rotate(-8, 480, 50)" opacity="0.7"/>
+  
+  <!-- Inside the open locker - dark void -->
+  <rect x="495" y="55" width="80" height="120" fill="#050404"/>
+  
+  <!-- Faint ghostly silhouette inside locker -->
+  <ellipse cx="535" cy="120" rx="20" ry="25" fill="#1a1414" opacity="0.6"/>
+  <circle cx="535" cy="95" r="12" fill="#1a1414" opacity="0.5"/>
+  <!-- Eyes -->
+  <circle cx="528" cy="92" r="2" fill="#2a2222" opacity="0.8"/>
+  <circle cx="542" cy="92" r="2" fill="#2a2222" opacity="0.8"/>
+  <!-- Faint breath/mist -->
+  <ellipse cx="535" cy="110" rx="8" ry="3" fill="#1a1818" opacity="0.3"/>
+  
+  <!-- Locker column 4 -->
+  <rect x="495" y="50" width="120" height="130" fill="#141212" stroke="#1e1a1a" stroke-width="1"/>
+  <rect x="495" y="180" width="120" height="130" fill="#141212" stroke="#1e1a1a" stroke-width="1"/>
+  
+  <!-- Column 5 -->
+  <rect x="625" y="50" width="120" height="130" fill="#141212" stroke="#1e1a1a" stroke-width="1"/>
+  <rect x="625" y="180" width="120" height="130" fill="#141212" stroke="#1e1a1a" stroke-width="1"/>
+  
+  <!-- Bottom row lockers -->
+  <rect x="60" y="180" width="120" height="130" fill="#111010" stroke="#1a1616" stroke-width="1"/>
+  <rect x="190" y="180" width="120" height="130" fill="#111010" stroke="#1a1616" stroke-width="1"/>
+  <rect x="320" y="180" width="160" height="130" fill="#111010" stroke="#1a1616" stroke-width="1"/>
+  <rect x="495" y="180" width="120" height="130" fill="#111010" stroke="#1a1616" stroke-width="1"/>
+  <rect x="625" y="180" width="120" height="130" fill="#111010" stroke="#1a1616" stroke-width="1"/>
+  
+  <!-- Locker handles -->
+  <rect x="165" y="110" width="8" height="16" rx="2" fill="#2a2424"/>
+  <rect x="295" y="110" width="8" height="16" rx="2" fill="#2a2424"/>
+  <rect x="415" y="110" width="8" height="16" rx="2" fill="#2a2424"/>
+  <rect x="595" y="110" width="8" height="16" rx="2" fill="#2a2424"/>
+  <rect x="725" y="110" width="8" height="16" rx="2" fill="#2a2424"/>
+  
+  <rect x="165" y="240" width="8" height="16" rx="2" fill="#2a2424"/>
+  <rect x="295" y="240" width="8" height="16" rx="2" fill="#2a2424"/>
+  <rect x="415" y="240" width="8" height="16" rx="2" fill="#2a2424"/>
+  <rect x="595" y="240" width="8" height="16" rx="2" fill="#2a2424"/>
+  <rect x="725" y="240" width="8" height="16" rx="2" fill="#2a2424"/>
+  
+  <!-- Locker number plates -->
+  <rect x="100" y="55" width="30" height="12" fill="#1a1616" rx="1"/>
+  <text x="115" y="64" font-size="8" fill="#3a3434" text-anchor="middle" font-family="monospace">01</text>
+  
+  <rect x="230" y="55" width="30" height="12" fill="#1a1616" rx="1"/>
+  <text x="245" y="64" font-size="8" fill="#3a3434" text-anchor="middle" font-family="monospace">02</text>
+  
+  <rect x="360" y="55" width="30" height="12" fill="#1a1616" rx="1"/>
+  <text x="375" y="64" font-size="8" fill="#3a3434" text-anchor="middle" font-family="monospace">03</text>
+  
+  <rect x="535" y="55" width="30" height="12" fill="#1a1616" rx="1"/>
+  <text x="550" y="64" font-size="8" fill="#3a3434" text-anchor="middle" font-family="monospace">04</text>
+  
+  <rect x="665" y="55" width="30" height="12" fill="#1a1616" rx="1"/>
+  <text x="680" y="64" font-size="8" fill="#3a3434" text-anchor="middle" font-family="monospace">05</text>
+  
+  <!-- Dim overhead light effect -->
+  <ellipse cx="400" cy="30" rx="200" ry="15" fill="#1a1510" opacity="0.15"/>
+  
+  <!-- Floor reflection of light -->
+  <ellipse cx="400" cy="380" rx="120" ry="20" fill="#1a1510" opacity="0.05"/>
+  
+  <!-- White shoe on floor - subtle, eerie -->
+  <path d="M 380,370 Q 380,360 395,358 L 420,356 Q 435,355 440,360 L 445,365 Q 448,370 440,372 L 385,372 Q 378,371 380,370 Z" fill="#1a1818" opacity="0.7"/>
+  <path d="M 380,370 Q 380,360 395,358 L 420,356 Q 435,355 440,360 L 445,365 Q 448,370 440,372 L 385,372 Q 378,371 380,370 Z" fill="#222020" opacity="0.3"/>
+  
+  <!-- Second shoe slightly offset - the "imposter" shoe -->
+  <path d="M 450,375 Q 450,365 465,363 L 490,361 Q 505,360 510,365 L 515,370 Q 518,375 510,377 L 455,377 Q 448,376 450,375 Z" fill="#1a1818" opacity="0.5"/>
+  <path d="M 450,375 Q 450,365 465,363 L 490,361 Q 505,360 510,365 L 515,370 Q 518,375 510,377 L 455,377 Q 448,376 450,375 Z" fill="#222020" opacity="0.2"/>
+  
+  <!-- Vignette effect -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="50%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Subtle breathing mist from locker gap -->
+  <ellipse cx="500" cy="180" rx="15" ry="5" fill="#1a1818" opacity="0.15"/>
+  <ellipse cx="505" cy="175" rx="10" ry="4" fill="#1a1818" opacity="0.1"/>
+</svg>
