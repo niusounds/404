@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff4422" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ff4422" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Elevator interior - back wall -->
+  <rect x="250" y="30" width="300" height="390" fill="#1a1515" rx="4"/>
+  <rect x="250" y="30" width="300" height="390" fill="none" stroke="#2a2222" stroke-width="1" rx="4"/>
+  
+  <!-- Floor indicator panel -->
+  <rect x="480" y="60" width="50" height="280" fill="#0d0a0a" rx="3" stroke="#333" stroke-width="1"/>
+  
+  <!-- Floor numbers (8 to 1) - dim -->
+  <text x="505" y="85" fill="#2a2525" font-size="12" text-anchor="middle" font-family="monospace">8</text>
+  <text x="505" y="110" fill="#2a2525" font-size="12" text-anchor="middle" font-family="monospace">7</text>
+  <text x="505" y="135" fill="#2a2525" font-size="12" text-anchor="middle" font-family="monospace">6</text>
+  <text x="505" y="160" fill="#2a2525" font-size="12" text-anchor="middle" font-family="monospace">5</text>
+  <text x="505" y="185" fill="#2a2525" font-size="12" text-anchor="middle" font-family="monospace">4</text>
+  <text x="505" y="210" fill="#2a2525" font-size="12" text-anchor="middle" font-family="monospace">3</text>
+  <text x="505" y="235" fill="#2a2525" font-size="12" text-anchor="middle" font-family="monospace">2</text>
+  <text x="505" y="260" fill="#2a2525" font-size="12" text-anchor="middle" font-family="monospace">1</text>
+  
+  <!-- Floor 11 - GLOWING RED (the horror element) -->
+  <rect x="484" y="310" width="42" height="22" fill="#ff2200" rx="2" filter="url(#blur1)"/>
+  <text x="505" y="326" fill="#ff4422" font-size="12" text-anchor="middle" font-family="monospace" font-weight="bold">11</text>
+  
+  <!-- Red glow effect -->
+  <circle cx="505" cy="321" r="40" fill="url(#glow)" opacity="0.3" filter="url(#blur2)"/>
+  
+  <!-- Elevator doors - slightly open -->
+  <rect x="260" y="40" width="120" height="380" fill="#1e1a1a" stroke="#2a2525" stroke-width="1"/>
+  <rect x="420" y="40" width="120" height="380" fill="#1e1a1a" stroke="#2a2525" stroke-width="1"/>
+  
+  <!-- Door gap - dark corridor beyond -->
+  <rect x="378" y="40" width="4" height="380" fill="#050303"/>
+  
+  <!-- Silhouette figure in the elevator corner -->
+  <ellipse cx="470" cy="380" rx="25" ry="8" fill="#0d0a0a" opacity="0.8"/>
+  <path d="M455,380 Q455,320 460,300 Q462,290 465,285 Q468,280 470,278 Q472,280 475,285 Q478,290 480,300 Q485,320 485,380" fill="#1a1212" opacity="0.9"/>
+  
+  <!-- Eyes in the dark -->
+  <circle cx="465" cy="295" r="2" fill="#ff3311" opacity="0.7"/>
+  <circle cx="475" cy="295" r="2" fill="#ff3311" opacity="0.7"/>
+  <circle cx="465" cy="295" r="8" fill="#ff3311" opacity="0.15"/>
+  <circle cx="475" cy="295" r="8" fill="#ff3311" opacity="0.15"/>
+  
+  <!-- Subtle reflection on floor -->
+  <rect x="260" y="400" width="280" height="20" fill="#111" opacity="0.3"/>
+  
+  <!-- Ambient light from floor 11 -->
+  <rect x="260" y="340" width="280" height="60" fill="#ff2200" opacity="0.02"/>
+  
+  <!-- Small detail: elevator buttons panel -->
+  <rect x="480" y="350" width="50" height="60" fill="#0d0a0a" rx="3" stroke="#333" stroke-width="1"/>
+  <circle cx="495" cy="365" r="5" fill="#2a2525"/>
+  <circle cx="515" cy="365" r="5" fill="#2a2525"/>
+  <circle cx="495" cy="380" r="5" fill="#2a2525"/>
+  <circle cx="515" cy="380" r="5" fill="#2a2525"/>
+  
+  <!-- Emergency bell -->
+  <circle cx="505" cy="398" r="6" fill="#332222" stroke="#553333" stroke-width="1"/>
+  <text x="505" y="401" fill="#884444" font-size="7" text-anchor="middle">!</text>
+</svg>
