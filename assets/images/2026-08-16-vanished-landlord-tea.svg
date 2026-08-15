@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="corridor" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1a1210"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <linearGradient id="steam" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#3a2a20" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3a2a20" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Corridor perspective - floor -->
+  <polygon points="0,320 800,320 800,450 0,450" fill="#0d0a09"/>
+  <polygon points="200,320 600,320 800,450 0,450" fill="#100c0b"/>
+
+  <!-- Corridor perspective - walls -->
+  <polygon points="0,0 200,320 0,320" fill="#0e0b0a"/>
+  <polygon points="800,0 600,320 800,320" fill="#0e0b0a"/>
+
+  <!-- Corridor vanishing point glow - faint light at end -->
+  <ellipse cx="400" cy="280" rx="40" ry="25" fill="#1a1510" filter="url(#softGlow)" opacity="0.4"/>
+
+  <!-- Corridor wall lines (wooden paneling) -->
+  <line x1="50" y1="0" x2="150" y2="320" stroke="#120e0d" stroke-width="1"/>
+  <line x1="100" y1="0" x2="175" y2="320" stroke="#120e0d" stroke-width="1"/>
+  <line x1="700" y1="0" x2="650" y2="320" stroke="#120e0d" stroke-width="1"/>
+  <line x1="750" y1="0" x2="625" y2="320" stroke="#120e0d" stroke-width="1"/>
+
+  <!-- Horizontal wall panels -->
+  <line x1="30" y1="80" x2="160" y2="320" stroke="#110d0c" stroke-width="0.5"/>
+  <line x1="770" y1="80" x2="640" y2="320" stroke="#110d0c" stroke-width="0.5"/>
+
+  <!-- Door silhouette at corridor end (slightly ajar) -->
+  <rect x="370" y="200" width="60" height="120" fill="#080606" rx="2"/>
+  <rect x="370" y="200" width="60" height="120" fill="none" stroke="#1a1410" stroke-width="0.5"/>
+  <!-- Door handle -->
+  <circle cx="420" cy="265" r="3" fill="#2a2018"/>
+  <!-- Crack of light under door -->
+  <rect x="372" y="318" width="56" height="2" fill="#2a1e14" opacity="0.6"/>
+
+  <!-- Door frame -->
+  <rect x="365" y="195" width="70" height="125" fill="none" stroke="#1a1410" stroke-width="1.5"/>
+
+  <!-- Floor line -->
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1410" stroke-width="1"/>
+
+  <!-- Entrance threshold (genkan step) - foreground -->
+  <rect x="250" y="370" width="300" height="8" fill="#1a1410" rx="1"/>
+  <rect x="260" y="378" width="280" height="3" fill="#14100e"/>
+
+  <!-- Tatami/mat texture lines -->
+  <line x1="280" y1="381" x2="280" y2="450" stroke="#161210" stroke-width="0.5"/>
+  <line x1="320" y1="381" x2="320" y2="450" stroke="#161210" stroke-width="0.5"/>
+  <line x1="400" y1="381" x2="400" y2="450" stroke="#161210" stroke-width="0.5"/>
+  <line x1="480" y1="381" x2="480" y2="450" stroke="#161210" stroke-width="0.5"/>
+  <line x1="520" y1="381" x2="520" y2="450" stroke="#161210" stroke-width="0.5"/>
+
+  <!-- The teacup (湯呑) - centered on the threshold -->
+  <!-- Cup body -->
+  <path d="M370,340 L375,370 L425,370 L430,340 Z" fill="#2a2018" stroke="#3a2a1e" stroke-width="0.5"/>
+  <!-- Cup rim -->
+  <ellipse cx="400" cy="340" rx="30" ry="5" fill="#3a2a1e" stroke="#4a3a28" stroke-width="0.5"/>
+  <!-- Cup interior (dark) -->
+  <ellipse cx="400" cy="340" rx="27" ry="4" fill="#1a1410"/>
+
+  <!-- Tea surface -->
+  <ellipse cx="400" cy="341" rx="25" ry="3" fill="#3a2a18" opacity="0.8"/>
+
+  <!-- Steam rising from teacup -->
+  <path d="M390,335 Q385,300 392,270 Q398,240 390,210" fill="none" stroke="url(#steam)" stroke-width="2" opacity="0.6"/>
+  <path d="M400,335 Q395,305 402,275 Q408,245 400,215" fill="none" stroke="url(#steam)" stroke-width="2.5" opacity="0.5"/>
+  <path d="M410,335 Q415,300 408,270 Q402,240 410,210" fill="none" stroke="url(#steam)" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Warm glow around teacup (the unsettling detail) -->
+  <ellipse cx="400" cy="355" rx="60" ry="30" fill="#2a1e14" opacity="0.15" filter="url(#softGlow)"/>
+  <ellipse cx="400" cy="355" rx="35" ry="18" fill="#3a2a18" opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Faint silhouette of a figure at the corridor end (barely visible) -->
+  <ellipse cx="400" cy="240" rx="8" ry="12" fill="#0a0808" opacity="0.3"/>
+  <rect x="393" y="252" width="14" height="30" fill="#0a0808" opacity="0.25"/>
+
+  <!-- Ambient light from corridor end -->
+  <polygon points="370,320 430,320 300,450 500,450" fill="#1a1510" opacity="0.05"/>
+
+  <!-- Subtle dust particles -->
+  <circle cx="350" cy="280" r="0.8" fill="#3a2a18" opacity="0.3"/>
+  <circle cx="430" cy="260" r="0.6" fill="#3a2a18" opacity="0.25"/>
+  <circle cx="380" cy="250" r="0.7" fill="#3a2a18" opacity="0.2"/>
+  <circle cx="420" cy="290" r="0.5" fill="#3a2a18" opacity="0.35"/>
+  <circle cx="360" cy="300" r="0.6" fill="#3a2a18" opacity="0.2"/>
+  <circle cx="440" cy="270" r="0.8" fill="#3a2a18" opacity="0.15"/>
+
+  <!-- Vignette effect -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="50%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
