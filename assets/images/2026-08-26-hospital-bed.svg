@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="corridorBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e0c0c"/>
+      <stop offset="100%" stop-color="#1a1616"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1616"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a2520" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bedMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a2828"/>
+      <stop offset="100%" stop-color="#1e1c1c"/>
+    </linearGradient>
+    <filter id="faintGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background: dark corridor -->
+  <rect width="800" height="450" fill="url(#corridorBg)"/>
+
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="800" height="80" fill="#0d0b0b"/>
+
+  <!-- Corridor perspective lines - ceiling -->
+  <line x1="0" y1="80" x2="350" y2="120" stroke="#151313" stroke-width="1"/>
+  <line x1="800" y1="80" x2="450" y2="120" stroke="#151313" stroke-width="1"/>
+
+  <!-- Corridor perspective - walls -->
+  <polygon points="0,80 350,120 350,340 0,400" fill="#121010" opacity="0.8"/>
+  <polygon points="800,80 450,120 450,340 800,400" fill="#121010" opacity="0.8"/>
+
+  <!-- Floor -->
+  <polygon points="0,400 350,340 450,340 800,400" fill="url(#floorGrad)"/>
+
+  <!-- Floor tiles -->
+  <line x1="80" y1="370" x2="400" y2="340" stroke="#1a1818" stroke-width="0.5"/>
+  <line x1="160" y1="385" x2="420" y2="350" stroke="#1a1818" stroke-width="0.5"/>
+  <line x1="240" y1="395" x2="430" y2="355" stroke="#1a1818" stroke-width="0.5"/>
+  <line x1="720" y1="370" x2="400" y2="340" stroke="#1a1818" stroke-width="0.5"/>
+  <line x1="640" y1="385" x2="420" y2="350" stroke="#1a1818" stroke-width="0.5"/>
+  <line x1="560" y1="395" x2="430" y2="355" stroke="#1a1818" stroke-width="0.5"/>
+
+  <!-- Corridor vanishing point -->
+  <rect x="380" y="130" width="40" height="210" fill="#0a0808" opacity="0.9"/>
+
+  <!-- Corridor end walls -->
+  <rect x="380" y="130" width="40" height="210" fill="#0a0808"/>
+  <!-- Door frame at end -->
+  <rect x="390" y="150" width="20" height="190" fill="#080608" stroke="#1a1818" stroke-width="0.5"/>
+
+  <!-- Ceiling lights -->
+  <ellipse cx="200" cy="95" rx="60" ry="15" fill="url(#lampGlow)" opacity="0.3"/>
+  <ellipse cx="600" cy="95" rx="60" ry="15" fill="url(#lampGlow)" opacity="0.3"/>
+  <ellipse cx="400" cy="140" rx="40" ry="10" fill="url(#lampGlow)" opacity="0.2"/>
+
+  <!-- Ceiling light fixtures -->
+  <rect x="185" y="88" width="30" height="4" rx="1" fill="#1a1818"/>
+  <rect x="585" y="88" width="30" height="4" rx="1" fill="#1a1818"/>
+  <rect x="385" y="132" width="30" height="3" rx="1" fill="#1a1818"/>
+
+  <!-- Light beams from ceiling -->
+  <polygon points="190,92 170,350 230,350 210,92" fill="#2a2520" opacity="0.04"/>
+  <polygon points="590,92 570,350 630,350 610,92" fill="#2a2520" opacity="0.04"/>
+
+  <!-- Wall details - left side -->
+  <!-- Room number plate -->
+  <rect x="120" y="200" width="25" height="15" fill="#1a1818" stroke="#222020" stroke-width="0.5"/>
+  <text x="124" y="211" fill="#3a3535" font-size="7" font-family="monospace">307</text>
+
+  <!-- Wall sconce left -->
+  <rect x="155" y="180" width="8" height="25" rx="2" fill="#1e1c1c"/>
+  <ellipse cx="159" cy="210" rx="8" ry="3" fill="#2a2520" opacity="0.2"/>
+
+  <!-- Wall details - right side -->
+  <rect x="655" y="200" width="25" height="15" fill="#1a1818" stroke="#222020" stroke-width="0.5"/>
+  <text x="659" y="211" fill="#3a3535" font-size="7" font-family="monospace">306</text>
+
+  <!-- Wall sconce right -->
+  <rect x="637" y="180" width="8" height="25" rx="2" fill="#1e1c1c"/>
+  <ellipse cx="641" cy="210" rx="8" ry="3" fill="#2a2520" opacity="0.2"/>
+
+  <!-- Fire extinguisher on left wall -->
+  <rect x="280" y="250" width="10" height="28" rx="2" fill="#2a1a1a" opacity="0.5"/>
+  <rect x="282" y="248" width="6" height="4" fill="#2a1a1a" opacity="0.5"/>
+
+  <!-- ========== THE EMPTY BED (center of corridor) ========== -->
+  <g transform="translate(340, 260) scale(1.1)">
+    <!-- Bed shadow on floor -->
+    <ellipse cx="60" cy="120" rx="70" ry="15" fill="#080608" opacity="0.6"/>
+
+    <!-- Bed frame base -->
+    <rect x="0" y="90" width="120" height="8" rx="1" fill="url(#bedMetal)"/>
+
+    <!-- Bed wheels -->
+    <circle cx="10" cy="102" r="4" fill="#1a1818" stroke="#2a2828" stroke-width="0.5"/>
+    <circle cx="110" cy="102" r="4" fill="#1a1818" stroke="#2a2828" stroke-width="0.5"/>
+    <circle cx="55" cy="102" r="3.5" fill="#1a1818" stroke="#2a2828" stroke-width="0.5"/>
+    <circle cx="65" cy="102" r="3.5" fill="#1a1818" stroke="#2a2828" stroke-width="0.5"/>
+
+    <!-- Bed frame sides -->
+    <rect x="5" y="75" width="110" height="3" rx="0.5" fill="#2a2828"/>
+    <rect x="5" y="85" width="110" height="3" rx="0.5" fill="#2a2828"/>
+
+    <!-- Headboard -->
+    <rect x="0" y="55" width="8" height="40" rx="1" fill="#2e2c2c"/>
+    <rect x="0" y="55" width="8" height="3" rx="0.5" fill="#3a3838"/>
+    <rect x="0" y="82" width="8" height="3" rx="0.5" fill="#3a3838"/>
+
+    <!-- Footboard -->
+    <rect x="112" y="55" width="8" height="40" rx="1" fill="#2e2c2c"/>
+    <rect x="112" y="55" width="8" height="3" rx="0.5" fill="#3a3838"/>
+    <rect x="112" y="82" width="8" height="3" rx="0.5" fill="#3a3838"/>
+
+    <!-- Mattress surface (bare, no sheets) -->
+    <rect x="8" y="72" width="104" height="18" rx="1" fill="#1e1c1c"/>
+    <!-- Mattress highlight -->
+    <rect x="10" y="73" width="100" height="3" rx="0.5" fill="#2a2828" opacity="0.5"/>
+
+    <!-- IV pole on side -->
+    <rect x="115" y="20" width="2" height="75" fill="#2a2828"/>
+    <circle cx="116" cy="18" r="3" fill="none" stroke="#2a2828" stroke-width="1"/>
+    <!-- IV bag hanging -->
+    <rect x="112" y="20" width="8" height="12" rx="2" fill="#1a1a2a" opacity="0.4"/>
+
+    <!-- Side rail (one side down, one up) -->
+    <line x1="15" y1="68" x2="15" y2="76" stroke="#2a2828" stroke-width="0.8"/>
+    <line x1="30" y1="68" x2="30" y2="76" stroke="#2a2828" stroke-width="0.8"/>
+    <line x1="45" y1="68" x2="45" y2="76" stroke="#2a2828" stroke-width="0.8"/>
+    <line x1="60" y1="68" x2="60" y2="76" stroke="#2a2828" stroke-width="0.8"/>
+    <line x1="75" y1="68" x2="75" y2="76" stroke="#2a2828" stroke-width="0.8"/>
+    <line x1="90" y1="68" x2="90" y2="76" stroke="#2a2828" stroke-width="0.8"/>
+    <line x1="105" y1="68" x2="105" y2="76" stroke="#2a2828" stroke-width="0.8"/>
+  </g>
+
+  <!-- Subtle dirt/mud stain near bed -->
+  <ellipse cx="490" cy="355" rx="12" ry="4" fill="#2a2018" opacity="0.4"/>
+  <ellipse cx="495" cy="357" rx="6" ry="2" fill="#3a2a1a" opacity="0.3"/>
+
+  <!-- Emergency exit sign glow (faint green) -->
+  <rect x="395" y="140" width="10" height="6" rx="1" fill="#1a3a1a" opacity="0.3" filter="url(#faintGlow)"/>
+
+  <!-- Corridor depth fog/atmosphere -->
+  <rect x="380" y="130" width="40" height="210" fill="#0e0c0c" opacity="0.3"/>
+
+  <!-- Vignette overlay -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+
+  <!-- Subtle noise texture hint -->
+  <g opacity="0.03">
+    <circle cx="100" cy="200" r="1" fill="#fff"/>
+    <circle cx="300" cy="150" r="0.8" fill="#fff"/>
+    <circle cx="500" cy="300" r="1.2" fill="#fff"/>
+    <circle cx="700" cy="180" r="0.7" fill="#fff"/>
+    <circle cx="200" cy="350" r="0.9" fill="#fff"/>
+    <circle cx="600" cy="380" r="1" fill="#fff"/>
+    <circle cx="400" cy="250" r="0.6" fill="#fff"/>
+    <circle cx="150" cy="100" r="0.8" fill="#fff"/>
+    <circle cx="650" cy="120" r="0.7" fill="#fff"/>
+    <circle cx="350" cy="380" r="1.1" fill="#fff"/>
+  </g>
+</svg>
