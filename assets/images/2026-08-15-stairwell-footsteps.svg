@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Subtle vignette -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.6"/>
+  </radialGradient>
+  <rect width="800" height="450" fill="url(#vignette)"/>
+  
+  <!-- Stairwell perspective - walls -->
+  <!-- Left wall -->
+  <polygon points="0,0 200,80 200,370 0,450" fill="#0d0b0b" stroke="#1a1515" stroke-width="0.5"/>
+  <!-- Right wall -->
+  <polygon points="800,0 600,80 600,370 800,450" fill="#0d0b0b" stroke="#1a1515" stroke-width="0.5"/>
+  
+  <!-- Stair steps - receding into darkness -->
+  <g opacity="0.4">
+    <!-- Step 1 -->
+    <rect x="220" y="350" width="360" height="8" fill="#1a1515"/>
+    <!-- Step 2 -->
+    <rect x="240" y="320" width="320" height="8" fill="#1a1515"/>
+    <!-- Step 3 -->
+    <rect x="260" y="290" width="280" height="8" fill="#1a1515"/>
+    <!-- Step 4 -->
+    <rect x="280" y="260" width="240" height="8" fill="#1a1515"/>
+    <!-- Step 5 -->
+    <rect x="300" y="230" width="200" height="8" fill="#1a1515"/>
+    <!-- Step 6 -->
+    <rect x="320" y="200" width="160" height="8" fill="#1a1515"/>
+    <!-- Step 7 -->
+    <rect x="340" y="170" width="120" height="8" fill="#1a1515"/>
+    <!-- Step 8 -->
+    <rect x="360" y="140" width="80" height="8" fill="#1a1515" opacity="0.6"/>
+    <!-- Step 9 -->
+    <rect x="380" y="110" width="40" height="8" fill="#1a1515" opacity="0.3"/>
+  </g>
+  
+  <!-- Red emergency light glow -->
+  <ellipse cx="600" cy="200" rx="60" ry="60" fill="#8b0000" opacity="0.08"/>
+  <ellipse cx="600" cy="200" rx="30" ry="30" fill="#8b0000" opacity="0.15"/>
+  <ellipse cx="600" cy="200" rx="12" ry="12" fill="#cc2200" opacity="0.3"/>
+  
+  <!-- Emergency light fixture -->
+  <rect x="592" y="188" width="16" height="16" rx="3" fill="#2a1515" stroke="#4a2020" stroke-width="1"/>
+  <circle cx="600" cy="196" r="5" fill="#cc2200" opacity="0.8"/>
+  
+  <!-- Red light cast on floor -->
+  <ellipse cx="580" cy="340" rx="80" ry="15" fill="#8b0000" opacity="0.04"/>
+  <ellipse cx="560" cy="310" rx="60" ry="12" fill="#8b0000" opacity="0.03"/>
+  
+  <!-- Shadowy figure on stairs - silhouette -->
+  <g opacity="0.35">
+    <!-- Head -->
+    <ellipse cx="370" cy="145" rx="10" ry="13" fill="#050404"/>
+    <!-- Body -->
+    <path d="M365,158 Q360,190 355,230 L375,230 Q370,190 375,158 Z" fill="#050404"/>
+    <!-- Legs -->
+    <path d="M358,230 L350,270 L360,270 L365,230" fill="#050404"/>
+    <path d="M368,230 L375,265 L385,265 L378,230" fill="#050404"/>
+    <!-- Arms -->
+    <path d="M362,165 L345,200 L350,202 L365,170" fill="#050404"/>
+    <path d="M373,165 L390,195 L386,198 L370,170" fill="#050404"/>
+  </g>
+  
+  <!-- Footprint trail - subtle -->
+  <g opacity="0.15">
+    <ellipse cx="355" cy="340" rx="4" ry="7" fill="#050404"/>
+    <ellipse cx="370" cy="315" rx="4" ry="7" fill="#050404"/>
+    <ellipse cx="340" cy="290" rx="4" ry="7" fill="#050404"/>
+    <ellipse cx="355" cy="265" rx="4" ry="7" fill="#050404"/>
+  </g>
+  
+  <!-- Dust particles in emergency light -->
+  <g opacity="0.2">
+    <circle cx="570" cy="220" r="1" fill="#cc4400"/>
+    <circle cx="590" cy="240" r="0.8" fill="#cc4400"/>
+    <circle cx="560" cy="260" r="1.2" fill="#cc4400"/>
+    <circle cx="610" cy="230" r="0.6" fill="#cc4400"/>
+    <circle cx="545" cy="280" r="1" fill="#cc4400"/>
+  </g>
+  
+  <!-- Door frame at bottom -->
+  <rect x="310" y="355" width="180" height="95" fill="none" stroke="#1a1515" stroke-width="2"/>
+  <rect x="320" y="365" width="160" height="85" fill="#080606" stroke="#151010" stroke-width="0.5"/>
+  
+  <!-- Bottom corridor suggestion -->
+  <line x1="310" y1="450" x2="310" y2="450" stroke="#1a1515" stroke-width="0"/>
+  <rect x="0" y="440" width="800" height="10" fill="#080606" opacity="0.5"/>
+  
+  <!-- Subtle noise texture overlay -->
+  <rect width="800" height="450" fill="none" opacity="0.03" stroke="none"/>
+</svg>
