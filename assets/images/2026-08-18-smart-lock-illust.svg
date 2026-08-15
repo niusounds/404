@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1210" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Subtle floor -->
+  <rect x="0" y="320" width="800" height="130" fill="#0d0a0a"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1410" stroke-width="1"/>
+
+  <!-- Door frame - center-left area -->
+  <rect x="300" y="60" width="120" height="260" fill="#0e0c0c" stroke="#1a1614" stroke-width="2"/>
+  <!-- Door panel -->
+  <rect x="305" y="65" width="110" height="255" fill="#121010"/>
+  <!-- Door handle -->
+  <circle cx="395" cy="200" r="5" fill="#2a2520"/>
+  <rect x="393" y="195" width="4" height="15" rx="2" fill="#2a2520"/>
+
+  <!-- Door gap - bottom crack with light coming through -->
+  <rect x="310" y="318" width="100" height="4" fill="#1a1410" filter="url(#glow)" opacity="0.6"/>
+
+  <!-- Shadow figure at the door gap -->
+  <!-- Legs silhouette under the door -->
+  <path d="M340,318 L340,340 L355,340 L355,318 Z" fill="#080606" opacity="0.9"/>
+  <path d="M365,318 L365,338 L378,338 L378,318 Z" fill="#080606" opacity="0.9"/>
+  <!-- Lower body -->
+  <path d="M345,300 L340,318 L380,318 L375,300 Z" fill="#080606" opacity="0.85"/>
+  <!-- Torso above -->
+  <path d="M350,260 L345,300 L375,300 L370,260 Z" fill="#080606" opacity="0.8"/>
+  <!-- Head -->
+  <ellipse cx="360" cy="248" rx="12" ry="14" fill="#080606" opacity="0.85"/>
+
+  <!-- Faint light from under the door -->
+  <rect x="308" y="322" width="104" height="20" fill="#1a1510" opacity="0.15" filter="url(#blur3)"/>
+  <rect x="315" y="322" width="90" height="10" fill="#2a2015" opacity="0.1" filter="url(#blur3)"/>
+
+  <!-- Phone glow on the right side -->
+  <rect x="620" y="280" width="50" height="90" rx="5" fill="#1a1a20" opacity="0.9"/>
+  <rect x="625" y="285" width="40" height="75" rx="3" fill="#2a3040" opacity="0.7" filter="url(#glow)"/>
+  <!-- Phone screen light spilling -->
+  <ellipse cx="645" cy="320" rx="40" ry="30" fill="#2a3545" opacity="0.08" filter="url(#blur3)"/>
+
+  <!-- Room perspective - walls -->
+  <rect x="0" y="0" width="300" height="450" fill="#0c0a0a" opacity="0.5"/>
+  <rect x="420" y="0" width="380" height="450" fill="#0c0a0a" opacity="0.5"/>
+
+  <!-- Ceiling line -->
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#141010" stroke-width="1"/>
+
+  <!-- Subtle dust particles -->
+  <circle cx="320" cy="310" r="0.8" fill="#2a2520" opacity="0.4"/>
+  <circle cx="340" cy="305" r="0.5" fill="#2a2520" opacity="0.3"/>
+  <circle cx="360" cy="315" r="0.7" fill="#2a2520" opacity="0.35"/>
+  <circle cx="380" cy="308" r="0.6" fill="#2a2520" opacity="0.3"/>
+  <circle cx="395" cy="312" r="0.9" fill="#2a2520" opacity="0.25"/>
+  <circle cx="370" cy="320" r="0.5" fill="#2a2520" opacity="0.2"/>
+
+  <!-- Vignette overlay -->
+  <rect width="800" height="450" fill="url(#vignette)"/>
+
+  <!-- Title text -->
+  <text x="400" y="420" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3a3530" letter-spacing="3">スマートロックが夜中に解除される</text>
+</svg>
