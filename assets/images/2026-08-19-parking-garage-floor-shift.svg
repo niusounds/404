@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Floor lines - perspective parking garage -->
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#1a1515" stroke-width="2"/>
+  <line x1="100" y1="250" x2="700" y2="250" stroke="#1a1515" stroke-width="1.5"/>
+  <line x1="100" y1="300" x2="700" y2="300" stroke="#1a1515" stroke-width="1"/>
+  <line x1="100" y1="350" x2="700" y2="350" stroke="#1a1515" stroke-width="0.5"/>
+  
+  <!-- Parking space dividers -->
+  <line x1="200" y1="180" x2="180" y2="380" stroke="#1a1515" stroke-width="1"/>
+  <line x1="300" y1="180" x2="280" y2="380" stroke="#1a1515" stroke-width="1"/>
+  <line x1="400" y1="180" x2="400" y2="380" stroke="#1a1515" stroke-width="1"/>
+  <line x1="500" y1="180" x2="520" y2="380" stroke="#1a1515" stroke-width="1"/>
+  <line x1="600" y1="180" x2="620" y2="380" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Floor number signs -->
+  <rect x="155" y="165" width="50" height="18" rx="2" fill="#1a1515" stroke="#2a2020" stroke-width="0.5"/>
+  <text x="180" y="178" text-anchor="middle" fill="#3a3030" font-family="monospace" font-size="11">A-05</text>
+  
+  <rect x="255" y="165" width="50" height="18" rx="2" fill="#1a1515" stroke="#2a2020" stroke-width="0.5"/>
+  <text x="280" y="178" text-anchor="middle" fill="#3a3030" font-family="monospace" font-size="11">A-04</text>
+  
+  <rect x="355" y="165" width="50" height="18" rx="2" fill="#1a1515" stroke="#2a2020" stroke-width="0.5"/>
+  <text x="380" y="178" text-anchor="middle" fill="#3a3030" font-family="monospace" font-size="11">A-03</text>
+  
+  <rect x="455" y="165" width="50" height="18" rx="2" fill="#1a1515" stroke="#2a2020" stroke-width="0.5"/>
+  <text x="480" y="178" text-anchor="middle" fill="#3a3030" font-family="monospace" font-size="11">A-02</text>
+  
+  <rect x="555" y="165" width="50" height="18" rx="2" fill="#2a2020" stroke="#4a3535" stroke-width="1"/>
+  <text x="580" y="178" text-anchor="middle" fill="#6a3535" font-family="monospace" font-size="11" font-weight="bold">A-01</text>
+  
+  <!-- Car silhouette - normal position (ghostly, faint) -->
+  <g opacity="0.15">
+    <rect x="260" y="260" width="80" height="45" rx="8" fill="#2a2525" stroke="#3a3535" stroke-width="0.5"/>
+    <rect x="270" y="252" width="60" height="15" rx="5" fill="#2a2525" stroke="#3a3535" stroke-width="0.5"/>
+    <circle cx="275" cy="310" r="8" fill="#1a1515" stroke="#2a2525" stroke-width="1"/>
+    <circle cx="325" cy="310" r="8" fill="#1a1515" stroke="#2a2525" stroke-width="1"/>
+  </g>
+  
+  <!-- Car silhouette - moved position (A-01, more visible, eerie) -->
+  <g>
+    <rect x="560" y="260" width="80" height="45" rx="8" fill="#2a2020" stroke="#5a3535" stroke-width="1"/>
+    <rect x="570" y="252" width="60" height="15" rx="5" fill="#2a2020" stroke="#5a3535" stroke-width="1"/>
+    <!-- Headlights - faint red glow -->
+    <circle cx="565" cy="305" r="4" fill="#3a1515" opacity="0.6"/>
+    <circle cx="565" cy="305" r="8" fill="#3a1515" opacity="0.2"/>
+    <circle cx="635" cy="305" r="4" fill="#3a1515" opacity="0.6"/>
+    <circle cx="635" cy="305" r="8" fill="#3a1515" opacity="0.2"/>
+    <circle cx="565" cy="310" r="8" fill="#1a1515" stroke="#2a2020" stroke-width="1"/>
+    <circle cx="635" cy="310" r="8" fill="#1a1515" stroke="#2a2020" stroke-width="1"/>
+  </g>
+  
+  <!-- Frost/hoarfrost on side mirror of A-01 car -->
+  <g opacity="0.4">
+    <circle cx="558" cy="268" r="3" fill="#c8d8e8"/>
+    <circle cx="555" cy="272" r="2" fill="#d8e8f8"/>
+    <circle cx="562" cy="274" r="2.5" fill="#c8d8e8"/>
+  </g>
+  
+  <!-- Finger-shaped frost mark on mirror -->
+  <g opacity="0.35">
+    <ellipse cx="557" cy="270" rx="2" ry="5" fill="#d8e8f8"/>
+    <ellipse cx="559" cy="271" rx="1.5" ry="4" fill="#d8e8f8"/>
+    <ellipse cx="561" cy="272" rx="1" ry="3" fill="#d8e8f8"/>
+  </g>
+  
+  <!-- Small hole in wall at A-01 -->
+  <circle cx="655" cy="270" r="3" fill="#0a0808" stroke="#2a2020" stroke-width="0.5"/>
+  <!-- White smoke/steam from hole -->
+  <g opacity="0.15">
+    <circle cx="658" cy="265" r="4" fill="#e8e8e8"/>
+    <circle cx="662" cy="258" r="3" fill="#e8e8e8"/>
+    <circle cx="655" cy="250" r="2.5" fill="#e8e8e8"/>
+  </g>
+  
+  <!-- Dim fluorescent light -->
+  <rect x="390" y="140" width="20" height="6" rx="3" fill="#2a2520" stroke="#3a3530" stroke-width="0.5"/>
+  <ellipse cx="400" cy="150" rx="30" ry="20" fill="#3a3520" opacity="0.08"/>
+  
+  <!-- Another dim light -->
+  <rect x="200" y="140" width="20" height="6" rx="3" fill="#1a1510" stroke="#2a2520" stroke-width="0.5"/>
+  
+  <!-- Arrow showing movement direction -->
+  <g opacity="0.2">
+    <path d="M 340 285 L 540 285" stroke="#5a3535" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M 530 280 L 545 285 L 530 290" stroke="#5a3535" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Subtle vignette effect -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="60%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
