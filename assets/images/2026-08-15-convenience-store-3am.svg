@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#1a1210"/>
+    </linearGradient>
+    <linearGradient id="fluorescent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f0ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e8f0ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="counter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a2020"/>
+      <stop offset="50%" stop-color="#3a2a2a"/>
+      <stop offset="100%" stop-color="#2a2020"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ghost">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="320" width="800" height="130" fill="#120e0e" opacity="0.8"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1414" stroke-width="1"/>
+
+  <!-- Fluorescent light cone from ceiling -->
+  <polygon points="350,0 450,0 500,280 300,280" fill="url(#fluorescent)" opacity="0.6"/>
+  <rect x="340" y="0" width="120" height="8" fill="#c8d8f0" opacity="0.3" rx="2"/>
+
+  <!-- Convenience store window (left side) -->
+  <rect x="20" y="80" width="180" height="240" fill="#0c0c14" stroke="#1a1a2a" stroke-width="2" rx="3"/>
+  <!-- Window frame -->
+  <line x1="110" y1="80" x2="110" y2="320" stroke="#1a1a2a" stroke-width="1.5"/>
+  <line x1="20" y1="200" x2="200" y2="200" stroke="#1a1a2a" stroke-width="1.5"/>
+  <!-- Dark street visible through window -->
+  <rect x="22" y="82" width="86" height="236" fill="#08080c"/>
+  <rect x="112" y="82" width="86" height="236" fill="#08080c"/>
+  <!-- Distant street light -->
+  <circle cx="60" cy="180" r="3" fill="#f0a030" opacity="0.15" filter="url(#softGlow)"/>
+
+  <!-- Counter / register area (right side) -->
+  <rect x="480" y="250" width="280" height="70" fill="url(#counter)" rx="4"/>
+  <rect x="480" y="248" width="280" height="6" fill="#4a3a3a" rx="2"/>
+  <!-- Register screen glow -->
+  <rect x="520" y="200" width="80" height="50" fill="#0a1a0a" stroke="#1a3a1a" stroke-width="1" rx="3"/>
+  <rect x="525" y="205" width="70" height="40" fill="#0d2a0d" opacity="0.8"/>
+  <text x="535" y="230" font-size="8" fill="#2a6a2a" font-family="monospace" opacity="0.6">¥108</text>
+  <!-- Register light -->
+  <circle cx="560" cy="215" r="2" fill="#40ff40" opacity="0.4" filter="url(#glow)"/>
+
+  <!-- Shelves behind counter -->
+  <rect x="540" y="100" width="160" height="140" fill="#1a1414" opacity="0.5" rx="2"/>
+  <line x1="540" y1="145" x2="700" y2="145" stroke="#2a2222" stroke-width="1"/>
+  <line x1="540" y1="190" x2="700" y2="190" stroke="#2a2222" stroke-width="1"/>
+  <line x1="540" y1="235" x2="700" y2="235" stroke="#2a2222" stroke-width="1"/>
+  <!-- Faint product silhouettes on shelves -->
+  <rect x="555" y="125" width="12" height="18" fill="#2a2020" rx="1" opacity="0.5"/>
+  <rect x="570" y="130" width="10" height="13" fill="#2a2020" rx="1" opacity="0.4"/>
+  <rect x="585" y="120" width="14" height="23" fill="#2a2020" rx="1" opacity="0.45"/>
+  <rect x="605" y="128" width="11" height="15" fill="#2a2020" rx="1" opacity="0.35"/>
+  <rect x="630" y="135" width="13" height="8" fill="#2a2020" rx="1" opacity="0.4"/>
+  <rect x="650" y="130" width="15" height="12" fill="#2a2020" rx="1" opacity="0.3"/>
+
+  <!-- Customer silhouette (standing at counter) -->
+  <g opacity="0.85">
+    <!-- Head -->
+    <ellipse cx="420" cy="175" rx="18" ry="22" fill="#0a0a0a"/>
+    <!-- Body -->
+    <path d="M395,195 Q395,185 420,180 Q445,185 445,195 L440,260 L400,260 Z" fill="#0a0a0a"/>
+    <!-- Legs -->
+    <rect x="402" y="258" width="8" height="62" fill="#0a0a0a" rx="2"/>
+    <rect x="418" y="258" width="8" height="62" fill="#0a0a0a" rx="2"/>
+    <!-- Arm reaching toward counter -->
+    <path d="M440,200 L470,220 L475,218 L445,198" fill="#0a0a0a"/>
+  </g>
+
+  <!-- Ghostly figure behind the customer (faint, barely visible) -->
+  <g opacity="0.12" filter="url(#ghost)">
+    <!-- Head - slightly offset -->
+    <ellipse cx="425" cy="168" rx="20" ry="24" fill="#1a1a2a"/>
+    <!-- Eyes - faint white -->
+    <ellipse cx="418" cy="166" rx="3" ry="2" fill="#e0e0f0" opacity="0.5"/>
+    <ellipse cx="432" cy="166" rx="3" ry="2" fill="#e0e0f0" opacity="0.5"/>
+    <!-- Body - elongated -->
+    <path d="M398,190 Q395,180 425,175 Q455,180 452,190 L455,290 Q440,295 425,295 Q410,295 395,290 Z" fill="#1a1a2a"/>
+    <!-- Arms - hanging down unnaturally -->
+    <path d="M400,195 Q380,210 370,250 Q368,260 372,258 Q382,215 402,200" fill="#1a1a2a" opacity="0.7"/>
+    <path d="M450,195 Q470,210 478,245 Q480,255 476,253 Q468,218 448,200" fill="#1a1a2a" opacity="0.7"/>
+  </g>
+
+  <!-- Second ghost (behind counter, barely visible) -->
+  <g opacity="0.08" filter="url(#ghost)">
+    <ellipse cx="620" cy="155" rx="18" ry="22" fill="#1a1a2a"/>
+    <ellipse cx="615" cy="153" rx="2.5" ry="1.5" fill="#e0e0f0" opacity="0.4"/>
+    <ellipse cx="625" cy="153" rx="2.5" ry="1.5" fill="#e0e0f0" opacity="0.4"/>
+    <path d="M605,175 Q603,168 620,165 Q637,168 635,175 L638,240 L602,240 Z" fill="#1a1a2a"/>
+  </g>
+
+  <!-- Floor reflection of fluorescent light -->
+  <ellipse cx="400" cy="350" rx="120" ry="15" fill="#c8d8f0" opacity="0.03"/>
+
+  <!-- Subtle atmosphere: cold light pooling on floor -->
+  <ellipse cx="400" cy="340" rx="60" ry="8" fill="#c8d8f0" opacity="0.02"/>
+
+  <!-- Corner darkness vignette -->
+  <rect x="0" y="0" width="800" height="450" fill="none"/>
+  <rect x="0" y="0" width="800" height="450" fill="#0a0808" opacity="0.15" style="mix-blend-mode: multiply;"/>
+
+  <!-- Subtle timestamp on register (3:00 AM) -->
+  <text x="532" y="242" font-size="6" fill="#2a5a2a" font-family="monospace" opacity="0.4">03:00:00</text>
+
+  <!-- Small detail: a single onigiri wrapper on the counter -->
+  <rect x="470" y="246" width="18" height="4" fill="#2a2020" rx="1" opacity="0.6" transform="rotate(-3 479 248)"/>
+</svg>
