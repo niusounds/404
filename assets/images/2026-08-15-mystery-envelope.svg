@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1414"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Subtle vertical lines suggesting a wall -->
+  <line x1="0" y1="0" x2="0" y2="450" stroke="#1a1414" stroke-width="0.5"/>
+
+  <!-- Mailbox - dark silhouette -->
+  <rect x="310" y="120" width="180" height="220" rx="8" fill="#0d0b0b" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Mailbox top curve -->
+  <path d="M 310 140 Q 400 90 490 140" fill="none" stroke="#1a1515" stroke-width="1.5"/>
+  
+  <!-- Mail slot -->
+  <rect x="350" y="155" width="100" height="4" rx="2" fill="#1a1515"/>
+  
+  <!-- Dark interior visible through slot -->
+  <rect x="355" y="159" width="90" height="80" fill="#050404"/>
+
+  <!-- White envelope half-inserted into slot -->
+  <rect x="340" y="140" width="80" height="55" rx="2" fill="#e8e0d4" opacity="0.9"/>
+  <!-- Envelope flap -->
+  <path d="M 340 140 L 380 165 L 420 140" fill="none" stroke="#d4ccc0" stroke-width="1"/>
+  
+  <!-- Envelope stamp - the eye -->
+  <ellipse cx="405" cy="180" rx="6" ry="3.5" fill="#1a1414"/>
+  <circle cx="405" cy="180" r="1.5" fill="#2a2020"/>
+  
+  <!-- More envelopes stacked inside mailbox -->
+  <rect x="360" y="170" width="70" height="50" rx="2" fill="#d8d0c4" opacity="0.15"/>
+  <rect x="365" y="175" width="65" height="45" rx="2" fill="#c8c0b4" opacity="0.1"/>
+  <rect x="358" y="168" width="72" height="52" rx="2" fill="#e0d8cc" opacity="0.12"/>
+
+  <!-- Light from above - moonlight effect -->
+  <ellipse cx="400" cy="0" rx="120" ry="60" fill="#1e1a1a" opacity="0.3" filter="url(#softGlow)"/>
+  <line x1="400" y1="0" x2="400" y2="120" stroke="#1e1a1a" stroke-width="40" opacity="0.15" filter="url(#softGlow)"/>
+
+  <!-- Floor shadow -->
+  <ellipse cx="400" cy="350" rx="110" ry="12" fill="#050404" opacity="0.5"/>
+
+  <!-- Post area below -->
+  <rect x="370" y="340" width="60" height="60" fill="#0d0b0b"/>
+  <rect x="360" y="335" width="80" height="8" rx="2" fill="#121010"/>
+
+  <!-- Eerie eyes watching from darkness above -->
+  <g opacity="0.08" filter="url(#glow)">
+    <ellipse cx="200" cy="80" rx="8" ry="4" fill="#3a2a2a"/>
+    <circle cx="200" cy="80" r="2" fill="#4a3a3a"/>
+    <ellipse cx="220" cy="80" rx="8" ry="4" fill="#3a2a2a"/>
+    <circle cx="220" cy="80" r="2" fill="#4a3a3a"/>
+  </g>
+  
+  <g opacity="0.05" filter="url(#glow)">
+    <ellipse cx="580" cy="100" rx="6" ry="3" fill="#3a2a2a"/>
+    <circle cx="580" cy="100" r="1.5" fill="#4a3a3a"/>
+    <ellipse cx="595" cy="100" rx="6" ry="3" fill="#3a2a2a"/>
+    <circle cx="595" cy="100" r="1.5" fill="#4a3a3a"/>
+  </g>
+
+  <!-- Tiny envelope with eye stamp scattered around -->
+  <g opacity="0.06">
+    <rect x="150" y="300" width="25" height="17" rx="1" fill="#e8e0d4"/>
+    <ellipse cx="167" cy="313" rx="2" ry="1" fill="#1a1414"/>
+  </g>
+  <g opacity="0.04" transform="rotate(-15 650 280)">
+    <rect x="650" y="280" width="25" height="17" rx="1" fill="#e8e0d4"/>
+    <ellipse cx="667" cy="293" rx="2" ry="1" fill="#1a1414"/>
+  </g>
+
+  <!-- Subtle text-like lines on the envelope -->
+  <line x1="355" y1="155" x2="395" y2="155" stroke="#c8c0b4" stroke-width="0.5" opacity="0.3"/>
+  <line x1="358" y1="158" x2="385" y2="158" stroke="#c8c0b4" stroke-width="0.5" opacity="0.2"/>
+</svg>
