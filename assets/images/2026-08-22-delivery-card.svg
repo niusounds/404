@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1510"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#glow)" opacity="0.3"/>
+
+  <!-- Floor perspective -->
+  <polygon points="0,320 800,320 800,450 0,450" fill="#0d0a0a"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Door on the right side -->
+  <rect x="520" y="40" width="200" height="280" fill="#1a1510" stroke="#2a2015" stroke-width="1"/>
+  <!-- Door panel detail -->
+  <rect x="540" y="60" width="160" height="100" fill="#1e1812" stroke="#2a2015" stroke-width="0.5"/>
+  <rect x="540" y="180" width="160" height="100" fill="#1e1812" stroke="#2a2015" stroke-width="0.5"/>
+  <!-- Door handle -->
+  <circle cx="695" cy="190" r="4" fill="#3a3020"/>
+  <circle cx="695" cy="190" r="2" fill="#4a4030"/>
+  <!-- Door gap at bottom -->
+  <rect x="520" y="315" width="200" height="5" fill="#0a0808"/>
+
+  <!-- Light leaking under the door -->
+  <rect x="520" y="318" width="200" height="3" fill="#2a2518" opacity="0.5" filter="url(#blur1)"/>
+  <rect x="530" y="320" width="180" height="15" fill="#2a2518" opacity="0.15" filter="url(#blur2)"/>
+
+  <!-- Delivery card (不在票) under the door -->
+  <rect x="530" y="317" width="180" height="4" fill="#e8e0d0" opacity="0.9"/>
+  <!-- Card text lines -->
+  <rect x="545" y="317.5" width="40" height="0.5" fill="#888" opacity="0.6"/>
+  <rect x="545" y="318.5" width="30" height="0.5" fill="#888" opacity="0.6"/>
+  <rect x="595" y="317.5" width="20" height="0.5" fill="#888" opacity="0.6"/>
+  <rect x="595" y="318.5" width="15" height="0.5" fill="#888" opacity="0.6"/>
+
+  <!-- Card sliding left - second card -->
+  <rect x="380" y="318" width="140" height="3" fill="#e8e0d0" opacity="0.7"/>
+  <rect x="395" y="318.5" width="35" height="0.4" fill="#888" opacity="0.4"/>
+  <rect x="395" y="319.5" width="25" height="0.4" fill="#888" opacity="0.4"/>
+  <rect x="440" y="318.5" width="15" height="0.4" fill="#888" opacity="0.4"/>
+
+  <!-- Card further left - third card -->
+  <rect x="250" y="318" width="110" height="3" fill="#e8e0d0" opacity="0.4"/>
+  <rect x="265" y="318.5" width="30" height="0.3" fill="#888" opacity="0.3"/>
+  <rect x="265" y="319.5" width="20" height="0.3" fill="#888" opacity="0.3"/>
+
+  <!-- Left wall -->
+  <rect x="0" y="40" width="80" height="280" fill="#12100e" stroke="#1a1515" stroke-width="0.5"/>
+
+  <!-- Wall texture lines -->
+  <line x1="40" y1="60" x2="40" y2="320" stroke="#1a1515" stroke-width="0.3" opacity="0.5"/>
+  <line x1="60" y1="60" x2="60" y2="320" stroke="#1a1515" stroke-width="0.3" opacity="0.3"/>
+
+  <!-- Left door (faded, suggesting it's the narrator's door) -->
+  <rect x="100" y="50" width="160" height="270" fill="#151210" stroke="#1f1a15" stroke-width="0.5"/>
+  <rect x="115" y="70" width="130" height="80" fill="#181510" stroke="#1f1a15" stroke-width="0.3"/>
+  <rect x="115" y="170" width="130" height="80" fill="#181510" stroke="#1f1a15" stroke-width="0.3"/>
+  <!-- Faded door handle -->
+  <circle cx="245" cy="205" r="3" fill="#2a2520" opacity="0.6"/>
+
+  <!-- Faint light under left door -->
+  <rect x="100" y="318" width="160" height="2" fill="#1a1815" opacity="0.2" filter="url(#blur1)"/>
+
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="800" height="30" fill="#0d0b0b"/>
+  <line x1="0" y1="30" x2="800" y2="30" stroke="#1a1515" stroke-width="0.5"/>
+
+  <!-- Ceiling light (faint, flickering) -->
+  <circle cx="400" cy="30" r="8" fill="#1a1815"/>
+  <circle cx="400" cy="30" r="4" fill="#2a2518" opacity="0.3"/>
+  <!-- Light cone (very faint) -->
+  <polygon points="390,32 410,32 450,200 350,200" fill="#2a2518" opacity="0.03"/>
+
+  <!-- Time display (3:17) - floating near the door -->
+  <text x="620" y="120" font-family="monospace" font-size="28" fill="#3a3528" opacity="0.15">3:17</text>
+  <text x="620" y="120" font-family="monospace" font-size="28" fill="#4a4538" opacity="0.08">3:17</text>
+
+  <!-- Small detail: a shadow near the door gap -->
+  <ellipse cx="620" cy="322" rx="60" ry="3" fill="#0a0808" opacity="0.5"/>
+
+  <!-- Subtle dust particles -->
+  <circle cx="300" cy="200" r="0.5" fill="#3a3528" opacity="0.1"/>
+  <circle cx="450" cy="250" r="0.5" fill="#3a3528" opacity="0.08"/>
+  <circle cx="500" cy="180" r="0.5" fill="#3a3528" opacity="0.12"/>
+  <circle cx="350" cy="280" r="0.5" fill="#3a3528" opacity="0.06"/>
+  <circle cx="550" cy="220" r="0.5" fill="#3a3528" opacity="0.1"/>
+  <circle cx="200" cy="240" r="0.5" fill="#3a3528" opacity="0.08"/>
+  <circle cx="650" cy="260" r="0.5" fill="#3a3528" opacity="0.07"/>
+
+  <!-- Bottom text hint - barely visible -->
+  <text x="400" y="420" font-family="serif" font-size="11" fill="#2a2518" opacity="0.2" text-anchor="middle">中に入ります</text>
+</svg>
