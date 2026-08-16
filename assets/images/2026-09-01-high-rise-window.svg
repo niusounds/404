@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background: dark room interior -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Window frame -->
+  <rect x="180" y="30" width="440" height="320" rx="2" fill="#1a1515" stroke="#2a2222" stroke-width="3"/>
+  
+  <!-- Window glass with moonlight -->
+  <rect x="185" y="35" width="430" height="310" fill="#0d1020"/>
+  
+  <!-- Moon -->
+  <circle cx="520" cy="100" r="30" fill="#e8e0c8" opacity="0.15"/>
+  <circle cx="520" cy="100" r="25" fill="#f0e8d0" opacity="0.1"/>
+  
+  <!-- City lights below (tiny dots representing 32nd floor view) -->
+  <g opacity="0.3">
+    <circle cx="220" cy="280" r="1.5" fill="#ffcc44"/>
+    <circle cx="260" cy="310" r="1" fill="#ffaa22"/>
+    <circle cx="310" cy="270" r="1.5" fill="#ffcc44"/>
+    <circle cx="350" cy="330" r="1" fill="#ff9922"/>
+    <circle cx="400" cy="290" r="1.5" fill="#ffcc44"/>
+    <circle cx="450" cy="320" r="1" fill="#ffaa22"/>
+    <circle cx="500" cy="280" r="1.5" fill="#ffcc44"/>
+    <circle cx="550" cy="310" r="1" fill="#ff9922"/>
+    <circle cx="580" cy="260" r="1.5" fill="#ffcc44"/>
+    <circle cx="610" cy="300" r="1" fill="#ffaa22"/>
+    <circle cx="240" cy="340" r="1" fill="#ffcc44"/>
+    <circle cx="380" cy="350" r="1" fill="#ffaa22"/>
+    <circle cx="530" cy="340" r="1" fill="#ffcc44"/>
+  </g>
+  
+  <!-- Window reflection glow -->
+  <rect x="185" y="35" width="430" height="310" fill="url(#reflectionGlow)" opacity="0.4"/>
+  
+  <!-- Person silhouette looking out the window (foreground, at window) -->
+  <g transform="translate(380, 100)">
+    <!-- Head -->
+    <circle cx="0" cy="0" r="18" fill="#0a0808"/>
+    <!-- Body -->
+    <path d="M-15,20 Q-20,60 -18,120 L18,120 Q20,60 15,20 Z" fill="#0a0808"/>
+    <!-- Arms reaching to window -->
+    <path d="M15,35 Q40,30 60,25 L62,30 Q42,38 17,42 Z" fill="#0a0808"/>
+    <path d="M10,30 Q35,28 55,22 L57,26 Q37,34 12,36 Z" fill="#0a0808"/>
+  </g>
+  
+  <!-- Reflection: second shadow beside the person -->
+  <g transform="translate(460, 110)" opacity="0.6">
+    <!-- Head - slightly larger, more defined -->
+    <circle cx="0" cy="0" r="16" fill="#0a0808"/>
+    <!-- Body -->
+    <path d="M-12,18 Q-16,55 -14,110 L14,110 Q16,55 12,18 Z" fill="#0a0808"/>
+    <!-- Hand pressed against glass -->
+    <path d="M-12,30 Q-30,28 -40,20 L-42,24 Q-32,34 -14,36 Z" fill="#0a0808"/>
+    <!-- Fingers detail -->
+    <line x1="-40" y1="20" x2="-44" y2="14" stroke="#0a0808" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-38" y1="22" x2="-42" y2="16" stroke="#0a0808" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-36" y1="24" x2="-40" y2="18" stroke="#0a0808" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Glass reflection overlay -->
+  <rect x="185" y="35" width="430" height="310" fill="url(#glassReflection)" opacity="0.15"/>
+  
+  <!-- Window sill at bottom -->
+  <rect x="175" y="348" width="450" height="8" rx="1" fill="#1a1515"/>
+  
+  <!-- Subtle window frame details -->
+  <line x1="400" y1="35" x2="400" y2="345" stroke="#1a1515" stroke-width="2"/>
+  <line x1="185" y1="190" x2="615" y2="190" stroke="#1a1515" stroke-width="2"/>
+  
+  <!-- Moonlight beam through window -->
+  <polygon points="520,100 480,345 560,345" fill="#e8e0c8" opacity="0.02"/>
+  
+  <!-- Fog/mist effect on glass -->
+  <ellipse cx="400" cy="250" rx="180" ry="120" fill="#151018" opacity="0.1"/>
+  
+  <defs>
+    <radialGradient id="reflectionGlow" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#2a2530"/>
+      <stop offset="100%" stop-color="#0d1020"/>
+    </radialGradient>
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="50%" stop-color="#0d1018"/>
+      <stop offset="100%" stop-color="#1a1520"/>
+    </linearGradient>
+  </defs>
+</svg>
