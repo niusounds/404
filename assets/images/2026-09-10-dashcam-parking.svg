@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050508"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <radialGradient id="streetlight" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1a1508" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#sky)"/>
+
+  <!-- Street light glow (top left) -->
+  <circle cx="120" cy="20" r="180" fill="url(#streetlight)"/>
+
+  <!-- Concrete ground -->
+  <rect x="0" y="340" width="800" height="110" fill="#0d0b0b"/>
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#151212" stroke-width="1"/>
+
+  <!-- Parking lines -->
+  <line x1="200" y1="340" x2="180" y2="450" stroke="#1a1616" stroke-width="2"/>
+  <line x1="500" y1="340" x2="520" y2="450" stroke="#1a1616" stroke-width="2"/>
+
+  <!-- Car silhouette (center) -->
+  <!-- Car body -->
+  <path d="M250,310 L260,280 L310,255 L370,245 L430,245 L490,255 L540,280 L550,310 L550,340 L250,340 Z" fill="#080606" stroke="#1a1515" stroke-width="0.5"/>
+
+  <!-- Car windows (dark, slightly visible) -->
+  <path d="M315,260 L365,248 L425,248 L485,260 L480,275 L320,275 Z" fill="#0c0a0a" stroke="#1e1818" stroke-width="0.5"/>
+
+  <!-- Front windshield -->
+  <path d="M430,248 L485,260 L480,275 L430,275 Z" fill="#0e0c0c" stroke="#1e1818" stroke-width="0.5"/>
+
+  <!-- Rear window -->
+  <path d="M320,260 L365,248 L370,275 L320,275 Z" fill="#0e0c0c" stroke="#1e1818" stroke-width="0.5"/>
+
+  <!-- Back seat figure silhouette (inside car, through rear window) -->
+  <!-- Head -->
+  <ellipse cx="348" cy="258" rx="9" ry="11" fill="#060404"/>
+  <!-- Neck -->
+  <rect x="344" y="268" width="8" height="5" fill="#060404"/>
+  <!-- Upper body -->
+  <path d="M338,273 L340,268 L356,268 L358,273 L360,290 L336,290 Z" fill="#060404"/>
+  <!-- Slight hunch -->
+  <path d="M336,290 L334,295 L362,295 L360,290 Z" fill="#060404"/>
+
+  <!-- Driver seat figure (dark, barely visible) -->
+  <ellipse cx="460" cy="262" rx="8" ry="10" fill="#070505"/>
+  <path d="M452,272 L454,264 L466,264 L468,272 L470,288 L450,288 Z" fill="#070505"/>
+
+  <!-- Car wheels -->
+  <ellipse cx="300" cy="342" rx="25" ry="18" fill="#040303" stroke="#151212" stroke-width="1"/>
+  <ellipse cx="500" cy="342" rx="25" ry="18" fill="#040303" stroke="#151212" stroke-width="1"/>
+  <ellipse cx="300" cy="342" rx="12" ry="8" fill="#080606"/>
+  <ellipse cx="500" cy="342" rx="12" ry="8" fill="#080606"/>
+
+  <!-- Taillight glow (red) -->
+  <rect x="248" y="300" width="12" height="8" fill="#1a0505" filter="url(#glow)" opacity="0.8"/>
+  <rect x="248" y="300" width="12" height="8" fill="#2a0808" opacity="0.5"/>
+
+  <!-- Headlight glow (faint, front) -->
+  <rect x="548" y="305" width="8" height="6" fill="#1a1810" filter="url(#glow)" opacity="0.6"/>
+
+  <!-- Distant street light pole -->
+  <rect x="118" y="0" width="4" height="340" fill="#0e0c0c"/>
+  <circle cx="120" cy="5" r="6" fill="#1a1508" filter="url(#glow)" opacity="0.4"/>
+
+  <!-- Light cone from street lamp -->
+  <polygon points="120,11 80,340 160,340" fill="#1a1508" opacity="0.03"/>
+
+  <!-- Vignette / darkness overlay -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+
+  <!-- Tiny text-like element: dashcam camera on windshield -->
+  <rect x="425" y="240" width="10" height="6" rx="1" fill="#0a0808" stroke="#1a1818" stroke-width="0.5"/>
+  <circle cx="430" cy="243" r="2" fill="#0e0c0c" stroke="#1a1818" stroke-width="0.3"/>
+</svg>
