@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Moon/sky glow -->
+  <ellipse cx="650" cy="80" rx="120" ry="100" fill="#14121a" opacity="0.5"/>
+  <ellipse cx="650" cy="80" rx="60" ry="55" fill="#1a1825" opacity="0.4"/>
+  
+  <!-- Tree canopy - large elm tree silhouette -->
+  <g fill="#0d0b0d" opacity="0.9">
+    <!-- Main trunk -->
+    <rect x="520" y="180" width="30" height="270" rx="5"/>
+    <!-- Branches spreading -->
+    <path d="M535,200 Q480,160 400,140 Q380,135 370,150 Q360,170 380,180 Q420,195 460,210 Z" fill="#0d0b0d"/>
+    <path d="M540,220 Q580,180 650,150 Q670,145 680,160 Q690,180 670,195 Q630,210 590,225 Z" fill="#0d0b0d"/>
+    <path d="M530,250 Q460,220 380,210 Q360,208 355,225 Q350,245 370,250 Q410,258 450,260 Z" fill="#0d0b0d"/>
+    <!-- Branch tips -->
+    <path d="M400,140 Q370,120 340,130 Q320,140 330,155 Q340,165 360,160 Q380,155 400,150 Z" fill="#0d0b0d"/>
+    <path d="M650,150 Q680,130 710,140 Q730,150 720,165 Q710,175 690,170 Q670,165 650,160 Z" fill="#0d0b0d"/>
+    <path d="M380,210 Q340,195 310,200 Q290,205 300,220 Q310,230 330,225 Q360,220 380,220 Z" fill="#0d0b0d"/>
+    <!-- Foliage blobs -->
+    <ellipse cx="350" cy="145" rx="50" ry="30" fill="#0d0b0d"/>
+    <ellipse cx="420" cy="130" rx="45" ry="25" fill="#0d0b0d"/>
+    <ellipse cx="500" cy="120" rx="55" ry="28" fill="#0d0b0d"/>
+    <ellipse cx="580" cy="135" rx="50" ry="25" fill="#0d0b0d"/>
+    <ellipse cx="660" cy="155" rx="45" ry="22" fill="#0d0b0d"/>
+    <ellipse cx="330" cy="215" rx="40" ry="20" fill="#0d0b0d"/>
+    <ellipse cx="450" cy="200" rx="45" ry="22" fill="#0d0b0d"/>
+    <ellipse cx="560" cy="210" rx="40" ry="20" fill="#0d0b0d"/>
+  </g>
+  
+  <!-- Apartment building silhouette -->
+  <g fill="#0c0a0a">
+    <!-- Building body -->
+    <rect x="0" y="250" width="800" height="200"/>
+    <!-- Balcony floor -->
+    <rect x="250" y="310" width="300" height="8" fill="#110e0e"/>
+    <!-- Balcony railing -->
+    <rect x="250" y="270" width="300" height="3" fill="#1a1616"/>
+    <rect x="250" y="305" width="300" height="3" fill="#1a1616"/>
+    <!-- Railing posts -->
+    <rect x="270" y="270" width="3" height="38" fill="#1a1616"/>
+    <rect x="310" y="270" width="3" height="38" fill="#1a1616"/>
+    <rect x="350" y="270" width="3" height="38" fill="#1a1616"/>
+    <rect x="390" y="270" width="3" height="38" fill="#1a1616"/>
+    <rect x="430" y="270" width="3" height="38" fill="#1a1616"/>
+    <rect x="470" y="270" width="3" height="38" fill="#1a1616"/>
+    <rect x="510" y="270" width="3" height="38" fill="#1a1616"/>
+    <rect x="550" y="270" width="3" height="38" fill="#1a1616"/>
+    <rect x="590" y="270" width="3" height="38" fill="#1a1616"/>
+    <rect x="630" y="270" width="3" height="38" fill="#1a1616"/>
+    <!-- Window frame -->
+    <rect x="300" y="250" width="200" height="60" fill="none" stroke="#151212" stroke-width="2"/>
+    <!-- Warm light from window -->
+    <rect x="302" y="252" width="196" height="56" fill="#1e1810" opacity="0.6"/>
+    <!-- Curtain hint -->
+    <rect x="302" y="252" width="40" height="56" fill="#1a150c" opacity="0.4"/>
+  </g>
+  
+  <!-- Clothes on line -->
+  <g>
+    <!-- Clothesline -->
+    <line x1="320" y1="285" x2="480" y2="285" stroke="#1e1a1a" stroke-width="1.5"/>
+    <!-- Shirt -->
+    <rect x="340" y="285" width="35" height="45" fill="#1a1818" rx="2"/>
+    <rect x="345" y="285" width="8" height="15" fill="#1a1818" rx="1"/>
+    <rect x="365" y="285" width="8" height="12" fill="#1a1818" rx="1"/>
+    <!-- Socks -->
+    <rect x="400" y="285" width="12" height="30" fill="#1c1a1a" rx="3"/>
+    <rect x="415" y="285" width="12" height="30" fill="#1c1a1a" rx="3"/>
+    <!-- Pants -->
+    <rect x="440" y="285" width="30" height="55" fill="#181616" rx="2"/>
+    <!-- Red clothespin - one left behind -->
+    <rect x="560" y="308" width="6" height="8" fill="#3a1a1a" rx="1"/>
+  </g>
+  
+  <!-- The Thing - tall thin silhouette clinging to railing -->
+  <g fill="#060505">
+    <!-- Body - hunched forward -->
+    <ellipse cx="545" cy="265" rx="10" ry="20" fill="#060505"/>
+    <!-- Head - elongated -->
+    <ellipse cx="550" cy="238" rx="8" ry="12" fill="#060505"/>
+    <!-- Neck -->
+    <rect x="547" y="248" width="6" height="8" fill="#060505"/>
+    <!-- Left arm - long, reaching for clothes -->
+    <path d="M540,260 Q520,255 500,260 Q490,263 485,268 Q482,272 485,275 Q490,278 500,275 Q515,270 535,268 Z" fill="#060505"/>
+    <!-- Right arm - on railing -->
+    <path d="M550,260 Q555,258 560,260 Q565,262 563,268 Q562,272 558,270 Q555,268 552,265 Z" fill="#060505"/>
+    <!-- Left leg - dangling -->
+    <path d="M540,280 Q538,290 536,300 Q535,305 538,308 Q540,310 542,308 Q544,300 545,285 Z" fill="#060505"/>
+    <!-- Right leg - on railing -->
+    <path d="M550,280 Q552,288 554,295 Q555,298 558,296 Q560,293 558,288 Q556,283 553,280 Z" fill="#060505"/>
+    <!-- Fingers on railing - thin lines -->
+    <line x1="558" y1="270" x2="565" y2="272" stroke="#060505" stroke-width="1.5"/>
+    <line x1="560" y1="273" x2="567" y2="275" stroke="#060505" stroke-width="1.5"/>
+    <line x1="562" y1="276" x2="569" y2="278" stroke="#060505" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Dropping clothespin with water drop -->
+  <g>
+    <rect x="568" y="315" width="5" height="7" fill="#2a1515" rx="1"/>
+    <circle cx="570" cy="326" r="1.5" fill="#1a1818" opacity="0.8"/>
+  </g>
+  
+  <!-- Subtle fog/ground -->
+  <ellipse cx="400" cy="430" rx="500" ry="40" fill="#080606" opacity="0.6"/>
+  
+  <!-- Tiny red eye glow on the figure -->
+  <circle cx="553" cy="237" r="1.5" fill="#2a0a0a" opacity="0.7"/>
+</svg>
