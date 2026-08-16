@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1a1420"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <linearGradient id="screenGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a5a8a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1a2a4a" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGlow)"/>
+
+  <!-- Purikura machine outline -->
+  <rect x="250" y="30" width="300" height="390" rx="15" fill="#1a1a2a" stroke="#2a2a3a" stroke-width="2"/>
+  <rect x="260" y="50" width="280" height="200" rx="5" fill="#0a0a15" stroke="#3a5a8a" stroke-width="1" opacity="0.8"/>
+
+  <!-- Screen glow -->
+  <rect x="260" y="50" width="280" height="200" rx="5" fill="url(#screenGlow)" opacity="0.5"/>
+
+  <!-- Screen content - silhouette of person taking photo -->
+  <g transform="translate(370, 120)">
+    <!-- Head -->
+    <ellipse cx="30" cy="0" rx="18" ry="22" fill="#2a2a3a"/>
+    <!-- Body -->
+    <path d="M12,22 Q10,60 5,100 L55,100 Q50,60 48,22 Z" fill="#2a2a3a"/>
+    <!-- Arms up (taking photo pose) -->
+    <path d="M12,30 L-10,10 L-5,5 L15,25" fill="none" stroke="#2a2a3a" stroke-width="6" stroke-linecap="round"/>
+    <path d="M48,30 L70,10 L75,5 L55,25" fill="none" stroke="#2a2a3a" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- The extra person - barely visible behind, only in digital -->
+  <g opacity="0.15" filter="url(#blur1)">
+    <!-- Ghostly figure behind the main person -->
+    <g transform="translate(420, 100)">
+      <ellipse cx="15" cy="0" rx="16" ry="20" fill="#ffffff"/>
+      <path d="M-1,20 Q-3,60 -8,100 L38,100 Q35,60 33,20 Z" fill="#ffffff"/>
+      <!-- Arm reaching forward -->
+      <path d="M-1,35 L-25,25 L-22,20 L2,30" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Phone screen in foreground - the digital data showing the ghost -->
+  <g transform="translate(620, 80)">
+    <rect x="0" y="0" width="120" height="200" rx="10" fill="#0a0a15" stroke="#4a6a9a" stroke-width="2"/>
+    <rect x="5" y="10" width="110" height="160" rx="5" fill="#1a2a4a" opacity="0.8"/>
+    <!-- Photo on phone screen -->
+    <g transform="translate(15, 25)">
+      <!-- Phone photo background - white (different from purikura blue) -->
+      <rect x="0" y="0" width="90" height="130" fill="#e8e8f0" opacity="0.3"/>
+      <!-- Silhouette on phone -->
+      <ellipse cx="45" cy="10" rx="12" ry="15" fill="#1a1a2a"/>
+      <path d="M33,25 Q31,55 28,85 L62,85 Q59,55 57,25 Z" fill="#1a1a2a"/>
+      <!-- Ghost arm on phone screen -->
+      <path d="M28,35 L5,28 L8,24 L30,32" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+      <!-- Ghost figure on phone -->
+      <ellipse cx="5" cy="15" rx="10" ry="13" fill="#ffffff" opacity="0.4"/>
+      <path d="M-8,28 Q-10,55 -14,80 L18,80 Q16,55 14,28 Z" fill="#ffffff" opacity="0.4"/>
+    </g>
+    <!-- Phone camera dot -->
+    <circle cx="60" cy="5" r="2" fill="#3a3a4a"/>
+  </g>
+
+  <!-- Purikura machine details -->
+  <!-- Screen text hint -->
+  <text x="400" y="240" text-anchor="middle" fill="#4a6a9a" font-size="12" font-family="sans-serif" opacity="0.6">デコレーションなし</text>
+
+  <!-- Button area -->
+  <circle cx="400" cy="300" r="30" fill="#1a1a2a" stroke="#3a3a4a" stroke-width="1"/>
+  <circle cx="400" cy="300" r="20" fill="#2a1a1a" stroke="#4a2a2a" stroke-width="1"/>
+  <text x="400" y="305" text-anchor="middle" fill="#6a3a3a" font-size="10" font-family="sans-serif">START</text>
+
+  <!-- Print slot -->
+  <rect x="320" y="350" width="160" height="40" rx="3" fill="#0a0a15" stroke="#2a2a3a" stroke-width="1"/>
+  <rect x="330" y="355" width="140" height="30" rx="2" fill="#1a1a2a"/>
+
+  <!-- Subtle ambient light from screen -->
+  <ellipse cx="400" cy="150" rx="100" ry="120" fill="#3a5a8a" opacity="0.03"/>
+
+  <!-- Floor reflection -->
+  <ellipse cx="400" cy="420" rx="150" ry="15" fill="#1a1420" opacity="0.5"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#bgGlow)" opacity="0.3"/>
+
+  <!-- Tiny detail: purikura machine LED indicator -->
+  <circle cx="270" y="40" r="3" fill="#4a8a4a" opacity="0.7" filter="url(#glow)"/>
+
+  <!-- Eerie text overlay hint -->
+  <text x="400" y="420" text-anchor="middle" fill="#3a3a4a" font-size="11" font-family="sans-serif" opacity="0.4">写真には写っていないはずの、手が</text>
+</svg>
