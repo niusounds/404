@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="hallway" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#1a1510"/>
+    </linearGradient>
+    <radialGradient id="greenGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1a5c2a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eyeGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="monitorGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a1a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur6">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Hallway perspective - floor -->
+  <polygon points="0,450 800,450 500,200 300,200" fill="#0f0c08" opacity="0.8"/>
+
+  <!-- Hallway walls -->
+  <polygon points="0,0 300,200 300,200 0,450" fill="#0d0b08" opacity="0.9"/>
+  <polygon points="800,0 500,200 500,200 800,450" fill="#0d0b08" opacity="0.9"/>
+
+  <!-- Ceiling line -->
+  <line x1="300" y1="200" x2="500" y2="200" stroke="#1a1510" stroke-width="1"/>
+
+  <!-- Green exit light - top center of hallway -->
+  <rect x="370" y="170" width="60" height="20" rx="2" fill="#1a5c2a" opacity="0.7"/>
+  <text x="400" y="184" font-family="sans-serif" font-size="10" fill="#4aff6a" text-anchor="middle" opacity="0.9">出口</text>
+  <ellipse cx="400" cy="190" rx="80" ry="60" fill="url(#greenGlow)" opacity="0.5"/>
+
+  <!-- Door on the right side (foreground) -->
+  <rect x="620" y="100" width="120" height="350" fill="#1a1510" stroke="#2a2015" stroke-width="1"/>
+  <rect x="625" y="105" width="110" height="120" fill="#151210" stroke="#2a2015" stroke-width="0.5"/>
+
+  <!-- Monitor screen on door -->
+  <rect x="650" y="250" width="60" height="45" rx="2" fill="#0a1a0a" stroke="#2a4a2a" stroke-width="1"/>
+  <rect x="653" y="253" width="54" height="39" fill="#0f1f0f" opacity="0.9"/>
+
+  <!-- Monitor glow -->
+  <ellipse cx="680" cy="272" rx="40" ry="30" fill="url(#monitorGlow)" opacity="0.3"/>
+
+  <!-- Monitor screen content - eerie reflection -->
+  <ellipse cx="680" cy="272" rx="15" ry="18" fill="#1a2a1a" opacity="0.5"/>
+  <!-- Two eyes in the monitor -->
+  <circle cx="674" cy="270" r="2" fill="#ffffff" opacity="0.8" filter="url(#blur1)"/>
+  <circle cx="686" cy="270" r="2" fill="#ffffff" opacity="0.8" filter="url(#blur1)"/>
+
+  <!-- Door handle -->
+  <circle cx="725" cy="280" r="4" fill="#3a3020" stroke="#4a4030" stroke-width="0.5"/>
+
+  <!-- Hallway end - dark figure in the corner -->
+  <!-- Figure silhouette -->
+  <ellipse cx="410" cy="210" rx="8" ry="12" fill="#0a0808"/>
+  <rect x="404" y="218" width="12" height="30" rx="3" fill="#0a0808"/>
+  <line x1="406" y1="248" x2="403" y2="270" stroke="#0a0808" stroke-width="4"/>
+  <line x1="414" y1="248" x2="417" y2="270" stroke="#0a0808" stroke-width="4"/>
+
+  <!-- Figure's glowing eyes -->
+  <circle cx="407" cy="207" r="1.5" fill="#ffffff" opacity="0.9" filter="url(#blur1)"/>
+  <circle cx="413" cy="207" r="1.5" fill="#ffffff" opacity="0.9" filter="url(#blur1)"/>
+  <circle cx="407" cy="207" r="6" fill="url(#eyeGlow)" opacity="0.3"/>
+  <circle cx="413" cy="207" r="6" fill="url(#eyeGlow)" opacity="0.3"/>
+
+  <!-- Water stain on floor -->
+  <ellipse cx="450" cy="320" rx="15" ry="5" fill="#1a1510" opacity="0.6"/>
+  <ellipse cx="448" cy="322" rx="8" ry="3" fill="#151210" opacity="0.4"/>
+
+  <!-- Time indicator - 2:17 -->
+  <text x="100" y="400" font-family="monospace" font-size="14" fill="#2a2520" opacity="0.5">02:17</text>
+
+  <!-- Subtle vignette effect -->
+  <rect width="800" height="450" fill="url(#greenGlow)" opacity="0.1"/>
+
+  <!-- Floor reflection of green light -->
+  <ellipse cx="400" cy="380" rx="60" ry="20" fill="#1a5c2a" opacity="0.05"/>
+
+  <!-- Shadow lines on walls for depth -->
+  <line x1="50" y1="50" x2="250" y2="180" stroke="#111008" stroke-width="0.5" opacity="0.5"/>
+  <line x1="750" y1="50" x2="550" y2="180" stroke="#111008" stroke-width="0.5" opacity="0.5"/>
+</svg>
