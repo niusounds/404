@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1515" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="boxGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2525"/>
+      <stop offset="100%" stop-color="#1a1515"/>
+    </linearGradient>
+    <linearGradient id="handGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8e0d0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#d8d0c0" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#glow)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="320" width="800" height="130" fill="#0d0a0a"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Dark corridor walls -->
+  <rect x="0" y="0" width="800" height="320" fill="#0c0909"/>
+  <!-- Left wall perspective -->
+  <polygon points="0,0 120,80 120,320 0,320" fill="#0b0808" opacity="0.5"/>
+  <!-- Right wall perspective -->
+  <polygon points="800,0 680,80 680,320 800,320" fill="#0b0808" opacity="0.5"/>
+
+  <!-- Delivery box structure - centered -->
+  <g transform="translate(320, 140)">
+    <!-- Box body -->
+    <rect x="0" y="0" width="160" height="180" rx="3" fill="url(#boxGrad)" stroke="#2a2525" stroke-width="1"/>
+    
+    <!-- Box top lip -->
+    <rect x="-5" y="-8" width="170" height="12" rx="2" fill="#332d2d" stroke="#3a3535" stroke-width="0.5"/>
+    
+    <!-- Shutter gap (the key horror element) -->
+    <rect x="20" y="60" width="120" height="3" fill="#000000" filter="url(#blur1)"/>
+    <rect x="20" y="60" width="120" height="1" fill="#1a1515"/>
+    
+    <!-- Red indicator light -->
+    <circle cx="145" cy="15" r="4" fill="#4a0000" filter="url(#blur2)"/>
+    <circle cx="145" cy="15" r="2" fill="#6a0000"/>
+    <circle cx="145" cy="15" r="1" fill="#8a0000" opacity="0.8"/>
+    
+    <!-- Label area -->
+    <rect x="25" y="140" width="110" height="25" rx="1" fill="#1a1515" stroke="#252020" stroke-width="0.5"/>
+    <text x="80" y="157" font-family="monospace" font-size="10" fill="#3a3535" text-anchor="middle" letter-spacing="2">DELIVERY BOX</text>
+    
+    <!-- Ventilation holes -->
+    <circle cx="40" cy="40" r="3" fill="#0a0808" stroke="#1a1515" stroke-width="0.5"/>
+    <circle cx="55" cy="40" r="3" fill="#0a0808" stroke="#1a1515" stroke-width="0.5"/>
+    <circle cx="70" cy="40" r="3" fill="#0a0808" stroke="#1a1515" stroke-width="0.5"/>
+    <circle cx="85" cy="40" r="3" fill="#0a0808" stroke="#1a1515" stroke-width="0.5"/>
+    <circle cx="100" cy="40" r="3" fill="#0a0808" stroke="#1a1515" stroke-width="0.5"/>
+    <circle cx="115" cy="40" r="3" fill="#0a0808" stroke="#1a1515" stroke-width="0.5"/>
+    <circle cx="130" cy="40" r="3" fill="#0a0808" stroke="#1a1515" stroke-width="0.5"/>
+  </g>
+
+  <!-- The white hand reaching from the gap (main horror element) -->
+  <g transform="translate(465, 210)" filter="url(#blur3)" opacity="0.7">
+    <!-- Hand silhouette - fingers spread -->
+    <path d="
+      M 0,0
+      Q -5,-15 -3,-30
+      Q -2,-35 2,-35
+      Q 6,-35 5,-30
+      Q 3,-15 8,0
+      Z
+    " fill="url(#handGrad)"/>
+    <path d="
+      M 8,0
+      Q 2,-12 5,-25
+      Q 6,-30 10,-30
+      Q 14,-30 12,-25
+      Q 10,-12 16,0
+      Z
+    " fill="url(#handGrad)"/>
+    <path d="
+      M 16,0
+      Q 12,-10 15,-20
+      Q 16,-25 20,-25
+      Q 24,-25 22,-20
+      Q 20,-10 24,0
+      Z
+    " fill="url(#handGrad)"/>
+    <!-- Wrist -->
+    <path d="
+      M -5,0
+      Q -8,10 -10,25
+      L 35,25
+      Q 33,10 30,0
+      Z
+    " fill="url(#handGrad)" opacity="0.5"/>
+  </g>
+
+  <!-- Dark liquid dripping from the box -->
+  <g opacity="0.4">
+    <ellipse cx="400" cy="340" rx="30" ry="5" fill="#0a0505"/>
+    <path d="M 395,320 Q 390,330 392,340" stroke="#1a0a0a" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M 405,320 Q 408,332 406,345" stroke="#1a0a0a" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <path d="M 398,320 Q 395,328 397,338" stroke="#150808" stroke-width="1" fill="none" opacity="0.3"/>
+  </g>
+
+  <!-- Phone notification glow on the right side -->
+  <g transform="translate(620, 200)" opacity="0.15">
+    <rect x="0" y="0" width="80" height="140" rx="8" fill="#1a1520" stroke="#2a2535" stroke-width="1"/>
+    <!-- Screen glow -->
+    <rect x="5" y="5" width="70" height="130" rx="5" fill="#151525"/>
+    <!-- Notification bar -->
+    <rect x="10" y="15" width="60" height="20" rx="2" fill="#252535" opacity="0.8"/>
+    <rect x="15" y="22" width="40" height="3" rx="1" fill="#3a3a5a"/>
+    <!-- Small icon -->
+    <circle cx="20" cy="25" r="5" fill="#3a3a5a"/>
+  </g>
+
+  <!-- Ambient mist/fog at the bottom -->
+  <g filter="url(#blur2)" opacity="0.15">
+    <ellipse cx="200" cy="400" rx="200" ry="40" fill="#1a1520"/>
+    <ellipse cx="600" cy="410" rx="180" ry="35" fill="#15101a"/>
+    <ellipse cx="400" cy="420" rx="250" ry="30" fill="#1a1515"/>
+  </g>
+
+  <!-- Subtle light source from above (dim hallway light) -->
+  <ellipse cx="400" cy="0" rx="150" ry="60" fill="#1a1510" opacity="0.1"/>
+  <line x1="400" y1="0" x2="380" y2="100" stroke="#1a1510" stroke-width="0.5" opacity="0.05"/>
+  <line x1="400" y1="0" x2="420" y2="100" stroke="#1a1510" stroke-width="0.5" opacity="0.05"/>
+</svg>
