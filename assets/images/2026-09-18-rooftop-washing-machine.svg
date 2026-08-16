@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Subtle gradient overlay for rooftop feel -->
+  <rect width="800" height="450" fill="url(#bgGrad)" opacity="0.3"/>
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1015" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="machineGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a2030" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Rooftop floor line (horizon) -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a1518" stroke-width="1"/>
+  
+  <!-- Rooftop wall/parapet silhouette -->
+  <rect x="0" y="200" width="800" height="180" fill="#0d0b0b"/>
+  <rect x="0" y="195" width="800" height="8" fill="#151215"/>
+  
+  <!-- Parapet wall top edge -->
+  <rect x="0" y="190" width="800" height="5" fill="#1a1518" opacity="0.6"/>
+  
+  <!-- Parapet vertical lines (concrete panels) -->
+  <line x1="100" y1="195" x2="100" y2="380" stroke="#121012" stroke-width="0.5" opacity="0.5"/>
+  <line x1="200" y1="195" x2="200" y2="380" stroke="#121012" stroke-width="0.5" opacity="0.5"/>
+  <line x1="300" y1="195" x2="300" y2="380" stroke="#121012" stroke-width="0.5" opacity="0.5"/>
+  <line x1="400" y1="195" x2="400" y2="380" stroke="#121012" stroke-width="0.5" opacity="0.5"/>
+  <line x1="500" y1="195" x2="500" y2="380" stroke="#121012" stroke-width="0.5" opacity="0.5"/>
+  <line x1="600" y1="195" x2="600" y2="380" stroke="#121012" stroke-width="0.5" opacity="0.5"/>
+  <line x1="700" y1="195" x2="700" y2="380" stroke="#121012" stroke-width="0.5" opacity="0.5"/>
+  
+  <!-- Night sky above parapet -->
+  <rect x="0" y="0" width="800" height="195" fill="#080608"/>
+  
+  <!-- Faint stars -->
+  <circle cx="120" cy="40" r="0.8" fill="#2a2530" opacity="0.4"/>
+  <circle cx="340" cy="80" r="0.6" fill="#2a2530" opacity="0.3"/>
+  <circle cx="560" cy="30" r="1" fill="#2a2530" opacity="0.35"/>
+  <circle cx="680" cy="100" r="0.5" fill="#2a2530" opacity="0.25"/>
+  <circle cx="750" cy="60" r="0.7" fill="#2a2530" opacity="0.3"/>
+  <circle cx="60" cy="120" r="0.6" fill="#2a2530" opacity="0.2"/>
+  
+  <!-- Moon (faint, eerie) -->
+  <circle cx="650" cy="70" r="25" fill="#1a1520" opacity="0.3" filter="url(#softGlow)"/>
+  <circle cx="658" cy="65" r="20" fill="#080608"/>
+  
+  <!-- Washing machine - main body -->
+  <!-- Machine shadow -->
+  <ellipse cx="400" cy="380" rx="80" ry="8" fill="#060404" opacity="0.8"/>
+  
+  <!-- Machine base -->
+  <rect x="345" y="310" width="110" height="70" rx="3" fill="#151215" stroke="#1e1a1e" stroke-width="0.5"/>
+  
+  <!-- Machine body -->
+  <rect x="340" y="230" width="120" height="82" rx="4" fill="#1a171a" stroke="#221e22" stroke-width="0.5"/>
+  
+  <!-- Top panel -->
+  <rect x="345" y="225" width="110" height="10" rx="2" fill="#1e1a1e"/>
+  
+  <!-- Control panel area -->
+  <rect x="370" y="235" width="60" height="15" rx="1" fill="#151215"/>
+  
+  <!-- Dials on control panel -->
+  <circle cx="385" cy="242" r="4" fill="#1a171a" stroke="#2a2530" stroke-width="0.5"/>
+  <circle cx="400" cy="242" r="4" fill="#1a171a" stroke="#2a2530" stroke-width="0.5"/>
+  <circle cx="415" cy="242" r="4" fill="#1a171a" stroke="#2a2530" stroke-width="0.5"/>
+  
+  <!-- Small LED indicator - faint green -->
+  <circle cx="425" cy="242" r="1.5" fill="#1a3a1a" opacity="0.6" filter="url(#glow)"/>
+  
+  <!-- Washing machine door - the key element -->
+  <!-- Outer ring -->
+  <circle cx="400" cy="290" r="32" fill="#0e0c0e" stroke="#221e22" stroke-width="1"/>
+  
+  <!-- Glass window -->
+  <circle cx="400" cy="290" r="28" fill="#0a0a10" stroke="#1a1a25" stroke-width="0.5"/>
+  
+  <!-- Inner drum glow - the eerie element -->
+  <!-- The drum is spinning with a faint, sickly light -->
+  <circle cx="400" cy="290" r="26" fill="url(#machineGlow)" opacity="0.4"/>
+  
+  <!-- Spinning drum lines -->
+  <ellipse cx="400" cy="290" rx="24" ry="8" fill="none" stroke="#1a1525" stroke-width="0.3" opacity="0.5" transform="rotate(30 400 290)"/>
+  <ellipse cx="400" cy="290" rx="24" ry="8" fill="none" stroke="#1a1525" stroke-width="0.3" opacity="0.5" transform="rotate(90 400 290)"/>
+  <ellipse cx="400" cy="290" rx="24" ry="8" fill="none" stroke="#1a1525" stroke-width="0.3" opacity="0.5" transform="rotate(150 400 290)"/>
+  
+  <!-- Clothes silhouettes inside - frozen, dry, shriveled -->
+  <!-- White shirt -->
+  <path d="M388,282 L392,278 L395,280 L393,288 L388,285 Z" fill="#1a1818" opacity="0.6"/>
+  <!-- Dark jeans -->
+  <path d="M403,283 L408,280 L410,285 L407,295 L404,292 Z" fill="#15121a" opacity="0.5"/>
+  
+  <!-- Door handle -->
+  <rect x="428" y="286" width="8" height="3" rx="1" fill="#1e1a1e"/>
+  
+  <!-- Faint water droplet at bottom of drum -->
+  <ellipse cx="400" cy="312" rx="2" ry="1" fill="#1a2030" opacity="0.4"/>
+  
+  <!-- Second washing machine (smaller, in background) -->
+  <rect x="520" y="260" width="70" height="120" rx="3" fill="#121012" stroke="#1a171a" stroke-width="0.5"/>
+  <circle cx="555" cy="315" r="20" fill="#0a0a0c" stroke="#1a171a" stroke-width="0.5"/>
+  <circle cx="555" cy="315" r="17" fill="#080808"/>
+  
+  <!-- Drying rack silhouette -->
+  <line x1="200" y1="230" x2="200" y2="380" stroke="#151215" stroke-width="1"/>
+  <line x1="200" y1="230" x2="260" y2="230" stroke="#151215" stroke-width="0.8"/>
+  <line x1="200" y1="250" x2="255" y2="250" stroke="#151215" stroke-width="0.5"/>
+  <line x1="200" y1="270" x2="250" y2="270" stroke="#151215" stroke-width="0.5"/>
+  <line x1="200" y1="290" x2="245" y2="290" stroke="#151215" stroke-width="0.5"/>
+  <line x1="200" y1="310" x2="240" y2="310" stroke="#151215" stroke-width="0.5"/>
+  
+  <!-- Drying clothes on rack - ghostly -->
+  <path d="M210,230 L215,260 L212,265 L208,260 Z" fill="#121012" opacity="0.4"/>
+  <path d="M225,250 L230,280 L227,285 L222,280 Z" fill="#121012" opacity="0.3"/>
+  <path d="M235,270 L240,300 L237,305 L232,300 Z" fill="#121012" opacity="0.3"/>
+  
+  <!-- Steps leading up to rooftop -->
+  <rect x="100" y="370" width="40" height="10" fill="#151215"/>
+  <rect x="105" y="360" width="35" height="10" fill="#151215"/>
+  <rect x="110" y="350" width="30" height="10" fill="#151215"/>
+  <rect x="115" y="340" width="25" height="10" fill="#151215"/>
+  
+  <!-- Rooftop door frame -->
+  <rect x="130" y="250" width="60" height="130" fill="none" stroke="#1a171a" stroke-width="1"/>
+  <line x1="160" y1="250" x2="160" y2="380" stroke="#1a171a" stroke-width="0.5"/>
+  
+  <!-- Door handle -->
+  <circle cx="155" cy="310" r="2" fill="#1e1a1e"/>
+  
+  <!-- Tape on door (from the story) -->
+  <rect x="135" y="260" width="50" height="3" fill="#2a2530" opacity="0.3" transform="rotate(-5 160 261)"/>
+  <rect x="138" y="270" width="48" height="3" fill="#2a2530" opacity="0.3" transform="rotate(3 162 271)"/>
+  
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="60%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0.8"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Very faint, barely visible figure silhouette near washing machine -->
+  <!-- This is the horror element - almost imperceptible -->
+  <g opacity="0.03">
+    <ellipse cx="330" cy="340" rx="12" ry="30" fill="#1a1520"/>
+    <circle cx="330" cy="300" r="10" fill="#1a1520"/>
+  </g>
+  
+  <!-- Floor reflection of the machine glow -->
+  <ellipse cx="400" cy="385" rx="40" ry="3" fill="#1a1525" opacity="0.15"/>
+</svg>
