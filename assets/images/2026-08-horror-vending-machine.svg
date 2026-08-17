@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1a2e" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="machineBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <linearGradient id="glassReflect" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a2a3e" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#1a1a2e" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="blurSmall">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Subtle floor line -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a1515" stroke-width="1"/>
+  <line x1="0" y1="381" x2="800" y2="381" stroke="#0f0c0c" stroke-width="0.5"/>
+
+  <!-- Floor reflection under vending machine -->
+  <ellipse cx="400" cy="385" rx="140" ry="8" fill="#1a1520" opacity="0.3"/>
+
+  <!-- Vending machine body -->
+  <rect x="280" y="60" width="240" height="320" rx="4" fill="url(#machineBody)" stroke="#2a2a2a" stroke-width="1"/>
+
+  <!-- Machine top panel -->
+  <rect x="285" y="65" width="230" height="25" rx="2" fill="#222222" stroke="#333" stroke-width="0.5"/>
+  <text x="400" y="82" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#444" letter-spacing="3">VENDING MACHINE</text>
+
+  <!-- Glass display area -->
+  <rect x="295" y="100" width="210" height="180" rx="2" fill="#0a0a12" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="295" y="100" width="210" height="180" rx="2" fill="url(#glassReflect)"/>
+
+  <!-- Product rows - dark bottles/cans barely visible -->
+  <!-- Row 1 -->
+  <rect x="305" y="110" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="330" y="110" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="355" y="110" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="380" y="110" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="405" y="110" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="430" y="110" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="455" y="110" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="480" y="110" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+
+  <!-- Row 2 -->
+  <rect x="305" y="160" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="330" y="160" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="355" y="160" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="380" y="160" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="405" y="160" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="430" y="160" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="455" y="160" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="480" y="160" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+
+  <!-- Row 3 -->
+  <rect x="305" y="210" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="330" y="210" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="355" y="210" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="380" y="210" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="405" y="210" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="430" y="210" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="455" y="210" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+  <rect x="480" y="210" width="18" height="40" rx="2" fill="#0f0f1a" stroke="#1a1a2a" stroke-width="0.5"/>
+
+  <!-- Faint product labels -->
+  <rect x="310" y="148" width="8" height="2" fill="#1a1a2a"/>
+  <rect x="335" y="148" width="8" height="2" fill="#1a1a2a"/>
+  <rect x="360" y="148" width="8" height="2" fill="#1a1a2a"/>
+  <rect x="385" y="148" width="8" height="2" fill="#1a1a2a"/>
+  <rect x="410" y="148" width="8" height="2" fill="#1a1a2a"/>
+  <rect x="435" y="148" width="8" height="2" fill="#1a1a2a"/>
+  <rect x="460" y="148" width="8" height="2" fill="#1a1a2a"/>
+  <rect x="485" y="148" width="8" height="2" fill="#1a1a2a"/>
+
+  <!-- Control panel area -->
+  <rect x="295" y="290" width="210" height="60" rx="2" fill="#111118" stroke="#2a2a2a" stroke-width="0.5"/>
+
+  <!-- Coin slot -->
+  <rect x="310" y="300" width="30" height="20" rx="3" fill="#1a1a1a" stroke="#333" stroke-width="0.5"/>
+  <rect x="320" y="305" width="10" height="4" rx="1" fill="#0a0a0a" stroke="#222" stroke-width="0.5"/>
+
+  <!-- Button panel - some buttons faintly lit -->
+  <circle cx="370" cy="310" r="6" fill="#1a1a2a" stroke="#2a2a3a" stroke-width="0.5"/>
+  <circle cx="395" cy="310" r="6" fill="#1a1a2a" stroke="#2a2a3a" stroke-width="0.5"/>
+  <circle cx="420" cy="310" r="6" fill="#1a1a2a" stroke="#2a2a3a" stroke-width="0.5"/>
+  <circle cx="445" cy="310" r="6" fill="#1a1a2a" stroke="#2a2a3a" stroke-width="0.5"/>
+  <circle cx="470" cy="310" r="6" fill="#1a1a2a" stroke="#2a2a3a" stroke-width="0.5"/>
+
+  <!-- One button slightly glowing (the selected one) -->
+  <circle cx="370" cy="310" r="6" fill="#2a2a4a" stroke="#3a3a6a" stroke-width="0.5" filter="url(#softGlow)"/>
+
+  <!-- Display panel -->
+  <rect x="350" y="330" width="100" height="14" rx="2" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <!-- The time 3:47 displayed -->
+  <text x="400" y="342" text-anchor="middle" font-family="monospace" font-size="12" fill="#ff4444" opacity="0.7" filter="url(#softGlow)">3:47</text>
+
+  <!-- Dispensing slot -->
+  <rect x="340" y="355" width="120" height="8" rx="1" fill="#0a0a0a" stroke="#222" stroke-width="0.5"/>
+  <rect x="345" y="357" width="110" height="4" rx="1" fill="#050505"/>
+
+  <!-- Cold air mist from dispensing slot -->
+  <ellipse cx="400" cy="365" rx="60" ry="15" fill="#1a2a3a" opacity="0.08" filter="url(#blurSmall)"/>
+  <ellipse cx="400" cy="370" rx="40" ry="10" fill="#1a2a3a" opacity="0.06" filter="url(#blurSmall)"/>
+
+  <!-- The shell on the floor -->
+  <g transform="translate(400, 382)" filter="url(#softGlow)">
+    <!-- Shell shape - conch-like -->
+    <path d="M -8,0 C -10,-6 -6,-12 0,-14 C 6,-12 10,-6 8,0 C 6,6 2,8 0,6 C -2,8 -6,6 -8,0 Z" fill="#1a1a20" stroke="#2a2a30" stroke-width="0.5"/>
+    <path d="M -5,-2 C -7,-5 -4,-9 0,-10 C 4,-9 7,-5 5,-2" fill="none" stroke="#2a2a35" stroke-width="0.5"/>
+    <path d="M -3,-1 C -4,-3 -2,-6 0,-7 C 2,-6 4,-3 3,-1" fill="none" stroke="#2a2a35" stroke-width="0.3"/>
+    <!-- Spiral detail -->
+    <circle cx="0" cy="-5" r="1.5" fill="none" stroke="#2a2a35" stroke-width="0.3"/>
+    <circle cx="0" cy="-5" r="0.8" fill="#1a1a22"/>
+  </g>
+
+  <!-- Water droplet on floor near shell -->
+  <ellipse cx="420" cy="385" rx="3" ry="1" fill="#1a2a3a" opacity="0.3"/>
+  <ellipse cx="425" cy="387" rx="2" ry="0.8" fill="#1a2a3a" opacity="0.2"/>
+
+  <!-- Cold air glow emanating from machine -->
+  <ellipse cx="400" cy="350" rx="80" ry="40" fill="#1a2a4a" opacity="0.04" filter="url(#blurSmall)"/>
+
+  <!-- Ambient darkness vignette -->
+  <rect width="800" height="450" fill="url(#glow)" opacity="0.5"/>
+
+  <!-- Subtle light from machine panel casting upward -->
+  <polygon points="350,290 450,290 500,150 300,150" fill="#1a2a4a" opacity="0.02"/>
+
+  <!-- Floor shadow of machine -->
+  <polygon points="280,380 520,380 540,450 260,450" fill="#050404" opacity="0.5"/>
+</svg>
