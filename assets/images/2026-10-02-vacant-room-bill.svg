@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="320" width="800" height="130" fill="#0d0b0b"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1515" stroke-width="2"/>
+  
+  <!-- Corridor walls perspective -->
+  <polygon points="100,80 100,320 250,320 250,80" fill="#111010" stroke="#1a1515" stroke-width="0.5"/>
+  <polygon points="550,80 700,80 700,320 550,320" fill="#111010" stroke="#1a1515" stroke-width="0.5"/>
+  
+  <!-- Corridor back wall -->
+  <rect x="250" y="80" width="300" height="240" fill="#0e0c0c" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Doors along the corridor -->
+  <!-- Left doors -->
+  <rect x="130" y="120" width="80" height="160" fill="#151313" stroke="#2a2020" stroke-width="1.5"/>
+  <rect x="140" y="130" width="60" height="40" fill="#1a1515" stroke="#2a2020" stroke-width="0.5"/>
+  <circle cx="200" cy="210" r="3" fill="#3a3030"/>
+  
+  <rect x="130" y="300" width="80" height="20" fill="#151313" stroke="#2a2020" stroke-width="0.5"/>
+  
+  <!-- Right doors -->
+  <rect x="590" y="120" width="80" height="160" fill="#151313" stroke="#2a2020" stroke-width="1.5"/>
+  <rect x="600" y="130" width="60" height="40" fill="#1a1515" stroke="#2a2020" stroke-width="0.5"/>
+  <circle cx="660" cy="210" r="3" fill="#3a3030"/>
+  
+  <rect x="590" y="300" width="80" height="20" fill="#151313" stroke="#2a2020" stroke-width="0.5"/>
+  
+  <!-- Center door (204) - THE HORROR ROOM -->
+  <rect x="310" y="60" width="180" height="260" fill="#1a1818" stroke="#3a2a2a" stroke-width="2"/>
+  
+  <!-- Room number -->
+  <text x="400" y="105" text-anchor="middle" fill="#8a5a5a" font-family="monospace" font-size="28" font-weight="bold">204</text>
+  
+  <!-- Door window -->
+  <rect x="360" y="120" width="80" height="50" fill="#0a0808" stroke="#4a3a3a" stroke-width="1"/>
+  
+  <!-- Light leaking from under the door -->
+  <rect x="310" y="310" width="180" height="10" fill="#f5e6c8" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.4;0.7;0.5;0.6" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Warm light glow from under the door -->
+  <ellipse cx="400" cy="330" rx="120" ry="8" fill="#f5e6c8" opacity="0.15">
+    <animate attributeName="opacity" values="0.15;0.1;0.2;0.12;0.15" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Light through the door window - eerie glow -->
+  <rect x="362" y="122" width="76" height="46" fill="#f5e6c8" opacity="0.25">
+    <animate attributeName="opacity" values="0.25;0.2;0.3;0.22;0.25" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Silhouette behind the door window - a vague human shape -->
+  <ellipse cx="400" cy="155" rx="18" ry="20" fill="#1a1515" opacity="0.8"/>
+  <rect x="388" y="170" width="24" height="30" fill="#1a1515" opacity="0.8"/>
+  <rect x="385" y="195" width="12" height="22" fill="#1a1515" opacity="0.7"/>
+  <rect x="403" y="195" width="12" height="22" fill="#1a1515" opacity="0.7"/>
+  
+  <!-- Door handle -->
+  <circle cx="475" cy="200" r="4" fill="#4a3a3a"/>
+  
+  <!-- Table silhouette visible through window -->
+  <rect x="375" y="160" width="50" height="3" fill="#1a1515" opacity="0.6"/>
+  <rect x="377" y="163" width="2" height="12" fill="#1a1515" opacity="0.5"/>
+  <rect x="421" y="163" width="2" height="12" fill="#1a1515" opacity="0.5"/>
+  
+  <!-- Chopsticks silhouette -->
+  <line x1="380" y1="158" x2="410" y2="156" stroke="#2a2020" stroke-width="1" opacity="0.5"/>
+  <line x1="382" y1="161" x2="412" y2="159" stroke="#2a2020" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Steam rising from the window -->
+  <path d="M390,118 Q392,105 390,95 Q388,85 392,78" stroke="#f5e6c8" stroke-width="0.8" fill="none" opacity="0.15">
+    <animate attributeName="opacity" values="0.15;0.05;0.12;0.08;0.15" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="d" values="M390,118 Q392,105 390,95 Q388,85 392,78;M390,118 Q388,105 392,95 Q394,85 390,78;M390,118 Q392,105 390,95 Q388,85 392,78" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M405,118 Q407,108 405,98 Q403,88 407,82" stroke="#f5e6c8" stroke-width="0.8" fill="none" opacity="0.1">
+    <animate attributeName="opacity" values="0.1;0.05;0.12;0.06;0.1" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="d" values="M405,118 Q407,108 405,98 Q403,88 407,82;M405,118 Q403,108 407,98 Q409,88 405,82;M405,118 Q407,108 405,98 Q403,88 407,82" dur="3.5s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Ceiling light (off) -->
+  <circle cx="400" cy="70" r="8" fill="#1a1515" stroke="#2a2020" stroke-width="1"/>
+  <line x1="400" y1="62" x2="400" y2="80" stroke="#2a2020" stroke-width="0.5"/>
+  
+  <!-- Corridor floor light reflection -->
+  <ellipse cx="400" cy="340" rx="80" ry="5" fill="#f5e6c8" opacity="0.05"/>
+  
+  <!-- Subtle vignette effect -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+  
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="50%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Ambient darkness overlay -->
+  <rect width="800" height="450" fill="#0a0808" opacity="0.3"/>
+</svg>
