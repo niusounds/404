@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Subtle vignette -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.8"/>
+  </radialGradient>
+  <rect width="800" height="450" fill="url(#vignette)"/>
+  
+  <!-- Floor line - perspective hallway -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Hallway walls - converging perspective -->
+  <polygon points="200,50 600,50 700,380 100,380" fill="#0d0b0b" stroke="#1a1515" stroke-width="0.5"/>
+  <polygon points="100,380 200,50 200,380" fill="#0c0a0a"/>
+  <polygon points="600,50 700,380 700,380" fill="#0c0a0a"/>
+  
+  <!-- Floor -->
+  <polygon points="100,380 700,380 600,450 200,450" fill="#0e0c0c"/>
+  
+  <!-- Ceiling light glow -->
+  <ellipse cx="400" cy="80" rx="120" ry="30" fill="#1a1a1a" opacity="0.5"/>
+  <ellipse cx="400" cy="80" rx="40" ry="15" fill="#2a2a2a" opacity="0.3"/>
+  
+  <!-- Distant figure at end of hallway - shadowy silhouette -->
+  <g opacity="0.4">
+    <!-- Head -->
+    <ellipse cx="400" cy="170" rx="15" ry="20" fill="#151313"/>
+    <!-- Body -->
+    <path d="M385,190 Q380,240 375,290 L425,290 Q420,240 415,190 Z" fill="#151313"/>
+    <!-- Legs -->
+    <path d="M380,290 L370,340 L385,340 L395,290" fill="#151313"/>
+    <path d="M420,290 L430,340 L415,340 L405,290" fill="#151313"/>
+  </g>
+  
+  <!-- Faint glow around distant figure -->
+  <ellipse cx="400" cy="230" rx="30" ry="80" fill="#1a1520" opacity="0.15"/>
+  
+  <!-- Foreground - phone screen glow -->
+  <rect x="310" y="280" width="180" height="100" rx="8" fill="#0a0a12" stroke="#1a1a2a" stroke-width="1"/>
+  
+  <!-- Phone screen content - camera view -->
+  <rect x="315" y="285" width="170" height="90" rx="5" fill="#0a0a15"/>
+  
+  <!-- Camera viewfinder overlay -->
+  <rect x="320" y="290" width="160" height="80" rx="3" fill="none" stroke="#1a1a3a" stroke-width="0.5" opacity="0.5"/>
+  
+  <!-- Camera crosshair -->
+  <line x1="390" y1="320" x2="410" y2="320" stroke="#2a2a4a" stroke-width="0.5" opacity="0.6"/>
+  <line x1="400" y1="310" x2="400" y2="330" stroke="#2a2a4a" stroke-width="0.5" opacity="0.6"/>
+  
+  <!-- Phone screen - faint reflection of person -->
+  <ellipse cx="400" cy="330" rx="12" ry="16" fill="#1a1a2a" opacity="0.3"/>
+  <path d="M390,346 Q388,360 386,370 L414,370 Q412,360 410,346 Z" fill="#1a1a2a" opacity="0.3"/>
+  
+  <!-- Phone screen timestamp in red -->
+  <text x="400" y="365" text-anchor="middle" font-family="monospace" font-size="10" fill="#cc3333" opacity="0.7">04:15:00</text>
+  
+  <!-- Phone screen glow effect -->
+  <rect x="310" y="280" width="180" height="100" rx="8" fill="none" stroke="#2a2a5a" stroke-width="2" opacity="0.15"/>
+  <ellipse cx="400" cy="330" rx="100" ry="60" fill="#1a1a4a" opacity="0.05"/>
+  
+  <!-- Message notification bubble -->
+  <rect x="340" y="295" width="120" height="22" rx="4" fill="#1a1a2a" opacity="0.6"/>
+  <text x="400" y="310" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8888aa" opacity="0.8">母: 今、背後を見て</text>
+  
+  <!-- Subtle rain streaks -->
+  <line x1="250" y1="100" x2="245" y2="140" stroke="#1a1a2a" stroke-width="0.5" opacity="0.3"/>
+  <line x1="350" y1="60" x2="347" y2="100" stroke="#1a1a2a" stroke-width="0.5" opacity="0.2"/>
+  <line x1="450" y1="80" x2="446" y2="120" stroke="#1a1a2a" stroke-width="0.5" opacity="0.25"/>
+  <line x1="550" y1="110" x2="545" y2="150" stroke="#1a1a2a" stroke-width="0.5" opacity="0.2"/>
+  
+  <!-- Foreground darkness -->
+  <rect x="0" y="380" width="800" height="70" fill="#0a0808"/>
+  <rect x="0" y="400" width="800" height="50" fill="#080606"/>
+  
+  <!-- Floating particles - dust/mist -->
+  <circle cx="350" cy="200" r="1" fill="#2a2a3a" opacity="0.2"/>
+  <circle cx="450" cy="250" r="0.8" fill="#2a2a3a" opacity="0.15"/>
+  <circle cx="380" cy="300" r="1.2" fill="#2a2a3a" opacity="0.1"/>
+  <circle cx="420" cy="180" r="0.7" fill="#2a2a3a" opacity="0.18"/>
+</svg>
