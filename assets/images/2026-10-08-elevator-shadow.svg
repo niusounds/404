@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="elevatorBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1515"/>
+      <stop offset="100%" stop-color="#0d0a0a"/>
+    </linearGradient>
+    <linearGradient id="shaftGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050303"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Floor line at bottom -->
+  <rect x="0" y="420" width="800" height="30" fill="#080606"/>
+  <line x1="0" y1="420" x2="800" y2="420" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Elevator shaft walls -->
+  <rect x="120" y="0" width="560" height="450" fill="url(#shaftGrad)"/>
+  <rect x="120" y="0" width="3" height="450" fill="#151212"/>
+  <rect x="677" y="0" width="3" height="450" fill="#151212"/>
+
+  <!-- Floor indicator lines -->
+  <line x1="120" y1="100" x2="680" y2="100" stroke="#111010" stroke-width="0.5"/>
+  <line x1="120" y1="200" x2="680" y2="200" stroke="#111010" stroke-width="0.5"/>
+  <line x1="120" y1="300" x2="680" y2="300" stroke="#111010" stroke-width="0.5"/>
+  <line x1="120" y1="400" x2="680" y2="400" stroke="#111010" stroke-width="0.5"/>
+
+  <!-- Elevator car interior -->
+  <rect x="250" y="130" width="300" height="290" fill="url(#elevatorBg)" stroke="#1a1818" stroke-width="1"/>
+
+  <!-- Elevator interior light (flickering warm glow) -->
+  <rect x="260" y="135" width="280" height="8" fill="#2a2520" opacity="0.8" filter="url(#softGlow)"/>
+  <rect x="300" y="140" width="200" height="3" fill="#3a3025" opacity="0.4" filter="url(#glow)"/>
+
+  <!-- Light cast on floor -->
+  <ellipse cx="400" cy="420" rx="120" ry="8" fill="#1a1510" opacity="0.3"/>
+
+  <!-- Elevator doors (partially open, eerie) -->
+  <!-- Left door -->
+  <rect x="250" y="130" width="148" height="290" fill="#121010" stroke="#1a1818" stroke-width="0.5"/>
+  <rect x="255" y="135" width="138" height="280" fill="#0e0c0c"/>
+  <!-- Right door -->
+  <rect x="402" y="130" width="148" height="290" fill="#121010" stroke="#1a1818" stroke-width="0.5"/>
+  <rect x="407" y="135" width="138" height="280" fill="#0e0c0c"/>
+
+  <!-- Shadow figure inside elevator (the "other self") -->
+  <!-- Head -->
+  <ellipse cx="400" cy="210" rx="18" ry="22" fill="#050303"/>
+  <!-- Body -->
+  <path d="M382,232 Q380,280 378,340 L422,340 Q420,280 418,232 Z" fill="#050303"/>
+  <!-- Arms (hands clasped in front) -->
+  <path d="M382,250 Q370,270 375,290 Q385,295 395,285" fill="none" stroke="#050303" stroke-width="6" stroke-linecap="round"/>
+  <path d="M418,250 Q430,270 425,290 Q415,295 405,285" fill="none" stroke="#050303" stroke-width="6" stroke-linecap="round"/>
+  <!-- Legs -->
+  <rect x="385" y="335" width="10" height="70" fill="#050303"/>
+  <rect x="405" y="335" width="10" height="70" fill="#050303"/>
+
+  <!-- Eyes (barely visible, glowing faintly) -->
+  <circle cx="394" cy="207" r="1.5" fill="#2a2015" opacity="0.6" filter="url(#glow)"/>
+  <circle cx="406" cy="207" r="1.5" fill="#2a2015" opacity="0.6" filter="url(#glow)"/>
+
+  <!-- Floor buttons panel -->
+  <rect x="540" y="250" width="30" height="50" fill="#151313" stroke="#1a1818" stroke-width="0.5"/>
+  <!-- Button rows -->
+  <circle cx="555" cy="260" r="3" fill="#1a1a1a"/>
+  <circle cx="555" cy="270" r="3" fill="#1a1a1a"/>
+  <circle cx="555" cy="280" r="3" fill="#1a1a1a"/>
+  <circle cx="555" cy="290" r="3" fill="#1a1a1a"/>
+  <!-- Floor 17 button (lit up, eerie glow) -->
+  <circle cx="555" cy="297" r="3.5" fill="#3a2a1a" filter="url(#glow)"/>
+  <circle cx="555" cy="297" r="2" fill="#4a3520"/>
+
+  <!-- Faint reflection on elevator floor -->
+  <ellipse cx="400" cy="415" rx="40" ry="3" fill="#0a0808" opacity="0.5"/>
+
+  <!-- Dark vignette edges -->
+  <rect x="0" y="0" width="120" height="450" fill="#0a0808" opacity="0.9"/>
+  <rect x="680" y="0" width="120" height="450" fill="#0a0808" opacity="0.9"/>
+  <rect x="0" y="0" width="800" height="60" fill="#0a0808" opacity="0.5"/>
+
+  <!-- Subtle grain/noise texture overlay (dots) -->
+  <g opacity="0.03" fill="#ffffff">
+    <circle cx="50" cy="80" r="1"/><circle cx="150" cy="200" r="1.5"/><circle cx="250" cy="50" r="1"/>
+    <circle cx="350" cy="350" r="1.2"/><circle cx="450" cy="100" r="0.8"/><circle cx="550" cy="250" r="1"/>
+    <circle cx="650" cy="400" r="1.3"/><circle cx="750" cy="150" r="0.9"/><circle cx="100" cy="350" r="1.1"/>
+    <circle cx="700" cy="300" r="1"/><circle cx="200" cy="420" r="0.8"/><circle cx="600" cy="50" r="1.2"/>
+  </g>
+</svg>
