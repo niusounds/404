@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background - dark hallway -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="380" width="800" height="70" fill="#0d0a0a"/>
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Wall -->
+  <rect x="0" y="0" width="800" height="380" fill="#0e0c0c"/>
+  
+  <!-- Door frame -->
+  <rect x="250" y="30" width="300" height="350" rx="2" fill="#151313" stroke="#1e1c1c" stroke-width="2"/>
+  
+  <!-- Door -->
+  <rect x="260" y="40" width="280" height="340" fill="#181616" stroke="#222" stroke-width="1"/>
+  
+  <!-- Door peephole (wide angle) -->
+  <circle cx="400" cy="200" r="25" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="2"/>
+  <circle cx="400" cy="200" r="18" fill="#0a0a08"/>
+  <circle cx="400" cy="200" r="12" fill="#121210" opacity="0.8"/>
+  
+  <!-- Intercom panel on wall -->
+  <rect x="580" y="140" width="80" height="120" rx="4" fill="#1e1e1e" stroke="#2a2a2a" stroke-width="1"/>
+  
+  <!-- Intercom screen (glowing) -->
+  <rect x="590" y="155" width="60" height="45" rx="2" fill="#1a2a1a" opacity="0.6"/>
+  <rect x="590" y="155" width="60" height="45" rx="2" fill="#1a2a1a" opacity="0.6"/>
+  
+  <!-- Screen glow effect -->
+  <rect x="590" y="155" width="60" height="45" rx="2" fill="#1a2a1a" opacity="0.4"/>
+  <ellipse cx="620" cy="177" rx="30" ry="22" fill="#1a2a1a" opacity="0.3"/>
+  
+  <!-- Figure on intercom screen (silhouette of a person) -->
+  <ellipse cx="620" cy="170" rx="8" ry="10" fill="#2a2a2a" opacity="0.5"/>
+  <rect x="612" y="180" width="16" height="15" rx="3" fill="#2a2a2a" opacity="0.5"/>
+  
+  <!-- Intercom buttons -->
+  <circle cx="605" cy="215" r="4" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <circle cx="620" cy="215" r="4" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <circle cx="635" cy="215" r="4" fill="#333" stroke="#444" stroke-width="0.5"/>
+  
+  <!-- Intercom speaker -->
+  <rect x="600" y="230" width="40" height="20" rx="2" fill="#222" stroke="#333" stroke-width="0.5"/>
+  <line x1="605" y1="237" x2="635" y2="237" stroke="#333" stroke-width="0.5"/>
+  
+  <!-- Door handle -->
+  <rect x="510" y="200" width="15" height="60" rx="7" fill="#333" stroke="#444" stroke-width="1"/>
+  
+  <!-- Dark hallway light -->
+  <ellipse cx="400" cy="20" rx="100" ry="30" fill="#1a1810" opacity="0.15"/>
+  
+  <!-- Shadowy figure behind the door (very subtle) -->
+  <ellipse cx="400" cy="250" rx="30" ry="60" fill="#0a0808" opacity="0.3"/>
+  <!-- Eyes in the shadow -->
+  <ellipse cx="390" cy="235" rx="3" ry="2" fill="#2a2a20" opacity="0.4"/>
+  <ellipse cx="410" cy="235" rx="3" ry="2" fill="#2a2a20" opacity="0.4"/>
+  
+  <!-- Time display hint (02:14) -->
+  <text x="400" y="420" text-anchor="middle" fill="#1a1a18" font-family="monospace" font-size="14" opacity="0.6">02:14</text>
+  
+  <!-- Subtle vignette -->
+  <rect x="0" y="0" width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+  
+  <!-- Shadow under door -->
+  <rect x="260" y="375" width="280" height="10" fill="#050404" opacity="0.5"/>
+  
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
