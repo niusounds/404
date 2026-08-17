@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="380" width="800" height="70" fill="#0d0a0a"/>
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Wall texture - subtle vertical lines -->
+  <line x1="100" y1="0" x2="100" y2="380" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="200" y1="0" x2="200" y2="380" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="300" y1="0" x2="300" y2="380" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="400" y1="0" x2="400" y2="380" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="500" y1="0" x2="500" y2="380" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="600" y1="0" x2="600" y2="380" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="700" y1="0" x2="700" y2="380" stroke="#0f0c0c" stroke-width="0.5"/>
+  
+  <!-- Corridor perspective - vanishing point at center -->
+  <line x1="0" y1="380" x2="400" y2="200" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="800" y1="380" x2="400" y2="200" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="0" y1="0" x2="400" y2="200" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="800" y1="0" x2="400" y2="200" stroke="#0f0c0c" stroke-width="0.5"/>
+  
+  <!-- Delivery box slot - centered -->
+  <rect x="340" y="220" width="120" height="160" rx="4" fill="#0e0b0b" stroke="#1a1515" stroke-width="1.5"/>
+  
+  <!-- Slot opening (dark void) -->
+  <rect x="355" y="235" width="90" height="120" rx="2" fill="#050303"/>
+  
+  <!-- Box inside the slot - slightly visible -->
+  <rect x="365" y="290" width="70" height="55" fill="#1a1612" opacity="0.6"/>
+  <line x1="365" y1="317" x2="435" y2="317" stroke="#221e18" stroke-width="0.5"/>
+  
+  <!-- Slot door - slightly ajar on the right -->
+  <rect x="455" y="220" width="8" height="160" fill="#1a1515"/>
+  
+  <!-- Ambient light from above - cold blue -->
+  <ellipse cx="400" cy="0" rx="120" ry="200" fill="#0a1020" opacity="0.08"/>
+  
+  <!-- Phone glow on the floor - right side -->
+  <ellipse cx="620" cy="400" rx="40" ry="15" fill="#1a3050" opacity="0.06"/>
+  <rect x="605" y="370" width="30" height="55" rx="3" fill="#1a1a1a" opacity="0.7"/>
+  <rect x="608" y="373" width="24" height="45" rx="1" fill="#1a2a40" opacity="0.5"/>
+  
+  <!-- Faint notification glow from phone -->
+  <ellipse cx="620" cy="395" rx="25" ry="8" fill="#204060" opacity="0.04"/>
+  
+  <!-- Time display hint - faint digital numbers floating -->
+  <text x="380" y="210" font-family="monospace" font-size="8" fill="#1a2a3a" opacity="0.3">02:57</text>
+  
+  <!-- Creepy eye-like reflection in the dark slot -->
+  <circle cx="390" cy="270" r="3" fill="#1a1a1a" opacity="0.4"/>
+  <circle cx="410" cy="270" r="3" fill="#1a1a1a" opacity="0.4"/>
+  <circle cx="391" cy="269" r="1" fill="#2a2a2a" opacity="0.3"/>
+  <circle cx="411" cy="269" r="1" fill="#2a2a2a" opacity="0.3"/>
+  
+  <!-- Subtle vignette -->
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050303" stop-opacity="0.8"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#vignette)"/>
+  
+  <!-- Faint fog/mist near the floor -->
+  <ellipse cx="400" cy="400" rx="300" ry="30" fill="#0d0a0a" opacity="0.3"/>
+</svg>
