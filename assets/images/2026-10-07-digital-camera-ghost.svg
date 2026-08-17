@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="screenGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <filter id="eyeGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#screenGlow)" opacity="0.3"/>
+
+  <!-- Table surface -->
+  <rect x="0" y="320" width="800" height="130" fill="#111111"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Digital camera body -->
+  <rect x="250" y="180" width="300" height="140" rx="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Camera top bump (lens barrel area) -->
+  <rect x="380" y="165" width="40" height="20" rx="4" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+
+  <!-- Camera lens -->
+  <circle cx="400" cy="210" r="35" fill="#0d0d15" stroke="#2a2a3a" stroke-width="2"/>
+  <circle cx="400" cy="210" r="25" fill="#0a0a12" stroke="#1a1a2a" stroke-width="1"/>
+  <circle cx="400" cy="210" r="12" fill="#050508"/>
+
+  <!-- LCD screen -->
+  <rect x="270" y="200" width="100" height="80" rx="3" fill="#0d0d18" stroke="#2a2a3a" stroke-width="1.5"/>
+
+  <!-- Screen content: wall corner with eye -->
+  <!-- Wall -->
+  <rect x="275" y="205" width="90" height="70" fill="#1a1510"/>
+  <!-- Wall corner line -->
+  <line x1="320" y1="205" x2="320" y2="275" stroke="#2a2015" stroke-width="1"/>
+  <!-- Seam gap -->
+  <line x1="318" y1="230" x2="322" y2="230" stroke="#0a0808" stroke-width="2"/>
+
+  <!-- The eye in the gap -->
+  <ellipse cx="320" cy="245" rx="8" ry="5" fill="#c8b898" filter="url(#eyeGlow)"/>
+  <circle cx="320" cy="245" r="3" fill="#0a0808"/>
+  <circle cx="320" cy="245" r="1.5" fill="#1a0a0a"/>
+
+  <!-- Camera flash -->
+  <rect x="340" y="172" width="20" height="8" rx="2" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="0.5"/>
+
+  <!-- Camera button -->
+  <circle cx="510" cy="195" r="6" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="0.5"/>
+
+  <!-- Strap loop -->
+  <rect x="255" y="185" width="8" height="15" rx="2" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="0.5"/>
+  <rect x="537" y="185" width="8" height="15" rx="2" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="0.5"/>
+
+  <!-- Subtle light from screen -->
+  <rect x="270" y="200" width="100" height="80" rx="3" fill="none" stroke="#2a2a4a" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Dark atmosphere - faint wall texture -->
+  <rect x="0" y="0" width="800" height="320" fill="#080606"/>
+  <line x1="100" y1="0" x2="100" y2="320" stroke="#0d0a0a" stroke-width="0.5" opacity="0.3"/>
+  <line x1="700" y1="0" x2="700" y2="320" stroke="#0d0a0a" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- AF focus indicator on screen -->
+  <rect x="290" y="215" width="60" height="40" rx="1" fill="none" stroke="#4a8a4a" stroke-width="0.8" opacity="0.6"/>
+  <line x1="320" y1="215" x2="320" y2="255" stroke="#4a8a4a" stroke-width="0.3" opacity="0.4"/>
+  <line x1="290" y1="235" x2="350" y2="235" stroke="#4a8a4a" stroke-width="0.3" opacity="0.4"/>
+</svg>
