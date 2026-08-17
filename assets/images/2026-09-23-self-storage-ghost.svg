@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1510"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#15120e"/>
+      <stop offset="100%" stop-color="#0d0b08"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="800" height="60" fill="#080606"/>
+
+  <!-- Perspective floor -->
+  <polygon points="0,350 800,350 800,450 0,450" fill="url(#floorGrad)"/>
+
+  <!-- Left wall -->
+  <polygon points="0,60 200,120 200,350 0,350" fill="url(#wallGrad)" opacity="0.8"/>
+
+  <!-- Right wall -->
+  <polygon points="800,60 600,120 600,350 800,350" fill="url(#wallGrad)" opacity="0.8"/>
+
+  <!-- Back wall (far end of corridor) -->
+  <polygon points="200,120 600,120 600,350 200,350" fill="#0c0a07"/>
+
+  <!-- Corridor floor lines (perspective) -->
+  <line x1="100" y1="350" x2="0" y2="450" stroke="#15120e" stroke-width="1" opacity="0.5"/>
+  <line x1="200" y1="350" x2="100" y2="450" stroke="#15120e" stroke-width="1" opacity="0.5"/>
+  <line x1="600" y1="350" x2="700" y2="450" stroke="#15120e" stroke-width="1" opacity="0.5"/>
+  <line x1="700" y1="350" x2="800" y2="450" stroke="#15120e" stroke-width="1" opacity="0.5"/>
+
+  <!-- Horizontal floor lines -->
+  <line x1="150" y1="380" x2="650" y2="380" stroke="#15120e" stroke-width="0.5" opacity="0.3"/>
+  <line x1="100" y1="410" x2="700" y2="410" stroke="#15120e" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Left wall storage boxes (silhouettes) -->
+  <rect x="30" y="140" width="80" height="100" fill="#0e0c09" stroke="#1a1712" stroke-width="0.5" rx="1"/>
+  <rect x="30" y="250" width="80" height="80" fill="#0e0c09" stroke="#1a1712" stroke-width="0.5" rx="1"/>
+  <line x1="30" y1="160" x2="110" y2="160" stroke="#1a1712" stroke-width="0.3" opacity="0.5"/>
+  <line x1="30" y1="180" x2="110" y2="180" stroke="#1a1712" stroke-width="0.3" opacity="0.5"/>
+  <line x1="30" y1="270" x2="110" y2="270" stroke="#1a1712" stroke-width="0.3" opacity="0.5"/>
+
+  <!-- Right wall storage boxes -->
+  <rect x="690" y="140" width="80" height="100" fill="#0e0c09" stroke="#1a1712" stroke-width="0.5" rx="1"/>
+  <rect x="690" y="250" width="80" height="80" fill="#0e0c09" stroke="#1a1712" stroke-width="0.5" rx="1"/>
+  <line x1="690" y1="160" x2="770" y2="160" stroke="#1a1712" stroke-width="0.3" opacity="0.5"/>
+  <line x1="690" y1="180" x2="770" y2="180" stroke="#1a1712" stroke-width="0.3" opacity="0.5"/>
+  <line x1="690" y1="270" x2="770" y2="270" stroke="#1a1712" stroke-width="0.3" opacity="0.5"/>
+
+  <!-- Back wall boxes -->
+  <rect x="230" y="180" width="60" height="80" fill="#0e0c09" stroke="#1a1712" stroke-width="0.5" rx="1"/>
+  <rect x="300" y="160" width="50" height="100" fill="#0e0c09" stroke="#1a1712" stroke-width="0.5" rx="1"/>
+  <rect x="450" y="170" width="70" height="90" fill="#0e0c09" stroke="#1a1712" stroke-width="0.5" rx="1"/>
+  <rect x="530" y="190" width="50" height="70" fill="#0e0c09" stroke="#1a1712" stroke-width="0.5" rx="1"/>
+
+  <!-- Overhead fluorescent lights -->
+  <rect x="370" y="80" width="60" height="8" fill="#2a2520" rx="2"/>
+  <rect x="370" y="180" width="60" height="8" fill="#2a2520" rx="2"/>
+  <rect x="370" y="270" width="60" height="8" fill="#2a2520" rx="2"/>
+
+  <!-- Flickering light glow (first light) -->
+  <ellipse cx="400" cy="92" rx="40" ry="15" fill="#3a3520" filter="url(#softGlow)" opacity="0.15"/>
+  <ellipse cx="400" cy="92" rx="8" ry="3" fill="#5a5030" filter="url(#glow)" opacity="0.3"/>
+
+  <!-- Flickering light glow (second, dimmer - flickering) -->
+  <ellipse cx="400" cy="192" rx="30" ry="10" fill="#3a3520" filter="url(#softGlow)" opacity="0.06"/>
+
+  <!-- Flickering light glow (third, barely on) -->
+  <ellipse cx="400" cy="282" rx="15" ry="5" fill="#3a3520" filter="url(#softGlow)" opacity="0.02"/>
+
+  <!-- Distant open box B-14 at the back -->
+  <rect x="350" y="280" width="100" height="70" fill="#0d0b08" stroke="#1e1a14" stroke-width="1"/>
+  <!-- Open lid -->
+  <polygon points="350,280 340,260 440,260 450,280" fill="#11100a" stroke="#1e1a14" stroke-width="0.5"/>
+  <!-- Box label -->
+  <rect x="380" y="300" width="40" height="15" fill="#1a1712" rx="1"/>
+  <text x="400" y="311" text-anchor="middle" font-size="9" fill="#3a3528" font-family="monospace">B-14</text>
+
+  <!-- Faint shadowy figure silhouette at the far end -->
+  <g opacity="0.08">
+    <ellipse cx="400" cy="230" rx="8" ry="10" fill="#1a1712"/>
+    <rect x="393" y="240" width="14" height="30" fill="#1a1712" rx="3"/>
+    <rect x="395" y="270" width="10" height="25" fill="#1a1712" rx="2"/>
+  </g>
+
+  <!-- Subtle vignette overlay -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+
+  <!-- Cold blue light from phone screen (tiny) -->
+  <ellipse cx="400" cy="350" rx="5" ry="3" fill="#2a3a5a" filter="url(#glow)" opacity="0.1"/>
+</svg>
