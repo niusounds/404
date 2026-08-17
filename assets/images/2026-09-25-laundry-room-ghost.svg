@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1a1414"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <linearGradient id="fluorLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e0d0" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e8e0d0" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+
+  <!-- Fluorescent light beams from ceiling -->
+  <rect x="300" y="0" width="200" height="200" fill="url(#fluorLight)"/>
+  <rect x="100" y="0" width="120" height="160" fill="url(#fluorLight)" opacity="0.6"/>
+  <rect x="550" y="0" width="120" height="160" fill="url(#fluorLight)" opacity="0.6"/>
+
+  <!-- Ceiling fluorescent tube -->
+  <rect x="340" y="8" width="120" height="4" rx="2" fill="#d4c8a0" opacity="0.3" filter="url(#glow)"/>
+  <rect x="130" y="8" width="80" height="3" rx="1.5" fill="#d4c8a0" opacity="0.15"/>
+  <rect x="590" y="8" width="80" height="3" rx="1.5" fill="#d4c8a0" opacity="0.15"/>
+
+  <!-- Floor -->
+  <rect x="0" y="340" width="800" height="110" fill="#0d0b0b"/>
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Washing machines row (7 normal ones) -->
+  <!-- Machine 1 -->
+  <rect x="60" y="140" width="70" height="190" rx="3" fill="#1e1a1a" stroke="#2a2525" stroke-width="1"/>
+  <rect x="70" y="155" width="50" height="50" rx="25" fill="#151212" stroke="#2a2525" stroke-width="1"/>
+  <circle cx="95" cy="180" r="15" fill="#1a1717" stroke="#332e2e" stroke-width="0.5"/>
+  <rect x="75" y="215" width="40" height="15" rx="2" fill="#1a1717" stroke="#2a2525" stroke-width="0.5"/>
+  <circle cx="85" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+  <circle cx="105" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+
+  <!-- Machine 2 -->
+  <rect x="140" y="140" width="70" height="190" rx="3" fill="#1e1a1a" stroke="#2a2525" stroke-width="1"/>
+  <rect x="150" y="155" width="50" height="50" rx="25" fill="#151212" stroke="#2a2525" stroke-width="1"/>
+  <circle cx="175" cy="180" r="15" fill="#1a1717" stroke="#332e2e" stroke-width="0.5"/>
+  <rect x="155" y="215" width="40" height="15" rx="2" fill="#1a1717" stroke="#2a2525" stroke-width="0.5"/>
+  <circle cx="165" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+  <circle cx="185" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+
+  <!-- Machine 3 -->
+  <rect x="220" y="140" width="70" height="190" rx="3" fill="#1e1a1a" stroke="#2a2525" stroke-width="1"/>
+  <rect x="230" y="155" width="50" height="50" rx="25" fill="#151212" stroke="#2a2525" stroke-width="1"/>
+  <circle cx="255" cy="180" r="15" fill="#1a1717" stroke="#332e2e" stroke-width="0.5"/>
+  <rect x="235" y="215" width="40" height="15" rx="2" fill="#1a1717" stroke="#2a2525" stroke-width="0.5"/>
+  <circle cx="245" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+  <circle cx="265" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+
+  <!-- Machine 4 -->
+  <rect x="300" y="140" width="70" height="190" rx="3" fill="#1e1a1a" stroke="#2a2525" stroke-width="1"/>
+  <rect x="310" y="155" width="50" height="50" rx="25" fill="#151212" stroke="#2a2525" stroke-width="1"/>
+  <circle cx="335" cy="180" r="15" fill="#1a1717" stroke="#332e2e" stroke-width="0.5"/>
+  <rect x="315" y="215" width="40" height="15" rx="2" fill="#1a1717" stroke="#2a2525" stroke-width="0.5"/>
+  <circle cx="325" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+  <circle cx="345" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+
+  <!-- Machine 5 -->
+  <rect x="380" y="140" width="70" height="190" rx="3" fill="#1e1a1a" stroke="#2a2525" stroke-width="1"/>
+  <rect x="390" y="155" width="50" height="50" rx="25" fill="#151212" stroke="#2a2525" stroke-width="1"/>
+  <circle cx="415" cy="180" r="15" fill="#1a1717" stroke="#332e2e" stroke-width="0.5"/>
+  <rect x="395" y="215" width="40" height="15" rx="2" fill="#1a1717" stroke="#2a2525" stroke-width="0.5"/>
+  <circle cx="405" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+  <circle cx="425" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+
+  <!-- Machine 6 -->
+  <rect x="460" y="140" width="70" height="190" rx="3" fill="#1e1a1a" stroke="#2a2525" stroke-width="1"/>
+  <rect x="470" y="155" width="50" height="50" rx="25" fill="#151212" stroke="#2a2525" stroke-width="1"/>
+  <circle cx="495" cy="180" r="15" fill="#1a1717" stroke="#332e2e" stroke-width="0.5"/>
+  <rect x="475" y="215" width="40" height="15" rx="2" fill="#1a1717" stroke="#2a2525" stroke-width="0.5"/>
+  <circle cx="485" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+  <circle cx="505" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+
+  <!-- Machine 7 -->
+  <rect x="540" y="140" width="70" height="190" rx="3" fill="#1e1a1a" stroke="#2a2525" stroke-width="1"/>
+  <rect x="550" y="155" width="50" height="50" rx="25" fill="#151212" stroke="#2a2525" stroke-width="1"/>
+  <circle cx="575" cy="180" r="15" fill="#1a1717" stroke="#332e2e" stroke-width="0.5"/>
+  <rect x="555" y="215" width="40" height="15" rx="2" fill="#1a1717" stroke="#2a2525" stroke-width="0.5"/>
+  <circle cx="565" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+  <circle cx="585" cy="222" r="3" fill="#2a2520" opacity="0.5"/>
+
+  <!-- The 8th machine - the ghost machine between machine 7 and wall -->
+  <!-- Darker, more ominous -->
+  <rect x="620" y="135" width="75" height="195" rx="3" fill="#121010" stroke="#1a1515" stroke-width="1"/>
+  <!-- Foggy glass -->
+  <rect x="630" y="150" width="55" height="55" rx="27.5" fill="#0e0c0c" stroke="#1a1515" stroke-width="1"/>
+  <!-- Ghostly figure inside the glass -->
+  <ellipse cx="657" cy="175" rx="12" ry="14" fill="#1a1818" opacity="0.8"/>
+  <!-- White cloth-like shape suggesting a hand -->
+  <path d="M648,195 Q655,185 660,190 Q665,195 658,200 Q652,205 648,198 Z" fill="#2a2525" opacity="0.6"/>
+  <path d="M650,190 Q657,182 662,188 Q667,194 660,198 Q654,202 650,195 Z" fill="#252020" opacity="0.4"/>
+  <!-- Coin return slot with coin sticking out -->
+  <rect x="635" y="215" width="45" height="15" rx="2" fill="#151212" stroke="#1a1515" stroke-width="0.5"/>
+  <circle cx="648" cy="222" r="3.5" fill="#3a3520" opacity="0.7"/>
+  <circle cx="665" cy="222" r="3.5" fill="#3a3520" opacity="0.7"/>
+
+  <!-- Wall after machine 7 (where the ghost machine shouldn't be) -->
+  <rect x="695" y="140" width="105" height="190" fill="#111010" stroke="#1a1515" stroke-width="0.5"/>
+  <!-- Subtle tile pattern on wall -->
+  <line x1="720" y1="140" x2="720" y2="330" stroke="#181515" stroke-width="0.3"/>
+  <line x1="745" y1="140" x2="745" y2="330" stroke="#181515" stroke-width="0.3"/>
+  <line x1="695" y1="200" x2="800" y2="200" stroke="#181515" stroke-width="0.3"/>
+  <line x1="695" y1="260" x2="800" y2="260" stroke="#181515" stroke-width="0.3"/>
+
+  <!-- Subtle water droplets/mist near ghost machine -->
+  <circle cx="640" cy="145" r="1" fill="#2a2525" opacity="0.3"/>
+  <circle cx="665" cy="142" r="0.8" fill="#2a2525" opacity="0.25"/>
+  <circle cx="650" cy="148" r="0.6" fill="#2a2525" opacity="0.2"/>
+
+  <!-- Floor reflection from ghost machine -->
+  <ellipse cx="657" cy="345" rx="35" ry="5" fill="#0e0c0c" opacity="0.3"/>
+
+  <!-- Cold light cast from ghost machine area -->
+  <rect x="610" y="200" width="95" height="140" fill="#1a1515" opacity="0.08"/>
+
+  <!-- Door frame on the right edge -->
+  <rect x="770" y="100" width="30" height="240" fill="#151212" stroke="#1a1515" stroke-width="0.5"/>
+  <rect x="775" y="110" width="20" height="220" fill="#0e0c0c"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="none" stroke="#0a0808" stroke-width="40" opacity="0.4"/>
+</svg>
