@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#080606"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <linearGradient id="monitorGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a3a1a" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#0a3a1a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a3a1a" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Subtle room perspective - floor line -->
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Wall texture - very subtle -->
+  <rect x="0" y="0" width="800" height="340" fill="#0c0a0a"/>
+
+  <!-- Hospital room outline - left wall -->
+  <line x1="100" y1="60" x2="100" y2="340" stroke="#151212" stroke-width="2"/>
+
+  <!-- Window on left wall (dark) -->
+  <rect x="120" y="80" width="80" height="120" rx="2" fill="#060506" stroke="#1a1818" stroke-width="1"/>
+  <line x1="160" y1="80" x2="160" y2="200" stroke="#1a1818" stroke-width="0.5"/>
+  <line x1="120" y1="140" x2="200" y2="140" stroke="#1a1818" stroke-width="0.5"/>
+
+  <!-- Moonlight from window -->
+  <polygon points="120,200 200,200 280,340 80,340" fill="#0a0a15" opacity="0.3"/>
+
+  <!-- Hospital bed - silhouette -->
+  <rect x="280" y="260" width="240" height="8" rx="2" fill="#141212"/>
+  <!-- Bed legs -->
+  <rect x="300" y="268" width="6" height="30" fill="#141212"/>
+  <rect x="500" y="268" width="6" height="30" fill="#141212"/>
+  <!-- Bed frame -->
+  <rect x="275" y="255" width="250" height="8" rx="3" fill="#1a1717"/>
+  <!-- Pillow -->
+  <rect x="290" y="245" width="50" height="14" rx="7" fill="#1a1818"/>
+  <!-- Blanket -->
+  <rect x="380" y="248" width="130" height="18" rx="4" fill="#1c1a1a"/>
+  <!-- Blanket fold -->
+  <path d="M 510 248 L 510 266 Q 510 268 508 266 L 505 255" fill="none" stroke="#222020" stroke-width="0.5"/>
+
+  <!-- Headboard -->
+  <rect x="270" y="200" width="8" height="65" fill="#1a1717"/>
+  <rect x="268" y="198" width="12" height="8" rx="2" fill="#1e1b1b"/>
+
+  <!-- Monitor stand -->
+  <rect x="560" y="200" width="4" height="65" fill="#1e1b1b"/>
+  <rect x="548" y="260" width="28" height="6" rx="2" fill="#1e1b1b"/>
+
+  <!-- ECG Monitor -->
+  <rect x="530" y="150" width="100" height="70" rx="4" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1"/>
+  <!-- Monitor screen -->
+  <rect x="536" y="156" width="88" height="48" rx="2" fill="#050a05" opacity="0.9"/>
+
+  <!-- Monitor glow effect -->
+  <rect x="536" y="156" width="88" height="48" rx="2" fill="url(#monitorGlow)"/>
+
+  <!-- ECG waveform - heartbeat line -->
+  <polyline
+    points="540,180 550,180 555,170 560,190 565,175 570,185 575,180 580,180 585,172 590,195 595,170 600,182 605,180 620,180 625,170 630,190 635,175 640,185 645,180 650,180 655,172 660,195 665,170 674,180"
+    fill="none"
+    stroke="#1a6a2a"
+    stroke-width="1.5"
+    filter="url(#glow)"
+    opacity="0.8"/>
+
+  <!-- ECG waveform - second beat (ghostly, fainter) -->
+  <polyline
+    points="540,185 550,185 555,175 560,195 565,180 570,190 575,185 580,185 585,177 590,200 595,175 600,187 605,185 620,185 625,175 630,195 635,180 640,190 645,185 650,185"
+    fill="none"
+    stroke="#0a3a1a"
+    stroke-width="0.8"
+    filter="url(#softGlow)"
+    opacity="0.3"/>
+
+  <!-- Monitor frame detail -->
+  <rect x="530" y="220" width="100" height="3" rx="1" fill="#1a1a1a"/>
+  <!-- Monitor buttons -->
+  <circle cx="545" cy="222" r="2" fill="#2a2a2a"/>
+  <circle cx="555" cy="222" r="2" fill="#2a2a2a"/>
+  <circle cx="565" cy="222" r="2" fill="#2a2a2a"/>
+
+  <!-- Empty corridor extending to the right -->
+  <line x1="420" y1="100" x2="800" y2="100" stroke="#151212" stroke-width="1"/>
+  <line x1="420" y1="340" x2="800" y2="340" stroke="#151212" stroke-width="1"/>
+
+  <!-- Corridor ceiling lights (faint) -->
+  <rect x="460" y="95" width="30" height="4" rx="1" fill="#1a1818"/>
+  <rect x="540" y="95" width="30" height="4" rx="1" fill="#1a1818"/>
+  <rect x="620" y="95" width="30" height="4" rx="1" fill="#1a1818"/>
+  <rect x="700" y="95" width="30" height="4" rx="1" fill="#1a1818"/>
+
+  <!-- Light pools from ceiling -->
+  <ellipse cx="475" cy="105" rx="25" ry="3" fill="#1a1510" opacity="0.2"/>
+  <ellipse cx="555" cy="105" rx="25" ry="3" fill="#1a1510" opacity="0.2"/>
+  <ellipse cx="635" cy="105" rx="25" ry="3" fill="#1a1510" opacity="0.2"/>
+  <ellipse cx="715" cy="105" rx="25" ry="3" fill="#1a1510" opacity="0.2"/>
+
+  <!-- Corridor vanishing point - dark door at end -->
+  <rect x="740" y="160" width="30" height="180" fill="#050404" stroke="#1a1818" stroke-width="0.5"/>
+  <line x1="755" y1="160" x2="755" y2="340" stroke="#1a1818" stroke-width="0.5"/>
+
+  <!-- Subtle atmospheric haze -->
+  <rect x="0" y="200" width="800" height="150" fill="#0a0808" opacity="0.15"/>
+
+  <!-- Very faint heartbeat pulse rings (ghostly element) -->
+  <circle cx="620" cy="175" r="30" fill="none" stroke="#0a3a1a" stroke-width="0.3" opacity="0.15"/>
+  <circle cx="620" cy="175" r="50" fill="none" stroke="#0a3a1a" stroke-width="0.2" opacity="0.08"/>
+  <circle cx="620" cy="175" r="70" fill="none" stroke="#0a3a1a" stroke-width="0.1" opacity="0.04"/>
+
+  <!-- Empty space where the "heartbeat" is - ominous void -->
+  <ellipse cx="400" cy="300" rx="60" ry="20" fill="#0a0808" opacity="0.5"/>
+
+  <!-- Floor reflection of monitor glow -->
+  <ellipse cx="580" cy="340" rx="60" ry="8" fill="#0a3a1a" opacity="0.05"/>
+</svg>
