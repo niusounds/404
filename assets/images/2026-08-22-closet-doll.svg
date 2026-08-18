@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="light" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a1410"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a2010" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#light)"/>
+  
+  <!-- Flashlight cone -->
+  <polygon points="600,450 350,100 450,100" fill="#1a1508" opacity="0.15"/>
+  <polygon points="600,450 380,150 420,150" fill="#1e180a" opacity="0.1"/>
+  
+  <!-- Wooden closet frame -->
+  <rect x="200" y="50" width="400" height="400" fill="#0d0a07" stroke="#1a1410" stroke-width="2"/>
+  <!-- Closet interior shelves -->
+  <rect x="210" y="200" width="380" height="4" fill="#12100c"/>
+  <rect x="210" y="320" width="380" height="4" fill="#12100c"/>
+  
+  <!-- Old clothes piled on left shelf -->
+  <ellipse cx="280" cy="190" rx="50" ry="30" fill="#15100a"/>
+  <ellipse cx="320" cy="195" rx="40" ry="25" fill="#12100b"/>
+  <ellipse cx="260" cy="180" rx="35" ry="20" fill="#18130a"/>
+  
+  <!-- Right side items -->
+  <rect x="480" y="170" width="30" height="50" fill="#14100c" rx="2"/>
+  <rect x="520" y="165" width="40" height="55" fill="#11100a" rx="3"/>
+  
+  <!-- DOLL - center, facing forward -->
+  <!-- Kimono body -->
+  <path d="M370,160 Q365,200 360,280 Q358,320 360,350 L440,350 Q442,320 440,280 Q435,200 430,160 Z" fill="#1a1410"/>
+  <!-- Kimono collar -->
+  <path d="M385,160 L400,180 L415,160" fill="none" stroke="#2a2018" stroke-width="2"/>
+  <!-- Kimono obi (sash) -->
+  <rect x="365" y="230" width="70" height="12" fill="#1e1812"/>
+  <ellipse cx="400" cy="236" rx="10" ry="8" fill="#221c14"/>
+  <!-- Kimono pattern (subtle) -->
+  <circle cx="385" cy="200" r="3" fill="#221c16" opacity="0.5"/>
+  <circle cx="415" cy="210" r="2.5" fill="#221c16" opacity="0.4"/>
+  <circle cx="395" cy="260" r="2" fill="#221c16" opacity="0.3"/>
+  
+  <!-- Head -->
+  <ellipse cx="400" cy="140" rx="30" ry="35" fill="#1e1a14"/>
+  <!-- Hair -->
+  <path d="M372,130 Q370,100 380,90 Q390,82 400,85 Q410,82 420,90 Q430,100 428,130" fill="#151210"/>
+  <!-- Eyes - OPEN, staring -->
+  <ellipse cx="388" cy="138" rx="6" ry="5" fill="#1a1610"/>
+  <ellipse cx="412" cy="138" rx="6" ry="5" fill="#1a1610"/>
+  <!-- Pupils - small, dark -->
+  <circle cx="388" cy="138" r="2" fill="#0a0808"/>
+  <circle cx="412" cy="138" r="2" fill="#0a0808"/>
+  <!-- Tiny eye shine -->
+  <circle cx="389" cy="137" r="0.5" fill="#2a2418" opacity="0.6"/>
+  <circle cx="413" cy="137" r="0.5" fill="#2a2418" opacity="0.6"/>
+  <!-- Mouth - slight frown -->
+  <path d="M393,155 Q400,152 407,155" fill="none" stroke="#1a1610" stroke-width="1"/>
+  
+  <!-- Arms hanging down -->
+  <path d="M370,170 Q355,200 350,260 Q348,280 355,290" fill="none" stroke="#1a1410" stroke-width="10" stroke-linecap="round"/>
+  <path d="M430,170 Q445,200 450,260 Q452,280 445,290" fill="none" stroke="#1a1410" stroke-width="10" stroke-linecap="round"/>
+  
+  <!-- Feet peeking out -->
+  <ellipse cx="375" cy="352" rx="15" ry="5" fill="#1a1610"/>
+  <ellipse cx="425" cy="352" rx="15" ry="5" fill="#1a1610"/>
+  
+  <!-- Dust particles -->
+  <circle cx="310" cy="120" r="1" fill="#2a2418" opacity="0.3"/>
+  <circle cx="490" cy="140" r="0.8" fill="#2a2418" opacity="0.25"/>
+  <circle cx="350" cy="300" r="1.2" fill="#2a2418" opacity="0.2"/>
+  <circle cx="460" cy="280" r="0.7" fill="#2a2418" opacity="0.3"/>
+  <circle cx="330" cy="250" r="0.9" fill="#2a2418" opacity="0.15"/>
+  <circle cx="480" cy="310" r="1" fill="#2a2418" opacity="0.2"/>
+  
+  <!-- Subtle shadow under doll -->
+  <ellipse cx="400" cy="355" rx="55" ry="6" fill="#0a0808" opacity="0.5"/>
+  
+  <!-- Vignette edges -->
+  <rect width="800" height="450" fill="url(#glow)" opacity="0.5"/>
+</svg>
