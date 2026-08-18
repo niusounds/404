@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#120e0e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1a1510" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Subtle ambient light from hallway -->
+  <ellipse cx="400" cy="225" rx="300" ry="200" fill="url(#glow)" opacity="0.3"/>
+
+  <!-- Floor -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a1410" stroke-width="1" opacity="0.5"/>
+  <line x1="0" y1="382" x2="800" y2="382" stroke="#1a1410" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Tatami mat lines -->
+  <line x1="0" y1="390" x2="800" y2="390" stroke="#15100c" stroke-width="0.5" opacity="0.4"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#15100c" stroke-width="0.5" opacity="0.3"/>
+  <line x1="0" y1="410" x2="800" y2="410" stroke="#15100c" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Wall -->
+  <rect x="0" y="0" width="800" height="380" fill="#0e0a0a" opacity="0.9"/>
+
+  <!-- Wall texture (subtle) -->
+  <rect x="0" y="0" width="800" height="380" fill="none" stroke="#14100a" stroke-width="0.3" opacity="0.3"/>
+
+  <!-- Left wall edge -->
+  <line x1="0" y1="0" x2="0" y2="380" stroke="#1a1410" stroke-width="2" opacity="0.6"/>
+
+  <!-- Right wall edge -->
+  <line x1="800" y1="0" x2="800" y2="380" stroke="#1a1410" stroke-width="2" opacity="0.6"/>
+
+  <!-- Ceiling beam -->
+  <rect x="0" y="0" width="800" height="6" fill="#1a1410" opacity="0.5"/>
+  <rect x="0" y="6" width="800" height="2" fill="#1a1410" opacity="0.3"/>
+
+  <!-- Closet frame (center-right) -->
+  <!-- Left door frame -->
+  <rect x="420" y="40" width="12" height="340" fill="#1a1410" opacity="0.7"/>
+  <!-- Right door frame -->
+  <rect x="668" y="40" width="12" height="340" fill="#1a1410" opacity="0.7"/>
+  <!-- Top frame -->
+  <rect x="420" y="40" width="260" height="12" fill="#1a1410" opacity="0.7"/>
+  <!-- Bottom frame -->
+  <rect x="420" y="368" width="260" height="12" fill="#1a1410" opacity="0.7"/>
+
+  <!-- Left door (closed) -->
+  <rect x="432" y="52" width="120" height="316" fill="#14100c" stroke="#1a1612" stroke-width="0.5"/>
+  <!-- Left door panel lines -->
+  <line x1="492" y1="52" x2="492" y2="368" stroke="#1a1612" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Right door (partially open - shifted right) -->
+  <rect x="580" y="52" width="120" height="316" fill="#14100c" stroke="#1a1612" stroke-width="0.5" opacity="0.6"/>
+  <line x1="640" y1="52" x2="640" y2="368" stroke="#1a1612" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Dark interior of closet -->
+  <rect x="432" y="52" width="228" height="316" fill="#080606"/>
+
+  <!-- Dark void inside closet - the invisible room -->
+  <rect x="560" y="52" width="120" height="316" fill="#050303"/>
+
+  <!-- Faint silhouette figure inside the dark closet -->
+  <g filter="url(#blur1)" opacity="0.4">
+    <!-- Head -->
+    <ellipse cx="610" cy="140" rx="18" ry="22" fill="#0d0a0a"/>
+    <!-- Body -->
+    <path d="M595,160 Q590,200 588,250 Q586,280 590,310 L592,310 Q588,280 590,250 Q592,200 600,160 Z" fill="#0d0a0a"/>
+    <path d="M625,160 Q630,200 632,250 Q634,280 630,310 L628,310 Q632,280 630,250 Q628,200 620,160 Z" fill="#0d0a0a"/>
+    <!-- Legs -->
+    <path d="M595,310 Q593,340 590,368 L592,368 Q595,340 597,310 Z" fill="#0d0a0a"/>
+    <path d="M620,310 Q622,340 625,368 L623,368 Q620,340 618,310 Z" fill="#0d0a0a"/>
+    <!-- Arms reaching slightly -->
+    <path d="M595,175 Q575,190 560,200 L558,198 Q573,188 593,170 Z" fill="#0d0a0a"/>
+  </g>
+
+  <!-- Faint eyes glowing in the darkness -->
+  <g opacity="0.6">
+    <ellipse cx="602" cy="137" rx="2" ry="1.5" fill="#2a2018"/>
+    <ellipse cx="618" cy="137" rx="2" ry="1.5" fill="#2a2018"/>
+    <!-- Eye glow -->
+    <ellipse cx="602" cy="137" rx="4" ry="3" fill="#3a2a1a" opacity="0.3" filter="url(#blur2)"/>
+    <ellipse cx="618" cy="137" rx="4" ry="3" fill="#3a2a1a" opacity="0.3" filter="url(#blur2)"/>
+  </g>
+
+  <!-- Hallway light strip on floor -->
+  <rect x="0" y="378" width="430" height="4" fill="#1a1410" opacity="0.3"/>
+  <rect x="0" y="376" width="430" height="2" fill="#1e1812" opacity="0.15"/>
+
+  <!-- Subtle dust particles in the light -->
+  <circle cx="200" cy="200" r="0.5" fill="#2a2018" opacity="0.3"/>
+  <circle cx="350" cy="150" r="0.5" fill="#2a2018" opacity="0.25"/>
+  <circle cx="150" cy="300" r="0.5" fill="#2a2018" opacity="0.2"/>
+  <circle cx="300" cy="280" r="0.5" fill="#2a2018" opacity="0.3"/>
+  <circle cx="250" cy="100" r="0.5" fill="#2a2018" opacity="0.2"/>
+
+  <!-- Very faint breath/aura from the figure -->
+  <circle cx="600" cy="160" r="30" fill="#1a1410" opacity="0.05" filter="url(#blur2)"/>
+  <circle cx="610" cy="155" r="20" fill="#1a1410" opacity="0.04" filter="url(#blur2)"/>
+
+  <!-- Bottom shadow -->
+  <rect x="0" y="420" width="800" height="30" fill="#080606" opacity="0.5"/>
+</svg>
