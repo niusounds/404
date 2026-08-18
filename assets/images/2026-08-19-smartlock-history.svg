@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Subtle gradient for depth -->
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <radialGradient id="ledGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#4a7aff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4a7aff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#glow)"/>
+  
+  <!-- Door silhouette in center -->
+  <rect x="300" y="30" width="200" height="420" fill="#0d0b0b" rx="2"/>
+  <rect x="305" y="35" width="190" height="410" fill="none" stroke="#1a1818" stroke-width="1"/>
+  
+  <!-- Smart lock panel on door -->
+  <rect x="370" y="180" width="60" height="90" fill="#111111" rx="4" stroke="#1e1e1e" stroke-width="1"/>
+  
+  <!-- Smart lock keypad lines -->
+  <line x1="380" y1="200" x2="420" y2="200" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="380" y1="215" x2="420" y2="215" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="380" y1="230" x2="420" y2="230" stroke="#1a1a1a" stroke-width="1"/>
+  
+  <!-- Smart lock LED - blue glow (the horror element) -->
+  <circle cx="400" cy="175" r="30" fill="url(#ledGlow)"/>
+  <circle cx="400" cy="175" r="4" fill="#4a7aff" opacity="0.9"/>
+  <circle cx="400" cy="175" r="2" fill="#8ab4ff" opacity="1"/>
+  
+  <!-- Lock icon on panel -->
+  <rect x="395" y="240" width="10" height="8" fill="none" stroke="#2a2a2a" stroke-width="1.5" rx="1"/>
+  <path d="M397 240 L397 235 Q400 232 403 235 L403 240" fill="none" stroke="#2a2a2a" stroke-width="1.5"/>
+  
+  <!-- Door handle -->
+  <rect x="475" y="280" width="12" height="4" fill="#1a1a1a" rx="2"/>
+  
+  <!-- Phone screen glow from bottom right -->
+  <rect x="620" y="300" width="80" height="140" fill="#0e0e0e" rx="6" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="628" y="310" width="64" height="110" fill="#0a0a12" rx="3"/>
+  
+  <!-- Phone screen content - lock history list -->
+  <text x="635" y="328" fill="#3a3a4a" font-family="monospace" font-size="8">00:12 解錠</text>
+  <text x="635" y="343" fill="#3a3a4a" font-family="monospace" font-size="8">00:14 施錠</text>
+  <text x="635" y="358" fill="#ff4a4a" font-family="monospace" font-size="8">02:07 解錠</text>
+  <text x="635" y="373" fill="#3a3a4a" font-family="monospace" font-size="8">02:09 施錠</text>
+  <text x="635" y="388" fill="#ff4a4a" font-family="monospace" font-size="8">04:33 解錠</text>
+  <text x="635" y="403" fill="#3a3a4a" font-family="monospace" font-size="8">04:35 施錠</text>
+  
+  <!-- Red glow from the alerting entries -->
+  <circle cx="667" cy="358" r="20" fill="#ff2a2a" opacity="0.03"/>
+  <circle cx="667" cy="388" r="20" fill="#ff2a2a" opacity="0.03"/>
+  
+  <!-- Subtle phone screen reflection on floor -->
+  <ellipse cx="660" cy="448" rx="40" ry="3" fill="#0a0a12" opacity="0.3"/>
+  
+  <!-- Dark corridor walls -->
+  <line x1="0" y1="0" x2="300" y2="30" stroke="#0f0d0d" stroke-width="2"/>
+  <line x1="0" y1="450" x2="300" y2="450" stroke="#0f0d0d" stroke-width="2"/>
+  <line x1="800" y1="0" x2="500" y2="30" stroke="#0f0d0d" stroke-width="2"/>
+  <line x1="800" y1="450" x2="500" y2="450" stroke="#0f0d0d" stroke-width="2"/>
+  
+  <!-- Faint shadow figure at the end of corridor (top center, barely visible) -->
+  <ellipse cx="400" cy="10" rx="15" ry="20" fill="#080606" opacity="0.5"/>
+  <rect x="390" y="25" width="20" height="30" fill="#080606" opacity="0.4"/>
+  
+  <!-- Tiny detail: the blue LED reflection on the door -->
+  <ellipse cx="400" cy="280" rx="8" ry="40" fill="#4a7aff" opacity="0.02"/>
+</svg>
