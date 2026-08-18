@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="mirrorGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <radialGradient id="mirrorGlass" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2a2530" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#1a1520" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f0d12" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="dashLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a3540" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mirrorFrame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a2530"/>
+      <stop offset="50%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#2a2530"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background: dark parking garage -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Fluorescent light streaks from ceiling -->
+  <rect x="100" y="0" width="3" height="180" fill="url(#dashLight)" opacity="0.4"/>
+  <rect x="350" y="0" width="2" height="160" fill="url(#dashLight)" opacity="0.3"/>
+  <rect x="600" y="0" width="3" height="200" fill="url(#dashLight)" opacity="0.35"/>
+
+  <!-- Parking garage structural elements (faint) -->
+  <rect x="0" y="380" width="800" height="70" fill="#080606"/>
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a1515" stroke-width="1" opacity="0.5"/>
+
+  <!-- Car interior silhouette - dashboard -->
+  <path d="M0,320 Q50,280 150,290 Q250,300 300,310 L350,320 L450,315 Q550,305 650,295 Q750,285 800,310 L800,450 L0,450 Z" fill="#0d0b0b"/>
+
+  <!-- Steering wheel (left side, Japanese car) -->
+  <ellipse cx="200" cy="360" rx="55" ry="55" fill="none" stroke="#151313" stroke-width="6"/>
+  <ellipse cx="200" cy="360" rx="55" ry="55" fill="none" stroke="#1a1818" stroke-width="2"/>
+  <line x1="200" y1="360" x2="200" y2="310" stroke="#151313" stroke-width="4"/>
+  <line x1="200" y1="360" x2="155" y2="340" stroke="#151313" stroke-width="3"/>
+  <line x1="200" y1="360" x2="245" y2="340" stroke="#151313" stroke-width="3"/>
+
+  <!-- Rearview mirror frame -->
+  <rect x="360" y="120" width="80" height="100" rx="8" fill="url(#mirrorFrame)" stroke="#2a2530" stroke-width="1"/>
+
+  <!-- Mirror glass -->
+  <rect x="365" y="125" width="70" height="90" rx="6" fill="url(#mirrorGlass)"/>
+
+  <!-- In the mirror: dark passage with a figure -->
+  <!-- Mirror reflection background -->
+  <rect x="365" y="125" width="70" height="90" rx="6" fill="#121015" opacity="0.9"/>
+
+  <!-- Mirror: distant wall -->
+  <rect x="380" y="180" width="40" height="35" fill="#1a1820" opacity="0.6"/>
+
+  <!-- Mirror: ghostly figure in the passage -->
+  <!-- Head -->
+  <circle cx="400" cy="155" r="8" fill="#1e1a25" opacity="0.8"/>
+  <!-- Body -->
+  <path d="M390,165 L388,195 L412,195 L410,165 Z" fill="#1a1622" opacity="0.7"/>
+  <!-- Arms (reaching slightly) -->
+  <path d="M388,170 L378,185" stroke="#1a1622" stroke-width="2.5" opacity="0.6"/>
+  <path d="M412,170 L422,185" stroke="#1a1622" stroke-width="2.5" opacity="0.6"/>
+
+  <!-- Mirror: another fainter figure behind -->
+  <circle cx="400" cy="148" r="6" fill="#161420" opacity="0.4"/>
+  <path d="M393,156 L391,185 L409,185 L407,156 Z" fill="#141218" opacity="0.3"/>
+
+  <!-- Mirror glass reflection/glint -->
+  <path d="M370,130 L430,130 L425,140 L375,140 Z" fill="#ffffff" opacity="0.03"/>
+  <path d="M370,130 L400,130 L395,140 L372,140 Z" fill="#ffffff" opacity="0.02"/>
+
+  <!-- Windshield frame -->
+  <path d="M340,100 L360,120 L360,220 L340,210 Z" fill="#151313" opacity="0.8"/>
+  <path d="M440,100 L420,120 L420,220 L440,210 Z" fill="#151313" opacity="0.8"/>
+
+  <!-- Outside windshield: parking garage passage -->
+  <path d="M340,100 L440,100 L420,220 L360,220 Z" fill="#0e0c10" opacity="0.7"/>
+
+  <!-- Distant exit light -->
+  <ellipse cx="390" cy="155" rx="15" ry="8" fill="#2a2530" opacity="0.2" filter="url(#blur1)"/>
+
+  <!-- Water drops on rear window (subtle) -->
+  <circle cx="370" cy="200" r="1.5" fill="#2a2530" opacity="0.3" filter="url(#blur2)"/>
+  <circle cx="385" cy="210" r="1" fill="#2a2530" opacity="0.25" filter="url(#blur2)"/>
+  <circle cx="410" cy="205" r="1.2" fill="#2a2530" opacity="0.3" filter="url(#blur2)"/>
+  <circle cx="425" cy="195" r="1" fill="#2a2530" opacity="0.2" filter="url(#blur2)"/>
+
+  <!-- Dashboard instruments (dim) -->
+  <circle cx="280" cy="310" r="12" fill="#121010" stroke="#1a1818" stroke-width="1"/>
+  <circle cx="320" cy="308" r="10" fill="#121010" stroke="#1a1818" stroke-width="1"/>
+
+  <!-- Driver silhouette (very faint, left side) -->
+  <circle cx="155" cy="290" r="18" fill="#0e0c0c" opacity="0.5"/>
+  <path d="M140,310 Q145,340 135,370 L175,370 Q165,340 170,310 Z" fill="#0e0c0c" opacity="0.4"/>
+
+  <!-- Floor reflection (subtle wet floor) -->
+  <ellipse cx="400" cy="400" rx="200" ry="20" fill="#0f0d10" opacity="0.3"/>
+
+  <!-- Overall vignette -->
+  <rect width="800" height="450" fill="url(#mirrorGlow)" opacity="0.5"/>
+</svg>
