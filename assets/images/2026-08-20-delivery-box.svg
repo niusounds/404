@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#1a1010"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="340" width="800" height="110" fill="#0d0a0a"/>
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Corridor walls perspective -->
+  <polygon points="0,0 200,120 200,340 0,340" fill="#0e0c0c" opacity="0.8"/>
+  <polygon points="800,0 600,120 600,340 800,340" fill="#0e0c0c" opacity="0.8"/>
+  <polygon points="200,120 600,120 600,340 200,340" fill="#110e0e" opacity="0.9"/>
+
+  <!-- Wall details - left side -->
+  <rect x="30" y="180" width="80" height="100" fill="#151212" stroke="#1a1515" stroke-width="0.5" rx="2"/>
+  <circle cx="70" cy="200" r="3" fill="#2a2020"/>
+  <rect x="30" y="300" width="80" height="30" fill="#151212" stroke="#1a1515" stroke-width="0.5" rx="1"/>
+
+  <!-- Wall details - right side -->
+  <rect x="690" y="180" width="80" height="100" fill="#151212" stroke="#1a1515" stroke-width="0.5" rx="2"/>
+  <circle cx="730" cy="200" r="3" fill="#2a2020"/>
+  <rect x="690" y="300" width="80" height="30" fill="#151212" stroke="#1a1515" stroke-width="0.5" rx="1"/>
+
+  <!-- Delivery boxes on the wall (center-right perspective) -->
+  <!-- Box 1 (front, larger) -->
+  <rect x="520" y="160" width="70" height="90" fill="#2a2525" stroke="#3a3030" stroke-width="1" rx="3"/>
+  <rect x="525" y="165" width="60" height="35" fill="#252020" stroke="#332a2a" stroke-width="0.5" rx="1"/>
+  <!-- Slot opening -->
+  <rect x="530" y="170" width="50" height="8" fill="#0a0808" stroke="#3a3030" stroke-width="0.5"/>
+  <!-- Label area -->
+  <rect x="530" y="210" width="50" height="15" fill="#2a2525" stroke="#332a2a" stroke-width="0.5"/>
+  <line x1="535" y1="215" x2="575" y2="215" stroke="#3a3030" stroke-width="0.5"/>
+  <line x1="535" y1="219" x2="565" y2="219" stroke="#3a3030" stroke-width="0.5"/>
+  <!-- Keyhole -->
+  <circle cx="555" cy="240" r="4" fill="#1a1515" stroke="#3a3030" stroke-width="0.5"/>
+  <line x1="555" y1="240" x2="555" y2="246" stroke="#3a3030" stroke-width="0.5"/>
+
+  <!-- Box 2 (behind, smaller) -->
+  <rect x="595" y="140" width="55" height="75" fill="#252020" stroke="#332a2a" stroke-width="1" rx="3"/>
+  <rect x="600" y="145" width="45" height="30" fill="#201a1a" stroke="#2a2525" stroke-width="0.5" rx="1"/>
+  <rect x="605" y="150" width="35" height="6" fill="#0a0808" stroke="#2a2525" stroke-width="0.5"/>
+  <rect x="605" y="185" width="35" height="12" fill="#252020" stroke="#2a2525" stroke-width="0.5"/>
+  <circle cx="622" cy="207" r="3" fill="#1a1515" stroke="#2a2525" stroke-width="0.5"/>
+
+  <!-- Box 3 (empty, behind, smallest) -->
+  <rect x="648" y="125" width="45" height="65" fill="#201a1a" stroke="#2a2525" stroke-width="1" rx="3"/>
+  <rect x="652" y="129" width="37" height="25" fill="#1a1515" stroke="#252020" stroke-width="0.5" rx="1"/>
+  <rect x="656" y="133" width="29" height="5" fill="#0a0808" stroke="#252020" stroke-width="0.5"/>
+  <circle cx="670" cy="165" r="2.5" fill="#151010" stroke="#252020" stroke-width="0.5"/>
+
+  <!-- The front box door slightly ajar -->
+  <rect x="520" y="160" width="70" height="90" fill="none" stroke="#4a3535" stroke-width="1.5" rx="3" opacity="0.6"/>
+  <!-- The gap - door opening -->
+  <rect x="588" y="162" width="4" height="86" fill="#0a0808" opacity="0.9"/>
+
+  <!-- Hands reaching out from the box gap -->
+  <!-- Main hand -->
+  <path d="M592,195 L580,190 L575,185 L570,186 L568,190 L572,192 L570,198 L566,200 L564,204 L568,205 L570,202 L574,200 L576,204 L572,208 L574,212 L578,210 L580,206 L584,208 L586,204 L588,200 L590,198 Z" fill="#1a1515" stroke="#2a2020" stroke-width="0.5" opacity="0.85"/>
+  <!-- Fingers detail -->
+  <line x1="568" y1="186" x2="564" y2="184" stroke="#2a2020" stroke-width="0.5" opacity="0.6"/>
+  <line x1="566" y1="190" x2="562" y2="189" stroke="#2a2020" stroke-width="0.5" opacity="0.6"/>
+  <line x1="564" y1="204" x2="560" y2="205" stroke="#2a2020" stroke-width="0.5" opacity="0.6"/>
+  <line x1="574" y1="212" x2="572" y2="216" stroke="#2a2020" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- Second hand (partial, deeper in the box) -->
+  <path d="M592,210 L585,208 L580,206 L578,210 L582,212 L584,216 L588,214 L590,210 Z" fill="#151010" stroke="#201a1a" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- Ambient light from above (ceiling light) -->
+  <ellipse cx="400" cy="120" rx="40" ry="8" fill="#2a2222" opacity="0.5"/>
+  <line x1="400" y1="112" x2="400" y2="0" stroke="#1a1515" stroke-width="1"/>
+  <ellipse cx="400" cy="120" rx="60" ry="15" fill="#1a1510" opacity="0.3" filter="url(#softGlow)"/>
+  <!-- Light cone -->
+  <polygon points="380,120 420,120 500,340 300,340" fill="#1a1510" opacity="0.08"/>
+
+  <!-- Red LED from security camera -->
+  <circle cx="120" cy="150" r="3" fill="#3a0a0a" filter="url(#glow)"/>
+  <circle cx="120" cy="150" r="1.5" fill="#5a1a1a"/>
+  <!-- LED reflection on floor -->
+  <ellipse cx="120" cy="345" rx="8" ry="3" fill="#3a0a0a" opacity="0.3"/>
+
+  <!-- Second LED -->
+  <circle cx="680" cy="145" r="2.5" fill="#3a0a0a" filter="url(#glow)"/>
+  <circle cx="680" cy="145" r="1" fill="#5a1a1a"/>
+  <ellipse cx="680" cy="345" rx="6" ry="2" fill="#3a0a0a" opacity="0.25"/>
+
+  <!-- Subtle dust particles -->
+  <circle cx="350" cy="200" r="1" fill="#2a2525" opacity="0.4"/>
+  <circle cx="450" cy="250" r="0.8" fill="#2a2525" opacity="0.3"/>
+  <circle cx="300" cy="280" r="1.2" fill="#2a2525" opacity="0.35"/>
+  <circle cx="500" cy="180" r="0.7" fill="#2a2525" opacity="0.3"/>
+  <circle cx="420" cy="300" r="1" fill="#2a2525" opacity="0.25"/>
+  <circle cx="370" cy="150" r="0.8" fill="#2a2525" opacity="0.3"/>
+
+  <!-- Shadow under delivery boxes -->
+  <ellipse cx="555" cy="340" rx="50" ry="5" fill="#080606" opacity="0.8"/>
+  <ellipse cx="622" cy="340" rx="35" ry="4" fill="#080606" opacity="0.6"/>
+  <ellipse cx="670" cy="340" rx="28" ry="3" fill="#080606" opacity="0.5"/>
+
+  <!-- Floor reflection of the gap -->
+  <rect x="588" y="342" width="4" height="8" fill="#1a1515" opacity="0.3"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.3"/>
+</svg>

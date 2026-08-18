@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="roomLight" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a1215"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#roomLight)"/>
+
+  <!-- Room perspective - walls -->
+  <!-- Back wall -->
+  <rect x="150" y="60" width="500" height="330" fill="#0d0a0a" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Floor -->
+  <polygon points="150,390 650,390 700,450 100,450" fill="#080606" opacity="0.8"/>
+
+  <!-- Ceiling -->
+  <polygon points="150,60 650,60 600,20 200,20" fill="#0c0909" opacity="0.6"/>
+
+  <!-- Left wall -->
+  <polygon points="0,0 150,60 150,390 0,450" fill="#0b0808"/>
+
+  <!-- Right wall -->
+  <polygon points="800,0 650,60 650,390 800,450" fill="#0b0808"/>
+
+  <!-- Karaoke screen (center back wall) -->
+  <rect x="320" y="100" width="160" height="100" rx="3" fill="#050505" stroke="#1a1515" stroke-width="1.5"/>
+  <!-- Screen glow -->
+  <rect x="322" y="102" width="156" height="96" rx="2" fill="#0a0a15" opacity="0.5"/>
+
+  <!-- Screen lyrics text lines (faint) -->
+  <rect x="340" y="120" width="80" height="3" fill="#1a1520" opacity="0.4"/>
+  <rect x="340" y="130" width="120" height="3" fill="#1a1520" opacity="0.3"/>
+  <rect x="340" y="140" width="60" height="3" fill="#1a1520" opacity="0.4"/>
+  <rect x="340" y="150" width="100" height="3" fill="#1a1520" opacity="0.2"/>
+  <rect x="340" y="160" width="90" height="3" fill="#1a1520" opacity="0.3"/>
+  <rect x="340" y="175" width="70" height="3" fill="#1a1520" opacity="0.5"/>
+
+  <!-- Score bar -->
+  <rect x="340" y="185" width="120" height="8" rx="4" fill="#0d0d0d"/>
+  <rect x="340" y="185" width="85" height="8" rx="4" fill="#2a1520" opacity="0.6"/>
+
+  <!-- Speaker on left side -->
+  <rect x="170" y="180" width="50" height="70" rx="2" fill="#080606" stroke="#151010" stroke-width="1"/>
+  <circle cx="195" cy="210" r="12" fill="#0a0808" stroke="#151010" stroke-width="0.5"/>
+  <circle cx="195" cy="210" r="6" fill="#0d0a0a"/>
+
+  <!-- Speaker on right side -->
+  <rect x="580" y="180" width="50" height="70" rx="2" fill="#080606" stroke="#151010" stroke-width="1"/>
+  <circle cx="605" cy="210" r="12" fill="#0a0808" stroke="#151010" stroke-width="0.5"/>
+  <circle cx="605" cy="210" r="6" fill="#0d0a0a"/>
+
+  <!-- Table -->
+  <rect x="280" y="280" width="240" height="8" rx="1" fill="#120e0e" stroke="#1a1515" stroke-width="0.5"/>
+  <rect x="300" y="288" width="6" height="50" fill="#0e0a0a"/>
+  <rect x="494" y="288" width="6" height="50" fill="#0e0a0a"/>
+
+  <!-- Microphone on table (silhouette) -->
+  <rect x="380" y="265" width="4" height="18" rx="2" fill="#1a1515"/>
+  <ellipse cx="382" cy="263" rx="6" ry="8" fill="#1a1515"/>
+
+  <!-- Second microphone -->
+  <rect x="420" y="268" width="3" height="15" rx="1.5" fill="#151010" transform="rotate(15 420 268)"/>
+  <ellipse cx="423" cy="266" rx="5" ry="6" fill="#151010" transform="rotate(15 423 266)"/>
+
+  <!-- Third microphone (unnecessary - eerie detail) -->
+  <rect x="455" y="270" width="3" height="13" rx="1.5" fill="#121010" transform="rotate(-10 455 270)"/>
+  <ellipse cx="457" cy="268" rx="4" ry="5" fill="#121010" transform="rotate(-10 457 268)"/>
+
+  <!-- Surveillance camera (top right corner of back wall) -->
+  <rect x="610" y="75" width="20" height="12" rx="3" fill="#0d0a0a" stroke="#1a1515" stroke-width="0.5"/>
+  <!-- Red LED (the creepy detail) -->
+  <circle cx="618" cy="81" r="2.5" fill="#8b0000" filter="url(#glow)"/>
+  <circle cx="618" cy="81" r="1.5" fill="#cc0000"/>
+
+  <!-- Red LED reflection on floor -->
+  <ellipse cx="618" cy="395" rx="20" ry="6" fill="#8b0000" opacity="0.15" filter="url(#softGlow)"/>
+
+  <!-- Three faint ghostly silhouettes behind the screen (barely visible) -->
+  <ellipse cx="370" cy="150" rx="15" ry="35" fill="#0f0d0d" opacity="0.25"/>
+  <ellipse cx="400" cy="148" rx="12" ry="38" fill="#0f0d0d" opacity="0.2"/>
+  <ellipse cx="430" cy="152" rx="14" ry="33" fill="#0f0d0d" opacity="0.22"/>
+
+  <!-- Faint voice wave visualization on screen (eerie detail) -->
+  <path d="M340,200 Q350,195 360,200 Q370,205 380,200 Q390,195 400,200 Q410,205 420,200 Q430,195 440,200 Q450,205 460,200" 
+        fill="none" stroke="#2a1520" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Subtle dark vignette overlay -->
+  <rect width="800" height="450" fill="url(#roomLight)" opacity="0.3"/>
+
+  <!-- Bottom shadow for depth -->
+  <rect x="0" y="400" width="800" height="50" fill="#060404" opacity="0.5"/>
+</svg>
