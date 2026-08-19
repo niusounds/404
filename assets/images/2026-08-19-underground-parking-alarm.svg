@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Underground parking ceiling lines -->
+  <line x1="0" y1="80" x2="800" y2="80" stroke="#1a1515" stroke-width="2"/>
+  <line x1="0" y1="90" x2="800" y2="90" stroke="#151010" stroke-width="1"/>
+
+  <!-- Parking space lines on floor -->
+  <line x1="100" y1="200" x2="100" y2="450" stroke="#2a2520" stroke-width="1.5" opacity="0.6"/>
+  <line x1="350" y1="200" x2="350" y2="450" stroke="#2a2520" stroke-width="1.5" opacity="0.6"/>
+  <line x1="600" y1="200" x2="600" y2="450" stroke="#2a2520" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Center line -->
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#2a2520" stroke-width="1" opacity="0.4"/>
+
+  <!-- Distant car silhouette (left background) -->
+  <ellipse cx="180" cy="350" rx="60" ry="25" fill="#0f0c0c" stroke="#1a1515" stroke-width="1"/>
+  <rect x="145" y="330" width="70" height="20" rx="5" fill="#0f0c0c" stroke="#1a1515" stroke-width="1"/>
+  <!-- Car tail lights -->
+  <circle cx="125" cy="355" r="4" fill="#3a1515" opacity="0.8"/>
+  <circle cx="235" cy="355" r="4" fill="#3a1515" opacity="0.8"/>
+
+  <!-- Main figure silhouette (center-right, leaning forward) -->
+  <!-- Head -->
+  <ellipse cx="520" cy="210" rx="18" ry="22" fill="#050305"/>
+  <!-- Body - leaning toward viewer's car -->
+  <path d="M505 230 Q495 280 485 340 L555 340 Q545 280 535 230 Z" fill="#050305"/>
+  <!-- Left arm - unnatural angle reaching forward -->
+  <path d="M505 240 Q460 260 420 290" stroke="#050305" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <!-- Right arm - drooping unnaturally -->
+  <path d="M535 240 Q560 270 570 310" stroke="#050305" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <!-- Legs -->
+  <path d="M490 340 L480 400" stroke="#050305" stroke-width="13" fill="none" stroke-linecap="round"/>
+  <path d="M545 340 L555 400" stroke="#050305" stroke-width="13" fill="none" stroke-linecap="round"/>
+
+  <!-- Empty parking space (the empty space where the alarm sounds from) -->
+  <rect x="350" y="200" width="250" height="250" fill="none" stroke="#1a1515" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Car silhouette in foreground (viewer's perspective) -->
+  <ellipse cx="400" cy="400" rx="80" ry="30" fill="#0d0a0d" stroke="#1a1515" stroke-width="1"/>
+  <rect x="340" y="375" width="120" height="25" rx="8" fill="#0d0a0d" stroke="#1a1515" stroke-width="1"/>
+  <!-- Car taillights glowing -->
+  <circle cx="310" cy="395" r="6" fill="#4a1a1a" opacity="0.9"/>
+  <circle cx="490" cy="395" r="6" fill="#4a1a1a" opacity="0.9"/>
+  <!-- Light glow from taillights -->
+  <circle cx="310" cy="395" r="15" fill="#4a1a1a" opacity="0.3"/>
+  <circle cx="490" cy="395" r="15" fill="#4a1a1a" opacity="0.3"/>
+
+  <!-- Alarm sound visual waves (from empty space) -->
+  <path d="M380 300 Q400 280 420 300" stroke="#2a1a1a" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M370 310 Q400 285 430 310" stroke="#2a1a1a" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M360 320 Q400 290 440 320" stroke="#2a1a1a" stroke-width="1" fill="none" opacity="0.2"/>
+
+  <!-- Ceiling lights (dim, flickering feel) -->
+  <ellipse cx="200" cy="85" rx="30" ry="5" fill="#1a1510" opacity="0.5"/>
+  <ellipse cx="400" cy="85" rx="30" ry="5" fill="#1a1510" opacity="0.3"/>
+  <ellipse cx="600" cy="85" rx="30" ry="5" fill="#1a1510" opacity="0.5"/>
+
+  <!-- Light cones from ceiling -->
+  <polygon points="195,90 205,90 250,200 150,200" fill="#1a1510" opacity="0.08"/>
+  <polygon points="395,90 405,90 450,200 350,200" fill="#1a1510" opacity="0.05"/>
+  <polygon points="595,90 605,90 650,200 550,200" fill="#1a1510" opacity="0.08"/>
+
+  <!-- Distant staircase entrance (bottom left) -->
+  <rect x="20" y="200" width="60" height="250" fill="#080608" stroke="#151010" stroke-width="1"/>
+  <line x1="30" y1="220" x2="70" y2="220" stroke="#1a1515" stroke-width="1"/>
+  <line x1="30" y1="240" x2="70" y2="240" stroke="#1a1515" stroke-width="1"/>
+  <line x1="30" y1="260" x2="70" y2="260" stroke="#1a1515" stroke-width="1"/>
+  <line x1="30" y1="280" x2="70" y2="280" stroke="#1a1515" stroke-width="1"/>
+  <line x1="30" y1="300" x2="70" y2="300" stroke="#1a1515" stroke-width="1"/>
+  <line x1="30" y1="320" x2="70" y2="320" stroke="#1a1515" stroke-width="1"/>
+  <line x1="30" y1="340" x2="70" y2="340" stroke="#1a1515" stroke-width="1"/>
+  <line x1="30" y1="360" x2="70" y2="360" stroke="#1a1515" stroke-width="1"/>
+  <line x1="30" y1="380" x2="70" y2="380" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Vignette effect -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="50%" stop-color="#0a0808" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#050305" stop-opacity="0.8"/>
+  </radialGradient>
+  <rect width="800" height="450" fill="url(#vignette)"/>
+
+  <!-- Subtle red glow near the figure (ominous presence) -->
+  <ellipse cx="500" cy="300" rx="60" ry="40" fill="#1a0505" opacity="0.15"/>
+</svg>
