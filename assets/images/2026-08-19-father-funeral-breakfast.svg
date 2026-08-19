@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="tableLight" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#1a1408" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="steamGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2a2520" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2a2520" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="riceGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3a3528" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <line x1="0" y1="120" x2="800" y2="120" stroke="#1a1510" stroke-width="0.5" opacity="0.3"/>
+
+  <rect x="0" y="350" width="800" height="100" fill="#0d0a08" opacity="0.8"/>
+  <line x1="0" y1="350" x2="800" y2="350" stroke="#1a1510" stroke-width="0.5" opacity="0.4"/>
+
+  <rect x="150" y="260" width="500" height="8" fill="#1a1408" rx="1"/>
+  <rect x="150" y="268" width="500" height="3" fill="#0d0a06" opacity="0.5"/>
+
+  <ellipse cx="400" cy="280" rx="250" ry="80" fill="url(#tableLight)"/>
+
+  <ellipse cx="300" cy="255" rx="35" ry="6" fill="#2a2218" opacity="0.7"/>
+  <path d="M265,255 Q265,230 270,225 L330,225 Q335,230 335,255 Z" fill="#1e1a14" stroke="#2a2520" stroke-width="0.5"/>
+  <ellipse cx="300" cy="225" rx="30" ry="4" fill="#2a2520" opacity="0.5"/>
+  <path d="M330,230 L333,228 L331,232 Z" fill="#0a0808"/>
+
+  <ellipse cx="500" cy="255" rx="35" ry="6" fill="#2a2218" opacity="0.7"/>
+  <path d="M465,255 Q465,230 470,225 L530,225 Q535,230 535,255 Z" fill="#221e16" stroke="#3a3528" stroke-width="0.5"/>
+  <ellipse cx="500" cy="225" rx="30" ry="4" fill="#3a3528" opacity="0.6"/>
+  <ellipse cx="500" cy="226" rx="26" ry="3" fill="#3a3528" opacity="0.8"/>
+  <ellipse cx="500" cy="226" rx="26" ry="3" fill="url(#riceGlow)"/>
+
+  <ellipse cx="500" cy="270" rx="25" ry="5" fill="#2a2520" opacity="0.5"/>
+  <path d="M475,270 Q475,258 480,254 L520,254 Q525,258 525,270 Z" fill="#1e1a14" stroke="#2a2520" stroke-width="0.5"/>
+  <ellipse cx="500" cy="254" rx="20" ry="3" fill="#2a2520" opacity="0.4"/>
+
+  <ellipse cx="440" cy="265" rx="30" ry="5" fill="#2a2520" opacity="0.5"/>
+  <path d="M410,265 Q410,258 415,256 L465,256 Q470,258 470,265 Z" fill="#1a1814" stroke="#2a2520" stroke-width="0.5"/>
+  <path d="M420,260 Q430,255 440,258 Q450,260 460,262 L458,264 Q448,262 438,260 Q428,258 420,262 Z" fill="#2a2520" opacity="0.6"/>
+
+  <ellipse cx="560" cy="265" rx="25" ry="4" fill="#2a2520" opacity="0.5"/>
+  <path d="M535,265 Q535,259 540,257 L580,257 Q585,259 585,265 Z" fill="#1e1a14" stroke="#2a2520" stroke-width="0.5"/>
+  <line x1="545" y1="260" x2="575" y2="260" stroke="#3a3528" stroke-width="0.5" opacity="0.4"/>
+  <line x1="543" y1="262" x2="577" y2="262" stroke="#3a3528" stroke-width="0.5" opacity="0.3"/>
+
+  <line x1="470" y1="250" x2="530" y2="248" stroke="#3a3528" stroke-width="1.5" opacity="0.7"/>
+  <line x1="472" y1="253" x2="532" y2="251" stroke="#3a3528" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="530" cy="248" r="1" fill="#4a4538" opacity="0.6"/>
+  <circle cx="532" cy="251" r="1" fill="#4a4538" opacity="0.6"/>
+
+  <path d="M490,220 Q485,200 495,180 Q505,160 498,140" stroke="url(#steamGrad)" stroke-width="2" fill="none" opacity="0.5">
+    <animate attributeName="d" values="M490,220 Q485,200 495,180 Q505,160 498,140;M490,220 Q495,200 488,180 Q480,160 492,140;M490,220 Q485,200 495,180 Q505,160 498,140" dur="4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M505,225 Q510,205 502,185 Q494,165 500,145" stroke="url(#steamGrad)" stroke-width="1.5" fill="none" opacity="0.4">
+    <animate attributeName="d" values="M505,225 Q510,205 502,185 Q494,165 500,145;M505,225 Q500,205 508,185 Q516,165 510,145;M505,225 Q510,205 502,185 Q494,165 500,145" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M495,215 Q490,195 500,175 Q510,155 503,135" stroke="url(#steamGrad)" stroke-width="1" fill="none" opacity="0.3">
+    <animate attributeName="d" values="M495,215 Q490,195 500,175 Q510,155 503,135;M495,215 Q500,195 492,175 Q484,155 490,135;M495,215 Q490,195 500,175 Q510,155 503,135" dur="6s" repeatCount="indefinite"/>
+  </path>
+
+  <rect x="580" y="40" width="180" height="120" fill="#080608" stroke="#1a1510" stroke-width="1" opacity="0.6"/>
+  <line x1="670" y1="40" x2="670" y2="160" stroke="#1a1510" stroke-width="0.5" opacity="0.4"/>
+  <line x1="580" y1="100" x2="760" y2="100" stroke="#1a1510" stroke-width="0.5" opacity="0.4"/>
+  <rect x="582" y="42" width="86" height="56" fill="#0a0a12" opacity="0.5"/>
+  <rect x="672" y="42" width="86" height="56" fill="#0c0a14" opacity="0.5"/>
+  <rect x="582" y="102" width="86" height="56" fill="#0c0a14" opacity="0.5"/>
+  <rect x="672" y="102" width="86" height="56" fill="#0a0a12" opacity="0.5"/>
+
+  <rect x="0" y="0" width="800" height="120" fill="#080608" opacity="0.3"/>
+
+  <g opacity="0.08">
+    <ellipse cx="500" cy="195" rx="18" ry="22" fill="#2a2520"/>
+    <path d="M482,217 Q480,240 478,260 L522,260 Q520,240 518,217 Z" fill="#2a2520"/>
+    <path d="M470,220 Q482,217 482,220 L482,230 Q470,228 470,225 Z" fill="#2a2520"/>
+    <path d="M530,220 Q518,217 518,220 L518,230 Q530,228 530,225 Z" fill="#2a2520"/>
+  </g>
+
+  <g opacity="0.12">
+    <ellipse cx="500" cy="310" rx="15" ry="10" fill="#1a1510"/>
+    <circle cx="500" cy="295" r="8" fill="#1a1510"/>
+    <polygon points="494,288 497,282 500,287" fill="#1a1510"/>
+    <polygon points="506,288 503,282 500,287" fill="#1a1510"/>
+    <ellipse cx="497" cy="295" rx="1.5" ry="1" fill="#4a4538" opacity="0.8"/>
+    <ellipse cx="503" cy="295" rx="1.5" ry="1" fill="#4a4538" opacity="0.8"/>
+    <path d="M515,310 Q525,305 530,315 Q535,325 528,330" stroke="#1a1510" stroke-width="2" fill="none"/>
+  </g>
+
+  <rect width="800" height="450" fill="#000000" opacity="0.15"/>
+
+  <ellipse cx="300" cy="270" rx="40" ry="3" fill="#3a3528" opacity="0.1"/>
+  <ellipse cx="500" cy="270" rx="40" ry="3" fill="#4a4538" opacity="0.15"/>
+</svg>
