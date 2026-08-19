@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Floor line -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a1414" stroke-width="1"/>
+  
+  <!-- Ceiling light glow -->
+  <ellipse cx="400" cy="30" rx="120" ry="25" fill="#1a1510" opacity="0.3"/>
+  <line x1="400" y1="0" x2="400" y2="30" stroke="#1a1510" stroke-width="2" opacity="0.2"/>
+  
+  <!-- Washing machine #3 - center -->
+  <!-- Machine body -->
+  <rect x="310" y="120" width="180" height="260" rx="8" fill="#1a1616" stroke="#2a2222" stroke-width="1"/>
+  
+  <!-- Machine top panel -->
+  <rect x="310" y="120" width="180" height="40" rx="8" fill="#221e1e"/>
+  <rect x="310" y="148" width="180" height="12" fill="#221e1e"/>
+  
+  <!-- Digital display -->
+  <rect x="340" y="130" width="60" height="14" rx="2" fill="#0a0505" stroke="#3a1a1a" stroke-width="0.5"/>
+  <text x="370" y="141" text-anchor="middle" font-family="monospace" font-size="10" fill="#ff2020" opacity="0.9">00:00</text>
+  
+  <!-- Coin slot -->
+  <rect x="450" y="132" width="20" height="8" rx="2" fill="#2a2525" stroke="#3a3030" stroke-width="0.5"/>
+  <circle cx="460" cy="136" r="2" fill="#4a3a3a"/>
+  
+  <!-- Washing machine door (circular) -->
+  <circle cx="400" cy="260" r="70" fill="#0e0c0c" stroke="#2a2525" stroke-width="2"/>
+  <circle cx="400" cy="260" r="65" fill="#0a0808" stroke="#1a1818" stroke-width="1"/>
+  
+  <!-- Inner drum - dark water effect -->
+  <ellipse cx="400" cy="260" rx="55" ry="55" fill="#080608" opacity="0.8"/>
+  
+  <!-- Water swirl lines inside drum -->
+  <path d="M 360 250 Q 380 230 400 245 Q 420 260 440 240" stroke="#1a1a2a" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M 365 270 Q 385 285 405 270 Q 420 255 435 275" stroke="#1a1a2a" stroke-width="1" fill="none" opacity="0.3"/>
+  
+  <!-- Reflection on glass door - faint figure -->
+  <g opacity="0.15">
+    <!-- Head -->
+    <ellipse cx="400" cy="210" rx="12" ry="15" fill="#2a2525"/>
+    <!-- Body -->
+    <path d="M 388 225 L 385 270 L 415 270 L 412 225 Z" fill="#2a2525"/>
+    <!-- Legs -->
+    <line x1="392" y1="270" x2="390" y2="310" stroke="#2a2525" stroke-width="4"/>
+    <line x1="408" y1="270" x2="410" y2="310" stroke="#2a2525" stroke-width="4"/>
+  </g>
+  
+  <!-- Door handle -->
+  <rect x="465" y="245" width="15" height="6" rx="2" fill="#3a3535" stroke="#4a4545" stroke-width="0.5"/>
+  
+  <!-- Machine #2 (background left - dim) -->
+  <rect x="100" y="160" width="140" height="220" rx="6" fill="#121010" stroke="#1e1a1a" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="170" cy="270" r="45" fill="#0a0808" stroke="#1a1818" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Machine #4 (background right - dim) -->
+  <rect x="560" y="160" width="140" height="220" rx="6" fill="#121010" stroke="#1e1a1a" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="630" cy="270" r="45" fill="#0a0808" stroke="#1a1818" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Floor tiles -->
+  <line x1="0" y1="385" x2="800" y2="385" stroke="#141010" stroke-width="0.5"/>
+  <line x1="0" y1="395" x2="800" y2="395" stroke="#141010" stroke-width="0.5"/>
+  <line x1="100" y1="380" x2="100" y2="450" stroke="#141010" stroke-width="0.5" opacity="0.3"/>
+  <line x1="200" y1="380" x2="200" y2="450" stroke="#141010" stroke-width="0.5" opacity="0.3"/>
+  <line x1="300" y1="380" x2="300" y2="450" stroke="#141010" stroke-width="0.5" opacity="0.3"/>
+  <line x1="400" y1="380" x2="400" y2="450" stroke="#141010" stroke-width="0.5" opacity="0.3"/>
+  <line x1="500" y1="380" x2="500" y2="450" stroke="#141010" stroke-width="0.5" opacity="0.3"/>
+  <line x1="600" y1="380" x2="600" y2="450" stroke="#141010" stroke-width="0.5" opacity="0.3"/>
+  <line x1="700" y1="380" x2="700" y2="450" stroke="#141010" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Red LED glow from machine #3 display -->
+  <ellipse cx="370" cy="140" rx="40" ry="30" fill="#2a0505" opacity="0.15"/>
+  
+  <!-- Subtle mist/fog at bottom -->
+  <ellipse cx="400" cy="420" rx="300" ry="30" fill="#0c0a0a" opacity="0.5"/>
+  
+  <!-- Distant figure in the back corner (very faint) -->
+  <g opacity="0.08">
+    <ellipse cx="520" cy="175" rx="8" ry="10" fill="#1a1515"/>
+    <path d="M 512 185 L 510 230 L 530 230 L 528 185 Z" fill="#1a1515"/>
+    <line x1="515" y1="230" x2="514" y2="260" stroke="#1a1515" stroke-width="3"/>
+    <line x1="525" y1="230" x2="526" y2="260" stroke="#1a1515" stroke-width="3"/>
+  </g>
+</svg>
