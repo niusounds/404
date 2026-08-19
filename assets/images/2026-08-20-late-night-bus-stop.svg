@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050308"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e0c0a"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#skyGrad)"/>
+
+  <!-- Rice fields -->
+  <rect x="0" y="300" width="800" height="150" fill="url(#groundGrad)" opacity="0.8"/>
+  <line x1="0" y1="310" x2="800" y2="310" stroke="#1a1614" stroke-width="0.5" opacity="0.3"/>
+  <line x1="0" y1="330" x2="800" y2="330" stroke="#1a1614" stroke-width="0.3" opacity="0.2"/>
+  <line x1="0" y1="360" x2="800" y2="360" stroke="#1a1614" stroke-width="0.3" opacity="0.15"/>
+
+  <!-- Abandoned house silhouette -->
+  <rect x="580" y="220" width="120" height="90" fill="#0d0b0b"/>
+  <polygon points="580,220 640,180 700,220" fill="#0d0b0b"/>
+  <rect x="620" y="260" width="25" height="50" fill="#0a0808"/>
+  <rect x="600" y="240" width="15" height="18" fill="#080606" stroke="#151312" stroke-width="0.5"/>
+  <line x1="607" y1="240" x2="615" y2="258" stroke="#151312" stroke-width="0.3"/>
+
+  <!-- Trees silhouette -->
+  <ellipse cx="100" cy="260" rx="60" ry="50" fill="#0c0a0a"/>
+  <ellipse cx="150" cy="270" rx="40" ry="40" fill="#0b0909"/>
+  <ellipse cx="50" cy="280" rx="35" ry="35" fill="#0b0909"/>
+  <rect x="97" y="280" width="6" height="60" fill="#0a0808"/>
+  <rect x="147" y="290" width="5" height="50" fill="#0a0808"/>
+  <rect x="47" y="290" width="5" height="45" fill="#0a0808"/>
+
+  <!-- Road -->
+  <rect x="0" y="380" width="800" height="70" fill="#12100e"/>
+  <line x1="0" y1="415" x2="800" y2="415" stroke="#1a1816" stroke-width="0.5" opacity="0.3" stroke-dasharray="20 15"/>
+
+  <!-- Bus stop pole -->
+  <rect x="350" y="180" width="4" height="200" fill="#1a1816"/>
+  <rect x="330" y="180" width="44" height="8" fill="#1a1816"/>
+  <rect x="330" y="180" width="44" height="30" fill="#1a1816" opacity="0.9"/>
+  <rect x="335" y="185" width="34" height="20" fill="#1e1c1a"/>
+
+  <!-- Person silhouette (知人) at bus stop -->
+  <ellipse cx="375" cy="250" rx="10" ry="12" fill="#0a0808" stroke="#1a1816" stroke-width="0.3"/>
+  <path d="M375,262 L375,340 M365,270 L375,265 L385,270 M368,340 L375,265 L382,340" stroke="#0a0808" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <line x1="375" y1="340" x2="368" y2="380" stroke="#0a0808" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="375" y1="340" x2="382" y2="380" stroke="#0a0808" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Phone glow -->
+  <rect x="380" y="300" width="8" height="14" fill="#1e2a3a" opacity="0.4" rx="1"/>
+  <rect x="381" y="302" width="6" height="10" fill="#2a3a4a" opacity="0.3" rx="0.5"/>
+
+  <!-- Ghostly man silhouette (work uniform, from the woods) -->
+  <g opacity="0.35">
+    <ellipse cx="230" cy="248" rx="11" ry="13" fill="#0a0808"/>
+    <path d="M230,261 L230,345 M218,272 L230,265 L242,272 M220,345 L230,265 L240,345" stroke="#0a0808" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <line x1="230" y1="345" x2="222" y2="385" stroke="#0a0808" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="230" y1="345" x2="238" y2="385" stroke="#0a0808" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M218,272 L230,265 L242,272" stroke="#1a2a4a" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <circle cx="225" cy="280" r="3" fill="#1a2a4a" opacity="0.3"/>
+  </g>
+
+  <!-- Faint blue cloth hanging on pole -->
+  <path d="M374,210 Q378,220 372,235 Q370,245 374,255" stroke="#1a2a4a" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M372,235 Q368,240 370,250" stroke="#1a2a4a" stroke-width="1" fill="none" opacity="0.3"/>
+
+  <!-- Fog/mist -->
+  <ellipse cx="400" cy="370" rx="300" ry="20" fill="#151312" opacity="0.15"/>
+  <ellipse cx="200" cy="350" rx="150" ry="15" fill="#12100e" opacity="0.1"/>
+
+  <!-- Very subtle moon -->
+  <circle cx="680" cy="80" r="15" fill="#1a1816" opacity="0.3"/>
+  <circle cx="685" cy="78" r="13" fill="#050308" opacity="0.5"/>
+
+  <!-- Darkness vignette -->
+  <rect width="800" height="450" fill="url(#skyGrad)" opacity="0.3"/>
+</svg>
