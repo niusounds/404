@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Moon -->
+  <circle cx="650" cy="80" r="40" fill="#1a1510" opacity="0.6"/>
+  <circle cx="640" cy="70" r="35" fill="#0a0808" opacity="0.4"/>
+  
+  <!-- Sky gradient hint -->
+  <rect x="0" y="0" width="800" height="250" fill="#080608" opacity="0.5"/>
+  
+  <!-- House silhouette - left side -->
+  <rect x="0" y="180" width="200" height="270" fill="#0d0a0a"/>
+  <polygon points="0,180 100,100 200,180" fill="#0d0a0a"/>
+  
+  <!-- Door -->
+  <rect x="80" y="280" width="60" height="170" fill="#1a1210" rx="2"/>
+  <rect x="82" y="282" width="56" height="166" fill="#120e0c" rx="1"/>
+  <circle cx="128" cy="370" r="3" fill="#2a2015"/>
+  
+  <!-- Window with faint light -->
+  <rect x="140" y="220" width="40" height="50" fill="#1a1510" rx="1"/>
+  <rect x="142" y="222" width="36" height="46" fill="#1e180f" rx="1"/>
+  <rect x="144" y="224" width="16" height="20" fill="#2a2215" opacity="0.3"/>
+  
+  <!-- Camera on house -->
+  <rect x="185" y="160" width="15" height="10" fill="#1a1510" rx="2"/>
+  <circle cx="192" cy="165" r="2" fill="#3a1515" opacity="0.8"/>
+  
+  <!-- Steps / stairs -->
+  <rect x="200" y="350" width="200" height="10" fill="#151212"/>
+  <rect x="210" y="370" width="180" height="10" fill="#131010"/>
+  <rect x="220" y="390" width="160" height="10" fill="#110e0e"/>
+  <rect x="230" y="410" width="140" height="10" fill="#0f0c0c"/>
+  
+  <!-- Footprint on snow -->
+  <ellipse cx="380" cy="425" rx="8" ry="4" fill="#1a1818"/>
+  <ellipse cx="370" cy="420" rx="6" ry="3" fill="#181515"/>
+  
+  <!-- Ghostly figure at top of stairs -->
+  <!-- Body - tall, thin silhouette -->
+  <ellipse cx="400" cy="310" rx="25" ry="50" fill="#151212" opacity="0.9"/>
+  <!-- Head -->
+  <circle cx="400" cy="250" r="18" fill="#151212" opacity="0.9"/>
+  <!-- Eyes - two small bright spots -->
+  <circle cx="393" cy="247" r="2.5" fill="#3a2a1a" opacity="0.7"/>
+  <circle cx="407" cy="247" r="2.5" fill="#3a2a1a" opacity="0.7"/>
+  <!-- Fading into mist below -->
+  <ellipse cx="400" cy="360" rx="30" ry="20" fill="#0a0808" opacity="0.5"/>
+  
+  <!-- Mist / fog at bottom -->
+  <ellipse cx="350" cy="430" rx="150" ry="15" fill="#0c0a0a" opacity="0.6"/>
+  <ellipse cx="500" cy="440" rx="120" ry="12" fill="#0c0a0a" opacity="0.4"/>
+  
+  <!-- Door light spilling out -->
+  <polygon points="80,450 140,450 130,380 90,380" fill="#1e1810" opacity="0.15"/>
+  
+  <!-- Subtle noise texture dots -->
+  <circle cx="300" cy="300" r="0.5" fill="#1a1515" opacity="0.3"/>
+  <circle cx="450" cy="350" r="0.5" fill="#1a1515" opacity="0.3"/>
+  <circle cx="550" cy="280" r="0.5" fill="#1a1515" opacity="0.3"/>
+  <circle cx="350" cy="380" r="0.5" fill="#1a1515" opacity="0.3"/>
+  <circle cx="500" cy="400" r="0.5" fill="#1a1515" opacity="0.3"/>
+</svg>
