@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Subtle room silhouette - floor -->
+  <rect x="0" y="320" width="800" height="130" fill="#0d0a0a"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Wall texture - very subtle vertical lines -->
+  <line x1="100" y1="0" x2="100" y2="320" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="200" y1="0" x2="200" y2="320" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="300" y1="0" x2="300" y2="320" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="400" y1="0" x2="400" y2="320" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="500" y1="0" x2="500" y2="320" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="600" y1="0" x2="600" y2="320" stroke="#0f0c0c" stroke-width="0.5"/>
+  <line x1="700" y1="0" x2="700" y2="320" stroke="#0f0c0c" stroke-width="0.5"/>
+  
+  <!-- Door frame silhouette on the right side -->
+  <rect x="580" y="80" width="140" height="240" fill="#080606" stroke="#151212" stroke-width="1.5"/>
+  <rect x="590" y="90" width="120" height="230" fill="#060404"/>
+  
+  <!-- Door gap - slightly open -->
+  <line x1="700" y1="90" x2="700" y2="320" stroke="#0a0808" stroke-width="2"/>
+  
+  <!-- Faint light leaking from under the door -->
+  <rect x="590" y="315" width="110" height="5" fill="#1a1400" opacity="0.3"/>
+  
+  <!-- Table/shelf in the center -->
+  <rect x="300" y="280" width="200" height="8" fill="#1a1510" rx="1"/>
+  <rect x="320" y="288" width="6" height="32" fill="#151110"/>
+  <rect x="474" y="288" width="6" height="32" fill="#151110"/>
+  
+  <!-- Smart speaker silhouette - cylinder shape -->
+  <!-- Main body -->
+  <ellipse cx="400" cy="270" rx="22" ry="4" fill="#1a1a1a"/>
+  <rect x="378" y="220" width="44" height="50" fill="#1a1a1a"/>
+  <ellipse cx="400" cy="220" rx="22" ry="6" fill="#1e1e1e"/>
+  <!-- Top surface -->
+  <ellipse cx="400" cy="218" rx="20" ry="5" fill="#222222"/>
+  
+  <!-- RED LED - the key horror element -->
+  <!-- Glow effect -->
+  <circle cx="400" cy="235" r="15" fill="#ff1a1a" opacity="0.05"/>
+  <circle cx="400" cy="235" r="10" fill="#ff1a1a" opacity="0.1"/>
+  <circle cx="400" cy="235" r="6" fill="#ff1a1a" opacity="0.2"/>
+  <!-- LED dot -->
+  <circle cx="400" cy="235" r="3" fill="#ff1a1a"/>
+  <circle cx="400" cy="235" r="1.5" fill="#ff3333"/>
+  
+  <!-- Sound wave visualization - subtle arcs emanating from speaker -->
+  <path d="M 425 230 Q 440 235 425 240" fill="none" stroke="#ff1a1a" stroke-width="0.5" opacity="0.15"/>
+  <path d="M 430 225 Q 450 235 430 245" fill="none" stroke="#ff1a1a" stroke-width="0.5" opacity="0.1"/>
+  <path d="M 435 220 Q 460 235 435 250" fill="none" stroke="#ff1a1a" stroke-width="0.5" opacity="0.06"/>
+  
+  <!-- Mirror image / reflection on the floor -->
+  <ellipse cx="400" cy="340" rx="30" ry="3" fill="#ff1a1a" opacity="0.03"/>
+  <circle cx="400" cy="338" r="2" fill="#ff1a1a" opacity="0.05"/>
+  
+  <!-- Shadow from the door gap - ominous presence hint -->
+  <path d="M 695 320 L 650 380 L 620 380 L 695 320 Z" fill="#0c0a0a" opacity="0.5"/>
+  
+  <!-- Very subtle eye-like shape in the darkness near the door -->
+  <ellipse cx="660" cy="300" rx="3" ry="1.5" fill="#1a1515"/>
+  <ellipse cx="660" cy="300" rx="1" ry="0.5" fill="#2a2020"/>
+  
+  <!-- Faint moonlight from a window on the left -->
+  <rect x="30" y="50" width="80" height="150" fill="#0e1018" rx="2"/>
+  <rect x="35" y="55" width="70" height="140" fill="#0a0c14"/>
+  <!-- Moonlight beam -->
+  <path d="M 35 195 L 100 320 L 200 320 L 105 55 Z" fill="#0e1018" opacity="0.08"/>
+  
+  <!-- Dust particles in the moonlight -->
+  <circle cx="120" cy="200" r="0.5" fill="#2a2a3a" opacity="0.3"/>
+  <circle cx="140" cy="230" r="0.5" fill="#2a2a3a" opacity="0.2"/>
+  <circle cx="160" cy="260" r="0.5" fill="#2a2a3a" opacity="0.25"/>
+  <circle cx="130" cy="280" r="0.5" fill="#2a2a3a" opacity="0.15"/>
+  
+  <!-- Vignette effect - darker edges -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+  
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="50%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
