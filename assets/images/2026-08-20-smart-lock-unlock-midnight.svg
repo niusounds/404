@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1515"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <linearGradient id="doorGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a2222"/>
+      <stop offset="100%" stop-color="#1a1515"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Floor -->
+  <rect x="0" y="320" width="800" height="130" fill="url(#floorGrad)"/>
+  <!-- Floor line -->
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Door (left side of scene, slightly off-center) -->
+  <rect x="180" y="40" width="160" height="285" fill="url(#doorGrad)" rx="2"/>
+  <!-- Door frame -->
+  <rect x="175" y="35" width="170" height="295" fill="none" stroke="#332a2a" stroke-width="2" rx="3"/>
+  <!-- Door handle -->
+  <circle cx="310" cy="200" r="8" fill="#4a4040"/>
+  <circle cx="310" cy="200" r="5" fill="#5a5050"/>
+  <!-- Handle glow (slimy sheen) -->
+  <ellipse cx="310" cy="205" rx="12" ry="15" fill="#3a3535" filter="url(#softGlow)" opacity="0.6"/>
+
+  <!-- Door gap at bottom -->
+  <rect x="182" y="318" width="156" height="4" fill="#050404"/>
+
+  <!-- Dark liquid seeping from door gap -->
+  <path d="M200 322 Q210 340 205 360 Q200 375 215 390 Q220 400 210 420 L210 450 L230 450 Q240 420 235 400 Q230 385 235 370 Q240 355 230 340 Q225 330 240 322 Z" fill="#1a0a0a" opacity="0.8"/>
+  <path d="M260 322 Q270 335 265 350 Q260 360 270 375 Q275 385 268 395 L268 450 L280 450 Q285 420 280 400 Q275 385 280 370 Q285 355 278 340 Q273 330 285 322 Z" fill="#1a0a0a" opacity="0.5"/>
+  <path d="M300 322 Q305 332 302 345 Q300 355 308 365 Q312 372 306 380 L306 450 L316 450 Q320 420 316 400 Q312 385 316 370 Q320 355 314 340 Q310 330 318 322 Z" fill="#1a0a0a" opacity="0.4"/>
+
+  <!-- Smartphone on floor, screen lit -->
+  <rect x="520" y="260" width="60" height="110" rx="6" fill="#1a1a1a" stroke="#333" stroke-width="1" transform="rotate(-5 550 315)"/>
+  <!-- Phone screen glow -->
+  <rect x="525" y="268" width="50" height="90" rx="3" fill="#2a3a4a" transform="rotate(-5 550 313)" filter="url(#glow)"/>
+  <!-- Screen content - notification text -->
+  <rect x="532" y="280" width="36" height="4" rx="1" fill="#8ab4d4" opacity="0.7" transform="rotate(-5 550 313)"/>
+  <rect x="532" y="290" width="28" height="3" rx="1" fill="#8ab4d4" opacity="0.5" transform="rotate(-5 550 313)"/>
+  <rect x="532" y="300" width="32" height="3" rx="1" fill="#8ab4d4" opacity="0.4" transform="rotate(-5 550 313)"/>
+  <!-- Lock icon on screen -->
+  <circle cx="550" cy="325" r="6" fill="none" stroke="#8ab4d4" stroke-width="1.5" opacity="0.6" transform="rotate(-5 550 313)"/>
+  <rect x="547" y="319" width="6" height="6" rx="1" fill="#8ab4d4" opacity="0.6" transform="rotate(-5 550 313)"/>
+
+  <!-- Phone screen light on floor -->
+  <ellipse cx="540" cy="380" rx="50" ry="20" fill="#2a3a4a" opacity="0.15" filter="url(#softGlow)"/>
+
+  <!-- Silhouette figure standing (right side, barely visible) -->
+  <!-- Head -->
+  <ellipse cx="640" cy="155" rx="22" ry="28" fill="#0d0b0b"/>
+  <!-- Neck -->
+  <rect x="633" y="180" width="14" height="12" fill="#0d0b0b"/>
+  <!-- Upper body -->
+  <path d="M615 195 Q620 190 640 188 Q660 190 668 195 L675 280 Q670 290 660 295 L620 295 Q610 290 608 280 Z" fill="#0d0b0b"/>
+  <!-- Arms (one reaching toward door) -->
+  <path d="M615 200 Q580 210 540 230 Q530 235 525 230" stroke="#0d0b0b" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M668 200 Q680 220 675 260 Q673 270 668 275" stroke="#0d0b0b" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <!-- Legs -->
+  <rect x="625" y="293" width="12" height="50" fill="#0d0b0b"/>
+  <rect x="648" y="293" width="12" height="50" fill="#0d0b0b"/>
+  <!-- Shoes -->
+  <ellipse cx="631" cy="345" rx="14" ry="5" fill="#0d0b0b"/>
+  <ellipse cx="654" cy="345" rx="14" ry="5" fill="#0d0b0b"/>
+
+  <!-- Subtle ambient light from phone -->
+  <linearGradient id="phoneLight" x1="1" y1="0" x2="0" y2="0">
+    <stop offset="0%" stop-color="#2a3a4a" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#2a3a4a" stop-opacity="0.08"/>
+  </linearGradient>
+  <rect x="400" y="250" width="140" height="130" fill="url(#phoneLight)"/>
+
+  <!-- Very subtle red eye glow on figure -->
+  <circle cx="632" cy="152" r="2" fill="#4a1a1a" opacity="0.4" filter="url(#glow)"/>
+  <circle cx="648" cy="152" r="2" fill="#4a1a1a" opacity="0.4" filter="url(#glow)"/>
+
+  <!-- Dark vignette edges -->
+  <rect width="800" height="450" fill="none" stroke="#050404" stroke-width="40" opacity="0.5"/>
+</svg>
