@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.85" r="0.5">
+      <stop offset="0%" stop-color="#1a1510"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur4">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#glow)"/>
+
+  <!-- Floor line (subtle) -->
+  <line x1="0" y1="370" x2="800" y2="370" stroke="#151210" stroke-width="1"/>
+
+  <!-- Delivery box (宅配ボックス) - side view -->
+  <g>
+    <!-- Box body -->
+    <rect x="280" y="120" width="240" height="250" rx="4" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="2"/>
+    
+    <!-- Box top surface -->
+    <rect x="285" y="125" width="230" height="8" rx="2" fill="#222222"/>
+    
+    <!-- Lid line -->
+    <line x1="280" y1="180" x2="520" y2="180" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Lid slightly open - gap at bottom -->
+    <rect x="282" y="365" width="236" height="5" fill="#1a1510" opacity="0.8"/>
+    
+    <!-- Small gap of light underneath -->
+    <rect x="300" y="368" width="200" height="2" fill="#3a3520" filter="url(#blur1)" opacity="0.6"/>
+    
+    <!-- Box label area -->
+    <rect x="360" y="240" width="80" height="60" rx="3" fill="#252525" stroke="#333" stroke-width="1"/>
+    <text x="400" y="265" text-anchor="middle" fill="#444" font-size="10" font-family="sans-serif">DELIVERY</text>
+    <text x="400" y="280" text-anchor="middle" fill="#444" font-size="8" font-family="sans-serif">BOX</text>
+    
+    <!-- Keyhole -->
+    <circle cx="400" cy="320" r="6" fill="#2a2a2a" stroke="#444" stroke-width="1"/>
+    <circle cx="400" cy="320" r="3" fill="#1a1a1a"/>
+    
+    <!-- Number plate -->
+    <rect x="380" y="145" width="40" height="20" rx="2" fill="#2a2a2a"/>
+    <text x="400" y="159" text-anchor="middle" fill="#555" font-size="12" font-family="sans-serif">102</text>
+  </g>
+
+  <!-- Shadow emerging from the gap -->
+  <g filter="url(#blur4)" opacity="0.7">
+    <!-- Main shadow shape - hand/fingers emerging -->
+    <path d="M350,370 Q355,365 360,368 Q365,360 370,366 Q375,358 380,365 Q385,355 390,363 
+             Q395,352 400,360 Q405,348 410,358 Q415,345 420,355 Q425,350 430,358
+             Q435,365 440,370 L440,372 Q430,375 420,373 Q410,376 400,374
+             Q390,377 380,373 Q370,376 360,374 Q355,375 350,370Z" 
+          fill="#0a0808"/>
+    
+    <!-- Shadow tendrils -->
+    <path d="M360,370 Q340,360 320,365 Q310,368 300,370" 
+          stroke="#0a0808" stroke-width="3" fill="none" opacity="0.5"/>
+    <path d="M440,370 Q460,360 480,365 Q490,368 500,370" 
+          stroke="#0a0808" stroke-width="2" fill="none" opacity="0.4"/>
+  </g>
+
+  <!-- Eyes in the shadow -->
+  <g filter="url(#blur1)" opacity="0.6">
+    <ellipse cx="370" cy="367" rx="3" ry="2" fill="#2a2515"/>
+    <ellipse cx="430" cy="367" rx="3" ry="2" fill="#2a2515"/>
+  </g>
+
+  <!-- Subtle light glow from the gap -->
+  <ellipse cx="400" cy="372" rx="120" ry="3" fill="#3a3520" filter="url(#blur4)" opacity="0.3"/>
+
+  <!-- Dark vignette corners -->
+  <rect x="0" y="0" width="800" height="80" fill="#0a0808" opacity="0.5"/>
+  <rect x="0" y="370" width="800" height="80" fill="#0a0808" opacity="0.6"/>
+
+  <!-- Ambient dust particles -->
+  <g opacity="0.15">
+    <circle cx="200" cy="200" r="1" fill="#888"/>
+    <circle cx="600" cy="150" r="0.8" fill="#888"/>
+    <circle cx="650" cy="300" r="1.2" fill="#888"/>
+    <circle cx="150" cy="320" r="0.7" fill="#888"/>
+    <circle cx="500" cy="100" r="1" fill="#888"/>
+    <circle cx="700" cy="250" r="0.9" fill="#888"/>
+    <circle cx="250" cy="100" r="0.6" fill="#888"/>
+  </g>
+
+  <!-- Title text at top -->
+  <text x="400" y="42" text-anchor="middle" fill="#2a2520" font-size="14" font-family="sans-serif" letter-spacing="4">配達完了</text>
+</svg>
