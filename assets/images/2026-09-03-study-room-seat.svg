@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a2a4a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="deskGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1510"/>
+      <stop offset="100%" stop-color="#0e0b08"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Room perspective - ceiling -->
+  <polygon points="0,0 800,0 700,60 100,60" fill="#080608" opacity="0.5"/>
+
+  <!-- Back wall -->
+  <rect x="100" y="60" width="600" height="280" fill="#0c0909" opacity="0.8"/>
+
+  <!-- Bookshelves on back wall -->
+  <rect x="120" y="80" width="120" height="200" fill="#0e0b0a" stroke="#151210" stroke-width="1"/>
+  <line x1="120" y1="130" x2="240" y2="130" stroke="#151210" stroke-width="0.5"/>
+  <line x1="120" y1="180" x2="240" y2="180" stroke="#151210" stroke-width="0.5"/>
+  <line x1="120" y1="230" x2="240" y2="230" stroke="#151210" stroke-width="0.5"/>
+
+  <rect x="560" y="80" width="120" height="200" fill="#0e0b0a" stroke="#151210" stroke-width="1"/>
+  <line x1="560" y1="130" x2="680" y2="130" stroke="#151210" stroke-width="0.5"/>
+  <line x1="560" y1="180" x2="680" y2="180" stroke="#151210" stroke-width="0.5"/>
+  <line x1="560" y1="230" x2="680" y2="230" stroke="#151210" stroke-width="0.5"/>
+
+  <!-- Books as vertical rectangles -->
+  <rect x="130" y="90" width="8" height="40" fill="#1a1512" opacity="0.6"/>
+  <rect x="142" y="95" width="6" height="35" fill="#1a1512" opacity="0.5"/>
+  <rect x="152" y="88" width="10" height="42" fill="#1a1512" opacity="0.7"/>
+  <rect x="166" y="92" width="7" height="38" fill="#1a1512" opacity="0.4"/>
+  <rect x="177" y="90" width="9" height="40" fill="#1a1512" opacity="0.5"/>
+
+  <rect x="580" y="88" width="8" height="42" fill="#1a1512" opacity="0.6"/>
+  <rect x="592" y="92" width="10" height="38" fill="#1a1512" opacity="0.5"/>
+  <rect x="606" y="90" width="7" height="40" fill="#1a1512" opacity="0.7"/>
+  <rect x="617" y="95" width="8" height="35" fill="#1a1512" opacity="0.4"/>
+
+  <!-- Floor -->
+  <rect x="0" y="340" width="800" height="110" fill="#080606"/>
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#151210" stroke-width="0.5"/>
+
+  <!-- Desk in center -->
+  <rect x="280" y="280" width="240" height="8" fill="url(#deskGrad)" rx="1"/>
+  <rect x="300" y="288" width="6" height="60" fill="#0e0b08"/>
+  <rect x="494" y="288" width="6" height="60" fill="#0e0b08"/>
+
+  <!-- Laptop/screen on desk - faint blue glow -->
+  <rect x="340" y="240" width="120" height="40" fill="#0d1525" rx="2" opacity="0.6"/>
+  <rect x="345" y="244" width="110" height="32" fill="#121e35" rx="1" opacity="0.8"/>
+  <!-- Screen glow -->
+  <ellipse cx="400" cy="250" rx="100" ry="60" fill="url(#screenGlow)" opacity="0.4"/>
+
+  <!-- Notebook on desk -->
+  <rect x="430" y="272" width="50" height="8" fill="#1a1815" rx="0.5" transform="rotate(-3, 455, 276)"/>
+
+  <!-- Chair silhouette (viewer's perspective) - back to us -->
+  <ellipse cx="400" cy="360" rx="35" ry="15" fill="#0c0a0a"/>
+  <rect x="370" y="290" width="60" height="70" fill="#0c0a0a" rx="5"/>
+  <rect x="365" y="280" width="70" height="12" fill="#0c0a0a" rx="3"/>
+
+  <!-- THE FACING PERSON - silhouette sitting at the desk, facing viewer -->
+  <!-- Body/torso -->
+  <ellipse cx="400" cy="260" rx="20" ry="25" fill="#060404" opacity="0.9"/>
+  <!-- Shoulders -->
+  <ellipse cx="400" cy="245" rx="28" ry="15" fill="#060404" opacity="0.85"/>
+  <!-- Head - slightly tilted -->
+  <ellipse cx="400" cy="220" rx="18" ry="22" fill="#060404" opacity="0.95"/>
+  <!-- Hair silhouette -->
+  <ellipse cx="400" cy="205" rx="20" ry="15" fill="#050303" opacity="0.9"/>
+
+  <!-- Faint face outline from screen light -->
+  <ellipse cx="400" cy="222" rx="12" ry="14" fill="none" stroke="#1a2540" stroke-width="0.3" opacity="0.3"/>
+
+  <!-- Eyes - barely visible, just two faint points -->
+  <circle cx="394" cy="218" r="1.2" fill="#1a2a4a" opacity="0.25"/>
+  <circle cx="406" cy="218" r="1.2" fill="#1a2a4a" opacity="0.25"/>
+
+  <!-- Slight smile at the mouth - the horror element -->
+  <path d="M392,230 Q400,235 408,230" fill="none" stroke="#1a2540" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Arms on desk -->
+  <path d="M375,250 L340,275" stroke="#060404" stroke-width="8" opacity="0.7" stroke-linecap="round"/>
+  <path d="M425,250 L460,275" stroke="#060404" stroke-width="8" opacity="0.7" stroke-linecap="round"/>
+
+  <!-- Pen in hand -->
+  <line x1="455" y1="274" x2="470" y2="268" stroke="#1a1815" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Ambient darkness vignette -->
+  <rect x="0" y="0" width="800" height="450" fill="url(#screenGlow)" opacity="0.3"/>
+
+  <!-- Subtle text on the notebook - the horror message -->
+  <text x="430" y="278" font-family="sans-serif" font-size="5" fill="#2a2520" opacity="0.15" transform="rotate(-3, 455, 276)">次はあなたの番です</text>
+
+  <!-- Floor shadow from desk -->
+  <ellipse cx="400" cy="370" rx="120" ry="10" fill="#060404" opacity="0.3"/>
+
+  <!-- Very faint emergency exit sign in the distance -->
+  <rect x="370" y="72" width="60" height="15" fill="#1a3a1a" rx="1" opacity="0.15"/>
+  <text x="380" y="83" font-family="sans-serif" font-size="8" fill="#2a5a2a" opacity="0.1">EXIT</text>
+
+  <!-- Subtle light beam from screen -->
+  <polygon points="340,240 460,240 520,340 280,340" fill="#0d1525" opacity="0.03"/>
+
+  <!-- Tiny details - power outlet on wall -->
+  <rect x="260" y="310" width="12" height="18" fill="#121010" stroke="#1a1815" stroke-width="0.5" rx="1"/>
+  <circle cx="264" cy="318" r="1.5" fill="#0e0c0c"/>
+  <circle cx="268" cy="318" r="1.5" fill="#0e0c0c"/>
+  <rect x="264" y="322" width="4" height="2" fill="#0e0c0c" rx="0.5"/>
+</svg>
