@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#151210"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="450" fill="#0a0808"/>
+  <polygon points="0,320 300,300 500,300 800,320 800,450 0,450" fill="#0d0b0a"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1815" stroke-width="1"/>
+  <polygon points="100,50 300,100 300,300 100,320" fill="#0f0d0c" stroke="#1a1815" stroke-width="0.5"/>
+  <polygon points="700,50 500,100 500,300 700,320" fill="#0f0d0c" stroke="#1a1815" stroke-width="0.5"/>
+  <ellipse cx="400" cy="80" rx="60" ry="15" fill="#1a1510" stroke="#2a2520" stroke-width="0.5"/>
+  <ellipse cx="400" cy="82" rx="40" ry="8" fill="#2a2218"/>
+  <ellipse cx="400" cy="82" rx="20" ry="4" fill="#3a3020" opacity="0.6"/>
+  <polygon points="360,82 440,82 520,320 280,320" fill="#1a1510" opacity="0.3"/>
+  <rect x="130" y="120" width="100" height="200" fill="#141210" stroke="#1e1c18" stroke-width="1"/>
+  <rect x="145" y="140" width="30" height="40" fill="#1a1815" stroke="#222018" stroke-width="0.5"/>
+  <circle cx="215" cy="220" r="4" fill="#2a2820"/>
+  <rect x="570" y="120" width="100" height="200" fill="#141210" stroke="#1e1c18" stroke-width="1"/>
+  <rect x="585" y="140" width="30" height="40" fill="#1a1815" stroke="#222018" stroke-width="0.5"/>
+  <circle cx="655" cy="220" r="4" fill="#2a2820"/>
+  <rect x="320" y="60" width="160" height="260" fill="#161412" stroke="#2a2520" stroke-width="1"/>
+  <rect x="340" y="85" width="55" height="70" fill="#1c1a16" stroke="#2a2820" stroke-width="0.5"/>
+  <rect x="405" y="85" width="55" height="70" fill="#1c1a16" stroke="#2a2820" stroke-width="0.5"/>
+  <circle cx="465" cy="195" r="5" fill="#3a3528"/>
+  <rect x="370" y="290" width="60" height="8" fill="#1a1815" stroke="#2a2520" stroke-width="0.5"/>
+  <polygon points="375,290 425,290 420,310 380,310" fill="#e8e0d0" opacity="0.7"/>
+  <text x="382" y="298" font-size="6" fill="#333" font-family="sans-serif">山田</text>
+  <rect x="495" y="140" width="25" height="35" fill="#1e1c18" stroke="#3a3528" stroke-width="0.5"/>
+  <text x="500" y="162" font-size="14" fill="#4a4538" font-family="sans-serif" text-anchor="middle">4F</text>
+  <line x1="150" y1="340" x2="250" y2="340" stroke="#151310" stroke-width="0.5"/>
+  <line x1="180" y1="360" x2="280" y2="360" stroke="#151310" stroke-width="0.5"/>
+  <line x1="520" y1="340" x2="620" y2="340" stroke="#151310" stroke-width="0.5"/>
+  <line x1="500" y1="360" x2="600" y2="360" stroke="#151310" stroke-width="0.5"/>
+  <ellipse cx="400" cy="294" rx="40" ry="12" fill="#2a2218" opacity="0.4"/>
+  <ellipse cx="400" cy="294" rx="20" ry="6" fill="#3a3020" opacity="0.3"/>
+  <rect x="130" y="280" width="2" height="40" fill="#3a3020" opacity="0.25"/>
+  <rect x="668" y="280" width="2" height="40" fill="#3a3020" opacity="0.25"/>
+  <rect width="800" height="450" fill="#0a0808" opacity="0.5"/>
+</svg>
