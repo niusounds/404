@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <!-- Gradient for steam -->
+    <linearGradient id="steamGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#1a1515" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1a1515" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Gradient for bath water -->
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0a0a15"/>
+    </linearGradient>
+    <!-- Glow for moon -->
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e8dcc8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e8dcc8" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Wood texture gradient -->
+    <linearGradient id="woodGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a1f14"/>
+      <stop offset="50%" stop-color="#3a2a1a"/>
+      <stop offset="100%" stop-color="#2a1f14"/>
+    </linearGradient>
+    <!-- Silhouette gradient -->
+    <linearGradient id="silGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0d12"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background: dark night sky -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Stars (subtle) -->
+  <circle cx="120" cy="40" r="1" fill="#3a3530" opacity="0.5"/>
+  <circle cx="250" cy="70" r="0.8" fill="#3a3530" opacity="0.4"/>
+  <circle cx="400" cy="30" r="1.2" fill="#3a3530" opacity="0.3"/>
+  <circle cx="550" cy="55" r="0.7" fill="#3a3530" opacity="0.5"/>
+  <circle cx="680" cy="25" r="1" fill="#3a3530" opacity="0.4"/>
+  <circle cx="740" cy="80" r="0.6" fill="#3a3530" opacity="0.3"/>
+  <circle cx="80" cy="90" r="0.9" fill="#3a3530" opacity="0.35"/>
+  <circle cx="450" cy="65" r="0.5" fill="#3a3530" opacity="0.45"/>
+
+  <!-- Moon -->
+  <circle cx="650" cy="60" r="60" fill="url(#moonGlow)"/>
+  <circle cx="650" cy="60" r="18" fill="#e8dcc8" opacity="0.15"/>
+  <circle cx="650" cy="60" r="14" fill="#e8dcc8" opacity="0.1"/>
+
+  <!-- Mountain silhouettes (background) -->
+  <path d="M0,200 L80,140 L160,180 L240,120 L320,170 L400,130 L480,175 L560,110 L640,160 L720,125 L800,170 L800,450 L0,450 Z" fill="#0e0c0c" opacity="0.8"/>
+  <path d="M0,230 L100,180 L200,210 L300,170 L400,200 L500,165 L600,200 L700,175 L800,210 L800,450 L0,450 Z" fill="#0c0b0b" opacity="0.9"/>
+
+  <!-- Trees (left) -->
+  <g fill="#0a0909" opacity="0.95">
+    <rect x="15" y="100" width="8" height="200" rx="2"/>
+    <ellipse cx="25" cy="130" rx="35" ry="50"/>
+    <ellipse cx="25" cy="170" rx="40" ry="45"/>
+    <ellipse cx="25" cy="210" rx="38" ry="40"/>
+  </g>
+
+  <!-- Trees (right) -->
+  <g fill="#0a0909" opacity="0.95">
+    <rect x="777" y="100" width="8" height="200" rx="2"/>
+    <ellipse cx="775" cy="130" rx="35" ry="50"/>
+    <ellipse cx="775" cy="170" rx="40" ry="45"/>
+    <ellipse cx="775" cy="210" rx="38" ry="40"/>
+  </g>
+
+  <!-- Wooden deck / edge of the bath -->
+  <g>
+    <!-- Deck floor -->
+    <rect x="180" y="280" width="440" height="12" fill="url(#woodGrad)" rx="1"/>
+    <!-- Deck edge -->
+    <rect x="175" y="292" width="450" height="6" fill="#2a1f14" rx="1"/>
+    <!-- Wooden planks -->
+    <rect x="185" y="281" width="3" height="10" fill="#1a1310" opacity="0.5"/>
+    <rect x="210" y="281" width="3" height="10" fill="#1a1310" opacity="0.4"/>
+    <rect x="235" y="281" width="3" height="10" fill="#1a1310" opacity="0.5"/>
+    <rect x="260" y="281" width="3" height="10" fill="#1a1310" opacity="0.4"/>
+    <rect x="285" y="281" width="3" height="10" fill="#1a1310" opacity="0.5"/>
+    <rect x="310" y="281" width="3" height="10" fill="#1a1310" opacity="0.4"/>
+    <rect x="335" y="281" width="3" height="10" fill="#1a1310" opacity="0.5"/>
+    <rect x="360" y="281" width="3" height="10" fill="#1a1310" opacity="0.4"/>
+    <rect x="385" y="281" width="3" height="10" fill="#1a1310" opacity="0.5"/>
+    <rect x="410" y="281" width="3" height="10" fill="#1a1310" opacity="0.4"/>
+    <rect x="435" y="281" width="3" height="10" fill="#1a1310" opacity="0.5"/>
+    <rect x="460" y="281" width="3" height="10" fill="#1a1310" opacity="0.4"/>
+    <rect x="485" y="281" width="3" height="10" fill="#1a1310" opacity="0.5"/>
+    <rect x="510" y="281" width="3" height="10" fill="#1a1310" opacity="0.4"/>
+    <rect x="535" y="281" width="3" height="10" fill="#1a1310" opacity="0.5"/>
+    <rect x="560" y="281" width="3" height="10" fill="#1a1310" opacity="0.4"/>
+    <rect x="585" y="281" width="3" height="10" fill="#1a1310" opacity="0.5"/>
+    <rect x="610" y="281" width="3" height="10" fill="#1a1310" opacity="0.4"/>
+    <rect x="635" y="281" width="3" height="10" fill="#1a1310" opacity="0.5"/>
+    <rect x="660" y="281" width="3" height="10" fill="#1a1310" opacity="0.4"/>
+    <rect x="685" y="281" width="3" height="10" fill="#1a1310" opacity="0.5"/>
+  </g>
+
+  <!-- Hot spring bath (岩風呂) -->
+  <g>
+    <!-- Bath outer wall -->
+    <path d="M200,300 Q200,295 205,295 L595,295 Q600,295 600,300 L600,430 Q600,440 590,440 L210,440 Q200,440 200,430 Z" fill="#1a1512"/>
+    <!-- Bath inner wall (stone texture) -->
+    <path d="M210,300 Q210,296 215,296 L585,296 Q590,296 590,300 L590,425 Q590,434 582,434 L218,434 Q210,434 210,425 Z" fill="#221c16"/>
+    <!-- Stone texture lines -->
+    <path d="M230,320 L240,318 L250,322 L245,328 L235,326 Z" fill="#2a2318" opacity="0.5"/>
+    <path d="M260,350 L275,347 L280,353 L268,358 L258,354 Z" fill="#2a2318" opacity="0.4"/>
+    <path d="M540,340 L555,337 L560,343 L548,348 L538,344 Z" fill="#2a2318" opacity="0.5"/>
+    <path d="M520,380 L535,377 L540,383 L528,388 L518,384 Z" fill="#2a2318" opacity="0.4"/>
+    <path d="M350,410 L365,407 L370,413 L358,418 L348,414 Z" fill="#2a2318" opacity="0.3"/>
+  </g>
+
+  <!-- Bath water -->
+  <path d="M215,310 Q300,305 400,308 Q500,311 585,308 L585,420 Q585,428 575,428 L225,428 Q215,428 215,420 Z" fill="url(#waterGrad)"/>
+
+  <!-- Water surface ripple (subtle) -->
+  <ellipse cx="400" cy="312" rx="180" ry="3" fill="#1a1a30" opacity="0.3"/>
+  <ellipse cx="350" cy="318" rx="120" ry="2" fill="#1a1a30" opacity="0.2"/>
+  <ellipse cx="450" cy="315" rx="100" ry="2" fill="#1a1a30" opacity="0.25"/>
+
+  <!-- Silhouette sitting at the bottom of the bath -->
+  <g opacity="0.7">
+    <!-- Head -->
+    <ellipse cx="400" cy="370" rx="12" ry="14" fill="#0a0a0f"/>
+    <!-- Body -->
+    <path d="M390,380 Q388,395 390,410 L392,415 L408,415 L410,410 Q412,395 410,380 Z" fill="#0a0a0f"/>
+    <!-- Legs (sitting position) -->
+    <path d="M392,410 L380,420 L370,422 L372,425 L385,420 L395,415 Z" fill="#0a0a0f"/>
+    <path d="M408,410 L420,420 L430,422 L428,425 L415,420 L405,415 Z" fill="#0a0a0f"/>
+    <!-- Arms resting on knees -->
+    <path d="M390,390 L378,405 L375,408 L378,410 L390,395 Z" fill="#0a0a0f" opacity="0.8"/>
+    <path d="M410,390 L422,405 L425,408 L422,410 L410,395 Z" fill="#0a0a0f" opacity="0.8"/>
+  </g>
+
+  <!-- Steam rising from the bath -->
+  <g opacity="0.15">
+    <path d="M250,310 Q260,280 255,250 Q250,220 260,190 Q270,160 265,130" fill="none" stroke="#3a3530" stroke-width="20" stroke-linecap="round"/>
+    <path d="M320,308 Q330,275 325,245 Q320,215 330,185 Q340,155 335,125" fill="none" stroke="#3a3530" stroke-width="18" stroke-linecap="round"/>
+    <path d="M400,310 Q410,278 405,248 Q400,218 410,188 Q420,158 415,128" fill="none" stroke="#3a3530" stroke-width="22" stroke-linecap="round"/>
+    <path d="M480,308 Q490,275 485,245 Q480,215 490,185 Q500,155 495,125" fill="none" stroke="#3a3530" stroke-width="18" stroke-linecap="round"/>
+    <path d="M550,310 Q560,280 555,250 Q550,220 560,190 Q570,160 565,130" fill="none" stroke="#3a3530" stroke-width="20" stroke-linecap="round"/>
+  </g>
+
+  <!-- Steam closer to viewer (more opaque) -->
+  <g opacity="0.08">
+    <path d="M280,305 Q290,285 285,265 Q280,245 290,225" fill="none" stroke="#4a4540" stroke-width="15" stroke-linecap="round"/>
+    <path d="M350,307 Q360,287 355,267 Q350,247 360,227" fill="none" stroke="#4a4540" stroke-width="16" stroke-linecap="round"/>
+    <path d="M430,307 Q440,287 435,267 Q430,247 440,227" fill="none" stroke="#4a4540" stroke-width="16" stroke-linecap="round"/>
+    <path d="M500,305 Q510,285 505,265 Q500,245 510,225" fill="none" stroke="#4a4540" stroke-width="15" stroke-linecap="round"/>
+  </g>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#steamGrad)" opacity="0.3"/>
+  <rect width="800" height="450" fill="#0a0808" opacity="0.1"/>
+
+  <!-- Foreground darkness (bottom) -->
+  <rect x="0" y="400" width="800" height="50" fill="#0a0808" opacity="0.6"/>
+
+  <!-- A single stone visible at the edge (the "new stone") -->
+  <ellipse cx="520" cy="425" rx="8" ry="4" fill="#1a1818" opacity="0.6"/>
+  <ellipse cx="520" cy="424" rx="6" ry="2" fill="#222020" opacity="0.5"/>
+
+  <!-- Subtle red tint near the silhouette (ominous) -->
+  <ellipse cx="400" cy="410" rx="30" ry="15" fill="#1a0505" opacity="0.15"/>
+
+</svg>
