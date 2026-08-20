@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Subtle room outline - floor line -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Wall subtle gradient -->
+  <rect x="0" y="0" width="800" height="380" fill="#0d0a0a"/>
+  
+  <!-- Smart speaker on a small table -->
+  <!-- Table surface -->
+  <ellipse cx="400" cy="375" rx="80" ry="8" fill="#151010"/>
+  <rect x="380" y="375" width="40" height="5" fill="#121010"/>
+  
+  <!-- Smart speaker body -->
+  <rect x="375" y="300" width="50" height="75" rx="25" fill="#1a1a1a" stroke="#222" stroke-width="0.5"/>
+  
+  <!-- Glowing ring - RED (changed from blue) -->
+  <ellipse cx="400" cy="320" rx="18" ry="18" fill="none" stroke="#cc2222" stroke-width="3" opacity="0.9"/>
+  <ellipse cx="400" cy="320" rx="22" ry="22" fill="none" stroke="#cc2222" stroke-width="1" opacity="0.4"/>
+  <ellipse cx="400" cy="320" rx="28" ry="28" fill="none" stroke="#cc2222" stroke-width="0.5" opacity="0.15"/>
+  
+  <!-- Red glow effect -->
+  <ellipse cx="400" cy="320" rx="35" ry="35" fill="#cc2222" opacity="0.05"/>
+  
+  <!-- Sound waves emanating from speaker -->
+  <path d="M440,315 Q455,310 460,320" stroke="#cc2222" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M445,308 Q465,298 470,315" stroke="#cc2222" stroke-width="0.7" fill="none" opacity="0.15"/>
+  <path d="M435,325 Q448,332 455,328" stroke="#cc2222" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M430,330 Q440,340 448,335" stroke="#cc2222" stroke-width="0.7" fill="none" opacity="0.15"/>
+  
+  <!-- Left side - dark corner with shadow figure -->
+  <!-- Mirror frame hint -->
+  <rect x="30" y="80" width="60" height="120" fill="none" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Shadow figure in the corner -->
+  <!-- Head -->
+  <ellipse cx="55" cy="110" rx="15" ry="18" fill="#050303" opacity="0.7"/>
+  <!-- Body -->
+  <path d="M40,128 Q35,180 38,230 L72,230 Q75,180 70,128 Z" fill="#050303" opacity="0.6"/>
+  <!-- Eyes - barely visible -->
+  <circle cx="49" cy="108" r="1.5" fill="#cc2222" opacity="0.4"/>
+  <circle cx="61" cy="108" r="1.5" fill="#cc2222" opacity="0.4"/>
+  
+  <!-- Right side - window with faint moonlight -->
+  <rect x="680" y="60" width="80" height="130" fill="#0c0c12" stroke="#1a1515" stroke-width="1"/>
+  <!-- Moon -->
+  <circle cx="720" cy="100" r="15" fill="#1a1a2a" opacity="0.6"/>
+  <!-- Moonlight beam -->
+  <polygon points="720,115 680,250 760,250" fill="#1a1a2a" opacity="0.08"/>
+  
+  <!-- Cat silhouette on window sill (reference to the story) -->
+  <ellipse cx="720" cy="195" rx="12" ry="8" fill="#0a0808"/>
+  <ellipse cx="728" cy="188" rx="5" ry="6" fill="#0a0808"/>
+  <polygon points="725,183 723,175 728,180" fill="#0a0808"/>
+  <polygon points="730,183 732,175 728,180" fill="#0a0808"/>
+  
+  <!-- Subtle text-like lines floating (the memos) -->
+  <line x1="470" y1="280" x2="520" y2="275" stroke="#cc2222" stroke-width="0.5" opacity="0.1"/>
+  <line x1="475" y1="290" x2="515" y2="288" stroke="#cc2222" stroke-width="0.5" opacity="0.08"/>
+  <line x1="468" y1="340" x2="530" y2="338" stroke="#cc2222" stroke-width="0.5" opacity="0.06"/>
+  <line x1="472" y1="350" x2="525" y2="352" stroke="#cc2222" stroke-width="0.5" opacity="0.05"/>
+  
+  <!-- Vignette effect -->
+  <rect x="0" y="0" width="800" height="450" fill="url(#vignette)" opacity="0.3"/>
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="60%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
