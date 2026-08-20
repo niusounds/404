@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a2520" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="waterGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#1a1510" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050406"/>
+      <stop offset="60%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12100e"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Background sky -->
+  <rect width="800" height="450" fill="url(#skyGrad)"/>
+
+  <!-- Stars -->
+  <g fill="#e8e0d0" opacity="0.3">
+    <circle cx="120" cy="40" r="1"/>
+    <circle cx="250" cy="70" r="0.8"/>
+    <circle cx="380" cy="30" r="1.2"/>
+    <circle cx="500" cy="55" r="0.7"/>
+    <circle cx="620" cy="25" r="1"/>
+    <circle cx="710" cy="60" r="0.9"/>
+    <circle cx="180" cy="90" r="0.6"/>
+    <circle cx="450" cy="85" r="0.8"/>
+    <circle cx="560" cy="45" r="1.1"/>
+    <circle cx="750" cy="35" r="0.7"/>
+    <circle cx="310" cy="110" r="0.5"/>
+    <circle cx="670" cy="95" r="0.6"/>
+  </g>
+
+  <!-- Moon -->
+  <circle cx="650" cy="80" r="30" fill="#d4c8a0" opacity="0.15" filter="url(#blur2)"/>
+  <circle cx="650" cy="80" r="22" fill="#d4c8a0" opacity="0.2"/>
+  <circle cx="650" cy="80" r="16" fill="#e8dcc0" opacity="0.25"/>
+
+  <!-- Distant mountain silhouettes -->
+  <path d="M0,200 L50,170 L100,185 L150,155 L200,175 L250,160 L300,180 L350,165 L400,190 L450,170 L500,185 L550,160 L600,175 L650,155 L700,170 L750,165 L800,180 L800,250 L0,250 Z" fill="#080606" opacity="0.9"/>
+  <path d="M0,220 L80,195 L160,210 L240,190 L320,205 L400,195 L480,210 L560,190 L640,205 L720,195 L800,210 L800,260 L0,260 Z" fill="#0a0808" opacity="0.95"/>
+
+  <!-- Pine tree silhouettes on left -->
+  <g fill="#060404">
+    <polygon points="30,220 45,140 60,220"/>
+    <polygon points="50,240 62,170 74,240"/>
+    <polygon points="15,250 28,190 41,250"/>
+    <rect x="38" y="220" width="4" height="30"/>
+    <rect x="58" y="240" width="3" height="25"/>
+  </g>
+
+  <!-- Pine tree silhouettes on right -->
+  <g fill="#060404">
+    <polygon points="720,220 735,140 750,220"/>
+    <polygon points="700,240 712,170 724,240"/>
+    <polygon points="740,250 753,190 766,250"/>
+    <rect x="728" y="220" width="4" height="30"/>
+    <rect x="708" y="240" width="3" height="25"/>
+  </g>
+
+  <!-- Stone hot spring basin -->
+  <g>
+    <!-- Stone rim -->
+    <ellipse cx="400" cy="320" rx="280" ry="60" fill="#141210" stroke="#1a1815" stroke-width="2"/>
+    <ellipse cx="400" cy="318" rx="275" ry="56" fill="#12100e"/>
+    <!-- Stone texture -->
+    <path d="M140,300 L155,295 L170,302 L165,310 L145,308 Z" fill="#161412" opacity="0.5"/>
+    <path d="M620,310 L635,305 L645,312 L638,320 L625,318 Z" fill="#161412" opacity="0.5"/>
+    <path d="M200,340 L215,335 L225,342 L220,350 L205,348 Z" fill="#161412" opacity="0.4"/>
+    <path d="M560,330 L575,325 L585,332 L580,340 L565,338 Z" fill="#161412" opacity="0.4"/>
+    <!-- Stone wall left -->
+    <rect x="110" y="280" width="40" height="80" rx="5" fill="#141210" stroke="#1a1815" stroke-width="1"/>
+    <rect x="105" y="300" width="45" height="75" rx="5" fill="#12100e"/>
+    <!-- Stone wall right -->
+    <rect x="650" y="280" width="40" height="80" rx="5" fill="#141210" stroke="#1a1815" stroke-width="1"/>
+    <rect x="650" y="300" width="45" height="75" rx="5" fill="#12100e"/>
+  </g>
+
+  <!-- Water surface -->
+  <ellipse cx="400" cy="320" rx="268" ry="52" fill="url(#waterGrad)" opacity="0.9"/>
+
+  <!-- Water ripples -->
+  <g stroke="#1e1a16" stroke-width="0.5" fill="none" opacity="0.4">
+    <path d="M300,310 Q320,308 340,312 Q360,316 380,310"/>
+    <path d="M420,315 Q440,312 460,318 Q480,322 500,314"/>
+    <path d="M280,325 Q300,322 320,328 Q340,332 360,324"/>
+    <path d="M440,330 Q460,327 480,333 Q500,337 520,329"/>
+    <path d="M350,335 Q370,332 390,338"/>
+  </g>
+
+  <!-- Steam -->
+  <g fill="#1a1815" opacity="0.15" filter="url(#blur1)">
+    <ellipse cx="300" cy="290" rx="30" ry="15"/>
+    <ellipse cx="380" cy="280" rx="40" ry="18"/>
+    <ellipse cx="460" cy="285" rx="35" ry="14"/>
+    <ellipse cx="520" cy="295" rx="25" ry="12"/>
+    <ellipse cx="340" cy="270" rx="35" ry="16"/>
+    <ellipse cx="440" cy="275" rx="30" ry="15"/>
+  </g>
+  <g fill="#1e1c18" opacity="0.1" filter="url(#blur1)">
+    <ellipse cx="360" cy="260" rx="45" ry="20"/>
+    <ellipse cx="420" cy="255" rx="40" ry="18"/>
+    <ellipse cx="500" cy="265" rx="30" ry="14"/>
+  </g>
+
+  <!-- Reflection in water - the horror element -->
+  <!-- Normal person silhouette (what they see as normal) -->
+  <g opacity="0.08">
+    <ellipse cx="380" cy="318" rx="8" ry="10" fill="#2a2520"/>
+    <rect x="376" y="325" width="8" height="15" fill="#2a2520" rx="2"/>
+  </g>
+
+  <!-- Distorted/smiling reflection - slightly offset and different -->
+  <g opacity="0.12">
+    <!-- Head slightly larger, tilted -->
+    <ellipse cx="420" cy="315" rx="10" ry="12" fill="#1a1510"/>
+    <!-- Eyes - small dark dots suggesting a smile -->
+    <circle cx="416" cy="312" r="1.5" fill="#0a0808"/>
+    <circle cx="424" cy="312" r="1.5" fill="#0a0808"/>
+    <!-- Curved mouth suggesting an eerie smile -->
+    <path d="M415,318 Q420,322 425,318" stroke="#0a0808" stroke-width="1" fill="none"/>
+    <!-- Body -->
+    <rect x="415" y="325" width="10" height="16" fill="#1a1510" rx="2"/>
+  </g>
+
+  <!-- Dark foreground elements -->
+  <rect x="0" y="370" width="800" height="80" fill="#060404"/>
+
+  <!-- Ground texture -->
+  <g fill="#0a0808" opacity="0.5">
+    <circle cx="100" cy="400" r="2"/>
+    <circle cx="200" cy="420" r="1.5"/>
+    <circle cx="350" cy="395" r="2"/>
+    <circle cx="500" cy="410" r="1.5"/>
+    <circle cx="650" cy="400" r="2"/>
+    <circle cx="750" cy="415" r="1.5"/>
+  </g>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#moonGlow)" opacity="0.3"/>
+  <rect width="800" height="450" fill="#050404" opacity="0.4"/>
+</svg>
