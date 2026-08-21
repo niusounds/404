@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Corridor perspective - floor -->
+  <polygon points="0,450 800,450 500,280 300,280" fill="#0d0a0a"/>
+  
+  <!-- Corridor walls - left -->
+  <polygon points="0,0 300,280 300,450 0,450" fill="#0c0a0a" opacity="0.9"/>
+  
+  <!-- Corridor walls - right -->
+  <polygon points="800,0 500,280 500,450 800,450" fill="#0c0a0a" opacity="0.9"/>
+  
+  <!-- Ceiling -->
+  <polygon points="0,0 800,0 500,280 300,280" fill="#0e0b0b" opacity="0.7"/>
+  
+  <!-- Left wall door silhouettes -->
+  <rect x="60" y="120" width="80" height="180" fill="#080606" rx="2"/>
+  <rect x="65" y="125" width="70" height="170" fill="#070505" rx="1"/>
+  <circle cx="125" cy="210" r="3" fill="#1a1515"/>
+  
+  <!-- Right wall door silhouettes -->
+  <rect x="660" y="120" width="80" height="180" fill="#080606" rx="2"/>
+  <rect x="665" y="125" width="70" height="170" fill="#070505" rx="1"/>
+  <circle cx="775" cy="210" r="3" fill="#1a1515"/>
+  
+  <!-- Far end door (15階の部屋) -->
+  <rect x="380" y="200" width="40" height="80" fill="#080606" rx="1"/>
+  
+  <!-- Sensor light glow - center ceiling -->
+  <ellipse cx="400" cy="240" rx="120" ry="60" fill="#1a1510" opacity="0.3"/>
+  <ellipse cx="400" cy="240" rx="60" ry="30" fill="#2a2218" opacity="0.4"/>
+  <ellipse cx="400" cy="240" rx="25" ry="15" fill="#3d3428" opacity="0.5"/>
+  
+  <!-- Light beam from sensor -->
+  <polygon points="385,240 415,240 480,450 320,450" fill="#1a1510" opacity="0.08"/>
+  
+  <!-- Sensor light fixture -->
+  <rect x="393" y="235" width="14" height="8" fill="#1a1818" rx="2"/>
+  <circle cx="400" cy="245" r="4" fill="#4a3f30" opacity="0.8"/>
+  <circle cx="400" cy="245" r="2" fill="#6a5a45" opacity="0.9"/>
+  
+  <!-- Wet footprints on floor -->
+  <g opacity="0.15">
+    <!-- Left foot -->
+    <ellipse cx="370" cy="350" rx="8" ry="14" fill="#2a2520"/>
+    <ellipse cx="368" cy="370" rx="6" ry="10" fill="#2a2520"/>
+    <!-- Right foot -->
+    <ellipse cx="430" cy="355" rx="8" ry="14" fill="#2a2520"/>
+    <ellipse cx="432" cy="375" rx="6" ry="10" fill="#2a2520"/>
+    <!-- More footprints fading -->
+    <ellipse cx="395" cy="300" rx="7" ry="12" fill="#2a2520" opacity="0.7"/>
+    <ellipse cx="405" cy="305" rx="7" ry="12" fill="#2a2520" opacity="0.7"/>
+    <ellipse cx="398" cy="280" rx="6" ry="10" fill="#2a2520" opacity="0.4"/>
+    <ellipse cx="402" cy="284" rx="6" ry="10" fill="#2a2520" opacity="0.4"/>
+  </g>
+  
+  <!-- Wet sheen on floor -->
+  <ellipse cx="400" cy="400" rx="100" ry="20" fill="#151210" opacity="0.2"/>
+  <ellipse cx="400" cy="380" rx="60" ry="12" fill="#151210" opacity="0.15"/>
+  
+  <!-- Subtle figure silhouette at far end (barely visible) -->
+  <g opacity="0.06">
+    <ellipse cx="400" cy="210" rx="8" ry="10"/>
+    <rect x="394" y="218" width="12" height="30" rx="3"/>
+  </g>
+  
+  <!-- Vignette effect - dark edges -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+  
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
