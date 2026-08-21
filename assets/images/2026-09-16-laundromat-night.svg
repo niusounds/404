@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3a2a1a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="foamGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#d8d0c0" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#d8d0c0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Floor line -->
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1410" stroke-width="1"/>
+
+  <!-- Washing machine 1 (left) -->
+  <rect x="120" y="120" width="140" height="200" rx="4" fill="#1a1612" stroke="#2a2218" stroke-width="1"/>
+  <rect x="130" y="130" width="120" height="30" rx="2" fill="#221e16"/>
+  <circle cx="190" cy="240" r="45" fill="#0e0c0a" stroke="#2a2418" stroke-width="2"/>
+  <circle cx="190" cy="240" r="38" fill="none" stroke="#3a3020" stroke-width="0.5" opacity="0.5"/>
+  <!-- Glow from machine 1 -->
+  <circle cx="190" cy="240" r="50" fill="url(#glow)" opacity="0.3"/>
+
+  <!-- Washing machine 2 (center) - main focus -->
+  <rect x="330" y="100" width="140" height="220" rx="4" fill="#1a1612" stroke="#3a3020" stroke-width="1.5"/>
+  <rect x="340" y="110" width="120" height="30" rx="2" fill="#221e16"/>
+  <circle cx="400" cy="250" r="48" fill="#0e0c0a" stroke="#4a4030" stroke-width="2"/>
+  <circle cx="400" cy="250" r="40" fill="none" stroke="#5a4a30" stroke-width="0.5" opacity="0.6"/>
+  <circle cx="400" cy="250" r="25" fill="none" stroke="#6a5a3a" stroke-width="0.3" opacity="0.4"/>
+  <!-- Brighter glow from machine 2 -->
+  <circle cx="400" cy="250" r="60" fill="url(#glow)" opacity="0.5"/>
+
+  <!-- Washing machine 3 (right) -->
+  <rect x="540" y="120" width="140" height="200" rx="4" fill="#1a1612" stroke="#2a2218" stroke-width="1"/>
+  <rect x="550" y="130" width="120" height="30" rx="2" fill="#221e16"/>
+  <circle cx="610" cy="240" r="45" fill="#0e0c0a" stroke="#2a2418" stroke-width="2"/>
+  <circle cx="610" cy="240" r="38" fill="none" stroke="#3a3020" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="610" cy="240" r="50" fill="url(#glow)" opacity="0.3"/>
+
+  <!-- Foam spreading from center machine -->
+  <ellipse cx="400" cy="340" rx="120" ry="15" fill="#d8d0c0" opacity="0.08" filter="url(#blur2)"/>
+  <ellipse cx="370" cy="345" rx="60" ry="10" fill="#d8d0c0" opacity="0.06" filter="url(#blur1)"/>
+  <ellipse cx="430" cy="348" rx="50" ry="8" fill="#d8d0c0" opacity="0.05" filter="url(#blur1)"/>
+  <ellipse cx="310" cy="350" rx="40" ry="7" fill="#d8d0c0" opacity="0.04" filter="url(#blur1)"/>
+  <ellipse cx="490" cy="352" rx="35" ry="6" fill="#d8d0c0" opacity="0.04" filter="url(#blur1)"/>
+
+  <!-- Foam bubbles near machines -->
+  <circle cx="380" cy="325" r="4" fill="#d8d0c0" opacity="0.1"/>
+  <circle cx="395" cy="328" r="3" fill="#d8d0c0" opacity="0.08"/>
+  <circle cx="410" cy="322" r="5" fill="#d8d0c0" opacity="0.07"/>
+  <circle cx="360" cy="330" r="3" fill="#d8d0c0" opacity="0.06"/>
+  <circle cx="425" cy="327" r="3.5" fill="#d8d0c0" opacity="0.06"/>
+
+  <!-- Person silhouette (feet/legs at bottom edge) -->
+  <path d="M370,450 L370,410 L375,405 L380,410 L380,450" fill="#0a0808" stroke="#1a1612" stroke-width="0.5"/>
+  <path d="M395,450 L395,408 L400,403 L405,408 L405,450" fill="#0a0808" stroke="#1a1612" stroke-width="0.5"/>
+
+  <!-- Dim overhead light -->
+  <line x1="400" y1="0" x2="400" y2="40" stroke="#2a2418" stroke-width="2"/>
+  <ellipse cx="400" cy="42" rx="25" ry="5" fill="#2a2418"/>
+  <ellipse cx="400" cy="42" rx="15" ry="3" fill="#4a4030" opacity="0.3"/>
+
+  <!-- Window at back (dark, outside lights barely visible) -->
+  <rect x="300" y="30" width="200" height="50" rx="2" fill="#0e0c0a" stroke="#1a1612" stroke-width="1"/>
+  <!-- Faint city lights outside -->
+  <circle cx="340" cy="55" r="2" fill="#3a3020" opacity="0.3"/>
+  <circle cx="460" cy="50" r="1.5" fill="#3a3020" opacity="0.25"/>
+  <circle cx="420" cy="60" r="1" fill="#3a3020" opacity="0.2"/>
+
+  <!-- Spinning lines in center machine (suggesting rotation) -->
+  <path d="M370,250 Q385,235 400,250 Q415,265 430,250" fill="none" stroke="#5a4a30" stroke-width="0.5" opacity="0.3"/>
+  <path d="M375,260 Q388,248 400,260 Q412,272 425,260" fill="none" stroke="#5a4a30" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Subtle fog/mist at bottom -->
+  <ellipse cx="400" cy="430" rx="350" ry="20" fill="#d8d0c0" opacity="0.02" filter="url(#blur2)"/>
+
+  <!-- Vignette effect -->
+  <rect width="800" height="450" fill="url(#foamGlow)" opacity="0.5"/>
+</svg>
