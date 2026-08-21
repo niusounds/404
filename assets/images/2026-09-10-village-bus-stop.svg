@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Moon -->
+  <circle cx="650" cy="80" r="35" fill="#1a1510" opacity="0.6"/>
+  <circle cx="655" cy="75" r="30" fill="#0a0808"/>
+  
+  <!-- Stars (subtle) -->
+  <circle cx="100" cy="50" r="1" fill="#333" opacity="0.4"/>
+  <circle cx="200" cy="30" r="1.5" fill="#333" opacity="0.3"/>
+  <circle cx="350" cy="60" r="1" fill="#333" opacity="0.5"/>
+  <circle cx="500" cy="25" r="1" fill="#333" opacity="0.3"/>
+  <circle cx="750" cy="40" r="1.5" fill="#333" opacity="0.4"/>
+  <circle cx="780" cy="120" r="1" fill="#333" opacity="0.3"/>
+  
+  <!-- Mountain silhouette (background) -->
+  <path d="M0,250 L80,180 L160,220 L250,160 L340,210 L420,170 L500,200 L580,150 L660,190 L720,165 L800,200 L800,450 L0,450 Z" fill="#0d0a0a" opacity="0.9"/>
+  
+  <!-- Mid-ground hills -->
+  <path d="M0,280 L100,240 L200,260 L300,230 L400,255 L500,235 L600,260 L700,240 L800,265 L800,450 L0,450 Z" fill="#0f0c0c"/>
+  
+  <!-- Ground / road -->
+  <path d="M0,340 Q200,335 400,340 Q600,345 800,338 L800,450 L0,450 Z" fill="#111010"/>
+  
+  <!-- Road lines (faint) -->
+  <line x1="0" y1="380" x2="800" y2="378" stroke="#1a1818" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Bus stop pole -->
+  <rect x="140" y="260" width="6" height="120" fill="#1a1616"/>
+  <rect x="125" y="265" width="36" height="50" fill="#151212" stroke="#1a1818" stroke-width="1"/>
+  <!-- Bus stop sign text -->
+  <text x="143" y="295" font-family="sans-serif" font-size="10" fill="#2a2525" text-anchor="middle">バス停</text>
+  
+  <!-- Bus stop roof -->
+  <path d="M118,262 L182,262 L180,258 L120,258 Z" fill="#1a1616"/>
+  
+  <!-- Headlight beams from distance -->
+  <ellipse cx="620" cy="365" rx="120" ry="20" fill="#1a1508" opacity="0.3"/>
+  <ellipse cx="620" cy="365" rx="60" ry="10" fill="#2a2010" opacity="0.25"/>
+  
+  <!-- Bus silhouette (distant, on road) -->
+  <!-- Bus body -->
+  <rect x="560" y="320" width="120" height="50" rx="8" fill="#0e0b0b"/>
+  <!-- Bus windows -->
+  <rect x="570" y="328" width="22" height="18" rx="2" fill="#1a1508" opacity="0.5"/>
+  <rect x="598" y="328" width="22" height="18" rx="2" fill="#1a1508" opacity="0.5"/>
+  <rect x="626" y="328" width="22" height="18" rx="2" fill="#1a1508" opacity="0.5"/>
+  <!-- Headlights -->
+  <ellipse cx="682" cy="355" rx="8" ry="5" fill="#2a2010" opacity="0.6"/>
+  <!-- Wheels -->
+  <circle cx="580" cy="372" r="8" fill="#0a0808" stroke="#151212" stroke-width="1"/>
+  <circle cx="665" cy="372" r="8" fill="#0a0808" stroke="#151212" stroke-width="1"/>
+  
+  <!-- Silhouette of person on bus window (first window) -->
+  <circle cx="581" cy="333" r="4" fill="#2a2010" opacity="0.3"/>
+  
+  <!-- Street light (bus stop) -->
+  <line x1="143" y1="260" x2="143" y2="255" stroke="#1a1616" stroke-width="2"/>
+  <circle cx="143" cy="253" r="3" fill="#2a2010" opacity="0.15"/>
+  
+  <!-- Foreground grass / vegetation silhouettes -->
+  <path d="M0,400 Q10,380 5,360 Q15,370 20,355 Q25,375 35,365 Q40,380 50,370 L50,450 L0,450 Z" fill="#0d0a0a" opacity="0.8"/>
+  <path d="M750,400 Q760,385 755,365 Q765,375 770,358 Q778,372 785,362 Q790,380 800,370 L800,450 L750,450 Z" fill="#0d0a0a" opacity="0.8"/>
+  
+  <!-- Fog / mist on ground -->
+  <ellipse cx="400" cy="400" rx="350" ry="30" fill="#111010" opacity="0.4"/>
+  <ellipse cx="200" cy="420" rx="200" ry="20" fill="#131111" opacity="0.3"/>
+  <ellipse cx="600" cy="410" rx="250" ry="25" fill="#131111" opacity="0.3"/>
+  
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="50%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0.7"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Title text (subtle, bottom center) -->
+  <text x="400" y="430" font-family="sans-serif" font-size="11" fill="#1a1818" text-anchor="middle" letter-spacing="4">終電後のバス停</text>
+</svg>
