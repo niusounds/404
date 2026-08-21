@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Ceiling fluorescent lights (flickering effect) -->
+  <rect x="120" y="0" width="60" height="4" fill="#1a1a1a" rx="1"/>
+  <rect x="370" y="0" width="60" height="4" fill="#1a1a1a" rx="1"/>
+  <rect x="620" y="0" width="60" height="4" fill="#1a1a1a" rx="1"/>
+  
+  <!-- Light glow from fluorescent tubes -->
+  <ellipse cx="150" cy="8" rx="50" ry="30" fill="#1a1510" opacity="0.3"/>
+  <ellipse cx="400" cy="8" rx="50" ry="30" fill="#1a1510" opacity="0.2"/>
+  <ellipse cx="650" cy="8" rx="50" ry="30" fill="#1a1510" opacity="0.15"/>
+  
+  <!-- Concrete pillars -->
+  <rect x="80" y="30" width="35" height="420" fill="#0e0c0c" stroke="#151212" stroke-width="0.5"/>
+  <rect x="310" y="30" width="35" height="420" fill="#0e0c0c" stroke="#151212" stroke-width="0.5"/>
+  <rect x="540" y="30" width="35" height="420" fill="#0e0c0c" stroke="#151212" stroke-width="0.5"/>
+  
+  <!-- Parking lines on floor -->
+  <line x1="150" y1="280" x2="150" y2="450" stroke="#1a1818" stroke-width="1.5"/>
+  <line x1="280" y1="280" x2="280" y2="450" stroke="#1a1818" stroke-width="1.5"/>
+  <line x1="450" y1="280" x2="450" y2="450" stroke="#1a1818" stroke-width="1.5"/>
+  <line x1="580" y1="280" x2="580" y2="450" stroke="#1a1818" stroke-width="1.5"/>
+  <line x1="710" y1="280" x2="710" y2="450" stroke="#1a1818" stroke-width="1.5"/>
+  
+  <!-- Floor perspective lines -->
+  <line x1="50" y1="350" x2="750" y2="350" stroke="#121010" stroke-width="0.5"/>
+  <line x1="30" y1="400" x2="770" y2="400" stroke="#121010" stroke-width="0.5"/>
+  
+  <!-- Car silhouette in parking spot -->
+  <!-- Car body -->
+  <path d="M380,260 L380,310 L390,330 L480,330 L490,310 L490,260 Z" fill="#0d0b0b" stroke="#1a1717" stroke-width="0.5"/>
+  <!-- Car roof -->
+  <path d="M400,260 L410,235 L460,235 L470,260" fill="#0c0a0a" stroke="#1a1717" stroke-width="0.5"/>
+  <!-- Car windows -->
+  <path d="M405,258 L412,240 L435,240 L435,258" fill="#0a0a12" opacity="0.6"/>
+  <path d="M438,258 L438,240 L455,240 L463,258" fill="#0a0a12" opacity="0.6"/>
+  <!-- Car headlights (dim) -->
+  <ellipse cx="382" cy="315" rx="3" ry="5" fill="#2a2510" opacity="0.4"/>
+  <!-- Driver side mirror -->
+  <ellipse cx="378" cy="275" rx="5" ry="3" fill="#151313" stroke="#1a1717" stroke-width="0.3"/>
+  
+  <!-- Convex mirror on pillar (right side) -->
+  <circle cx="670" cy="200" r="35" fill="#1a1a1a" stroke="#252525" stroke-width="1"/>
+  <circle cx="670" cy="200" r="30" fill="#121218"/>
+  
+  <!-- Reflection in convex mirror - the shadow figure -->
+  <!-- Shadow figure in mirror -->
+  <ellipse cx="670" cy="185" rx="6" ry="8" fill="#0a0a0a"/>
+  <path d="M664,193 L666,215 L674,215 L676,193" fill="#0a0a0a"/>
+  <!-- Shadow arm reaching toward car door handle -->
+  <line x1="674" y1="200" x2="680" y2="205" stroke="#0a0a0a" stroke-width="2"/>
+  <!-- Subtle eerie glow around shadow -->
+  <circle cx="670" cy="195" r="12" fill="#0e0a15" opacity="0.3"/>
+  
+  <!-- Mirror mount -->
+  <rect x="667" y="235" width="6" height="15" fill="#1a1a1a"/>
+  
+  <!-- Another car in background (faint) -->
+  <path d="M520,270 L520,300 L525,315 L570,315 L575,300 L575,270 Z" fill="#0b0909" stroke="#151313" stroke-width="0.3" opacity="0.5"/>
+  
+  <!-- Wet footprints on floor near car -->
+  <ellipse cx="430" cy="380" rx="4" ry="6" fill="#0e0c0c" opacity="0.6"/>
+  <ellipse cx="440" cy="395" rx="3.5" ry="5.5" fill="#0e0c0c" opacity="0.5"/>
+  <ellipse cx="448" cy="410" rx="3" ry="5" fill="#0e0c0c" opacity="0.4"/>
+  <ellipse cx="455" cy="425" rx="2.5" ry="4.5" fill="#0e0c0c" opacity="0.3"/>
+  
+  <!-- Cold breath/fog near car door -->
+  <ellipse cx="390" cy="340" rx="15" ry="8" fill="#0e0e14" opacity="0.15"/>
+  
+  <!-- Dark vignette corners -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.4"/>
+  
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050303" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Subtle cold blue tint on driver side area -->
+  <ellipse cx="430" cy="320" rx="60" ry="40" fill="#0a0e18" opacity="0.08"/>
+</svg>
