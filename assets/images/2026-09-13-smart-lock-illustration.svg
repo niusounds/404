@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#1a1210"/>
+    </linearGradient>
+    <linearGradient id="doorGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1510" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2a2015" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="phoneScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a4a"/>
+      <stop offset="100%" stop-color="#0d1a30"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Floor perspective lines -->
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#151010" stroke-width="1"/>
+  <line x1="100" y1="320" x2="0" y2="450" stroke="#121010" stroke-width="0.5" opacity="0.5"/>
+  <line x1="300" y1="320" x2="200" y2="450" stroke="#121010" stroke-width="0.5" opacity="0.5"/>
+  <line x1="500" y1="320" x2="600" y2="450" stroke="#121010" stroke-width="0.5" opacity="0.5"/>
+  <line x1="700" y1="320" x2="800" y2="450" stroke="#121010" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Left wall -->
+  <rect x="0" y="0" width="120" height="320" fill="#0e0a0a"/>
+  <line x1="120" y1="0" x2="120" y2="320" stroke="#1a1515" stroke-width="2"/>
+
+  <!-- Right wall -->
+  <rect x="680" y="0" width="120" height="320" fill="#0e0a0a"/>
+  <line x1="680" y1="0" x2="680" y2="320" stroke="#1a1515" stroke-width="2"/>
+
+  <!-- Ceiling -->
+  <rect x="120" y="0" width="560" height="40" fill="#0c0909"/>
+
+  <!-- Door frame -->
+  <rect x="310" y="40" width="180" height="280" fill="#1a1412" stroke="#2a2018" stroke-width="2"/>
+
+  <!-- Door slightly ajar - the gap -->
+  <rect x="480" y="40" width="10" height="280" fill="#080606"/>
+
+  <!-- Light leaking from inside -->
+  <rect x="490" y="40" width="0" height="280" fill="url(#doorGlow)" filter="url(#softGlow)"/>
+  <rect x="495" y="60" width="3" height="240" fill="#3a2a1a" opacity="0.3" filter="url(#glow)"/>
+
+  <!-- Room interior visible through door crack -->
+  <rect x="498" y="45" width="85" height="270" fill="#1a140e"/>
+
+  <!-- Faint bedroom silhouette through the door gap -->
+  <!-- Bed shape -->
+  <rect x="510" y="200" width="50" height="80" fill="#2a1e14" opacity="0.7"/>
+  <!-- Pillow -->
+  <rect x="515" y="195" width="30" height="15" fill="#3a2a1e" opacity="0.5"/>
+
+  <!-- Door handle -->
+  <circle cx="475" cy="190" r="4" fill="#2a2520" stroke="#3a3530" stroke-width="1"/>
+  <circle cx="475" cy="190" r="2" fill="#4a4035"/>
+
+  <!-- Door panel lines -->
+  <rect x="325" y="60" width="145" height="90" fill="none" stroke="#252018" stroke-width="1" opacity="0.5"/>
+  <rect x="325" y="170" width="145" height="90" fill="none" stroke="#252018" stroke-width="1" opacity="0.5"/>
+
+  <!-- Floor shadow from door -->
+  <rect x="310" y="320" width="180" height="30" fill="#080606" opacity="0.5"/>
+
+  <!-- Smartphone in foreground (bottom right) -->
+  <!-- Phone body -->
+  <rect x="580" y="340" width="100" height="180" rx="8" fill="#1a1a1e" stroke="#2a2a30" stroke-width="1.5" transform="rotate(-5, 630, 430)"/>
+
+  <!-- Phone screen -->
+  <rect x="590" y="355" width="80" height="140" rx="3" fill="url(#phoneScreen)" transform="rotate(-5, 630, 430)"/>
+
+  <!-- Screen glow -->
+  <rect x="590" y="355" width="80" height="140" rx="3" fill="#1a2a4a" opacity="0.2" filter="url(#glow)" transform="rotate(-5, 630, 430)"/>
+
+  <!-- Lock icon on screen -->
+  <!-- Lock body -->
+  <rect x="620" y="370" width="20" height="16" rx="2" fill="#4a6a9a" opacity="0.9" transform="rotate(-5, 630, 430)"/>
+  <!-- Lock shackle -->
+  <path d="M625,370 L625,363 Q625,358 630,358 Q635,358 635,363 L635,370" fill="none" stroke="#4a6a9a" stroke-width="2" opacity="0.9" transform="rotate(-5, 630, 430)"/>
+
+  <!-- Text lines on screen (lock log) -->
+  <rect x="598" y="395" width="55" height="3" rx="1" fill="#5a7aaa" opacity="0.7" transform="rotate(-5, 630, 430)"/>
+  <rect x="598" y="403" width="45" height="3" rx="1" fill="#5a7aaa" opacity="0.5" transform="rotate(-5, 630, 430)"/>
+  <rect x="598" y="411" width="50" height="3" rx="1" fill="#5a7aaa" opacity="0.4" transform="rotate(-5, 630, 430)"/>
+
+  <!-- Red warning indicator -->
+  <circle cx="600" cy="396" r="2.5" fill="#aa3a3a" opacity="0.8" transform="rotate(-5, 630, 430)"/>
+
+  <!-- Ambient darkness overlay -->
+  <rect x="0" y="0" width="800" height="450" fill="#000000" opacity="0.15"/>
+
+  <!-- Subtle vignette effect -->
+  <rect x="0" y="0" width="800" height="450" fill="#000000" opacity="0.3" style="mix-blend-mode: multiply;"/>
+</svg>
