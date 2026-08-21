@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="floorGlow" cx="50%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#1a1510"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <radialGradient id="windowGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a2520" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#1a1510" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0.3"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur6">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="blur12">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <linearGradient id="machineBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2520"/>
+      <stop offset="50%" stop-color="#1e1a15"/>
+      <stop offset="100%" stop-color="#151210"/>
+    </linearGradient>
+    <linearGradient id="machineTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#252018"/>
+      <stop offset="100%" stop-color="#1a1510"/>
+    </linearGradient>
+    <linearGradient id="glassReflect" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a3025" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#1a1510" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Floor -->
+  <ellipse cx="400" cy="420" rx="400" ry="80" fill="url(#floorGlow)"/>
+
+  <!-- Ceiling light glow -->
+  <ellipse cx="400" cy="0" rx="200" ry="120" fill="#1a1510" opacity="0.5" filter="url(#blur12)"/>
+
+  <!-- Floor tiles (subtle grid) -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="350" x2="800" y2="350"/>
+    <line x1="0" y1="380" x2="800" y2="380"/>
+    <line x1="0" y1="410" x2="800" y2="410"/>
+    <line x1="200" y1="320" x2="150" y2="450"/>
+    <line x1="400" y1="320" x2="400" y2="450"/>
+    <line x1="600" y1="320" x2="650" y2="450"/>
+  </g>
+
+  <!-- Wet floor reflection -->
+  <ellipse cx="400" cy="370" rx="180" ry="20" fill="#1a1815" opacity="0.3" filter="url(#blur6)"/>
+
+  <!-- Left background washing machines (dim, out of focus) -->
+  <g opacity="0.3" filter="url(#blur3)">
+    <rect x="80" y="120" width="100" height="250" rx="8" fill="#151210" stroke="#1e1a15" stroke-width="1"/>
+    <rect x="90" y="130" width="80" height="120" rx="4" fill="#0a0808"/>
+    <rect x="80" y="370" width="100" height="6" rx="2" fill="#1e1a15"/>
+  </g>
+
+  <g opacity="0.2" filter="url(#blur3)">
+    <rect x="190" y="120" width="100" height="250" rx="8" fill="#151210" stroke="#1e1a15" stroke-width="1"/>
+    <rect x="200" y="130" width="80" height="120" rx="4" fill="#0a0808"/>
+    <rect x="190" y="370" width="100" height="6" rx="2" fill="#1e1a15"/>
+  </g>
+
+  <!-- Right background washing machines -->
+  <g opacity="0.25" filter="url(#blur3)">
+    <rect x="540" y="120" width="100" height="250" rx="8" fill="#151210" stroke="#1e1a15" stroke-width="1"/>
+    <rect x="550" y="130" width="80" height="120" rx="4" fill="#0a0808"/>
+    <rect x="540" y="370" width="100" height="6" rx="2" fill="#1e1a15"/>
+  </g>
+
+  <g opacity="0.15" filter="url(#blur3)">
+    <rect x="650" y="120" width="100" height="250" rx="8" fill="#151210" stroke="#1e1a15" stroke-width="1"/>
+    <rect x="660" y="130" width="80" height="120" rx="4" fill="#0a0808"/>
+    <rect x="650" y="370" width="100" height="6" rx="2" fill="#1e1a15"/>
+  </g>
+
+  <!-- MAIN WASHING MACHINE (center) -->
+  <g>
+    <!-- Machine body -->
+    <rect x="280" y="90" width="240" height="290" rx="12" fill="url(#machineBody)" stroke="#2a2520" stroke-width="2"/>
+    
+    <!-- Machine top panel -->
+    <rect x="290" y="95" width="220" height="50" rx="6" fill="url(#machineTop)"/>
+    
+    <!-- Control panel lights (dim, eerie) -->
+    <circle cx="320" cy="120" r="4" fill="#3a2510" opacity="0.6"/>
+    <circle cx="340" cy="120" r="4" fill="#2a1a0a" opacity="0.4"/>
+    <circle cx="360" cy="120" r="4" fill="#3a2510" opacity="0.3"/>
+    <circle cx="380" cy="120" r="4" fill="#2a1a0a" opacity="0.5"/>
+    <circle cx="400" cy="120" r="4" fill="#3a2510" opacity="0.7"/>
+    <circle cx="420" cy="120" r="4" fill="#2a1a0a" opacity="0.3"/>
+    
+    <!-- Timer display -->
+    <rect x="430" y="108" width="50" height="24" rx="3" fill="#0a0808" stroke="#2a2520" stroke-width="1"/>
+    <text x="455" y="125" text-anchor="middle" font-family="monospace" font-size="14" fill="#4a3520" opacity="0.8">4:00</text>
+    
+    <!-- Glass door -->
+    <rect x="300" y="155" width="200" height="180" rx="10" fill="url(#windowGlow)" stroke="#1e1a15" stroke-width="2"/>
+    
+    <!-- Glass reflection -->
+    <path d="M 305 160 L 350 160 L 330 330 L 305 330 Z" fill="url(#glassReflect)" opacity="0.3"/>
+    
+    <!-- Shadow figure inside the glass (THE HORROR CORE) -->
+    <g opacity="0.6" filter="url(#blur3)">
+      <!-- Head -->
+      <ellipse cx="400" cy="200" rx="18" ry="22" fill="#0a0808"/>
+      <!-- Body -->
+      <path d="M 385 220 L 380 280 L 390 280 L 395 240 L 405 240 L 410 280 L 420 280 L 415 220 Z" fill="#0a0808"/>
+      <!-- Arms reaching slightly forward -->
+      <path d="M 385 225 L 365 245 L 368 250 L 387 230" fill="#0a0808" opacity="0.8"/>
+      <path d="M 415 225 L 435 245 L 432 250 L 413 230" fill="#0a0808" opacity="0.8"/>
+    </g>
+    
+    <!-- Handprints on glass (from inside) -->
+    <g opacity="0.25" filter="url(#blur1)">
+      <ellipse cx="370" cy="260" rx="8" ry="10" fill="#1a1510"/>
+      <ellipse cx="365" cy="250" rx="3" ry="5" fill="#1a1510"/>
+      <ellipse cx="360" cy="255" rx="3" ry="5" fill="#1a1510"/>
+      <ellipse cx="375" cy="253" rx="3" ry="5" fill="#1a1510"/>
+      <ellipse cx="380" cy="258" rx="3" ry="5" fill="#1a1510"/>
+    </g>
+    <g opacity="0.2" filter="url(#blur1)">
+      <ellipse cx="430" cy="270" rx="8" ry="10" fill="#1a1510"/>
+      <ellipse cx="435" cy="260" rx="3" ry="5" fill="#1a1510"/>
+      <ellipse cx="440" cy="265" rx="3" ry="5" fill="#1a1510"/>
+      <ellipse cx="425" cy="263" rx="3" ry="5" fill="#1a1510"/>
+      <ellipse cx="420" cy="268" rx="3" ry="5" fill="#1a1510"/>
+    </g>
+    
+    <!-- Water droplets on glass -->
+    <g opacity="0.15" fill="#3a3025">
+      <circle cx="320" cy="170" r="2"/>
+      <circle cx="340" cy="190" r="1.5"/>
+      <circle cx="360" cy="210" r="2"/>
+      <circle cx="380" cy="180" r="1"/>
+      <circle cx="400" cy="200" r="1.5"/>
+      <circle cx="420" cy="220" r="2"/>
+      <circle cx="440" cy="175" r="1"/>
+      <circle cx="450" cy="250" r="1.5"/>
+      <circle cx="460" cy="280" r="2"/>
+      <circle cx="470" cy="300" r="1"/>
+      <circle cx="310" cy="310" r="1.5"/>
+      <circle cx="330" cy="320" r="1"/>
+      <circle cx="350" cy="300" r="2"/>
+      <circle cx="480" cy="260" r="1.5"/>
+    </g>
+    
+    <!-- Machine bottom -->
+    <rect x="280" y="375" width="240" height="10" rx="4" fill="#1e1a15"/>
+    
+    <!-- Eerie glow from inside the machine -->
+    <ellipse cx="400" cy="245" rx="60" ry="70" fill="#1a1008" opacity="0.15" filter="url(#blur6)"/>
+    
+    <!-- Timer countdown glow -->
+    <rect x="430" y="108" width="50" height="24" rx="3" fill="none" stroke="#4a3520" stroke-width="0.5" opacity="0.4"/>
+  </g>
+
+  <!-- Floor footprints (wet, leading away from machine) -->
+  <g opacity="0.12">
+    <ellipse cx="530" cy="390" rx="8" ry="4" fill="#1a1510"/>
+    <ellipse cx="545" cy="400" rx="8" ry="4" fill="#1a1510"/>
+    <ellipse cx="560" cy="410" rx="8" ry="4" fill="#1a1510"/>
+    <ellipse cx="575" cy="420" rx="8" ry="4" fill="#1a1510"/>
+    <ellipse cx="590" cy="430" rx="8" ry="4" fill="#1a1510"/>
+    <ellipse cx="605" cy="440" rx="8" ry="4" fill="#1a1510"/>
+  </g>
+
+  <!-- Ambient dim light from ceiling (fluorescent tube effect) -->
+  <rect x="350" y="0" width="100" height="3" rx="1" fill="#2a2520" opacity="0.4"/>
+  <rect x="360" y="3" width="80" height="5" rx="2" fill="#3a3025" opacity="0.2"/>
+  <ellipse cx="400" cy="15" rx="60" ry="30" fill="#1a1510" opacity="0.15" filter="url(#blur6)"/>
+
+  <!-- Overall darkness overlay -->
+  <rect width="800" height="450" fill="#0a0808" opacity="0.15"/>
+
+  <!-- Vignette -->
+  <rect width="800" height="450" fill="none" stroke="#0a0808" stroke-width="80" opacity="0.5"/>
+</svg>
