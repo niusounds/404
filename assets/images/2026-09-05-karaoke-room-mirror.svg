@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Room perspective - floor -->
+  <polygon points="0,300 800,300 800,450 0,450" fill="#0d0a0a"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Ceiling -->
+  <polygon points="0,0 800,0 800,80 0,80" fill="#080606"/>
+  <line x1="0" y1="80" x2="800" y2="80" stroke="#1a1515" stroke-width="1"/>
+  
+  <!-- Back wall -->
+  <rect x="100" y="80" width="600" height="220" fill="#0e0b0b"/>
+  
+  <!-- Large mirror on back wall -->
+  <rect x="250" y="100" width="300" height="180" fill="#15121a" stroke="#2a2530" stroke-width="2"/>
+  
+  <!-- Mirror reflection glow -->
+  <rect x="252" y="102" width="296" height="176" fill="none" stroke="#1a1525" stroke-width="1" opacity="0.5"/>
+  
+  <!-- LED neon lights - scattered dots for color -->
+  <circle cx="150" cy="120" r="3" fill="#ff2266" opacity="0.6"/>
+  <circle cx="180" cy="140" r="2" fill="#2266ff" opacity="0.5"/>
+  <circle cx="200" cy="110" r="4" fill="#ff2266" opacity="0.4"/>
+  <circle cx="620" cy="130" r="3" fill="#6622ff" opacity="0.5"/>
+  <circle cx="650" cy="150" r="2" fill="#ff4466" opacity="0.4"/>
+  <circle cx="680" cy="120" r="3" fill="#2266ff" opacity="0.3"/>
+  
+  <!-- Karaoke screen on left wall -->
+  <rect x="30" y="130" width="80" height="50" fill="#0a0a12" stroke="#1a1a2a" stroke-width="1"/>
+  <text x="70" y="160" text-anchor="middle" fill="#333344" font-size="8" font-family="sans-serif">♪</text>
+  
+  <!-- Table in center -->
+  <rect x="320" y="260" width="160" height="8" fill="#1a1510" rx="2"/>
+  <rect x="340" y="268" width="6" height="30" fill="#1a1510"/>
+  <rect x="454" y="268" width="6" height="30" fill="#1a1510"/>
+  
+  <!-- Microphone on table -->
+  <rect x="380" y="245" width="3" height="15" fill="#2a2a2a" rx="1"/>
+  <circle cx="381" cy="243" r="4" fill="#333333"/>
+  
+  <!-- Drink glass on table -->
+  <rect x="420" y="250" width="12" height="10" fill="#1a1a2a" opacity="0.6" rx="1"/>
+  
+  <!-- Person silhouette facing mirror (in front of mirror) -->
+  <!-- This is the REAL person - standing, looking at mirror -->
+  <ellipse cx="400" cy="370" rx="18" ry="18" fill="#1a1515"/>
+  <rect x="388" y="385" width="24" height="40" fill="#1a1515" rx="3"/>
+  <rect x="380" y="420" width="10" height="25" fill="#1a1515" rx="2"/>
+  <rect x="410" y="420" width="10" height="25" fill="#1a1515" rx="2"/>
+  
+  <!-- Arms slightly raised (holding mic) -->
+  <path d="M388,395 L370,380" stroke="#1a1515" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M412,395 L430,380" stroke="#1a1515" stroke-width="6" fill="none" stroke-linecap="round"/>
+  
+  <!-- MIRROR REFLECTION - the horror element -->
+  <!-- The reflection shows a person but slightly offset/different -->
+  <!-- Reflection head - slightly shifted position -->
+  <ellipse cx="400" cy="140" rx="16" ry="16" fill="#1e1a22"/>
+  
+  <!-- Reflection body -->
+  <rect x="388" y="155" width="24" height="35" fill="#1e1a22" rx="3"/>
+  
+  <!-- Reflection legs -->
+  <rect x="382" y="188" width="9" height="20" fill="#1e1a22" rx="2"/>
+  <rect x="409" y="188" width="9" height="20" fill="#1e1a22" rx="2"/>
+  
+  <!-- Reflection arms - DIFFERENT pose (smiling, arms down) -->
+  <path d="M388,165 L370,180" stroke="#1e1a22" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M412,165 L430,180" stroke="#1e1a22" stroke-width="5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Reflection smile - subtle but wrong -->
+  <path d="M393,145 Q400,150 407,145" stroke="#2a2535" stroke-width="1" fill="none"/>
+  
+  <!-- Subtle eerie glow around mirror -->
+  <rect x="248" y="98" width="304" height="184" fill="none" stroke="#1a1530" stroke-width="1" opacity="0.3" rx="2"/>
+  
+  <!-- Door on right side -->
+  <rect x="680" y="100" width="80" height="200" fill="#0c0a0a" stroke="#1a1515" stroke-width="1"/>
+  <circle cx="740" cy="200" r="3" fill="#2a2525"/>
+  
+  <!-- Floor reflection from mirror -->
+  <rect x="250" y="300" width="300" height="150" fill="#0d0b10" opacity="0.3"/>
+  
+  <!-- Subtle fog/mist effect at bottom -->
+  <ellipse cx="400" cy="430" rx="350" ry="20" fill="#0a0808" opacity="0.5"/>
+  
+  <!-- Small dark vignette corners -->
+  <rect x="0" y="0" width="800" height="450" fill="none" stroke="none"/>
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.4"/>
+  
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="60%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
