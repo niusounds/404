@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#120e0e"/>
+    </linearGradient>
+    <linearGradient id="screen-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a5c" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0d1f33" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="blur-sm">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur-lg">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Train window strips (top) -->
+  <g opacity="0.15">
+    <rect x="50" y="20" width="120" height="100" rx="4" fill="#1a1a2e"/>
+    <rect x="200" y="20" width="120" height="100" rx="4" fill="#1a1a2e"/>
+    <rect x="350" y="20" width="120" height="100" rx="4" fill="#1a1a2e"/>
+    <rect x="500" y="20" width="120" height="100" rx="4" fill="#1a1a2e"/>
+    <rect x="650" y="20" width="120" height="100" rx="4" fill="#1a1a2e"/>
+  </g>
+
+  <!-- Distant city lights through windows -->
+  <g opacity="0.08">
+    <circle cx="110" cy="70" r="3" fill="#f0c040"/>
+    <circle cx="105" cy="90" r="2" fill="#f0c040"/>
+    <circle cx="260" cy="60" r="4" fill="#f0c040"/>
+    <circle cx="270" cy="80" r="2" fill="#f0c040"/>
+    <circle cx="410" cy="75" r="3" fill="#f0c040"/>
+    <circle cx="560" cy="65" r="2" fill="#f0c040"/>
+    <circle cx="710" cy="85" r="3" fill="#f0c040"/>
+  </g>
+
+  <!-- Train seat back silhouette (center-left) -->
+  <path d="M120,200 L120,380 L280,380 L280,200 Q280,180 260,170 L160,160 Q130,155 120,170 Z" fill="#0e0b0b" opacity="0.8"/>
+
+  <!-- Person silhouette sitting (center) -->
+  <!-- Head -->
+  <ellipse cx="310" cy="175" rx="28" ry="32" fill="#0e0b0b" opacity="0.9"/>
+  <!-- Body -->
+  <path d="M280,200 Q275,260 270,380 L360,380 Q355,260 340,200 Q330,185 310,180 Q290,185 280,200Z" fill="#0e0b0b" opacity="0.9"/>
+  <!-- Arm holding phone -->
+  <path d="M320,230 Q350,250 370,260 Q375,265 370,270 L365,275 Q360,270 355,265 L340,250 Q330,240 320,235Z" fill="#0e0b0b" opacity="0.85"/>
+
+  <!-- Phone -->
+  <rect x="365" y="230" width="50" height="85" rx="6" fill="#111" stroke="#1a1a1a" stroke-width="1"/>
+  <!-- Screen glow -->
+  <rect x="369" y="234" width="42" height="77" rx="4" fill="url(#screen-glow)" opacity="0.6"/>
+  
+  <!-- Crack on screen -->
+  <line x1="375" y1="240" x2="395" y2="260" stroke="#2a4a6a" stroke-width="0.8" opacity="0.5"/>
+  <line x1="395" y1="260" x2="400" y2="280" stroke="#2a4a6a" stroke-width="0.6" opacity="0.4"/>
+  <line x1="395" y1="260" x2="385" y2="290" stroke="#2a4a6a" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Figure on phone screen (behind the person) -->
+  <g filter="url(#blur-sm)" opacity="0.35">
+    <!-- Ghostly figure on screen -->
+    <ellipse cx="400" cy="258" rx="10" ry="12" fill="#3a6a9a"/>
+    <path d="M390,270 Q388,285 386,300 L414,300 Q412,285 410,270 Q405,265 400,263 Q395,265 390,270Z" fill="#3a6a9a"/>
+    <!-- Eyes on the figure -->
+    <circle cx="396" cy="256" r="1.2" fill="#6ab0e0" opacity="0.8"/>
+    <circle cx="404" cy="256" r="1.2" fill="#6ab0e0" opacity="0.8"/>
+  </g>
+
+  <!-- Phone screen light casting on person's face (subtle) -->
+  <ellipse cx="340" cy="190" rx="25" ry="30" fill="#1a3a5c" opacity="0.06"/>
+
+  <!-- Another seat (right side) -->
+  <path d="M520,200 L520,380 L680,380 L680,200 Q680,180 660,170 L560,160 Q530,155 520,170Z" fill="#0e0b0b" opacity="0.5"/>
+
+  <!-- Floor -->
+  <rect x="0" y="380" width="800" height="70" fill="#080606"/>
+  <line x1="0" y1="385" x2="800" y2="385" stroke="#1a1515" stroke-width="1"/>
+
+  <!-- Overhead grab rail -->
+  <line x1="80" y1="140" x2="720" y2="140" stroke="#1a1717" stroke-width="3" opacity="0.5"/>
+  <line x1="80" y1="145" x2="720" y2="145" stroke="#1a1717" stroke-width="2" opacity="0.3"/>
+
+  <!-- Hanging straps -->
+  <g opacity="0.2">
+    <line x1="200" y1="143" x2="195" y2="175" stroke="#3a3535" stroke-width="2"/>
+    <rect x="188" y="175" width="14" height="20" rx="2" fill="#3a3535"/>
+    <line x1="400" y1="143" x2="405" y2="175" stroke="#3a3535" stroke-width="2"/>
+    <rect x="398" y="175" width="14" height="20" rx="2" fill="#3a3535"/>
+    <line x1="600" y1="143" x2="595" y2="175" stroke="#3a3535" stroke-width="2"/>
+    <rect x="588" y="175" width="14" height="20" rx="2" fill="#3a3535"/>
+  </g>
+
+  <!-- Vignette / darkness overlay -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.4"/>
+  <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+    <stop offset="50%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#000000"/>
+  </radialGradient>
+
+  <!-- Subtle atmosphere: cold light from window -->
+  <ellipse cx="400" cy="220" rx="200" ry="180" fill="#0a1525" opacity="0.03"/>
+</svg>
