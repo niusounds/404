@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="glo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a1a1a"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Ambient glow from photo booth -->
+  <ellipse cx="400" cy="225" rx="180" ry="160" fill="url(#glo)" opacity="0.5"/>
+
+  <!-- Photo booth frame - outer -->
+  <rect x="280" y="60" width="240" height="330" rx="8" fill="#1a1515" stroke="#2a1a1a" stroke-width="2"/>
+
+  <!-- Photo booth interior -->
+  <rect x="290" y="70" width="220" height="310" rx="4" fill="#151010"/>
+
+  <!-- Monitor glow inside booth -->
+  <rect x="320" y="130" width="160" height="100" rx="3" fill="#0a1a0a" opacity="0.6"/>
+  <rect x="322" y="132" width="156" height="96" rx="2" fill="#0d1f0d" opacity="0.4"/>
+
+  <!-- Monitor screen glow -->
+  <rect x="330" y="140" width="140" height="80" rx="2" fill="#1a3a1a" opacity="0.3"/>
+
+  <!-- Person silhouette in booth - facing forward -->
+  <ellipse cx="400" cy="210" rx="25" ry="30" fill="#1a1515"/>
+  <rect x="380" y="230" width="40" height="90" rx="10" fill="#1a1515"/>
+  <!-- Arms -->
+  <rect x="360" y="240" width="20" height="60" rx="8" fill="#1a1515" transform="rotate(15, 370, 240)"/>
+  <rect x="420" y="240" width="20" height="60" rx="8" fill="#1a1515" transform="rotate(-15, 430, 240)"/>
+
+  <!-- Shadow figure behind person - left side -->
+  <g filter="url(#blur1)" opacity="0.7">
+    <ellipse cx="345" cy="205" rx="18" ry="25" fill="#0d0a0a"/>
+    <rect x="330" y="220" width="30" height="80" rx="12" fill="#0d0a0a"/>
+    <!-- Arm reaching toward person -->
+    <rect x="355" y="235" width="25" height="8" rx="4" fill="#0d0a0a" transform="rotate(-5, 355, 239)"/>
+  </g>
+
+  <!-- Shadow figure behind person - right side -->
+  <g filter="url(#blur2)" opacity="0.4">
+    <ellipse cx="455" cy="215" rx="15" ry="22" fill="#0a0808"/>
+    <rect x="443" y="230" width="24" height="70" rx="10" fill="#0a0808"/>
+  </g>
+
+  <!-- Red LED indicator on booth -->
+  <circle cx="510" cy="380" r="4" fill="#4a0a0a"/>
+  <circle cx="510" cy="380" r="2" fill="#8a1a1a" opacity="0.8"/>
+
+  <!-- Floor reflection -->
+  <ellipse cx="400" cy="400" rx="120" ry="15" fill="#1a1010" opacity="0.3"/>
+
+  <!-- Subtle station background elements -->
+  <rect x="50" y="100" width="180" height="250" rx="2" fill="#0e0a0a" opacity="0.4"/>
+  <rect x="570" y="100" width="180" height="250" rx="2" fill="#0e0a0a" opacity="0.4"/>
+
+  <!-- Distant station lights -->
+  <circle cx="120" cy="150" r="3" fill="#2a2a1a" opacity="0.3"/>
+  <circle cx="160" cy="200" r="2" fill="#2a2a1a" opacity="0.2"/>
+  <circle cx="680" cy="160" r="3" fill="#2a2a1a" opacity="0.3"/>
+  <circle cx="720" cy="210" r="2" fill="#2a2a1a" opacity="0.2"/>
+
+  <!-- Photo strip emerging from slot -->
+  <rect x="370" y="360" width="60" height="20" fill="#e8e0d0" opacity="0.15"/>
+  <rect x="375" y="380" width="50" height="15" fill="#e8e0d0" opacity="0.1"/>
+  <rect x="380" y="395" width="40" height="12" fill="#e8e0d0" opacity="0.07"/>
+
+  <!-- Vignette overlay -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.4"/>
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
