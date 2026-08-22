@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="lockerGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1818"/>
+      <stop offset="100%" stop-color="#0f0d0d"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#060505"/>
+    </linearGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Wall -->
+  <rect x="0" y="0" width="800" height="320" fill="#0e0c0c"/>
+
+  <!-- Floor -->
+  <rect x="0" y="320" width="800" height="130" fill="url(#floorGrad)"/>
+
+  <!-- Floor line -->
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#151212" stroke-width="1"/>
+
+  <!-- Locker row - perspective -->
+  <!-- Locker 1 -->
+  <rect x="60" y="60" width="120" height="260" fill="url(#lockerGrad)" stroke="#1a1717" stroke-width="1"/>
+  <rect x="65" y="65" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <text x="120" y="90" text-anchor="middle" fill="#2a2525" font-size="11" font-family="monospace">F-11</text>
+  <rect x="65" y="110" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="65" y="155" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <text x="120" y="180" text-anchor="middle" fill="#2a2525" font-size="11" font-family="monospace">F-12</text>
+  <rect x="65" y="200" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="65" y="245" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <text x="120" y="270" text-anchor="middle" fill="#2a2525" font-size="11" font-family="monospace">F-13</text>
+
+  <!-- Locker 2 (F-14 - the one from the story) - slightly ajar -->
+  <rect x="185" y="60" width="120" height="260" fill="url(#lockerGrad)" stroke="#1a1717" stroke-width="1"/>
+  <text x="245" y="85" text-anchor="middle" fill="#2a2525" font-size="11" font-family="monospace">F-14</text>
+  
+  <!-- Locker door slightly open -->
+  <rect x="185" y="155" width="115" height="40" fill="#0d0b0b" stroke="#1e1b1b" stroke-width="0.5"/>
+  <!-- Gap showing inside -->
+  <rect x="298" y="155" width="7" height="40" fill="#1a1410" opacity="0.6"/>
+  <!-- Light leaking from inside -->
+  <rect x="300" y="155" width="5" height="40" fill="#ff6a3a" opacity="0.08" filter="url(#blur1)"/>
+  
+  <!-- Locker door slightly ajar bottom -->
+  <rect x="185" y="200" width="115" height="40" fill="#0d0b0b" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="298" y="200" width="7" height="40" fill="#1a1410" opacity="0.4"/>
+  <rect x="300" y="200" width="5" height="40" fill="#ff6a3a" opacity="0.05" filter="url(#blur1)"/>
+
+  <!-- Locker 3 -->
+  <rect x="310" y="60" width="120" height="260" fill="url(#lockerGrad)" stroke="#1a1717" stroke-width="1"/>
+  <text x="370" y="90" text-anchor="middle" fill="#2a2525" font-size="11" font-family="monospace">F-15</text>
+  <rect x="315" y="110" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="315" y="155" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <text x="370" y="180" text-anchor="middle" fill="#2a2525" font-size="11" font-family="monospace">F-16</text>
+  <rect x="315" y="200" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="315" y="245" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+
+  <!-- Locker 4 -->
+  <rect x="435" y="60" width="120" height="260" fill="url(#lockerGrad)" stroke="#1a1717" stroke-width="1"/>
+  <text x="495" y="90" text-anchor="middle" fill="#2a2525" font-size="11" font-family="monospace">F-17</text>
+  <rect x="440" y="110" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="440" y="155" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <text x="495" y="180" text-anchor="middle" fill="#2a2525" font-size="11" font-family="monospace">F-18</text>
+  <rect x="440" y="200" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="440" y="245" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+
+  <!-- Locker 5 -->
+  <rect x="560" y="60" width="120" height="260" fill="url(#lockerGrad)" stroke="#1a1717" stroke-width="1"/>
+  <text x="620" y="90" text-anchor="middle" fill="#2a2525" font-size="11" font-family="monospace">F-19</text>
+  <rect x="565" y="110" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="565" y="155" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <text x="620" y="180" text-anchor="middle" fill="#2a2525" font-size="11" font-family="monospace">F-20</text>
+  <rect x="565" y="200" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="565" y="245" width="110" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+
+  <!-- Locker 6 (partial, right edge) -->
+  <rect x="685" y="60" width="100" height="260" fill="url(#lockerGrad)" stroke="#1a1717" stroke-width="1"/>
+  <rect x="690" y="110" width="90" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="690" y="155" width="90" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="690" y="200" width="90" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+  <rect x="690" y="245" width="90" height="40" fill="#151313" stroke="#1e1b1b" stroke-width="0.5"/>
+
+  <!-- Faint light from F-14 spreading on floor -->
+  <ellipse cx="340" cy="340" rx="80" ry="15" fill="#ff6a3a" opacity="0.03" filter="url(#blur2)"/>
+
+  <!-- Distant station corridor light -->
+  <ellipse cx="720" cy="180" rx="60" ry="100" fill="#1a1510" opacity="0.1" filter="url(#blur2)"/>
+
+  <!-- Subtle dark silhouette in the gap of F-14 -->
+  <path d="M302,160 Q305,165 304,175 Q303,185 306,195 L306,195 Q303,185 304,175 Q305,165 302,160Z" fill="#0a0808" opacity="0.7"/>
+
+  <!-- Very faint hand outline in the gap -->
+  <path d="M303,170 L308,172 L307,174 L303,173Z" fill="#1a1410" opacity="0.3"/>
+  <path d="M304,175 L309,177 L308,179 L304,177Z" fill="#1a1410" opacity="0.25"/>
+  <path d="M303,180 L308,182 L307,184 L303,182Z" fill="#1a1410" opacity="0.2"/>
+
+  <!-- Ambient darkness overlay -->
+  <rect x="0" y="0" width="800" height="450" fill="#000" opacity="0.15"/>
+
+  <!-- Vignette effect - darker corners -->
+  <rect x="0" y="0" width="800" height="450" fill="none" stroke="#000" stroke-width="40" opacity="0.4"/>
+</svg>
