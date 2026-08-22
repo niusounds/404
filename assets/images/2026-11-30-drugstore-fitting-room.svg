@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background: dark fitting room -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="320" width="800" height="130" fill="#111010"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1818" stroke-width="1"/>
+  
+  <!-- Left wall -->
+  <rect x="0" y="0" width="120" height="320" fill="#0e0c0c"/>
+  <line x1="120" y1="0" x2="120" y2="320" stroke="#1a1818" stroke-width="0.5"/>
+  
+  <!-- Right wall -->
+  <rect x="680" y="0" width="120" height="320" fill="#0e0c0c"/>
+  <line x1="680" y1="0" x2="680" y2="320" stroke="#1a1818" stroke-width="0.5"/>
+  
+  <!-- Back wall -->
+  <rect x="120" y="0" width="560" height="320" fill="#0d0b0b"/>
+  
+  <!-- Mirror frame -->
+  <rect x="260" y="40" width="280" height="240" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="3" rx="2"/>
+  
+  <!-- Mirror surface -->
+  <rect x="265" y="45" width="270" height="230" fill="#1c1c20"/>
+  
+  <!-- Mirror reflection gradient (very subtle) -->
+  <defs>
+    <radialGradient id="mirrorGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#252530" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1a1a20" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+    <filter id="blurSmall">
+      <feGaussianBlur stdDeviation="0.3"/>
+    </filter>
+  </defs>
+  <rect x="265" y="45" width="270" height="230" fill="url(#mirrorGlow)"/>
+  
+  <!-- Water droplets on mirror -->
+  <g filter="url(#blurSmall)" fill="#3a3a45" opacity="0.6">
+    <circle cx="320" cy="100" r="3"/>
+    <circle cx="340" cy="110" r="2.5"/>
+    <circle cx="310" cy="130" r="2"/>
+    <circle cx="355" cy="145" r="3.5"/>
+    <circle cx="330" cy="160" r="2"/>
+    <circle cx="370" cy="120" r="1.5"/>
+    <circle cx="300" cy="170" r="2.5"/>
+    <circle cx="380" cy="155" r="2"/>
+    <circle cx="345" cy="180" r="3"/>
+    <circle cx="315" cy="195" r="1.8"/>
+    <circle cx="360" cy="190" r="2.2"/>
+    <circle cx="290" cy="210" r="2"/>
+    <circle cx="375" cy="200" r="1.5"/>
+    <circle cx="335" cy="220" r="2.8"/>
+    <circle cx="350" cy="235" r="2"/>
+    <circle cx="305" cy="240" r="1.5"/>
+  </g>
+  
+  <!-- Finger swipe marks on mirror -->
+  <g fill="none" stroke="#3a3a45" stroke-width="1.2" opacity="0.4" filter="url(#blur)">
+    <path d="M 310 90 Q 340 85 370 95 Q 390 100 400 92"/>
+    <path d="M 305 120 Q 335 115 365 125 Q 385 130 395 122"/>
+    <path d="M 300 150 Q 330 145 360 155 Q 380 160 390 152"/>
+    <path d="M 308 180 Q 338 175 368 185 Q 388 190 398 182"/>
+    <path d="M 315 210 Q 345 205 375 215 Q 395 220 405 212"/>
+    <path d="M 320 240 Q 350 235 380 245"/>
+  </g>
+  
+  <!-- Faint reflection of a figure in the mirror -->
+  <g opacity="0.08">
+    <ellipse cx="400" cy="140" rx="18" ry="22" fill="#2a2a30"/>
+    <rect x="382" y="162" width="36" height="60" rx="5" fill="#2a2a30"/>
+    <rect x="375" y="222" width="14" height="40" rx="3" fill="#2a2a30"/>
+    <rect x="411" y="222" width="14" height="40" rx="3" fill="#2a2a30"/>
+  </g>
+  
+  <!-- Hangers on hooks -->
+  <g fill="none" stroke="#1e1e1e" stroke-width="1.5">
+    <!-- Hook 1 -->
+    <circle cx="290" cy="35" r="5"/>
+    <line x1="290" y1="30" x2="290" y2="18"/>
+    <path d="M 282 35 L 290 28 L 298 35"/>
+    <!-- Hook 2 -->
+    <circle cx="400" cy="35" r="5"/>
+    <line x1="400" y1="30" x2="400" y2="18"/>
+    <path d="M 392 35 L 400 28 L 408 35"/>
+    <!-- Hook 3 -->
+    <circle cx="510" cy="35" r="5"/>
+    <line x1="510" y1="30" x2="510" y2="18"/>
+    <path d="M 502 35 L 510 28 L 518 35"/>
+  </g>
+  
+  <!-- Cardboard boxes on shelf -->
+  <rect x="580" y="250" width="60" height="40" fill="#1a1816" stroke="#222020" stroke-width="0.5" rx="1"/>
+  <line x1="580" y1="265" x2="640" y2="265" stroke="#222020" stroke-width="0.3"/>
+  <rect x="585" y="210" width="55" height="40" fill="#1c1a18" stroke="#222020" stroke-width="0.5" rx="1"/>
+  
+  <!-- Dim ceiling light -->
+  <ellipse cx="400" cy="10" rx="40" ry="5" fill="#1a1a15"/>
+  <rect x="398" y="0" width="4" height="10" fill="#1a1a15"/>
+  <ellipse cx="400" cy="15" rx="60" ry="8" fill="#1a1a15" opacity="0.5"/>
+  
+  <!-- Subtle eerie glow from mirror -->
+  <rect x="265" y="45" width="270" height="230" fill="#1a1a25" opacity="0.15"/>
+  
+  <!-- Very faint "reflection" of the viewer in the mirror - almost imperceptible -->
+  <g opacity="0.04">
+    <ellipse cx="400" cy="145" rx="12" ry="15" fill="#3a3a40"/>
+    <rect x="388" y="160" width="24" height="50" rx="4" fill="#3a3a40"/>
+  </g>
+  
+  <!-- Floor shadow from mirror -->
+  <rect x="260" y="320" width="280" height="10" fill="#0d0b0b" opacity="0.5"/>
+  
+  <!-- Tiny detail: a single water droplet running down the mirror -->
+  <g fill="#3a3a45" opacity="0.5">
+    <ellipse cx="345" cy="260" rx="1.5" ry="4"/>
+    <ellipse cx="345" cy="270" rx="1" ry="6"/>
+    <ellipse cx="345" cy="282" rx="0.8" ry="8"/>
+  </g>
+</svg>
