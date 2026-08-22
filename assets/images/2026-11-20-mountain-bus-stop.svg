@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background gradient: dark night sky fading to misty ground -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050308"/>
+      <stop offset="60%" stop-color="#0a0810"/>
+      <stop offset="100%" stop-color="#12101a"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1520"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </linearGradient>
+    <radialGradient id="lantern" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffcc66" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#ff9933" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mist" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a2535" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="450" fill="url(#sky)"/>
+
+  <!-- Stars (very faint) -->
+  <circle cx="120" cy="40" r="0.8" fill="#ffffff" opacity="0.15"/>
+  <circle cx="340" cy="25" r="0.6" fill="#ffffff" opacity="0.1"/>
+  <circle cx="580" cy="55" r="1" fill="#ffffff" opacity="0.12"/>
+  <circle cx="710" cy="30" r="0.7" fill="#ffffff" opacity="0.08"/>
+  <circle cx="450" cy="70" r="0.5" fill="#ffffff" opacity="0.1"/>
+  <circle cx="250" cy="60" r="0.6" fill="#ffffff" opacity="0.09"/>
+
+  <!-- Moon (subtle, top right) -->
+  <circle cx="680" cy="60" r="25" fill="#e8e0d0" opacity="0.06"/>
+  <circle cx="680" cy="60" r="20" fill="#f0e8d8" opacity="0.04"/>
+
+  <!-- Distant mountains (silhouette) -->
+  <path d="M0,280 Q80,220 160,250 Q220,210 280,240 Q340,200 400,230 Q460,190 520,220 Q580,180 640,210 Q700,190 760,220 L800,240 L800,300 L0,300 Z" fill="#0d0a12" opacity="0.8"/>
+  <path d="M0,300 Q100,260 200,280 Q300,250 400,270 Q500,240 600,265 Q700,245 800,270 L800,320 L0,320 Z" fill="#110e18" opacity="0.7"/>
+
+  <!-- Ground -->
+  <rect y="300" width="800" height="150" fill="url(#ground)"/>
+
+  <!-- Mist layers -->
+  <ellipse cx="400" cy="340" rx="350" ry="40" fill="url(#mist)" opacity="0.3"/>
+  <ellipse cx="300" cy="360" rx="250" ry="30" fill="url(#mist)" opacity="0.2"/>
+  <ellipse cx="550" cy="350" rx="200" ry="25" fill="url(#mist)" opacity="0.15"/>
+
+  <!-- Road/path going into the mist -->
+  <path d="M350,450 Q370,380 400,340 Q420,320 440,310 L460,310 Q440,320 420,340 Q390,380 370,450 Z" fill="#15121a" opacity="0.6"/>
+
+  <!-- Bus stop pole -->
+  <rect x="398" y="200" width="4" height="140" fill="#1a1525" stroke="#1e1a2a" stroke-width="0.5"/>
+
+  <!-- Bus stop sign (small, weathered) -->
+  <rect x="370" y="210" width="60" height="35" rx="2" fill="#1e1a2a" stroke="#2a2535" stroke-width="0.5" opacity="0.7"/>
+  <text x="400" y="232" text-anchor="middle" fill="#3a3545" font-size="10" font-family="sans-serif">バス停</text>
+
+  <!-- Ghostly figure (silhouette) under the bus stop -->
+  <!-- Head -->
+  <ellipse cx="400" cy="280" rx="10" ry="12" fill="#0e0b14" opacity="0.85"/>
+  <!-- Body -->
+  <path d="M388,292 Q385,320 382,340 L418,340 Q415,320 412,292 Q405,288 400,288 Q395,288 388,292 Z" fill="#0e0b14" opacity="0.85"/>
+  <!-- Faint outline glow on figure -->
+  <path d="M388,292 Q385,320 382,340 L418,340 Q415,320 412,292 Q405,288 400,288 Q395,288 388,292 Z" fill="none" stroke="#1e1a2a" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Umbrella (tilted) -->
+  <path d="M375,285 Q380,260 400,255 Q420,260 425,285" fill="none" stroke="#0e0b14" stroke-width="1.5" opacity="0.8"/>
+  <line x1="400" y1="255" x2="398" y2="290" stroke="#0e0b14" stroke-width="1" opacity="0.7"/>
+
+  <!-- Mysterious lantern light above the figure -->
+  <circle cx="400" cy="240" r="60" fill="url(#lantern)" filter="url(#softGlow)" opacity="0.5"/>
+  <circle cx="400" cy="240" r="4" fill="#ffcc66" opacity="0.4" filter="url(#glow)"/>
+
+  <!-- Light rays from lantern (subtle) -->
+  <line x1="400" y1="240" x2="400" y2="200" stroke="#ffcc66" stroke-width="0.3" opacity="0.1"/>
+  <line x1="400" y1="240" x2="370" y2="210" stroke="#ffcc66" stroke-width="0.3" opacity="0.07"/>
+  <line x1="400" y1="240" x2="430" y2="210" stroke="#ffcc66" stroke-width="0.3" opacity="0.07"/>
+
+  <!-- Drip marks on the ground (from umbrella) -->
+  <circle cx="395" cy="342" r="1" fill="#1a1525" opacity="0.3"/>
+  <circle cx="402" cy="345" r="0.8" fill="#1a1525" opacity="0.25"/>
+  <circle cx="408" cy="341" r="1.2" fill="#1a1525" opacity="0.2"/>
+  <circle cx="390" cy="348" r="0.7" fill="#1a1525" opacity="0.2"/>
+  <circle cx="415" cy="346" r="0.9" fill="#1a1525" opacity="0.15"/>
+
+  <!-- Drip trail leading toward the house direction (right) -->
+  <circle cx="430" cy="340" r="0.8" fill="#1a1525" opacity="0.12"/>
+  <circle cx="445" cy="338" r="0.7" fill="#1a1525" opacity="0.1"/>
+  <circle cx="460" cy="336" r="0.6" fill="#1a1525" opacity="0.08"/>
+  <circle cx="475" cy="335" r="0.5" fill="#1a1525" opacity="0.06"/>
+  <circle cx="490" cy="334" r="0.5" fill="#1a1525" opacity="0.05"/>
+
+  <!-- Trees on the left (silhouette) -->
+  <path d="M30,300 L35,200 L40,250 L45,180 L50,230 L55,200 L60,260 L65,300 Z" fill="#0d0a12" opacity="0.6"/>
+  <path d="M80,300 L85,230 L90,270 L95,210 L100,250 L105,220 L110,280 L115,300 Z" fill="#0d0a12" opacity="0.5"/>
+
+  <!-- Trees on the right (silhouette) -->
+  <path d="M680,300 L685,220 L690,260 L695,190 L700,240 L705,210 L710,270 L715,300 Z" fill="#0d0a12" opacity="0.6"/>
+  <path d="M730,300 L733,240 L736,275 L740,210 L744,255 L748,230 L752,285 L755,300 Z" fill="#0d0a12" opacity="0.5"/>
+
+  <!-- Fog at the bottom edges -->
+  <rect x="0" y="380" width="800" height="70" fill="#0a0808" opacity="0.4"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#sky)" opacity="0.3" style="mix-blend-mode: multiply;"/>
+</svg>
