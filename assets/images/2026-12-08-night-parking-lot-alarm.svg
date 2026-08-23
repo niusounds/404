@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0%" stop-color="#1a1515" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.9"/>
+    </radialGradient>
+    <radialGradient id="carLight" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ff6a00" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ff6a00" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Parking lot floor lines -->
+  <g stroke="#1a1616" stroke-width="1" opacity="0.4">
+    <line x1="100" y1="350" x2="700" y2="350"/>
+    <line x1="100" y1="380" x2="700" y2="380"/>
+    <line x1="100" y1="410" x2="700" y2="410"/>
+    <!-- vertical lines -->
+    <line x1="200" y1="300" x2="200" y2="450"/>
+    <line x1="350" y1="300" x2="350" y2="450"/>
+    <line x1="500" y1="300" x2="500" y2="450"/>
+    <line x1="650" y1="300" x2="650" y2="450"/>
+  </g>
+
+  <!-- Ceiling pipes -->
+  <g stroke="#151212" stroke-width="3" opacity="0.5">
+    <line x1="0" y1="60" x2="800" y2="60"/>
+    <line x1="0" y1="80" x2="800" y2="80"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+  </g>
+
+  <!-- Fluorescent lights (some flickering) -->
+  <g opacity="0.6">
+    <rect x="120" y="55" width="80" height="4" fill="#3a3535" rx="1"/>
+    <rect x="350" y="55" width="80" height="4" fill="#4a4040" rx="1"/>
+    <rect x="580" y="55" width="80" height="4" fill="#2a2525" rx="1"/>
+  </g>
+
+  <!-- Car silhouette (center-right, facing viewer) -->
+  <g transform="translate(480, 200)">
+    <!-- Car body -->
+    <path d="M30,120 L10,160 L10,220 L30,240 L170,240 L190,220 L190,160 L170,120 L150,100 
+             L130,80 L110,70 L90,65 L70,70 L50,80 L35,100 Z" 
+          fill="#0d0b0b" stroke="#1a1818" stroke-width="0.5"/>
+    
+    <!-- Windshield reflection -->
+    <path d="M70,70 L90,65 L110,70 L130,80 L150,100 L170,120 L160,115 L140,105 
+             L120,98 L100,95 L80,98 L65,105 Z" 
+          fill="#151212" opacity="0.5"/>
+    
+    <!-- Side mirrors (the key horror element - turned toward viewer) -->
+    <!-- Left mirror -->
+    <ellipse cx="8" cy="140" rx="12" ry="8" fill="#121010" stroke="#2a2525" stroke-width="0.5" filter="url(#glow)"/>
+    <ellipse cx="8" cy="140" rx="6" ry="4" fill="#1a1515"/>
+    <!-- Right mirror -->
+    <ellipse cx="192" cy="140" rx="12" ry="8" fill="#121010" stroke="#2a2525" stroke-width="0.5" filter="url(#glow)"/>
+    <ellipse cx="192" cy="140" rx="6" ry="4" fill="#1a1515"/>
+    
+    <!-- Headlights (flickering alarm glow) -->
+    <circle cx="30" cy="230" r="8" fill="#ff4400" opacity="0.6" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.6;0.1;0.8;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="170" cy="230" r="8" fill="#ff4400" opacity="0.6" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.6;0.1;0.8;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Light cones from headlights -->
+    <path d="M22,230 L-20,350 L60,350 Z" fill="#ff4400" opacity="0.03">
+      <animate attributeName="opacity" values="0.03;0.01;0.05;0.02;0.03" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M178,230 L140,350 L220,350 Z" fill="#ff4400" opacity="0.03">
+      <animate attributeName="opacity" values="0.03;0.01;0.05;0.02;0.03" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Fingerprint on mirror hint (subtle, on the left mirror) -->
+  <g transform="translate(500, 340)" opacity="0.15">
+    <circle cx="0" cy="0" r="3" fill="none" stroke="#ff6a00" stroke-width="0.3"/>
+    <circle cx="2" cy="-1" r="2" fill="none" stroke="#ff6a00" stroke-width="0.3"/>
+    <circle cx="-1" cy="2" r="2.5" fill="none" stroke="#ff6a00" stroke-width="0.3"/>
+  </g>
+
+  <!-- Vignette overlay -->
+  <rect width="800" height="450" fill="url(#vignette)"/>
+
+  <!-- Ambient orange glow from alarm -->
+  <ellipse cx="570" cy="300" rx="200" ry="100" fill="url(#carLight)">
+    <animate attributeName="opacity" values="0.5;0.2;0.7;0.3;0.5" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Distant figure hint (barely visible, on the far left) -->
+  <g opacity="0.04" transform="translate(60, 180)">
+    <ellipse cx="0" cy="0" rx="8" ry="10" fill="#1a1515"/>
+    <rect x="-3" y="10" width="6" height="30" fill="#1a1515" rx="2"/>
+  </g>
+</svg>
