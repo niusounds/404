@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Subtle floor reflection -->
+  <rect x="0" y="350" width="800" height="100" fill="#0f0c0c" opacity="0.5"/>
+  <line x1="0" y1="350" x2="800" y2="350" stroke="#1a1510" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Background shelves - left -->
+  <g opacity="0.15">
+    <rect x="10" y="60" width="60" height="280" fill="#1a1510"/>
+    <rect x="10" y="60" width="60" height="2" fill="#2a2015"/>
+    <rect x="10" y="130" width="60" height="2" fill="#2a2015"/>
+    <rect x="10" y="200" width="60" height="2" fill="#2a2015"/>
+    <rect x="10" y="270" width="60" height="2" fill="#2a2015"/>
+    <!-- Items on shelves -->
+    <rect x="18" y="80" width="8" height="45" fill="#2a2015"/>
+    <rect x="30" y="90" width="6" height="35" fill="#251f12"/>
+    <rect x="42" y="75" width="10" height="50" fill="#2d2518"/>
+    <rect x="15" y="150" width="7" height="40" fill="#251f12"/>
+    <rect x="25" y="145" width="12" height="45" fill="#2a2015"/>
+    <rect x="45" y="160" width="8" height="38" fill="#2d2518"/>
+  </g>
+
+  <!-- Background shelves - right -->
+  <g opacity="0.15">
+    <rect x="730" y="60" width="60" height="280" fill="#1a1510"/>
+    <rect x="730" y="60" width="60" height="2" fill="#2a2015"/>
+    <rect x="730" y="130" width="60" height="2" fill="#2a2015"/>
+    <rect x="730" y="200" width="60" height="2" fill="#2a2015"/>
+    <rect x="730" y="270" width="60" height="2" fill="#2a2015"/>
+    <rect x="738" y="85" width="10" height="40" fill="#2a2015"/>
+    <rect x="752" y="75" width="7" height="50" fill="#251f12"/>
+    <rect x="765" y="90" width="8" height="35" fill="#2d2518"/>
+    <rect x="740" y="155" width="9" height="42" fill="#251f12"/>
+    <rect x="755" y="148" width="11" height="48" fill="#2a2015"/>
+  </g>
+
+  <!-- Self-checkout machine silhouette -->
+  <g>
+    <!-- Machine body -->
+    <rect x="280" y="100" width="240" height="250" rx="4" fill="#0d0b0b" stroke="#1a1510" stroke-width="1"/>
+    <!-- Top scanner area -->
+    <rect x="300" y="110" width="200" height="40" rx="2" fill="#111008" stroke="#1a1510" stroke-width="0.5"/>
+    <!-- Scanner light line -->
+    <line x1="310" y1="130" x2="490" y2="130" stroke="#1a1800" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Screen - the glowing element -->
+    <rect x="310" y="165" width="180" height="120" rx="3" fill="#0a0a06" stroke="#2a2515" stroke-width="1"/>
+    
+    <!-- Screen glow -->
+    <rect x="310" y="165" width="180" height="120" rx="3" fill="#1a1a0a" opacity="0.4" filter="url(#softGlow)"/>
+    
+    <!-- Screen content - white text -->
+    <text x="400" y="195" text-anchor="middle" fill="#e8e0c0" font-family="monospace, sans-serif" font-size="10" opacity="0.9">商品を入れてください</text>
+    
+    <!-- Item list on screen -->
+    <text x="325" y="220" fill="#d8d0a8" font-family="monospace, sans-serif" font-size="11">感冒薬    ×1</text>
+    <text x="325" y="240" fill="#d8d0a8" font-family="monospace, sans-serif" font-size="11">シャンプー ×1</text>
+    <text x="325" y="260" fill="#d8d0a8" font-family="monospace, sans-serif" font-size="11">目薬      ×1</text>
+    
+    <!-- The creepy part - おたふく ×11 in brighter, unsettling text -->
+    <text x="325" y="290" fill="#f0e8a0" font-family="monospace, sans-serif" font-size="13" filter="url(#glow)">おたふく    ×11</text>
+    
+    <!-- Screen message at bottom -->
+    <text x="400" y="315" text-anchor="middle" fill="#c8c080" font-family="monospace, sans-serif" font-size="10" filter="url(#glow)" opacity="0.8">まだ、入れてください</text>
+    
+    <!-- Screen scan lines -->
+    <line x1="312" y1="175" x2="488" y2="175" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="185" x2="488" y2="185" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="195" x2="488" y2="195" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="205" x2="488" y2="205" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="215" x2="488" y2="215" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="225" x2="488" y2="225" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="235" x2="488" y2="235" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="245" x2="488" y2="245" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="255" x2="488" y2="255" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="265" x2="488" y2="265" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="275" x2="488" y2="275" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="285" x2="488" y2="285" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="295" x2="488" y2="295" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+    <line x1="312" y1="305" x2="488" y2="305" stroke="#2a2510" stroke-width="0.3" opacity="0.3"/>
+  </g>
+
+  <!-- Shopping basket silhouette in foreground -->
+  <g opacity="0.25">
+    <path d="M 560 280 L 620 280 L 630 340 L 550 340 Z" fill="#151208" stroke="#2a2510" stroke-width="1"/>
+    <path d="M 570 280 C 570 260, 610 260, 610 280" fill="none" stroke="#2a2510" stroke-width="1.5"/>
+    <!-- Items in basket -->
+    <rect x="570" y="285" width="10" height="25" fill="#1a1808" stroke="#25200a" stroke-width="0.5"/>
+    <rect x="585" y="282" width="8" height="28" fill="#1a1808" stroke="#25200a" stroke-width="0.5"/>
+    <rect x="595" y="288" width="12" height="22" fill="#1a1808" stroke="#25200a" stroke-width="0.5"/>
+  </g>
+
+  <!-- White bottle silhouette (the "otafuku") - eerie, placed near basket -->
+  <g opacity="0.3">
+    <rect x="640" y="300" width="14" height="35" rx="3" fill="#1a1808" stroke="#2a2510" stroke-width="0.5"/>
+    <rect x="643" y="293" width="8" height="8" rx="2" fill="#1a1808" stroke="#2a2510" stroke-width="0.5"/>
+    <!-- Label text hint -->
+    <text x="647" y="320" text-anchor="middle" fill="#3a3520" font-family="sans-serif" font-size="5">おたふく</text>
+  </g>
+
+  <!-- Ambient light from screen - subtle spread on floor -->
+  <ellipse cx="400" cy="370" rx="120" ry="15" fill="#1a1800" opacity="0.15"/>
+  
+  <!-- Screen light spill on surrounding area -->
+  <rect x="300" y="160" width="200" height="135" fill="#1a1a0a" opacity="0.05"/>
+
+  <!-- Distant store entrance - tiny light -->
+  <g opacity="0.08">
+    <rect x="360" y="40" width="80" height="120" fill="#1a1800"/>
+    <rect x="370" y="50" width="60" height="100" fill="#1a1800"/>
+    <text x="400" y="100" text-anchor="middle" fill="#2a2510" font-family="sans-serif" font-size="8">OPEN 24h</text>
+  </g>
+
+  <!-- Subtle vignette effect -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.3"/>
+  
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="50%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
