@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0808"/>
+      <stop offset="100%" stop-color="#120e0e"/>
+    </linearGradient>
+    <linearGradient id="light1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="light2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="320" width="800" height="130" fill="#0d0a0a" opacity="0.6"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#1a1414" stroke-width="1"/>
+
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="800" height="60" fill="#080606"/>
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#141010" stroke-width="1"/>
+
+  <!-- Fluorescent light fixture 1 (ON) -->
+  <rect x="120" y="55" width="160" height="6" fill="#e8e0d0" opacity="0.7" filter="url(#glow)"/>
+  <rect x="120" y="61" width="160" height="2" fill="#ffffff" opacity="0.15"/>
+  <rect x="120" y="55" width="160" height="6" fill="#ffffff" opacity="0.3"/>
+
+  <!-- Light cone from light 1 -->
+  <polygon points="120,61 280,61 350,320 50,320" fill="url(#light1)"/>
+
+  <!-- Fluorescent light fixture 2 (OFF) -->
+  <rect x="380" y="55" width="160" height="6" fill="#1a1515"/>
+  <rect x="380" y="61" width="160" height="2" fill="#0f0c0c"/>
+
+  <!-- Fluorescent light fixture 3 (ON) -->
+  <rect x="520" y="55" width="160" height="6" fill="#e8e0d0" opacity="0.7" filter="url(#glow)"/>
+  <rect x="520" y="61" width="160" height="2" fill="#ffffff" opacity="0.15"/>
+  <rect x="520" y="55" width="160" height="6" fill="#ffffff" opacity="0.3"/>
+
+  <!-- Light cone from light 3 -->
+  <polygon points="520,61 680,61 750,320 450,320" fill="url(#light2)"/>
+
+  <!-- Left shelves -->
+  <rect x="30" y="120" width="8" height="200" fill="#151010"/>
+  <rect x="30" y="160" width="100" height="4" fill="#1a1515"/>
+  <rect x="30" y="210" width="100" height="4" fill="#1a1515"/>
+  <rect x="30" y="260" width="100" height="4" fill="#1a1515"/>
+
+  <!-- Shelf items (bent boxes) -->
+  <rect x="40" y="148" width="15" height="12" fill="#1e1818" rx="1"/>
+  <rect x="58" y="150" width="10" height="10" fill="#1c1616" rx="1"/>
+  <rect x="72" y="146" width="12" height="14" fill="#1d1717" rx="1"/>
+  <rect x="88" y="149" width="8" height="11" fill="#1b1515" rx="1"/>
+
+  <rect x="42" y="198" width="14" height="12" fill="#1e1818" rx="1"/>
+  <rect x="58" y="196" width="11" height="14" fill="#1c1616" rx="1"/>
+  <rect x="73" y="199" width="9" height="11" fill="#1d1717" rx="1"/>
+
+  <rect x="45" y="248" width="13" height="12" fill="#1e1818" rx="1"/>
+  <rect x="60" y="250" width="10" height="10" fill="#1c1616" rx="1"/>
+  <rect x="74" y="246" width="11" height="14" fill="#1b1515" rx="1"/>
+
+  <!-- Right shelves -->
+  <rect x="762" y="120" width="8" height="200" fill="#151010"/>
+  <rect x="670" y="160" width="100" height="4" fill="#1a1515"/>
+  <rect x="670" y="210" width="100" height="4" fill="#1a1515"/>
+  <rect x="670" y="260" width="100" height="4" fill="#1a1515"/>
+
+  <!-- Shelf items -->
+  <rect x="680" y="148" width="14" height="12" fill="#1e1818" rx="1"/>
+  <rect x="698" y="150" width="10" height="10" fill="#1c1616" rx="1"/>
+  <rect x="714" y="146" width="12" height="14" fill="#1d1717" rx="1"/>
+  <rect x="730" y="149" width="8" height="11" fill="#1b1515" rx="1"/>
+
+  <rect x="682" y="198" width="13" height="12" fill="#1e1818" rx="1"/>
+  <rect x="697" y="196" width="11" height="14" fill="#1c1616" rx="1"/>
+  <rect x="712" y="199" width="9" height="11" fill="#1d1717" rx="1"/>
+
+  <rect x="685" y="248" width="12" height="12" fill="#1e1818" rx="1"/>
+  <rect x="700" y="250" width="10" height="10" fill="#1c1616" rx="1"/>
+  <rect x="715" y="246" width="11" height="14" fill="#1b1515" rx="1"/>
+
+  <!-- Counter / register area (center-right) -->
+  <rect x="480" y="260" width="140" height="60" fill="#1a1414" rx="2"/>
+  <rect x="480" y="258" width="140" height="4" fill="#221c1c"/>
+  <!-- Register screen glow -->
+  <rect x="520" y="230" width="60" height="30" fill="#1a2a1a" rx="2" opacity="0.5"/>
+  <rect x="522" y="232" width="56" height="26" fill="#2a4a2a" rx="1" opacity="0.3"/>
+  <!-- Small green glow from screen -->
+  <ellipse cx="550" cy="260" rx="40" ry="5" fill="#3a6a3a" opacity="0.08" filter="url(#blur)"/>
+
+  <!-- Silhouette behind counter (the "thing") -->
+  <!-- Head -->
+  <ellipse cx="550" cy="210" rx="14" ry="16" fill="#0a0808" opacity="0.85"/>
+  <!-- Body -->
+  <path d="M536,226 Q536,260 530,280 L570,280 Q564,260 564,226 Z" fill="#0a0808" opacity="0.85"/>
+  <!-- Flat cap / mask suggestion -->
+  <rect x="538" y="205" width="24" height="3" fill="#0a0808" opacity="0.9"/>
+  <!-- Eyes — two faint points -->
+  <circle cx="545" cy="210" r="1.2" fill="#2a2525" opacity="0.4"/>
+  <circle cx="555" cy="210" r="1.2" fill="#2a2525" opacity="0.4"/>
+
+  <!-- Spilled carton on floor -->
+  <rect x="350" y="310" width="30" height="12" fill="#141010" rx="1" transform="rotate(8, 365, 316)"/>
+  <rect x="380" y="315" width="20" height="8" fill="#131010" rx="1" transform="rotate(-15, 390, 319)"/>
+
+  <!-- Dark vignette edges -->
+  <rect x="0" y="0" width="800" height="450" fill="none" stroke="#0a0808" stroke-width="2"/>
+  <rect x="0" y="0" width="800" height="450" fill="#0a0808" opacity="0.3" style="mix-blend-mode: multiply;"/>
+
+  <!-- Subtle text: 八百五十円 -->
+  <text x="550" y="245" text-anchor="middle" font-family="monospace" font-size="10" fill="#3a6a3a" opacity="0.3">850円</text>
+</svg>
