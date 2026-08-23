@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background: dark corridor -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Corridor perspective lines -->
+  <line x1="200" y1="80" x2="100" y2="450" stroke="#1a1510" stroke-width="1"/>
+  <line x1="600" y1="80" x2="700" y2="450" stroke="#1a1510" stroke-width="1"/>
+  <line x1="200" y1="80" x2="600" y2="80" stroke="#1a1510" stroke-width="1"/>
+  
+  <!-- Floor -->
+  <rect x="150" y="320" width="500" height="130" fill="#0d0a0a"/>
+  <line x1="150" y1="350" x2="650" y2="350" stroke="#151010" stroke-width="0.5"/>
+  <line x1="150" y1="380" x2="650" y2="380" stroke="#151010" stroke-width="0.5"/>
+  <line x1="150" y1="410" x2="650" y2="410" stroke="#151010" stroke-width="0.5"/>
+  
+  <!-- Left wall -->
+  <path d="M 0,0 L 200,80 L 200,450 L 0,450 Z" fill="#0e0b0b"/>
+  
+  <!-- Right wall -->
+  <path d="M 800,0 L 600,80 L 600,450 L 800,450 Z" fill="#0e0b0b"/>
+  
+  <!-- Ceiling -->
+  <path d="M 0,0 L 800,0 L 600,80 L 200,80 Z" fill="#0c0909"/>
+  
+  <!-- Door on right wall (apartment door) -->
+  <rect x="580" y="140" width="60" height="180" fill="#1a1410" stroke="#2a1f15" stroke-width="1"/>
+  <circle cx="635" cy="240" r="3" fill="#3a2a1a"/>
+  
+  <!-- Intercom panel on wall near door -->
+  <rect x="540" y="190" width="25" height="35" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <circle cx="552" cy="205" r="3" fill="#ff3300" opacity="0.8"/>
+  <rect x="545" y="215" width="15" height="5" fill="#333"/>
+  
+  <!-- Intercom glow -->
+  <circle cx="552" cy="205" r="15" fill="#ff3300" opacity="0.15"/>
+  
+  <!-- Small package on floor -->
+  <rect x="370" y="310" width="60" height="40" fill="#2a2015" stroke="#3a2a1a" stroke-width="0.5"/>
+  <line x1="370" y1="330" x2="430" y2="330" stroke="#3a2a1a" stroke-width="0.5"/>
+  <line x1="400" y1="310" x2="400" y2="350" stroke="#3a2a1a" stroke-width="0.5"/>
+  
+  <!-- Package shadow -->
+  <ellipse cx="400" cy="355" rx="35" ry="5" fill="#000" opacity="0.3"/>
+  
+  <!-- Dim overhead light -->
+  <rect x="380" y="75" width="40" height="8" fill="#2a2520"/>
+  <ellipse cx="400" cy="90" rx="120" ry="60" fill="#ffdd88" opacity="0.03"/>
+  <ellipse cx="400" cy="100" rx="80" ry="40" fill="#ffdd88" opacity="0.05"/>
+  
+  <!-- Mysterious shadow figure at end of corridor (vanishing point) -->
+  <ellipse cx="400" cy="85" rx="25" ry="40" fill="#080606" opacity="0.6"/>
+  <!-- Head -->
+  <circle cx="400" cy="50" r="12" fill="#080606" opacity="0.5"/>
+  <!-- Body silhouette -->
+  <path d="M 385,70 Q 395,100 390,130 L 410,130 Q 405,100 415,70 Z" fill="#080606" opacity="0.5"/>
+  
+  <!-- Red digital clock display on intercom -->
+  <rect x="543" y="193" width="19" height="8" fill="#0a0000" stroke="#330000" stroke-width="0.3"/>
+  <text x="545" y="200" font-family="monospace" font-size="6" fill="#ff2200" opacity="0.9">02:14</text>
+  
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+  
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
