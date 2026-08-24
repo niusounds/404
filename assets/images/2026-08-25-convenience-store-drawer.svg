@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1212"/>
+      <stop offset="100%" stop-color="#0a0808"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a1a1a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="drawer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1a1a"/>
+      <stop offset="100%" stop-color="#121010"/>
+    </linearGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="blur2"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+
+  <!-- Subtle fluorescent light streak at top -->
+  <rect x="250" y="0" width="300" height="3" fill="#3a3030" opacity="0.3" filter="url(#blur2)"/>
+  <rect x="300" y="0" width="200" height="1" fill="#4a4040" opacity="0.2"/>
+
+  <!-- Cash register body - dark silhouette -->
+  <rect x="220" y="180" width="360" height="200" rx="8" fill="#151212" stroke="#1e1a1a" stroke-width="1"/>
+  <rect x="240" y="200" width="320" height="120" rx="4" fill="url(#drawer)" stroke="#1a1818" stroke-width="1"/>
+
+  <!-- Drawer opening - the key element -->
+  <rect x="260" y="220" width="280" height="80" rx="3" fill="#0d0b0b" stroke="#1a1616" stroke-width="0.5"/>
+
+  <!-- The horror: a hand emerging from the drawer -->
+  <!-- Hand silhouette - darker than background, eerie glow around it -->
+  <ellipse cx="400" cy="260" rx="80" ry="50" fill="#1a0a0a" opacity="0.5" filter="url(#blur1)"/>
+
+  <!-- Fingers emerging from darkness -->
+  <!-- Index finger -->
+  <path d="M370,260 L365,210 Q364,205 368,205 L372,205 Q376,205 375,210 L370,260" fill="#0e0c0c" stroke="#1a1414" stroke-width="0.5"/>
+  <!-- Middle finger -->
+  <path d="M385,260 L382,195 Q381,190 385,190 L389,190 Q393,190 392,195 L389,260" fill="#0e0c0c" stroke="#1a1414" stroke-width="0.5"/>
+  <!-- Ring finger -->
+  <path d="M400,260 L398,200 Q397,195 401,195 L405,195 Q409,195 408,200 L406,260" fill="#0e0c0c" stroke="#1a1414" stroke-width="0.5"/>
+  <!-- Pinky -->
+  <path d="M415,260 L414,220 Q413,216 417,216 L421,216 Q425,216 424,220 L422,260" fill="#0e0c0c" stroke="#1a1414" stroke-width="0.5"/>
+  <!-- Thumb -->
+  <path d="M360,250 L340,225 Q337,222 340,220 L344,222 Q347,224 345,228 L360,255" fill="#0e0c0c" stroke="#1a1414" stroke-width="0.5"/>
+
+  <!-- Finger tips - slightly lighter, ghostly -->
+  <ellipse cx="369" cy="205" rx="3" ry="2" fill="#1a1414" opacity="0.6"/>
+  <ellipse cx="387" cy="190" rx="3" ry="2" fill="#1a1414" opacity="0.6"/>
+  <ellipse cx="403" cy="195" rx="3" ry="2" fill="#1a1414" opacity="0.6"/>
+  <ellipse cx="419" cy="216" rx="2.5" ry="1.5" fill="#1a1414" opacity="0.5"/>
+
+  <!-- Eerie red glow around hand -->
+  <ellipse cx="400" cy="230" rx="60" ry="40" fill="#2a0808" opacity="0.15" filter="url(#blur2)"/>
+  <ellipse cx="400" cy="230" rx="30" ry="20" fill="#3a0a0a" opacity="0.1" filter="url(#blur1)"/>
+
+  <!-- Small dark handprint smudge on drawer interior -->
+  <path d="M310,230 Q305,225 308,220 Q312,218 315,222 Q318,218 322,220 Q325,225 320,230 Q315,235 310,230Z" fill="#151010" opacity="0.4"/>
+
+  <!-- 10000 yen bill partially visible in drawer -->
+  <rect x="300" y="270" width="60" height="30" rx="2" fill="#1a1818" stroke="#222020" stroke-width="0.5" transform="rotate(-5, 330, 285)"/>
+  <text x="315" y="290" font-family="sans-serif" font-size="10" fill="#2a2828" transform="rotate(-5, 330, 285)">10000</text>
+
+  <!-- Another bill -->
+  <rect x="420" y="275" width="55" height="28" rx="2" fill="#1a1818" stroke="#222020" stroke-width="0.5" transform="rotate(3, 447, 289)"/>
+  <text x="435" y="289" font-family="sans-serif" font-size="9" fill="#2a2828" transform="rotate(3, 447, 289)">10000</text>
+
+  <!-- Ambient shadows -->
+  <rect x="0" y="380" width="800" height="70" fill="#0a0808" opacity="0.5"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="none" stroke="#0a0808" stroke-width="40" opacity="0.3"/>
+</svg>
