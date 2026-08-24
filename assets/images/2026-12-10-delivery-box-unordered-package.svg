@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+  
+  <!-- Subtle vignette effect -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+    <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#0a0808" stop-opacity="0.8"/>
+  </radialGradient>
+  <rect width="800" height="450" fill="url(#vignette)"/>
+  
+  <!-- Floor line -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#1a1414" stroke-width="1"/>
+  
+  <!-- Delivery box (宅配ボックス) silhouette -->
+  <rect x="280" y="120" width="240" height="260" rx="4" fill="#1a1515" stroke="#2a2020" stroke-width="2"/>
+  
+  <!-- Delivery slot (投入口) -->
+  <rect x="340" y="140" width="120" height="12" fill="#0a0808" stroke="#1a1414" stroke-width="1"/>
+  
+  <!-- Inner shadow of slot -->
+  <rect x="345" y="145" width="110" height="3" fill="#0d0a0a" opacity="0.6"/>
+  
+  <!-- Door seam lines -->
+  <line x1="400" y1="155" x2="400" y2="375" stroke="#1f1a1a" stroke-width="0.5"/>
+  
+  <!-- Lock mechanism -->
+  <rect x="380" y="240" width="40" height="30" rx="3" fill="#151212" stroke="#252020" stroke-width="1"/>
+  <circle cx="400" cy="255" r="4" fill="#1a1616"/>
+  
+  <!-- Creepy hand emerging from the slot - left side -->
+  <g opacity="0.85">
+    <!-- Wrist -->
+    <path d="M380,145 L370,100 L365,80 L370,75 L375,85 L378,100 L385,145" fill="#1c1818" stroke="#2a2525" stroke-width="0.5"/>
+    
+    <!-- Fingers - elongated, unnatural -->
+    <!-- Index finger -->
+    <path d="M375,85 L360,55 L355,45 L358,43 L363,50 L368,58 L372,65" fill="#1c1818" stroke="#2a2525" stroke-width="0.3"/>
+    
+    <!-- Middle finger (longest) -->
+    <path d="M372,70 L355,40 L348,28 L352,26 L358,35 L365,48 L370,60" fill="#1c1818" stroke="#2a2525" stroke-width="0.3"/>
+    
+    <!-- Ring finger -->
+    <path d="M370,65 L358,42 L352,32 L356,30 L362,40 L367,52 L370,58" fill="#1c1818" stroke="#2a2525" stroke-width="0.3"/>
+    
+    <!-- Pinky -->
+    <path d="M368,62 L360,45 L356,38 L359,36 L363,42 L366,50 L368,55" fill="#1c1818" stroke="#2a2525" stroke-width="0.3"/>
+    
+    <!-- Thumb -->
+    <path d="M378,90 L365,78 L355,72 L358,68 L365,75 L375,85" fill="#1c1818" stroke="#2a2525" stroke-width="0.3"/>
+  </g>
+  
+  <!-- Creepy hand - right side -->
+  <g opacity="0.7">
+    <!-- Wrist -->
+    <path d="M420,145 L430,100 L435,80 L430,75 L425,85 L422,100 L415,145" fill="#1c1818" stroke="#2a2525" stroke-width="0.5"/>
+    
+    <!-- Fingers -->
+    <path d="M425,85 L440,55 L445,45 L442,43 L437,50 L432,58 L428,65" fill="#1c1818" stroke="#2a2525" stroke-width="0.3"/>
+    
+    <path d="M428,70 L445,40 L452,28 L448,26 L442,35 L435,48 L430,60" fill="#1c1818" stroke="#2a2525" stroke-width="0.3"/>
+    
+    <path d="M430,65 L442,42 L448,32 L444,30 L438,40 L433,52 L430,58" fill="#1c1818" stroke="#2a2525" stroke-width="0.3"/>
+    
+    <path d="M432,62 L440,45 L444,38 L441,36 L437,42 L434,50 L432,55" fill="#1c1818" stroke="#2a2525" stroke-width="0.3"/>
+    
+    <path d="M422,90 L435,78 L445,72 L442,68 L435,75 L425,85" fill="#1c1818" stroke="#2a2525" stroke-width="0.3"/>
+  </g>
+  
+  <!-- Subtle red glow from inside the box -->
+  <ellipse cx="400" cy="150" rx="50" ry="15" fill="#1a0505" opacity="0.3"/>
+  <ellipse cx="400" cy="148" rx="30" ry="8" fill="#150404" opacity="0.2"/>
+  
+  <!-- Floor shadow under box -->
+  <ellipse cx="400" cy="385" rx="130" ry="8" fill="#080606" opacity="0.5"/>
+  
+  <!-- Tiny details: scratches on the box -->
+  <line x1="310" y1="200" x2="315" y2="220" stroke="#221c1c" stroke-width="0.5" opacity="0.6"/>
+  <line x1="312" y1="210" x2="318" y2="225" stroke="#221c1c" stroke-width="0.5" opacity="0.4"/>
+  <line x1="490" y1="300" x2="485" y2="320" stroke="#221c1c" stroke-width="0.5" opacity="0.5"/>
+  
+  <!-- Ambient light from above (dim hallway light) -->
+  <ellipse cx="400" cy="0" rx="200" ry="80" fill="#1a1510" opacity="0.08"/>
+  
+  <!-- Subtle text-like marks on box (sticker residue) -->
+  <rect x="355" y="280" width="90" height="35" rx="2" fill="#181414" stroke="#1f1a1a" stroke-width="0.5" opacity="0.4"/>
+  <line x1="365" y1="290" x2="435" y2="290" stroke="#1a1616" stroke-width="0.5" opacity="0.3"/>
+  <line x1="365" y1="298" x2="420" y2="298" stroke="#1a1616" stroke-width="0.5" opacity="0.3"/>
+  <line x1="365" y1="306" x2="430" y2="306" stroke="#1a1616" stroke-width="0.5" opacity="0.3"/>
+</svg>
