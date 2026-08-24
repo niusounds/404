@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "ブラックロック・ホロウの囁き — アパラチアの森に眠る恐怖"
-date: date:2026-08-09categories: [horror]
+date:2026-08-09categories: [horror]
 ---
 
 ![Black Rock Hollow - Forest entrance in thick Appalachian fog](assets/images/2026-08-appalachian-whisper.svg)

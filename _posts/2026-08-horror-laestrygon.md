@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ラストレゴン：女神の湾に潜む巨人"
-date: date:2026-08-09categories: [horror, globalfolklore]
+date:2026-08-09categories: [horror, globalfolklore]
 tags: [地中海神話, オデュッセイア, 海難怪談]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "La Cegua — Oaxacān no Kage"
-date: date:2026-08-09tags: [horror, folk-oriente-mexicooaxaca-oaxaca]
+date:2026-08-09tags: [horror, folk-oriente-mexicooaxaca-oaxaca]
 
 ---
 # 「La Cegua ─ アオアカンノカゲ」

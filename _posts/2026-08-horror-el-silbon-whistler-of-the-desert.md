@@ -1,6 +1,6 @@
 ---
 title: "El Silbón — 荒野から響く笛吹き"
-date: date:2026-08-09categories: [hoax]
+date:2026-08-09categories: [hoax]
 tags: ["ラテンアメリカ", "都市伝説", "荒野"]
 ---
 

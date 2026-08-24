@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "夜のジン・カラクム砂漠にて — 夜中に旅人は決して独りで歩くな"
-date: date:2026-08-09categories: [ホラーストーリー, 都市伝説, 中央アジア民話]
+date:2026-08-09categories: [ホラーストーリー, 都市伝説, 中央アジア民話]
 ---
 
 ![夜を彷徨う影のある男](assets/images/2026-08-horror-tokigyojin-karakum-night.svg)

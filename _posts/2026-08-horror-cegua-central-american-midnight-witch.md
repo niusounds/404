@@ -1,6 +1,6 @@
 title: "Cegua — マイアミの夜に囁く独眼の魔女"
 
-date: date:2026-08-09category: horror
+date:2026-08-09category: horror
 tags: [都市伝説,中南米,Halloween,Krampus,Día de los Muertos]
 ---
 

@@ -2,7 +2,7 @@
 
 ---
 title: "The Changeling - Fairy Took the Baby"
-date: date:2026-08-09categories: [horror-stories, folk-horror]
+date:2026-08-09categories: [horror-stories, folk-horror]
 tags: [changeling, fairy-tale, scandinavian-folklore, nursery-horror]
 ---
 

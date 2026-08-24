@@ -1,6 +1,6 @@
 ---
 title: "ルサルカ 湿地に沈んだ者の歌、聞こえてこない？"
-date: date:2026-08-09categories: [horror, urban-legend]
+date:2026-08-09categories: [horror, urban-legend]
 tags: [slavic, rusalka, wetland, drowning, horror]
 author: anonymous
 ---

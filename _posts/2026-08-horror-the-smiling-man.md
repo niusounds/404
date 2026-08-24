@@ -1,6 +1,6 @@
 ---
 title: "微笑む男"
-date: date:2026-08-09image: "/assets/images/2026-08-horror-smiling-man.svg"
+date:2026-08-09image: "/assets/images/2026-08-horror-smiling-man.svg"
 tags: ["ホラー", "都市伝説", "東京"]
 ---
 

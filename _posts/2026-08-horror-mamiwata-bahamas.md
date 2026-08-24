@@ -1,6 +1,6 @@
 ---
 title: "Mamiwata / the Drowning Virgin of Nassau, Bahamas"
-date: date:2026-08-09tags:
+date:2026-08-09tags:
   - horror
   - urban-legend
 excerpt: 海は決して、一人の女性を葬るためにそこに入ったのではない。彼女は溺れた人を誘うために、そこで待っていたのだった。

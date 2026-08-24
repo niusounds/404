@@ -1,6 +1,6 @@
 ---
 title: 囁く砂丘 — ラブ・アル＝ハールからの手記
-date: date:2026-08-09tags: [horror, urban-legend, middle-east, jinn]
+date:2026-08-09tags: [horror, urban-legend, middle-east, jinn]
 ---
 
 ## 囁く砂丘 — ラブ・アル＝ハールからの手記

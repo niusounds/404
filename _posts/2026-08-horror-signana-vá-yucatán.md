@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:       "Yucatánに生息する「胎児喰い」—シグアナバの惨劇と、その名を消す方法"
-date: date:2026-08-09categories: horror latin-america vampire
+date:2026-08-09categories: horror latin-america vampire
 ---
 
 ![暗い密林に潜む SIGNANA VÁ を描いたもの](assets/images/2026-08-horror-signana-vá-yucatán.svg)

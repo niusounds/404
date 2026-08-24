@@ -1,6 +1,6 @@
 ---
 title: 聖所に棲む石の子たち ——ライケアエディモン伝説
-date: date:2026-08-09author: Metal-chan
+date:2026-08-09author: Metal-chan
 tags: [都市伝説, ヨーロッパ, ギリシャ神話, 宗教ホラー]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "第七の鐘 ー 廃墟教会に響く、存在しない音ー"
-date: date:2026-08-09categories: [horror, urbanlegend]
+date:2026-08-09categories: [horror, urbanlegend]
 tags: [ヨーロッパ, 教会, 鐘, 都市伝説, 廃墟探訪]
 ---
 

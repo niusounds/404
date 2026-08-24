@@ -1,6 +1,6 @@
 ---
 title: Vodiany - The Drowned Man's Pool at the Edge of Novgorod
-date: date:2026-08-09categories: horror
+date:2026-08-09categories: horror
 tags: [slavic-folklore, russian-horror, vodianoj, water-haunting]
 ---
 

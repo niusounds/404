@@ -1,5 +1,5 @@
 ---
-date: date:2026-08-09id: horror-pontianak
+date:2026-08-09id: horror-pontianak
 title: 「ジャスミンの匂い、次に現れる」— ポニアンヤン、東南アジアの恐怖譚
 lang: ja
 tags: [horror, folklore, southeast-asia, malay-legends]

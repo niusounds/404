@@ -1,7 +1,7 @@
 ---
 title: ドイベック（Dübbuk） — 亡者が体を貸す時
 slug: horror/dybbuk
-date: date:2026-08-09published: false
+date:2026-08-09published: false
 ---
 
 ワルシャワの墓地から棺だけ戻ってきた。遺体は痕跡もなく、石棺の中には空だった——その日に埋葬されたばかりの新妻が、墓に帰れなくなったのだと人言は囁く。

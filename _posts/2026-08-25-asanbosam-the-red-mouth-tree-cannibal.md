@@ -1,6 +1,6 @@
 ---
 title: "アサンボサム — 紅い口を持つ木棲みの喰い神"
-date: date:2026-08-09categories: [horror, global-folklore]
+date:2026-08-09categories: [horror, global-folklore]
 tags: [ghana, akan, witchcraft, africa-horror, urban-legend]
 ---
 

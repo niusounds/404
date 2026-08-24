@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 空洞の山の女 -- Scandinavian Cave Horror Legend
-date: date:2026-08-09tags: [scandinavian, cave-legends, norwegian-folk, winter-horror]
+date:2026-08-09tags: [scandinavian, cave-legends, norwegian-folk, winter-horror]
 categories: [海外恐怖譚]
 ---
 

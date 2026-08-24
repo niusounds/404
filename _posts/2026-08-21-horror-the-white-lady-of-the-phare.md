@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "La Dame Blanche du Phare —ブリタンの灯台に現れる白夫人"
-date: date:2026-08-09excerpt: "ブルターニュの岩海岸で、嵐が来るたび灯台には白い影の女が現れ、次に消える男の名を灯籠に刻んでいた。"
+date:2026-08-09excerpt: "ブルターニュの岩海岸で、嵐が来るたび灯台には白い影の女が現れ、次に消える男の名を灯籠に刻んでいた。"
 categories: [horror, folklore]
 tags:
   - legend

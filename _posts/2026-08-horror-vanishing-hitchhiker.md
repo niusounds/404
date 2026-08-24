@@ -2,7 +2,7 @@
 
 ---
 title: "消失する後部座乗白裙の女 — The Vanishing Hitchhiker"
-date: date:2026-08-09tags: [horror]
+date:2026-08-09tags: [horror]
 categories: [ホラー]
 ---
 

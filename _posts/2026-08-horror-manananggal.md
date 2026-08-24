@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "「下半身を置いて飛ぶ女」フィリピン・マナナンギャルグの夜"
-date: date:2026-08-09categories: [horror, folklore]
+date:2026-08-09categories: [horror, folklore]
 ---
 
 ## 朝の床に血が沈んだ時、あなたは気づいていただろう

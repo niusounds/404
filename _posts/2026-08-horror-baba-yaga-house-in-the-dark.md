@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "暗闇の森で目覚める、鶏脚の家"
-date: date:2026-08-09categories: [horror]
+date:2026-08-09categories: [horror]
 tags: [slavic, folklore, horror]
 ---
 

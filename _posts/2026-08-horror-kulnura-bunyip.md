@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Koorieの古謡に歌われる湖底の喉"
-date: date:2026-08-09categories: [horror, folklore]
+date:2026-08-09categories: [horror, folklore]
 ---
 
 ## Kulnuraに、水が嘘をつく日がある。

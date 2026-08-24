@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "モンゴル高原の死の競馬：エリック・ハーンが選ぶ魂"
-date: date:2026-08-09categories: [horror-globemal]
+date:2026-08-09categories: [horror-globemal]
 ---
 
 ## モンゴリヤのホラー / エリック・ハーンと死の競馬

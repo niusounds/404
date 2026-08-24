@@ -1,6 +1,6 @@
 ---
 title: "The Rake — 床下にかくまれている何か"
-date: date:2026-08-09tags: [horror, 都市伝説, アメリカ]
+date:2026-08-09tags: [horror, 都市伝説, アメリカ]
 categories: [ホラー]
 ---
 

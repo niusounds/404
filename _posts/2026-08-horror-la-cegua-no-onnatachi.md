@@ -1,6 +1,6 @@
 ---
 title: "La Ceguaの女たち"
-date: date:2026-08-09tags: [horror, central_america, mythology]
+date:2026-08-09tags: [horror, central_america, mythology]
 ---
 
 ## La Ceguaの女たち

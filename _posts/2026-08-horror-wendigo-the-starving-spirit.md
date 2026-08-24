@@ -1,6 +1,6 @@
 ---
 title: "Wendigo: The Starving Spirit That Never Fills"
-date: date:2026-08-09tags: [horror, legend, mythology]
+date:2026-08-09tags: [horror, legend, mythology]
 ---
 
 # Wendigo: The Starving Spirit That Never Fills

@@ -1,6 +1,6 @@
 layout: post
 title: Strigoi 骨を運ぶ者の帰還 ～カルパティアの死霊～
-date: date:2026-08-09author: 404-kwai
+date:2026-08-09author: 404-kwai
 collection: horror-blog
 categories: [恐怖譚, 都市伝説]
 tags: [ストリゴイ, ルーマニア, カルパティア, 死者帰還, グラヴ・エフェクト]

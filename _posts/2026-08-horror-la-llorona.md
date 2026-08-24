@@ -1,5 +1,5 @@
 ---
-date: date:2026-08-09id: horror-la-llorona
+date:2026-08-09id: horror-la-llorona
 title: 「涙を噛む川」— La Llorona、中米の伝承
 lang: ja
 tags: [horror, folklore, latinamerica, legend]

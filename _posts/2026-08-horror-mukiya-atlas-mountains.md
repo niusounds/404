@@ -1,6 +1,6 @@
 ---
 title: "アトラスの黒き母 — マキヤが泣く谷"
-date: date:2026-08-09categories: [horror, folklore]
+date:2026-08-09categories: [horror, folklore]
 tags: [berber, north-africa, mountain-lore, mukiya]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "STRIGOI 死者が帰ってきた夜、墓標は割れていた"
-date: date:2026-08-09categories: [horror, urban-legend]
+date:2026-08-09categories: [horror, urban-legend]
 tags: [slavic, dead-return, strigoi, rumani, horror]
 author: anonymous
 ---

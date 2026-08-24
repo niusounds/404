@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dry Sky Mourns — Nemesis, Goddess of the Empty Well"
-date: date:2026-08-09categories: [horror, mythology]
+date:2026-08-09categories: [horror, mythology]
 tags: [nemesis-greek-mythology, doric-tribe, hubris, well-of-death, ancient-greece]
 ---
 

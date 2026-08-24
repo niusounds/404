@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  亡霊の嫁 invading Mampang の森から帰る女たち ---
-date: date:2026-08-09categories: [horror]
+date:2026-08-09categories: [horror]
 tags:    []
 ---
 
