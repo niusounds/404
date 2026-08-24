@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Elevator shaft silhouette (center) -->
+  <rect x="320" y="20" width="160" height="410" fill="#111111" rx="2"/>
+  <rect x="325" y="25" width="150" height="400" fill="#0d0b0b"/>
+
+  <!-- Floor lines in elevator shaft -->
+  <line x1="325" y1="60" x2="475" y2="60" stroke="#1a1818" stroke-width="1"/>
+  <line x1="325" y1="100" x2="475" y2="100" stroke="#1a1818" stroke-width="1"/>
+  <line x1="325" y1="140" x2="475" y2="140" stroke="#1a1818" stroke-width="1"/>
+  <line x1="325" y1="180" x2="475" y2="180" stroke="#1a1818" stroke-width="1"/>
+  <line x1="325" y1="220" x2="475" y2="220" stroke="#1a1818" stroke-width="1"/>
+  <line x1="325" y1="260" x2="475" y2="260" stroke="#1a1818" stroke-width="1"/>
+  <line x1="325" y1="300" x2="475" y2="300" stroke="#1a1818" stroke-width="1"/>
+  <line x1="325" y1="340" x2="475" y2="340" stroke="#1a1818" stroke-width="1"/>
+  <line x1="325" y1="380" x2="475" y2="380" stroke="#1a1818" stroke-width="1"/>
+
+  <!-- Elevator buttons panel (right side of shaft) -->
+  <rect x="485" y="80" width="45" height="280" fill="#1a1a1a" rx="3"/>
+
+  <!-- Button rows -->
+  <!-- Button 23 (top) -->
+  <circle cx="507" cy="95" r="7" fill="#2a2a2a"/>
+  <text x="507" y="99" font-size="8" fill="#555" text-anchor="middle">23</text>
+
+  <!-- Button 22 -->
+  <circle cx="507" cy="120" r="7" fill="#2a2a2a"/>
+  <text x="507" y="124" font-size="8" fill="#555" text-anchor="middle">22</text>
+
+  <!-- Button 21 -->
+  <circle cx="507" cy="145" r="7" fill="#2a2a2a"/>
+  <text x="507" y="149" font-size="8" fill="#555" text-anchor="middle">21</text>
+
+  <!-- Button 20 -->
+  <circle cx="507" cy="170" r="7" fill="#2a2a2a"/>
+  <text x="507" y="174" font-size="8" fill="#555" text-anchor="middle">20</text>
+
+  <!-- Button 19 -->
+  <circle cx="507" cy="195" r="7" fill="#2a2a2a"/>
+  <text x="507" y="199" font-size="8" fill="#555" text-anchor="middle">19</text>
+
+  <!-- Button 18 -->
+  <circle cx="507" cy="220" r="7" fill="#2a2a2a"/>
+  <text x="507" y="224" font-size="8" fill="#555" text-anchor="middle">18</text>
+
+  <!-- Button 17 - GLOWING -->
+  <circle cx="507" cy="245" r="8" fill="#3a1a0a"/>
+  <circle cx="507" cy="245" r="12" fill="none" stroke="#8b2500" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="507" cy="245" r="18" fill="none" stroke="#8b2500" stroke-width="0.8" opacity="0.3"/>
+  <circle cx="507" cy="245" r="28" fill="none" stroke="#8b2500" stroke-width="0.4" opacity="0.12"/>
+  <text x="507" y="249" font-size="9" fill="#cc4400" text-anchor="middle" opacity="0.9">17</text>
+
+  <!-- Button 16 -->
+  <circle cx="507" cy="270" r="7" fill="#2a2a2a"/>
+  <text x="507" y="274" font-size="8" fill="#555" text-anchor="middle">16</text>
+
+  <!-- Button 15 -->
+  <circle cx="507" cy="295" r="7" fill="#2a2a2a"/>
+  <text x="507" y="299" font-size="8" fill="#555" text-anchor="middle">15</text>
+
+  <!-- Button 14 -->
+  <circle cx="507" cy="320" r="7" fill="#2a2a2a"/>
+  <text x="507" y="324" font-size="8" fill="#555" text-anchor="middle">14</text>
+
+  <!-- Button 13 -->
+  <circle cx="507" cy="345" r="7" fill="#2a2a2a"/>
+  <text x="507" y="349" font-size="8" fill="#555" text-anchor="middle">13</text>
+
+  <!-- Button 12 (bottom) -->
+  <circle cx="507" cy="370" r="7" fill="#2a2a2a"/>
+  <text x="507" y="374" font-size="8" fill="#555" text-anchor="middle">12</text>
+
+  <!-- Glow effect on shaft wall near button 17 -->
+  <ellipse cx="485" cy="245" rx="20" ry="30" fill="#8b2500" opacity="0.04"/>
+
+  <!-- Elevator doors (closed) -->
+  <rect x="340" y="20" width="78" height="410" fill="#151515" stroke="#1e1e1e" stroke-width="1"/>
+  <rect x="422" y="20" width="78" height="410" fill="#151515" stroke="#1e1e1e" stroke-width="1"/>
+  <line x1="420" y1="20" x2="420" y2="430" stroke="#1a1a1a" stroke-width="1"/>
+
+  <!-- Floor reflection on elevator doors -->
+  <rect x="340" y="420" width="160" height="10" fill="#1a1510" opacity="0.3"/>
+
+  <!-- Dim hallway light from above -->
+  <ellipse cx="400" cy="0" rx="60" ry="15" fill="#1a1815" opacity="0.5"/>
+  <line x1="370" y1="15" x2="370" y2="430" stroke="#121010" stroke-width="0.5" opacity="0.3"/>
+  <line x1="430" y1="15" x2="430" y2="430" stroke="#121010" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Faint shadow silhouette of a person at far end of hallway -->
+  <ellipse cx="150" cy="395" rx="8" ry="10" fill="#0e0c0c"/>
+  <rect x="142" y="360" width="16" height="35" fill="#0e0c0c" rx="3"/>
+  <line x1="148" y1="395" x2="144" y2="430" stroke="#0e0c0c" stroke-width="3"/>
+  <line x1="152" y1="395" x2="156" y2="430" stroke="#0e0c0c" stroke-width="3"/>
+
+  <!-- Another fainter shadow -->
+  <ellipse cx="650" cy="400" rx="6" ry="8" fill="#0c0a0a"/>
+  <rect x="644" y="370" width="12" height="30" fill="#0c0a0a" rx="2"/>
+  <line x1="648" y1="400" x2="645" y2="430" stroke="#0c0a0a" stroke-width="2.5"/>
+  <line x1="652" y1="400" x2="655" y2="430" stroke="#0c0a0a" stroke-width="2.5"/>
+
+  <!-- Floor -->
+  <rect x="0" y="430" width="800" height="20" fill="#0d0b0b"/>
+  <line x1="0" y1="430" x2="800" y2="430" stroke="#1a1818" stroke-width="1"/>
+
+  <!-- Subtle vignette -->
+  <rect width="800" height="450" fill="url(#vignette)" opacity="0.5"/>
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="50%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+</svg>
