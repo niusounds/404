@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1515;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2a1f1f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1515;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a2a1a;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0a0808;stop-opacity:0" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0808"/>
+
+  <!-- Wall in the center -->
+  <rect x="340" y="0" width="120" height="450" fill="url(#wallGrad)" opacity="0.9"/>
+  <line x1="340" y1="0" x2="340" y2="450" stroke="#2a1a1a" stroke-width="1" opacity="0.5"/>
+  <line x1="460" y1="0" x2="460" y2="450" stroke="#2a1a1a" stroke-width="1" opacity="0.5"/>
+
+  <!-- Left room - dim warm light -->
+  <rect x="0" y="0" width="340" height="450" fill="url(#lightGrad)" opacity="0.3"/>
+
+  <!-- Floor -->
+  <rect x="0" y="400" width="800" height="50" fill="#0d0a0a" opacity="0.8"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#1a1212" stroke-width="1"/>
+
+  <!-- Left side: silhouette of a person standing -->
+  <g opacity="0.15" filter="url(#softGlow)">
+    <!-- Head -->
+    <ellipse cx="120" cy="120" rx="25" ry="30" fill="#2a1a1a"/>
+    <!-- Body -->
+    <path d="M95,150 Q90,200 85,280 L80,370 L160,370 L155,280 Q150,200 145,150 Z" fill="#2a1a1a"/>
+    <!-- Arms -->
+    <path d="M95,160 Q70,180 60,220" stroke="#2a1a1a" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M145,160 Q160,180 170,200" stroke="#2a1a1a" stroke-width="8" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right side: shadowy figure behind the wall, barely visible -->
+  <g opacity="0.08" filter="url(#glow)">
+    <!-- Head -->
+    <ellipse cx="400" cy="130" rx="22" ry="28" fill="#3a2525"/>
+    <!-- Body -->
+    <path d="M378,158 Q375,200 372,270 L368,360 L432,360 L428,270 Q425,200 422,158 Z" fill="#3a2525"/>
+    <!-- Arms - mimicking the left figure -->
+    <path d="M378,168 Q358,188 348,225" stroke="#3a2525" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M422,168 Q435,188 442,205" stroke="#3a2525" stroke-width="7" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Wall crack / gap effect -->
+  <g opacity="0.12">
+    <line x1="395" y1="180" x2="405" y2="170" stroke="#ff6633" stroke-width="0.5"/>
+    <line x1="400" y1="170" x2="402" y2="150" stroke="#ff6633" stroke-width="0.5"/>
+    <line x1="402" y1="150" x2="408" y2="145" stroke="#ff6633" stroke-width="0.3"/>
+    <line x1="400" y1="250" x2="403" y2="240" stroke="#ff6633" stroke-width="0.5"/>
+    <line x1="403" y1="240" x2="398" y2="230" stroke="#ff6633" stroke-width="0.3"/>
+  </g>
+
+  <!-- Warm light from left room casting through wall crack -->
+  <ellipse cx="398" cy="160" rx="5" ry="15" fill="#ff6633" opacity="0.08" filter="url(#softGlow)"/>
+
+  <!-- Clock on the left wall showing 2:00 -->
+  <g transform="translate(280, 80)" opacity="0.12">
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#3a2a1a" stroke-width="1"/>
+    <line x1="0" y1="0" x2="0" y2="-18" stroke="#5a4a2a" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="10" y2="-5" stroke="#5a4a2a" stroke-width="1" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="2" fill="#5a4a2a"/>
+  </g>
+
+  <!-- Subtle text hint -->
+  <text x="400" y="430" text-anchor="middle" fill="#1a1212" font-family="sans-serif" font-size="11" letter-spacing="4">三秒遅れて</text>
+</svg>
