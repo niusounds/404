@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="corridor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1408"/>
+      <stop offset="100%" stop-color="#0a0804"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowSoft">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="#0a0808"/>
+  <!-- Background: corridor perspective -->
+  <rect x="200" y="60" width="400" height="330" fill="url(#corridor)" opacity="0.9"/>
+  <!-- Floor tiles -->
+  <line x1="200" y1="250" x2="600" y2="250" stroke="#1a1510" stroke-width="0.5" opacity="0.5"/>
+  <line x1="200" y1="310" x2="600" y2="310" stroke="#1a1510" stroke-width="0.5" opacity="0.4"/>
+  <line x1="200" y1="370" x2="600" y2="370" stroke="#1a1510" stroke-width="0.5" opacity="0.3"/>
+  <!-- Corridor walls -->
+  <line x1="200" y1="60" x2="200" y2="390" stroke="#1a1408" stroke-width="1" opacity="0.6"/>
+  <line x1="600" y1="60" x2="600" y2="390" stroke="#1a1408" stroke-width="1" opacity="0.6"/>
+  <!-- Ceiling -->
+  <rect x="200" y="60" width="400" height="40" fill="#0f0c06" opacity="0.8"/>
+  <!-- Fluorescent light fixture -->
+  <rect x="370" y="62" width="60" height="8" rx="2" fill="#2a2210" stroke="#1a1508" stroke-width="0.5"/>
+  <rect x="375" y="64" width="50" height="4" rx="1" fill="#d4b84a" opacity="0.3" filter="url(#glowSoft)"/>
+  <!-- Corridor light glow -->
+  <rect x="250" y="100" width="300" height="290" fill="#3a2a0a" opacity="0.05"/>
+  <!-- Elevator doors (foreground, open) -->
+  <rect x="50" y="80" width="150" height="310" fill="#0e0c0a" stroke="#1a1815" stroke-width="1"/>
+  <rect x="600" y="80" width="150" height="310" fill="#0e0c0a" stroke="#1a1815" stroke-width="1"/>
+  <!-- Elevator floor indicator panel -->
+  <rect x="70" y="100" width="40" height="180" rx="4" fill="#0a0a0a" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="75" y="105" width="30" height="16" rx="2" fill="#0a1a0a" stroke="#0a2a0a" stroke-width="0.5"/>
+  <text x="90" y="117" text-anchor="middle" fill="#00ff44" font-size="12" font-family="monospace" filter="url(#glow)" opacity="0.9">13</text>
+  <!-- Floor buttons -->
+  <circle cx="90" cy="140" r="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <circle cx="90" cy="160" r="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <circle cx="90" cy="180" r="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <circle cx="90" cy="200" r="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <circle cx="90" cy="220" r="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <circle cx="90" cy="240" r="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <!-- Door number plate -->
+  <rect x="620" y="200" width="30" height="20" rx="2" fill="#1a1510" stroke="#2a2010" stroke-width="0.5"/>
+  <text x="635" y="214" text-anchor="middle" fill="#4a3a20" font-size="10" font-family="monospace">1304</text>
+  <!-- Person silhouette in corridor -->
+  <g transform="translate(400, 150)">
+    <ellipse cx="0" cy="-45" rx="12" ry="15" fill="#0a0808"/>
+    <rect x="-10" y="-30" width="20" height="40" rx="5" fill="#0a0808"/>
+    <rect x="-10" y="10" width="8" height="35" rx="3" fill="#0a0808"/>
+    <rect x="2" y="10" width="8" height="35" rx="3" fill="#0a0808"/>
+  </g>
+  <!-- Fog/mist at bottom -->
+  <rect x="200" y="340" width="400" height="50" fill="#1a1408" opacity="0.3"/>
+  <rect x="200" y="360" width="400" height="30" fill="#0a0808" opacity="0.5"/>
+  <!-- Vignette -->
+  <rect x="0" y="0" width="800" height="450" fill="none" stroke="none"/>
+</svg>
