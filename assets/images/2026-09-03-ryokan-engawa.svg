@@ -1,98 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
   <defs>
-    <linearGradient id="fogGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1a1a2e"/>
-      <stop offset="100%" stop-color="#2a2a3e"/>
-    </linearGradient>
-    <linearGradient id="silGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0a0808"/>
-      <stop offset="100%" stop-color="#151010"/>
-    </linearGradient>
-    <filter id="blurFog">
-      <feGaussianBlur stdDeviation="8"/>
-    </filter>
-    <filter id="blurFog2">
-      <feGaussianBlur stdDeviation="15"/>
-    </filter>
-    <filter id="blurFog3">
-      <feGaussianBlur stdDeviation="25"/>
-    </filter>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#1a1520" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#0a0808" stop-opacity="0"/>
+    <filter id="b3"><feGaussianBlur stdDeviation="30"/></filter>
+    <filter id="b5"><feGaussianBlur stdDeviation="50"/></filter>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+      <stop offset="40%" stop-color="#0a0808" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0808" stop-opacity="1"/>
     </radialGradient>
   </defs>
 
-  <!-- Background -->
   <rect width="800" height="450" fill="#0a0808"/>
 
-  <!-- Room interior (bottom half) - tatami floor -->
-  <rect x="0" y="225" width="800" height="225" fill="#1a1510"/>
-  <line x1="0" y1="225" x2="800" y2="225" stroke="#2a2018" stroke-width="3"/>
+  <!-- 障子の枠 -->
+  <rect x="200" y="20" width="400" height="300" fill="none" stroke="#1a1510" stroke-width="8"/>
+  <line x1="333" y1="20" x2="333" y2="320" stroke="#1a1510" stroke-width="3"/>
+  <line x1="466" y1="20" x2="466" y2="320" stroke="#1a1510" stroke-width="3"/>
+  <line x1="200" y1="120" x2="600" y2="120" stroke="#1a1510" stroke-width="3"/>
+  <line x1="200" y1="220" x2="600" y2="220" stroke="#1a1510" stroke-width="3"/>
 
-  <!-- Wooden pillar (left) -->
-  <rect x="0" y="0" width="30" height="225" fill="#1a1410" stroke="#2a2018" stroke-width="1"/>
+  <!-- 障子の紙 -->
+  <rect x="200" y="20" width="400" height="300" fill="#1a1815" opacity="0.5"/>
 
-  <!-- Shoji screen frame (right side) -->
-  <rect x="30" y="0" width="770" height="225" fill="none" stroke="#2a2018" stroke-width="4"/>
-  <!-- Shoji grid -->
-  <line x1="190" y1="0" x2="190" y2="225" stroke="#2a2018" stroke-width="2"/>
-  <line x1="350" y1="0" x2="350" y2="225" stroke="#2a2018" stroke-width="2"/>
-  <line x1="510" y1="0" x2="510" y2="225" stroke="#2a2018" stroke-width="2"/>
-  <line x1="670" y1="0" x2="670" y2="225" stroke="#2a2018" stroke-width="2"/>
-  <line x1="30" y1="75" x2="800" y2="75" stroke="#2a2018" stroke-width="2"/>
-  <line x1="30" y1="150" x2="800" y2="150" stroke="#2a2018" stroke-width="2"/>
+  <!-- 霧 -->
+  <ellipse cx="400" cy="170" rx="200" ry="120" fill="#2a2530" opacity="0.3" filter="url(#b5)"/>
+  <ellipse cx="420" cy="150" rx="150" ry="80" fill="#3a3540" opacity="0.2" filter="url(#b3)"/>
 
-  <!-- Shoji paper (semi-transparent) -->
-  <rect x="30" y="0" width="770" height="225" fill="#2a2520" opacity="0.3"/>
-
-  <!-- Fog outside the shoji - multiple layers for depth -->
-  <ellipse cx="500" cy="100" rx="350" ry="120" fill="#3a3545" opacity="0.4" filter="url(#blurFog3)"/>
-  <ellipse cx="400" cy="130" rx="300" ry="100" fill="#4a4555" opacity="0.3" filter="url(#blurFog3)"/>
-  <ellipse cx="600" cy="80" rx="280" ry="90" fill="#3a3a50" opacity="0.35" filter="url(#blurFog2)"/>
-  <ellipse cx="450" cy="160" rx="250" ry="80" fill="#4a4550" opacity="0.25" filter="url(#blurFog2)"/>
-  <ellipse cx="550" cy="60" rx="200" ry="70" fill="#5a5565" opacity="0.2" filter="url(#blurFog)"/>
-
-  <!-- Dense fog near the shoji -->
-  <rect x="30" y="0" width="770" height="225" fill="#3a3545" opacity="0.15" filter="url(#blurFog3)"/>
-
-  <!-- Silhouette figure - standing outside, barely visible through fog -->
-  <g opacity="0.6">
-    <!-- Head -->
-    <ellipse cx="480" cy="85" rx="18" ry="22" fill="#0a0808"/>
-    <!-- Body -->
-    <path d="M462,107 L455,180 L470,175 L475,140 L485,140 L490,175 L505,180 L498,107 Z" fill="#0a0808"/>
-    <!-- Legs -->
-    <line x1="470" y1="175" x2="465" y2="225" stroke="#0a0808" stroke-width="6" stroke-linecap="round"/>
-    <line x1="490" y1="175" x2="495" y2="225" stroke="#0a0808" stroke-width="6" stroke-linecap="round"/>
+  <!--  silhouette - 最小限 -->
+  <g opacity="0.5">
+    <ellipse cx="395" cy="120" rx="15" ry="20" fill="#0a0808"/>
+    <path d="M380,140 L375,230 L385,225 L390,180 L398,180 L402,225 L412,230 L407,140 Z" fill="#0a0808"/>
   </g>
 
-  <!-- Second, fainter silhouette behind the first -->
-  <g opacity="0.2">
-    <ellipse cx="520" cy="90" rx="15" ry="18" fill="#0a0808"/>
-    <path d="M508,108 L502,170 L515,165 L520,135 L530,135 L535,165 L548,170 L542,108 Z" fill="#0a0808"/>
-    <line x1="515" y1="165" x2="510" y2="225" stroke="#0a0808" stroke-width="5" stroke-linecap="round"/>
-    <line x1="530" y1="165" x2="535" y2="225" stroke="#0a0808" stroke-width="5" stroke-linecap="round"/>
-  </g>
+  <!-- 目の光 -->
+  <circle cx="390" cy="117" r="2" fill="#d4c8b0" opacity="0.4"/>
+  <circle cx="400" cy="117" r="2" fill="#d4c8b0" opacity="0.4"/>
 
-  <!-- Two pale eyes in the fog - the most disturbing element -->
-  <circle cx="473" cy="82" r="2.5" fill="#d4c8b0" opacity="0.5"/>
-  <circle cx="487" cy="82" r="2.5" fill="#d4c8b0" opacity="0.5"/>
+  <!-- 縁側 -->
+  <rect x="0" y="320" width="800" height="130" fill="#151210" opacity="0.8"/>
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#2a2018" stroke-width="2"/>
 
-  <!-- Light from the room casting onto the shoji -->
-  <rect x="30" y="0" width="770" height="225" fill="#1a1510" opacity="0.1" filter="url(#blurFog)"/>
-
-  <!-- Pine tree silhouette (barely visible through fog) -->
-  <g opacity="0.15" fill="#0a0808">
-    <rect x="620" y="100" width="6" height="125"/>
-    <ellipse cx="623" cy="95" rx="30" ry="40"/>
-    <ellipse cx="623" cy="70" rx="22" ry="30"/>
-    <ellipse cx="623" cy="50" rx="14" ry="22"/>
-  </g>
-
-  <!-- Subtle vignette -->
-  <rect width="800" height="450" fill="url(#glow)" opacity="0.5"/>
-
-  <!-- Bottom edge shadow -->
-  <rect x="0" y="380" width="800" height="70" fill="#0a0808" opacity="0.6"/>
+  <!-- 余白 -->
+  <rect width="800" height="450" fill="url(#vignette)"/>
 </svg>
