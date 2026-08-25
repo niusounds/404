@@ -5,6 +5,8 @@ date: 2026-09-07 02:00:00 +0900
 categories: jekyll update horror
 ---
 
+<img src="/assets/images/2026-09-07-autorelock-delivery-box.svg" alt="宅配ボックス" width="800" height="450"/>
+
 ## 配送予定もないのに、宅配ボックスに「荷物」が
 
 私は東京・世田谷の築十五年のマンションに住んでいる。三階、オートロック付き、インターホン付きの宅配ボックス付き物件だ。
